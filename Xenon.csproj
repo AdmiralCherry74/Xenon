@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Content\Baddie\Bandit.png" />
+	  <None Remove="Content\Baddie\BanditLooter.PNG" />
+	  <None Remove="Content\Baddie\CrimsonCultist.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteBathtub.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteBlock.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteChair.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteChest.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteDoor.png" />
+	  <None Remove="Content\Items\Blocks\RhyolitePlatform.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteWall.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteWallSafe.png" />
+	  <None Remove="Content\Items\Blocks\RhyoliteWorkBench.png" />
+	  <None Remove="Content\Items\Blocks\SmoothRhyoliteBlock.png" />
+	  <None Remove="Content\Items\Components\CursedBoneDust.png" />
+	  <None Remove="Content\Items\Components\RefinedBoneDust.png" />
+	  <None Remove="Content\Items\Pouch.png" />
+	  <None Remove="Content\Items\RhyoliteBlock.png" />
+	  <None Remove="Content\Items\RhyoliteWall.png" />
+	  <None Remove="Content\Items\Valuables\GemPouch.png" />
+	  <None Remove="Content\Items\Valuables\MusicalAlbum.png" />
+	  <None Remove="Content\Items\Valuables\Perfume.png" />
+	  <None Remove="Content\Items\Valuables\RareBook.png" />
+	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
+	  <None Remove="Content\Items\WoolBlock.png" />
+	  <None Remove="Content\NPC_110.png" />
+	  <None Remove="Content\Tiles\Bathtub\RhyoliteBathtub.png" />
+	  <None Remove="Content\Tiles\image.png" />
+	  <None Remove="Content\Tiles\Portal\ClosedRhyoliteDoor.png" />
+	  <None Remove="Content\Tiles\Portal\ClosedRhyoliteDoor_Highlight.png" />
+	  <None Remove="Content\Tiles\Portal\OpenedRhyoliteDoor.png" />
+	  <None Remove="Content\Tiles\Portal\OpenedRhyoliteDoor_Highlight.png" />
+	  <None Remove="Content\Tiles\Storage\RhyoliteChest.png" />
+	  <None Remove="Content\Tiles\Storage\RhyoliteChest_Highlight.png" />
+	  <None Remove="Content\Tiles\Workbench\RhyoliteChair.png" />
+	  <None Remove="Content\Tiles\RhyolitePlatform.png" />
+	  <None Remove="Content\Tiles\WoolBlock.png" />
+	  <None Remove="Content\Tiles\Workbench\RhyoliteWorkBench.png" />
+	  <None Remove="Content\Walls\RhyoliteWallSafe.png" />
+	  <None Remove="Content\Weapons\Melee\XenonWaraxe.png" />
+	  <None Remove="icon.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Content\Tiles\Lighting\" />
+	</ItemGroup>
+
+	<!-- References -->
+
+</Project>

@@ -1,0 +1,22 @@
+﻿using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Xenon.Content.Items;
+using Xenon.Content.Rarities;
+
+namespace Xenon.Content.Items.Valuables
+{
+    public class MusicalAlbum : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 100;
+        }
+
+        public override void SetDefaults()
+        {
+            Item.rare = ModContent.RarityType<Light>();
+            Item.value = Terraria.Item.buyPrice(platinum: 10);
+        }
+    }
+}
