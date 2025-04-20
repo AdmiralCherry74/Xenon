@@ -10,6 +10,7 @@
 	<ItemGroup>
 	  <None Remove="Content\Baddie\Bandit.png" />
 	  <None Remove="Content\Baddie\BanditLooter.PNG" />
+	  <None Remove="Content\Baddie\BloodBolt.png" />
 	  <None Remove="Content\Baddie\CrimsonCultist.png" />
 	  <None Remove="Content\Items\Blocks\RhyoliteBathtub.png" />
 	  <None Remove="Content\Items\Blocks\RhyoliteBlock.png" />

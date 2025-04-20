@@ -136,6 +136,7 @@ NPCs: {
 	Bandit.DisplayName: Bandit
 	BanditLooter.DisplayName: Bandit Looter
 	CrimsonCultist.DisplayName: Crimson Cultist
+	BloodBolt.DisplayName: Blood Bolt
 }
 
 Tiles.RhyoliteChest.MapEntry0: titties

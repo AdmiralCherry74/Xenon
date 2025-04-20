@@ -15,7 +15,7 @@ using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.Baddie
 {
-    public class CrimsonCultist : ModNPC
+    public class BloodBolt : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -32,29 +32,18 @@ namespace Xenon.Content.Baddie
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 3;
-            NPC.defense = 3;
-            NPC.lifeMax = 50;
-            NPC.HitSound = SoundID.NPCHit37;
-            NPC.DeathSound = SoundID.NPCDeath39;
+            NPC.damage = 17;
+            NPC.defense = 0;
+            NPC.lifeMax = 1;
+            NPC.HitSound = SoundID.NPCHit3;
+            NPC.DeathSound = SoundID.NPCDeath3;
             NPC.value = 250;
-            NPC.knockBackResist = 0.05f;
-            NPC.aiStyle = 8; 
-            
-            AIType = NPCID.Tim;
-            AnimationType = NPCID.Tim;
+            NPC.knockBackResist = 1f;
+            NPC.aiStyle = 9;
+
+            AIType = NPCID.ChaosBallTim;
+            AnimationType = NPCID.ChaosBallTim;
         }
-
-        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
-        {
-
-            bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
-                new FlavorTextBestiaryInfoElement("A cultist that believe's the Crimson to be a deity of some sort. they will sacrifice other people to make sure The Crimson grows. Bandit's, Townfolk, doesnt matter who, they will sacrifice you too"),
-            ]);
-        }
-
-
 
         public override void AI()
         {
@@ -70,19 +59,6 @@ namespace Xenon.Content.Baddie
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneCrimson)
-
-                {
-                    {
-                    return SpawnCondition.Crimson.Chance * 0.05f;
-
-                    }
-            }
-            return 0f;
-        }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -101,11 +77,6 @@ namespace Xenon.Content.Baddie
                 gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height - 20f), NPC.velocity, 99, NPC.scale);
                 Main.gore[gore].velocity *= 0.3f;
             }
-        }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
-        {
-            npcLoot.Add(ItemDropRule.Common(ItemID.ViciousPowder, 2, 1, 2));
-            npcLoot.Add(ItemDropRule.Common(ItemID.BloodySpine, 1250, 1, 1));
         }
     }
 }
