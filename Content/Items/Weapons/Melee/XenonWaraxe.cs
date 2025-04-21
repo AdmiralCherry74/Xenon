@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Rarities;
 
-namespace Xenon.Content.Weapons.Melee;
+namespace Xenon.Content.Items.Weapons.Melee;
 
 public class XenonWaraxe : ModItem
 {
@@ -14,18 +14,18 @@ public class XenonWaraxe : ModItem
         Item.width = 40;
         Item.height = 40;
 
-            Item.useStyle = ItemUseStyleID.Swing;
-            Item.useTime = 20;
-            Item.useAnimation = 20;
-        
-    Item.autoReuse = true;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTime = 20;
+        Item.useAnimation = 20;
+
+        Item.autoReuse = true;
 
         Item.DamageType = DamageClass.Melee;
         Item.damage = 999999999;
         Item.knockBack = 10;
         Item.crit = 20;
 
-        Item.value = Terraria.Item.buyPrice(platinum: 1);
+        Item.value = Item.buyPrice(platinum: 1);
         Item.UseSound = SoundID.Item1;
         Item.rare = ModContent.RarityType<Purity>();
     }

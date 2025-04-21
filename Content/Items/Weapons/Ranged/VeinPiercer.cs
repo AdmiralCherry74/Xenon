@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Weapons.Ranged;
+namespace Xenon.Content.Items.Weapons.Ranged;
 
 class VeinPiercer : ModItem
 {

@@ -262,7 +262,7 @@ Mods: {
 			RhyoliteSlimer: This slime is a relative of the Corruption's Slimer, but is more primitive. It simply dies after its wings have been destroyed.
 			Bandit: Seemingly a bandit that arrived to ransack this abandoned land. Even if they aren't durable, the dagger's they seem too possess often are still extremely deadly.
 			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
-			CrimsonCultist: A cultist that believes the Crimson to be a deity of some sort. They will sacrifice other people to make sure the Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too!
+			CrimsonCultist: A cultist that will sacrifice living beings to make sure The Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too. Sometimes in a desperate situation, they may even sacrifice themselves to it!
 			HauntedArmor: Left behind, presumably by its owner, this abandoned armor became haunted to seek revenge on them... However since it can't see, it probably assumes any human is its owner.
 			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
 			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
@@ -275,6 +275,6 @@ Mods: {
 			}
 		}
 
-		Projectiles.EbonStabberProj.DisplayName: Ebon Stabber Proj
+		Projectiles.EbonStabberProj.DisplayName: Ebon Stabber
 	}
 }

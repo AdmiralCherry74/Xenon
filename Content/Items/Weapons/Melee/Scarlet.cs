@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Weapons.Melee;
+namespace Xenon.Content.Items.Weapons.Melee;
 
 public class Scarlet : ModItem
 {
@@ -23,7 +23,7 @@ public class Scarlet : ModItem
         Item.knockBack = 5;
         Item.crit = 2;
 
-        Item.value = Terraria.Item.buyPrice(gold: 10);
+        Item.value = Item.buyPrice(gold: 10);
         Item.UseSound = SoundID.Item1;
         Item.rare = 2;
     }
