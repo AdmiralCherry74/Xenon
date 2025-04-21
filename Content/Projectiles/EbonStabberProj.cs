@@ -8,11 +8,11 @@ namespace Xenon.Content.Projectiles
 {
     public class EbonStabberProj : ModProjectile
     {
-        // Define the range of the Spear Projectile. These are overridable properties, in case you'll want to make a class inheriting from this one.
-        protected virtual float HoldoutRangeMin => 75f; //make sure the minimum is 10 less than what the width of the projectille is
-        protected virtual float HoldoutRangeMax => 125f; //make sure the Maximum is 50 more than minimum
+		// Define the range of the Spear Projectile. These are overridable properties, in case you'll want to make a class inheriting from this one.
+		protected virtual float HoldoutRangeMin => 75f; //make sure the minimum is 10 less than what the width of the projectille's sprite is
+		protected virtual float HoldoutRangeMax => 125f; //make sure the Maximum is 50 more than the minimum number
 
-        public override void SetDefaults()
+		public override void SetDefaults()
         {
             Projectile.CloneDefaults(ProjectileID.DarkLance); // Clone the default values for a vanilla spear. Spear specific values set for width, height, aiStyle, friendly, penetrate, tileCollide, scale, hide, ownerHitCheck, and melee.
         }
