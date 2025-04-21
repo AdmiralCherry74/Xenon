@@ -9,6 +9,7 @@ using System.Linq;
 using System;
 using Terraria.GameContent.Generation;
 using Xenon.Content.Tiles.Furniture.Rhyolite;
+using Terraria.Localization;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -72,7 +73,7 @@ public class RhyoliteGenPass : GenPass
 
 	protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
 	{
-		progress.Message = "Growing rhyolite";
+		progress.Message = Language.GetTextValue("Mods.Xenon.Generation.Rhyolite");
 		int ypos = Main.maxTilesY - 285;
 		int xpos = WorldGen.genRand.Next(150, Main.maxTilesX / 2 - 250);
 		int xpos2 = WorldGen.genRand.Next(Main.maxTilesX / 2 + 250, Main.maxTilesX - 150);

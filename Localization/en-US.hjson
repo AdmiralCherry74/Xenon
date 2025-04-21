@@ -2,6 +2,8 @@ Mods: {
 	BiomeTitles.Title.Xenon.Rhyolite: Rhyolite Cave
 
 	Xenon: {
+		Generation.Rhyolite: Erupting rhyolite
+
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
