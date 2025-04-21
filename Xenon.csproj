@@ -8,20 +8,16 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Remove="Content\Baddie\Bandit.png" />
-	  <None Remove="Content\Baddie\BanditLooter.PNG" />
-	  <None Remove="Content\Baddie\BloodBolt.png" />
-	  <None Remove="Content\Baddie\CrimsonCultist.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteBathtub.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteBlock.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteChair.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteChest.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteDoor.png" />
-	  <None Remove="Content\Items\Blocks\RhyolitePlatform.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteWall.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteWallSafe.png" />
-	  <None Remove="Content\Items\Blocks\RhyoliteWorkBench.png" />
-	  <None Remove="Content\Items\Blocks\SmoothRhyoliteBlock.png" />
+	  <AdditionalFiles Remove="Content\Tiles\Lighting\**" />
+	  <Compile Remove="Content\Tiles\Lighting\**" />
+	  <EmbeddedResource Remove="Content\Tiles\Lighting\**" />
+	  <None Remove="Content\Tiles\Lighting\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Content\NPCs\Bandit.png" />
+	  <None Remove="Content\NPCs\BanditLooter.PNG" />
+	  <None Remove="Content\NPCs\BloodBolt.png" />
+	  <None Remove="Content\NPCs\CrimsonCultist.png" />
 	  <None Remove="Content\Items\Components\CursedBoneDust.png" />
 	  <None Remove="Content\Items\Components\RefinedBoneDust.png" />
 	  <None Remove="Content\Items\Pouch.png" />
@@ -34,24 +30,19 @@
 	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
 	  <None Remove="Content\NPC_110.png" />
-	  <None Remove="Content\Tiles\Bathtub\RhyoliteBathtub.png" />
 	  <None Remove="Content\Tiles\image.png" />
-	  <None Remove="Content\Tiles\Portal\ClosedRhyoliteDoor.png" />
-	  <None Remove="Content\Tiles\Portal\ClosedRhyoliteDoor_Highlight.png" />
-	  <None Remove="Content\Tiles\Portal\OpenedRhyoliteDoor.png" />
-	  <None Remove="Content\Tiles\Portal\OpenedRhyoliteDoor_Highlight.png" />
-	  <None Remove="Content\Tiles\Storage\RhyoliteChest.png" />
-	  <None Remove="Content\Tiles\Storage\RhyoliteChest_Highlight.png" />
-	  <None Remove="Content\Tiles\Workbench\RhyoliteChair.png" />
-	  <None Remove="Content\Tiles\RhyolitePlatform.png" />
 	  <None Remove="Content\Tiles\WoolBlock.png" />
-	  <None Remove="Content\Tiles\Workbench\RhyoliteWorkBench.png" />
-	  <None Remove="Content\Walls\RhyoliteWallSafe.png" />
+	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="Content\Weapons\Melee\XenonWaraxe.png" />
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Content\Tiles\Lighting\" />
+	  <Folder Include="Content\Items\Placeable\Furniture\Rhyolite\" />
+	  <Folder Include="Content\Items\Placeable\Wall\" />
+	  <Folder Include="Content\Items\Placeable\Tile\" />
+	  <Folder Include="Content\WorldGen\" />
+	  <Folder Include="Content\NPCs\Template\" />
+	  <Folder Include="Content\Tiles\Furniture\Rhyolite\" />
 	</ItemGroup>
 
 	<!-- References -->

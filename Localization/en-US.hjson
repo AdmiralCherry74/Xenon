@@ -1,0 +1,280 @@
+Mods: {
+	BiomeTitles.Title.Xenon.Rhyolite: Rhyolite Cave
+
+	Xenon: {
+		Items: {
+			Scarlet: {
+				DisplayName: Scarlet
+				Tooltip: A noble warrior once held this Sword. MATHMATICAL! (TESTING VERSION)
+			}
+
+			VeinPiercer: {
+				DisplayName: Vein Piercer
+				Tooltip: This macabre, ichor-covered bow seems to convert Wooden Arrows into Ichor Arrows
+			}
+
+			RhyoliteBlock: {
+				DisplayName: Rhyolite Block
+				Tooltip: According to the Guide, "Rhyolite is an igneous stone formed from the lava of the lower Caverns"
+			}
+
+			RhyoliteWall: {
+				DisplayName: Rhyolite Wall
+				Tooltip: You're either a cheater or you're me testing the mod :3
+			}
+
+			WoolBlock: {
+				DisplayName: Wool
+				Tooltip: A softer tile weaved from cobwebs, can be used as decoration and also painted with deep paints for different colors
+			}
+
+			Pouch: {
+				DisplayName: Pouch
+				Tooltip:
+					'''
+					A pouch made to store small trinkets or other such things
+					Although it looks nice, it's near useless on its own
+					'''
+			}
+
+			GemPouch: {
+				DisplayName: Gem Pouch
+				Tooltip:
+					'''
+					A pouch with various gems inside
+					Could be worth alot
+					Valuable
+					'''
+			}
+
+			CursedBoneDust: {
+				DisplayName: Cursed Bone Dust
+				Tooltip:
+					'''
+					Mashed bones which have seemingly been cursed...
+					They are useless without refining them
+					'''
+			}
+
+			RefinedBoneDust: {
+				DisplayName: Refined Bone Dust
+				Tooltip: The bones seem to possess unique capabilities once left without the curse. It's almost magical!
+			}
+
+			MusicalAlbum: {
+				DisplayName: Musical Album
+				Tooltip:
+					'''
+					A music album from a band, they seem to be extremely popular among people.
+					Valuable
+					'''
+			}
+
+			Perfume: {
+				DisplayName: Perfume
+				Tooltip:
+					'''
+					A nice-smelling substance. would sell nice
+					Valuable
+					'''
+			}
+
+			RareBook: {
+				DisplayName: Rare Book
+				Tooltip:
+					'''
+					A rare book seemingly from long before you got here... I wonder what it's worth?
+					Valuable
+					'''
+			}
+
+			UnstablePowder: {
+				DisplayName: Unstable Powder
+				Tooltip:
+					'''
+					A powder too unstable to do anything with sadly, too full of the world's forces to actually have equilibrium
+					Valuable
+					'''
+			}
+
+			XenonWaraxe: {
+				DisplayName: Xenon Waraxe
+				Tooltip: A waraxe made of many other axes and some xenon gas... How the hell does this work?
+			}
+
+			SmoothRhyoliteBlock: {
+				DisplayName: Smooth Rhyolite Block
+				Tooltip: ""
+			}
+
+			RhyoliteWallSafe: {
+				DisplayName: Rhyolite Wall
+				Tooltip: ""
+			}
+
+			RhyolitePlatform: {
+				DisplayName: Rhyolite Platform
+				Tooltip: ""
+			}
+
+			RhyoliteWorkBench: {
+				DisplayName: Rhyolite Work Bench
+				Tooltip: ""
+			}
+
+			RhyoliteChair: {
+				DisplayName: Rhyolite Chair
+				Tooltip: ""
+			}
+
+			RhyoliteDoor: {
+				DisplayName: Rhyolite Door
+				Tooltip: ""
+			}
+
+			RhyoliteChest: {
+				DisplayName: Rhyolite Chest
+				Tooltip: ""
+			}
+
+			RhyoliteBathtub: {
+				DisplayName: Rhyolite Bathtub
+				Tooltip: ""
+			}
+
+			LavaWormBanner: {
+				DisplayName: Lava Worm Banner
+				Tooltip: ""
+			}
+
+			RhyoliteSlimerBanner: {
+				DisplayName: Rhyolite Slimer Banner
+				Tooltip: ""
+			}
+
+			RhyoliteBed: {
+				DisplayName: Rhyolite Bed
+				Tooltip: ""
+			}
+
+			RhyoliteBookcase: {
+				DisplayName: Rhyolite Bookcase
+				Tooltip: ""
+			}
+
+			RhyoliteCandelabra: {
+				DisplayName: Rhyolite Candelabra
+				Tooltip: ""
+			}
+
+			RhyoliteCandle: {
+				DisplayName: Rhyolite Candle
+				Tooltip: ""
+			}
+
+			RhyoliteChandelier: {
+				DisplayName: Rhyolite Chandelier
+				Tooltip: ""
+			}
+
+			RhyoliteClock: {
+				DisplayName: Rhyolite Clock
+				Tooltip: ""
+			}
+
+			RhyoliteDresser: {
+				DisplayName: Rhyolite Dresser
+				Tooltip: ""
+			}
+
+			RhyoliteLamp: {
+				DisplayName: Rhyolite Lamp
+				Tooltip: ""
+			}
+
+			RhyoliteLantern: {
+				DisplayName: Rhyolite Lantern
+				Tooltip: ""
+			}
+
+			RhyolitePiano: {
+				DisplayName: Rhyolite Piano
+				Tooltip: ""
+			}
+
+			RhyoliteSink: {
+				DisplayName: Rhyolite Sink
+				Tooltip: ""
+			}
+
+			RhyoliteSofa: {
+				DisplayName: Rhyolite Sofa
+				Tooltip: ""
+			}
+
+			RhyoliteTable: {
+				DisplayName: Rhyolite Table
+				Tooltip: ""
+			}
+
+			RhyoliteToilet: {
+				DisplayName: Rhyolite Toilet
+				Tooltip: ""
+			}
+
+			RhyoliteColumn: {
+				DisplayName: Rhyolite Column
+				Tooltip: ""
+			}
+
+			SmoothRhyoliteWall: {
+				DisplayName: Smooth Rhyolite Wall
+				Tooltip: ""
+			}
+
+			TheEbonStabber: {
+				DisplayName: The Ebon Stabber
+				Tooltip: ""
+			}
+		}
+
+		NPCs: {
+			HauntedArmor.DisplayName: Haunted Armor
+			SporeSlime.DisplayName: Spore Slime
+			Bandit.DisplayName: Bandit
+			BanditLooter.DisplayName: Bandit Looter
+			CrimsonCultist.DisplayName: Crimson Cultist
+			BloodBolt.DisplayName: Blood Bolt
+			LavaWormHead.DisplayName: Lava Worm Head
+			LavaWormBody.DisplayName: Lava Worm Body
+			LavaWormTail.DisplayName: Lava Worm Tail
+			RhyoliteSlimer.DisplayName: Rhyolite Slimer
+			NightmareWalker.DisplayName: Nightmare Walker
+		}
+
+		Tiles: {
+			RhyoliteChest.MapEntry0: Rhyolite Chest
+			RhyoliteDresser.MapEntry: Rhyolite Dresser
+		}
+
+		Bestiary: {
+			LavaWorm: A worm inflicted with a curse of fire. It burrows through hot magma, inflicting serious injury on anyone who touches it.
+			RhyoliteSlimer: This slime is a relative of the Corruption's Slimer, but is more primitive. It simply dies after its wings have been destroyed.
+			Bandit: Seemingly a bandit that arrived to ransack this abandoned land. Even if they aren't durable, the dagger's they seem too possess often are still extremely deadly.
+			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
+			CrimsonCultist: A cultist that believes the Crimson to be a deity of some sort. They will sacrifice other people to make sure the Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too!
+			HauntedArmor: Left behind, presumably by its owner, this abandoned armor became haunted to seek revenge on them... However since it can't see, it probably assumes any human is its owner.
+			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
+			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
+		}
+
+		Biomes: {
+			Rhyolite: {
+				DisplayName: Rhyolite Cave
+				TownNPCDialogueName: the Rhyolite Cave
+			}
+		}
+
+		Projectiles.EbonStabberProj.DisplayName: Ebon Stabber Proj
+	}
+}

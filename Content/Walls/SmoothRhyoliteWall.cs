@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Walls;
 
-public class RhyoliteWall : ModWall
+public class SmoothRhyoliteWall : ModWall
 {
     public override void SetStaticDefaults()
     {
