@@ -236,7 +236,16 @@ Mods: {
 
 			TheEbonStabber: {
 				DisplayName: The Ebon Stabber
-				Tooltip: ""
+				Tooltip: "This pike pulses with evil, especially at its head"
+			}
+
+			FrozenLava: {
+				DisplayName: Frozen Lava
+				Tooltip:
+					'''
+					'You cant seperate Jerry from his Cheese!'
+					inflicts Frostburn on contact
+					'''
 			}
 		}
 
@@ -247,11 +256,11 @@ Mods: {
 			BanditLooter.DisplayName: Bandit Looter
 			CrimsonCultist.DisplayName: Crimson Cultist
 			BloodBolt.DisplayName: Blood Bolt
-			LavaWormHead.DisplayName: Lava Worm Head
-			LavaWormBody.DisplayName: Lava Worm Body
-			LavaWormTail.DisplayName: Lava Worm Tail
+			LavaWormHead.DisplayName: Lava Worm
+			LavaWormBody.DisplayName: Lava Worm
+			LavaWormTail.DisplayName: Lava Worm
 			RhyoliteSlimer.DisplayName: Rhyolite Slimer
-			NightmareWalker.DisplayName: Nightmare Walker
+			NightmareWalker.DisplayName: Night Walker
 		}
 
 		Tiles: {
@@ -260,8 +269,8 @@ Mods: {
 		}
 
 		Bestiary: {
-			LavaWorm: A worm inflicted with a curse of fire. It burrows through hot magma, inflicting serious injury on anyone who touches it.
-			RhyoliteSlimer: This slime is a relative of the Corruption's Slimer, but is more primitive. It simply dies after its wings have been destroyed.
+			LavaWorm: A worm that adapted to the scorching hot temperatures of the cave. It burrows through the hot magma, inflicting the same burns it first recieved on anyone who touches it.
+			RhyoliteSlimer: A slime that seems to be made out of still forming Rhyolite and the gel inside.
 			Bandit: Seemingly a bandit that arrived to ransack this abandoned land. Even if they aren't durable, the dagger's they seem too possess often are still extremely deadly.
 			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
 			CrimsonCultist: A cultist that will sacrifice living beings to make sure The Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too. Sometimes in a desperate situation, they may even sacrifice themselves to it!

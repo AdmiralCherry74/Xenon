@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Blocks
+namespace Xenon.Content.Items.Placeable.Tile
 {
-    public class WoolBlock : ModItem
+    public class FrozenLava : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -13,14 +13,15 @@ namespace Xenon.Content.Items.Blocks
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.WoolBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.FrozenLava>());
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.Cobweb, 4);
-            recipe.AddTile(TileID.Loom);
+            recipe.AddIngredient(ItemID.IceBlock, 2);
+            recipe.AddCondition(Condition.NearLava);
+            recipe.AddTile(TileID.CrystalBall);
             recipe.Register();
         }
     }
