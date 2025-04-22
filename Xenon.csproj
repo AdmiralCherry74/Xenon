@@ -14,12 +14,8 @@
 	  <None Remove="Content\Tiles\Lighting\**" />
 	</ItemGroup>
 	<ItemGroup>
-<<<<<<< Updated upstream
 	  <None Remove="Content\Items\Weapons\Melee\Scarlet.png" />
 	  <None Remove="Content\Items\Weapons\Melee\XenonWaraxe.png" />
-=======
-	  <None Remove="Content\Items\Placeable\Tile\FrozenLava.png" />
->>>>>>> Stashed changes
 	  <None Remove="Content\NPCs\Bandit.png" />
 	  <None Remove="Content\NPCs\BanditLooter.PNG" />
 	  <None Remove="Content\NPCs\BloodBolt.png" />
@@ -36,16 +32,15 @@
 	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
 	  <None Remove="Content\NPC_110.png" />
-	  <None Remove="Content\Tiles\FrozenLava.png" />
 	  <None Remove="Content\Tiles\image.png" />
 	  <None Remove="Content\Tiles\WoolBlock.png" />
 	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Assets\Textures\Backgrounds\" />
 	  <Folder Include="Content\Items\Placeable\Furniture\Rhyolite\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
+	  <Folder Include="Content\Items\Placeable\Tile\" />
 	  <Folder Include="Content\WorldGen\" />
 	  <Folder Include="Content\NPCs\Template\" />
 	  <Folder Include="Content\Tiles\Furniture\Rhyolite\" />
