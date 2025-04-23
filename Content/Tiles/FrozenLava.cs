@@ -13,9 +13,10 @@ public class FrozenLava : ModTile
         Main.tileSolid[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileMergeDirt[Type] = true;
-        DustType = ModContent.DustType<RhyoliteDust>();
+        DustType = DustID.Torch;
         HitSound = SoundID.Item50;
         TileID.Sets.GeneralPlacementTiles[Type] = false;
+        TileID.Sets.IceSkateSlippery[Type] = true;
     }
     public override bool IsTileDangerous(int i, int j, Player player)
 	{

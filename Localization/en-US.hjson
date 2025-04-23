@@ -7,7 +7,7 @@ Mods: {
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
-				Tooltip: A noble warrior once held this Sword. MATHMATICAL! (TESTING VERSION)
+				Tooltip: A noble warrior once held this Sword. MATHEMATICAL! (TESTING VERSION)
 			}
 
 			VeinPiercer: {
@@ -240,11 +240,11 @@ Mods: {
 			}
 
 			FrozenLava: {
-				DisplayName: Frozen Lava
+				DisplayName: Frozen Lava Block
 				Tooltip:
 					'''
-					'You cant seperate Jerry from his Cheese!'
-					inflicts Frostburn on contact
+					Inflicts Frostburn on contact
+					'You cant separate Jerry from his Cheese!'
 					'''
 			}
 		}
