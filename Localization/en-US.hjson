@@ -2,7 +2,17 @@ Mods: {
 	BiomeTitles.Title.Xenon.Rhyolite: Rhyolite Cave
 
 	Xenon: {
-		Generation.Rhyolite: Erupting rhyolite
+		Generation: {
+			Rhyolite: Erupting rhyolite
+			Quicksand: Sinking quicksand
+			Ice: Adding frozen lava
+		}
+
+		DeathText: {
+			QS_Suffocated_1: "{0} suffocated in quicksand."
+			QS_Suffocated_2: "{0} drowned in quicksand."
+			QS_Suffocated_3: "{0} discovered the floor was unstable."
+		}
 
 		Items: {
 			Scarlet: {
@@ -236,7 +246,7 @@ Mods: {
 
 			TheEbonStabber: {
 				DisplayName: The Ebon Stabber
-				Tooltip: "This pike pulses with evil, especially at its head"
+				Tooltip: This pike pulses with evil, especially at its head
 			}
 
 			FrozenLava: {
@@ -244,8 +254,38 @@ Mods: {
 				Tooltip:
 					'''
 					Inflicts Frostburn on contact
-					'You cant separate Jerry from his Cheese!'
+					'You cant separate Jerry from his cheese!'
 					'''
+			}
+
+			QuicksandBlock: {
+				DisplayName: Quicksand Block
+				Tooltip: ""
+			}
+
+			CrimquicksandBlock: {
+				DisplayName: Crimquicksand Block
+				Tooltip: ""
+			}
+
+			EbonquicksandBlock: {
+				DisplayName: Ebonquicksand Block
+				Tooltip: ""
+			}
+
+			PearlquicksandBlock: {
+				DisplayName: Pearlquicksand Block
+				Tooltip: ""
+			}
+
+			PowderedSnowBlock: {
+				DisplayName: Powdered Snow Block
+				Tooltip: ""
+			}
+
+			QuickmudBlock: {
+				DisplayName: Quickmud Block
+				Tooltip: ""
 			}
 		}
 
@@ -286,6 +326,16 @@ Mods: {
 			}
 		}
 
-		Projectiles.EbonStabberProj.DisplayName: Ebon Stabber
+		Projectiles: {
+			EbonStabberProj.DisplayName: Ebon Stabber
+			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
+		}
+
+		Buffs: {
+			QuicksandSuffocation: {
+				DisplayName: Quicksand Suffocation
+				Description: You are suffocating in quicksand
+			}
+		}
 	}
 }

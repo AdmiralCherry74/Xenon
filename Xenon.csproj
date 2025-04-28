@@ -40,8 +40,6 @@
 	<ItemGroup>
 	  <Folder Include="Content\Items\Placeable\Furniture\Rhyolite\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
-	  <Folder Include="Content\Items\Placeable\Tile\" />
-	  <Folder Include="Content\WorldGen\" />
 	  <Folder Include="Content\NPCs\Template\" />
 	  <Folder Include="Content\Tiles\Furniture\Rhyolite\" />
 	</ItemGroup>

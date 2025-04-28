@@ -296,6 +296,21 @@ public class Rhyolite
 							PlaceLavaBlob(pyX + 1, pyY);
 						}
 					}
+					// place hanging lava pools
+					if (pyX == x - randWidth + 15 - pstep + randWidth)
+					{
+						if (WorldGen.genRand.NextBool(9))
+						{
+							PlaceWallPool(pyX + 1, pyY, -1);
+						}
+					}
+					if (pyX == x + randWidth - 15 + pstep - randWidth)
+					{
+						if (WorldGen.genRand.NextBool(9))
+						{
+							PlaceWallPool(pyX + 1, pyY, 1);
+						}
+					}
 				}
 			}
 			pstep++;
@@ -489,6 +504,125 @@ public class Rhyolite
 				t.LiquidType = LiquidID.Lava;
 				t.LiquidAmount = (byte)WorldGen.genRand.Next(200, 255);
 			}
+		}
+	}
+	/// <summary>
+	/// Places a hanging wall pool.
+	/// </summary>
+	/// <param name="x"></param>
+	/// <param name="y"></param>
+	/// <param name="side">Whether it sticks out to the left or right.</param>
+	public static void PlaceWallPool(int x, int y, int side = -1)
+	{
+		if (side == 1)
+		{
+			for (int i = x - 9; i <= x + 2; i++)
+			{
+				for (int j = y; j < y + 5; j++)
+				{
+					if (i == x + 2 || i == x + 1)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i == x && j > y)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i == x - 1 && j > y && j < y + 4)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i >= x - 4 && i <= x - 2 && j > y + 1 && j < y + 4)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (j == y + 2 && i >= x - 7 && i <= x - 5)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (j == y + 1 && i >= x - 9 && i <= x - 7)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i > x - 9 && i <= x && j == y)
+					{
+						Tile t = Main.tile[i, j];
+						t.LiquidType = LiquidID.Lava;
+						t.LiquidAmount = 200;
+					}
+					// sometimes
+					if (i == x - 8 && j == y + 2)
+					{
+						if (WorldGen.genRand.NextBool(3))
+						{
+							WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+						}
+					}
+					if (i == x - 5 && j == y + 3)
+					{
+						if (WorldGen.genRand.NextBool(3))
+						{
+							WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+						}
+					}
+				}
+			}
+			WorldGen.PlaceTile(x - 9, y, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+		}
+		else if (side == -1)
+		{
+			for (int i = x - 2; i <= x + 9; i++)
+			{
+				for (int j = y; j < y + 5; j++)
+				{
+					if (i == x - 2 || i == x - 1)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i == x && j > y)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i == x + 1 && j > y && j < y + 4)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i >= x + 2 && i <= x + 4 && j > y + 1 && j < y + 4)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (j == y + 2 && i >= x + 5 && i <= x + 7)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (j == y + 1 && i >= x + 7 && i <= x + 9)
+					{
+						WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+					}
+					if (i < x + 9 && i >= x && j == y)
+					{
+						Tile t = Main.tile[i, j];
+						t.LiquidType = LiquidID.Lava;
+						t.LiquidAmount = 200;
+					}
+					// sometimes
+					if (i == x + 8 && j == y + 2)
+					{
+						if (WorldGen.genRand.NextBool(3))
+						{
+							WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+						}
+					}
+					if (i == x + 5 && j == y + 3)
+					{
+						if (WorldGen.genRand.NextBool(3))
+						{
+							WorldGen.PlaceTile(i, j, ModContent.TileType<Tiles.Rhyolite>(), true, true);
+						}
+					}
+				}
+			}
+			WorldGen.PlaceTile(x + 9, y, ModContent.TileType<Tiles.Rhyolite>(), true, true);
 		}
 	}
 	/// <summary>
@@ -1306,6 +1440,6 @@ public class RhyoliteCabin : MicroBiome
 		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.60000002384185791), new Modifiers.Blotches(2, 0.60000002384185791), new Modifiers.OnlyTiles(BuildData.Rhyolite.Tile), new Actions.SetTile((ushort)ModContent.TileType<Tiles.Rhyolite>(), setSelfFrames: true), new Modifiers.Dither(0.8), new Actions.SetTile((ushort)ModContent.TileType<Tiles.SmoothRhyolite>(), setSelfFrames: true)));
 		WorldUtils.Gen(new Point(room.X + 1, room.Y), new Shapes.Rectangle(room.Width - 2, 1), Actions.Chain(new Modifiers.Dither(), new Modifiers.OnlyTiles(161), new Modifiers.Offset(0, 1), new ActionStalagtite()));
 		WorldUtils.Gen(new Point(room.X + 1, room.Y + room.Height - 1), new Shapes.Rectangle(room.Width - 2, 1), Actions.Chain(new Modifiers.Dither(), new Modifiers.OnlyTiles(161), new Modifiers.Offset(0, 1), new ActionStalagtite()));
-		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.85000002384185791), new Modifiers.Blotches(2, 0.8), ((double)room.Y > Main.worldSurface) ? ((GenAction)new Actions.ClearWall(frameNeighbors: true)) : ((GenAction)new Actions.PlaceWall(0))));
+		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.85), new Modifiers.Blotches(), new Actions.PlaceWall((ushort)ModContent.WallType<Walls.RhyoliteWallUnsafe>())));
 	}
 }

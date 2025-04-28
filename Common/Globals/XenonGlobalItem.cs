@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Common.Globals;
 
-public class RhyoliteGlobalItem : GlobalItem
+public class XenonGlobalItem : GlobalItem
 {
     public override void SetStaticDefaults()
     {

@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -27,7 +28,8 @@ public class Utils
 		variation = Terraria.Utils.Clamp(variation, 0, 2);
 		if (WorldGen.SolidTile(x, y - 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y + 1].HasTile)
 		{
-			if (Main.tile[x, y - 1].TileType == ModContent.TileType<Tiles.Rhyolite>())
+			if (Main.tile[x, y - 1].TileType == ModContent.TileType<Tiles.Rhyolite>() ||
+				Main.tile[x, y - 1].TileType == ModContent.TileType<FrozenLava>())
 			{
 				if (preferSmall)
 				{
