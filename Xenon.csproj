@@ -14,8 +14,14 @@
 	  <None Remove="Content\Tiles\Lighting\**" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Armour\Vanity\CarrotHeadBand.png" />
+	  <None Remove="Content\Items\Armour\Vanity\CarrotHeadBand_Head.png" />
+	  <None Remove="Content\Items\Placeable\Furniture\Painting\GooberPainting.png" />
+	  <None Remove="Content\Items\Weapons\Magic\Raycannon.png" />
 	  <None Remove="Content\Items\Weapons\Melee\Scarlet.png" />
+	  <None Remove="Content\Items\Weapons\Melee\TheEbonStabber.png" />
 	  <None Remove="Content\Items\Weapons\Melee\XenonWaraxe.png" />
+	  <None Remove="Content\Items\Weapons\Ranged\MP5.png" />
 	  <None Remove="Content\NPCs\Bandit.png" />
 	  <None Remove="Content\NPCs\BanditLooter.PNG" />
 	  <None Remove="Content\NPCs\BloodBolt.png" />
@@ -31,17 +37,23 @@
 	  <None Remove="Content\Items\Valuables\RareBook.png" />
 	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
+	  <None Remove="Content\NPCs\Mimicling.png" />
+	  <None Remove="Content\NPCs\SnowLeopard.png" />
+	  <None Remove="Content\NPCs\Wartornmelon.png" />
 	  <None Remove="Content\NPC_110.png" />
+	  <None Remove="Content\Projectiles\EbonStabberProj.png" />
+	  <None Remove="Content\Projectiles\RayExplosion.png" />
+	  <None Remove="Content\Projectiles\RayProj.png" />
+	  <None Remove="Content\Tiles\Furniture\GooberPainting.png" />
+	  <None Remove="Content\Tiles\Furniture\Painting\GooberPainting.png" />
 	  <None Remove="Content\Tiles\image.png" />
 	  <None Remove="Content\Tiles\WoolBlock.png" />
 	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Content\Items\Placeable\Furniture\Rhyolite\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\NPCs\Template\" />
-	  <Folder Include="Content\Tiles\Furniture\Rhyolite\" />
 	</ItemGroup>
 
 	<!-- References -->

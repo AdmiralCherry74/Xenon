@@ -5,7 +5,7 @@ Mods: {
 		Generation: {
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
-			Ice: Adding frozen lava
+			Ice: Freezing Lava
 		}
 
 		DeathText: {
@@ -32,7 +32,7 @@ Mods: {
 
 			RhyoliteWall: {
 				DisplayName: Rhyolite Wall
-				Tooltip: You're either a cheater or you're me testing the mod :3
+				Tooltip: ""
 			}
 
 			WoolBlock: {
@@ -156,12 +156,12 @@ Mods: {
 
 			LavaWormBanner: {
 				DisplayName: Lava Worm Banner
-				Tooltip: ""
+				Tooltip: Nearby players get a bonus against: Lava Worm
 			}
 
 			RhyoliteSlimerBanner: {
 				DisplayName: Rhyolite Slimer Banner
-				Tooltip: ""
+				Tooltip: Nearby players get a bonus against: Rhyolite Slimer
 			}
 
 			RhyoliteBed: {
@@ -246,7 +246,7 @@ Mods: {
 
 			TheEbonStabber: {
 				DisplayName: The Ebon Stabber
-				Tooltip: This pike pulses with evil, especially at its head
+				Tooltip: temporary sprite.
 			}
 
 			FrozenLava: {
@@ -260,31 +260,51 @@ Mods: {
 
 			QuicksandBlock: {
 				DisplayName: Quicksand Block
-				Tooltip: ""
+				Tooltip: Sand that makes you fall through it
 			}
 
 			CrimquicksandBlock: {
 				DisplayName: Crimquicksand Block
-				Tooltip: ""
+				Tooltip: Crimfied Sand that makes you fall through it
 			}
 
 			EbonquicksandBlock: {
 				DisplayName: Ebonquicksand Block
-				Tooltip: ""
+				Tooltip: Corrupted Sand that makes you fall through it
 			}
 
 			PearlquicksandBlock: {
 				DisplayName: Pearlquicksand Block
-				Tooltip: ""
+				Tooltip: Hallowed Sand that makes you fall through it
 			}
 
 			PowderedSnowBlock: {
 				DisplayName: Powdered Snow Block
-				Tooltip: ""
+				Tooltip: Snow that makes you fall through it
 			}
 
 			QuickmudBlock: {
 				DisplayName: Quickmud Block
+				Tooltip: Mud that makes you fall through it
+			}
+
+			CarrotHeadBand: {
+				DisplayName: Carrot Head Band
+				Tooltip: ""
+			}
+
+			GooberPainting: {
+				DisplayName: Goober Painting
+				Tooltip: ""
+			}
+
+			MP5: {
+				DisplayName: Maschinenpistole 5
+				Tooltip: Shoots faster than other guns, but lacks damage
+			}
+
+			Raycannon: {
+				DisplayName: Raycannon
 				Tooltip: ""
 			}
 		}
@@ -301,6 +321,9 @@ Mods: {
 			LavaWormTail.DisplayName: Lava Worm
 			RhyoliteSlimer.DisplayName: Rhyolite Slimer
 			NightmareWalker.DisplayName: Night Walker
+			SnowLeopard.DisplayName: Snow Leopard
+			Wartornmelon.DisplayName: Mahogster
+			Mimicling.DisplayName: Mimicling
 		}
 
 		Tiles: {
@@ -310,13 +333,15 @@ Mods: {
 
 		Bestiary: {
 			LavaWorm: A worm that adapted to the scorching hot temperatures of the cave. It burrows through the hot magma, inflicting the same burns it first recieved on anyone who touches it.
-			RhyoliteSlimer: A slime that seems to be made out of still forming Rhyolite and the gel inside.
+			RhyoliteSlimer: A slime that seems to be made out of still forming Rhyolite, with the gel inside holding the rock together.
 			Bandit: Seemingly a bandit that arrived to ransack this abandoned land. Even if they aren't durable, the dagger's they seem too possess often are still extremely deadly.
 			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
 			CrimsonCultist: A cultist that will sacrifice living beings to make sure The Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too. Sometimes in a desperate situation, they may even sacrifice themselves to it!
 			HauntedArmor: Left behind, presumably by its owner, this abandoned armor became haunted to seek revenge on them... However since it can't see, it probably assumes any human is its owner.
 			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
 			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
+			SnowLeopard: A solitary predator that seeks its prey in the tundra. it rarely hunts humans... keyword *rarely*
+			Wartornmelon: A living rich mahogny tree now twisted into a monster seeking to murder those who dare disturb the jungle
 		}
 
 		Biomes: {
@@ -329,6 +354,8 @@ Mods: {
 		Projectiles: {
 			EbonStabberProj.DisplayName: Ebon Stabber
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
+			RayExplosion.DisplayName: Ray Explosion
+			RayProj.DisplayName: Ray Proj
 		}
 
 		Buffs: {

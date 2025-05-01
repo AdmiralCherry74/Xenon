@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
+using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Placeable.Tile;
 
 namespace Xenon.Content.NPCs;
@@ -59,6 +60,7 @@ public class RhyoliteSlimer : ModNPC
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
-        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 100, 5, 11));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 1, 5, 10));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GooberPainting>(), 1000, 1, 1));
     }
 }

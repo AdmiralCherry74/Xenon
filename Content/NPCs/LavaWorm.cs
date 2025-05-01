@@ -8,6 +8,7 @@ using Terraria.Localization;
 using Xenon.NPCs.Template;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Placeable.Tile;
+using Xenon.Content.Items.Placeable.Furniture.Painting;
 
 namespace Xenon.Content.NPCs;
 
@@ -210,5 +211,9 @@ public class LavaWormTail : WormTail
     public override void Init()
     {
 		LavaWormHead.CommonWormInit(this);
+    }
+    public override void ModifyNPCLoot(NPCLoot npcLoot)
+    {
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GooberPainting>(), 1000, 1, 1));
     }
 }
