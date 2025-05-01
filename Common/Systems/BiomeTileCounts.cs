@@ -14,5 +14,6 @@ internal class BiomeTileCounts : ModSystem
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<PowderedSnow>()];
+		Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<FrozenLava>()];
 	}
 }

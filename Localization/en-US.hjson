@@ -12,6 +12,8 @@ Mods: {
 			QS_Suffocated_1: "{0} suffocated in quicksand."
 			QS_Suffocated_2: "{0} drowned in quicksand."
 			QS_Suffocated_3: "{0} discovered the floor was unstable."
+			Iceburn_1: "{0} experienced what it feels like to drink liquid nitrogen."
+			Iceburn_2: "{0} went up in icy flames."
 		}
 
 		Items: {

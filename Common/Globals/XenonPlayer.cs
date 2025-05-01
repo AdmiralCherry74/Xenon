@@ -4,12 +4,18 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Tiles;
 
 namespace Xenon.Common.Globals;
 
 public class XenonPlayer : ModPlayer
 {
+	public override void PostUpdateEquips()
+	{
+		if (Player.lavaImmune || Player.resistCold)
+		{
+			Player.buffImmune[ModContent.BuffType<Iceburn>()] = true;
+		}
+	}
 	public override void PostUpdate()
 	{
 		QuicksandMovement();
