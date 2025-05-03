@@ -37,6 +37,7 @@
 	  <None Remove="Content\Items\Valuables\RareBook.png" />
 	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
+	  <None Remove="Content\NPCs\Lihshart.png" />
 	  <None Remove="Content\NPCs\Mimicling.png" />
 	  <None Remove="Content\NPCs\SnowLeopard.png" />
 	  <None Remove="Content\NPCs\Wartornmelon.png" />
@@ -47,6 +48,7 @@
 	  <None Remove="Content\Tiles\Furniture\GooberPainting.png" />
 	  <None Remove="Content\Tiles\Furniture\Painting\GooberPainting.png" />
 	  <None Remove="Content\Tiles\image.png" />
+	  <None Remove="Content\Tiles\WeatheringSteel.png" />
 	  <None Remove="Content\Tiles\WoolBlock.png" />
 	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="icon.png" />

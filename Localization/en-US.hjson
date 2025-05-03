@@ -326,6 +326,7 @@ Mods: {
 			SnowLeopard.DisplayName: Snow Leopard
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
+			Lihshart.DisplayName: Temple Sentry
 		}
 
 		Tiles: {
@@ -344,6 +345,7 @@ Mods: {
 			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
 			SnowLeopard: A solitary predator that seeks its prey in the tundra. it rarely hunts humans... keyword *rarely*
 			Wartornmelon: A living rich mahogny tree now twisted into a monster seeking to murder those who dare disturb the jungle
+			Lihshart: a dangerous sentry that patrol's the jungle temple. shooting lazers and ramming into those who run into the temple uninvited.
 		}
 
 		Biomes: {
@@ -364,6 +366,11 @@ Mods: {
 			QuicksandSuffocation: {
 				DisplayName: Quicksand Suffocation
 				Description: You are suffocating in quicksand
+			}
+
+			Iceburn: {
+				DisplayName: Iceburn
+				Description: Mods.Xenon.Buffs.Iceburn.Description
 			}
 		}
 	}
