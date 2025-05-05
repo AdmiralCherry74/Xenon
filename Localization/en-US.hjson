@@ -262,32 +262,32 @@ Mods: {
 
 			QuicksandBlock: {
 				DisplayName: Quicksand Block
-				Tooltip: Sand that makes you fall through it
+				Tooltip: Sand that you can fall through
 			}
 
 			CrimquicksandBlock: {
 				DisplayName: Crimquicksand Block
-				Tooltip: Crimfied Sand that makes you fall through it
+				Tooltip: Crimsand that you can fall through
 			}
 
 			EbonquicksandBlock: {
 				DisplayName: Ebonquicksand Block
-				Tooltip: Corrupted Sand that makes you fall through it
+				Tooltip: Ebonsand that you can fall through
 			}
 
 			PearlquicksandBlock: {
 				DisplayName: Pearlquicksand Block
-				Tooltip: Hallowed Sand that makes you fall through it
+				Tooltip: Pearlsand that you can fall through
 			}
 
 			PowderedSnowBlock: {
 				DisplayName: Powdered Snow Block
-				Tooltip: Snow that makes you fall through it
+				Tooltip: Snow that you can fall through
 			}
 
 			QuickmudBlock: {
 				DisplayName: Quickmud Block
-				Tooltip: Mud that makes you fall through it
+				Tooltip: Mud that you can fall through
 			}
 
 			CarrotHeadBand: {
@@ -341,11 +341,11 @@ Mods: {
 			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
 			CrimsonCultist: A cultist that will sacrifice living beings to make sure The Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too. Sometimes in a desperate situation, they may even sacrifice themselves to it!
 			HauntedArmor: Left behind, presumably by its owner, this abandoned armor became haunted to seek revenge on them... However since it can't see, it probably assumes any human is its owner.
-			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
-			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
-			SnowLeopard: A solitary predator that seeks its prey in the tundra. it rarely hunts humans... keyword *rarely*
-			Wartornmelon: A living rich mahogny tree now twisted into a monster seeking to murder those who dare disturb the jungle
-			Lihshart: a dangerous sentry that patrol's the jungle temple. shooting lazers and ramming into those who run into the temple uninvited.
+			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However, it seems like Glowing Snails are its source of food.
+			NightmareWalker: A person devoid of life, they are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
+			SnowLeopard: A solitary predator that seeks its prey in the snow.
+			Wartornmelon: A living rich mahogany tree now twisted into a monster seeking to murder those who dare disturb the Jungle.
+			Lihshart: A dangerous sentry that patrols the Lihzahrd Temple, it shoots lasers and rams into those who run into the temple uninvited.
 		}
 
 		Biomes: {
@@ -359,7 +359,7 @@ Mods: {
 			EbonStabberProj.DisplayName: Ebon Stabber
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Explosion
-			RayProj.DisplayName: Ray Proj
+			RayProj.DisplayName: Ray
 		}
 
 		Buffs: {
@@ -370,7 +370,7 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Mods.Xenon.Buffs.Iceburn.Description
+				Description: It burns like liquid nitrogen
 			}
 		}
 	}

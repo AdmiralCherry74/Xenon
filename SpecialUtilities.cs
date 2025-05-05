@@ -25,7 +25,30 @@ public static class SpecialUtilities
 
 		return true;
 	}
-	public static Vector2 QuicksandTiles(Vector2 Position, Vector2 Velocity, int Width, int Height)
+    public static bool DoublePressedReversedSetBonusActivateKey(this Player player)
+    {
+        return (player.doubleTapCardinalTimer[Main.ReversedUpDownArmorSetBonuses ? 0 : 1] < 15 && ((player.releaseDown && Main.ReversedUpDownArmorSetBonuses && player.controlDown) || (player.releaseUp && !Main.ReversedUpDownArmorSetBonuses && player.controlUp)));
+    }
+
+    public static bool DoublePressedDown(this Player player)
+    {
+        return player.doubleTapCardinalTimer[0] < 15 && player.releaseDown && player.controlDown;
+    }
+
+    public static bool IsOnGroundPrecise(this Player player)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            var tileX = Main.tile[(int)((player.position.X + (player.width * i / 2f)) / 16f), (int)((player.position.Y + (player.gravDir == 1 ? player.height + 1 : -1)) / 16f)];
+
+            if (tileX.HasTile && (Main.tileSolid[tileX.TileType] || Main.tileSolidTop[tileX.TileType]) && player.velocity.Y == 0f)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static Vector2 QuicksandTiles(Vector2 Position, Vector2 Velocity, int Width, int Height)
 	{
 		Vector2 vector = Position;
 		int num = (int)(Position.X / 16f) - 1;

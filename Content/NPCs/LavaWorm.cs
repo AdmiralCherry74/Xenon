@@ -9,6 +9,7 @@ using Xenon.NPCs.Template;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
+using Xenon.Content.Items.Accessories;
 
 namespace Xenon.Content.NPCs;
 
@@ -85,7 +86,9 @@ public class LavaWormHead : WormHead
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
-        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 100, 5, 11));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 1, 5, 11));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FossilizedBlessing>(), 35));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EruptionInABottle>(), 35));
     }
     public override void Init()
     {
