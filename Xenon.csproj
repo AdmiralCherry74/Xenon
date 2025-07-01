@@ -14,6 +14,7 @@
 	  <None Remove="Content\Tiles\Lighting\**" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Accessories\LaserSight.png" />
 	  <None Remove="Content\Items\Armour\Vanity\CarrotHeadBand.png" />
 	  <None Remove="Content\Items\Armour\Vanity\CarrotHeadBand_Head.png" />
 	  <None Remove="Content\Items\Placeable\Furniture\Painting\GooberPainting.png" />

@@ -307,7 +307,20 @@ Mods: {
 
 			Raycannon: {
 				DisplayName: Raycannon
-				Tooltip: ""
+				Tooltip:
+					'''
+					Increased damage, armor penetration and crit chance against Boss and Mini Boss enemies
+					"Please revive me, I have the Ray Cannon!"
+					'''
+			}
+
+			LaserSight: {
+				DisplayName: Laser Sight
+				Tooltip:
+					'''
+					+1 Armor Penetration on Guns
+					+8% Crit chance with Guns
+					'''
 			}
 		}
 
@@ -344,7 +357,7 @@ Mods: {
 			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
 			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
 			SnowLeopard: A solitary predator that seeks its prey in the tundra. it rarely hunts humans... keyword *rarely*
-			Wartornmelon: A living rich mahogny tree now twisted into a monster seeking to murder those who dare disturb the jungle
+			Wartornmelon: temporary beastairy. temporary sprite, ok look this enemy is unfinished
 			Lihshart: a dangerous sentry that patrol's the jungle temple. shooting lazers and ramming into those who run into the temple uninvited.
 		}
 
@@ -370,7 +383,7 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Mods.Xenon.Buffs.Iceburn.Description
+				Description: Its so cold... IT BURNS
 			}
 		}
 	}
