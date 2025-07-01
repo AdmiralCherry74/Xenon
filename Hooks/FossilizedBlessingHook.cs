@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Rhyolite.Buffs;
 using Terraria.Graphics;
 using Terraria;
 using Terraria.Graphics.Renderers;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using Xenon.Content.Buffs;
+using Xenon.Common;
 
 namespace Xenon.Hooks;
 
