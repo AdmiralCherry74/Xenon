@@ -322,6 +322,21 @@ Mods: {
 					+8% Crit chance with Guns
 					'''
 			}
+
+			EruptionInABottle: {
+				DisplayName: Eruption In A Bottle
+				Tooltip: ""
+			}
+
+			FossilizedBlessing: {
+				DisplayName: Fossilized Blessing
+				Tooltip: ""
+			}
+
+			TunaMelt: {
+				DisplayName: Tuna Melt
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -384,6 +399,16 @@ Mods: {
 			Iceburn: {
 				DisplayName: Iceburn
 				Description: Its so cold... IT BURNS
+			}
+
+			FossilBlessingCooldown: {
+				DisplayName: Fossil Blessing Cooldown
+				Description: Mods.Xenon.Buffs.FossilBlessingCooldown.Description
+			}
+
+			FossilBlessing: {
+				DisplayName: Fossil Blessing
+				Description: Mods.Xenon.Buffs.FossilBlessing.Description
 			}
 		}
 	}
