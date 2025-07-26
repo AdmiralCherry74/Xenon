@@ -3,8 +3,8 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Effects.Buffs;
+using Xenon.Content.Effects.Debuffs;
 
 namespace Xenon.Common.Globals;
 

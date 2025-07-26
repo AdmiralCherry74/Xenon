@@ -337,6 +337,16 @@ Mods: {
 				DisplayName: Tuna Melt
 				Tooltip: ""
 			}
+
+			Phlegmrang: {
+				DisplayName: Phlegmrang
+				Tooltip: ""
+			}
+
+			OutragePotion: {
+				DisplayName: Outrage Potion
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -355,6 +365,14 @@ Mods: {
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
 			Lihshart.DisplayName: Temple Sentry
+			Irritshits.DisplayName: Gastritis
+			NEWORIGINALFUNNY.DisplayName: N E W O R I G I N A L F U N N Y
+			FATWORMHead.DisplayName: F A T W O R M Head
+			FATWORMBody.DisplayName: F A T W O R M Body
+			FATWORMTail.DisplayName: F A T W O R M Tail
+			StomachBug.DisplayName: Stomach Bug
+			HalfDigested.DisplayName: Half-Digested
+			Dickroach.DisplayName: Evphila
 		}
 
 		Tiles: {
@@ -369,11 +387,15 @@ Mods: {
 			BanditLooter: A knife-throwing Bandit. He seems to have looted more goodies than a typical Bandit. Probably still alive because of the knives however, so don't get hit!
 			CrimsonCultist: A cultist that will sacrifice living beings to make sure The Crimson grows. Bandits, townsfolk, doesn't matter who, they will sacrifice you too. Sometimes in a desperate situation, they may even sacrifice themselves to it!
 			HauntedArmor: Left behind, presumably by its owner, this abandoned armor became haunted to seek revenge on them... However since it can't see, it probably assumes any human is its owner.
-			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. However it seems like the Glowing Snail are its source of food
-			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare.
+			SporeSlime: Despite spores being in it, it doesn't appear to be dying... Infact, the slime and spores seem to have a symbiotic relationship. It seems like the Glowing Snail are its source of food
+			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare. Reminder that the original person can see everything that happens but are helpless to stop it...
 			SnowLeopard: A solitary predator that seeks its prey in the tundra. it rarely hunts humans... keyword *rarely*
 			Wartornmelon: temporary beastairy. temporary sprite, ok look this enemy is unfinished
-			Lihshart: a dangerous sentry that patrol's the jungle temple. shooting lazers and ramming into those who run into the temple uninvited.
+			Lihshart: a dangerous sentry that patrol's the jungle temple. shooting lazers and ramming into those who run into the temple uninvited. Low grade weapons wont even scratch it without the help of souls being realeased...
+			HalfDigested: A unfrotunate bipedal mortal like a Human or Goblin, ate and spat out by the Stomach Of Cthulu. They now Run about to harm those not yet under this affliction.
+			StomachBug: A small stinkbug now turned into a denizen of The Corrosion. Stomach Bug's run about gathering food for the ever hungry overlord. Covering the land in their Noxious fumes.
+			Irritshits: Annoying, Plentiful, Ugly, Reckless, and Deadly. Thats what Gastritis are, thats bad news for you
+			Dickroach: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, feeding off the sins of their surroundings. thankfully they cant fly.
 		}
 
 		Biomes: {
@@ -403,12 +425,17 @@ Mods: {
 
 			FossilBlessingCooldown: {
 				DisplayName: Fossil Blessing Cooldown
-				Description: Mods.Xenon.Buffs.FossilBlessingCooldown.Description
+				Description: Look we have to balence it somehow. -Selene
 			}
 
 			FossilBlessing: {
 				DisplayName: Fossil Blessing
-				Description: Mods.Xenon.Buffs.FossilBlessing.Description
+				Description: Calling upon your unique trinket. You are now fossilized and are now more tanky than ever.
+			}
+
+			Outraged: {
+				DisplayName: Outraged
+				Description: Temporary Description, right now it increases defense, ignore the rest right now. Increase's Armor Penetration by 5
 			}
 		}
 	}

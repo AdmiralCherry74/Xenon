@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Food;
+namespace Xenon.Content.Items.NomNoms;
 
 public class TunaMelt : ModItem
 {
