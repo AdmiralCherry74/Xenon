@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Effects.Debuffs;
 using Xenon.Content.Tiles;
 
 namespace Xenon.Hooks

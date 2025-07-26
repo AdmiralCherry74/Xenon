@@ -6,7 +6,7 @@ using Terraria.GameContent.Bestiary;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.Content.Items.Accessories;
-using Xenon.Content.Items.Food;
+using Xenon.Content.Items.NomNoms;
 
 namespace Xenon.Content.NPCs;
 
