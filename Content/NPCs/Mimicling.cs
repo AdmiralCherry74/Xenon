@@ -6,6 +6,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items;
+using Xenon.Content.Items.Accessories;
 
 namespace Xenon.Content.NPCs
 {
@@ -33,8 +35,8 @@ namespace Xenon.Content.NPCs
             NPC.DeathSound = SoundID.NPCDeath6;
             NPC.value = 50000;
             NPC.knockBackResist = 0.4f;
-            NPC.aiStyle = 25; 
-            
+            NPC.aiStyle = 25;
+
             AIType = NPCID.Mimic;
             AnimationType = NPCID.IceMimic;
         }
@@ -67,11 +69,11 @@ namespace Xenon.Content.NPCs
         {
             if (spawnInfo.Player.ZoneNormalUnderground && !NPC.AnyNPCs(Type))
 
+            {
                 {
-                    {
                     return SpawnCondition.Underground.Chance * 1f;
 
-                    }
+                }
             }
             return 0f;
         }
@@ -94,10 +96,9 @@ namespace Xenon.Content.NPCs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Glowstick, 4, 25, 45));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Torch, 2, 15, 25));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LaserSight>(), 1, 1, 1));
         }
     }
 }
