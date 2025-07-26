@@ -3,12 +3,34 @@ using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles;
+using Terraria.WorldBuilding;
+using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Content.WorldGeneration;
 
 public class Utils
 {
-	public static bool IsInsideEllipse(int x, int y, Vector2 center, int xRadius, int yRadius)
+    /// <summary>
+    /// A helper method to find the actual surface of the world.
+    /// </summary>
+    /// <param name="positionX">The x position.</param>
+    /// <returns>The surface of the world.</returns>
+    public static int TileCheck(int positionX)
+    {
+        for (int i = (int)(GenVars.worldSurfaceLow - 30); i < Main.maxTilesY; i++)
+        {
+            Tile tile = Framing.GetTileSafely(positionX, i);
+            if ((tile.TileType == TileID.Dirt || tile.TileType == TileID.ClayBlock || tile.TileType == TileID.Stone ||
+                tile.TileType == TileID.Sand || tile.TileType == ModContent.TileType<Gutsand>() ||
+				tile.TileType == TileID.Mud ||
+                tile.TileType == TileID.SnowBlock || tile.TileType == TileID.IceBlock) && tile.HasTile)
+            {
+                return i - 3;
+            }
+        }
+        return 0;
+    }
+    public static bool IsInsideEllipse(int x, int y, Vector2 center, int xRadius, int yRadius)
 	{
 		float dx = x - center.X;
 		float dy = y - center.Y;

@@ -2,10 +2,20 @@ Mods: {
 	BiomeTitles.Title.Xenon.Rhyolite: Rhyolite Cave
 
 	Xenon: {
+		AltBiomes: {
+			CorrosionAltBiome: {
+				DisplayName: Corrosion
+				Description: Digestive juices are guaranteed to corrode your world.
+				GenPassName: Digesting the world
+				DryadTextDescriptor: corrosion
+			}
+		}
+
 		Generation: {
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
 			Ice: Freezing Lava
+			Corrosion.Message: Digesting the world
 		}
 
 		DeathText: {
@@ -337,6 +347,61 @@ Mods: {
 				DisplayName: Tuna Melt
 				Tooltip: ""
 			}
+
+			RottenMushroom: {
+				DisplayName: Vitreolic Mushroom
+				Tooltip: ""
+			}
+
+			Bilewood: {
+				DisplayName: Bilewood
+				Tooltip: ""
+			}
+
+			GutsandBlock: {
+				DisplayName: Gutsand Block
+				Tooltip: ""
+			}
+
+			GutsandstoneBlock: {
+				DisplayName: Gutsandstone Block
+				Tooltip: ""
+			}
+
+			GutstoneBlock: {
+				DisplayName: Gutstone Block
+				Tooltip: ""
+			}
+
+			HardenedGutsandBlock: {
+				DisplayName: Hardened Gutsand Block
+				Tooltip: ""
+			}
+
+			TanIceBlock: {
+				DisplayName: Tan Ice Block
+				Tooltip: ""
+			}
+
+			WorldgenHelper: {
+				DisplayName: Worldgen Helper
+				Tooltip: ""
+			}
+
+			UlceriteBar: {
+				DisplayName: Ulcerite Bar
+				Tooltip: ""
+			}
+
+			CorrosionSeeds: {
+				DisplayName: Corrosion Seeds
+				Tooltip: ""
+			}
+
+			UlceriteOre: {
+				DisplayName: Ulcerite Ore
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -360,6 +425,7 @@ Mods: {
 		Tiles: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
+			UlceriteOre.MapEntry: Mods.Xenon.Tiles.UlceriteOre.MapEntry
 		}
 
 		Bestiary: {
@@ -381,6 +447,11 @@ Mods: {
 				DisplayName: Rhyolite Cave
 				TownNPCDialogueName: the Rhyolite Cave
 			}
+
+			Corrosion: {
+				DisplayName: Corrosion
+				TownNPCDialogueName: the Corrosion
+			}
 		}
 
 		Projectiles: {
@@ -388,6 +459,8 @@ Mods: {
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Explosion
 			RayProj.DisplayName: Ray Proj
+			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Projectile
+			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun Projectile
 		}
 
 		Buffs: {

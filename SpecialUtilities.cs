@@ -8,7 +8,8 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
-	public static Rectangle Expand(this Rectangle r, int xDist, int yDist)
+    public static void Active(this Tile t, bool a) => t.HasTile = a;
+    public static Rectangle Expand(this Rectangle r, int xDist, int yDist)
 	{
 		r.X -= xDist;
 		r.Y -= yDist;

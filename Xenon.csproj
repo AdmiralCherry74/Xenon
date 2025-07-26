@@ -55,8 +55,14 @@
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Assets\Textures\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\NPCs\Template\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="AltLibrary">
+	    <HintPath>..\..\ModReader\AltLibrary\AltLibrary.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 	<!-- References -->

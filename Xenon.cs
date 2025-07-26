@@ -10,7 +10,9 @@ namespace Xenon
 {
 	public class Xenon : Mod
 	{
-		public override void Load()
+        public static Color CorrosionBiomeSightColor = new Color(177, 186, 58);
+        public const string TextureAssetsPath = "Assets/Textures";
+        public override void Load()
 		{
 			while (ModHook.RegisteredHooks.TryDequeue(out ModHook? hook))
 			{
