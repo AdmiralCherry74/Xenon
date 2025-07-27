@@ -449,6 +449,9 @@ Mods: {
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
 			Dickroach.DisplayName: Evphila
+			BloodWormHead.DisplayName: Blood Worm Head
+			BloodWormBody.DisplayName: Blood Worm Body
+			BloodWormTail.DisplayName: Blood Worm Tail
 		}
 
 		Tiles: {
