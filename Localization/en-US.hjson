@@ -439,7 +439,7 @@ Mods: {
 		Tiles: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
-			UlceriteOre.MapEntry: Mods.Xenon.Tiles.UlceriteOre.MapEntry
+			UlceriteOre.MapEntry: Ulcerite Ore
 		}
 
 		Bestiary: {
