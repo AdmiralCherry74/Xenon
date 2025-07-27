@@ -9,13 +9,9 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Effects.Buffs;
     public class Outraged : ModBuff
+{
+    public override void Update(Player player, ref int buffIndex)
     {
-        public static readonly int DefenseBonus = 1;
-
-        public override LocalizedText Description => base.Description.WithFormatArgs(DefenseBonus);
-
-        public override void Update(Player player, ref int buffIndex)
-        {
-        player.statDefense += DefenseBonus; // Grant a +10 defense boost to the player while the buff is active.
+        player.GetArmorPenetration(DamageClass.Generic) += 5;
     }
-    }
+}

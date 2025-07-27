@@ -8,6 +8,8 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
+using Xenon.Content.Items.GlugGlugs;
+using Xenon.Content.Items.Weapons.Melee;
 
 namespace Xenon.Content.NPCs
 {
@@ -98,6 +100,8 @@ namespace Xenon.Content.NPCs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PainPills>(), 1, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RubberHandleSword>(), 1, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LaserSight>(), 1, 1, 1));
         }
     }

@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Placeable.Tile;
 
@@ -8,7 +9,7 @@ public class GutsandBlock : ModItem
 	public override void SetStaticDefaults()
 	{
 		Item.ResearchUnlockCount = 100;
-		ItemID.Sets.SandgunAmmoProjectileData[Type] = new(ModContent.ProjectileType<Projectiles.GutsandSandgunProjectile>(), 5);
+		ItemID.Sets.SandgunAmmoProjectileData[Type] = new(ModContent.ProjectileType<GutsandSandgunProjectile>(), 5);
 	}
 	public override void SetDefaults()
 	{

@@ -10,8 +10,8 @@ public class Scarlet : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 40;
-        Item.height = 40;
+        Item.width = 32;
+        Item.height = 32;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 20;

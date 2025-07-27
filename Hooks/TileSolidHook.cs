@@ -19,9 +19,10 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Quicksand>()] = false;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Crimquicksand>()] = false;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Ebonquicksand>()] = false;
-		Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = false;
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = false;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.PowderedSnow>()] = false;
-		orig.Invoke(self, sw);
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Gutquicksand>()] = false;
+        orig.Invoke(self, sw);
 	}
 
 	private void On_Main_UpdateTime(On_Main.orig_UpdateTime orig)
@@ -31,9 +32,10 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Quicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Crimquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Ebonquicksand>()] = true;
-		Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = true;
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.PowderedSnow>()] = true;
-	}
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Gutquicksand>()] = true;
+    }
 
 	private void On_Liquid_Update(On_Liquid.orig_Update orig, Liquid self)
 	{
@@ -41,8 +43,9 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Quicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Crimquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.Ebonquicksand>()] = true;
-		Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = true;
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Pearlquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<Content.Tiles.PowderedSnow>()] = true;
-		orig.Invoke(self);
+        Main.tileSolid[ModContent.TileType<Content.Tiles.Gutquicksand>()] = true;
+        orig.Invoke(self);
 	}
 }

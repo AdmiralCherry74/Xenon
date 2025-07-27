@@ -1,29 +1,35 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Config;
 
-namespace Xenon.Content.Buffs
+namespace Xenon.Content.Effects.Debuffs
 {
     // This class serves as an example of a debuff that causes constant loss of life
     // See ExampleLifeRegenDebuffPlayer.UpdateBadLifeRegen at the end of the file for more information
-    public class TemporaryHealth : ModBuff
+    public class TemporaryHealthPills : ModBuff
     {
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = true;  // Is it a debuff?
-            Main.pvpBuff[Type] = true; // Players can give other players buffs, which are listed as pvpBuff
+            Main.pvpBuff[Type] = false; // Players can give other players buffs, which are listed as pvpBuff
             Main.buffNoSave[Type] = true; // Causes this buff not to persist when exiting and rejoining the world
-            BuffID.Sets.LongerExpertDebuff[Type] = true; // If this buff is a debuff, setting this to true will make this buff last twice as long on players in expert mode
+            BuffID.Sets.LongerExpertDebuff[Type] = false;
+            BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
         }
 
         // Allows you to make this buff give certain effects to the given player
         public override void Update(Player player, ref int buffIndex)
         {
-            player.GetModPlayer<ExampleLifeRegenDebuffPlayer>().lifeRegenDebuff = true;
+            player.GetModPlayer<HealthDecay>().lifeRegenDebuff = true;
+            player.statLifeMax2 += 50;
+            if (player.buffTime[buffIndex] == 2999)
+            {
+                player.statLife += 50;
+            }
         }
     }
-
-    public class ExampleLifeRegenDebuffPlayer : ModPlayer
+    public class HealthDecay : ModPlayer
     {
         // Flag checking when life regen debuff should be activated
         public bool lifeRegenDebuff;
@@ -47,7 +53,7 @@ namespace Xenon.Content.Buffs
                 // So we set it to 0, and while this debuff is active, it never reaches it
                 Player.lifeRegenTime = 0;
                 // lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 8 life lost per second
-                Player.lifeRegen -= 16;
+                Player.lifeRegen -= 2;
             }
         }
     }

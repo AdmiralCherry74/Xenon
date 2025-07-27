@@ -26,7 +26,7 @@ public class CorrosionWaterStyle : ModWaterStyle
 
     public override int GetDropletGore()
     {
-        return Mod.Find<ModGore>("CorrosionLavaDroplet").Type;
+        return Mod.Find<ModGore>("CorrosionDroplet").Type;
     }
 
     public override void LightColorMultiplier(ref float r, ref float g, ref float b)

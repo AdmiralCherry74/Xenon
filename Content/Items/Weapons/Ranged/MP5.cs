@@ -14,13 +14,13 @@ public class MP5 : ModItem
 
         Item.width = 54; // Hitbox width of the item.
         Item.height = 22; // Hitbox height of the item.
-        Item.damage = 9;
-        Item.scale = 0.75f;
+        Item.damage = 4;
+        Item.scale = 0.80f;
         Item.shootSpeed = 13f;
         Item.useAmmo = AmmoID.Bullet;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
-        Item.useTime = 8;
+        Item.useTime = 5;
         Item.knockBack = 0.35f;
         Item.crit = 2;
         Item.shoot = ProjectileID.Bullet;
@@ -35,6 +35,6 @@ public class MP5 : ModItem
     // This method lets you adjust position of the gun in the player's hands. Play with these values until it looks good with your graphics.
     public override Vector2? HoldoutOffset()
     {
-        return new Vector2(-6f, -2f);
+        return new Vector2(10f, 2f);
     }
 }

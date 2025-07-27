@@ -11,6 +11,8 @@ using Terraria.WorldBuilding;
 using Terraria.Localization;
 using AltLibrary.Core.Generation;
 using AltLibrary.Common.Systems;
+using Xenon.Content.WorldGeneration.Passes;
+using Terraria.IO;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -22,7 +24,52 @@ public class CorrosionGenSystem : ModSystem
         int index = tasks.FindIndex(genPass => genPass.Name == "Vines");
         if (index != -1)
         {
-            tasks.Insert(index + 2, new Passes.CorrosionVines("Corrosion Vines", 25f));
+            tasks.Insert(index + 1, new Passes.CorrosionVines("Corrosion Vines", 25f));
+        }
+
+        index = tasks.FindIndex(genpass => genpass.Name.Equals("Weeds"));
+        if (index != -1)
+        {
+            tasks.Insert(index + 1, new ShortGrass("Corrosion Weeds", 50f));
+        }
+
+        index = tasks.FindIndex(genPass => genPass.Name == "Remove Broken Traps");
+        if (index != -1)
+        {
+            currentPass = new CorrosionStalac();
+            tasks.Insert(index + 1, currentPass);
+            totalWeight += currentPass.Weight;
+        }
+    }
+}
+public class CorrosionStalac : GenPass
+{
+    public CorrosionStalac() : base("Corrosion Stalac", 20f)
+    {
+    }
+
+    protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
+    {
+        for (int num19 = 20; num19 < Main.maxTilesX - 20; num19++)
+        {
+            for (int num22 = 5; num22 < Main.maxTilesY - 20; num22++)
+            {
+                // corrosion stalac
+                if (Main.tile[num19, num22 - 1].TileType == ModContent.TileType<Gutstone>() && Main.tile[num19, num22 - 1].HasTile && WorldGen.genRand.NextBool(3))
+                {
+                    if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 + 1].HasTile && Main.tile[num19, num22 - 1].Slope == SlopeType.Solid)
+                    {
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionStalac>());
+                    }
+                }
+                if (Main.tile[num19, num22 + 1].TileType == ModContent.TileType<Gutstone>() && Main.tile[num19, num22 + 1].HasTile && WorldGen.genRand.NextBool(3))
+                {
+                    if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 - 1].HasTile && Main.tile[num19, num22 + 1].Slope == SlopeType.Solid)
+                    {
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionStalac>());
+                    }
+                }
+            }
         }
     }
 }
