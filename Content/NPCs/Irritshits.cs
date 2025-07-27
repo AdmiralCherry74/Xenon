@@ -65,15 +65,9 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneHallow)
-
-                {
-                    {
-                    return SpawnCondition.Overworld.Chance * 1f;
-
-                    }
-            }
-            return 0f;
+            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && !spawnInfo.Player.InPillarZone())
+                return 1f;
+            return 0;
         }
 
 

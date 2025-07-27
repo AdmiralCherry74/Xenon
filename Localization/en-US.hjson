@@ -5,7 +5,7 @@ Mods: {
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
-				Description: Digestive juices are guaranteed to corrode your world.
+				Description: A Gastric, Sulpherous biome with stomach-like caverns and eternal hunger are guaranteed to be present in your world.
 				GenPassName: Digesting the world
 				DryadTextDescriptor: corrosion
 			}
@@ -22,7 +22,7 @@ Mods: {
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
 			Ice: Freezing Lava
-			Corrosion.Message: Digesting the world
+			Corrosion.Message: Making the world hungry...
 		}
 
 		DeathText: {
@@ -36,7 +36,7 @@ Mods: {
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
-				Tooltip: A noble warrior once held this Sword. MATHEMATICAL! (TESTING VERSION)
+				Tooltip: A noble warrior once held this Sword. MATHEMATICAL!
 			}
 
 			VeinPiercer: {
@@ -309,12 +309,12 @@ Mods: {
 
 			CarrotHeadBand: {
 				DisplayName: Carrot Head Band
-				Tooltip: ""
+				Tooltip: Get the carrot! Cmon, get it!
 			}
 
 			GooberPainting: {
 				DisplayName: Goober Painting
-				Tooltip: ""
+				Tooltip: Goober :3
 			}
 
 			MP5: {
@@ -333,6 +333,7 @@ Mods: {
 
 			LaserSight: {
 				DisplayName: Laser Sight
+				Tooltip: You will now achieve +10% Crit chance with Guns thanks to this laser sight
 				Tooltip:
 					'''
 					Gun armor penetration is increased by 1
@@ -341,18 +342,20 @@ Mods: {
 			}
 
 			EruptionInABottle: {
+				DisplayName: Eruption In A Bottle
+				Tooltip: Can be used to ground pound enemies. the higher you are, the more damage
 				DisplayName: Eruption in a Bottle
 				Tooltip: ""
 			}
 
 			FossilizedBlessing: {
 				DisplayName: Fossilized Blessing
-				Tooltip: ""
+				Tooltip: Can be used to turn ones self into a fossilized statue
 			}
 
 			TunaMelt: {
 				DisplayName: Tuna Melt
-				Tooltip: ""
+				Tooltip: The mod creator does not like it. thats me, the mod creator -Selene
 			}
 
 			Phlegmrang: {
@@ -372,6 +375,8 @@ Mods: {
 
 			OutragePotion: {
 				DisplayName: Outrage Potion
+				Tooltip: Increases Armor Penetration by 5
+			}
 				Tooltip: ""
 			}
 
@@ -402,12 +407,12 @@ Mods: {
 
 			WorldgenHelper: {
 				DisplayName: Worldgen Helper
-				Tooltip: ""
+				Tooltip: Aplha Corrosion Generation Tool
 			}
 
 			UlceriteBar: {
 				DisplayName: Ulcerite Bar
-				Tooltip: ""
+				Tooltip: Pulsing with gastric energy
 			}
 
 			CorrosionSeeds: {
@@ -417,7 +422,7 @@ Mods: {
 
 			UlceriteOre: {
 				DisplayName: Ulcerite Ore
-				Tooltip: ""
+				Tooltip: Pulsing with gastric energy
 			}
 
 			CorrosionSolution: {
@@ -525,7 +530,7 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Its so cold... IT BURNS
+				Description: Its so cold... IT BURNS!
 			}
 
 			FossilBlessingCooldown: {
@@ -535,12 +540,12 @@ Mods: {
 
 			FossilBlessing: {
 				DisplayName: Fossil Blessing
-				Description: Calling upon your unique trinket. You are now fossilized and are now more tanky than ever.
+				Description: Calling upon your unique trinket. You are now fossilized.
 			}
 
 			Outraged: {
 				DisplayName: Outraged
-				Description: Temporary Description, right now it increases defense, ignore the rest right now. Increase's Armor Penetration by 5
+				Description: Increase's Armor Penetration by 5
 			}
 		}
 	}
