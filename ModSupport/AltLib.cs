@@ -6,6 +6,7 @@ using Terraria.ID;
 using Xenon.Content.Tiles.Corrosion;
 using Xenon.Content.WorldGeneration;
 using Xenon.Content.Items.Placeable.Seed;
+using Xenon.Content.Walls;
 
 namespace Xenon.ModSupport;
 
@@ -66,11 +67,11 @@ internal class CorrosionAltBiome : AltBiome
         //BloodBunny = ModContent.NPCType<ContaminatedBunny>();
         //BloodPenguin = ModContent.NPCType<ContaminatedPenguin>();
         //BloodGoldfish = ModContent.NPCType<ContaminatedGoldfish>();
-
+        */
         AddWallConversions<CorrosionLumpWallUnsafe>(
             WallID.RocksUnsafe3
         );
-        AddWallConversions<CorrosionMouldWallUnsafe>(
+        AddWallConversions<CorrosionMoldWallUnsafe>(
             WallID.Cave3Unsafe,
             WallID.RocksUnsafe2
         );
@@ -83,7 +84,7 @@ internal class CorrosionAltBiome : AltBiome
             WallID.Cave8Unsafe,
             WallID.RocksUnsafe4
         );
-        AddWallConversions<GutsandstoneWallUnsafe>(
+        /*AddWallConversions<GutsandstoneWall>(
             WallID.Sandstone,
             WallID.CorruptSandstone,
             WallID.CrimsonSandstone,

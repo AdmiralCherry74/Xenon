@@ -11,6 +11,13 @@ Mods: {
 			}
 		}
 
+		Tooltips.FossilizedBlessing:
+			'''
+			Provides 7 seconds of immunity to lava
+			Double tap {0} to activate fossilized blessing
+			Increases defense and life regeneration by 7 but you cannot move
+			'''
+
 		Generation: {
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
@@ -319,7 +326,7 @@ Mods: {
 				DisplayName: Raycannon
 				Tooltip:
 					'''
-					Increased damage, armor penetration and crit chance against Boss and Mini Boss enemies
+					Increased damage, armor penetration and critical strike chance against boss and miniboss enemies
 					"Please revive me, I have the Ray Cannon!"
 					'''
 			}
@@ -328,13 +335,13 @@ Mods: {
 				DisplayName: Laser Sight
 				Tooltip:
 					'''
-					+1 Armor Penetration on Guns
-					+8% Crit chance with Guns
+					Gun armor penetration is increased by 1
+					8% increased gun critical strike chance
 					'''
 			}
 
 			EruptionInABottle: {
-				DisplayName: Eruption In A Bottle
+				DisplayName: Eruption in a Bottle
 				Tooltip: ""
 			}
 
@@ -367,7 +374,6 @@ Mods: {
 				DisplayName: Outrage Potion
 				Tooltip: ""
 			}
-		}
 
 			GutsandBlock: {
 				DisplayName: Gutsand Block
@@ -413,6 +419,15 @@ Mods: {
 				DisplayName: Ulcerite Ore
 				Tooltip: ""
 			}
+
+			CorrosionSolution: {
+				DisplayName: Corrosion Solution
+				Tooltip:
+					'''
+					Used by the Clentaminator
+					Spreads the Corrosion
+					'''
+			}
 		}
 
 		NPCs: {
@@ -444,7 +459,7 @@ Mods: {
 		Tiles: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
-			UlceriteOre.MapEntry: Mods.Xenon.Tiles.UlceriteOre.MapEntry
+			UlceriteOre.MapEntry: Ulcerite
 		}
 
 		Bestiary: {
@@ -475,15 +490,31 @@ Mods: {
 				DisplayName: Corrosion
 				TownNPCDialogueName: the Corrosion
 			}
+
+			CorrosionIce: {
+				DisplayName: Corrosion Ice
+				TownNPCDialogueName: the Corrosion Ice
+			}
+
+			CorrosionUnderground: {
+				DisplayName: Corrosion Underground
+				TownNPCDialogueName: the Corrosion Underground
+			}
+
+			CorrosionUndergroundIce: {
+				DisplayName: Corrosion Underground Ice
+				TownNPCDialogueName: the Corrosion Underground Ice
+			}
 		}
 
 		Projectiles: {
 			EbonStabberProj.DisplayName: Ebon Stabber
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Explosion
-			RayProj.DisplayName: Ray Proj
+			RayProj.DisplayName: Ray
 			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Projectile
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun Projectile
+			CorrosionSpray.DisplayName: Corrosion Spray
 		}
 
 		Buffs: {

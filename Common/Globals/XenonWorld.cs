@@ -1,12 +1,59 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using System;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Systems;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Common.Globals;
 
 internal class XenonWorld : ModSystem
 {
+    public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
+    {
+        float CorrosionStrength = ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles / 350f;
+        //if (CaptureManager.Instance.Active && CaptureManager.Instance.IsCapturing && CaptureInterface.Settings.BiomeChoiceIndex == AddModdedCaptureBiomes.biomeCapturesIndexs[0])
+        //{
+        //    ContagionStrength = 1f;
+        //}
+        if (CorrosionStrength != 0)
+        {
+            CorrosionStrength = Math.Min(CorrosionStrength, 1f);
+
+            int sunR = backgroundColor.R;
+            int sunG = backgroundColor.G;
+            int sunB = backgroundColor.B;
+            byte readableSunR = 191;
+            byte readableSunG = 198;
+            byte readableSunB = 73;
+            sunR -= (int)((byte.MaxValue - readableSunR) * CorrosionStrength / 1.6f * (backgroundColor.R / 255f));
+            sunG -= (int)((byte.MaxValue - readableSunG) * CorrosionStrength / 1.6f * (backgroundColor.G / 255f));
+            sunB -= (int)((byte.MaxValue - readableSunB) * CorrosionStrength / 1.6f * (backgroundColor.B / 255f));
+
+            sunR = Utils.Clamp(sunR, 15, 255);
+            sunG = Utils.Clamp(sunG, 15, 255);
+            sunB = Utils.Clamp(sunB, 15, 255);
+            backgroundColor.R = (byte)sunR;
+            backgroundColor.G = (byte)sunG;
+            backgroundColor.B = (byte)sunB;
+
+            int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 3f);
+            byte readableTint_R = 132;
+            byte readableTint_G = 121;
+            byte readableTint_B = 63;
+            int tileTint_R = (byte)((byte.MaxValue - readableTint_R) * CorrosionStrength * (backgroundColorAverage / 255f));
+            int tileTint_G = (byte)((byte.MaxValue - readableTint_G) * CorrosionStrength * (backgroundColorAverage / 255f));
+            int tileTint_B = (byte)((byte.MaxValue - readableTint_B) * CorrosionStrength * (backgroundColorAverage / 255f));
+            tileTint_R = (int)(tileTint_R - (CorrosionStrength * 7f));
+            tileTint_G = (int)(tileTint_G - (CorrosionStrength * 7f));
+            tileTint_B = (int)(tileTint_B - (CorrosionStrength * 7f));
+
+            tileColor.R = (byte)Math.Clamp(tileColor.R <= tileTint_R ? 1 : tileColor.R - tileTint_R, CorrosionStrength * 15f, 255f);
+            tileColor.G = (byte)Math.Clamp(tileColor.G <= tileTint_G ? 1 : tileColor.G - tileTint_G, CorrosionStrength * 15f, 255f);
+            tileColor.B = (byte)Math.Clamp(tileColor.B <= tileTint_B ? 1 : tileColor.B - tileTint_B, CorrosionStrength * 15f, 255f);
+        }
+    }
     public override void PostUpdateWorld()
     {
         int num12 = 151;
@@ -43,41 +90,42 @@ internal class XenonWorld : ModSystem
             }
 
             #region corrosion thorny bushes
-            //if (TileID.Sets.SpreadOverground[Main.tile[xCoord, yCoord].TileType])
-            //{
-            //    int type = Main.tile[xCoord, yCoord].TileType;
-            //    if ((type == ModContent.TileType<CorrosionThornyBushes>()) && WorldGen.genRand.NextBool(3))
-            //    {
-            //        WorldGen.GrowSpike(xCoord, yCoord, (ushort)ModContent.TileType<CorrosionThornyBushes>(), (ushort)ModContent.TileType<CorrosionGrass>());
-            //    }
-            //    else if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 &&
-            //        !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid &&
-            //        WorldGen.genRand.NextBool(13) && (type == ModContent.TileType<CorrosionGrass>() || type == ModContent.TileType<CorrosionJungleGrass>()))
-            //    {
-            //        WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<CorrosionThornyBushes>(), mute: true);
-            //    }
-            //}
+            if (TileID.Sets.SpreadOverground[Main.tile[xCoord, yCoord].TileType])
+            {
+                int type = Main.tile[xCoord, yCoord].TileType;
+                if ((type == ModContent.TileType<CorrosionThornyBushes>()) && WorldGen.genRand.NextBool(3))
+                {
+                    WorldGen.GrowSpike(xCoord, yCoord, (ushort)ModContent.TileType<CorrosionThornyBushes>(), (ushort)ModContent.TileType<CorrosionGrass>());
+                }
+                else if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 &&
+                    !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid &&
+                    WorldGen.genRand.NextBool(13) && (type == ModContent.TileType<CorrosionGrass>() || type == ModContent.TileType<CorrosionJungleGrass>()))
+                {
+                    WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<CorrosionThornyBushes>(), mute: true);
+                }
+            }
             #endregion
 
-            #region contagion shortgrass/barfbush spawning
+            #region corrosion shortgrass/herb spawning
             if (Main.tile[xCoord, yCoord].TileType == ModContent.TileType<CorrosionGrass>() || Main.tile[xCoord, yCoord].TileType == ModContent.TileType<CorrosionJungleGrass>())
             {
                 int num14 = Main.tile[xCoord, yCoord].TileType;
-                if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 &&
+                if (!Main.tile[xCoord, yCoord - 1].HasTile && Main.tile[xCoord, yCoord - 1].LiquidAmount == 0 &&
                     !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid &&
-                    WorldGen.genRand.NextBool(5) && (num14 == ModContent.TileType<CorrosionGrass>() || num14 == ModContent.TileType<CorrosionJungleGrass>()))
+                    WorldGen.genRand.NextBool(5))
                 {
-                    WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<CorrosionShortGrass>(), true);
-                    Main.tile[xCoord, num9].TileFrameX = (short)(WorldGen.genRand.Next(0, 11) * 18);
-                    if (Main.tile[xCoord, num9].HasTile)
+                    Main.tile[xCoord, yCoord - 1].TileType = (ushort)ModContent.TileType<CorrosionShortGrass>();
+                    //WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<CorrosionShortGrass>(), true);
+                    Main.tile[xCoord, yCoord - 1].TileFrameX = (short)(WorldGen.genRand.Next(0, 11) * 18);
+                    if (Main.tile[xCoord, yCoord - 1].HasTile)
                     {
-                        Tile t = Main.tile[xCoord, num9];
+                        Tile t = Main.tile[xCoord, yCoord - 1];
                         t.TileColor = Main.tile[xCoord, yCoord].TileColor;
                     }
 
-                    if (Main.netMode == NetmodeID.Server && Main.tile[xCoord, num9].HasTile)
+                    if (Main.netMode == NetmodeID.Server && Main.tile[xCoord, yCoord - 1].HasTile)
                     {
-                        NetMessage.SendTileSquare(-1, xCoord, num9, 1);
+                        NetMessage.SendTileSquare(-1, xCoord, yCoord - 1, 1);
                     }
                 }
 

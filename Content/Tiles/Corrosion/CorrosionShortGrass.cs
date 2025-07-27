@@ -31,7 +31,7 @@ public class CorrosionShortGrass : ModTile
         DustType = ModContent.DustType<CorrosionDust>();
         HitSound = SoundID.Grass;
         //TileSets.Conversion.ShortGrass[Type] = true;
-        AddMapEntry(new Color(133, 150, 39));
+        AddMapEntry(new Color(160, 133, 0)); // change color later
     }
 
     public const int MushroomFrameX = 18 * 8;
