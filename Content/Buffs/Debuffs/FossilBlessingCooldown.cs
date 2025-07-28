@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Effects.Debuffs;
+namespace Xenon.Content.Buffs.Debuffs;
 
 public class FossilBlessingCooldown : ModBuff
 {

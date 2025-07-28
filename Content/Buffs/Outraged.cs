@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Effects.Buffs;
+namespace Xenon.Content.Buffs;
     public class Outraged : ModBuff
 {
     public override void Update(Player player, ref int buffIndex)

@@ -7,6 +7,9 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Audio;
 using Terraria.Chat;
+using Xenon.Content.Items.Weapons.Melee;
+using Xenon.Content.Items.Accessories;
+using Xenon.Content.Items.Weapons.Ranged;
 
 namespace Xenon.Content.Tiles.Corrosion;
 
@@ -44,94 +47,83 @@ public class GastroOrb : ModTile
         }
     }
 
-    //public override void KillMultiTile(int i, int j, int frameX, int frameY)
-    //{
-    //    if (Main.netMode != NetmodeID.MultiplayerClient && !WorldGen.noTileActions)
-    //    {
-    //        //if (NPC.downedBoss2)
-    //        //{
-    //        //    if (WorldGen.genRand.NextBool(2))
-    //        //    {
-    //        //        WorldGen.spawnMeteor = true;
-    //        //    }
-    //        //}
-    //        int num3 = Main.rand.Next(5);
-    //        if (!WorldGen.shadowOrbSmashed)
-    //        {
-    //            num3 = 0;
-    //        }
-    //        if (num3 == 0)
-    //        {
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Blunderblight>(), 1, false, -1, false);
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, 97, 100, false, 0, false);
-    //        }
-    //        else if (num3 == 1)
-    //        {
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<TetanusChakram>(), 1, false, -1, false);
-    //        }
-    //        else if (num3 == 2)
-    //        {
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<NerveNumbNecklace>(), 1, false, -1, false);
-    //        }
-    //        else if (num3 == 3)
-    //        {
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Items.Pets.SepticCell>(), 1, false, -1, false);
-    //        }
-    //        else if (num3 == 4)
-    //        {
-    //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Smogscreen>(), 1, false, -1, false);
-    //        }
-    //        if (ExxoAvalonOrigins.ThoriumContentEnabled)
-    //        {
-    //            if (WorldGen.genRand.NextBool(2))
-    //            {
-    //                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ExxoAvalonOrigins.Thorium.Find<ModItem>("DarkHeart").Type, 1, false, -1, false);
-    //            }
-    //            else
-    //            {
-    //                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, Mod.Find<ModItem>("FanLetter3").Type, 1, false, -1, false);
-    //            }
-    //        }
-    //        WorldGen.shadowOrbSmashed = true;
-    //        WorldGen.shadowOrbCount++;
-    //        if (WorldGen.shadowOrbCount >= 3)
-    //        {
-    //            WorldGen.shadowOrbCount = 0;
-    //            float num5 = (float)(i * 16);
-    //            float num6 = (float)(j * 16);
-    //            float num7 = -1f;
-    //            int plr = 0;
-    //            for (int k = 0; k < 255; k++)
-    //            {
-    //                float num8 = Math.Abs(Main.player[k].position.X - num5) + Math.Abs(Main.player[k].position.Y - num6);
-    //                if (num8 < num7 || num7 == -1f)
-    //                {
-    //                    plr = k;
-    //                    num7 = num8;
-    //                }
-    //            }
-    //            if (!NPC.AnyNPCs(ModContent.NPCType<StomachofCthulhu>()))
-    //            {
-    //                NPC.SpawnOnPlayer(plr, ModContent.NPCType<StomachofCthulhu>());
-    //            }
-    //        }
-    //        else
-    //        {
-    //            string text = Lang.misc[10].Value;
-    //            if (WorldGen.shadowOrbCount == 2)
-    //            {
-    //                text = Lang.misc[11].Value;
-    //            }
-    //            if (Main.netMode == NetmodeID.SinglePlayer)
-    //            {
-    //                Main.NewText(text, 50, 255, 130);
-    //            }
-    //            else if (Main.netMode == NetmodeID.Server)
-    //            {
-    //                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), new Color(50, 255, 130));
-    //            }
-    //        }
-    //        SoundEngine.PlaySound(SoundID.NPCDeath1, new Vector2(i * 16, j * 16));
-    //    }
-    //}
+    public override void KillMultiTile(int i, int j, int frameX, int frameY)
+    {
+        if (Main.netMode != NetmodeID.MultiplayerClient && !WorldGen.noTileActions)
+        {
+            //if (NPC.downedBoss2)
+            //{
+            //    if (WorldGen.genRand.NextBool(2))
+            //    {
+            //        WorldGen.spawnMeteor = true;
+            //    }
+            //}
+            int num3 = Main.rand.Next(4);
+            if (!WorldGen.shadowOrbSmashed)
+            {
+                num3 = 0;
+            }
+            if (num3 == 0)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Hunglock>(), 1, false, -1, false);
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, 97, 100, false, 0, false);
+            }
+            else if (num3 == 1)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Phlegmrang>(), 1, false, -1, false);
+            }
+            else if (num3 == 2)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<GoldenHeartBand>(), 1, false, -1, false);
+            }
+            else if (num3 == 3)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Items.Pets.RottingLeftovers>(), 1, false, -1, false);
+            }
+            //        else if (num3 == 4)
+            //        {
+            //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Smogscreen>(), 1, false, -1, false);
+            //        }
+            WorldGen.shadowOrbSmashed = true;
+            WorldGen.shadowOrbCount++;
+            if (WorldGen.shadowOrbCount >= 3)
+            {
+                WorldGen.shadowOrbCount = 0;
+                float num5 = (float)(i * 16);
+                float num6 = (float)(j * 16);
+                float num7 = -1f;
+                int plr = 0;
+                for (int k = 0; k < 255; k++)
+                {
+                    float num8 = Math.Abs(Main.player[k].position.X - num5) + Math.Abs(Main.player[k].position.Y - num6);
+                    if (num8 < num7 || num7 == -1f)
+                    {
+                        plr = k;
+                        num7 = num8;
+                    }
+                }
+                //if (!NPC.AnyNPCs(ModContent.NPCType<StomachofCthulhu>()))
+                //{
+                //    NPC.SpawnOnPlayer(plr, ModContent.NPCType<StomachofCthulhu>());
+                //}
+            }
+            else
+            {
+                string text = Lang.misc[10].Value;
+                if (WorldGen.shadowOrbCount == 2)
+                {
+                    text = Lang.misc[11].Value;
+                }
+                if (Main.netMode == NetmodeID.SinglePlayer)
+                {
+                    Main.NewText(text, 50, 255, 130);
+                }
+                else if (Main.netMode == NetmodeID.Server)
+                {
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), new Color(50, 255, 130));
+                }
+            }
+            SoundEngine.PlaySound(SoundID.NPCDeath1, new Vector2(i * 16, j * 16));
+        }
+    }
 }

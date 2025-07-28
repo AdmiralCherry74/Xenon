@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.GlugGlugs
@@ -12,12 +9,9 @@ namespace Xenon.Content.Items.GlugGlugs
     // A mana potion is exactly the same, except Item.healMana is used instead. (Also GetHealMana would be used for dynamic mana recovery values)
     public class PainPills : ModItem
     {
-        public static LocalizedText RestoreLifeText { get; private set; }
 
         public override void SetStaticDefaults()
         {
-            RestoreLifeText = this.GetLocalization(nameof(RestoreLifeText));
-
             Item.ResearchUnlockCount = 30;
         }
 
@@ -37,7 +31,7 @@ namespace Xenon.Content.Items.GlugGlugs
 
             Item.healLife = 50; // While we change the actual healing value in GetHealLife, Item.healLife still needs to be higher than 0 for the item to be considered a healing item
             Item.potion = true; // Makes it so this item applies potion sickness on use and allows it to be used with quick heal
-            Item.buffType = ModContent.BuffType<Effects.Debuffs.TemporaryHealthPills>();
+            Item.buffType = ModContent.BuffType<Buffs.Debuffs.TemporaryHealthPills>();
             Item.buffTime = 3000;
         }
     }

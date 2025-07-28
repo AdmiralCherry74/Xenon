@@ -56,8 +56,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Assets\Textures\" />
+	  <Folder Include="Content\Buffs\Pets\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\NPCs\Template\" />
+	  <Folder Include="Content\Projectiles\Pets\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Reference Include="AltLibrary">

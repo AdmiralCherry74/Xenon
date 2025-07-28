@@ -314,7 +314,7 @@ Mods: {
 
 			CarrotHeadBand: {
 				DisplayName: Carrot Head Band
-				Tooltip: "Get the carrot! C'mon, get it!"
+				Tooltip: Get the carrot! C'mon, get it!
 			}
 
 			GooberPainting: {
@@ -356,7 +356,7 @@ Mods: {
 			}
 
 			Phlegmrang: {
-				DisplayName: Phlegmrang
+				DisplayName: Phlegmarang
 				Tooltip: ""
 			}
 
@@ -428,6 +428,54 @@ Mods: {
 					Spreads the Corrosion
 					'''
 			}
+
+			PainPills: {
+				DisplayName: Pain Pills
+				Tooltip:
+					'''
+					Increases maximum life by 50 for a short time
+					During this time you lose life slowly
+					'''
+			}
+
+			FossilizedBlessing: {
+				DisplayName: Fossilized Blessing
+				Tooltip: ""
+			}
+
+			GoldenHeartBand: {
+				DisplayName: Golden Heart Band
+				Tooltip: Increases maximum life by 25
+			}
+
+			RottingLeftovers: {
+				DisplayName: Rotting Leftovers
+				Tooltip: Summons a chunk of leftovers that provides light
+			}
+
+			RubberHandleSword: {
+				DisplayName: Rubber Handle Sword
+				Tooltip: ""
+			}
+
+			Hunglock: {
+				DisplayName: Hunglock
+				Tooltip:
+					'''
+					Fires a three-round burst
+					Only the first shot consumes ammo
+					'''
+			}
+
+			CorrosionCampfire: {
+				DisplayName: Corrosion Campfire
+				Tooltip: ""
+			}
+
+			CorrosionTorch: {
+				DisplayName: Corrosion Torch
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -463,6 +511,7 @@ Mods: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
 			UlceriteOre.MapEntry: Ulcerite Ore
+			CorrosionPot.MapEntry: Corrosion Pot
 		}
 
 		Bestiary: {
@@ -518,6 +567,9 @@ Mods: {
 			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Projectile
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun Projectile
 			CorrosionSpray.DisplayName: Corrosion Spray
+			RottingLeftovers.DisplayName: Rotting Leftovers
+			PhlegmarangProjectile.DisplayName: Phlegmarang Projectile
+			RHSProj.DisplayName: R H S Proj
 		}
 
 		Buffs: {
@@ -544,6 +596,16 @@ Mods: {
 			Outraged: {
 				DisplayName: Outraged
 				Description: Increases armor penetration by 5
+			}
+
+			TemporaryHealthPills: {
+				DisplayName: Temporary Health Pills
+				Description: Mods.Xenon.Buffs.TemporaryHealthPills.Description
+			}
+
+			RottingLeftovers: {
+				DisplayName: Rotting Leftovers
+				Description: Mods.Xenon.Buffs.RottingLeftovers.Description
 			}
 		}
 	}

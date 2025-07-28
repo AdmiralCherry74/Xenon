@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Xenon.Common.Globals;
 
-namespace Xenon.Content.Effects.Buffs;
+namespace Xenon.Content.Buffs;
 
 public class FossilBlessing : ModBuff
 {

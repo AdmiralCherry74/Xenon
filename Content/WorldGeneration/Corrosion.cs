@@ -24,13 +24,13 @@ public class CorrosionGenSystem : ModSystem
         int index = tasks.FindIndex(genPass => genPass.Name == "Vines");
         if (index != -1)
         {
-            tasks.Insert(index + 1, new Passes.CorrosionVines("Corrosion Vines", 25f));
+            tasks.Insert(index + 1, new Passes.CorrosionVines("Vines", 25f));
         }
 
         index = tasks.FindIndex(genpass => genpass.Name.Equals("Weeds"));
         if (index != -1)
         {
-            tasks.Insert(index + 1, new ShortGrass("Corrosion Weeds", 50f));
+            tasks.Insert(index + 1, new ShortGrass("Weeds", 50f));
         }
 
         index = tasks.FindIndex(genPass => genPass.Name == "Remove Broken Traps");

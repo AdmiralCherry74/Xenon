@@ -51,7 +51,8 @@ public class Utils
 		if (WorldGen.SolidTile(x, y - 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y + 1].HasTile)
 		{
 			if (Main.tile[x, y - 1].TileType == ModContent.TileType<Tiles.Rhyolite>() ||
-				Main.tile[x, y - 1].TileType == ModContent.TileType<FrozenLava>())
+				Main.tile[x, y - 1].TileType == ModContent.TileType<FrozenLava>() ||
+				Main.tile[x, y - 1].TileType == ModContent.TileType<Gutstone>())
 			{
 				if (preferSmall)
 				{
@@ -79,7 +80,8 @@ public class Utils
 		}
 		else if (WorldGen.SolidTile(x, y + 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y - 1].HasTile)
 		{
-			if (Main.tile[x, y + 1].TileType == ModContent.TileType<Tiles.Rhyolite>())
+			if (Main.tile[x, y + 1].TileType == ModContent.TileType<Tiles.Rhyolite>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<Gutstone>())
 			{
 				if (preferSmall)
 				{

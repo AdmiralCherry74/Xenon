@@ -8,7 +8,89 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
-    public static void Active(this Tile t, bool a) => t.HasTile = a;
+	public static void DropCoinsProperly(float num7, int i, int j)
+	{
+		while ((int)num7 > 0)
+		{
+			if (num7 > 1000000f)
+			{
+				int num8 = (int)(num7 / 1000000f);
+				if (num8 > 50 && Main.rand.NextBool(2))
+				{
+					num8 /= Main.rand.Next(3) + 1;
+				}
+				if (Main.rand.NextBool(2))
+				{
+					num8 /= Main.rand.Next(3) + 1;
+				}
+				num7 -= 1000000 * num8;
+				int platinum = Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i, j, 16, 16, ItemID.PlatinumCoin, num8);
+				if (Main.netMode == NetmodeID.MultiplayerClient && platinum >= 0)
+				{
+					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, platinum, 1f);
+				}
+				continue;
+			}
+			if (num7 > 10000f)
+			{
+				int num9 = (int)(num7 / 10000f);
+				if (num9 > 50 && Main.rand.NextBool(2))
+				{
+					num9 /= Main.rand.Next(3) + 1;
+				}
+				if (Main.rand.NextBool(2))
+				{
+					num9 /= Main.rand.Next(3) + 1;
+				}
+				num7 -= 10000 * num9;
+				int gold = Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i, j, 16, 16, ItemID.GoldCoin, num9);
+				if (Main.netMode == NetmodeID.MultiplayerClient && gold >= 0)
+				{
+					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, gold, 1f);
+				}
+				continue;
+			}
+			if (num7 > 100f)
+			{
+				int num10 = (int)(num7 / 100f);
+				if (num10 > 50 && Main.rand.NextBool(2))
+				{
+					num10 /= Main.rand.Next(3) + 1;
+				}
+				if (Main.rand.NextBool(2))
+				{
+					num10 /= Main.rand.Next(3) + 1;
+				}
+				num7 -= 100 * num10;
+				int silver = Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i, j, 16, 16, ItemID.SilverCoin, num10);
+				if (Main.netMode == NetmodeID.MultiplayerClient && silver >= 0)
+				{
+					NetMessage.SendData(MessageID.SyncItem, -1, -1, null, silver, 1f);
+				}
+				continue;
+			}
+			int num11 = (int)num7;
+			if (num11 > 50 && Main.rand.NextBool(2))
+			{
+				num11 /= Main.rand.Next(3) + 1;
+			}
+			if (Main.rand.NextBool(2))
+			{
+				num11 /= Main.rand.Next(4) + 1;
+			}
+			if (num11 < 1)
+			{
+				num11 = 1;
+			}
+			num7 -= num11;
+			int money = Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i, j, 16, 16, ItemID.CopperCoin, num11);
+			if (Main.netMode == NetmodeID.MultiplayerClient && money >= 0)
+			{
+				NetMessage.SendData(MessageID.SyncItem, -1, -1, null, money, 1f);
+			}
+		}
+	}
+	public static void Active(this Tile t, bool a) => t.HasTile = a;
     public static Rectangle Expand(this Rectangle r, int xDist, int yDist)
 	{
 		r.X -= xDist;

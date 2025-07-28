@@ -30,7 +30,7 @@ namespace Xenon.Content.Items.GlugGlugs;
             Item.consumable = true;
             Item.rare = ItemRarityID.Orange;
             Item.value = Item.buyPrice(gold: 1);
-            Item.buffType = ModContent.BuffType<Effects.Buffs.Outraged>(); // Specify an existing buff to be applied when used.
+            Item.buffType = ModContent.BuffType<Buffs.Outraged>(); // Specify an existing buff to be applied when used.
             Item.buffTime = 14400; // The amount of time the buff declared in Item.buffType will last in ticks. 14400 / 60 is 240, so this buff will last 240 seconds.
         }
     }
