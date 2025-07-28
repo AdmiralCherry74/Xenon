@@ -1,17 +1,9 @@
 ﻿using Xenon;
 using Microsoft.Xna.Framework;
 using System;
-using System.IO;
 using Terraria;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.ItemDropRules;
-using Terraria.GameContent.Personalities;
-using Terraria.GameContent.UI;
-using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ModLoader.IO;
-using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.NPCs
 {

@@ -6,14 +6,10 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Accessories;
-using Xenon.Content.Items.NomNoms;
-using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.NPCs.Template;
 using static Xenon.Content.NPCs.BloodWormHead.BloodWormBody;
-using static Xenon.Content.NPCs.FATWORMHead.FATWORMBody;
 
 namespace Xenon.Content.NPCs;
 

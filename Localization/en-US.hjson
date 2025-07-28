@@ -5,8 +5,8 @@ Mods: {
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
-				Description: A Gastric, Sulpherous biome with stomach-like caverns and eternal hunger are guaranteed to be present in your world.
-				GenPassName: Digesting the world
+				Description: A gastric biome with stomach-like caverns and eternal hunger is guaranteed to be present in your world.
+				GenPassName: Making the world hungry
 				DryadTextDescriptor: corrosion
 			}
 		}
@@ -22,7 +22,7 @@ Mods: {
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
 			Ice: Freezing Lava
-			Corrosion.Message: Making the world hungry...
+			Corrosion.Message: Making the world hungry
 		}
 
 		DeathText: {
@@ -105,7 +105,7 @@ Mods: {
 				DisplayName: Perfume
 				Tooltip:
 					'''
-					A nice-smelling substance. would sell nice
+					A nice-smelling substance. Would sell well
 					Valuable
 					'''
 			}
@@ -297,6 +297,11 @@ Mods: {
 				Tooltip: Hallowed Sand that makes you fall through it
 			}
 
+			GutquicksandBlock: {
+				DisplayName: Gutquicksand Block
+				Tooltip: Corroded Sand that makes you fall through it
+			}
+
 			PowderedSnowBlock: {
 				DisplayName: Powdered Snow Block
 				Tooltip: Snow that makes you fall through it
@@ -309,7 +314,7 @@ Mods: {
 
 			CarrotHeadBand: {
 				DisplayName: Carrot Head Band
-				Tooltip: Get the carrot! Cmon, get it!
+				Tooltip: "Get the carrot! C'mon, get it!"
 			}
 
 			GooberPainting: {
@@ -337,7 +342,7 @@ Mods: {
 			}
 
 			EruptionInABottle: {
-				DisplayName: Eruption In A Bottle
+				DisplayName: Eruption in a Bottle
 				Tooltip:
 					'''
 					Double tap DOWN to ground pound
@@ -474,8 +479,8 @@ Mods: {
 			Lihshart: A dangerous sentry that patrols the Lihzahrd Temple, shooting lasers and ramming into those who run into the temple uninvited. Low grade weapons won't even scratch it without the help of souls being released...
 			HalfDigested: An unfortunate bipedal mortal like a human or goblin, ate and spat out by the Stomach Of Cthulhu. They now run about to harm those not yet under this affliction.
 			StomachBug: A small stinkbug now turned into a denizen of the Corrosion. Stomach Bugs run about gathering food for the ever hungry overlord, all the while covering the land in their noxious fumes.
-			Irritshits: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, that's bad news for you.
-			Dickroach: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, feeding off the sins of their surroundings. Thankfully they can't fly.
+			Irritshits: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
+			Dickroach: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully they can't fly.
 		}
 
 		Biomes: {
@@ -523,22 +528,22 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Its so cold... IT BURNS!
+				Description: It's so cold... IT BURNS!
 			}
 
 			FossilBlessingCooldown: {
 				DisplayName: Fossil Blessing Cooldown
-				Description: Look we have to balence it somehow. -Selene
+				Description: You cannot activate Fossil Blessing
 			}
 
 			FossilBlessing: {
 				DisplayName: Fossil Blessing
-				Description: Calling upon your unique trinket. You are now fossilized.
+				Description: Defense and life regeneration increased by 7
 			}
 
 			Outraged: {
 				DisplayName: Outraged
-				Description: Increase's Armor Penetration by 5
+				Description: Increases armor penetration by 5
 			}
 		}
 	}

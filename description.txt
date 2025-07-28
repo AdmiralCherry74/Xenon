@@ -1,1 +1,8 @@
-Modify this file with a description of your mod.
+Welcome to Xenon! Xenon is a mod that adds a variety of content, from vanilla expansions such as a larger ice biome
+that extends into the lava layer to a new evil biome, the Corrosion. A semi-full list of content is below:
+
+- The Rhyolite Cave biome (this is also its own mod)
+- The Corrosion, an alternate to the Corruption and Crimson
+- An expanded Ice biome, which extends into the lava layer and has a new tile called Frozen Lava
+- Quicksand-type tiles for all sand variants, mud, and snow
+- Various new enemies for some biomes
