@@ -5,7 +5,7 @@ Mods: {
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
-				Description: A gastric biome with stomach-like caverns and eternal hunger is guaranteed to be present in your world.
+				Description: Gastric hunger is guaranteed to be present in your world.
 				GenPassName: Making the world hungry
 				DryadTextDescriptor: corrosion
 			}
@@ -36,7 +36,7 @@ Mods: {
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
-				Tooltip: A noble warrior once held this Sword. MATHEMATICAL!
+				Tooltip: A noble warrior once held this sword. MATHEMATICAL!
 			}
 
 			VeinPiercer: {
@@ -520,15 +520,15 @@ Mods: {
 			Lihshart.DisplayName: Temple Sentry
 			Irritshits.DisplayName: Gastritis
 			NEWORIGINALFUNNY.DisplayName: N E W O R I G I N A L F U N N Y
-			FATWORMHead.DisplayName: F A T W O R M Head
-			FATWORMBody.DisplayName: F A T W O R M Body
-			FATWORMTail.DisplayName: F A T W O R M Tail
+			FATWORMHead.DisplayName: F A T W O R M
+			FATWORMBody.DisplayName: F A T W O R M
+			FATWORMTail.DisplayName: F A T W O R M
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
 			Dickroach.DisplayName: Evphila
-			BloodWormHead.DisplayName: Blood Worm Head
-			BloodWormBody.DisplayName: Blood Worm Body
-			BloodWormTail.DisplayName: Blood Worm Tail
+			BloodWormHead.DisplayName: Blood Worm
+			BloodWormBody.DisplayName: Blood Worm
+			BloodWormTail.DisplayName: Blood Worm
 		}
 
 		Tiles: {
