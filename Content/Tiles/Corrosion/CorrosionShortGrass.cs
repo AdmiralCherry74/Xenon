@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
-using Xenon.Content.Items.Components;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.Tiles.Corrosion;
 

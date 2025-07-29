@@ -15,20 +15,21 @@ public class AUG : ModItem
         Item.width = 54; // Hitbox width of the item.
         Item.height = 22; // Hitbox height of the item.
         Item.damage = 7;
-        Item.scale = 0.80f;
         Item.shootSpeed = 18f;
         Item.useAmmo = AmmoID.Bullet;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
-        Item.useTime = 9;
-        Item.knockBack = 0.35f;
+        Item.useTime = 4;
+        Item.knockBack = 4f; // 0.35 was WAY too small
         Item.crit = 5;
+        Item.reuseDelay = 14;
         Item.shoot = ProjectileID.Bullet;
         Item.useStyle = ItemUseStyleID.Shoot;
-        Item.value = 1000;
-        Item.useAnimation = 27;
-        Item.UseSound = SoundID.Item11;
-        Item.rare = ModContent.RarityType<Corroded>();
+		Item.consumeAmmoOnLastShotOnly = true;
+		Item.value = 1000;
+        Item.useAnimation = 12;
+        Item.UseSound = SoundID.Item31;
+        Item.rare = ItemRarityID.Blue;
         Item.autoReuse = false;
     }
 

@@ -5,7 +5,7 @@ using Xenon.Content.Items.Placeable.Tile;
 using Xenon.Content.Rarities;
 using Xenon.Content.Tiles;
 
-namespace Xenon.Content.Items.Components;
+namespace Xenon.Content.Items.Materials;
 
 public class UlceriteBar : ModItem
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,6 +9,17 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
+	public static void GetPointOnSwungItemPath(float spriteWidth, float spriteHeight, float normalizedPointOnPath, float itemScale, out Vector2 location, out Vector2 outwardDirection, Player player)
+	{
+		float num = (float)Math.Sqrt(spriteWidth * spriteWidth + spriteHeight * spriteHeight);
+		float num2 = (float)(player.direction == 1).ToInt() * ((float)Math.PI / 2f);
+		if (player.gravDir == -1f)
+		{
+			num2 += (float)Math.PI / 2f * (float)player.direction;
+		}
+		outwardDirection = player.itemRotation.ToRotationVector2().RotatedBy(3.926991f + num2);
+		location = player.RotatedRelativePoint(player.itemLocation + outwardDirection * num * normalizedPointOnPath * itemScale);
+	}
 	public static void DropCoinsProperly(float num7, int i, int j)
 	{
 		while ((int)num7 > 0)

@@ -21,7 +21,7 @@ namespace Xenon.Content.Items.Valuables
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<Content.Items.Components.Pouch>());
+            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Pouch>());
             recipe.AddIngredient(ItemID.GlowingMushroom);
             recipe.AddIngredient(ItemID.Mushroom);
             recipe.AddIngredient(ItemID.VileMushroom);

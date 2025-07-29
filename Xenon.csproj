@@ -27,8 +27,8 @@
 	  <None Remove="Content\NPCs\BanditLooter.PNG" />
 	  <None Remove="Content\NPCs\BloodBolt.png" />
 	  <None Remove="Content\NPCs\CrimsonCultist.png" />
-	  <None Remove="Content\Items\Components\CursedBoneDust.png" />
-	  <None Remove="Content\Items\Components\RefinedBoneDust.png" />
+	  <None Remove="Content\Items\Materials\CursedBoneDust.png" />
+	  <None Remove="Content\Items\Materials\RefinedBoneDust.png" />
 	  <None Remove="Content\Items\Pouch.png" />
 	  <None Remove="Content\Items\RhyoliteBlock.png" />
 	  <None Remove="Content\Items\RhyoliteWall.png" />

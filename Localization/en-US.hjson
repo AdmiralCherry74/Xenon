@@ -502,6 +502,21 @@ Mods: {
 				DisplayName: Sewer Fury
 				Tooltip: ""
 			}
+
+			DirtySwamp: {
+				DisplayName: Dirty Swamp
+				Tooltip: ""
+			}
+
+			IngestedPickaxe: {
+				DisplayName: Ingested Pickaxe
+				Tooltip: ""
+			}
+
+			Squasher: {
+				DisplayName: Squasher
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -590,13 +605,13 @@ Mods: {
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Explosion
 			RayProj.DisplayName: Ray
-			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Projectile
-			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun Projectile
+			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Block
+			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun
 			CorrosionSpray.DisplayName: Corrosion Spray
 			CorrodeBoomerang.DisplayName: Corrode Boomerang
 			RHSProj.DisplayName: R H S Proj
 			RottingLeftovers.DisplayName: Rotting Leftovers
-			PhlegmarangProjectile.DisplayName: Phlegmarang Projectile
+			PhlegmarangProjectile.DisplayName: Phlegmarang
 			SewerFuryBall.DisplayName: Sewer Fury Ball
 		}
 
@@ -633,7 +648,7 @@ Mods: {
 
 			RottingLeftovers: {
 				DisplayName: Rotting Leftovers
-				Description: The rotting leftovers provides light
+				Description: The rotting leftovers provide light
 			}
 		}
 	}
