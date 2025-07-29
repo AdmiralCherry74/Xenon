@@ -299,7 +299,7 @@ Mods: {
 
 			GutquicksandBlock: {
 				DisplayName: Gutquicksand Block
-				Tooltip: ""
+				Tooltip: Corroded Sand that makes you fall through it
 			}
 
 			PowderedSnowBlock: {
@@ -326,8 +326,8 @@ Mods: {
 				DisplayName: Maschinenpistole 5
 				Tooltip:
 					'''
-					Fast firing gun with high critical hit chance
-					"Oh, MAN! This is just like Counter-Strike!"
+					Fast firing gun with high critical strike chance
+					"Oh man, this is just like Counter-Strike!"
 					'''
 			}
 
@@ -438,7 +438,8 @@ Mods: {
 				DisplayName: Pain Pills
 				Tooltip:
 					'''
-					Use these for 50 extra Temporary Health!
+					Increases maximum life by 50 for a short time
+					During this time you lose life slowly
 					"Ah, a little pick me up"
 					'''
 			}
@@ -454,7 +455,7 @@ Mods: {
 			}
 
 			AUG: {
-				DisplayName: UlcerAUG
+				DisplayName: Ulceraug
 				Tooltip: High damage with slower firing speeds
 			}
 
@@ -462,8 +463,9 @@ Mods: {
 				DisplayName: XM8
 				Tooltip:
 					'''
-					4 round burst rifle. Bursts can be fired in quick succession
-					'Did you know this was accidentally made, whilst trying to make the AUG for Xenon?'
+					Four-round burst rifle
+					Bursts are fired in quick succession
+					'Did you know this was accidentally made while trying to make the AUG for Xenon?'
 					'''
 			}
 
@@ -611,7 +613,7 @@ Mods: {
 
 			FossilBlessingCooldown: {
 				DisplayName: Fossil Blessing Cooldown
-				Description: Your blessing is on cooldown
+				Description: You cannot activate Fossil Blessing
 			}
 
 			FossilBlessing: {
@@ -626,12 +628,12 @@ Mods: {
 
 			TemporaryHealthPills: {
 				DisplayName: Temporary Health Pills
-				Description: Your Health Slowly Ticks Away...
+				Description: Losing life
 			}
 
 			RottingLeftovers: {
 				DisplayName: Rotting Leftovers
-				Description: Rotting Leftovers
+				Description: The rotting leftovers provides light
 			}
 		}
 	}
