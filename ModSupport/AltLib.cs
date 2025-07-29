@@ -84,7 +84,7 @@ internal class CorrosionAltBiome : AltBiome
             WallID.Cave8Unsafe,
             WallID.RocksUnsafe4
         );
-        /*AddWallConversions<GutsandstoneWall>(
+		/*AddWallConversions<GutsandstoneWall>(
             WallID.Sandstone,
             WallID.CorruptSandstone,
             WallID.CrimsonSandstone,
@@ -95,13 +95,13 @@ internal class CorrosionAltBiome : AltBiome
             WallID.CorruptHardenedSand,
             WallID.CrimsonHardenedSand,
             WallID.HallowHardenedSand
-        );
-        AddWallConversions<CorrosionGrassWall>(
+        );*/
+		AddWallConversions<CorrosionGrassWall>(
             WallID.GrassUnsafe,
             WallID.Grass,
             WallID.FlowerUnsafe,
             WallID.Flower
-        );*/
+        );
 
         EvilBiomeGenerationPass = new Corrosion();
     }

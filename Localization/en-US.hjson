@@ -5,7 +5,7 @@ Mods: {
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
-				Description: A gastric biome with stomach-like caverns and eternal hunger is guaranteed to be present in your world.
+				Description: Gastric hunger is guaranteed to be present in your world.
 				GenPassName: Making the world hungry
 				DryadTextDescriptor: corrosion
 			}
@@ -36,7 +36,7 @@ Mods: {
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
-				Tooltip: A noble warrior once held this Sword. MATHEMATICAL!
+				Tooltip: A noble warrior once held this sword. MATHEMATICAL!
 			}
 
 			VeinPiercer: {
