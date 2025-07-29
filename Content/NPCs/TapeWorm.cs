@@ -5,21 +5,15 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Accessories;
-using Xenon.Content.Items.NomNoms;
-using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Placeable.Furniture.Painting;
-using Xenon.Content.Items.Placeable.Tile;
 using Xenon.NPCs.Template;
-using static Xenon.Content.NPCs.FATWORMHead.FATWORMBody;
+using static Xenon.Content.NPCs.TapeWormHead.TapeWormBody;
 
 namespace Xenon.Content.NPCs;
 
-public class FATWORMHead : WormHead
+public class TapeWormHead : WormHead
 {
-    public override int BodyType => ModContent.NPCType<FATWORMBody>();
-    public override int TailType => ModContent.NPCType<FATWORMTail>();
+    public override int BodyType => ModContent.NPCType<TapeWormBody>();
+    public override int TailType => ModContent.NPCType<TapeWormTail>();
     public override bool CanFly => true;
 
     public override void SetStaticDefaults()
@@ -36,12 +30,12 @@ public class FATWORMHead : WormHead
     }
     public override void SetDefaults()
     {
-        NPC.damage = 20;
+        NPC.damage = 26;
         NPC.netAlways = true;
         NPC.noTileCollide = true;
-        NPC.lifeMax = 200;
-        NPC.defense = 4;
-        NPC.noGravity = true;
+        NPC.lifeMax = 150;
+        NPC.defense = 6;
+        NPC.noGravity = false;
         NPC.width = 26;
         NPC.aiStyle = -1;
         NPC.behindTiles = true;
@@ -55,7 +49,7 @@ public class FATWORMHead : WormHead
     {
         bestiaryEntry.Info.AddRange(
         [
-            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.FATWORM"))
+            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.TapeWorm"))
         ]);
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -82,24 +76,25 @@ public class FATWORMHead : WormHead
             Main.gore[gore].velocity *= 0.3f;
         }
     }
-    public override void ModifyNPCLoot(NPCLoot npcLoot)
-    {
-        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 1, 5, 11));
-    }
     public override void Init()
     {
-        MinSegmentLength = 10;
-        MaxSegmentLength = 18;
+        MinSegmentLength = 12;
+        MaxSegmentLength = 15;
 
         CommonWormInit(this);
     }
     internal static void CommonWormInit(Worm worm)
     {
         // These two properties handle the movement of the worm
-        worm.MoveSpeed = 9.5f;
-        worm.Acceleration = 0.075f;
+        worm.MoveSpeed = 6f;
+        worm.Acceleration = 0.50f;
     }
-    public class FATWORMBody : WormBody
+    public override void ModifyNPCLoot(NPCLoot npcLoot)
+    {
+        npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
+        npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
+    }
+    public class TapeWormBody : WormBody
     {
         public override void SetStaticDefaults()
         {
@@ -115,12 +110,12 @@ public class FATWORMHead : WormHead
         }
         public override void SetDefaults()
         {
-            NPC.damage = 4;
+            NPC.damage = 11;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
-            NPC.lifeMax = 200;
-            NPC.defense = 6;
-            NPC.noGravity = true;
+            NPC.lifeMax = 150;
+            NPC.defense = 10;
+            NPC.noGravity = false;
             NPC.width = 26;
             NPC.aiStyle = -1;
             NPC.behindTiles = true;
@@ -152,7 +147,7 @@ public class FATWORMHead : WormHead
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-        public class FATWORMTail : WormTail
+        public class TapeWormTail : WormTail
         {
             public override void SetStaticDefaults()
             {
@@ -164,12 +159,12 @@ public class FATWORMHead : WormHead
             }
             public override void SetDefaults()
             {
-                NPC.damage = 2;
+                NPC.damage = 6;
                 NPC.netAlways = true;
                 NPC.noTileCollide = true;
-                NPC.lifeMax = 200;
-                NPC.defense = 8;
-                NPC.noGravity = true;
+                NPC.lifeMax = 150;
+                NPC.defense = 14;
+                NPC.noGravity = false;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;
@@ -178,11 +173,6 @@ public class FATWORMHead : WormHead
                 NPC.knockBackResist = 0f;
                 NPC.HitSound = SoundID.NPCHit1;
                 NPC.DeathSound = SoundID.NPCDeath1;
-            }
-            public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-            {
-                if (Main.rand.NextBool(3))
-                    target.AddBuff(BuffID.OnFire3, 60 * 4);
             }
             public override void HitEffect(NPC.HitInfo hit)
             {
@@ -208,11 +198,7 @@ public class FATWORMHead : WormHead
             }
             public override void Init()
             {
-                LavaWormHead.CommonWormInit(this);
-            }
-            public override void ModifyNPCLoot(NPCLoot npcLoot)
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GooberPainting>(), 1000, 1, 1));
+                TapeWormHead.CommonWormInit(this);
             }
         }
     }

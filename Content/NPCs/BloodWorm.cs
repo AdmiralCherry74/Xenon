@@ -33,12 +33,12 @@ public class BloodWormHead : WormHead
     }
     public override void SetDefaults()
     {
-        NPC.damage = 20;
+        NPC.damage = 36;
         NPC.netAlways = true;
         NPC.noTileCollide = true;
-        NPC.lifeMax = 200;
-        NPC.defense = 4;
-        NPC.noGravity = true;
+        NPC.lifeMax = 75;
+        NPC.defense = 0;
+        NPC.noGravity = false;
         NPC.width = 26;
         NPC.aiStyle = -1;
         NPC.behindTiles = true;
@@ -61,7 +61,7 @@ public class BloodWormHead : WormHead
 
         {
             {
-                return SpawnCondition.Crimson.Chance * 0.155f;
+                return SpawnCondition.Crimson.Chance * 0.050f;
 
             }
         }
@@ -85,22 +85,22 @@ public class BloodWormHead : WormHead
             Main.gore[gore].velocity *= 0.3f;
         }
     }
-    public override void ModifyNPCLoot(NPCLoot npcLoot)
-    {
-        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RhyoliteBlock>(), 1, 5, 11));
-    }
     public override void Init()
     {
-        MinSegmentLength = 4;
-        MaxSegmentLength = 6;
+        MinSegmentLength = 6;
+        MaxSegmentLength = 10;
 
         CommonWormInit(this);
     }
     internal static void CommonWormInit(Worm worm)
     {
         // These two properties handle the movement of the worm
-        worm.MoveSpeed = 9.5f;
-        worm.Acceleration = 0.075f;
+        worm.MoveSpeed = 10f;
+        worm.Acceleration = 2f;
+    }
+    public override void ModifyNPCLoot(NPCLoot npcLoot)
+    {
+        npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 2));
     }
     public class BloodWormBody : WormBody
     {
@@ -118,12 +118,12 @@ public class BloodWormHead : WormHead
         }
         public override void SetDefaults()
         {
-            NPC.damage = 4;
+            NPC.damage = 20;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
-            NPC.lifeMax = 200;
-            NPC.defense = 6;
-            NPC.noGravity = true;
+            NPC.lifeMax = 75;
+            NPC.defense = 2;
+            NPC.noGravity = false;
             NPC.width = 26;
             NPC.aiStyle = -1;
             NPC.behindTiles = true;
@@ -167,12 +167,12 @@ public class BloodWormHead : WormHead
             }
             public override void SetDefaults()
             {
-                NPC.damage = 2;
+                NPC.damage = 17;
                 NPC.netAlways = true;
                 NPC.noTileCollide = true;
-                NPC.lifeMax = 200;
-                NPC.defense = 8;
-                NPC.noGravity = true;
+                NPC.lifeMax = 75;
+                NPC.defense = 6;
+                NPC.noGravity = false;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;
@@ -181,11 +181,6 @@ public class BloodWormHead : WormHead
                 NPC.knockBackResist = 0f;
                 NPC.HitSound = SoundID.NPCHit1;
                 NPC.DeathSound = SoundID.NPCDeath1;
-            }
-            public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-            {
-                if (Main.rand.NextBool(3))
-                    target.AddBuff(BuffID.OnFire3, 60 * 4);
             }
             public override void HitEffect(NPC.HitInfo hit)
             {
@@ -212,10 +207,6 @@ public class BloodWormHead : WormHead
             public override void Init()
             {
                 LavaWormHead.CommonWormInit(this);
-            }
-            public override void ModifyNPCLoot(NPCLoot npcLoot)
-            {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GooberPainting>(), 1000, 1, 1));
             }
         }
     }

@@ -517,6 +517,11 @@ Mods: {
 				DisplayName: Squasher
 				Tooltip: ""
 			}
+
+			TheIndigestion: {
+				DisplayName: The Indigestion
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -571,6 +576,8 @@ Mods: {
 			StomachBug: A small stinkbug now turned into a denizen of the Corrosion. Stomach Bugs run about gathering food for the ever hungry overlord, all the while covering the land in their noxious fumes.
 			Irritshits: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
 			Dickroach: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully they can't fly.
+			BloodWorm: Aggressive crimified worms that tunnel fast and dig fast. they are extremely small and frail however they compensate in their surprising lethality.
+			TapeWorm: A Class of parasitic worms that have adapted to go unnoticed by The Corrosion. They are sluggish, big and extremely defensive
 		}
 
 		Biomes: {

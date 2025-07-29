@@ -22,7 +22,6 @@
 	  <None Remove="Content\Items\Weapons\Melee\Scarlet.png" />
 	  <None Remove="Content\Items\Weapons\Melee\TheEbonStabber.png" />
 	  <None Remove="Content\Items\Weapons\Melee\XenonWaraxe.png" />
-	  <None Remove="Content\Items\Weapons\Ranged\MP5.png" />
 	  <None Remove="Content\NPCs\Bandit.png" />
 	  <None Remove="Content\NPCs\BanditLooter.PNG" />
 	  <None Remove="Content\NPCs\BloodBolt.png" />

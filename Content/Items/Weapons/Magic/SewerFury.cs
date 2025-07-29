@@ -20,18 +20,17 @@ namespace Xenon.Content.Items.Weapons.Magic
             Item.mana = 10;
             Item.DamageType = DamageClass.Magic;
             Item.noMelee = true;
-            Item.useTime = 100;
+            Item.useTime = 30;
             Item.knockBack = 0.65f;
             Item.crit = 0;
             Item.shoot = ModContent.ProjectileType<SewerFuryBall>();
             Item.useStyle = ItemUseStyleID.Swing;
             Item.value = 1000;
-            Item.useAnimation = 100;
+            Item.useAnimation = 30;
             Item.UseSound = SoundID.Item20;
-            Item.rare = ModContent.RarityType<Corroded>();
+            Item.rare = 2;
             Item.autoReuse = false;
-            Item.DefaultToStaff(ModContent.ProjectileType<SewerFuryBall>(), 16, 25, 12);
-            Item.staff[Type] = true;
+            Item.channel = true;
         }
     }
 }
