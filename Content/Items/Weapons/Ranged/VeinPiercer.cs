@@ -4,6 +4,7 @@ using System.ComponentModel;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged;
 
@@ -26,7 +27,7 @@ class VeinPiercer : ModItem
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.value = 9000;
         Item.useAnimation = 24;
-        Item.rare = 3;
+        Item.rare = ModContent.RarityType<Macabre>();
     }
     public override void AddRecipes()
     {

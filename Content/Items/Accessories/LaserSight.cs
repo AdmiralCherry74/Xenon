@@ -18,7 +18,7 @@ namespace Xenon.Content.Items.Accessories
             Item.width = 40;
             Item.height = 40;
             Item.accessory = true;
-            Item.rare = ModContent.RarityType<Indigo>();
+            Item.rare = 2;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

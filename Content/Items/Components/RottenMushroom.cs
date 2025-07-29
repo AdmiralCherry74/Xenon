@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Materials;
+namespace Xenon.Content.Items.Components;
 
 public class RottenMushroom : ModItem
 {

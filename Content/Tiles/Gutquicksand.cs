@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts;
 using Xenon.Content.Items.Placeable.Tile;
 
 namespace Xenon.Content.Tiles;
@@ -19,9 +20,9 @@ public class Gutquicksand : ModTile
 		Main.tileMerge[TileID.HardenedSand][Type] = true;
 		Main.tileMerge[Type][TileID.HardenedSand] = true;
 		MineResist = 0.5f;
-		DustType = DustID.SandstormInABottle;
+        DustType = ModContent.DustType<GutsandDust>();
 
-		TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
+        TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
 		TileID.Sets.CanBeDugByShovel[Type] = true;
 		TileID.Sets.Suffocate[Type] = true;
 

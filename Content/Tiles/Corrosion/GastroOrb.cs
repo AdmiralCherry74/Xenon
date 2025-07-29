@@ -70,7 +70,7 @@ public class GastroOrb : ModTile
             }
             else if (num3 == 1)
             {
-                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Phlegmrang>(), 1, false, -1, false);
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Phlegmarang>(), 1, false, -1, false);
             }
             else if (num3 == 2)
             {

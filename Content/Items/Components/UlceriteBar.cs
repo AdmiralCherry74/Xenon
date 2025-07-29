@@ -2,9 +2,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile;
+using Xenon.Content.Rarities;
 using Xenon.Content.Tiles;
 
-namespace Xenon.Content.Items.Materials;
+namespace Xenon.Content.Items.Components;
 
 public class UlceriteBar : ModItem
 {
@@ -17,8 +18,8 @@ public class UlceriteBar : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ItemRarityID.Blue;
-		Item.value = Item.sellPrice(0, 0, 21);
+        Item.rare = ModContent.RarityType<Corroded>();
+        Item.value = Item.sellPrice(0, 0, 21);
 	}
 	public override void AddRecipes()
 	{

@@ -15,8 +15,8 @@ namespace Xenon.Content.Items.Valuables
 
         public override void SetDefaults()
         {
-            Item.rare = ModContent.RarityType<Gross>();
-            Item.value = Terraria.Item.buyPrice(platinum: 2);
+            Item.rare = ModContent.RarityType<Purity>();
+            Item.value = Terraria.Item.buyPrice(platinum: 1);
         }
         public override void AddRecipes()
         {

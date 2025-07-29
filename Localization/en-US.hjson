@@ -299,7 +299,7 @@ Mods: {
 
 			GutquicksandBlock: {
 				DisplayName: Gutquicksand Block
-				Tooltip: Corroded Sand that makes you fall through it
+				Tooltip: ""
 			}
 
 			PowderedSnowBlock: {
@@ -324,7 +324,11 @@ Mods: {
 
 			MP5: {
 				DisplayName: Maschinenpistole 5
-				Tooltip: Shoots faster than other guns, but lacks damage
+				Tooltip:
+					'''
+					Fast firing gun with high critical hit chance
+					"Oh, MAN! This is just like Counter-Strike!"
+					'''
 			}
 
 			Raycannon: {
@@ -355,7 +359,7 @@ Mods: {
 				Tooltip: "{$CommonItemTooltip.MediumStats}"
 			}
 
-			Phlegmrang: {
+			Phlegmarang: {
 				DisplayName: Phlegmarang
 				Tooltip: ""
 			}
@@ -430,17 +434,37 @@ Mods: {
 			}
 
 			PainPills: {
+				RestoreLifeText: Temporary Health Up!
 				DisplayName: Pain Pills
 				Tooltip:
 					'''
-					Increases maximum life by 50 for a short time
-					During this time you lose life slowly
+					Use these for 50 extra Temporary Health!
+					"Ah, a little pick me up"
 					'''
 			}
 
 			FossilizedBlessing: {
 				DisplayName: Fossilized Blessing
 				Tooltip: ""
+			}
+
+			RubberHandleSword: {
+				DisplayName: Rubber Handle Sword
+				Tooltip: ""
+			}
+
+			AUG: {
+				DisplayName: UlcerAUG
+				Tooltip: High damage with slower firing speeds
+			}
+
+			XM8: {
+				DisplayName: XM8
+				Tooltip:
+					'''
+					4 round burst rifle. Bursts can be fired in quick succession
+					'Did you know this was accidentally made, whilst trying to make the AUG for Xenon?'
+					'''
 			}
 
 			GoldenHeartBand: {
@@ -451,11 +475,6 @@ Mods: {
 			RottingLeftovers: {
 				DisplayName: Rotting Leftovers
 				Tooltip: Summons a chunk of leftovers that provides light
-			}
-
-			RubberHandleSword: {
-				DisplayName: Rubber Handle Sword
-				Tooltip: ""
 			}
 
 			Hunglock: {
@@ -474,6 +493,11 @@ Mods: {
 
 			CorrosionTorch: {
 				DisplayName: Corrosion Torch
+				Tooltip: ""
+			}
+
+			SewerFury: {
+				DisplayName: Sewer Fury
 				Tooltip: ""
 			}
 		}
@@ -567,9 +591,11 @@ Mods: {
 			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Projectile
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun Projectile
 			CorrosionSpray.DisplayName: Corrosion Spray
+			CorrodeBoomerang.DisplayName: Corrode Boomerang
+			RHSProj.DisplayName: R H S Proj
 			RottingLeftovers.DisplayName: Rotting Leftovers
 			PhlegmarangProjectile.DisplayName: Phlegmarang Projectile
-			RHSProj.DisplayName: R H S Proj
+			SewerFuryBall.DisplayName: Sewer Fury Ball
 		}
 
 		Buffs: {
@@ -580,12 +606,12 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: It's so cold... IT BURNS!
+				Description: Its so cold...
 			}
 
 			FossilBlessingCooldown: {
 				DisplayName: Fossil Blessing Cooldown
-				Description: You cannot activate Fossil Blessing
+				Description: Your blessing is on cooldown
 			}
 
 			FossilBlessing: {
@@ -600,12 +626,12 @@ Mods: {
 
 			TemporaryHealthPills: {
 				DisplayName: Temporary Health Pills
-				Description: Mods.Xenon.Buffs.TemporaryHealthPills.Description
+				Description: Your Health Slowly Ticks Away...
 			}
 
 			RottingLeftovers: {
 				DisplayName: Rotting Leftovers
-				Description: Mods.Xenon.Buffs.RottingLeftovers.Description
+				Description: Rotting Leftovers
 			}
 		}
 	}

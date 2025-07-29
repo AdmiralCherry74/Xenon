@@ -6,7 +6,7 @@ using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged;
 
-public class MP5 : ModItem
+public class AUG : ModItem
 {
     public override void SetDefaults()
     {
@@ -14,22 +14,22 @@ public class MP5 : ModItem
 
         Item.width = 54; // Hitbox width of the item.
         Item.height = 22; // Hitbox height of the item.
-        Item.damage = 4;
+        Item.damage = 7;
         Item.scale = 0.80f;
-        Item.shootSpeed = 13f;
+        Item.shootSpeed = 18f;
         Item.useAmmo = AmmoID.Bullet;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
-        Item.useTime = 5;
+        Item.useTime = 9;
         Item.knockBack = 0.35f;
-        Item.crit = 12;
+        Item.crit = 5;
         Item.shoot = ProjectileID.Bullet;
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.value = 1000;
-        Item.useAnimation = 8;
+        Item.useAnimation = 27;
         Item.UseSound = SoundID.Item11;
-        Item.rare = 3;
-        Item.autoReuse = true;
+        Item.rare = ModContent.RarityType<Corroded>();
+        Item.autoReuse = false;
     }
 
     // This method lets you adjust position of the gun in the player's hands. Play with these values until it looks good with your graphics.

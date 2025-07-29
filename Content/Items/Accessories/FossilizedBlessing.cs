@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using Terraria.Localization;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
 using Xenon.Common.Globals;
+using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Accessories;
 
@@ -12,7 +13,7 @@ public class FossilizedBlessing : ModItem
     public override void SetDefaults()
     {
         Item.DefaultToAccessory();
-        Item.rare = ItemRarityID.Green;
+        Item.rare = 2;
     }
     public override void ModifyTooltips(List<TooltipLine> tooltips)
     {

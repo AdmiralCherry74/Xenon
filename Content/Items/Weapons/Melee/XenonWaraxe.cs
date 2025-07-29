@@ -27,7 +27,7 @@ public class XenonWaraxe : ModItem
 
         Item.value = Item.buyPrice(platinum: 1);
         Item.UseSound = SoundID.Item1;
-        Item.rare = ModContent.RarityType<Purity>();
+        Item.rare = ModContent.RarityType<Light>();
     }
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

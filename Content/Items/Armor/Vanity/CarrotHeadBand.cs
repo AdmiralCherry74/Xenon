@@ -13,7 +13,7 @@ public class CarrotHeadBand : ModItem
         Item.width = 32;
         Item.height = 24;
         Item.vanity = true;
-        Item.rare = ModContent.RarityType<Brown>();
+        Item.rare = 1;
         Item.value = Item.buyPrice(silver: 50);
     }
 }

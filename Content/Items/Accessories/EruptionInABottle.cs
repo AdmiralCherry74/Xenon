@@ -6,6 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals;
+using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Accessories;
 
@@ -15,7 +16,7 @@ public class EruptionInABottle : ModItem
     public override void SetDefaults()
     {
         Item.DefaultToAccessory();
-        Item.rare = ItemRarityID.Green;
+        Item.rare = 2;
     }
 
     public override void UpdateAccessory(Player player, bool hideVisual)

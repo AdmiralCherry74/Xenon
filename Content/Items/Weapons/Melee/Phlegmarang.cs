@@ -5,7 +5,7 @@ using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee;
 
-public class Phlegmrang : ModItem
+public class Phlegmarang : ModItem
 {
     public override void SetDefaults()
     {

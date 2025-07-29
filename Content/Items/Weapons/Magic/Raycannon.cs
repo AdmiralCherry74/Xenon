@@ -30,7 +30,7 @@ public class Raycannon : ModItem
         Item.useAnimation = 28;
         Item.holdStyle = 3;
         Item.UseSound = SoundID.Item67;
-        Item.rare = ModContent.RarityType<AcidicGreen>();
+        Item.rare = 4;
         Item.autoReuse = true;
     }
 

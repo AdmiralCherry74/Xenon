@@ -6,28 +6,14 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Rarities
 {
-    internal class Brown : ModRarity
+    internal class Purity : ModRarity
     {
-        public override Color RarityColor => new Color(105, 50, 0);
+        public override Color RarityColor => new Color(113, 155, 113);
         public override int GetPrefixedRarity(int offset, float valueMult)
         {
             if (offset > 0)
-                return ModContent.RarityType<Indigo>();
-            return Type;
-        }
-    }
-    internal class Indigo : ModRarity
-    {
-        public override Color RarityColor => new Color(85, 75, 165);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            {
-                return ModContent.RarityType<Brown>();
-            }
-            else if (offset > 0)
                 return ModContent.RarityType<Evil>();
-            return Type;
+            return Type; // no 'higher' tier to go to, so return the type of this rarity.
         }
     }
     internal class Evil : ModRarity
@@ -37,36 +23,7 @@ namespace Xenon.Content.Rarities
         {
             if (offset < 0)
             {
-                return ModContent.RarityType<Indigo>();
-            }
-            else if (offset > 0)
-                return ModContent.RarityType<AcidicGreen>();
-            return Type;
-        }
-    }
-    internal class AcidicGreen : ModRarity
-    {
-        public override Color RarityColor => new Color(169, 175, 110);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            {
-                return ModContent.RarityType<Evil>();
-            }
-            else if (offset > 0)
-                return ModContent.RarityType<Periwinkle>();
-            return Type;
-        }
-    }
-
-    internal class Periwinkle : ModRarity
-    {
-        public override Color RarityColor => new Color(135, 135, 200);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            {
-                return ModContent.RarityType<AcidicGreen>();
+                return ModContent.RarityType<Purity>();
             }
             else if (offset > 0)
                 return ModContent.RarityType<Macabre>();
@@ -80,49 +37,21 @@ namespace Xenon.Content.Rarities
         {
             if (offset < 0)
             {
-                return ModContent.RarityType<Periwinkle>();
+                return ModContent.RarityType<Evil>();
             }
             else if (offset > 0)
-                return ModContent.RarityType<Alizarin>();
+                return ModContent.RarityType<Corroded>();
             return Type;
         }
     }
-    internal class Alizarin : ModRarity
+    internal class Corroded : ModRarity
     {
-        public override Color RarityColor => new Color(145, 30, 45);
+        public override Color RarityColor => new Color(203, 227, 21);
         public override int GetPrefixedRarity(int offset, float valueMult)
         {
             if (offset < 0)
-            { 
+            {
                 return ModContent.RarityType<Macabre>();
-            }
-            else if (offset > 0)
-                return ModContent.RarityType<Blush>();
-            return Type;
-        }
-    }
-    internal class Blush : ModRarity
-    {
-        public override Color RarityColor => new Color(187, 136, 151);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            {
-                return ModContent.RarityType<Alizarin>();
-            }
-            else if (offset > 0)
-                return ModContent.RarityType<Gross>();
-            return Type;
-        }
-    }
-    internal class Gross : ModRarity
-    {
-        public override Color RarityColor => new Color(135, 170, 10);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            {
-                return ModContent.RarityType<Blush>();
             }
             else if (offset > 0)
                 return ModContent.RarityType<Light>();
@@ -136,25 +65,11 @@ namespace Xenon.Content.Rarities
         {
             if (offset < 0)
             {
-                return ModContent.RarityType<Gross>();
-            }
-            else if (offset > 0)
-                return ModContent.RarityType<Purity>();
-            return Type;
-        }
-    }
-    internal class Purity : ModRarity
-    {
-        public override Color RarityColor => new Color(113, 155, 113);
-        public override int GetPrefixedRarity(int offset, float valueMult)
-        {
-            if (offset < 0)
-            { // If the offset is -1 or -2 (a negative modifier).
-                return ModContent.RarityType<Light>(); // Make the rarity of items that have this rarity with a negative modifier the lower tier one.
+                return ModContent.RarityType<Corroded>();
             }
             else if (offset > 0)
                 return ModContent.RarityType<Xenon>();
-            return Type; // no 'higher' tier to go to, so return the type of this rarity.
+            return Type;
         }
     }
     internal class Xenon : ModRarity
