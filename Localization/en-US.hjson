@@ -499,8 +499,8 @@ Mods: {
 			}
 
 			SewerFury: {
-				DisplayName: Sewer Fury
-				Tooltip: ""
+				DisplayName: Gastroburst
+				Tooltip: Summons a controllable ball of gastric gunk
 			}
 
 			DirtySwamp: {

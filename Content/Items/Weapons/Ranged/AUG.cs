@@ -20,7 +20,7 @@ public class AUG : ModItem
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
         Item.useTime = 4;
-        Item.knockBack = 4f; // 0.35 was WAY too small
+        Item.knockBack = 4f; // 0.35 was WAY too low
         Item.crit = 5;
         Item.reuseDelay = 14;
         Item.shoot = ProjectileID.Bullet;
