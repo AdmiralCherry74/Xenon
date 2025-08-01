@@ -9,14 +9,14 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.NPCs.Template;
-using static Xenon.Content.NPCs.BloodWormHead.BloodWormBody;
+using static Xenon.Content.NPCs.CapillarieHead.CapillarieBody;
 
 namespace Xenon.Content.NPCs;
 
-public class BloodWormHead : WormHead
+public class CapillarieHead : WormHead
 {
-    public override int BodyType => ModContent.NPCType<BloodWormBody>();
-    public override int TailType => ModContent.NPCType<BloodWormTail>();
+    public override int BodyType => ModContent.NPCType<CapillarieBody>();
+    public override int TailType => ModContent.NPCType<CapillarieTail>();
     public override bool CanFly => true;
 
     public override void SetStaticDefaults()
@@ -102,7 +102,7 @@ public class BloodWormHead : WormHead
     {
         npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 2));
     }
-    public class BloodWormBody : WormBody
+    public class CapillarieBody : WormBody
     {
         public override void SetStaticDefaults()
         {
@@ -155,7 +155,7 @@ public class BloodWormHead : WormHead
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-        public class BloodWormTail : WormTail
+        public class CapillarieTail : WormTail
         {
             public override void SetStaticDefaults()
             {
