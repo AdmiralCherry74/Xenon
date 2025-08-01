@@ -93,7 +93,7 @@ namespace Xenon.Content.NPCs
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 2, 2, 5));
-            npcLoot.Add(ItemDropRule.Common(ItemID.GlowingSnail, 4, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.GlowingSnail, 4));
         }
     }
 }

@@ -91,7 +91,7 @@ namespace Xenon.Content.NPCs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3));
         }
     }
 }

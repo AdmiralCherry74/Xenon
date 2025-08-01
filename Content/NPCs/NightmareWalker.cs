@@ -91,6 +91,6 @@ public class NightmareWalker : ModNPC
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
         npcLoot.Add(ItemDropRule.Common(ItemID.VilePowder, 2, 1, 2));
-        npcLoot.Add(ItemDropRule.Common(ItemID.WormFood, 1500, 1, 1));
+        npcLoot.Add(ItemDropRule.Common(ItemID.WormFood, 1500));
     }
 }

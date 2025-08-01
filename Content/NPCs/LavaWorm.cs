@@ -18,7 +18,7 @@ public class LavaWormHead : WormHead
 {
     public override int BodyType => ModContent.NPCType<LavaWormBody>();
     public override int TailType => ModContent.NPCType<LavaWormTail>();
-    public override bool CanFly => true;
+    public override bool CanFly => false;
 
 	public override void SetStaticDefaults()
     {
