@@ -27,13 +27,13 @@ namespace Xenon.Content.NPCs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 40;
-            NPC.defense = 2;
-            NPC.lifeMax = 150;
+            NPC.damage = 27;
+            NPC.defense = 8;
+            NPC.lifeMax = 60;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
-            NPC.knockBackResist = 0.5f;
+            NPC.knockBackResist = 0.55f;
             NPC.aiStyle = 3; 
             
             AIType = NPCID.PirateCorsair;

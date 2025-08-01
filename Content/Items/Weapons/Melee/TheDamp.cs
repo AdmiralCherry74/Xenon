@@ -1,8 +1,9 @@
-﻿using Xenon.Content.Projectiles;
-using System;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
+using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee
 {
@@ -28,16 +29,23 @@ namespace Xenon.Content.Items.Weapons.Melee
             Item.noUseGraphic = true; // Makes the item invisible while using it (the projectile is the visible part).
             Item.UseSound = SoundID.Item1; // The sound that will play when the item is used.
 
-            Item.damage = 40; // The amount of damage the item does to an enemy or player.
+            Item.damage = 15; // The amount of damage the item does to an enemy or player.
             Item.DamageType = DamageClass.MeleeNoSpeed; // The type of damage the weapon does. MeleeNoSpeed means the item will not scale with attack speed.
-            Item.knockBack = 2.5f; // The amount of knockback the item inflicts.
-            Item.crit = 8; // The percent chance for the weapon to deal a critical strike. Defaults to 4.
+            Item.knockBack = 5f; // The amount of knockback the item inflicts.
+            Item.crit = 0; // The percent chance for the weapon to deal a critical strike. Defaults to 4.
             Item.channel = true; // Set to true for items that require the attack button to be held out (e.g. yoyos and magic missile weapons)
             Item.rare = 3; // The item's rarity. This changes the color of the item's name.
-            Item.value = Item.buyPrice(gold: 1); // The amount of money that the item is can be bought for.
+            Item.value = Item.sellPrice(gold: 1); // The amount of money that the item is can be bought for.
 
             Item.shoot = ModContent.ProjectileType<DampYoYoProj>(); // Which projectile this item will shoot. We set this to our corresponding projectile.
             Item.shootSpeed = 16f; // The velocity of the shot projectile.			
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

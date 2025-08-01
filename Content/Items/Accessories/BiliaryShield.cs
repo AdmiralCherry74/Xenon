@@ -10,7 +10,7 @@ public class BiliaryShield : ModItem
 	{
 		Item.DefaultToAccessory();
 		Item.sellPrice(gold: 1);
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Blue;
 	}
 	public override void UpdateAccessory(Player player, bool hideVisual)
 	{

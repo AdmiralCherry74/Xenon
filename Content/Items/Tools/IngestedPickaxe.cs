@@ -12,7 +12,7 @@ public class IngestedPickaxe : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.pick = 69;
+		Item.pick = 67;
 		Item.knockBack = 3f;
 		Item.damage = 10;
 		Item.useTime = 13;
@@ -46,12 +46,12 @@ public class IngestedPickaxe : ModItem
 			Main.dust[num15].velocity.Y *= 0.3f;
 		}
 	}
-	//public override void AddRecipes()
-	//{
-	//	CreateRecipe()
-	//		.AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
-	//		.AddIngredient(ModContent.ItemType<Material.Saliva>(), 6)
-	//		.AddTile(TileID.Anvils)
-	//		.Register();
-	//}
+	public override void AddRecipes()
+	{
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
+			.AddIngredient(ModContent.ItemType<FreshChyme>(), 6)
+			.AddTile(TileID.Anvils)
+			.Register();
+	}
 }

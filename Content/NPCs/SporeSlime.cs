@@ -24,8 +24,8 @@ namespace Xenon.Content.NPCs
 
         public override void SetDefaults()
         {
-            NPC.width = 52;
-            NPC.height = 32;
+            NPC.width = 38;
+            NPC.height = 30;
             NPC.damage = 15;
             NPC.defense = 6;
             NPC.lifeMax = 75;

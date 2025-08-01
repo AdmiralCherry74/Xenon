@@ -26,16 +26,16 @@ namespace Xenon.Content.NPCs
         {
             NPC.width = 55;
             NPC.height = 28;
-            NPC.damage = 40;
-            NPC.defense = 2;
-            NPC.lifeMax = 150;
+            NPC.damage = 20;
+            NPC.defense = 10;
+            NPC.lifeMax = 90;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
             NPC.knockBackResist = 0.75f;
             NPC.aiStyle = 3; 
             
-            AIType = NPCID.DarkMummy;
+            AIType = NPCID.WallCreeper;
             AnimationType = NPCID.WallCreeper;
         }
 

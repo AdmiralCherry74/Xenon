@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.Items.Tools;
 
@@ -46,12 +47,12 @@ public class Squasher : ModItem
 			Main.dust[num15].velocity.Y *= 0.3f;
 		}
 	}
-	//public override void AddRecipes()
-	//{
-	//	CreateRecipe()
-	//		.AddIngredient(ModContent.ItemType<UlceriteBar>(), 11)
-	//		.AddIngredient(ModContent.ItemType<Material.Saliva>(), 4)
-	//		.AddTile(TileID.Anvils)
-	//		.Register();
-	//}
+	public override void AddRecipes()
+	{
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<UlceriteBar>(), 11)
+			.AddIngredient(ModContent.ItemType<FreshChyme>(), 4)
+			.AddTile(TileID.Anvils)
+			.Register();
+	}
 }

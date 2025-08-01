@@ -27,7 +27,7 @@ class VeinPiercer : ModItem
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.value = 9000;
         Item.useAnimation = 24;
-        Item.rare = ModContent.RarityType<Macabre>();
+        Item.rare = 3;
     }
     public override void AddRecipes()
     {

@@ -12,15 +12,15 @@ public class AUG : ModItem
     {
         // Modders can use Item.DefaultToRangedWeapon to quickly set many common properties, such as: useTime, useAnimation, useStyle, autoReuse, DamageType, shoot, shootSpeed, useAmmo, and noMelee.
 
-        Item.width = 54; // Hitbox width of the item.
-        Item.height = 22; // Hitbox height of the item.
+        Item.width = 54;
+        Item.height = 22;
         Item.damage = 6;
         Item.shootSpeed = 18f;
         Item.useAmmo = AmmoID.Bullet;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
         Item.useTime = 10;
-        Item.knockBack = 4f; // 0.35 was WAY too small
+        Item.knockBack = 4f;
         Item.crit = 5;
         Item.reuseDelay = 17;
         Item.shoot = ProjectileID.Bullet;

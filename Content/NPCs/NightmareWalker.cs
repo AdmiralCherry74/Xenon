@@ -27,7 +27,7 @@ public class NightmareWalker : ModNPC
         NPC.width = 32;
         NPC.height = 44;
         NPC.damage = 30;
-        NPC.defense = 7;
+        NPC.defense = 6;
         NPC.lifeMax = 50;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath17;

@@ -12,8 +12,8 @@ public class MP5 : ModItem
     {
         // Modders can use Item.DefaultToRangedWeapon to quickly set many common properties, such as: useTime, useAnimation, useStyle, autoReuse, DamageType, shoot, shootSpeed, useAmmo, and noMelee.
 
-        Item.width = 54; // Hitbox width of the item.
-        Item.height = 22; // Hitbox height of the item.
+        Item.width = 54;
+        Item.height = 22;
         Item.damage = 4;
         Item.scale = 0.80f;
         Item.shootSpeed = 13f;
