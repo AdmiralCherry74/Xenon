@@ -21,7 +21,7 @@ public class Phlegmarang : ModItem
         Item.crit = 2;
         Item.shoot = ModContent.ProjectileType<PhlegmarangProjectile>();
         Item.shootSpeed = 15f;
-        Item.value = Item.buyPrice(gold: 5);
+        Item.value = Item.sellPrice(silver: 27);
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }

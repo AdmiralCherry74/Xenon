@@ -15,7 +15,7 @@ public class XenonWaraxe : ModItem
         Item.height = 40;
 
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTime = 20;
+        Item.useTime = 10;
         Item.useAnimation = 20;
 
         Item.autoReuse = true;

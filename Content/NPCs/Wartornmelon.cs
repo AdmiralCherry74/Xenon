@@ -64,13 +64,13 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneJungle && !NPC.AnyNPCs(Type))
+            if (spawnInfo.Player.ZoneCorrupt)
 
+            {
                 {
-                    {
-                    return 1f;
+                    return SpawnCondition.OverworldHallow.Chance * 0f;
 
-                    }
+                }
             }
             return 0f;
         }

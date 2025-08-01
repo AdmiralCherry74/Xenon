@@ -18,7 +18,7 @@ public class UlceriteBar : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ModContent.RarityType<Corroded>();
+        Item.rare = 2;
         Item.value = Item.sellPrice(0, 0, 21);
 	}
 	public override void AddRecipes()

@@ -17,7 +17,7 @@ public class FreshChyme : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ModContent.RarityType<Corroded>();
+        Item.rare = 3;
         Item.value = Item.sellPrice(0, 0, 21);
     }
 }

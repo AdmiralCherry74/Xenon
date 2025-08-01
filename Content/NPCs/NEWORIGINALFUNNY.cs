@@ -68,7 +68,7 @@ namespace Xenon.Content.NPCs
 
                 {
                     {
-                    return SpawnCondition.Crimson.Chance * 0f;
+                    return SpawnCondition.OverworldHallow.Chance * 0f;
 
                     }
             }

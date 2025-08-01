@@ -25,9 +25,9 @@ public class RubberHandleSword : ModItem
         Item.noMelee = true; // The projectile will do the damage and not the item
 
         Item.rare = ItemRarityID.White;
-        Item.value = Item.buyPrice(gold: 10);
+        Item.value = Item.sellPrice(silver: 18)
 
-        Item.shoot = ModContent.ProjectileType<RHSProj>(); // The projectile is what makes a shortsword work
+        Item.shoot = ModContent.ProjectileType<RHSProj>();
         Item.shootSpeed = 2.1f; // This value bleeds into the behavior of the projectile as velocity, keep that in mind when tweaking values
     }
 }

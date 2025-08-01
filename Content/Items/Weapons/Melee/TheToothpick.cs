@@ -2,12 +2,13 @@
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Melee
 {
-    public class TheEbonStabber : ModItem
+    public class TheToothpick : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -18,9 +19,9 @@ namespace Xenon.Content.Items.Weapons.Melee
         public override void SetDefaults()
         {
             // Common Properties
-            Item.rare = ModContent.RarityType<Evil>(); // Assign this item a rarity level of Pink
-            Item.value = Item.sellPrice(gold: 1); // The number and type of coins item can be sold for to an NPC
-            Item.value = Item.sellPrice(silver: 50);
+            Item.rare = 2;
+            Item.value = Item.sellPrice(silver: 50); // The number and type of coins item can be sold for to an NPC
+            Item.value = Item.sellPrice(gold: 1);
 
             // Use Properties
             Item.useStyle = ItemUseStyleID.Shoot; // How you use the item (swinging, holding out, etc.)
@@ -30,15 +31,15 @@ namespace Xenon.Content.Items.Weapons.Melee
             Item.autoReuse = false; // Allows the player to hold click to automatically use the item again. Most spears don't autoReuse, but it's possible when used in conjunction with CanUseItem()
 
             // Weapon Properties
-            Item.damage = 15;
-            Item.knockBack = 4f;
+            Item.damage = 16;
+            Item.knockBack = 4.5f;
             Item.noUseGraphic = true; // When true, the item's sprite will not be visible while the item is in use. This is true because the spear projectile is what's shown so we do not want to show the spear sprite as well.
             Item.DamageType = DamageClass.Melee;
             Item.noMelee = false; // Allows the item's animation to do damage. This is important because the spear is actually a projectile instead of an item. This prevents the melee hitbox of this item.
 
             // Projectile Properties
-            Item.shootSpeed = 3f; // The speed of the projectile measured in pixels per frame.
-            Item.shoot = ModContent.ProjectileType<EbonStabberProj>(); // The projectile that is fired from this weapon
+            Item.shootSpeed = 3.5f; // The speed of the projectile measured in pixels per frame.
+            Item.shoot = ModContent.ProjectileType<ToothpickProj>(); // The projectile that is fired from this weapon
         }
 
         public override bool CanUseItem(Player player)
@@ -59,11 +60,11 @@ namespace Xenon.Content.Items.Weapons.Melee
         }
         public override void AddRecipes()
         {
-            Recipe Ti = CreateRecipe();
-            Ti.AddIngredient(ItemID.DemoniteBar, 12);
-            Ti.AddIngredient(ItemID.ShadowScale, 6);
-            Ti.AddTile(TileID.Anvils);
-            Ti.Register();
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
+                .AddIngredient(ModContent.ItemType<FreshChyme>(), 6)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

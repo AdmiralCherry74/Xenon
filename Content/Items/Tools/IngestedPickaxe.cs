@@ -12,7 +12,7 @@ public class IngestedPickaxe : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.pick = 69;
+		Item.pick = 67;
 		Item.knockBack = 3f;
 		Item.damage = 10;
 		Item.useTime = 13;

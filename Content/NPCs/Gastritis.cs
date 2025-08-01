@@ -9,7 +9,7 @@ using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.NPCs
 {
-    public class Irritshits : ModNPC
+    public class Gastritis : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -45,7 +45,7 @@ namespace Xenon.Content.NPCs
 
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Irritshits")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Gastritis")),
             ]);
         }
 
