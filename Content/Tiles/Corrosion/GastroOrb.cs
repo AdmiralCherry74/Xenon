@@ -10,6 +10,7 @@ using Terraria.Chat;
 using Xenon.Content.Items.Weapons.Melee;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Weapons.Ranged;
+using Xenon.Content.Items.Weapons.Magic;
 
 namespace Xenon.Content.Tiles.Corrosion;
 
@@ -65,7 +66,7 @@ public class GastroOrb : ModTile
             }
             if (num3 == 0)
             {
-                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Hunglock>(), 1, false, -1, false);
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<AUG>(), 1, false, -1, false);
                 Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, 97, 100, false, 0, false);
             }
             else if (num3 == 1)
@@ -80,10 +81,10 @@ public class GastroOrb : ModTile
             {
                 Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Items.Pets.RottingLeftovers>(), 1, false, -1, false);
             }
-            //        else if (num3 == 4)
-            //        {
-            //            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Smogscreen>(), 1, false, -1, false);
-            //        }
+            else if (num3 == 4)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<SewerFury>(), 1, false, -1, false);
+            }
             WorldGen.shadowOrbSmashed = true;
             WorldGen.shadowOrbCount++;
             if (WorldGen.shadowOrbCount >= 3)
