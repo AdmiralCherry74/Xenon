@@ -1,7 +1,7 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Accessories
 {
@@ -18,7 +18,7 @@ namespace Xenon.Content.Items.Accessories
             Item.width = 40;
             Item.height = 40;
             Item.accessory = true;
-            Item.rare = 2;
+            Item.rare = ItemRarityID.Green;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

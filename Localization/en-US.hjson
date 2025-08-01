@@ -375,7 +375,7 @@ Mods: {
 			}
 
 			OutragePotion: {
-				DisplayName: Outrage Potion
+				DisplayName: Anger Potion
 				Tooltip: Increases armor penetration by 5
 			}
 
@@ -410,7 +410,7 @@ Mods: {
 			}
 
 			UlceriteBar: {
-				DisplayName: Ulcerite Bar
+				DisplayName: Ingestane Bar
 				Tooltip: "'Pulsing with gastric energy'"
 			}
 
@@ -420,7 +420,7 @@ Mods: {
 			}
 
 			UlceriteOre: {
-				DisplayName: Ulcerite Ore
+				DisplayName: Ingestane Ore
 				Tooltip: "'Pulsing with gastric energy'"
 			}
 
@@ -456,7 +456,11 @@ Mods: {
 
 			AUG: {
 				DisplayName: Ulceraug
-				Tooltip: High damage with its three burst
+				Tooltip:
+				'''
+				Three-round burst
+				Only the first shot consumes ammo
+				'''
 			}
 
 			XM8: {
@@ -562,20 +566,19 @@ Mods: {
 			FATWORMTail.DisplayName: F A T W O R M
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
-			Dickroach.DisplayName: Evphila
 			BloodWormHead.DisplayName: Blood Worm
 			BloodWormBody.DisplayName: Blood Worm
 			BloodWormTail.DisplayName: Blood Worm
-			TapeWormHead.DisplayName: Tape Worm Head
-			TapeWormBody.DisplayName: Tape Worm Body
-			TapeWormTail.DisplayName: Tape Worm Tail
+			TapeWormHead.DisplayName: Tape Worm
+			TapeWormBody.DisplayName: Tape Worm
+			TapeWormTail.DisplayName: Tape Worm
 			Evphila.DisplayName: Evphila
 		}
 
 		Tiles: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
-			UlceriteOre.MapEntry: Ulcerite Ore
+			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
 		}
 
@@ -635,11 +638,11 @@ Mods: {
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun
 			CorrosionSpray.DisplayName: Corrosion Spray
 			CorrodeBoomerang.DisplayName: Corrode Boomerang
-			RHSProj.DisplayName: R H S Proj
+			RHSProj.DisplayName: Rubber Handle Sword
 			RottingLeftovers.DisplayName: Rotting Leftovers
 			PhlegmarangProjectile.DisplayName: Phlegmarang
-			SewerFuryBall.DisplayName: Sewer Fury Ball
-			DampYoYoProj.DisplayName: Damp Yo Yo Proj
+			SewerFuryBall.DisplayName: Sewer Fury
+			DampYoYoProj.DisplayName: Damp
 		}
 
 		Buffs: {
@@ -664,7 +667,7 @@ Mods: {
 			}
 
 			Outraged: {
-				DisplayName: Outraged
+				DisplayName: Angry
 				Description: Increases armor penetration by 5
 			}
 

@@ -6,7 +6,6 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Accessories;
 
@@ -16,7 +15,7 @@ public class EruptionInABottle : ModItem
     public override void SetDefaults()
     {
         Item.DefaultToAccessory();
-        Item.rare = 2;
+        Item.rare = ItemRarityID.Green;
     }
 
     public override void UpdateAccessory(Player player, bool hideVisual)
@@ -30,7 +29,6 @@ public class EruptionInABottle : ModItem
         if (player.GetModPlayer<XenonPlayer>().GroundPoundActivated)
         {
             Vector2 p_pos = player.position + (new Vector2(player.width, player.height) / 2f);
-            //int numOfNPCs = 0;
             if (player.gravDir == 1f ? player.velocity.Y > 0f : player.velocity.Y < 0f)
             {
                 fall_time++;
@@ -95,11 +93,6 @@ public class EruptionInABottle : ModItem
                 {
                     sound.Volume = MathHelper.Clamp(fall_dist / 7f, 0.2f, 3);
                 }
-                //if (player.whoAmI == Main.myPlayer && ModContent.GetInstance<AvalonClientConfig>().AdditionalScreenshakes)
-                //{
-                //    PunchCameraModifier modifier = new PunchCameraModifier(player.Center, new Vector2(Main.rand.NextFloat(-0.3f, 0.3f), fall_dist / 2f), 1f, 3f, 15, 300f, player.name);
-                //    Main.instance.CameraModifiers.Add(modifier);
-                //}
                 fall_time = 0; // just in case the checks above fail for whatever reason
             } // END just fell
 

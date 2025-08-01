@@ -9,7 +9,6 @@ namespace Xenon.Content.Items.GlugGlugs
     // A mana potion is exactly the same, except Item.healMana is used instead. (Also GetHealMana would be used for dynamic mana recovery values)
     public class PainPills : ModItem
     {
-
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 30;

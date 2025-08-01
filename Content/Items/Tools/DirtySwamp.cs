@@ -48,6 +48,9 @@ public class DirtySwamp : ModItem
 	}
 	public override void AddRecipes()
 	{
-		CreateRecipe().AddIngredient(ModContent.ItemType<UlceriteBar>(), 10).AddTile(TileID.Anvils).Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<UlceriteBar>(), 10)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }
