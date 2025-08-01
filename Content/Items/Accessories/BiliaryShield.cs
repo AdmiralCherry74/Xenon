@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace Xenon.Content.Items.Accessories;
 
-public class GoldenHeartBand : ModItem
+public class BiliaryShield : ModItem
 {
 	public override void SetDefaults()
 	{

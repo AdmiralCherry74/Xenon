@@ -74,7 +74,7 @@ public class GastroOrb : ModTile
             }
             else if (num3 == 2)
             {
-                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<GoldenHeartBand>(), 1, false, -1, false);
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<BiliaryShield>(), 1, false, -1, false);
             }
             else if (num3 == 3)
             {

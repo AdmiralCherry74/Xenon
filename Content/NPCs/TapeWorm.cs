@@ -5,6 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
 using Xenon.NPCs.Template;
 using static Xenon.Content.NPCs.TapeWormHead.TapeWormBody;
 
@@ -91,8 +92,7 @@ public class TapeWormHead : WormHead
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
-        npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
-        npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 2));
     }
     public class TapeWormBody : WormBody
     {

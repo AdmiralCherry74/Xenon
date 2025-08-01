@@ -20,7 +20,6 @@
 	  <None Remove="Content\Items\Placeable\Furniture\Painting\GooberPainting.png" />
 	  <None Remove="Content\Items\Weapons\Magic\Raycannon.png" />
 	  <None Remove="Content\Items\Weapons\Melee\Scarlet.png" />
-	  <None Remove="Content\Items\Weapons\Melee\TheEbonStabber.png" />
 	  <None Remove="Content\Items\Weapons\Melee\XenonWaraxe.png" />
 	  <None Remove="Content\NPCs\Bandit.png" />
 	  <None Remove="Content\NPCs\BanditLooter.PNG" />
@@ -34,10 +33,8 @@
 	  <None Remove="Content\Items\Valuables\GemPouch.png" />
 	  <None Remove="Content\Items\Valuables\MusicalAlbum.png" />
 	  <None Remove="Content\Items\Valuables\Perfume.png" />
-	  <None Remove="Content\Items\Valuables\RareBook.png" />
 	  <None Remove="Content\Items\Valuables\UnstablePowder.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
-	  <None Remove="Content\NPCs\Lihshart.png" />
 	  <None Remove="Content\NPCs\Mimicling.png" />
 	  <None Remove="Content\NPCs\SnowLeopard.png" />
 	  <None Remove="Content\NPCs\Wartornmelon.png" />

@@ -456,7 +456,7 @@ Mods: {
 
 			AUG: {
 				DisplayName: Ulceraug
-				Tooltip: High damage with slower firing speeds
+				Tooltip: High damage with its three burst
 			}
 
 			XM8: {
@@ -465,12 +465,12 @@ Mods: {
 					'''
 					Four-round burst rifle
 					Bursts are fired in quick succession
-					'Did you know this was accidentally made while trying to make the AUG for Xenon?'
+					'Grenade Launcher sadly not included'
 					'''
 			}
 
-			GoldenHeartBand: {
-				DisplayName: Golden Heart Band
+			BiliaryShield: {
+				DisplayName: Biliary Shield
 				Tooltip: Increases maximum life by 25
 			}
 
@@ -522,6 +522,21 @@ Mods: {
 				DisplayName: The Indigestion
 				Tooltip: ""
 			}
+
+			Bolus: {
+				DisplayName: Bolus
+				Tooltip: ""
+			}
+
+			FreshChyme: {
+				DisplayName: Fresh Chyme
+				Tooltip: ""
+			}
+
+			TheDamp: {
+				DisplayName: The Damp
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -539,7 +554,7 @@ Mods: {
 			SnowLeopard.DisplayName: Snow Leopard
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
-			Lihshart.DisplayName: Temple Sentry
+			TempleSentry.DisplayName: Temple Sentry
 			Irritshits.DisplayName: Gastritis
 			NEWORIGINALFUNNY.DisplayName: N E W O R I G I N A L F U N N Y
 			FATWORMHead.DisplayName: F A T W O R M
@@ -551,6 +566,10 @@ Mods: {
 			BloodWormHead.DisplayName: Blood Worm
 			BloodWormBody.DisplayName: Blood Worm
 			BloodWormTail.DisplayName: Blood Worm
+			TapeWormHead.DisplayName: Tape Worm Head
+			TapeWormBody.DisplayName: Tape Worm Body
+			TapeWormTail.DisplayName: Tape Worm Tail
+			Evphila.DisplayName: Evphila
 		}
 
 		Tiles: {
@@ -571,11 +590,11 @@ Mods: {
 			NightmareWalker: A person devoid of life. They are lost souls turned evil by the Corruption, now seemingly a walking nightmare. Reminder that the original person can see everything that happens but are helpless to stop it...
 			SnowLeopard: A solitary predator that seeks its prey in the tundra. It rarely hunts humans...
 			Wartornmelon: temporary beastairy. temporary sprite, ok look this enemy is unfinished
-			Lihshart: A dangerous sentry that patrols the Lihzahrd Temple, shooting lasers and ramming into those who run into the temple uninvited. Low grade weapons won't even scratch it without the help of souls being released...
+			TempleSentry: A dangerous sentry that patrols the Lihzahrd Temple, shooting lasers and ramming into those who run into the temple uninvited. Low grade weapons won't even scratch it without the help of souls being released...
 			HalfDigested: An unfortunate bipedal mortal like a human or goblin, ate and spat out by the Stomach Of Cthulhu. They now run about to harm those not yet under this affliction.
 			StomachBug: A small stinkbug now turned into a denizen of the Corrosion. Stomach Bugs run about gathering food for the ever hungry overlord, all the while covering the land in their noxious fumes.
 			Irritshits: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
-			Dickroach: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully they can't fly.
+			Evphila: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully they can't fly.
 			BloodWorm: Aggressive crimified worms that tunnel fast and dig fast. they are extremely small and frail however they compensate in their surprising lethality.
 			TapeWorm: A Class of parasitic worms that have adapted to go unnoticed by The Corrosion. They are sluggish, big and extremely defensive
 		}
@@ -620,6 +639,7 @@ Mods: {
 			RottingLeftovers.DisplayName: Rotting Leftovers
 			PhlegmarangProjectile.DisplayName: Phlegmarang
 			SewerFuryBall.DisplayName: Sewer Fury Ball
+			DampYoYoProj.DisplayName: Damp Yo Yo Proj
 		}
 
 		Buffs: {

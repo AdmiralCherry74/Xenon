@@ -9,7 +9,7 @@ using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.NPCs
 {
-    public class Dickroach : ModNPC
+    public class Evphila : ModNPC
     {
         public override void SetStaticDefaults()
         {

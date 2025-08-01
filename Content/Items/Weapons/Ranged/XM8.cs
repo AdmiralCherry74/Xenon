@@ -14,19 +14,19 @@ public class XM8 : ModItem
 
         Item.width = 54; // Hitbox width of the item.
         Item.height = 22; // Hitbox height of the item.
-        Item.damage = 16;
+        Item.damage = 35;
         Item.scale = 0.80f;
-        Item.shootSpeed = 13f;
+        Item.shootSpeed = 14f;
         Item.useAmmo = AmmoID.Bullet;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
-        Item.useTime = 2;
+        Item.useTime = 4;
         Item.knockBack = 0.35f;
         Item.crit = 12;
         Item.shoot = ProjectileID.Bullet;
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.value = 1000;
-        Item.useAnimation = 8;
+        Item.useAnimation = 16;
         Item.UseSound = SoundID.Item11;
         Item.rare = 3;
         Item.autoReuse = false;

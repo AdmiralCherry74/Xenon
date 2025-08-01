@@ -11,7 +11,7 @@ using Xenon.Content.Items.Placeable.Furniture.Painting;
 
 namespace Xenon.Content.NPCs
 {
-    public class Lihshart : ModNPC
+    public class TempleSentry : ModNPC
     {
         public override void SetStaticDefaults()
         {
