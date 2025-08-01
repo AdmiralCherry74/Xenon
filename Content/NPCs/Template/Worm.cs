@@ -402,7 +402,7 @@ namespace Xenon.NPCs.Template
 			float length = (float)Math.Sqrt(dirX * dirX + dirY * dirY);
 
 			// If we do not have any type of collision, we want the NPC to fall down and decelerate along the X axis.
-			if (!collision && !CanFly)
+			if (!collision)
 				HeadAI_Movement_HandleFallingFromNoCollision(dirX, speed, acceleration);
 			else
 			{

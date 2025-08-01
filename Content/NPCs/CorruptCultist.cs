@@ -1,20 +1,26 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Xenon;
+using Microsoft.Xna.Framework;
+using System;
+using System.IO;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Personalities;
+using Terraria.GameContent.UI;
+using Terraria.GameInput;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Materials;
+using Terraria.Localization;
 
 namespace Xenon.Content.NPCs
 {
-    public class HalfDigested : ModNPC
+    public class CorruptCultist : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PirateDeckhand];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Tim];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -27,27 +33,29 @@ namespace Xenon.Content.NPCs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 27;
-            NPC.defense = 8;
-            NPC.lifeMax = 60;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 1000;
-            NPC.knockBackResist = 0.55f;
-            NPC.aiStyle = 3; 
+            NPC.damage = 3;
+            NPC.defense = 3;
+            NPC.lifeMax = 50;
+            NPC.HitSound = SoundID.NPCHit37;
+            NPC.DeathSound = SoundID.NPCDeath39;
+            NPC.value = 250;
+            NPC.knockBackResist = 0.05f;
+            NPC.aiStyle = 8; 
             
-            AIType = NPCID.ZombieMushroomHat;
-            AnimationType = NPCID.PirateCorsair;
+            AIType = NPCID.Tim;
+            AnimationType = NPCID.Tim;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HalfDigested")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorruptCultist")),
             ]);
         }
+
+
 
         public override void AI()
         {
@@ -65,9 +73,15 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && !spawnInfo.Player.InPillarZone())
-                return 0.75f;
-            return 0;
+            if (spawnInfo.Player.ZoneCorrupt)
+
+                {
+                    {
+                    return SpawnCondition.Corruption.Chance * 0.05f;
+
+                    }
+            }
+            return 0f;
         }
 
 
@@ -89,9 +103,10 @@ namespace Xenon.Content.NPCs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-        public override void ModifyNPCLoot(NPCLoot npcLoot)
+         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.VilePowder, 2, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(ItemID.WormFood, 1250, 1, 1));
         }
     }
 }

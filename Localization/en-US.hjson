@@ -551,6 +551,11 @@ Mods: {
 				DisplayName: Digestion Bow
 				Tooltip: ""
 			}
+
+			SulfirBow: {
+				DisplayName: Sulfir Bow
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -583,6 +588,9 @@ Mods: {
 			TapeWormBody.DisplayName: Tape Worm
 			TapeWormTail.DisplayName: Tape Worm
 			Evphila.DisplayName: Evphila
+			CorrodedCultist.DisplayName: Corroded Cultist
+			CorruptCultist.DisplayName: Corrupt Cultist
+			Gastritis.DisplayName: Gastritis
 		}
 
 		Tiles: {
@@ -609,7 +617,9 @@ Mods: {
 			Gastritis: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
 			Evphila: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully they can't fly.
 			BloodWorm: Aggressive crimified worms that tunnel fast and dig fast. they are extremely small and frail however they compensate in their surprising lethality.
-			TapeWorm: A Class of parasitic worms that have adapted to go unnoticed by The Corrosion. They are sluggish, big and extremely defensive
+			TapeWorm: A class of parasitic worms that have adapted to go unnoticed by The Corrosion. They are sluggish, big and extremely defensive
+			CorruptCultist: An unfortunate soul who's intent turned evil. they may be one of the most sadistic people out there.
+			CorrodedCultist: Who knows why they worship whats essientially a digestive evil. but they are still as deadly as any other magical cult member.
 		}
 
 		Biomes: {

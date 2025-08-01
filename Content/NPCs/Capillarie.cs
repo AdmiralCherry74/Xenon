@@ -38,7 +38,7 @@ public class BloodWormHead : WormHead
         NPC.noTileCollide = true;
         NPC.lifeMax = 75;
         NPC.defense = 0;
-        NPC.noGravity = false;
+        NPC.noGravity = true;
         NPC.width = 26;
         NPC.aiStyle = -1;
         NPC.behindTiles = true;
@@ -95,8 +95,8 @@ public class BloodWormHead : WormHead
     internal static void CommonWormInit(Worm worm)
     {
         // These two properties handle the movement of the worm
-        worm.MoveSpeed = 10f;
-        worm.Acceleration = 2f;
+        worm.MoveSpeed = 9f;
+        worm.Acceleration = 0.15f;
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
@@ -123,7 +123,7 @@ public class BloodWormHead : WormHead
             NPC.noTileCollide = true;
             NPC.lifeMax = 75;
             NPC.defense = 2;
-            NPC.noGravity = false;
+            NPC.noGravity = true;
             NPC.width = 26;
             NPC.aiStyle = -1;
             NPC.behindTiles = true;
@@ -172,7 +172,7 @@ public class BloodWormHead : WormHead
                 NPC.noTileCollide = true;
                 NPC.lifeMax = 75;
                 NPC.defense = 6;
-                NPC.noGravity = false;
+                NPC.noGravity = true;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;

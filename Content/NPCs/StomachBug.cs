@@ -36,7 +36,7 @@ namespace Xenon.Content.NPCs
             NPC.knockBackResist = 0.20f;
             NPC.aiStyle = 3; 
             
-            AIType = NPCID.DarkMummy;
+            AIType = NPCID.WallCreeper;
             AnimationType = NPCID.WallCreeper;
         }
 

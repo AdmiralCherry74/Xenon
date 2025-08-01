@@ -35,7 +35,7 @@ namespace Xenon.Content.NPCs
             NPC.knockBackResist = 0.5f;
             NPC.aiStyle = 3; 
             
-            AIType = NPCID.PirateCorsair;
+            AIType = NPCID.ZombieMushroomHat;
             AnimationType = NPCID.PirateCorsair;
         }
 

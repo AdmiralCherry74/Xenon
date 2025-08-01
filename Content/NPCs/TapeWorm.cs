@@ -36,7 +36,7 @@ public class TapeWormHead : WormHead
         NPC.noTileCollide = true;
         NPC.lifeMax = 150;
         NPC.defense = 6;
-        NPC.noGravity = false;
+        NPC.noGravity = true;
         NPC.width = 26;
         NPC.aiStyle = -1;
         NPC.behindTiles = true;
@@ -88,7 +88,7 @@ public class TapeWormHead : WormHead
     {
         // These two properties handle the movement of the worm
         worm.MoveSpeed = 6f;
-        worm.Acceleration = 0.50f;
+        worm.Acceleration = 0.05f;
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
@@ -115,7 +115,7 @@ public class TapeWormHead : WormHead
             NPC.noTileCollide = true;
             NPC.lifeMax = 150;
             NPC.defense = 10;
-            NPC.noGravity = false;
+            NPC.noGravity = true;
             NPC.width = 26;
             NPC.aiStyle = -1;
             NPC.behindTiles = true;
@@ -164,7 +164,7 @@ public class TapeWormHead : WormHead
                 NPC.noTileCollide = true;
                 NPC.lifeMax = 150;
                 NPC.defense = 14;
-                NPC.noGravity = false;
+                NPC.noGravity = true;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;
