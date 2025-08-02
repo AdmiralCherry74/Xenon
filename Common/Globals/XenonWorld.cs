@@ -115,7 +115,6 @@ internal class XenonWorld : ModSystem
                     WorldGen.genRand.NextBool(5))
                 {
                     Main.tile[xCoord, yCoord - 1].TileType = (ushort)ModContent.TileType<CorrosionShortGrass>();
-                    //WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<CorrosionShortGrass>(), true);
                     Main.tile[xCoord, yCoord - 1].TileFrameX = (short)(WorldGen.genRand.Next(0, 11) * 18);
                     if (Main.tile[xCoord, yCoord - 1].HasTile)
                     {
@@ -129,19 +128,19 @@ internal class XenonWorld : ModSystem
                     }
                 }
 
-                //if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 && !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid && WorldGen.genRand.NextBool(yCoord > Main.worldSurface ? 500 : 200) && (num14 == ModContent.TileType<CorrosionGrass>() || num14 == ModContent.TileType<CorrosionJungleGrass>()))
-                //{
-                //    WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<Barfbush>(), true, false, -1, 0);
-                //    if (Main.tile[xCoord, num9].HasTile)
-                //    {
-                //        Tile t = Main.tile[xCoord, num9];
-                //        t.TileColor = Main.tile[xCoord, yCoord].TileColor;
-                //    }
-                //    if (Main.netMode == NetmodeID.Server && Main.tile[xCoord, num9].HasTile)
-                //    {
-                //        NetMessage.SendTileSquare(-1, xCoord, num9, 1);
-                //    }
-                //}
+                if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 && !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid && WorldGen.genRand.NextBool(yCoord > Main.worldSurface ? 500 : 200) && (num14 == ModContent.TileType<CorrosionGrass>() || num14 == ModContent.TileType<Gutstone>() || num14 == ModContent.TileType<CorrosionJungleGrass>()))
+                {
+                    WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<Liverwort>(), true, false, -1, 0);
+                    if (Main.tile[xCoord, num9].HasTile)
+                    {
+                        Tile t = Main.tile[xCoord, num9];
+                        t.TileColor = Main.tile[xCoord, yCoord].TileColor;
+                    }
+                    if (Main.netMode == NetmodeID.Server && Main.tile[xCoord, num9].HasTile)
+                    {
+                        NetMessage.SendTileSquare(-1, xCoord, num9, 1);
+                    }
+                }
                 bool flag2 = false;
                 for (int m = num7; m < num8; m++)
                 {
@@ -202,11 +201,11 @@ internal class XenonWorld : ModSystem
                 WorldGen.KillTile(xCoord, yCoord);
             }
             // kill barfbush if block below isn't contagion grass or chunkstone
-            //if (!(Main.tile[xCoord, num11].TileType == ModContent.TileType<CorrosionGrass>() || Main.tile[xCoord, num11].TileType == ModContent.TileType<CorrosionJungleGrass>() || Main.tile[xCoord, num11].TileType == ModContent.TileType<Gutstone>() || Data.Sets.TileSets.SuitableForPlantingHerbs[Main.tile[xCoord, num11].TileType]) &&
-            //    Main.tile[xCoord, yCoord].TileType == ModContent.TileType<Barfbush>())
-            //{
-            //    WorldGen.KillTile(xCoord, yCoord);
-            //}
+            if (!(Main.tile[xCoord, num11].TileType == ModContent.TileType<CorrosionGrass>() || Main.tile[xCoord, num11].TileType == ModContent.TileType<CorrosionJungleGrass>() || Main.tile[xCoord, num11].TileType == ModContent.TileType<Gutstone>() || Main.tile[xCoord, num11].TileType == TileID.PlanterBox || Main.tile[xCoord, num11].TileType == TileID.ClayPot) &&
+                Main.tile[xCoord, yCoord].TileType == ModContent.TileType<Liverwort>())
+            {
+                WorldGen.KillTile(xCoord, yCoord);
+            }
             #endregion
         }
     }

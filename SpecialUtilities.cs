@@ -9,6 +9,10 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
+	public static Player GetPlayerForTile(int x, int y)
+	{
+		return Main.player[Player.FindClosest(new Vector2(x, y) * 16f, 16, 16)];
+	}
 	/// <summary>
 	/// <para/> Uses <see cref="Utils.SafeNormalize"/> instead of <see cref="Vector2.Normalize()"/> to ensure it doesn't return a value which is not a number.
 	/// <para/> If the two provided Vector2 positions are the same, <see cref="Vector2.Zero"/> will be returned instead as a fallback.
