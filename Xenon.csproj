@@ -49,7 +49,6 @@
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Assets\Textures\" />
 	  <Folder Include="Content\Buffs\Pets\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\NPCs\Template\" />

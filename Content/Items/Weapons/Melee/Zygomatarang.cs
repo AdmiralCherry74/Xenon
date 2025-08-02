@@ -6,7 +6,7 @@ using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee;
 
-public class Phlegmarang : ModItem
+public class Zygomatarang : ModItem
 {
     public override void SetDefaults()
     {
@@ -15,13 +15,13 @@ public class Phlegmarang : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 20;
         Item.useAnimation = 20;
-        Item.noUseGraphic = true;
         Item.autoReuse = false;
+        Item.noUseGraphic = true;
         Item.DamageType = DamageClass.Melee;
         Item.damage = 20;
         Item.knockBack = 5;
         Item.crit = 2;
-        Item.shoot = ModContent.ProjectileType<PhlegmarangProjectile>();
+        Item.shoot = ModContent.ProjectileType<ZygomatarangProjectile>();
         Item.shootSpeed = 15f;
         Item.value = Item.sellPrice(silver: 27);
         Item.UseSound = SoundID.Item1;
@@ -29,10 +29,10 @@ public class Phlegmarang : ModItem
     }
     public override void AddRecipes()
     {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 8)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
-            .AddTile(TileID.Anvils)
-            .Register();
+        Recipe Ti = CreateRecipe();
+        Ti.AddIngredient(ItemID.CrimtaneBar, 8);
+        Ti.AddIngredient(ItemID.TissueSample, 2);
+        Ti.AddTile(TileID.Anvils);
+        Ti.Register();
     }
 }

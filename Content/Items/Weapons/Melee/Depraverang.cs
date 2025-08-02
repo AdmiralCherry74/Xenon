@@ -1,12 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee;
 
-public class Phlegmarang : ModItem
+public class Depraverang : ModItem
 {
     public override void SetDefaults()
     {
@@ -21,7 +20,7 @@ public class Phlegmarang : ModItem
         Item.damage = 20;
         Item.knockBack = 5;
         Item.crit = 2;
-        Item.shoot = ModContent.ProjectileType<PhlegmarangProjectile>();
+        Item.shoot = ModContent.ProjectileType<DepraverangProjectile>();
         Item.shootSpeed = 15f;
         Item.value = Item.sellPrice(silver: 27);
         Item.UseSound = SoundID.Item1;
@@ -29,10 +28,10 @@ public class Phlegmarang : ModItem
     }
     public override void AddRecipes()
     {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 8)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
-            .AddTile(TileID.Anvils)
-            .Register();
+        Recipe Ti = CreateRecipe();
+        Ti.AddIngredient(ItemID.DemoniteBar, 8);
+        Ti.AddIngredient(ItemID.ShadowScale, 2);
+        Ti.AddTile(TileID.Anvils);
+        Ti.Register();
     }
 }

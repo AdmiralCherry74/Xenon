@@ -17,6 +17,13 @@ public class Corrosion : ModBiome
     {
         return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && player.ZoneOverworldHeight;
     }
+public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
+    {
+        get
+        {
+            return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
+        }
+    }
 }
 public class CorrosionUnderground : ModBiome
 {

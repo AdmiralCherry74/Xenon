@@ -457,10 +457,10 @@ Mods: {
 			AUG: {
 				DisplayName: Ulceraug
 				Tooltip:
-				'''
-				Three-round burst
-				Only the first shot consumes ammo
-				'''
+					'''
+					Three-round burst
+					Only the first shot consumes ammo
+					'''
 			}
 
 			XM8: {
@@ -556,6 +556,21 @@ Mods: {
 				DisplayName: Sulfir Bow
 				Tooltip: ""
 			}
+
+			Depraverang: {
+				DisplayName: Depraverang
+				Tooltip: ""
+			}
+
+			NauseaCudgel: {
+				DisplayName: Nausea Cudgel
+				Tooltip: ""
+			}
+
+			Zygomatarang: {
+				DisplayName: Zygomatarang
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -591,6 +606,9 @@ Mods: {
 			CorrodedCultist.DisplayName: Corroded Cultist
 			CorruptCultist.DisplayName: Corrupt Cultist
 			Gastritis.DisplayName: Gastritis
+			CapillarieHead.DisplayName: Capillarie Head
+			CapillarieBody.DisplayName: Capillarie Body
+			CapillarieTail.DisplayName: Capillarie Tail
 		}
 
 		Tiles: {
@@ -663,6 +681,10 @@ Mods: {
 			PhlegmarangProjectile.DisplayName: Phlegmarang
 			SewerFuryBall.DisplayName: Sewer Fury
 			DampYoYoProj.DisplayName: Damp
+			CorrodedBall.DisplayName: Corroded Ball
+			DepraverangProjectile.DisplayName: Depraverang Projectile
+			ToothpickProj.DisplayName: Toothpick Proj
+			ZygomatarangProjectile.DisplayName: Zygomatarang Projectile
 		}
 
 		Buffs: {
