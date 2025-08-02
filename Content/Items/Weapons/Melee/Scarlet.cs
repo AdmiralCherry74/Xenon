@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -34,11 +32,11 @@ public class Scarlet : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe Ti = CreateRecipe();
-        Ti.AddIngredient(ItemID.GoldBar, 10);
-        Ti.AddIngredient(ItemID.GoldShortsword, 1);
-        Ti.AddIngredient(ItemID.Silk, 5);
-        Ti.AddTile(TileID.Anvils);
-        Ti.Register();
+        CreateRecipe()
+            .AddIngredient(ItemID.GoldBar, 10)
+            .AddIngredient(ItemID.GoldShortsword, 1)
+            .AddIngredient(ItemID.Silk, 5)
+            .AddTile(TileID.Anvils)
+            .Register();
     }
 }

@@ -4,7 +4,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Melee
 {
@@ -19,7 +18,7 @@ namespace Xenon.Content.Items.Weapons.Melee
         public override void SetDefaults()
         {
             // Common Properties
-            Item.rare = 2;
+            Item.rare = ItemRarityID.Green;
             Item.value = Item.sellPrice(silver: 50); // The number and type of coins item can be sold for to an NPC
             Item.value = Item.sellPrice(gold: 1);
 

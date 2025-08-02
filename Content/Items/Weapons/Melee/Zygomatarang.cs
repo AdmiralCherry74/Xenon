@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee;
@@ -29,10 +28,10 @@ public class Zygomatarang : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe Ti = CreateRecipe();
-        Ti.AddIngredient(ItemID.CrimtaneBar, 8);
-        Ti.AddIngredient(ItemID.TissueSample, 2);
-        Ti.AddTile(TileID.Anvils);
-        Ti.Register();
+        CreateRecipe()
+            .AddIngredient(ItemID.CrimtaneBar, 8)
+            .AddIngredient(ItemID.TissueSample, 2)
+            .AddTile(TileID.Anvils)
+            .Register();
     }
 }

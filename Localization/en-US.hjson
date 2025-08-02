@@ -606,9 +606,9 @@ Mods: {
 			CorrodedCultist.DisplayName: Corroded Cultist
 			CorruptCultist.DisplayName: Corrupt Cultist
 			Gastritis.DisplayName: Gastritis
-			CapillarieHead.DisplayName: Capillarie Head
-			CapillarieBody.DisplayName: Capillarie Body
-			CapillarieTail.DisplayName: Capillarie Tail
+			CapillarieHead.DisplayName: Capillary
+			CapillarieBody.DisplayName: Capillary
+			CapillarieTail.DisplayName: Capillary
 		}
 
 		Tiles: {

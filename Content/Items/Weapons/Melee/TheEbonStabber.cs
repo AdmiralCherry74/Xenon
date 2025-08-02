@@ -59,11 +59,11 @@ namespace Xenon.Content.Items.Weapons.Melee
         }
         public override void AddRecipes()
         {
-            Recipe Ti = CreateRecipe();
-            Ti.AddIngredient(ItemID.DemoniteBar, 12);
-            Ti.AddIngredient(ItemID.ShadowScale, 6);
-            Ti.AddTile(TileID.Anvils);
-            Ti.Register();
+            CreateRecipe()
+                .AddIngredient(ItemID.DemoniteBar, 12)
+                .AddIngredient(ItemID.ShadowScale, 6)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

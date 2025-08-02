@@ -28,10 +28,10 @@ public class Depraverang : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe Ti = CreateRecipe();
-        Ti.AddIngredient(ItemID.DemoniteBar, 8);
-        Ti.AddIngredient(ItemID.ShadowScale, 2);
-        Ti.AddTile(TileID.Anvils);
-        Ti.Register();
+        CreateRecipe()
+            .AddIngredient(ItemID.DemoniteBar, 8)
+            .AddIngredient(ItemID.ShadowScale, 2)
+            .AddTile(TileID.Anvils)
+            .Register();
     }
 }

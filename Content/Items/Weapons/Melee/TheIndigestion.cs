@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
@@ -26,7 +24,7 @@ public class TheIndigestion : ModItem
 
         Item.value = Item.sellPrice(silver: 27);
         Item.UseSound = SoundID.Item1;
-        Item.rare = 2;
+        Item.rare = ItemRarityID.Green;
     }
     public override void AddRecipes()
     {
