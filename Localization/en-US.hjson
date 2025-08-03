@@ -2,11 +2,13 @@ Mods: {
 	BiomeTitles.Title.Xenon.Rhyolite: Rhyolite Cave
 
 	Xenon: {
-		QuestFish.Giardia: {
-			Description: Placeholder
-			CatchLocation: Corrosion
+		QuestFish: {
+			Giardia: {
+				Description: Placeholder
+				CatchLocation: Corrosion
+			}
 		}
-		
+
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
@@ -576,6 +578,26 @@ Mods: {
 				DisplayName: Zygomatarang
 				Tooltip: ""
 			}
+
+			Corrodoras: {
+				DisplayName: Corrodoras
+				Tooltip: ""
+			}
+
+			Giardia: {
+				DisplayName: Giardia
+				Tooltip: ""
+			}
+
+			Liverwort: {
+				DisplayName: Liverwort
+				Tooltip: ""
+			}
+
+			LiverwortSeeds: {
+				DisplayName: Liverwort Seeds
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -621,6 +643,7 @@ Mods: {
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
 			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
+			Liverwort.MapEntry: Mods.Xenon.Tiles.Liverwort.MapEntry
 		}
 
 		Bestiary: {
