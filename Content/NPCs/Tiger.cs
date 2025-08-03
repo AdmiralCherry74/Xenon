@@ -9,11 +9,11 @@ using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.NPCs
 {
-    public class Evphila : ModNPC
+    public class Tiger : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Wolf];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -24,27 +24,28 @@ namespace Xenon.Content.NPCs
 
         public override void SetDefaults()
         {
-            NPC.width = 55;
-            NPC.height = 28;
-            NPC.damage = 20;
-            NPC.defense = 10;
-            NPC.lifeMax = 90;
+            NPC.width = 32;
+            NPC.height = 44;
+            NPC.damage = 31;
+            NPC.defense = 4;
+            NPC.lifeMax = 125;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 1000;
-            NPC.knockBackResist = 0.75f;
-            NPC.aiStyle = 3; 
+            NPC.value = 2000;
+            NPC.knockBackResist = 0.3f;
+            NPC.aiStyle = 26; 
             
-            AIType = NPCID.WallCreeper;
-            AnimationType = NPCID.WallCreeper;
+            AIType = NPCID.Wolf;
+            AnimationType = NPCID.Wolf;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Tiger")),
             ]);
         }
 
@@ -64,11 +65,11 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2)
+            if (spawnInfo.Player.ZoneJungle)
 
                 {
                     {
-                    return SpawnCondition.Corruption.Chance * 0.5f;
+                    return SpawnCondition.OverworldNightMonster.Chance * 0.09f;
 
                     }
             }
@@ -96,8 +97,7 @@ namespace Xenon.Content.NPCs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.MudBlock, 5, 10, 20));
         }
     }
 }

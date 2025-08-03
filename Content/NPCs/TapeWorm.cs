@@ -55,7 +55,7 @@ public class TapeWormHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && !spawnInfo.Player.InPillarZone())
+        if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
             return 0.050f;
         return 0;
     }
@@ -93,6 +93,7 @@ public class TapeWormHead : WormHead
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 2));
+        npcLoot.Add(ItemDropRule.Common(ItemID.WormTooth, 1, 3, 8));
     }
     public class TapeWormBody : WormBody
     {

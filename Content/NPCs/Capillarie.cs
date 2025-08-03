@@ -57,13 +57,9 @@ public class CapillarieHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.ZoneCrimson)
-
+        if (spawnInfo.Player.ZoneCrimson && NPC.downedBoss2)
         {
-            {
                 return SpawnCondition.Crimson.Chance * 0.050f;
-
-            }
         }
         return 0f;
     }
@@ -101,6 +97,7 @@ public class CapillarieHead : WormHead
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
         npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 2));
+        npcLoot.Add(ItemDropRule.Common(ItemID.WormTooth, 1, 3, 8));
     }
     public class CapillarieBody : WormBody
     {

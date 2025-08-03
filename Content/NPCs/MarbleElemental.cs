@@ -9,11 +9,11 @@ using Terraria.ModLoader.Utilities;
 
 namespace Xenon.Content.NPCs
 {
-    public class Evphila : ModNPC
+    public class MarbleElemental : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.GraniteFlyer];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -24,27 +24,32 @@ namespace Xenon.Content.NPCs
 
         public override void SetDefaults()
         {
-            NPC.width = 55;
-            NPC.height = 28;
+            NPC.width = 20;
+            NPC.height = 31;
             NPC.damage = 20;
             NPC.defense = 10;
-            NPC.lifeMax = 90;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.lifeMax = 60;
+            NPC.HitSound = SoundID.NPCHit7;
+            NPC.DeathSound = SoundID.NPCDeath6;
             NPC.value = 1000;
-            NPC.knockBackResist = 0.75f;
-            NPC.aiStyle = 3; 
-            
-            AIType = NPCID.WallCreeper;
-            AnimationType = NPCID.WallCreeper;
+            NPC.knockBackResist = 0.3f;
+            Main.npcFrameCount[NPC.type] = 22;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Confused] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.OnFire] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.OnFire3] = true;
+
+            NPC.aiStyle = 91;
+            AIType = NPCID.GraniteFlyer;
+            AnimationType = NPCID.GraniteFlyer;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.MarbleElemental")),
             ]);
         }
 
@@ -64,11 +69,11 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2)
+            if (spawnInfo.Player.ZoneMarble && !NPC.AnyNPCs(Type))
 
                 {
                     {
-                    return SpawnCondition.Corruption.Chance * 0.5f;
+                    return SpawnCondition.Underground.Chance * 0.75f;
 
                     }
             }
@@ -96,8 +101,10 @@ namespace Xenon.Content.NPCs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Pizza, 98, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.MarbleBlock, 1, 5, 10));
+            npcLoot.Add(ItemDropRule.Common(ItemID.MiningHelmet, 97, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Geode, 95, 1, 1));
         }
     }
 }

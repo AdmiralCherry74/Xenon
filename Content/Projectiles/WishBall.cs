@@ -7,13 +7,12 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Projectiles
 {
-    public class CorrodedBall : ModProjectile
+    public class WishBall : ModProjectile
     {
-        private const string ChainTexturePath = "Xenon/Content/Projectiles/CorrodedBall_Chain"; // The folder path to the flail chain sprite
+        private const string ChainTexturePath = "Xenon/Content/Projectiles/WishBallChain"; // The folder path to the flail chain sprite
 
         private static Asset<Texture2D> chainTexture;
 
@@ -284,7 +283,7 @@ namespace Xenon.Content.Projectiles
                 dustRate = 1;
 
             if (Main.rand.NextBool(dustRate))
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<CorrosionDust>());
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.YellowStarDust);
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)
