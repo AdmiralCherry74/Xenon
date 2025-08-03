@@ -1,9 +1,5 @@
 ﻿using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile;
-using Xenon.Content.Rarities;
-using Xenon.Content.Tiles;
 
 namespace Xenon.Content.Items.Materials;
 

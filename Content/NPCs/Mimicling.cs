@@ -9,6 +9,7 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.GlugGlugs;
+using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Weapons.Melee;
 
 namespace Xenon.Content.NPCs
@@ -41,7 +42,9 @@ namespace Xenon.Content.NPCs
 
             AIType = NPCID.Mimic;
             AnimationType = NPCID.IceMimic;
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<MimiclingBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

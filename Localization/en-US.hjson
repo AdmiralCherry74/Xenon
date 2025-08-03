@@ -589,26 +589,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Corrodoras: {
-				DisplayName: Corrodoras
-				Tooltip: ""
-			}
-
-			Giardia: {
-				DisplayName: Giardia
-				Tooltip: ""
-			}
-
-			Liverwort: {
-				DisplayName: Liverwort
-				Tooltip: ""
-			}
-
-			LiverwortSeeds: {
-				DisplayName: Liverwort Seeds
-				Tooltip: ""
-			}
-
 			MAC10: {
 				DisplayName: M A C10
 				Tooltip: ""
@@ -623,7 +603,6 @@ Mods: {
 				DisplayName: Wishing Star
 				Tooltip: ""
 			}
-		}
 
 			Liverwort: {
 				DisplayName: Liverwort
@@ -632,6 +611,91 @@ Mods: {
 
 			LiverwortSeeds: {
 				DisplayName: Liverwort Seeds
+				Tooltip: ""
+			}
+
+			BanditBanner: {
+				DisplayName: Bandit Banner
+				Tooltip: ""
+			}
+
+			BanditLooterBanner: {
+				DisplayName: Bandit Looter Banner
+				Tooltip: ""
+			}
+
+			CapillaryBanner: {
+				DisplayName: Capillary Banner
+				Tooltip: ""
+			}
+
+			CorrodedCultistBanner: {
+				DisplayName: Corroded Cultist Banner
+				Tooltip: ""
+			}
+
+			CorruptCultistBanner: {
+				DisplayName: Corrupt Cultist Banner
+				Tooltip: ""
+			}
+
+			CrimsonCultistBanner: {
+				DisplayName: Crimson Cultist Banner
+				Tooltip: ""
+			}
+
+			EvphilaBanner: {
+				DisplayName: Evphila Banner
+				Tooltip: ""
+			}
+
+			GastritisBanner: {
+				DisplayName: Gastritis Banner
+				Tooltip: ""
+			}
+
+			HalfDigestedBanner: {
+				DisplayName: Half Digested Banner
+				Tooltip: ""
+			}
+
+			HauntedArmorBanner: {
+				DisplayName: Haunted Armor Banner
+				Tooltip: ""
+			}
+
+			MarbleElementalBanner: {
+				DisplayName: Marble Elemental Banner
+				Tooltip: ""
+			}
+
+			MimiclingBanner: {
+				DisplayName: Mimicling Banner
+				Tooltip: ""
+			}
+
+			NightWalkerBanner: {
+				DisplayName: Night Walker Banner
+				Tooltip: ""
+			}
+
+			SnowLeopardBanner: {
+				DisplayName: Snow Leopard Banner
+				Tooltip: ""
+			}
+
+			SporeSlimeBanner: {
+				DisplayName: Spore Slime Banner
+				Tooltip: ""
+			}
+
+			StomachBugBanner: {
+				DisplayName: Stomach Bug Banner
+				Tooltip: ""
+			}
+
+			TapeWormBanner: {
+				DisplayName: Tape Worm Banner
 				Tooltip: ""
 			}
 		}
@@ -674,7 +738,6 @@ Mods: {
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
 			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
-			Liverwort.MapEntry: Mods.Xenon.Tiles.Liverwort.MapEntry
 			Liverwort.MapEntry: Liverwort
 		}
 

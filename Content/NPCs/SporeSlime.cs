@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -34,9 +35,10 @@ namespace Xenon.Content.NPCs
             NPC.value = 30;
             NPC.knockBackResist = 0.5f;
             NPC.aiStyle = NPCAIStyleID.Slime;
-
             AnimationType = NPCID.BlueSlime;
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
