@@ -50,7 +50,7 @@ namespace Xenon.Content.NPCs
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Oasis,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorrodedCultist")),
             ]);
         }
@@ -73,7 +73,7 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && NPC.downedBoss1 && !spawnInfo.Player.InPillarZone())
                 return 0.05f;
             return 0;
         }

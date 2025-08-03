@@ -73,7 +73,7 @@ namespace Xenon.Content.NPCs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneCorrupt)
+            if (spawnInfo.Player.ZoneCorrupt && NPC.downedBoss1)
 
                 {
                     {

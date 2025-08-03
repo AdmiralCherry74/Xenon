@@ -62,7 +62,7 @@ public class NightmareWalker : ModNPC
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.ZoneCorrupt)
+        if (spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2)
         {
             return SpawnCondition.Corruption.Chance * 0.5f;
         }

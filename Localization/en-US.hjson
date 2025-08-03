@@ -589,6 +589,42 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Corrodoras: {
+				DisplayName: Corrodoras
+				Tooltip: ""
+			}
+
+			Giardia: {
+				DisplayName: Giardia
+				Tooltip: ""
+			}
+
+			Liverwort: {
+				DisplayName: Liverwort
+				Tooltip: ""
+			}
+
+			LiverwortSeeds: {
+				DisplayName: Liverwort Seeds
+				Tooltip: ""
+			}
+
+			MAC10: {
+				DisplayName: M A C10
+				Tooltip: ""
+			}
+
+			TheYeti: {
+				DisplayName: The Yeti
+				Tooltip: ""
+			}
+
+			WishingStar: {
+				DisplayName: Wishing Star
+				Tooltip: ""
+			}
+		}
+
 			Liverwort: {
 				DisplayName: Liverwort
 				Tooltip: ""
@@ -616,16 +652,9 @@ Mods: {
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
 			TempleSentry.DisplayName: Temple Sentry
-			Irritshits.DisplayName: Gastritis
 			NEWORIGINALFUNNY.DisplayName: N E W O R I G I N A L F U N N Y
-			FATWORMHead.DisplayName: F A T W O R M
-			FATWORMBody.DisplayName: F A T W O R M
-			FATWORMTail.DisplayName: F A T W O R M
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
-			BloodWormHead.DisplayName: Blood Worm
-			BloodWormBody.DisplayName: Blood Worm
-			BloodWormTail.DisplayName: Blood Worm
 			TapeWormHead.DisplayName: Tape Worm
 			TapeWormBody.DisplayName: Tape Worm
 			TapeWormTail.DisplayName: Tape Worm
@@ -636,6 +665,8 @@ Mods: {
 			CapillarieHead.DisplayName: Capillary
 			CapillarieBody.DisplayName: Capillary
 			CapillarieTail.DisplayName: Capillary
+			MarbleElemental.DisplayName: Marble Elemental
+			Tiger.DisplayName: Tiger
 		}
 
 		Tiles: {
@@ -644,6 +675,7 @@ Mods: {
 			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
 			Liverwort.MapEntry: Mods.Xenon.Tiles.Liverwort.MapEntry
+			Liverwort.MapEntry: Liverwort
 		}
 
 		Bestiary: {
@@ -663,9 +695,11 @@ Mods: {
 			Gastritis: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
 			Evphila: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully, they can't fly.
 			Capillarie: Aggressive crimified worms that tunnel fast. They are extremely small and frail; however, they compensate with their surprising lethality.
-			TapeWorm: A class of parasitic worms that have adapted to go unnoticed by the Corrosion. They are sluggish, big and extremely defensive
+			TapeWorm: A class of parasitic worms that have adapted to go unnoticed by the Corrosion. other than that, they are quite weak however they can withstand plenty.
 			CorruptCultist: An unfortunate soul whose intent turned evil. They may be one of the most sadistic beings out there.
-			CorrodedCultist: No one knows why they worship what's essentially a digestive evil. They are as deadly as any other magical cult member.
+			CorrodedCultist: No one knows why they worship what's essentially a digestive evil, however they're as deadly as any other mysterious cult member.
+			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until its dead.
+			MarbleElemental: Earth elementals manifest through many forms by taking on the properties of different materials, such as this sturdy marble.
 		}
 
 		Biomes: {
@@ -698,21 +732,22 @@ Mods: {
 		Projectiles: {
 			EbonStabberProj.DisplayName: Ebon Stabber
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
-			RayExplosion.DisplayName: Ray Explosion
-			RayProj.DisplayName: Ray
+			RayExplosion.DisplayName: Ray Cannon
+			RayProj.DisplayName: Ray Cannon
 			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Block
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun
 			CorrosionSpray.DisplayName: Corrosion Spray
-			CorrodeBoomerang.DisplayName: Corrode Boomerang
 			RHSProj.DisplayName: Rubber Handle Sword
 			RottingLeftovers.DisplayName: Rotting Leftovers
 			PhlegmarangProjectile.DisplayName: Phlegmarang
 			SewerFuryBall.DisplayName: Sewer Fury
 			DampYoYoProj.DisplayName: Damp
-			CorrodedBall.DisplayName: Corroded Ball
-			DepraverangProjectile.DisplayName: Depraverang Projectile
-			ToothpickProj.DisplayName: Toothpick Proj
-			ZygomatarangProjectile.DisplayName: Zygomatarang Projectile
+			CorrodedBall.DisplayName: Nausea Cudgel
+			DepraverangProjectile.DisplayName: Depraverang
+			ToothpickProj.DisplayName: Toothpick
+			ZygomatarangProjectile.DisplayName: Zygomatarang
+			WishBall.DisplayName: Wishing Star
+			YetiYoYoProj.DisplayName: Yeti
 		}
 
 		Buffs: {
