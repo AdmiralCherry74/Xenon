@@ -7,6 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.NPCs
 {
