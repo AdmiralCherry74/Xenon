@@ -7,10 +7,10 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Audio;
 using Terraria.Chat;
-using Xenon.Content.Items.Weapons.Melee;
 using Xenon.Content.Items.Accessories;
-using Xenon.Content.Items.Weapons.Ranged;
-using Xenon.Content.Items.Weapons.Magic;
+using Xenon.Content.Items.Weapons.Melee.Boomerangs;
+using Xenon.Content.Items.Weapons.Magic.Staves;
+using Xenon.Content.Items.Weapons.Ranged.Arms;
 
 namespace Xenon.Content.Tiles.Corrosion;
 

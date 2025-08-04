@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.NPCs
 {
@@ -91,8 +92,7 @@ namespace Xenon.Content.NPCs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
         }
     }
 }

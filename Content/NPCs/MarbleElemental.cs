@@ -102,7 +102,7 @@ namespace Xenon.Content.NPCs
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ItemID.Pizza, 98, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.MarbleBlock, 1, 5, 10));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Marble, 1, 5, 10));
             npcLoot.Add(ItemDropRule.Common(ItemID.MiningHelmet, 97, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Geode, 95, 1, 1));
         }

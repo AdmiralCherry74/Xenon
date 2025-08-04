@@ -52,7 +52,7 @@ public class CapillarieHead : WormHead
     {
         bestiaryEntry.Info.AddRange(
         [
-            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.BloodWorm"))
+            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Capillarie"))
         ]);
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)

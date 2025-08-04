@@ -9,7 +9,7 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.GlugGlugs;
-using Xenon.Content.Items.Weapons.Melee;
+using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Content.NPCs
 {

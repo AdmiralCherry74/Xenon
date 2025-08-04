@@ -51,6 +51,10 @@
 	<ItemGroup>
 	  <Folder Include="Content\Buffs\Pets\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
+	  <Folder Include="Content\Items\Weapons\Magic\MagicItems\" />
+	  <Folder Include="Content\Items\Weapons\Magic\SpellBooks\" />
+	  <Folder Include="Content\Items\Weapons\Ranged\Darts\" />
+	  <Folder Include="Content\Items\Weapons\Ranged\Throwing\" />
 	  <Folder Include="Content\NPCs\Template\" />
 	  <Folder Include="Content\Projectiles\Pets\" />
 	</ItemGroup>

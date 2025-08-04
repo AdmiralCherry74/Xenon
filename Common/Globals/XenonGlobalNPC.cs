@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using Terraria;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
+using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.NPCs;
 
 namespace Xenon.Common.Globals;
@@ -31,6 +33,24 @@ internal class XenonGlobalNPC : GlobalNPC
 			//		pool.Add(ModContent.NPCType<PLACEHOLDER_5>(), 1f);
 			//	}
 			//}
+		}
+	}
+	public class DamageOverTimeGlobalNPC : GlobalNPC
+	{
+		public override bool InstancePerEntity => true;
+		public bool Cleaved;
+
+		public override void ResetEffects(NPC npc)
+		{
+			Cleaved = false;
+		}
+
+		public override void UpdateLifeRegen(NPC npc, ref int damage)
+		{
+			if (npc.HasBuff<Cleaved>())
+			{
+				npc.lifeRegen -= 4;
+			}
 		}
 	}
 }
