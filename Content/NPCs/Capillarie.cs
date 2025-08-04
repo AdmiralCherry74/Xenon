@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.NPCs.Template;
@@ -47,7 +48,9 @@ public class CapillarieHead : WormHead
         NPC.knockBackResist = 0f;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
-    }
+		Banner = NPC.type;
+		BannerItem = ModContent.ItemType<CapillaryBanner>();
+	}
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(

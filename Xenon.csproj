@@ -50,6 +50,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Content\Buffs\Pets\" />
+	  <Folder Include="Content\Items\Fish\" />
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\Items\Weapons\Magic\MagicItems\" />
 	  <Folder Include="Content\Items\Weapons\Magic\SpellBooks\" />

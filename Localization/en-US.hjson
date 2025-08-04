@@ -589,16 +589,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Liverwort: {
-				DisplayName: Liverwort
-				Tooltip: ""
-			}
-
-			LiverwortSeeds: {
-				DisplayName: Liverwort Seeds
-				Tooltip: ""
-			}
-
 			MAC10: {
 				DisplayName: MAC-10
 				Tooltip: Fires a powerful high velocity bullet
@@ -652,6 +642,101 @@ Mods: {
 			TungstenBattleaxe: {
 				DisplayName: Tungsten Battle Axe
 				Tooltip: Inflicts a cleaving effect to enemies
+			}
+
+			Liverwort: {
+				DisplayName: Liverwort
+				Tooltip: ""
+			}
+
+			LiverwortSeeds: {
+				DisplayName: Liverwort Seeds
+				Tooltip: ""
+			}
+
+			BanditBanner: {
+				DisplayName: Bandit Banner
+				Tooltip: ""
+			}
+
+			BanditLooterBanner: {
+				DisplayName: Bandit Looter Banner
+				Tooltip: ""
+			}
+
+			CapillaryBanner: {
+				DisplayName: Capillary Banner
+				Tooltip: ""
+			}
+
+			CorrodedCultistBanner: {
+				DisplayName: Corroded Cultist Banner
+				Tooltip: ""
+			}
+
+			CorruptCultistBanner: {
+				DisplayName: Corrupt Cultist Banner
+				Tooltip: ""
+			}
+
+			CrimsonCultistBanner: {
+				DisplayName: Crimson Cultist Banner
+				Tooltip: ""
+			}
+
+			EvphilaBanner: {
+				DisplayName: Evphila Banner
+				Tooltip: ""
+			}
+
+			GastritisBanner: {
+				DisplayName: Gastritis Banner
+				Tooltip: ""
+			}
+
+			HalfDigestedBanner: {
+				DisplayName: Half Digested Banner
+				Tooltip: ""
+			}
+
+			HauntedArmorBanner: {
+				DisplayName: Haunted Armor Banner
+				Tooltip: ""
+			}
+
+			MarbleElementalBanner: {
+				DisplayName: Marble Elemental Banner
+				Tooltip: ""
+			}
+
+			MimiclingBanner: {
+				DisplayName: Mimicling Banner
+				Tooltip: ""
+			}
+
+			NightWalkerBanner: {
+				DisplayName: Night Walker Banner
+				Tooltip: ""
+			}
+
+			SnowLeopardBanner: {
+				DisplayName: Snow Leopard Banner
+				Tooltip: ""
+			}
+
+			SporeSlimeBanner: {
+				DisplayName: Spore Slime Banner
+				Tooltip: ""
+			}
+
+			StomachBugBanner: {
+				DisplayName: Stomach Bug Banner
+				Tooltip: ""
+			}
+
+			TapeWormBanner: {
+				DisplayName: Tape Worm Banner
+				Tooltip: ""
 			}
 		}
 

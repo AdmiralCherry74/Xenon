@@ -7,6 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -38,7 +39,9 @@ namespace Xenon.Content.NPCs
             
             AIType = NPCID.ZombieMushroomHat;
             AnimationType = NPCID.PirateCorsair;
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<HalfDigestedBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

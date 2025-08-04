@@ -7,7 +7,6 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Xenon.Content.NPCs;
 using static Terraria.GameContent.Drawing.TileDrawing;
 
 namespace Xenon.Content.Tiles;
@@ -60,7 +59,58 @@ public class MonsterBanner : ModTile
                 case 1:
                     t = ModContent.NPCType<LavaWormHead>();
                     break;
-                default:
+				case 2:
+					t = ModContent.NPCType<Bandit>();
+					break;
+				case 3:
+					t = ModContent.NPCType<BanditLooter>();
+					break;
+				case 4:
+					t = ModContent.NPCType<CapillarieHead>();
+					break;
+				case 5:
+					t = ModContent.NPCType<CorrodedCultist>();
+					break;
+				case 6:
+					t = ModContent.NPCType<CorruptCultist>();
+					break;
+				case 7:
+					t = ModContent.NPCType<CrimsonCultist>();
+					break;
+				case 8:
+					t = ModContent.NPCType<Evphila>();
+					break;
+				case 9:
+					t = ModContent.NPCType<Gastritis>();
+					break;
+				case 10:
+					t = ModContent.NPCType<HalfDigested>();
+					break;
+				case 11:
+					t = ModContent.NPCType<HauntedArmor>();
+					break;
+				case 12:
+					t = ModContent.NPCType<MarbleElemental>();
+					break;
+				case 13:
+					t = ModContent.NPCType<Mimicling>();
+					break;
+				case 14:
+					t = ModContent.NPCType<NightmareWalker>();
+					break;
+				case 15:
+					t = ModContent.NPCType<SnowLeopard>();
+					break;
+				case 17:
+					t = ModContent.NPCType<SporeSlime>();
+					break;
+				case 18:
+					t = ModContent.NPCType<StomachBug>();
+					break;
+				case 19:
+					t = ModContent.NPCType<TapeWormHead>();
+					break;
+				default:
                     t = 0;
                     return;
             }

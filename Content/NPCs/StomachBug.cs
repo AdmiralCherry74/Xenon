@@ -7,6 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -35,10 +36,11 @@ namespace Xenon.Content.NPCs
             NPC.value = 1000;
             NPC.knockBackResist = 0.20f;
             NPC.aiStyle = 3; 
-            
             AIType = NPCID.WallCreeper;
             AnimationType = NPCID.WallCreeper;
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<StomachBugBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

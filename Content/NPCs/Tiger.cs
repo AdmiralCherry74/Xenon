@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -34,10 +35,11 @@ namespace Xenon.Content.NPCs
             NPC.value = 2000;
             NPC.knockBackResist = 0.3f;
             NPC.aiStyle = 26; 
-            
             AIType = NPCID.Wolf;
             AnimationType = NPCID.Wolf;
-        }
+			//Banner = NPC.type;
+			//BannerItem = ModContent.ItemType<TigerBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

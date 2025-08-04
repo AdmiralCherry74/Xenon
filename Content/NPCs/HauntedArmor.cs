@@ -13,6 +13,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.ModLoader.Utilities;
 using Terraria.Localization;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -44,7 +45,9 @@ namespace Xenon.Content.NPCs
             
             AIType = NPCID.PossessedArmor;
             AnimationType = NPCID.PossessedArmor;
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<HauntedArmorBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

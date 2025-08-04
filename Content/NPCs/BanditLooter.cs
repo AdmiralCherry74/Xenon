@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Terraria.Audio;
 using Terraria.Localization;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs
 {
@@ -38,8 +39,9 @@ namespace Xenon.Content.NPCs
             NPC.aiStyle = -1;
 
             AnimationType = NPCID.BoneThrowingSkeleton;
-            
-        }
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<BanditLooterBanner>();
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

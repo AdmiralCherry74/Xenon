@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs;
 
@@ -36,7 +37,9 @@ public class NightmareWalker : ModNPC
         NPC.aiStyle = 3; 
         AIType = NPCID.WalkingAntlion;
         AnimationType = NPCID.BloodZombie;
-    }
+		Banner = NPC.type;
+		BannerItem = ModContent.ItemType<NightWalkerBanner>();
+	}
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {

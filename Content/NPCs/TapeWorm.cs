@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Placeable.Banner;
 using Xenon.NPCs.Template;
 using static Xenon.Content.NPCs.TapeWormHead.TapeWormBody;
 
@@ -45,7 +46,9 @@ public class TapeWormHead : WormHead
         NPC.knockBackResist = 0f;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
-    }
+		Banner = NPC.type;
+		BannerItem = ModContent.ItemType<TapeWormBanner>();
+	}
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(

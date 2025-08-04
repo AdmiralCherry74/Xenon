@@ -34,7 +34,6 @@ namespace Xenon.Content.NPCs
             NPC.value = 1000;
             NPC.knockBackResist = 0f;
             NPC.aiStyle = 3; 
-            
             AIType = NPCID.FaceMonster;
             AnimationType = NPCID.MourningWood;
         }
@@ -65,12 +64,8 @@ namespace Xenon.Content.NPCs
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             if (spawnInfo.Player.ZoneCorrupt)
-
             {
-                {
-                    return SpawnCondition.OverworldHallow.Chance * 0f;
-
-                }
+                return SpawnCondition.OverworldHallow.Chance * 0f;
             }
             return 0f;
         }
