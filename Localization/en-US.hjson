@@ -591,7 +591,7 @@ Mods: {
 
 			MAC10: {
 				DisplayName: MAC-10
-				Tooltip: Fires a powerful high velocity bullet
+				Tooltip: Fires a powerful, high-velocity bullet
 			}
 
 			TheYeti: {
@@ -601,47 +601,47 @@ Mods: {
 
 			WishingStar: {
 				DisplayName: Wishing Star
-				Tooltip: "'If wishes were fishes and soup bowls were dishes, i'd make something delicious for you'"
+				Tooltip: "'If wishes were fishes and soup bowls were dishes, I'd make something delicious for you'"
 			}
 
 			CopperBattleaxe: {
 				DisplayName: Copper Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			GoldBattleaxe: {
 				DisplayName: Gold Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			IronBattleaxe: {
 				DisplayName: Iron Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			LeadBattleaxe: {
 				DisplayName: Lead Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			PlatinumBattleaxe: {
 				DisplayName: Platinum Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			SilverBattleaxe: {
 				DisplayName: Silver Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			TinBattleaxe: {
 				DisplayName: Tin Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			TungstenBattleaxe: {
 				DisplayName: Tungsten Battle Axe
-				Tooltip: Inflicts a cleaving effect to enemies
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			Liverwort: {
