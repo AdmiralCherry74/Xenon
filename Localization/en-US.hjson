@@ -63,7 +63,7 @@ Mods: {
 
 			WoolBlock: {
 				DisplayName: Wool
-				Tooltip: A softer tile weaved from cobwebs, can be used as decoration and also painted with deep paints for different colors
+				Tooltip: A softer tile weaved from cobwebs
 			}
 
 			Pouch: {
@@ -738,6 +738,116 @@ Mods: {
 				DisplayName: Tape Worm Banner
 				Tooltip: ""
 			}
+
+			LesserRestoPotion: {
+				DisplayName: Lesser Resto Potion
+				Tooltip: "'Reduced Cooldown'"
+			}
+
+			BilewoodBathtub: {
+				DisplayName: Bilewood Bathtub
+				Tooltip: ""
+			}
+
+			BilewoodBed: {
+				DisplayName: Bilewood Bed
+				Tooltip: ""
+			}
+
+			BilewoodBookcase: {
+				DisplayName: Bilewood Bookcase
+				Tooltip: ""
+			}
+
+			BilewoodCandelabra: {
+				DisplayName: Bilewood Candelabra
+				Tooltip: ""
+			}
+
+			BilewoodCandle: {
+				DisplayName: Bilewood Candle
+				Tooltip: ""
+			}
+
+			BilewoodChair: {
+				DisplayName: Bilewood Chair
+				Tooltip: ""
+			}
+
+			BilewoodChandelier: {
+				DisplayName: Bilewood Chandelier
+				Tooltip: ""
+			}
+
+			BilewoodChest: {
+				DisplayName: Bilewood Chest
+				Tooltip: ""
+			}
+
+			BilewoodClock: {
+				DisplayName: Bilewood Clock
+				Tooltip: ""
+			}
+
+			BilewoodDoor: {
+				DisplayName: Bilewood Door
+				Tooltip: ""
+			}
+
+			BilewoodDresser: {
+				DisplayName: Bilewood Dresser
+				Tooltip: ""
+			}
+
+			BilewoodLamp: {
+				DisplayName: Bilewood Lamp
+				Tooltip: ""
+			}
+
+			BilewoodLantern: {
+				DisplayName: Bilewood Lantern
+				Tooltip: ""
+			}
+
+			BilewoodPiano: {
+				DisplayName: Bilewood Piano
+				Tooltip: ""
+			}
+
+			BilewoodPlatform: {
+				DisplayName: Bilewood Platform
+				Tooltip: ""
+			}
+
+			BilewoodSink: {
+				DisplayName: Bilewood Sink
+				Tooltip: ""
+			}
+
+			BilewoodSofa: {
+				DisplayName: Bilewood Sofa
+				Tooltip: ""
+			}
+
+			BilewoodTable: {
+				DisplayName: Bilewood Table
+				Tooltip: ""
+			}
+
+			BilewoodToilet: {
+				DisplayName: Bilewood Toilet
+				Tooltip: ""
+			}
+
+			BilewoodWorkBench: {
+				DisplayName: Bilewood Work Bench
+				Tooltip: ""
+			}
+
+			TNTore: {
+				DisplayName: Trinitrotoluene Ore
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -779,6 +889,8 @@ Mods: {
 			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
 			Liverwort.MapEntry: Liverwort
+			BilewoodChest.MapEntry0: Bilewood Chest
+			BilewoodDresser.MapEntry: Bilewood Dresser
 		}
 
 		Bestiary: {
@@ -891,7 +1003,7 @@ Mods: {
 
 			Cleaved: {
 				DisplayName: Cleaved
-				Description: Bleeding inflicted by a waraxe
+				Description: Severe blood loss inflicted by a waraxe
 			}
 		}
 	}
