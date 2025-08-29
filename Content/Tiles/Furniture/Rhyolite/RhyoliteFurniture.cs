@@ -355,7 +355,7 @@ public class RhyoliteLamp : LampTemplate
 
 public class RhyoliteLantern : LanternTemplate
 {
-	public override bool HasFlame => false;
+	public override bool HasFlameTexture => false;
 	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteLantern>();
 	public List<Point> Coordinates = new List<Point>();
 	private static Asset<Texture2D>? flameTexture;
@@ -363,7 +363,7 @@ public class RhyoliteLantern : LanternTemplate
 	{
 		base.SetStaticDefaults();
 		Coordinates = new();
-		flameTexture = HasFlame ? ModContent.Request<Texture2D>(Texture + "_Flame") : null;
+		flameTexture = HasFlameTexture ? ModContent.Request<Texture2D>(Texture + "_Flame") : null;
 	}
 	public override void KillMultiTile(int i, int j, int frameX, int frameY)
 	{
@@ -475,7 +475,7 @@ public class RhyoliteLantern : LanternTemplate
 					float rotation = windCycle * num2 * num7;
 					Main.spriteBatch.Draw(tileDrawTexture, vector6, (Rectangle?)rectangle, tileLight, rotation, vector5, 1f, tileSpriteEffect, 0f);
 
-					if (HasFlame)
+					if (HasFlameTexture)
 					{
 						for (int q = 0; q < 7; q++)
 						{
