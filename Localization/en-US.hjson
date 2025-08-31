@@ -846,7 +846,7 @@ Mods: {
 
 			TNTore: {
 				DisplayName: Trinitrotoluene Ore
-				Tooltip: ""
+				Tooltip: "For now, is used in Lesser Restoration Potions, this will get changed way later"
 			}
 		}
 
