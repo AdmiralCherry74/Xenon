@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles;
 
-public class RoughGrass : ModTile
+public class OvergrownTurf : ModTile
 {
     public override void SetStaticDefaults()
     {

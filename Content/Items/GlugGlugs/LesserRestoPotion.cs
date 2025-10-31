@@ -38,8 +38,8 @@ namespace Xenon.Content.Items.GlugGlugs
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.LesserManaPotion);
-            recipe.AddIngredient(ItemID.LesserHealingPotion, 4);
+            recipe.AddIngredient(ItemID.LesserManaPotion, 1);
+            recipe.AddIngredient(ItemID.LesserHealingPotion, 1);
             recipe.AddIngredient(ModContent.ItemType<Items.Placeable.Tile.TNTore>(), 1);
             recipe.AddTile(TileID.Bottles);
             recipe.Register();

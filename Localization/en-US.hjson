@@ -846,7 +846,17 @@ Mods: {
 
 			TNTore: {
 				DisplayName: Trinitrotoluene Ore
-				Tooltip: "For now, is used in Lesser Restoration Potions, this will get changed way later"
+				Tooltip: For now, is used in Lesser Restoration Potions, this will get changed way later
+			}
+
+			CoarseDirt: {
+				DisplayName: Coarse Dirt
+				Tooltip: "Dirt that cant have grass grown on it"
+			}
+
+			RoughGrass: {
+				DisplayName: Overgrown Turf
+				Tooltip: "Increases spawn rates. Cannot have plants grown on them. Cannot be Corrupted, Crimfied, Corroded, or Hallowed."
 			}
 		}
 
