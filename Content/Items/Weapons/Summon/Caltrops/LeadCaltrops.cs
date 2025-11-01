@@ -8,7 +8,7 @@ using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Summon.Caltrops;
 
-public class Caltrops : ModItem
+public class LeadCaltrops : ModItem
 {
     public override void SetDefaults()
     {
@@ -22,12 +22,12 @@ public class Caltrops : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Summon;
-        Item.damage = 1;
+        Item.damage = 2;
         Item.knockBack = 0.25f;
-        Item.crit = 0;
+        Item.crit = -4;
         Item.consumable = true;
-        Item.maxStack = 30;
-        Item.shoot = ModContent.ProjectileType<CaltropsProj>();
+        Item.maxStack = 50;
+        Item.shoot = ModContent.ProjectileType<LeadCaltropsProj>();
         Item.shootSpeed = 8f;
 
         Item.value = Item.sellPrice(silver: 27);
@@ -53,7 +53,7 @@ public class Caltrops : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(5)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 1)
+            .AddIngredient(ItemID.LeadBar, 1)
             .AddTile(TileID.Anvils)
             .Register();
     }

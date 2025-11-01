@@ -863,19 +863,45 @@ Mods: {
 				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
-			Caltrops: {
-				DisplayName: Caltrops
+			NightmareEyesPaintingItem: {
+				DisplayName: Nightmare Eyes Painting Item
+				Tooltip: ""
+			}
+
+			DebugAxe: {
+				DisplayName: Debug Axe
+				Tooltip: ""
+			}
+
+			IronCaltrops: {
+				DisplayName: Iron Caltrops
 				Tooltip:
 					'''
-					An area denial weapon designed to confuse and <apply another debuuff> to enemies
+					5 summon tag damage
 					Throw 5 caltrops with them hitting an enemy once before becoming useless
-					MAKE THIS APPLY 5 TAG DAMAGE
+					An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
 					'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
 					'''
 			}
 
-			NightmareEyesPaintingItem: {
-				DisplayName: Nightmare Eyes Painting Item
+			LeadCaltrops: {
+				DisplayName: Lead Caltrops
+				Tooltip:
+					'''
+					6 summon tag damage
+					Throw 5 caltrops with them hitting an enemy once before becoming useless
+					An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
+					'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
+					'''
+			}
+
+			TintedGlass: {
+				DisplayName: Tinted Glass
+				Tooltip: See through glass that doesnt let light through
+			}
+
+			JawSplitter: {
+				DisplayName: Jaw Splitter
 				Tooltip: ""
 			}
 		}
@@ -994,6 +1020,8 @@ Mods: {
 			WishBall.DisplayName: Wishing Star
 			YetiYoYoProj.DisplayName: Yeti
 			CaltropsProj.DisplayName: Caltrop
+			IronCaltropsProj.DisplayName: Iron Caltrops Proj
+			LeadCaltropsProj.DisplayName: Lead Caltrops Proj
 		}
 
 		Buffs: {
@@ -1035,6 +1063,26 @@ Mods: {
 			Cleaved: {
 				DisplayName: Cleaved
 				Description: Severe blood loss inflicted by a Waraxe
+			}
+
+			CaltropTagDamage: {
+				DisplayName: Caltrop Tag Damage
+				Description: Mods.Xenon.Buffs.CaltropTagDamage.Description
+			}
+
+			IronCaltropTagDamage: {
+				DisplayName: Iron Caltrop Tag Damage
+				Description: Mods.Xenon.Buffs.IronCaltropTagDamage.Description
+			}
+
+			LeadCaltropTagDamage: {
+				DisplayName: Lead Caltrop Tag Damage
+				Description: Mods.Xenon.Buffs.LeadCaltropTagDamage.Description
+			}
+
+			FlashRage: {
+				DisplayName: Flash Rage
+				Description: Mods.Xenon.Buffs.FlashRage.Description
 			}
 		}
 	}

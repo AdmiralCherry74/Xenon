@@ -1,23 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using System;
-using System.Collections.Generic;
 using Terraria;
-using Terraria.Audio;
-using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
+using Xenon.Content.Buffs.Debuffs;
 
 namespace Xenon.Content.Projectiles;
 
-public class CaltropsProj : ModProjectile
+public class LeadCaltropsProj : ModProjectile
 {
     public override void SetDefaults()
     {
         Projectile.width = 18; // The width of projectile hitbox
         Projectile.height = 15; // The height of projectile hitbox
+        Projectile.scale = 0.20f;
         Projectile.friendly = true;
         Projectile.hostile = false;
         Projectile.penetrate = -1;
@@ -26,7 +22,7 @@ public class CaltropsProj : ModProjectile
         Projectile.tileCollide = true;
         Projectile.usesLocalNPCImmunity = true;
 
-                AIType = ProjectileID.SpikyBall; // Act exactly like Spiky Ball
+        AIType = ProjectileID.SpikyBall; // Act exactly like Spiky Ball
     }
     public override void AI()
     {
@@ -53,6 +49,7 @@ public class CaltropsProj : ModProjectile
     public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
     {
         target.AddBuff(BuffID.Confused, 20);
+        target.AddBuff(ModContent.BuffType<LeadCaltropTagDamage>(), 16);
         Projectile.localNPCHitCooldown = -1; // 1 hit per npc max
     }
     public override bool OnTileCollide(Vector2 oldVelocity)
