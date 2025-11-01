@@ -445,8 +445,7 @@ Mods: {
 				DisplayName: Pain Pills
 				Tooltip:
 					'''
-					Increases maximum life by 50 for a short time
-					During this time you lose life slowly
+					Increases maximum life by 50 for a short time. During this time you lose that life slowly
 					"Ah, a little pick me up"
 					'''
 			}
@@ -471,12 +470,12 @@ Mods: {
 			}
 
 			XM8: {
-				DisplayName: XM8
+				DisplayName: M8A1
 				Tooltip:
 					'''
-					Four-round burst rifle
-					Bursts are fired in quick succession
-					'Grenade Launcher sadly not included'
+					Four-round burst rifle. Bursts can be fired in quick succession.
+					Only the first shot consumes ammo
+					'Too bad you cant find a grenade launcher attachment...'
 					'''
 			}
 
@@ -739,11 +738,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			LesserRestoPotion: {
-				DisplayName: Lesser Resto Potion
-				Tooltip: "'Reduced Cooldown'"
-			}
-
 			BilewoodBathtub: {
 				DisplayName: Bilewood Bathtub
 				Tooltip: ""
@@ -846,17 +840,43 @@ Mods: {
 
 			TNTore: {
 				DisplayName: Trinitrotoluene Ore
-				Tooltip: For now, is used in Lesser Restoration Potions, this will get changed way later
+				Tooltip: Yes
 			}
 
 			CoarseDirt: {
 				DisplayName: Coarse Dirt
-				Tooltip: "Dirt that cant have grass grown on it"
+				Tooltip: Dirt that cant have grass grown on it
 			}
 
-			RoughGrass: {
+			OvergrownTurf: {
 				DisplayName: Overgrown Turf
-				Tooltip: "Increases spawn rates. Cannot have plants grown on them. Cannot be Corrupted, Crimfied, Corroded, or Hallowed."
+				Tooltip: Increases spawn rates. Cannot have plants grown on them. Cannot be Corrupted, Crimfied, Corroded, or Hallowed.
+			}
+
+			Maxe: {
+				DisplayName: Maxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			NightGnasher: {
+				DisplayName: Night Gnasher
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			Caltrops: {
+				DisplayName: Caltrops
+				Tooltip:
+					'''
+					An area denial weapon designed to confuse and <apply another debuuff> to enemies
+					Throw 5 caltrops with them hitting an enemy once before becoming useless
+					MAKE THIS APPLY 5 TAG DAMAGE
+					'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
+					'''
+			}
+
+			NightmareEyesPaintingItem: {
+				DisplayName: Nightmare Eyes Painting Item
+				Tooltip: ""
 			}
 		}
 
@@ -973,6 +993,7 @@ Mods: {
 			ZygomatarangProjectile.DisplayName: Zygomatarang
 			WishBall.DisplayName: Wishing Star
 			YetiYoYoProj.DisplayName: Yeti
+			CaltropsProj.DisplayName: Caltrop
 		}
 
 		Buffs: {
@@ -1013,7 +1034,7 @@ Mods: {
 
 			Cleaved: {
 				DisplayName: Cleaved
-				Description: Severe blood loss inflicted by a waraxe
+				Description: Severe blood loss inflicted by a Waraxe
 			}
 		}
 	}

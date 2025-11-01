@@ -1,0 +1,30 @@
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Terraria.ObjectData;
+
+namespace Xenon.Content.Tiles.Furniture.Painting;
+
+public class NightmareEyesPainting : ModTile
+{
+    public override void SetStaticDefaults()
+    {
+        Main.tileFrameImportant[Type] = true;
+        Main.tileLavaDeath[Type] = true;
+        Main.tileSpelunker[Type] = true;
+        TileID.Sets.FramesOnKillWall[Type] = true; // Necessary since Style3x3Wall uses AnchorWall
+        TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
+        TileObjectData.newTile.CoordinateHeights = new int[]
+        {
+            16,
+            16,
+            16
+        };
+        TileObjectData.newTile.AnchorWall = true;
+        TileObjectData.addTile(Type);
+        DustType = 7;
+        TileID.Sets.DisableSmartCursor[Type] = true;
+        AddMapEntry(new Color(0, 0, 0));
+    }
+}

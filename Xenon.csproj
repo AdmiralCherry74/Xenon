@@ -8,9 +8,17 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <AdditionalFiles Remove="Content\Items\Weapons\Ranged\Darts\**" />
+	  <AdditionalFiles Remove="Content\Items\Weapons\Ranged\Throwing\**" />
 	  <AdditionalFiles Remove="Content\Tiles\Lighting\**" />
+	  <Compile Remove="Content\Items\Weapons\Ranged\Darts\**" />
+	  <Compile Remove="Content\Items\Weapons\Ranged\Throwing\**" />
 	  <Compile Remove="Content\Tiles\Lighting\**" />
+	  <EmbeddedResource Remove="Content\Items\Weapons\Ranged\Darts\**" />
+	  <EmbeddedResource Remove="Content\Items\Weapons\Ranged\Throwing\**" />
 	  <EmbeddedResource Remove="Content\Tiles\Lighting\**" />
+	  <None Remove="Content\Items\Weapons\Ranged\Darts\**" />
+	  <None Remove="Content\Items\Weapons\Ranged\Throwing\**" />
 	  <None Remove="Content\Tiles\Lighting\**" />
 	</ItemGroup>
 	<ItemGroup>
@@ -54,8 +62,6 @@
 	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\Items\Weapons\Magic\MagicItems\" />
 	  <Folder Include="Content\Items\Weapons\Magic\SpellBooks\" />
-	  <Folder Include="Content\Items\Weapons\Ranged\Darts\" />
-	  <Folder Include="Content\Items\Weapons\Ranged\Throwing\" />
 	  <Folder Include="Content\NPCs\Template\" />
 	  <Folder Include="Content\Projectiles\Pets\" />
 	</ItemGroup>
