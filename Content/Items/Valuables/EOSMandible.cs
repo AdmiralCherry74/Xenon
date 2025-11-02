@@ -6,7 +6,7 @@ using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Valuables
 {
-    public class Perfume : ModItem
+    public class EOSMandible : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -16,7 +16,7 @@ namespace Xenon.Content.Items.Valuables
         public override void SetDefaults()
         {
             Item.rare = ModContent.RarityType<Purity>();
-            Item.value = Terraria.Item.buyPrice(gold: 2);
+            Item.value = Terraria.Item.buyPrice(gold: 7);
         }
     }
 }

@@ -6,7 +6,7 @@ using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Valuables
 {
-    public class Perfume : ModItem
+    public class OldPoliceGunParts : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -15,8 +15,8 @@ namespace Xenon.Content.Items.Valuables
 
         public override void SetDefaults()
         {
-            Item.rare = ModContent.RarityType<Purity>();
-            Item.value = Terraria.Item.buyPrice(gold: 2);
+            Item.rare = ModContent.RarityType<Evil>();
+            Item.value = Terraria.Item.buyPrice(silver: 1750);
         }
     }
 }

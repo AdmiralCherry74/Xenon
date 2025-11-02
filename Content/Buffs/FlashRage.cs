@@ -20,7 +20,7 @@ namespace Xenon.Content.Buffs
         // Allows you to make this buff give certain effects to the given player
         public override void Update(Player player, ref int buffIndex)
         {
-            player.GetModPlayer<FlashRageHeal>().lifeRegenBuff = false;
+            player.GetModPlayer<FlashRageHeal>().lifeRegenBuff = true;
         }
     }
 
@@ -45,7 +45,7 @@ namespace Xenon.Content.Buffs
                 // So we set it to 0, and while this debuff is active, it never reaches it
                 Player.lifeRegenTime = 1;
                 // lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 8 life lost per second
-                Player.lifeRegen += 5;
+                Player.lifeRegen += 6;
             }
         }
     }

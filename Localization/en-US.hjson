@@ -14,7 +14,7 @@ Mods: {
 				DisplayName: Corrosion
 				Description: Gastric hunger is guaranteed to be present in your world.
 				GenPassName: Making the world hungry
-				DryadTextDescriptor: corrosion
+				DryadTextDescriptor: Corrosion
 			}
 		}
 
@@ -43,7 +43,11 @@ Mods: {
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
-				Tooltip: A noble warrior once held this sword. MATHEMATICAL!
+				Tooltip:
+					'''
+					"An Dented, Chipped and Dirty blade that served a hero well..."
+					Armor Pierces
+					'''
 			}
 
 			VeinPiercer: {
@@ -53,7 +57,7 @@ Mods: {
 
 			RhyoliteBlock: {
 				DisplayName: Rhyolite Block
-				Tooltip: According to the Guide, "Rhyolite is an igneous stone formed from the lava of the lower Caverns"
+				Tooltip: Rhyolite is an igneous stone formed from the lava of the lower Caverns!
 			}
 
 			RhyoliteWall: {
@@ -68,42 +72,23 @@ Mods: {
 
 			Pouch: {
 				DisplayName: Pouch
-				Tooltip:
-					'''
-					A pouch made to store small trinkets or other such things
-					Although it looks nice, it's near useless on its own
-					'''
+				Tooltip: A pouch made to store small trinkets or other such things. Although it looks nice, it's near useless on its own
 			}
 
 			GemPouch: {
 				DisplayName: Gem Pouch
 				Tooltip:
 					'''
-					A pouch with various gems inside
-					Could be worth alot
+					'A pouch with every gem inside. Could be sold at a high price!'
 					Valuable
 					'''
 			}
 
-			CursedBoneDust: {
-				DisplayName: Cursed Bone Dust
+			MusicalAlbum1: {
+				DisplayName: Reject False Icons
 				Tooltip:
 					'''
-					Mashed bones which have seemingly been cursed...
-					They are useless without refining them
-					'''
-			}
-
-			RefinedBoneDust: {
-				DisplayName: Refined Bone Dust
-				Tooltip: The bones seem to possess unique capabilities once left without the curse. It's almost magical!
-			}
-
-			MusicalAlbum: {
-				DisplayName: Musical Album
-				Tooltip:
-					'''
-					A music album from a band, they seem to be extremely popular among people.
+					'People often collect these Album's to either listen too or re-sell later. This one seems to be from a British Virtual Band.'
 					Valuable
 					'''
 			}
@@ -112,7 +97,7 @@ Mods: {
 				DisplayName: Perfume
 				Tooltip:
 					'''
-					A nice-smelling substance. Would sell well
+					'A nice-smelling substance that can make you smell nice, but its of little use to you. Best to sell it.'
 					Valuable
 					'''
 			}
@@ -121,7 +106,7 @@ Mods: {
 				DisplayName: Rare Book
 				Tooltip:
 					'''
-					A rare book seemingly from long before you got here... I wonder what it's worth?
+					'A rare book seemingly from long before you got here... Could net you some profit.'
 					Valuable
 					'''
 			}
@@ -272,7 +257,7 @@ Mods: {
 
 			TheEbonStabber: {
 				DisplayName: The Ebon Stabber
-				Tooltip: temporary sprite.
+				Tooltip: ""
 			}
 
 			FrozenLava: {
@@ -413,7 +398,7 @@ Mods: {
 
 			WorldgenHelper: {
 				DisplayName: Worldgen Helper
-				Tooltip: Alpha Corrosion Generation Tool
+				Tooltip: Corrosion Generation Tool used by the dev's.
 			}
 
 			UlceriteBar: {
@@ -520,7 +505,7 @@ Mods: {
 
 			IngestedPickaxe: {
 				DisplayName: Ingested Pickaxe
-				Tooltip: ""
+				Tooltip: Able to mine Hellstone
 			}
 
 			Squasher: {
@@ -860,7 +845,11 @@ Mods: {
 
 			NightGnasher: {
 				DisplayName: Night Gnasher
-				Tooltip: Inflicts a cleaving effect on enemies
+				Tooltip:
+					'''
+					Inflicts a cleaving effect on enemies
+					Consecutive hits grant a boost to your swing speed
+					'''
 			}
 
 			NightmareEyesPaintingItem: {
@@ -902,6 +891,88 @@ Mods: {
 
 			JawSplitter: {
 				DisplayName: Jaw Splitter
+				Tooltip:
+					'''
+					Inflicts a cleaving effect on enemies
+					Consecutive hits grant a boost to your regeneration speed
+					'''
+			}
+
+			MoissaniteTriAxe: {
+				DisplayName: Moissanite Trimagma
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			Ciggies: {
+				DisplayName: Cigarettes
+				Tooltip:
+					'''
+					'These are terrible for you. seriously dont smoke. instead sell these!'
+					Valueble
+					'''
+			}
+
+			ChimeraEye: {
+				DisplayName: Chimera Eye
+				Tooltip:
+					'''
+					'A Chimera's eye harvested by you. Not sure what you could do with it, but someone may buy it for a fair price.'
+					Valueble
+					'''
+			}
+
+			DilutedBile: {
+				DisplayName: Diluted Bile
+				Tooltip:
+					'''
+					'A Gastritis's bile harvested by you. it smell's disgusting despite being diluted. might aswell sell it.'
+					Valueble
+					'''
+			}
+
+			EOSMandible: {
+				DisplayName: Eater Mandible
+				Tooltip:
+					'''
+					'An Eater Of Soul's mandible harvested by you. it looks too decayed to properly use, but could sell.'
+					Valueble
+					'''
+			}
+
+			OldManual: {
+				DisplayName: Old Manual
+				Tooltip:
+					'''
+					'An old manual. Not much use to you, but it could benifit someone else well for a fair price.'
+					Valueble
+					'''
+			}
+
+			OldPoliceGunParts: {
+				DisplayName: Broken Police Gun Parts
+				Tooltip:
+					'''
+					'The Arms Dealer probably refurbishes these into those Illegal Gun parts. You should sell this before you get caught.'
+					Valueble
+					'''
+			}
+
+			InterestingBook: {
+				DisplayName: Interesting Book
+				Tooltip:
+					'''
+					'A rather... 'interesting' book. You should sell this, unless you are going to read it later~?'
+					Valueble
+					'''
+			}
+
+			Garnet: {
+				DisplayName: Garnet
+				Tooltip: ""
+			}
+
+			Lazuli: {
+				DisplayName: Lazuli
 				Tooltip: ""
 			}
 		}
@@ -1019,9 +1090,8 @@ Mods: {
 			ZygomatarangProjectile.DisplayName: Zygomatarang
 			WishBall.DisplayName: Wishing Star
 			YetiYoYoProj.DisplayName: Yeti
-			CaltropsProj.DisplayName: Caltrop
-			IronCaltropsProj.DisplayName: Iron Caltrops Proj
-			LeadCaltropsProj.DisplayName: Lead Caltrops Proj
+			IronCaltropsProj.DisplayName: Iron Caltrops
+			LeadCaltropsProj.DisplayName: Lead Caltrops
 		}
 
 		Buffs: {
@@ -1065,24 +1135,19 @@ Mods: {
 				Description: Severe blood loss inflicted by a Waraxe
 			}
 
-			CaltropTagDamage: {
-				DisplayName: Caltrop Tag Damage
-				Description: Mods.Xenon.Buffs.CaltropTagDamage.Description
-			}
-
 			IronCaltropTagDamage: {
 				DisplayName: Iron Caltrop Tag Damage
-				Description: Mods.Xenon.Buffs.IronCaltropTagDamage.Description
+				Description: Get tagged bitch
 			}
 
 			LeadCaltropTagDamage: {
 				DisplayName: Lead Caltrop Tag Damage
-				Description: Mods.Xenon.Buffs.LeadCaltropTagDamage.Description
+				Description: Get tagged bitch
 			}
 
 			FlashRage: {
 				DisplayName: Flash Rage
-				Description: Mods.Xenon.Buffs.FlashRage.Description
+				Description: You regenerate health faster, keep attacking to keep this up!
 			}
 		}
 	}
