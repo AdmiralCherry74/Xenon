@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Materials;
 
-public class Garnet : ModItem
+public class Onyx : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -13,7 +13,7 @@ public class Garnet : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.value = Item.sellPrice(0, 4, 25);
+        Item.value = Item.sellPrice(0, 26, 75);
         Item.maxStack = 9999;
     }
 }

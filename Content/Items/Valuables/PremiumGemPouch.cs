@@ -6,7 +6,7 @@ using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Valuables
 {
-    public class GemPouch : ModItem
+    public class PremiumGemPouch : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -16,18 +16,16 @@ namespace Xenon.Content.Items.Valuables
         public override void SetDefaults()
         {
             Item.rare = ModContent.RarityType<Purity>();
-            Item.value = Terraria.Item.buyPrice(gold: 15);
+            Item.value = Terraria.Item.buyPrice(gold: 10);
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Pouch>());
-            recipe.AddIngredient(ItemID.Amethyst, 6);
-            recipe.AddIngredient(ItemID.Topaz, 5);
-            recipe.AddIngredient(ItemID.Sapphire, 4);
-            recipe.AddIngredient(ItemID.Emerald, 3);
-            recipe.AddIngredient(ItemID.Ruby, 2);
-            recipe.AddIngredient(ItemID.Diamond, 1);
+            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Garnet>(), 6);
+            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Lazuli>(), 3);
+            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Onyx>(), 1);
+            recipe.AddIngredient(ItemID.Amber, 1);
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);
             recipe.Register();

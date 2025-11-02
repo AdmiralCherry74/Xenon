@@ -79,7 +79,7 @@ Mods: {
 				DisplayName: Gem Pouch
 				Tooltip:
 					'''
-					'A pouch with every gem inside. Could be sold at a high price!'
+					'A pouch with Many common gems inside. Could be sold at a high price!'
 					Valuable
 					'''
 			}
@@ -265,7 +265,7 @@ Mods: {
 				Tooltip:
 					'''
 					Inflicts Frostburn on contact
-					'You cant separate Jerry from his cheese!'
+					'Hmm this ice looks like it likes Cheese :3'
 					'''
 			}
 
@@ -880,13 +880,13 @@ Mods: {
 					6 summon tag damage
 					Throw 5 caltrops with them hitting an enemy once before becoming useless
 					An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
-					'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
+					'Historically, caltrops were part of defences that served to slow the advance of troops'
 					'''
 			}
 
 			TintedGlass: {
 				DisplayName: Tinted Glass
-				Tooltip: See through glass that doesnt let light through
+				Tooltip: See through glass made from Onyx gems that doesnt let light through
 			}
 
 			JawSplitter: {
@@ -972,7 +972,75 @@ Mods: {
 			}
 
 			Lazuli: {
-				DisplayName: Lazuli
+				DisplayName: Lapis
+				Tooltip: ""
+			}
+
+			Onyx: {
+				DisplayName: Onyx
+				Tooltip: ""
+			}
+
+			GarnetCoralstoneBlock: {
+				DisplayName: Garnet Coralstone Block
+				Tooltip: ""
+			}
+
+			LapisMudBlock: {
+				DisplayName: Lapis Mud Block
+				Tooltip: ""
+			}
+
+			OnyxIceBlock: {
+				DisplayName: Onyx Ice Block
+				Tooltip: ""
+			}
+
+			ExoticGemPouch: {
+				DisplayName: Exotic Gem Pouch
+				Tooltip:
+					'''
+					'This Pouch contains every single type of gem you can find. Someone may want to buy these.'
+					Valueble
+					'''
+			}
+
+			PremiumGemPouch: {
+				DisplayName: Premium Gem Pouch
+				Tooltip:
+					'''
+					'This Pouch contains those more obscure gems. You could sell these to line your pockets with coin.'
+					Valueble
+					'''
+			}
+
+			TintedGlassPane: {
+				DisplayName: Tinted Glass Pane
+				Tooltip: See through glass pane made from Onyx gems that doesnt let light through
+			}
+
+			MagentaStainedGlassPane: {
+				DisplayName: Magenta Stained Glass Pane
+				Tooltip: ""
+			}
+
+			GarnetGemsparkBlock: {
+				DisplayName: Garnet Gemspark Block
+				Tooltip: ""
+			}
+
+			PinkStainedGlassPane: {
+				DisplayName: Pink Stained Glass Pane
+				Tooltip: ""
+			}
+
+			GarnetGemsparkWall: {
+				DisplayName: Garnet Gemspark Wall
+				Tooltip: ""
+			}
+
+			GarnetGemsparkWallOff: {
+				DisplayName: Garnet Gemspark Wall Off
 				Tooltip: ""
 			}
 		}
@@ -1008,6 +1076,7 @@ Mods: {
 			CapillarieTail.DisplayName: Capillary
 			MarbleElemental.DisplayName: Marble Elemental
 			Tiger.DisplayName: Tiger
+			OnyxPenguin.DisplayName: Onyx Penguin
 		}
 
 		Tiles: {
@@ -1042,6 +1111,7 @@ Mods: {
 			CorrodedCultist: No one knows why they worship what's essentially a digestive evil, however they're as deadly as any other mysterious cult member.
 			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until its dead.
 			MarbleElemental: Earth elementals manifest through many forms by taking on the properties of different materials, such as this sturdy marble.
+			OnyxPenguin: The Onyx Penguins are a oddity. Onyx gemstones only come from the area where even lava becomes frozen. so how did these penguins get here?
 		}
 
 		Biomes: {
@@ -1121,8 +1191,8 @@ Mods: {
 			}
 
 			TemporaryHealthPills: {
-				DisplayName: Temporary Health Pills
-				Description: Losing life
+				DisplayName: Temporary Health
+				Description: Losing your temporary life
 			}
 
 			RottingLeftovers: {

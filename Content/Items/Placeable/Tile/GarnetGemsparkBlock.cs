@@ -1,11 +1,10 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.Items.Placeable.Tile
 {
-    public class TintedGlass : ModItem
+    public class GarnetGemsparkBlock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -14,15 +13,14 @@ namespace Xenon.Content.Items.Placeable.Tile
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.TintedGlass>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.GarnetGemsparkBlock>());
         }
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe(4);
-
-            recipe.AddIngredient(ItemID.Glass, 4);
-            recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
-            recipe.AddTile(TileID.TinkerersWorkbench);
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<Items.Materials.Garnet>(), 1);
+            recipe.AddIngredient(ItemID.Glass, 20);
+            recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
     }

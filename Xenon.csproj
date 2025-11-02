@@ -36,7 +36,6 @@
 	  <None Remove="Content\Items\Pouch.png" />
 	  <None Remove="Content\Items\RhyoliteBlock.png" />
 	  <None Remove="Content\Items\RhyoliteWall.png" />
-	  <None Remove="Content\Items\Valuables\GemPouch.png" />
 	  <None Remove="Content\Items\Valuables\Perfume.png" />
 	  <None Remove="Content\Items\WoolBlock.png" />
 	  <None Remove="Content\NPCs\Mimicling.png" />
@@ -56,7 +55,6 @@
 	<ItemGroup>
 	  <Folder Include="Content\Buffs\Pets\" />
 	  <Folder Include="Content\Items\Fish\" />
-	  <Folder Include="Content\Items\Placeable\Wall\" />
 	  <Folder Include="Content\Items\Weapons\Magic\MagicItems\" />
 	  <Folder Include="Content\Items\Weapons\Magic\SpellBooks\" />
 	  <Folder Include="Content\NPCs\Template\" />

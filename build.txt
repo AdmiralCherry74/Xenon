@@ -1,4 +1,4 @@
 displayName = Xenon
 author = SeleneTheHoundGal
-version = 0.3.2
+version = 0.3.4
 weakReferences = AltLibrary@2.1.0.7

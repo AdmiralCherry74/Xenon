@@ -15,7 +15,7 @@ public class TintedGlass : ModTile
         Main.tileBlockLight[Type] = true;
         AddMapEntry(new Color(5, 5, 5));
         HitSound = SoundID.Shatter;
-        DustType = DustID.Glass;
+        DustType = DustID.Asphalt;
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)
