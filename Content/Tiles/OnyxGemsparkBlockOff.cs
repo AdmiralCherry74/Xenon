@@ -7,17 +7,16 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles;
 
-public class GarnetGemsparkBlockOff : ModTile
+public class OnyxGemsparkBlockOff : ModTile
 {
     public override void SetStaticDefaults()
     {
-        AddMapEntry(new Color(255, 50, 141));
+        AddMapEntry(new Color(108, 108, 108));
         Main.tileSolid[Type] = true;
         Main.tileBrick[Type] = true;
         TileID.Sets.AllBlocksWithSmoothBordersToResolveHalfBlockIssue[Type] = true;
         TileID.Sets.ForcedDirtMerging[Type] = true;
         TileID.Sets.GemsparkFramingTypes[Type] = Type;
-        RegisterItemDrop(ModContent.ItemType<Items.Placeable.Tile.GarnetGemsparkBlock>(), 1);
         HitSound = SoundID.Dig;
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
@@ -30,9 +29,15 @@ public class GarnetGemsparkBlockOff : ModTile
         Tile tileSafely = Framing.GetTileSafely(i, j);
         if (!tileSafely.HasActuator)
         {
-            tileSafely.TileType = (ushort)ModContent.TileType<GarnetGemsparkBlock>();
+            tileSafely.TileType = (ushort)ModContent.TileType<OnyxGemsparkBlock>();
             WorldGen.SquareTileFrame(i, j);
             NetMessage.SendTileSquare(-1, i, j, 1);
         }
     }
 }
+
+
+    //public override void ChangeWaterfallStyle(ref int style)
+    //{
+    //    style = Mod.Find<ModWaterfallStyle>("PeridotWaterfallStyle").Slot;
+    //}

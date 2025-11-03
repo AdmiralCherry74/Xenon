@@ -23,7 +23,7 @@ namespace Xenon.Content.Items.Valuables
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Pouch>());
             recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Garnet>(), 6);
-            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Lazuli>(), 3);
+            recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Lapis>(), 3);
             recipe.AddIngredient(ModContent.ItemType<Content.Items.Materials.Onyx>(), 1);
             recipe.AddIngredient(ItemID.Amber, 1);
             recipe.AddTile(TileID.Tables);

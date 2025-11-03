@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Materials;
 
-public class Lazuli : ModItem
+public class Lapis : ModItem
 {
     public override void SetStaticDefaults()
     {

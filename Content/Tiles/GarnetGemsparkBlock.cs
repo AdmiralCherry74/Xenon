@@ -22,9 +22,9 @@ public class GarnetGemsparkBlock : ModTile
     }
     public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
     {
-        r = 255 / 255;
-        g = 50 / 255;
-        b = 141 / 255;
+        r = 100f / 105;
+        g = 41.2f / 255;
+        b = 70.6f / 105;
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
     {

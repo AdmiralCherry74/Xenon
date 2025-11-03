@@ -991,6 +991,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Lapis: {
+				DisplayName: Lapis
+				Tooltip: ""
+			}
+
 			OnyxIceBlock: {
 				DisplayName: Onyx Ice Block
 				Tooltip: ""
@@ -1016,12 +1021,7 @@ Mods: {
 
 			TintedGlassPane: {
 				DisplayName: Tinted Glass Pane
-				Tooltip: See through glass pane made from Onyx gems that doesnt let light through
-			}
-
-			MagentaStainedGlassPane: {
-				DisplayName: Magenta Stained Glass Pane
-				Tooltip: ""
+				Tooltip: See through glass pane that doesnt let light through
 			}
 
 			GarnetGemsparkBlock: {
@@ -1040,7 +1040,47 @@ Mods: {
 			}
 
 			GarnetGemsparkWallOff: {
-				DisplayName: Garnet Gemspark Wall Off
+				DisplayName: Offline Garnet Gemspark Wall
+				Tooltip: ""
+			}
+
+			LapisGemsparkBlock: {
+				DisplayName: Lapis Gemspark Block
+				Tooltip: ""
+			}
+
+			IndigoStainedGlassPane: {
+				DisplayName: Indigo Stained Glass Pane
+				Tooltip: ""
+			}
+
+			LapisGemsparkWall: {
+				DisplayName: Lapis Gemspark Wall
+				Tooltip: ""
+			}
+
+			LapisGemsparkWallOff: {
+				DisplayName: Offline Lapis Gemspark Wall
+				Tooltip: ""
+			}
+
+			OnyxGemsparkBlock: {
+				DisplayName: Onyx Gemspark Block
+				Tooltip: ""
+			}
+
+			GrayStainedGlassPane: {
+				DisplayName: Gray Stained Glass Pane
+				Tooltip: ""
+			}
+
+			OnyxGemsparkWall: {
+				DisplayName: Onyx Gemspark Wall
+				Tooltip: ""
+			}
+
+			OnyxGemsparkWallOff: {
+				DisplayName: Offline Onyx Gemspark Wall
 				Tooltip: ""
 			}
 		}
