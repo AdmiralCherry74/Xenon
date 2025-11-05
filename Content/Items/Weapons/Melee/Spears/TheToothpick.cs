@@ -60,7 +60,7 @@ namespace Xenon.Content.Items.Weapons.Melee.Spears
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
+                .AddIngredient(ModContent.ItemType<IngestaneBar>(), 12)
                 .AddIngredient(ModContent.ItemType<FreshChyme>(), 6)
                 .AddTile(TileID.Anvils)
                 .Register();

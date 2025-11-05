@@ -356,7 +356,7 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RottenMushroom: {
+			VitriolicMushroom: {
 				DisplayName: Vitriolic Mushroom
 				Tooltip: ""
 			}
@@ -1083,6 +1083,21 @@ Mods: {
 				DisplayName: Offline Onyx Gemspark Wall
 				Tooltip: ""
 			}
+
+			IngestaneBar: {
+				DisplayName: Ingestane Bar
+				Tooltip: "pulsing with gastric energy"
+			}
+
+			GrayTorch: {
+				DisplayName: Gray Torch
+				Tooltip: "A dim light source that could be used to create moody environments"
+			}
+
+			IngestaneOre: {
+				DisplayName: Ingestane Ore
+				Tooltip: "pulsing with gastric energy"
+			}
 		}
 
 		NPCs: {
@@ -1122,11 +1137,11 @@ Mods: {
 		Tiles: {
 			RhyoliteChest.MapEntry0: Rhyolite Chest
 			RhyoliteDresser.MapEntry: Rhyolite Dresser
-			UlceriteOre.MapEntry: Ingestane
 			CorrosionPot.MapEntry: Corrosion Pot
 			Liverwort.MapEntry: Liverwort
 			BilewoodChest.MapEntry0: Bilewood Chest
 			BilewoodDresser.MapEntry: Bilewood Dresser
+			IngestaneOre.MapEntry: Ingestane
 		}
 
 		Bestiary: {

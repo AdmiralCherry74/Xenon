@@ -7,7 +7,7 @@ using Xenon.Content.Tiles;
 
 namespace Xenon.Content.Items.Materials;
 
-public class UlceriteBar : ModItem
+public class IngestaneBar : ModItem
 {
 	public override void SetStaticDefaults()
 	{
@@ -24,7 +24,7 @@ public class UlceriteBar : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<UlceriteOre>(), 3)
+			.AddIngredient(ModContent.ItemType<IngestaneOre>(), 3)
 			.AddTile(TileID.Furnaces)
 			.Register();
 	}

@@ -32,7 +32,7 @@ class SulfirBow : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 8)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
             .AddTile(TileID.Anvils)
             .Register();
     }

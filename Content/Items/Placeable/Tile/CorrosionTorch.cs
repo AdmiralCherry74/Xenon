@@ -33,7 +33,7 @@ public class CorrosionTorch : ModItem
 		{
 			if (Main.rand.NextBool(player.itemAnimation > 0 ? 10 : 20))
 			{
-				Dust d = Dust.NewDustDirect(new Vector2(player.itemLocation.X + (player.direction == 1 ? 6 : -16), player.itemLocation.Y - 14f * player.gravDir), 4, 4, DustID.JungleTorch, 0, 0, 128, default, Main.rand.NextFloat(0.5f, 1));
+				Dust d = Dust.NewDustDirect(new Vector2(player.itemLocation.X + (player.direction == 1 ? 6 : -16), player.itemLocation.Y - 14f * player.gravDir), 4, 4, DustID.JungleGrass, 0, 0, 128, default, Main.rand.NextFloat(0.5f, 1));
 				d.velocity.Y = Main.rand.NextFloat(-0.5f, -2);
 				d.velocity.X *= 0.2f;
 			}

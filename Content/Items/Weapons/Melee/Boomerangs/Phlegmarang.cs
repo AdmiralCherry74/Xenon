@@ -30,7 +30,7 @@ public class Phlegmarang : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 8)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
             .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
             .AddTile(TileID.Anvils)
             .Register();

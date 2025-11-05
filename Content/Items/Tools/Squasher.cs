@@ -50,7 +50,7 @@ public class Squasher : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<UlceriteBar>(), 11)
+			.AddIngredient(ModContent.ItemType<IngestaneBar>(), 11)
 			.AddIngredient(ModContent.ItemType<FreshChyme>(), 4)
 			.AddTile(TileID.Anvils)
 			.Register();

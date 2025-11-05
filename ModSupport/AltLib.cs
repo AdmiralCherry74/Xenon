@@ -51,8 +51,8 @@ internal class CorrosionAltBiome : AltBiome
         //FountainTileStyle = 0;
 
         SeedType = ModContent.ItemType<CorrosionSeeds>();
-        BiomeOre = ModContent.TileType<UlceriteOre>();
-        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.UlceriteOre>();
+        BiomeOre = ModContent.TileType<IngestaneOre>();
+        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.IngestaneOre>();
         /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
         AltarTile = ModContent.TileType<IckyAltar>();

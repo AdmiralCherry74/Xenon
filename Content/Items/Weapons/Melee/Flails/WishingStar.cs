@@ -59,7 +59,7 @@ public class WishingStar : ModItem
         CreateRecipe()
             .AddIngredient(ItemID.FlamingMace, 1)
             .AddIngredient(ItemID.FallenStar, 10)
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 1)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 1)
             .AddIngredient(ModContent.ItemType<FreshChyme>(), 3)
             .AddIngredient(ItemID.Feather, 2)
             .AddTile(TileID.Anvils)

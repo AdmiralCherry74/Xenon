@@ -42,7 +42,7 @@ public class TheDamp : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<UlceriteBar>(), 12)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 12)
             .AddTile(TileID.Anvils)
             .Register();
     }

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Materials;
 
-public class RottenMushroom : ModItem
+public class VitriolicMushroom : ModItem
 {
 	public override void SetStaticDefaults()
 	{

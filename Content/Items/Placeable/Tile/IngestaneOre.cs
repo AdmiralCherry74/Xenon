@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Placeable.Tile;
 
-public class UlceriteOre : ModItem
+public class IngestaneOre : ModItem
 {
 	public override void SetStaticDefaults()
 	{
@@ -12,7 +12,7 @@ public class UlceriteOre : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Corrosion.UlceriteOre>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Corrosion.IngestaneOre>());
         Item.value = Item.sellPrice(0, 0, 7);
     }
 }

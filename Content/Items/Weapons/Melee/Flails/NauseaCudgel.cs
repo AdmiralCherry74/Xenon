@@ -34,7 +34,7 @@ public class NauseaCudgel : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<UlceriteBar>(), 10)
+			.AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
 			.AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
 			.AddTile(TileID.Anvils)
 			.Register();

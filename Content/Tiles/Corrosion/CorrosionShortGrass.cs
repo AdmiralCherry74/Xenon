@@ -40,7 +40,7 @@ public class CorrosionShortGrass : ModTile
     {
         if (Main.tile[i, j].TileFrameX == MushroomFrameX)
         {
-            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<RottenMushroom>());
+            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<VitriolicMushroom>());
         }
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)

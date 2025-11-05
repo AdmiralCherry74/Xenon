@@ -9,7 +9,7 @@ using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Tiles.Corrosion;
 
-public class UlceriteOre : ModTile
+public class IngestaneOre : ModTile
 {
 	public override void SetStaticDefaults()
 	{
