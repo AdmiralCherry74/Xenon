@@ -36,8 +36,10 @@ Mods: {
 			QS_Suffocated_1: "{0} suffocated in quicksand."
 			QS_Suffocated_2: "{0} drowned in quicksand."
 			QS_Suffocated_3: "{0} discovered the floor was unstable."
+			QS_Suffocated_4: "The floor ate {0}."
 			Iceburn_1: "{0} experienced what it feels like to drink liquid nitrogen."
 			Iceburn_2: "{0} went up in icy flames."
+			Iceburn_3: "{0} likes to stand on Frozen Lava."
 		}
 
 		Items: {
@@ -1086,17 +1088,27 @@ Mods: {
 
 			IngestaneBar: {
 				DisplayName: Ingestane Bar
-				Tooltip: "pulsing with gastric energy"
+				Tooltip: pulsing with gastric energy
 			}
 
 			GrayTorch: {
 				DisplayName: Gray Torch
-				Tooltip: "A dim light source that could be used to create moody environments"
+				Tooltip: A dim light source that could be used to create moody environments
 			}
 
 			IngestaneOre: {
 				DisplayName: Ingestane Ore
-				Tooltip: "pulsing with gastric energy"
+				Tooltip: pulsing with gastric energy
+			}
+
+			RoseTorch: {
+				DisplayName: Rose Torch
+				Tooltip: ""
+			}
+
+			IndigoTorch: {
+				DisplayName: Indigo Torch
+				Tooltip: ""
 			}
 		}
 

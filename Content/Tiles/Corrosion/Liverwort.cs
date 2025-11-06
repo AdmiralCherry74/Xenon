@@ -4,13 +4,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Common.Templates;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.Corrosion;
 
 namespace Xenon.Content.Tiles.Corrosion;
 
 public class Liverwort : ModHerb
 {
-    public override int HerbDrop => ModContent.ItemType<Items.Materials.Liverwort>();
+    public override int HerbDrop => ModContent.ItemType<Xenon.Content.Items.Materials.Corrosion.Liverwort>();
     public override int SeedDrop => ModContent.ItemType<LiverwortSeeds>();
     public override int[] ValidAnchorTiles =>
 	[

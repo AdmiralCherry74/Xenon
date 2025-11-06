@@ -25,7 +25,7 @@ public class RhyoliteChandelier : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 4)
+            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 4)
             .AddIngredient(ItemID.Torch, 4)
             .AddIngredient(ItemID.Chain)
             .AddTile(TileID.Anvils).Register();

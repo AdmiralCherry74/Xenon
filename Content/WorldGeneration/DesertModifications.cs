@@ -5,7 +5,7 @@ using Terraria.IO;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.WorldGeneration;
 

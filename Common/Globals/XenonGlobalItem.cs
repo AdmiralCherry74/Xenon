@@ -1,6 +1,6 @@
-﻿using Xenon.Content.Items.Placeable.Tile;
-using Terraria.ID;
+﻿using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.Natural.Stones;
 
 namespace Xenon.Common.Globals;
 

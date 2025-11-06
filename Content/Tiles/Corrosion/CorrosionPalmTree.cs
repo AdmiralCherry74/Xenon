@@ -31,7 +31,7 @@ public class CorrosionPalmTree : ModPalmTree
     public override Asset<Texture2D> GetTopTextures() => topsTexture;
     public override int TreeLeaf() => ModContent.GoreType<CorrosionTreeLeaf>();
 
-    public override int DropWood() => ModContent.ItemType<Items.Placeable.Tile.Bilewood>();
+    public override int DropWood() => ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>();
 
     public override int CreateDust() => ModContent.DustType<BilewoodDust>();
     public override bool Shake(int x, int y, ref bool createLeaves)
@@ -46,7 +46,7 @@ public class CorrosionPalmTree : ModPalmTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.Bilewood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

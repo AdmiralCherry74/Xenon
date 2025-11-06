@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
-using Xenon.Content.Projectiles;
+using Xenon.Content.Projectiles.FallingTiles;
 
 namespace Xenon.Content.Tiles.Corrosion;
 

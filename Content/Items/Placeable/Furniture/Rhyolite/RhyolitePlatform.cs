@@ -33,7 +33,7 @@ public class RhyolitePlatform : ModItem
     //}
     public override void AddRecipes()
     {
-        CreateRecipe(2).AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>()).Register();
-        Recipe.Create(ModContent.ItemType<Tile.SmoothRhyoliteBlock>()).AddIngredient(this, 2).Register();
+        CreateRecipe(2).AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>()).Register();
+        Recipe.Create(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>()).AddIngredient(this, 2).Register();
     }
 }

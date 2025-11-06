@@ -25,7 +25,7 @@ public class RhyoliteCandelabra : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 5)
+            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 5)
             .AddIngredient(ItemID.Torch, 3)
             .AddTile(TileID.WorkBenches).Register();
     }

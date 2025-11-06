@@ -4,7 +4,7 @@ using System.ComponentModel;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.Corrosion;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged.ArrowSlingers;

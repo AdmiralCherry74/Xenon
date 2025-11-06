@@ -2,7 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Projectiles;
+using Xenon.Content.Items.Materials.Corrosion;
+using Xenon.Content.Projectiles.Melee.Boomerang;
 
 namespace Xenon.Content.Items.Weapons.Melee.Boomerangs;
 

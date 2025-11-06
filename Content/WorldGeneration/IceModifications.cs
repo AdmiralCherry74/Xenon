@@ -6,7 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Common;
-using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.NaturalTile.Snow;
 using Xenon.Hooks;
 
 namespace Xenon.Content.WorldGeneration;
