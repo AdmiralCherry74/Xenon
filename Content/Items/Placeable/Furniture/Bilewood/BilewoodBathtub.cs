@@ -17,7 +17,7 @@ public class BilewoodBathtub : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 14)
+			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 14)
 			.AddTile(TileID.Sawmill).Register();
 	}
 }

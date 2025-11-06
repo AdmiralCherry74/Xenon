@@ -11,7 +11,7 @@ namespace Xenon.Content.Tiles.Corrosion
     public class CorrosionTorch : ModTorch
     {
         public override Vector3 LightColor => new Vector3(0.8f,1.4f,0);
-        public override int TorchItem => ModContent.ItemType<Items.Placeable.Tile.CorrosionTorch>();
+        public override int TorchItem => ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.CorrosionTorch>();
         public override int dustType => DustID.JungleTorch;
 		private static Asset<Texture2D> flameTexture;
 		public override void SetStaticDefaults()

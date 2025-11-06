@@ -25,7 +25,7 @@ public class RhyoliteSink : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 6)
+            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 6)
             .AddIngredient(ItemID.WaterBucket)
             .AddTile(TileID.WorkBenches).Register();
     }

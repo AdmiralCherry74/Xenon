@@ -24,7 +24,7 @@ public class RhyoliteBed : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 15)
+            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 15)
             .AddIngredient(ItemID.Silk, 5)
             .AddTile(TileID.Sawmill).Register();
     }

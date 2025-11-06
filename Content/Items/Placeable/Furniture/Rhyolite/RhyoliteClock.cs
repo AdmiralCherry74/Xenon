@@ -27,7 +27,7 @@ public class RhyoliteClock : ModItem
         CreateRecipe()
             .AddRecipeGroup("IronBar", 3)
             .AddIngredient(ItemID.Glass, 6)
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 10)
+            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 10)
             .AddTile(TileID.Sawmill).Register();
     }
 }

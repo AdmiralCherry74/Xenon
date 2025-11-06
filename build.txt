@@ -1,4 +1,4 @@
-displayName = Xenon Alpha.3.5.1
+displayName = Xenon Alpha
 author = SeleneTheHoundGal
-version = 0.3.5.1
+version = 0.3.6
 weakReferences = AltLibrary@2.1.0.7

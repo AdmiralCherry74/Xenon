@@ -4,7 +4,7 @@ using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Corrosion;
-using Xenon.Content.Walls;
+using Xenon.Content.Walls.NaturalWall.CorrodedWall;
 
 namespace Xenon.Content.WorldGeneration.Passes
 {

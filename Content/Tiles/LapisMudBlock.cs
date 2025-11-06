@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Content.Tiles;

@@ -17,7 +17,7 @@ public class BilewoodTable : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 8)
+			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 8)
 			.AddTile(TileID.WorkBenches).Register();
 	}
 }

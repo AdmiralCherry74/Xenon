@@ -17,7 +17,7 @@ public class BilewoodCandelabra : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 5)
+			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 5)
 			.AddIngredient(ItemID.Torch, 3)
 			.AddTile(TileID.WorkBenches).Register();
 	}
