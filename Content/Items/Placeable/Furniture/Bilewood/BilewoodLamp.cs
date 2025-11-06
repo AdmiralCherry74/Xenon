@@ -18,7 +18,7 @@ public class BilewoodLamp : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ItemID.Torch)
-			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 3)
+			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 3)
 			.AddTile(TileID.WorkBenches).Register();
 	}
 }

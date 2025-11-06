@@ -25,7 +25,7 @@ public class RhyoliteSofa : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 5)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 5)
             .AddIngredient(ItemID.Silk, 2)
             .AddTile(TileID.Sawmill).Register();
     }

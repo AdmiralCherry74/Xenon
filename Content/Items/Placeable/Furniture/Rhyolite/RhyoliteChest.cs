@@ -24,7 +24,7 @@ public class RhyoliteChest : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 8)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 8)
             .AddRecipeGroup("IronBar", 2)
             .AddTile(TileID.WorkBenches).Register();
     }

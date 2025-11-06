@@ -26,7 +26,7 @@ public class RhyolitePiano : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Bone, 4)
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 15)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 15)
             .AddIngredient(ItemID.Book)
             .AddTile(TileID.Sawmill).Register();
     }

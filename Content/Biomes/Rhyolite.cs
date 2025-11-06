@@ -11,6 +11,6 @@ public class Rhyolite : ModBiome
 	public override string BestiaryIcon => base.BestiaryIcon;
 	public override bool IsBiomeActive(Player player)
 	{
-		return Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<Xenon.Content.Walls.NaturalWall.StoneWall.RhyoliteWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<Xenon.Content.Walls.BuildingWalls.BrickWall.SmoothRhyoliteWallUnsafe>();
+		return Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<Walls.RhyoliteWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<Walls.SmoothRhyoliteWallUnsafe>();
 	}
 }

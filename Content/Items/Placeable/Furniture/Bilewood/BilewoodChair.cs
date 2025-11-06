@@ -17,7 +17,7 @@ public class BilewoodChair : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 4)
+			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 4)
 			.AddTile(TileID.WorkBenches).Register();
 	}
 }

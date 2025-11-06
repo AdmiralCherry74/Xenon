@@ -17,7 +17,7 @@ public class BilewoodBookcase : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Corrosion.Bilewood>(), 20)
+			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 20)
 			.AddIngredient(ItemID.Book, 10)
 			.AddTile(TileID.Sawmill).Register();
 	}

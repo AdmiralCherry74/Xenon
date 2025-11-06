@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Corrosion;
 using Microsoft.Xna.Framework;
+using Xenon.Content.Walls;
 using ReLogic.Utilities;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ using AltLibrary.Core.Generation;
 using AltLibrary.Common.Systems;
 using Xenon.Content.WorldGeneration.Passes;
 using Terraria.IO;
-using Xenon.Content.Walls.NaturalWall.CorrodedWall;
 
 namespace Xenon.Content.WorldGeneration;
 

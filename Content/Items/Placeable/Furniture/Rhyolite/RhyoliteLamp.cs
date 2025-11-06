@@ -26,7 +26,7 @@ public class RhyoliteLamp : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Torch)
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 3)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 3)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles.Magic.MagicGunProj;
+using Xenon.Content.Projectiles;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Magic.MagicArms;

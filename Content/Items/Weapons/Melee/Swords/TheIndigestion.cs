@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.Corrosion;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.Items.Weapons.Melee.Swords;
 

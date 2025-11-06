@@ -25,7 +25,7 @@ public class RhyoliteTable : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 8)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 8)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

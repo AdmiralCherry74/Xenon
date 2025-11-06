@@ -18,7 +18,7 @@ namespace Xenon.Hooks
 
         private void On_TileDrawing_DrawMultiTileVinesInWind(On_TileDrawing.orig_DrawMultiTileVinesInWind orig, TileDrawing self, Vector2 screenPosition, Vector2 offSet, int topLeftX, int topLeftY, int sizeX, int sizeY)
         {
-			if (Main.tile[topLeftX, topLeftY].TileType == ModContent.TileType<Xenon.Content.Tiles.ActiveAndWiring.StatBuffs.MonsterBanner>())
+			if (Main.tile[topLeftX, topLeftY].TileType == ModContent.TileType<Content.Tiles.MonsterBanner>())
 			{
 				sizeY = 3;
 			}

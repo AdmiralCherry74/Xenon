@@ -23,7 +23,7 @@ public class RhyoliteBathtub : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 14)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 14)
             .AddTile(TileID.Sawmill).Register();
     }
 }
