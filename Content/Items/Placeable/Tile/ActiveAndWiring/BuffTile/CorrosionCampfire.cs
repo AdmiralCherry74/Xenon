@@ -8,7 +8,7 @@ public class CorrosionCampfire : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Corrosion.CorrosionCampfire>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Corrosion.CorrosionCampfire>());
 		Item.width = 12;
 		Item.height = 12;
 	}

@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Hooks;
 

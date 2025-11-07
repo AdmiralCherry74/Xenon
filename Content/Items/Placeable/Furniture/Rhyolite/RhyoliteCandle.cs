@@ -13,7 +13,7 @@ public class RhyoliteCandle : ModItem
         Item.autoReuse = true;
         Item.noWet = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteCandle>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteCandle>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

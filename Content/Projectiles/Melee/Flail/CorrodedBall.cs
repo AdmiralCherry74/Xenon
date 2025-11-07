@@ -13,7 +13,7 @@ namespace Xenon.Content.Projectiles.Melee.Flail;
 
 public class CorrodedBall : ModProjectile
 {
-    private const string ChainTexturePath = "Xenon/Content/Projectiles/CorrodedBall_Chain"; // The folder path to the flail chain sprite
+    private const string ChainTexturePath = "Xenon/Content/Projectiles/Melee/Flail/CorrodedBall_Chain"; // The folder path to the flail chain sprite
 
     private static Asset<Texture2D> chainTexture;
 

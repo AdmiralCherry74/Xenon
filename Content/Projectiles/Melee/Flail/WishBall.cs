@@ -12,7 +12,7 @@ namespace Xenon.Content.Projectiles.Melee.Flail;
 
 public class WishBall : ModProjectile
 {
-    private const string ChainTexturePath = "Xenon/Content/Projectiles/WishBallChain"; // The folder path to the flail chain sprite
+    private const string ChainTexturePath = "Xenon/Content/Projectiles/Melee/Flail/WishBallChain"; // The folder path to the flail chain sprite
 
     private static Asset<Texture2D> chainTexture;
 

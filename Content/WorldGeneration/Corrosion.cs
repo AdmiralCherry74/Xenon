@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using Xenon.Content.Walls;
 using ReLogic.Utilities;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,8 @@ using AltLibrary.Core.Generation;
 using AltLibrary.Common.Systems;
 using Xenon.Content.WorldGeneration.Passes;
 using Terraria.IO;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Walls.NaturalWalls.Corrosion;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -59,14 +59,14 @@ public class CorrosionStalac : GenPass
                 {
                     if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 + 1].HasTile && Main.tile[num19, num22 - 1].Slope == SlopeType.Solid)
                     {
-                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionStalac>());
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.CorrosionStalac>());
                     }
                 }
                 if (Main.tile[num19, num22 + 1].TileType == ModContent.TileType<Gutstone>() && Main.tile[num19, num22 + 1].HasTile && WorldGen.genRand.NextBool(3))
                 {
                     if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 - 1].HasTile && Main.tile[num19, num22 + 1].Slope == SlopeType.Solid)
                     {
-                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionStalac>());
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.CorrosionStalac>());
                     }
                 }
             }

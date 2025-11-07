@@ -2,7 +2,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.WorldGeneration.Helpers;
 

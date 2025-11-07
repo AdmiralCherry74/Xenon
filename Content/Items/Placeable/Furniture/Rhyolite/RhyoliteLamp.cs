@@ -12,7 +12,7 @@ public class RhyoliteLamp : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteLamp>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteLamp>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

@@ -10,7 +10,7 @@ public class RhyoliteChest : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChest>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteChest>();
         Item.placeStyle = 0;
         Item.width = 16;
         Item.useTurn = true;

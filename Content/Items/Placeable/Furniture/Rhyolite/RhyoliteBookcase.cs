@@ -12,7 +12,7 @@ public class RhyoliteBookcase : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteBookcase>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteBookcase>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

@@ -19,7 +19,7 @@ public class SmoothRhyoliteWall : ModItem
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
-        Item.createWall = ModContent.WallType<Walls.SmoothRhyoliteWall>();
+        Item.createWall = ModContent.WallType<Walls.BuildingWalls.Stones.SmoothRhyoliteWall>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 15;

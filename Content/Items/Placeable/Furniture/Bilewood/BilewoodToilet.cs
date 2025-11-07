@@ -8,7 +8,7 @@ public class BilewoodToilet : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodToilet>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodToilet>());
 		Item.value = Item.sellPrice(copper: 30);
 	}
 

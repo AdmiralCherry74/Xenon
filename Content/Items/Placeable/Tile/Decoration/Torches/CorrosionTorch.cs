@@ -18,7 +18,7 @@ public class CorrosionTorch : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToTorch(ModContent.TileType<Tiles.Corrosion.CorrosionTorch>(), 0, false);
+		Item.DefaultToTorch(ModContent.TileType<Tiles.Natural.Corrosion.CorrosionTorch>(), 0, false);
 		Item.value = Item.sellPrice(0, 0, 0, 40);
 		Item.notAmmo = true;
 		Item.ammo = ItemID.Torch;

@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
@@ -21,9 +22,9 @@ namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<Materials.Pouch>());
-            recipe.AddIngredient(ModContent.ItemType<Materials.Garnet>(), 6);
-            recipe.AddIngredient(ModContent.ItemType<Materials.Lapis>(), 3);
-            recipe.AddIngredient(ModContent.ItemType<Materials.Onyx>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Garnet>(), 6);
+            recipe.AddIngredient(ModContent.ItemType<Lapis>(), 3);
+            recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
             recipe.AddIngredient(ItemID.Amber, 1);
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);

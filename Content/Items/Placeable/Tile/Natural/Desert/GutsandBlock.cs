@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Projectiles.FallingTiles;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.Desert;
 

@@ -3,9 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Rarities;
-using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.Decoration.General.Background;
 
-namespace Xenon.Content.Items.Materials;
+namespace Xenon.Content.Items.Materials.OresBarsGems;
 
 public class IngestaneBar : ModItem
 {

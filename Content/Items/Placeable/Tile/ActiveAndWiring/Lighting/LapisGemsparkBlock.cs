@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Lighting
 {
@@ -13,12 +14,12 @@ namespace Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Lighting
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.LapisGemsparkBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.ActiveAndWiring.Lighting.LapisGemsparkBlock>());
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<Materials.Lapis>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Lapis>(), 1);
             recipe.AddIngredient(ItemID.Glass, 20);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();

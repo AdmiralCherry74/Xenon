@@ -12,7 +12,7 @@ public class BilewoodPlatform : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodPlatform>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodPlatform>());
 		Item.width = 8;
 		Item.height = 10;
 	}

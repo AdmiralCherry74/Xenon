@@ -12,7 +12,7 @@ public class CorrosionWaterStyle : ModWaterStyle
 	private Asset<Texture2D> rainTexture;
 	public override void Load()
 	{
-		rainTexture = ModContent.Request<Texture2D>("Xenon/Content/Waters/CorrosionRain");
+		rainTexture = ModContent.Request<Texture2D>("Xenon/Content/Waters/Corrosion/CorrosionRain");
 	}
 	public override int ChooseWaterfallStyle()
     {

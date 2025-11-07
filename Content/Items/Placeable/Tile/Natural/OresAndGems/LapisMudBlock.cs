@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.LapisMudBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.OresandGems.LapisMudBlock>());
         }
     }
 }

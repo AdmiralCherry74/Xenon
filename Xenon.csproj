@@ -46,9 +46,6 @@
 	  <None Remove="Content\NPCs\SnowLeopard.png" />
 	  <None Remove="Content\NPCs\Wartornmelon.png" />
 	  <None Remove="Content\NPC_110.png" />
-	  <None Remove="Content\Projectiles\EbonStabberProj.png" />
-	  <None Remove="Content\Projectiles\RayExplosion.png" />
-	  <None Remove="Content\Projectiles\RayProj.png" />
 	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="icon.png" />
 	</ItemGroup>

@@ -21,7 +21,7 @@ public class LapisGemsparkWall : ModItem
         Item.height = 32;
         Item.useTurn = true;
         Item.useTime = 15;
-        Item.createWall = ModContent.WallType<Walls.LapisGemsparkWall>();
+        Item.createWall = ModContent.WallType<Walls.DecorationWall.Glowing.LapisGemsparkWall>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 15;

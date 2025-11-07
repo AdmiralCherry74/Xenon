@@ -1,8 +1,8 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
-using Xenon.Content.Projectiles;
+using Xenon.Content.Items.Materials.OresBarsGems;
+using Xenon.Content.Projectiles.Melee.YoYo;
 
 namespace Xenon.Content.Items.Weapons.Melee.YoYos;
 

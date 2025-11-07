@@ -12,7 +12,7 @@ public class RhyoliteSink : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteSink>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteSink>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

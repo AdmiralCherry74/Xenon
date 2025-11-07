@@ -1,6 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.Snow
 {

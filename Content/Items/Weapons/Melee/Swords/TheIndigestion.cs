@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Weapons.Melee.Swords;
 

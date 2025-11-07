@@ -3,8 +3,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Tiles;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
+using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Snow;
+using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Hooks;
 

@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Contact
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.FrozenLava>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.ActiveAndWiring.Traps.Contact.FrozenLava>());
         }
 
         public override void AddRecipes()

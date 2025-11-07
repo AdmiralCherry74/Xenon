@@ -21,7 +21,7 @@ public class OnyxGemsparkWallOff : ModItem
         Item.height = 32;
         Item.useTurn = true;
         Item.useTime = 15;
-        Item.createWall = ModContent.WallType<Walls.OnyxGemsparkWallOff>();
+        Item.createWall = ModContent.WallType<Walls.DecorationWall.General.OnyxGemsparkWallOff>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 15;

@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
-using Xenon.Content.Tiles.Furniture.Rhyolite;
+using Xenon.Content.Tiles.Decoration.Furniture.Rhyolite;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 

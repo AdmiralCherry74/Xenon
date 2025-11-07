@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Placeable.Tile.Decoration.SeeThrough
 {
@@ -14,7 +14,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Decoration.SeeThrough
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.TintedGlass>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.SeeThrough.TintedGlass>());
         }
         public override void AddRecipes()
         {

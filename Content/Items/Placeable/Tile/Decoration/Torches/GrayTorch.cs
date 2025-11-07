@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Placeable.Tile.Decoration.Torches;
 
@@ -17,7 +17,7 @@ public class GrayTorch : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToTorch(ModContent.TileType<Tiles.GrayTorch>(), 0, false);
+		Item.DefaultToTorch(ModContent.TileType<Tiles.Decoration.Torches.GrayTorch>(), 0, false);
 		Item.value = Item.sellPrice(0, 0, 0, 40);
 		Item.notAmmo = true;
 		Item.ammo = ItemID.Torch;

@@ -12,7 +12,7 @@ namespace Xenon.Content.Items.Placeable.Tile.BuildingTiles.Wood
 
 		public override void SetDefaults()
 		{
-			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Corrosion.Bilewood>());
+			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Corrosion.Bilewood>());
 		}
 	}
 }

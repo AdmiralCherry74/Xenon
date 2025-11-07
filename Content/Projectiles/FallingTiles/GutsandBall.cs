@@ -5,13 +5,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.Desert;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Projectiles.FallingTiles;
 
 public abstract class GutsandBall : ModProjectile
 {
-    public override string Texture => "Xenon/Content/Projectiles/GutsandBall";
+    public override string Texture => "Xenon/Content/Projectiles/FallingTiles/GutsandBall";
     public override void SetStaticDefaults()
     {
         ProjectileID.Sets.FallingBlockDoesNotFallThroughPlatforms[Projectile.type] = true;

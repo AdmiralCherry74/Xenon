@@ -1086,17 +1086,32 @@ Mods: {
 
 			IngestaneBar: {
 				DisplayName: Ingestane Bar
-				Tooltip: "pulsing with gastric energy"
+				Tooltip: pulsing with gastric energy
 			}
 
 			GrayTorch: {
 				DisplayName: Gray Torch
-				Tooltip: "A dim light source that could be used to create moody environments"
+				Tooltip: A dim light source that could be used to create moody environments
 			}
 
 			IngestaneOre: {
 				DisplayName: Ingestane Ore
-				Tooltip: "pulsing with gastric energy"
+				Tooltip: pulsing with gastric energy
+			}
+
+			IndigoTorch: {
+				DisplayName: Indigo Torch
+				Tooltip: ""
+			}
+
+			RoseTorch: {
+				DisplayName: Rose Torch
+				Tooltip: ""
+			}
+
+			GloomingEbonwoodWand: {
+				DisplayName: Glooming Ebonwood Wand
+				Tooltip: ""
 			}
 		}
 
@@ -1142,6 +1157,12 @@ Mods: {
 			BilewoodChest.MapEntry0: Bilewood Chest
 			BilewoodDresser.MapEntry: Bilewood Dresser
 			IngestaneOre.MapEntry: Ingestane
+
+			PlacedGems: {
+				Garnet: Mods.Xenon.Tiles.PlacedGems.Garnet
+				Onyx: Mods.Xenon.Tiles.PlacedGems.Onyx
+				Lapis: Mods.Xenon.Tiles.PlacedGems.Lapis
+			}
 		}
 
 		Bestiary: {

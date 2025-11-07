@@ -21,7 +21,7 @@ public class GarnetGemsparkWallOff : ModItem
         Item.height = 32;
         Item.useTurn = true;
         Item.useTime = 10;
-        Item.createWall = ModContent.WallType<Walls.GarnetGemsparkWallOff>();
+        Item.createWall = ModContent.WallType<Walls.DecorationWall.General.GarnetGemsparkWallOff>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 15;

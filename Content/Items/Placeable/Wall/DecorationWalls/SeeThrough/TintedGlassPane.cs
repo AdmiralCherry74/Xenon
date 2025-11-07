@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Tile.Decoration.SeeThrough;
+using Xenon.Content.Walls.DecorationWall.SeeThrough;
 
 namespace Xenon.Content.Items.Placeable.Wall.DecorationWalls.SeeThrough;
 
@@ -21,7 +22,7 @@ public class TintedGlassPane : ModItem
         Item.height = 32;
         Item.useTurn = true;
         Item.useTime = 10;
-        Item.createWall = ModContent.WallType<Walls.TintedGlassWall>();
+        Item.createWall = ModContent.WallType<TintedGlassWall>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 15;

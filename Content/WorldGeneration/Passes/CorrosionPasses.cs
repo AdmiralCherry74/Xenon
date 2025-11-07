@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.WorldBuilding;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.WorldGeneration.Passes;
 
@@ -23,7 +23,7 @@ internal class CorrosionVines : GenPass
                 {
                     Tile t = Main.tile[num586, num589];
                     t.HasTile = true;
-                    t.TileType = (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionVines>();
+                    t.TileType = (ushort)ModContent.TileType<Tiles.Natural.Corrosion.CorrosionVines>();
                     num587--;
                 }
                 else

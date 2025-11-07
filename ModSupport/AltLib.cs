@@ -4,10 +4,10 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Xenon.Content.WorldGeneration;
-using Xenon.Content.Items.Placeable.Seed;
-using Xenon.Content.Walls;
 using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
+using Xenon.Content.Walls.NaturalWalls.Corrosion;
 
 namespace Xenon.ModSupport;
 
@@ -52,7 +52,7 @@ internal class CorrosionAltBiome : AltBiome
         //FountainTileStyle = 0;
 
         SeedType = ModContent.ItemType<CorrosionSeeds>();
-        BiomeOre = ModContent.TileType<Content.Tiles.Corrosion.IngestaneOre>();
+        BiomeOre = ModContent.TileType<Content.Tiles.Natural.Corrosion.IngestaneOre>();
         BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
         /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();

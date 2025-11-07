@@ -2,7 +2,7 @@
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles;
+using Xenon.Content.Projectiles.Melee.Spear;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Melee.Spears

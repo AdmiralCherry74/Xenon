@@ -1,8 +1,9 @@
 ﻿using System;
 using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Common.Systems;
 

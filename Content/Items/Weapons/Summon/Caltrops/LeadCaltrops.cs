@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles;
+using Xenon.Content.Projectiles.Summoner.Caltrops;
 
 namespace Xenon.Content.Items.Weapons.Summon.Caltrops;
 

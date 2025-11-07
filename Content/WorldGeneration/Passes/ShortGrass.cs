@@ -3,8 +3,8 @@ using Terraria.ID;
 using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using Xenon.Content.Tiles.Corrosion;
-using Xenon.Content.Walls;
+using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Walls.NaturalWalls.Corrosion;
 
 namespace Xenon.Content.WorldGeneration.Passes
 {

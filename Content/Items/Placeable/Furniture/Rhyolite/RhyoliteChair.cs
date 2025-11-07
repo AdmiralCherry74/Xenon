@@ -12,7 +12,7 @@ public class RhyoliteChair : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChair>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteChair>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

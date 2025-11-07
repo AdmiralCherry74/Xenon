@@ -11,7 +11,7 @@ public class RhyoliteBed : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteBed>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteBed>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

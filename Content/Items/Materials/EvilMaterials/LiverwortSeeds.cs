@@ -17,7 +17,7 @@ public class LiverwortSeeds : ModItem
 	}
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Corrosion.Liverwort>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Corrosion.Liverwort>());
 		Item.value = Item.sellPrice(0, 0, 0, 16);
 	}
 	//public override void AddRecipes()

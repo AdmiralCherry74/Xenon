@@ -12,7 +12,7 @@ public class RhyoliteChandelier : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChandelier>();
+        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteChandelier>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
