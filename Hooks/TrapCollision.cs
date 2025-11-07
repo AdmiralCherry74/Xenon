@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Tiles.NaturalTile.Snow;
+using Xenon.Content.Tiles;
 
 namespace Xenon.Hooks
 {

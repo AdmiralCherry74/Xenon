@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles.Tools.CletaminationSpray;
+using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Ammo;
 

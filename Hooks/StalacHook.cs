@@ -1,11 +1,10 @@
 ﻿using MonoMod.Cil;
+using Xenon.Content.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Tiles.Corrosion;
-using Xenon.Content.Tiles.NaturalTile.Snow;
-using Xenon.Content.Tiles.NaturalTile.Stones;
 
 namespace Xenon.Hooks;
 

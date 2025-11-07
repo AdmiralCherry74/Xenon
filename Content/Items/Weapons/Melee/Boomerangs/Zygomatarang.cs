@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles.Melee.Boomerang;
+using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee.Boomerangs;
 

@@ -24,7 +24,7 @@ public class RhyoliteLantern : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 6)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 6)
             .AddIngredient(ItemID.Torch)
             .AddTile(TileID.WorkBenches).Register();
     }

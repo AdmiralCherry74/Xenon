@@ -1,10 +1,8 @@
 ﻿using System;
 using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.Content.Tiles;
 using Xenon.Content.Tiles.Corrosion;
-using Xenon.Content.Tiles.NaturalTile.Desert;
-using Xenon.Content.Tiles.NaturalTile.Snow;
 
 namespace Xenon.Common.Systems;
 

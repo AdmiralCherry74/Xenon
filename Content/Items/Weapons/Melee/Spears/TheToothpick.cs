@@ -3,8 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Materials.Corrosion;
-using Xenon.Content.Projectiles.Melee.Spear;
+using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee.Spears
 {

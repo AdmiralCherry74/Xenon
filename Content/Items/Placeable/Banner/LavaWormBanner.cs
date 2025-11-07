@@ -1,7 +1,7 @@
+using Xenon.Content.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.StatBuffs;
 
 namespace Xenon.Content.Items.Placeable.Banner;
 

@@ -3,8 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-using Xenon.Content.Tiles.NaturalTile.Desert;
+using Xenon.Content.Tiles;
 
 namespace Xenon;
 

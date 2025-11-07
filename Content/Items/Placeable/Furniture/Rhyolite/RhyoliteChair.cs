@@ -24,7 +24,7 @@ public class RhyoliteChair : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 4)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 4)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

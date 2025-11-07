@@ -25,7 +25,7 @@ public class RhyoliteDresser : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.BuildingBlocks.SmoothRhyoliteBlock>(), 16)
+            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 16)
             .AddTile(TileID.Sawmill).Register();
     }
 }
