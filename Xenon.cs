@@ -8,7 +8,7 @@ using Xenon.Content.Biomes;
 
 namespace Xenon
 {
-	public class Xenon : Mod
+	public class XenonMod : Mod
 	{
         public static Color CorrosionBiomeSightColor = new Color(177, 186, 58);
         public const string TextureAssetsPath = "Assets/Textures";
