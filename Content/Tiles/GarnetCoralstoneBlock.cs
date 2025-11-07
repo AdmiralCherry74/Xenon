@@ -3,8 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile;
-using Xenon.Content.Tiles.Corrosion;
+using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 
 namespace Xenon.Content.Tiles;
 

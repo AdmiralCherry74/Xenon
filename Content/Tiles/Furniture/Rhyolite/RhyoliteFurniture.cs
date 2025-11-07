@@ -19,14 +19,14 @@ public class RhyoliteBathtub : BathtubTemplate { }
 
 public class RhyoliteBed : BedTemplate
 {
-	public override int DropItem => ModContent.ItemType<Content.Items.Placeable.Furniture.Rhyolite.RhyoliteBed>();
+	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteBed>();
 }
 
 public class RhyoliteBookcase : BookcaseTemplate { }
 
 public class RhyoliteCandelabra : CandelabraTemplate
 {
-	private static Asset<Texture2D>? flameTexture;
+	private static Asset<Texture2D> flameTexture;
 	public override void SetStaticDefaults()
 	{
 		base.SetStaticDefaults();
@@ -45,7 +45,7 @@ public class RhyoliteCandelabra : CandelabraTemplate
 
 	public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 	{
-		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)((ulong)i));
+		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(ulong)i);
 		Color color = new Color(198, 171, 108, 0);
 		int frameX = Main.tile[i, j].TileFrameX;
 		int frameY = Main.tile[i, j].TileFrameY;
@@ -60,9 +60,9 @@ public class RhyoliteCandelabra : CandelabraTemplate
 		}
 		for (int k = 0; k < 7; k++)
 		{
-			float x = (float)Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-			float y = (float)Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
-			Main.spriteBatch.Draw(flameTexture.Value, new Vector2((float)(i * 16 - (int)Main.screenPosition.X + offsetX) - (width - 16f) / 2f + x, (float)(j * 16 - (int)Main.screenPosition.Y + offsetY) + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default(Vector2), 1f, SpriteEffects.None, 0f);
+			float x = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+			float y = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+			Main.spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X + offsetX - (width - 16f) / 2f + x, j * 16 - (int)Main.screenPosition.Y + offsetY + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default, 1f, SpriteEffects.None, 0f);
 		}
 	}
 }
@@ -70,7 +70,7 @@ public class RhyoliteCandelabra : CandelabraTemplate
 public class RhyoliteCandle : CandleTemplate
 {
 	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteCandle>();
-	private static Asset<Texture2D>? flameTexture;
+	private static Asset<Texture2D> flameTexture;
 	public override void SetStaticDefaults()
 	{
 		base.SetStaticDefaults();
@@ -89,7 +89,7 @@ public class RhyoliteCandle : CandleTemplate
 
 	public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 	{
-		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)((ulong)i));
+		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(ulong)i);
 		Color color = new Color(198, 171, 108, 0);
 		int frameX = Main.tile[i, j].TileFrameX;
 		int frameY = Main.tile[i, j].TileFrameY;
@@ -104,9 +104,9 @@ public class RhyoliteCandle : CandleTemplate
 		}
 		for (int k = 0; k < 7; k++)
 		{
-			float x = (float)Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-			float y = (float)Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
-			Main.spriteBatch.Draw(flameTexture.Value, new Vector2((float)(i * 16 - (int)Main.screenPosition.X + offsetX) - (width - 16f) / 2f + x, (float)(j * 16 - (int)Main.screenPosition.Y + offsetY) + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default(Vector2), 1f, SpriteEffects.None, 0f);
+			float x = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+			float y = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+			Main.spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X + offsetX - (width - 16f) / 2f + x, j * 16 - (int)Main.screenPosition.Y + offsetY + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default, 1f, SpriteEffects.None, 0f);
 		}
 	}
 }
@@ -121,7 +121,7 @@ public class RhyoliteChandelier : ChandelierTemplate
 	public override Color FlameColor => new Color(224, 26, 202, 0);
 	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteChandelier>();
 	public List<Point> Coordinates = new List<Point>();
-	private static Asset<Texture2D>? flameTexture;
+	private static Asset<Texture2D> flameTexture;
 	public override void SetStaticDefaults()
 	{
 		base.SetStaticDefaults();
@@ -154,7 +154,7 @@ public class RhyoliteChandelier : ChandelierTemplate
 		UnifiedRandom _rand = (UnifiedRandom)typeof(TileDrawing).GetField("_rand", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
 		bool _isActiveAndNotPaused = (bool)typeof(TileDrawing).GetField("_isActiveAndNotPaused", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
 
-		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)topLeftY << 32 | (long)((ulong)topLeftX));
+		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)topLeftY << 32 | (long)(ulong)topLeftX);
 
 		float windCycle = (float)typeof(TileDrawing).GetMethod("GetWindCycle", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static).Invoke(Main.instance.TilesRenderer, new object[] { topLeftX, topLeftY, _sunflowerWindCounter });
 		float num = windCycle;
@@ -187,8 +187,8 @@ public class RhyoliteChandelier : ChandelierTemplate
 		{
 			windCycle -= num;
 		}
-		Vector2 vector4 = default(Vector2);
-		Rectangle rectangle = default(Rectangle);
+		Vector2 vector4 = default;
+		Rectangle rectangle = default;
 		for (int i = topLeftX; i < topLeftX + sizeX; i++)
 		{
 			for (int j = topLeftY; j < topLeftY + sizeY; j++)
@@ -312,7 +312,7 @@ public class RhyoliteDresser : DresserTemplate
 public class RhyoliteLamp : LampTemplate
 {
 	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteLamp>();
-	private static Asset<Texture2D>? flameTexture;
+	private static Asset<Texture2D> flameTexture;
 	public override void SetStaticDefaults()
 	{
 		base.SetStaticDefaults();
@@ -331,7 +331,7 @@ public class RhyoliteLamp : LampTemplate
 
 	public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 	{
-		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)((ulong)i));
+		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(ulong)i);
 		Color color = new Color(198, 171, 108, 0);
 		int frameX = Main.tile[i, j].TileFrameX;
 		int frameY = Main.tile[i, j].TileFrameY;
@@ -346,9 +346,9 @@ public class RhyoliteLamp : LampTemplate
 		}
 		for (int k = 0; k < 7; k++)
 		{
-			float x = (float)Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-			float y = (float)Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
-			Main.spriteBatch.Draw(flameTexture.Value, new Vector2((float)(i * 16 - (int)Main.screenPosition.X + offsetX) - (width - 16f) / 2f + x, (float)(j * 16 - (int)Main.screenPosition.Y + offsetY) + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default(Vector2), 1f, SpriteEffects.None, 0f);
+			float x = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+			float y = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+			Main.spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X + offsetX - (width - 16f) / 2f + x, j * 16 - (int)Main.screenPosition.Y + offsetY + y) + zero, new Rectangle(frameX, frameY, width, height), color, 0f, default, 1f, SpriteEffects.None, 0f);
 		}
 	}
 }
@@ -358,7 +358,7 @@ public class RhyoliteLantern : LanternTemplate
 	public override bool HasFlameTexture => false;
 	public override int DropItem => ModContent.ItemType<Items.Placeable.Furniture.Rhyolite.RhyoliteLantern>();
 	public List<Point> Coordinates = new List<Point>();
-	private static Asset<Texture2D>? flameTexture;
+	private static Asset<Texture2D> flameTexture;
 	public override void SetStaticDefaults()
 	{
 		base.SetStaticDefaults();
@@ -391,7 +391,7 @@ public class RhyoliteLantern : LanternTemplate
 		UnifiedRandom _rand = (UnifiedRandom)typeof(TileDrawing).GetField("_rand", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
 		bool _isActiveAndNotPaused = (bool)typeof(TileDrawing).GetField("_isActiveAndNotPaused", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
 
-		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)topLeftY << 32 | (long)((ulong)topLeftX));
+		ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)topLeftY << 32 | (long)(ulong)topLeftX);
 
 		float windCycle = (float)typeof(TileDrawing).GetMethod("GetWindCycle", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static).Invoke(Main.instance.TilesRenderer, new object[] { topLeftX, topLeftY, _sunflowerWindCounter });
 		float num = windCycle;
@@ -424,8 +424,8 @@ public class RhyoliteLantern : LanternTemplate
 		{
 			windCycle -= num;
 		}
-		Vector2 vector4 = default(Vector2);
-		Rectangle rectangle = default(Rectangle);
+		Vector2 vector4 = default;
+		Rectangle rectangle = default;
 		for (int i = topLeftX; i < topLeftX + sizeX; i++)
 		{
 			for (int j = topLeftY; j < topLeftY + sizeY; j++)

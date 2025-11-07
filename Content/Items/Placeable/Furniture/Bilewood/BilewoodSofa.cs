@@ -17,7 +17,7 @@ public class BilewoodSofa : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 5)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 5)
 			.AddIngredient(ItemID.Silk, 2)
 			.AddTile(TileID.Sawmill).Register();
 	}

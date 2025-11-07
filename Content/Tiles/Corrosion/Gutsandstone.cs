@@ -28,7 +28,7 @@ public class Gutsandstone : ModTile
 	}
 	public override bool IsTileBiomeSightable(int i, int j, ref Color sightColor)
 	{
-		sightColor = Xenon.CorrosionBiomeSightColor;
+		sightColor = XenonMod.CorrosionBiomeSightColor;
 		return true;
 	}
 }

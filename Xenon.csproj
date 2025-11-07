@@ -10,16 +10,20 @@
 	<ItemGroup>
 	  <AdditionalFiles Remove="Content\Items\Weapons\Ranged\Darts\**" />
 	  <AdditionalFiles Remove="Content\Items\Weapons\Ranged\Throwing\**" />
-	  <AdditionalFiles Remove="Content\Tiles\Lighting\**" />
+	  <AdditionalFiles Remove="Content\NPCs\Caster\**" />
+	  <AdditionalFiles Remove="Content\NPCs\Fighter\**" />
 	  <Compile Remove="Content\Items\Weapons\Ranged\Darts\**" />
 	  <Compile Remove="Content\Items\Weapons\Ranged\Throwing\**" />
-	  <Compile Remove="Content\Tiles\Lighting\**" />
+	  <Compile Remove="Content\NPCs\Caster\**" />
+	  <Compile Remove="Content\NPCs\Fighter\**" />
 	  <EmbeddedResource Remove="Content\Items\Weapons\Ranged\Darts\**" />
 	  <EmbeddedResource Remove="Content\Items\Weapons\Ranged\Throwing\**" />
-	  <EmbeddedResource Remove="Content\Tiles\Lighting\**" />
+	  <EmbeddedResource Remove="Content\NPCs\Caster\**" />
+	  <EmbeddedResource Remove="Content\NPCs\Fighter\**" />
 	  <None Remove="Content\Items\Weapons\Ranged\Darts\**" />
 	  <None Remove="Content\Items\Weapons\Ranged\Throwing\**" />
-	  <None Remove="Content\Tiles\Lighting\**" />
+	  <None Remove="Content\NPCs\Caster\**" />
+	  <None Remove="Content\NPCs\Fighter\**" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Content\Items\Accessories\LaserSight.png" />
@@ -45,19 +49,17 @@
 	  <None Remove="Content\Projectiles\EbonStabberProj.png" />
 	  <None Remove="Content\Projectiles\RayExplosion.png" />
 	  <None Remove="Content\Projectiles\RayProj.png" />
-	  <None Remove="Content\Tiles\Furniture\GooberPainting.png" />
-	  <None Remove="Content\Tiles\Furniture\Painting\GooberPainting.png" />
-	  <None Remove="Content\Tiles\image.png" />
-	  <None Remove="Content\Tiles\WoolBlock.png" />
 	  <None Remove="Content\Walls\RhyoliteWallUnsafe.png" />
 	  <None Remove="icon.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Content\Buffs\Pets\" />
 	  <Folder Include="Content\Items\Fish\" />
+	  <Folder Include="Content\Items\Placeable\Tile\Natural\Jungle\" />
+	  <Folder Include="Content\Items\Placeable\Tile\Natural\Ocean\" />
 	  <Folder Include="Content\Items\Weapons\Magic\MagicItems\" />
 	  <Folder Include="Content\Items\Weapons\Magic\SpellBooks\" />
-	  <Folder Include="Content\NPCs\Template\" />
+	  <Folder Include="Content\NPCs\SpiderAI\TrueSpiderAI\" />
 	  <Folder Include="Content\Projectiles\Pets\" />
 	</ItemGroup>
 	<ItemGroup>

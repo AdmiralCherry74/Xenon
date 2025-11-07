@@ -66,7 +66,7 @@ public class CorrosionTree : ModTree
 
     public override int DropWood()
     {
-        return ModContent.ItemType<Items.Placeable.Tile.Bilewood>();
+        return ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.Bilewood>();
     }
     public override bool CanDropAcorn()
     {
@@ -76,7 +76,7 @@ public class CorrosionTree : ModTree
     {
         if (Main.getGoodWorld && Main.rand.NextBool(17))
         {
-            Projectile.NewProjectile(new EntitySource_ShakeTree(x, y), x * 16, y * 16, (float)Main.rand.Next(-100, 101) * 0.002f, 0f, ProjectileID.Bomb, 0, 0f, Main.myPlayer, 16f, 16f);
+            Projectile.NewProjectile(new EntitySource_ShakeTree(x, y), x * 16, y * 16, Main.rand.Next(-100, 101) * 0.002f, 0f, ProjectileID.Bomb, 0, 0f, Main.myPlayer, 16f, 16f);
         }
         else if (Main.rand.NextBool(35) && Main.halloween)
         {
@@ -84,7 +84,7 @@ public class CorrosionTree : ModTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.Bilewood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.Bilewood>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

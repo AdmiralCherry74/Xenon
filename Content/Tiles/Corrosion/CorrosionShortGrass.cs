@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Tiles.Corrosion;
 
@@ -12,7 +13,7 @@ public class CorrosionShortGrass : ModTile
 {
     public override bool IsTileBiomeSightable(int i, int j, ref Color sightColor)
     {
-        sightColor = Xenon.CorrosionBiomeSightColor;
+        sightColor = XenonMod.CorrosionBiomeSightColor;
         return true;
     }
     

@@ -1,0 +1,39 @@
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using tModPorter.Rewriters;
+using Xenon.Content.Items.Materials;
+
+namespace Xenon.Content.Items.Placeable.Wall.DecorationWalls.SeeThrough;
+
+public class GrayStainedGlassPane : ModItem
+{
+    public override void SetStaticDefaults()
+    {
+        Item.ResearchUnlockCount = 400;
+    }
+
+    public override void SetDefaults()
+    {
+        Item.autoReuse = true;
+        Item.consumable = true;
+        Item.width = 32;
+        Item.height = 32;
+        Item.useTurn = true;
+        Item.useTime = 15;
+        Item.createWall = ModContent.WallType<Walls.GrayStainedGlassWall>();
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.maxStack = 9999;
+        Item.useAnimation = 15;
+    }
+
+    public override void AddRecipes()
+    {
+        Recipe recipe = CreateRecipe(4);
+
+        recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
+        recipe.AddIngredient(ItemID.GlassWall, 20);
+        recipe.AddTile(TileID.WorkBenches);
+        recipe.Register();
+    }
+}

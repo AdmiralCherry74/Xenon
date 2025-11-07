@@ -3,8 +3,9 @@ using Terraria.GameContent.Drawing;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Xenon.Content.Tiles.Furniture.Rhyolite;
 using Xenon.Common;
+using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.Furniture.Rhyolite;
 
 namespace Xenon.Hooks
 {
@@ -18,7 +19,7 @@ namespace Xenon.Hooks
 
         private void On_TileDrawing_DrawMultiTileVinesInWind(On_TileDrawing.orig_DrawMultiTileVinesInWind orig, TileDrawing self, Vector2 screenPosition, Vector2 offSet, int topLeftX, int topLeftY, int sizeX, int sizeY)
         {
-			if (Main.tile[topLeftX, topLeftY].TileType == ModContent.TileType<Content.Tiles.MonsterBanner>())
+			if (Main.tile[topLeftX, topLeftY].TileType == ModContent.TileType<MonsterBanner>())
 			{
 				sizeY = 3;
 			}

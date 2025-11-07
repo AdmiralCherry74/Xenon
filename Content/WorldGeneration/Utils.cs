@@ -2,8 +2,8 @@
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles;
 using Terraria.WorldBuilding;
+using Xenon.Content.Tiles;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Content.WorldGeneration;

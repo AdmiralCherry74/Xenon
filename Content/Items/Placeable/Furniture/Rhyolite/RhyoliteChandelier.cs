@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -25,7 +26,7 @@ public class RhyoliteChandelier : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 4)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 4)
             .AddIngredient(ItemID.Torch, 4)
             .AddIngredient(ItemID.Chain)
             .AddTile(TileID.Anvils).Register();

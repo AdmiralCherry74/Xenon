@@ -3,19 +3,20 @@ using Terraria.GameContent.Personalities;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
-using Xenon.Content.Tiles.Corrosion;
 using Xenon.Content.WorldGeneration;
 using Xenon.Content.Items.Placeable.Seed;
 using Xenon.Content.Walls;
+using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
+using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.ModSupport;
 
 [ExtendsFromMod(nameof(AltLibrary))]
 internal class CorrosionAltBiome : AltBiome
 {
-    public override string WorldIcon => $"{nameof(Xenon)}/{Xenon.TextureAssetsPath}/UI/IconOverlayCorrosion";
-    public override string OuterTexture => $"{nameof(Xenon)}/{Xenon.TextureAssetsPath}/UI/LoadingOuterCorrosion";
-    public override string IconSmall => $"{nameof(Xenon)}/{Xenon.TextureAssetsPath}/UI/IconCorrosion";
+    public override string WorldIcon => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconOverlayCorrosion";
+    public override string OuterTexture => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/LoadingOuterCorrosion";
+    public override string IconSmall => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconCorrosion";
     public override Color OuterColor => new(167, 158, 29);
     public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Corrosion>();
     public override Color NameColor => Color.Yellow;
@@ -51,8 +52,8 @@ internal class CorrosionAltBiome : AltBiome
         //FountainTileStyle = 0;
 
         SeedType = ModContent.ItemType<CorrosionSeeds>();
-        BiomeOre = ModContent.TileType<IngestaneOre>();
-        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.IngestaneOre>();
+        BiomeOre = ModContent.TileType<Content.Tiles.Corrosion.IngestaneOre>();
+        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
         /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
         AltarTile = ModContent.TileType<IckyAltar>();

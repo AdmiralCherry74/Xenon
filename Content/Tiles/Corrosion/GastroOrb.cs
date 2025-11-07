@@ -90,8 +90,8 @@ public class GastroOrb : ModTile
             if (WorldGen.shadowOrbCount >= 3)
             {
                 WorldGen.shadowOrbCount = 0;
-                float num5 = (float)(i * 16);
-                float num6 = (float)(j * 16);
+                float num5 = i * 16;
+                float num6 = j * 16;
                 float num7 = -1f;
                 int plr = 0;
                 for (int k = 0; k < 255; k++)

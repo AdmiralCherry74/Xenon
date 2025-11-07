@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Xenon.Content.NPCs;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -8,6 +7,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.GameContent.Drawing.TileDrawing;
+using Xenon.Content.NPCs.CasterAI;
+using Xenon.Content.NPCs.FighterAI;
+using Xenon.Content.NPCs.MimicAI;
+using Xenon.Content.NPCs.SpiderAI;
+using Xenon.Content.NPCs.WormAI;
+using Xenon.Content.NPCs.FlyingAI;
+using Xenon.Content.NPCs.UniqueAI;
+using Xenon.Content.NPCs.UnicornAI;
+using Xenon.Content.NPCs.BatAI;
+using Xenon.Content.NPCs.SlimeAI;
+using Xenon.Content.NPCs.FighterAI.UniqueFighterAI;
 
 namespace Xenon.Content.Tiles;
 

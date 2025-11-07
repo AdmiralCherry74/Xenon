@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -23,7 +24,7 @@ public class RhyoliteBathtub : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 14)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 14)
             .AddTile(TileID.Sawmill).Register();
     }
 }

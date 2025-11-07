@@ -9,7 +9,7 @@ public class CorrosionGrass : ModTile
 {
     public override bool IsTileBiomeSightable(int i, int j, ref Color sightColor)
     {
-        sightColor = Xenon.CorrosionBiomeSightColor;
+        sightColor = XenonMod.CorrosionBiomeSightColor;
         return true;
     }
     public override void SetStaticDefaults()

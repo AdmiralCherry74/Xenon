@@ -1,6 +1,6 @@
-﻿using Xenon.Content.Tiles;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Common;

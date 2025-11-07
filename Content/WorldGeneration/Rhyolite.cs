@@ -8,8 +8,9 @@ using Terraria.IO;
 using System.Linq;
 using System;
 using Terraria.GameContent.Generation;
-using Xenon.Content.Tiles.Furniture.Rhyolite;
 using Terraria.Localization;
+using Xenon.Content.Tiles;
+using Xenon.Content.Tiles.Furniture.Rhyolite;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -51,14 +52,14 @@ public class RhyoliteStalac : GenPass
 				{
 					if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 + 1].HasTile && Main.tile[num19, num22 - 1].Slope == SlopeType.Solid)
 					{
-						Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.RhyoliteStalactgmites>());
+						Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<RhyoliteStalactgmites>());
 					}
 				}
 				if (Main.tile[num19, num22 + 1].TileType == ModContent.TileType<Tiles.Rhyolite>() && Main.tile[num19, num22 + 1].HasTile && WorldGen.genRand.NextBool(3))
 				{
 					if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 - 1].HasTile && Main.tile[num19, num22 + 1].Slope == SlopeType.Solid)
 					{
-						Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.RhyoliteStalactgmites>());
+						Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<RhyoliteStalactgmites>());
 					}
 				}
 			}
@@ -946,7 +947,7 @@ public class RhyoliteCabin : MicroBiome
 		{
 			return new BuildData
 			{
-				Tile = (ushort)ModContent.TileType<Tiles.SmoothRhyolite>(),
+				Tile = (ushort)ModContent.TileType<SmoothRhyolite>(),
 				Wall = (ushort)ModContent.WallType<Walls.SmoothRhyoliteWallUnsafe>(),
 				DoorStyle = 0,
 				PlatformStyle = 0,
@@ -1110,9 +1111,9 @@ public class RhyoliteCabin : MicroBiome
 		Dictionary<ushort, int> dictionary = new Dictionary<ushort, int>();
 		foreach (Rectangle item13 in list)
 		{
-			WorldUtils.Gen(new Point(item13.X - 10, item13.Y - 10), new Shapes.Rectangle(item13.Width + 20, item13.Height + 20), new Actions.TileScanner(0, (ushort)ModContent.TileType<Tiles.SmoothRhyolite>(), (ushort)ModContent.TileType<Tiles.Rhyolite>()).Output(dictionary));
+			WorldUtils.Gen(new Point(item13.X - 10, item13.Y - 10), new Shapes.Rectangle(item13.Width + 20, item13.Height + 20), new Actions.TileScanner(0, (ushort)ModContent.TileType<SmoothRhyolite>(), (ushort)ModContent.TileType<Tiles.Rhyolite>()).Output(dictionary));
 		}
-		List<Tuple<BuildData, int>> list6 = [Tuple.Create(BuildData.Rhyolite, dictionary[(ushort)ModContent.TileType<Tiles.Rhyolite>()] + dictionary[(ushort)ModContent.TileType<Tiles.SmoothRhyolite>()])];
+		List<Tuple<BuildData, int>> list6 = [Tuple.Create(BuildData.Rhyolite, dictionary[(ushort)ModContent.TileType<Tiles.Rhyolite>()] + dictionary[(ushort)ModContent.TileType<SmoothRhyolite>()])];
 		list6.Sort(SortBiomeResults);
 		BuildData item = list6[0].Item1;
 		//foreach (Rectangle item14 in list)
@@ -1249,7 +1250,7 @@ public class RhyoliteCabin : MicroBiome
 		{
 			if (item3.Height > 1 && _tiles[item3.X, item3.Y - 1].TileType != (ushort)ModContent.TileType<RhyolitePlatform>())
 			{
-				WorldUtils.Gen(new Point(item3.X, item3.Y), new Shapes.Rectangle(item3.Width, item3.Height), Actions.Chain(new Actions.SetTile((ushort)ModContent.TileType<Tiles.RhyoliteColumn>()), new Actions.SetFrames(frameNeighbors: true)));
+				WorldUtils.Gen(new Point(item3.X, item3.Y), new Shapes.Rectangle(item3.Width, item3.Height), Actions.Chain(new Actions.SetTile((ushort)ModContent.TileType<RhyoliteColumn>()), new Actions.SetFrames(frameNeighbors: true)));
 				Tile tile = _tiles[item3.X, item3.Y + item3.Height];
 				tile.Slope = SlopeType.Solid;
 				tile.IsHalfBlock = false;
@@ -1268,13 +1269,13 @@ public class RhyoliteCabin : MicroBiome
 		
 		Point[] choices = new Point[7]
 		{
-		new Point(ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteTable>(), 0),
+		new Point(ModContent.TileType<RhyoliteTable>(), 0),
 		new Point(16, 0),
-		new Point(ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteWorkBench>(), 0),
+		new Point(ModContent.TileType<RhyoliteWorkBench>(), 0),
 		new Point(86, 0),
-		new Point(ModContent.TileType<Tiles.Furniture.Rhyolite.RhyolitePiano>(), 0),
+		new Point(ModContent.TileType<RhyolitePiano>(), 0),
 		new Point(94, 0),
-		new Point(ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteBookcase>(), 0)
+		new Point(ModContent.TileType<RhyoliteBookcase>(), 0)
 		};
 		 
 		foreach (Rectangle item4 in list)
@@ -1302,7 +1303,7 @@ public class RhyoliteCabin : MicroBiome
 					case 1:
 						{
 							int num8 = item4.Y + 1;
-							WorldGen.PlaceTile(num6, num8, ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChandelier>(), mute: true, forced: false, -1, 0);
+							WorldGen.PlaceTile(num6, num8, ModContent.TileType<RhyoliteChandelier>(), mute: true, forced: false, -1, 0);
 							for (int num9 = -1; num9 < 2; num9++)
 							{
 								for (int num10 = 0; num10 < 3; num10++)
@@ -1356,7 +1357,7 @@ public class RhyoliteCabin : MicroBiome
 			int style2 = ((num16 > (int)Main.worldSurface) ? item.ChestStyle : 0);
 			for (int num17 = 0; num17 < 10; num17++)
 			{
-				if (flag2 = WorldGen.AddBuriedChest(GenBase._random.Next(2, item6.Width - 2) + item6.X, num16, 0, notNearOtherChests: false, 0, chestTileType: (ushort)ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChest>()))
+				if (flag2 = WorldGen.AddBuriedChest(GenBase._random.Next(2, item6.Width - 2) + item6.X, num16, 0, notNearOtherChests: false, 0, chestTileType: (ushort)ModContent.TileType<RhyoliteChest>()))
 				{
 					break;
 				}
@@ -1367,7 +1368,7 @@ public class RhyoliteCabin : MicroBiome
 			}
 			for (int num18 = item6.X + 2; num18 <= item6.X + item6.Width - 2; num18++)
 			{
-				if (flag2 = WorldGen.AddBuriedChest(num18, num16, 0, notNearOtherChests: false, 0, chestTileType: (ushort)ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChest>()))
+				if (flag2 = WorldGen.AddBuriedChest(num18, num16, 0, notNearOtherChests: false, 0, chestTileType: (ushort)ModContent.TileType<RhyoliteChest>()))
 				{
 					break;
 				}
@@ -1414,7 +1415,7 @@ public class RhyoliteCabin : MicroBiome
 				int i2 = GenBase._random.Next(list[0].X - 30, list[0].X + 30);
 				int num23 = GenBase._random.Next(list[0].Y - 30, list[0].Y + 30);
 				int style4 = ((num23 > (int)Main.worldSurface) ? item.ChestStyle : 0);
-				if (flag2 = WorldGen.AddBuriedChest(i2, num23, 0, notNearOtherChests: false, style4, chestTileType: (ushort)ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteChest>()))
+				if (flag2 = WorldGen.AddBuriedChest(i2, num23, 0, notNearOtherChests: false, style4, chestTileType: (ushort)ModContent.TileType<RhyoliteChest>()))
 				{
 					break;
 				}
@@ -1437,7 +1438,7 @@ public class RhyoliteCabin : MicroBiome
 
 	public static void AgeRoom(Rectangle room)
 	{
-		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.60000002384185791), new Modifiers.Blotches(2, 0.60000002384185791), new Modifiers.OnlyTiles(BuildData.Rhyolite.Tile), new Actions.SetTile((ushort)ModContent.TileType<Tiles.Rhyolite>(), setSelfFrames: true), new Modifiers.Dither(0.8), new Actions.SetTile((ushort)ModContent.TileType<Tiles.SmoothRhyolite>(), setSelfFrames: true)));
+		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.60000002384185791), new Modifiers.Blotches(2, 0.60000002384185791), new Modifiers.OnlyTiles(BuildData.Rhyolite.Tile), new Actions.SetTile((ushort)ModContent.TileType<Tiles.Rhyolite>(), setSelfFrames: true), new Modifiers.Dither(0.8), new Actions.SetTile((ushort)ModContent.TileType<SmoothRhyolite>(), setSelfFrames: true)));
 		WorldUtils.Gen(new Point(room.X + 1, room.Y), new Shapes.Rectangle(room.Width - 2, 1), Actions.Chain(new Modifiers.Dither(), new Modifiers.OnlyTiles(161), new Modifiers.Offset(0, 1), new ActionStalagtite()));
 		WorldUtils.Gen(new Point(room.X + 1, room.Y + room.Height - 1), new Shapes.Rectangle(room.Width - 2, 1), Actions.Chain(new Modifiers.Dither(), new Modifiers.OnlyTiles(161), new Modifiers.Offset(0, 1), new ActionStalagtite()));
 		WorldUtils.Gen(new Point(room.X, room.Y), new Shapes.Rectangle(room.Width, room.Height), Actions.Chain(new Modifiers.Dither(0.85), new Modifiers.Blotches(), new Actions.PlaceWall((ushort)ModContent.WallType<Walls.RhyoliteWallUnsafe>())));

@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
+using Xenon.Content.Tiles.Furniture.Rhyolite;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -10,7 +12,7 @@ public class RhyoliteDoor : ModItem
     {
         
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteDoorClosed>();
+        Item.createTile = ModContent.TileType<RhyoliteDoorClosed>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
@@ -24,7 +26,7 @@ public class RhyoliteDoor : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 6)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 6)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

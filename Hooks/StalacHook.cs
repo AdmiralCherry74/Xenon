@@ -1,9 +1,9 @@
 ﻿using MonoMod.Cil;
-using Xenon.Content.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
+using Xenon.Content.Tiles;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Hooks;

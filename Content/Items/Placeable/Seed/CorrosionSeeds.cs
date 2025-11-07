@@ -3,6 +3,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Content.Items.Placeable.Seed;
 
@@ -46,14 +47,14 @@ public class CorrosionSeeds : ModItem
 		{
 			if (tile.TileType == TileID.Dirt)
 			{
-				Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionGrass>();
+				Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<CorrosionGrass>();
 				WorldGen.SquareTileFrame(Player.tileTargetX, Player.tileTargetY, true);
 				SoundEngine.PlaySound(SoundID.Dig, player.Center);
 				return true;
 			}
 			else if (tile.TileType == TileID.Mud)
 			{
-				Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<Tiles.Corrosion.CorrosionJungleGrass>();
+				Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<CorrosionJungleGrass>();
 				WorldGen.SquareTileFrame(Player.tileTargetX, Player.tileTargetY, true);
 				SoundEngine.PlaySound(SoundID.Dig, player.Center);
 				return true;

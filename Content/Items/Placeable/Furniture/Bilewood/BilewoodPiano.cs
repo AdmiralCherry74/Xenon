@@ -18,7 +18,7 @@ public class BilewoodPiano : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ItemID.Bone, 4)
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 15)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 15)
 			.AddIngredient(ItemID.Book)
 			.AddTile(TileID.Sawmill).Register();
 	}

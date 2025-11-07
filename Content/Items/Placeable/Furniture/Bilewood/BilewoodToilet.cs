@@ -15,7 +15,7 @@ public class BilewoodToilet : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 6)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 6)
 			.AddTile(TileID.Sawmill).Register();
 	}
 }

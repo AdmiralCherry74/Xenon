@@ -17,7 +17,7 @@ public class BilewoodLantern : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 6)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 6)
 			.AddIngredient(ItemID.Torch)
 			.AddTile(TileID.WorkBenches).Register();
 	}

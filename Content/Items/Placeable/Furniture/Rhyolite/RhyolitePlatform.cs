@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -33,7 +34,7 @@ public class RhyolitePlatform : ModItem
     //}
     public override void AddRecipes()
     {
-        CreateRecipe(2).AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>()).Register();
-        Recipe.Create(ModContent.ItemType<Tile.SmoothRhyoliteBlock>()).AddIngredient(this, 2).Register();
+        CreateRecipe(2).AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>()).Register();
+        Recipe.Create(ModContent.ItemType<SmoothRhyoliteBlock>()).AddIngredient(this, 2).Register();
     }
 }

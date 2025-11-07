@@ -70,7 +70,7 @@ public class SewerFuryBall : ModProjectile
 		Rectangle frame2 = TextureAssets.Projectile[Type].Frame();
 		Vector2 frameOrigin2 = frame2.Size() / 2f;
 
-		Color col = Color.Lerp(new(204, 187, 41), Xenon.CorrosionBiomeSightColor, Main.masterColor) * 0.4f;
+		Color col = Color.Lerp(new(204, 187, 41), XenonMod.CorrosionBiomeSightColor, Main.masterColor) * 0.4f;
 		Color col2 = Color.Lerp(new(255, 246, 125), new(182, 186, 66), Main.masterColor);
 		Vector2 stretchscale = new(Projectile.scale * 1.4f + (Main.masterColor / 2));
 
@@ -84,9 +84,9 @@ public class SewerFuryBall : ModProjectile
 			Main.EntitySpriteDraw(texture.Value, drawPos + Main.rand.NextVector2Circular(i / 2, i / 2), frame, col, Projectile.oldRot[i] + Main.rand.NextFloat(-i * 0.01f, i * 0.01f), frameOrigin, new Vector2(stretchscale.X - (i * 0.05f), (stretchscale.Y * Main.rand.NextFloat(0.1f, 0.05f) * Vector2.Distance(Projectile.oldPos[i], Projectile.oldPos[i + 1]) - (i * 0.05f)) * 0.7f), SpriteEffects.None, 0);
 		}
 
-		Main.EntitySpriteDraw(TextureAssets.Projectile[Type].Value, Projectile.Center - Main.screenPosition, frame2, Xenon.CorrosionBiomeSightColor, Projectile.rotation, frameOrigin2, stretchscale * 0.8f, SpriteEffects.None, 0);
+		Main.EntitySpriteDraw(TextureAssets.Projectile[Type].Value, Projectile.Center - Main.screenPosition, frame2, XenonMod.CorrosionBiomeSightColor, Projectile.rotation, frameOrigin2, stretchscale * 0.8f, SpriteEffects.None, 0);
 		col.A = 255;
-		Main.EntitySpriteDraw(TextureAssets.Projectile[Type].Value, Projectile.Center - Main.screenPosition, frame2, Xenon.CorrosionBiomeSightColor * Projectile.Opacity, Projectile.rotation, frameOrigin2, Projectile.scale, SpriteEffects.None, 0);
+		Main.EntitySpriteDraw(TextureAssets.Projectile[Type].Value, Projectile.Center - Main.screenPosition, frame2, XenonMod.CorrosionBiomeSightColor * Projectile.Opacity, Projectile.rotation, frameOrigin2, Projectile.scale, SpriteEffects.None, 0);
 
 		return false;
 	}

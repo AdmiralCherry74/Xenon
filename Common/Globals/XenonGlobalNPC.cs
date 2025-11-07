@@ -3,7 +3,9 @@ using Terraria;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.NPCs;
+using Xenon.Content.NPCs.FlyingAI;
+using Xenon.Content.NPCs.SpiderAI;
+using Xenon.Content.NPCs.WormAI;
 
 namespace Xenon.Common.Globals;
 

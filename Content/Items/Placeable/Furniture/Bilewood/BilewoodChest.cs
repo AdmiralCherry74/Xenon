@@ -17,7 +17,7 @@ public class BilewoodChest : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 8)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 8)
 			.AddRecipeGroup("IronBar", 2)
 			.AddTile(TileID.WorkBenches).Register();
 	}

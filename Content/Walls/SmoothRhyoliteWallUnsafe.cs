@@ -12,6 +12,6 @@ public class SmoothRhyoliteWallUnsafe : ModWall
 		Main.wallHouse[Type] = false;
 		AddMapEntry(new Color(50, 30, 27));
 		DustType = ModContent.DustType<RhyoliteDust>();
-		RegisterItemDrop(ModContent.ItemType<Items.Placeable.Wall.SmoothRhyoliteWall>());
+		RegisterItemDrop(ModContent.ItemType<Items.Placeable.Wall.BuildingWalls.Stone.SmoothRhyoliteWall>());
 	}
 }

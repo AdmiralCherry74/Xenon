@@ -19,7 +19,7 @@ public class BilewoodClock : ModItem
 		CreateRecipe()
 			.AddRecipeGroup("IronBar", 3)
 			.AddIngredient(ItemID.Glass, 6)
-			.AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 10)
+			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 10)
 			.AddTile(TileID.Sawmill).Register();
 	}
 }

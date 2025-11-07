@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Projectiles;
 
 namespace Xenon.Content.Items.Weapons.Melee.Flails;

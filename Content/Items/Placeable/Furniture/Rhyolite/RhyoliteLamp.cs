@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -26,7 +27,7 @@ public class RhyoliteLamp : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Torch)
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 3)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 3)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

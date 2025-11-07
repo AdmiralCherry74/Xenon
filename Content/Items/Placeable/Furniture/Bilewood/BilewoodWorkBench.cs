@@ -15,6 +15,6 @@ public class BilewoodWorkBench : ModItem
 
 	public override void AddRecipes()
 	{
-		CreateRecipe().AddIngredient(ModContent.ItemType<Tile.Bilewood>(), 10).Register();
+		CreateRecipe().AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 10).Register();
 	}
 }

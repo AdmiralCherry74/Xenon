@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -26,7 +27,7 @@ public class RhyolitePiano : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Bone, 4)
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 15)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 15)
             .AddIngredient(ItemID.Book)
             .AddTile(TileID.Sawmill).Register();
     }

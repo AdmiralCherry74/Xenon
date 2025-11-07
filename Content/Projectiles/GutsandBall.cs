@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile;
+using Xenon.Content.Items.Placeable.Tile.Natural.Desert;
 using Xenon.Content.Tiles.Corrosion;
 
 namespace Xenon.Content.Projectiles;
@@ -33,7 +33,7 @@ public abstract class GutsandBall : ModProjectile
             }
             if (!Main.tileSolid[t.TileType] || TileID.Sets.IsATreeTrunk[t.TileType])
             {
-                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(p.X, p.Y), p.X * 16, p.Y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.GutsandBlock>());
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(p.X, p.Y), p.X * 16, p.Y * 16, 16, 16, ModContent.ItemType<GutsandBlock>());
                 SoundEngine.PlaySound(SoundID.Dig, Projectile.Center);
             }
             if (!t.HasTile && t.TileType != TileID.MinecartTrack)
@@ -44,7 +44,7 @@ public abstract class GutsandBall : ModProjectile
                     tBelow.Slope = SlopeType.Solid;
                 }
                 if (tBelow.IsHalfBlock) tBelow.IsHalfBlock = false;
-                WorldGen.PlaceTile(p.X, p.Y, ModContent.TileType<Tiles.Corrosion.Gutsand>(), forced: true);
+                WorldGen.PlaceTile(p.X, p.Y, ModContent.TileType<Gutsand>(), forced: true);
                 WorldGen.SquareTileFrame(p.X, p.Y);
             }
         }

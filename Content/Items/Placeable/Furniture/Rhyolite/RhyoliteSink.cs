@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Rhyolite;
 
@@ -25,7 +26,7 @@ public class RhyoliteSink : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Tile.SmoothRhyoliteBlock>(), 6)
+            .AddIngredient(ModContent.ItemType<SmoothRhyoliteBlock>(), 6)
             .AddIngredient(ItemID.WaterBucket)
             .AddTile(TileID.WorkBenches).Register();
     }
