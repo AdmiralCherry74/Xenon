@@ -9,7 +9,7 @@ using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Wood;
 
 namespace Xenon.Content.Tiles.Natural.LivingWood.LeafBlocks;
 
-public class DissolvingBileleafBlock : ModTile
+public class GloomingEbonleafBlock : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -24,7 +24,7 @@ public class DissolvingBileleafBlock : ModTile
         ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;
         AddMapEntry(new Color(125, 117, 143));
         HitSound = SoundID.Grass;
-        DustType = ModContent.DustType<CorrosionDust>();
+        DustType = DustID.CorruptPlants;
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)
