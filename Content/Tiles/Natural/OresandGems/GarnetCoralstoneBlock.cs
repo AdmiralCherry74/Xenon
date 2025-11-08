@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 
 namespace Xenon.Content.Tiles.Natural.OresandGems;
@@ -18,7 +19,7 @@ public class GarnetCoralstoneBlock : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
         TileID.Sets.Ore[Type] = true;
-        RegisterItemDrop(ModContent.ItemType<Items.Materials.OresBarsGems.Garnet>(), 1);
+        RegisterItemDrop(ModContent.ItemType<Garnet>());
         AddMapEntry(new Color(255, 255, 255));
         HitSound = SoundID.Dig;
         DustType = DustID.Ice_Red;

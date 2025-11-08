@@ -10,7 +10,7 @@ using Xenon.Content.Tiles.Natural.LivingWood;
 
 namespace Xenon.Content.Items.Tools.BlockPlacingWands;
 
-public class GloomingEbonwoodWand : ModItem
+public class BleedingShadewoodWand : ModItem
 {
 	public override void SetDefaults()
 	{
@@ -23,8 +23,8 @@ public class GloomingEbonwoodWand : ModItem
 		Item.useTurn = true;
 		Item.rare = ItemRarityID.Blue;
 		Item.value = Item.sellPrice(silver: 30);
-		Item.createTile = ModContent.TileType<GloomingEbonwoodBlock>();
-		Item.tileWand = ItemID.Ebonwood;
+		Item.createTile = ModContent.TileType<BleedingShadewoodBlock>();
+		Item.tileWand = ItemID.Shadewood;
 	}
     public override void SetStaticDefaults()
     {

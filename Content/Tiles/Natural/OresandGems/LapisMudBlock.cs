@@ -22,7 +22,7 @@ public class LapisMudBlock : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
         TileID.Sets.Ore[Type] = true;
-        RegisterItemDrop(ModContent.ItemType<Lapis>(), 1);
+        RegisterItemDrop(ModContent.ItemType<Lapis>());
         AddMapEntry(new Color(92, 68, 73));
         HitSound = SoundID.Dig;
         DustType = DustID.DungeonBlue;

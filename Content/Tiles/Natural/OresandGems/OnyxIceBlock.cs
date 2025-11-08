@@ -29,9 +29,10 @@ public class OnyxIceBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
+        TileID.Sets.IceSkateSlippery[Type] = true;
         TileID.Sets.Ore[Type] = true;
         AddMapEntry(new Color(40, 152, 240));
-        RegisterItemDrop(ModContent.ItemType<Onyx>(), 1);
+        RegisterItemDrop(ModContent.ItemType<Onyx>());
         HitSound = SoundID.Item50;
         DustType = DustID.Asphalt;
     }

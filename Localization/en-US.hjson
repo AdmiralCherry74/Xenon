@@ -1111,7 +1111,17 @@ Mods: {
 
 			GloomingEbonwoodWand: {
 				DisplayName: Glooming Ebonwood Wand
-				Tooltip: ""
+				Tooltip: "Places glooming ebonwood"
+			}
+
+			BleedingShadewoodWand: {
+				DisplayName: Bleeding Shadewood Wand
+				Tooltip: "Places bleeding shadewood"
+			}
+
+			DissolvingBilewoodWand: {
+				DisplayName: Dissolving Bilewood Wand
+				Tooltip: "Places dissolving bilewood"
 			}
 		}
 

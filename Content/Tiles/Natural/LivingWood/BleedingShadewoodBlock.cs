@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles.Natural.LivingWood;
 
-public class GloomingEbonwoodBlock : ModTile
+public class BleedingShadewoodBlock : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -19,10 +19,10 @@ public class GloomingEbonwoodBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;
-        RegisterItemDrop(ItemID.Ebonwood);
+        RegisterItemDrop(ItemID.Shadewood);
         AddMapEntry(new Color(125, 117, 143));
         HitSound = SoundID.Dig;
-        DustType = DustID.Ebonwood;
+        DustType = DustID.Shadewood;
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)
