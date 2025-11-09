@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Corrosion;
 
-namespace Xenon.Content.Items.Placeable.Tile.Natural.Desert
+namespace Xenon.Content.Items.Placeable.Tile.Natural.Stone
 {
 	public class GutstoneBlock : ModItem
 	{

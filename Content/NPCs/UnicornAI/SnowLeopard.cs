@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.UnicornAI
@@ -70,15 +71,26 @@ namespace Xenon.Content.NPCs.UnicornAI
         {
             if (spawnInfo.Player.ZoneSnow)
 
+            {
                 {
-                    {
                     return SpawnCondition.OverworldNightMonster.Chance * 0.09f;
 
-                    }
+                }
             }
             return 0f;
         }
 
+        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+        {
+            if (Main.rand.NextBool(3) && Main.expertMode)
+            {
+                target.AddBuff(ModContent.BuffType<Gnashed>(), 600);
+            }
+            else if (Main.rand.NextBool(2) && Main.masterMode)
+                {
+                    target.AddBuff(ModContent.BuffType<Gnashed>(), 900);
+                }
+        }
 
         public override void HitEffect(NPC.HitInfo hit)
         {

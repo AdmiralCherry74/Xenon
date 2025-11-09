@@ -8,15 +8,15 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Materials.EvilMaterials;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.NPCs.FlyingAI
 {
-    public class Gastritis : ModNPC
+    public class CorrodedHornet : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.EaterofSouls];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.HornetLeafy];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -39,8 +39,8 @@ namespace Xenon.Content.NPCs.FlyingAI
             NPC.knockBackResist = 1f;
             NPC.aiStyle = 5; 
             
-            AIType = NPCID.EaterofSouls;
-            AnimationType = NPCID.EaterofSouls;
+            AIType = NPCID.HornetLeafy;
+            AnimationType = NPCID.HornetLeafy;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<GastritisBanner>();
 		}
@@ -49,7 +49,7 @@ namespace Xenon.Content.NPCs.FlyingAI
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundJungle,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Gastritis")),
             ]);
         }
@@ -70,11 +70,8 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() ||
-            spawnInfo.Player.InModBiome<Biomes.CorrosionUnderground>()&& !spawnInfo.Player.InPillarZone())
-            {
-                return 1f;
-            }
+            if (spawnInfo.Player.InModBiome<Biomes.CorrosionUnderground>() & spawnInfo.SpawnTileType == ModContent.TileType<CorrosionJungleGrass>());
+                return 0.75f;
             return 0;
         }
 
@@ -100,6 +97,7 @@ namespace Xenon.Content.NPCs.FlyingAI
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 3, 0, 1));
         }
     }
 }

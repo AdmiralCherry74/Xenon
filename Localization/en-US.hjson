@@ -1111,17 +1111,42 @@ Mods: {
 
 			GloomingEbonwoodWand: {
 				DisplayName: Glooming Ebonwood Wand
-				Tooltip: "Places glooming ebonwood"
+				Tooltip: Places glooming ebonwood
 			}
 
 			BleedingShadewoodWand: {
 				DisplayName: Bleeding Shadewood Wand
-				Tooltip: "Places bleeding shadewood"
+				Tooltip: Places bleeding shadewood
 			}
 
 			DissolvingBilewoodWand: {
 				DisplayName: Dissolving Bilewood Wand
-				Tooltip: "Places dissolving bilewood"
+				Tooltip: Places dissolving bilewood
+			}
+
+			GutstoneBrick: {
+				DisplayName: Gutstone Brick
+				Tooltip: ""
+			}
+
+			BleedingShadeleafWand: {
+				DisplayName: Bleeding Shadeleaf Wand
+				Tooltip: Places bleeding shadeleaves
+			}
+
+			DissolvingBileleafWand: {
+				DisplayName: Dissolving Bileleaf Wand
+				Tooltip: Places dissolving bileleaves
+			}
+
+			GloomingEbonleafWand: {
+				DisplayName: Glooming Ebonleaf Wand
+				Tooltip: Places glooming ebonleaves
+			}
+
+			Mauser: {
+				DisplayName: Mauser
+				Tooltip: ""
 			}
 		}
 
@@ -1157,6 +1182,7 @@ Mods: {
 			MarbleElemental.DisplayName: Marble Elemental
 			Tiger.DisplayName: Tiger
 			OnyxPenguin.DisplayName: Onyx Penguin
+			CorrodedHornet.DisplayName: Corroded Hornet
 		}
 
 		Tiles: {
@@ -1304,6 +1330,11 @@ Mods: {
 			FlashRage: {
 				DisplayName: Flash Rage
 				Description: You regenerate health faster, keep attacking to keep this up!
+			}
+
+			Gnashed: {
+				DisplayName: Gnashed
+				Description: Moving decrease's your life!
 			}
 		}
 	}

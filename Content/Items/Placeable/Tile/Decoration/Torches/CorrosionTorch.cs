@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.Desert;
 using Xenon.Content.Items.Placeable.Tile.Natural.Snow;
+using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 
 namespace Xenon.Content.Items.Placeable.Tile.Decoration.Torches;
 

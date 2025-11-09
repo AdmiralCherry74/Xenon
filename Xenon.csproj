@@ -2,5 +2,10 @@
 
 	<!-- Import tModLoader mod properties -->
 	<Import Project="..\tModLoader.targets" />
+	<ItemGroup>
+	  <Reference Include="AltLibrary">
+	    <HintPath>..\ModAssemblies\AltLibrary_v2.1.1.2.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 
 </Project>
