@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Biomes;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.SpiderAI
@@ -67,13 +68,10 @@ namespace Xenon.Content.NPCs.SpiderAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2)
+            if ((spawnInfo.Player.ZoneCorrupt && spawnInfo.Player.ZoneRockLayerHeight || spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2) && !spawnInfo.Player.InPillarZone())
 
-                {
-                    {
-                    return SpawnCondition.Corruption.Chance * 0.5f;
-
-                    }
+            {
+                return SpawnCondition.Corruption.Chance * 0.5f;
             }
             return 0f;
         }

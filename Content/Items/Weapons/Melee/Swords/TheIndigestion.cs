@@ -32,5 +32,15 @@ public class TheIndigestion : ModItem
             .AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
             .AddTile(TileID.Anvils)
             .Register();
+
+
+
+        Recipe.Create(ItemID.NightsEdge)
+            .AddIngredient(ModContent.ItemType<TheIndigestion>(), 1)
+            .AddIngredient(ItemID.BladeofGrass, 1)
+            .AddIngredient(ItemID.FieryGreatsword, 1)
+            .AddIngredient(ItemID.Muramasa, 1)
+            .AddTile(TileID.DemonAltar)
+            .Register();
     }
 }

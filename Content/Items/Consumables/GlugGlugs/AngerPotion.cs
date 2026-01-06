@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Consumables.GlugGlugs;
-    public class OutragePotion : ModItem
+    public class AngerPotion : ModItem
     {
         public override void SetStaticDefaults()
         {

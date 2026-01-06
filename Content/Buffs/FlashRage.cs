@@ -13,7 +13,7 @@ namespace Xenon.Content.Buffs
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = false;  // Is it a debuff?
-            Main.pvpBuff[Type] = true; // Players can give other players buffs, which are listed as pvpBuff
+            Main.pvpBuff[Type] = false; // Players can give other players buffs, which are listed as pvpBuff
             Main.buffNoSave[Type] = true; // Causes this buff not to persist when exiting and rejoining the world
         }
 

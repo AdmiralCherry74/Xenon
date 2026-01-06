@@ -5,6 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.NPCs.Template;
@@ -58,8 +59,11 @@ public class TapeWormHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
-            return 0.050f;
+        if (spawnInfo.Player.InModBiome<Corrosion>() ||
+        spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
+        {
+            return 0.50f;
+        }
         return 0;
     }
     public override void HitEffect(NPC.HitInfo hit)

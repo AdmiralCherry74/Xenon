@@ -13,6 +13,7 @@ using Terraria.ModLoader.IO;
 using Terraria.ModLoader.Utilities;
 using Terraria.Localization;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.CasterAI
 {
@@ -75,7 +76,7 @@ namespace Xenon.Content.NPCs.CasterAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() && NPC.downedBoss1 && !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss1 && !spawnInfo.Player.InPillarZone())
                 return 0.05f;
             return 0;
         }

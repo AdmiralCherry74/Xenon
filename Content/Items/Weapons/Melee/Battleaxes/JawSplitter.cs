@@ -30,6 +30,7 @@ public class JawSplitter : ModItem
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);
+        player.AddBuff(ModContent.BuffType<FlashRage>(), 180);
     }
     public override void AddRecipes()
     {

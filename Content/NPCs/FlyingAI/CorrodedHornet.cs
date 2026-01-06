@@ -9,6 +9,7 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.FlyingAI
 {
@@ -70,8 +71,10 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.CorrosionUnderground>() & spawnInfo.SpawnTileType == ModContent.TileType<CorrosionJungleGrass>());
-                return 0.75f;
+            if (spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneJungle)
+            {
+                return 10f;
+            }   
             return 0;
         }
 

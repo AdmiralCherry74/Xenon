@@ -9,6 +9,7 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.FlyingAI
 {
@@ -70,10 +71,10 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Biomes.Corrosion>() ||
-            spawnInfo.Player.InModBiome<Biomes.CorrosionUnderground>()&& !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Corrosion>() ||
+            spawnInfo.Player.InModBiome<CorrosionUnderground>() && !spawnInfo.Player.InPillarZone())
             {
-                return 1f;
+                return 2f;
             }
             return 0;
         }

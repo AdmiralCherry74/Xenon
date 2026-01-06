@@ -45,7 +45,7 @@ Mods: {
 				DisplayName: Scarlet
 				Tooltip:
 					'''
-					"An Dented, Chipped and Dirty blade that served a hero well..."
+					"A Dented, Chipped and Dirty blade that served a hero well..."
 					Armor Pierces
 					'''
 			}
@@ -264,7 +264,7 @@ Mods: {
 				DisplayName: Frozen Lava Block
 				Tooltip:
 					'''
-					Inflicts Frostburn on contact
+					Inflicts Iceburn on contact
 					'Hmm this ice looks like it likes Cheese :3'
 					'''
 			}
@@ -825,7 +825,7 @@ Mods: {
 
 			TNTore: {
 				DisplayName: Trinitrotoluene Ore
-				Tooltip: Yes
+				Tooltip: A developer block used to make the Mountain Biome
 			}
 
 			CoarseDirt: {
@@ -1145,8 +1145,138 @@ Mods: {
 			}
 
 			Mauser: {
-				DisplayName: Mauser
+				DisplayName: Light Handgun
 				Tooltip: ""
+			}
+
+			ExampleBolt: {
+				DisplayName: Example Bolt
+				Tooltip: UnusedDev Item / BasicBolt. You shouldnt have this
+			}
+
+			FireBolt: {
+				DisplayName: Fire Bolt
+				Tooltip: Used by Crossbows
+			}
+
+			MetalBolt: {
+				DisplayName: Metal Bolt
+				Tooltip:
+					'''
+					Materials
+					Used by Crossbows
+					'''
+			}
+
+			AngerPotion: {
+				DisplayName: Anger Potion
+				Tooltip: Gives 5 armor penetration for 4 minutes
+			}
+
+			Lime: {
+				DisplayName: Lime
+				Tooltip: ""
+			}
+
+			TarotCard1: {
+				DisplayName: Tarot Card "Unpolished"
+				Tooltip:
+					'''
+					25% Less Defense, 1.20X Coin Yield until used again.
+					"This cursed card would make your armour not as effective"
+					'''
+			}
+
+			TarotCard1Used: {
+				DisplayName: Burnt Tarot Card "Unpolished"
+				Tooltip:
+					'''
+					Will stop 25% Less Defense aswell as the 1.20X Coin Yield if used.
+					"To put out the fire on this card is to quell the curse"
+					'''
+			}
+
+			SpikedGel: {
+				DisplayName: Spiked Gel
+				Tooltip:
+					'''
+					Can be used to craft Bolts at an anvil
+					"Very pointy"
+					'''
+			}
+
+			VitriolicPowder: {
+				DisplayName: Vitriolic Powder
+				Tooltip: Spreads the Corrosion
+			}
+
+			TheDisembowelment: {
+				DisplayName: The Disembowelment
+				Tooltip:
+					'''
+					Inflicts a cleaving effect on enemies
+					Consecutive hits enlarge your titties or something, ill think of an effect soon
+					'''
+			}
+
+			BasicCrossbow: {
+				DisplayName: Basic Crossbow
+				Tooltip: May or Maynot be removed later. no idea ngl
+			}
+
+			UnholyBolt: {
+				DisplayName: Unholy Bolt
+				Tooltip: Used by Crossbows
+			}
+
+			FrozenLavaBrick: {
+				DisplayName: Frozen Lava Brick
+				Tooltip: '''"Its so cold!"'''
+			}
+
+			OuranoStoneBlock: {
+				DisplayName: Ouranostone Block
+				Tooltip: The god of the sky's essence contained in a stone
+			}
+
+			CliffsideChest: {
+				DisplayName: Cliffside Chest
+				Tooltip: ""
+			}
+
+			AresStoneBlock: {
+				DisplayName: Ares Stone Block
+				Tooltip: The god of war's essence contained in a crimstone.
+			}
+
+			HelioStoneBlock: {
+				DisplayName: Helio Stone Block
+				Tooltip: The god of the sun's essence contained in a pearlstone.
+			}
+
+			NyxStoneBlock: {
+				DisplayName: Nyx Stone Block
+				Tooltip: The goddess of the night's essence contained in an ebonstone.
+			}
+
+			HephStoneBlock: {
+				DisplayName: Heph Stone Block
+				Tooltip: The god of metalurgy's essence contained in a gutstone.
+			}
+
+			TropicGrassSeeds: {
+				DisplayName: Tropic Grass Seeds
+				Tooltip: Used to plant Tropic Grass on sand.
+			}
+
+			ZephyrBoots: {
+				DisplayName: Zephyr Boots
+				Tooltip:
+					'''
+					The wearer can run super fast in higher wind speeds
+					grants immunity to fall damage. maybe subject to change
+					"Fit for a wind warrior"
+					'''
 			}
 		}
 
@@ -1183,6 +1313,17 @@ Mods: {
 			Tiger.DisplayName: Tiger
 			OnyxPenguin.DisplayName: Onyx Penguin
 			CorrodedHornet.DisplayName: Corroded Hornet
+			SlimedSkeleton.DisplayName: Skeleton
+			SulfirBunny.DisplayName: Sulfir Bunny
+			HoneySlime.DisplayName: Honey Slime
+			NavySlime.DisplayName: Navy Slime
+			Sleye.DisplayName: Sleye
+			SpikedWhiteSlime.DisplayName: Spiked White Slime
+			WhiteSlime.DisplayName: White Slime
+			Aclugic.DisplayName: Aclugic
+			JebelSlime.DisplayName: Jebel Slime
+			Chipmunk.DisplayName: Chipmunk
+			Sparrow.DisplayName: Sparrow
 		}
 
 		Tiles: {
@@ -1193,6 +1334,7 @@ Mods: {
 			BilewoodChest.MapEntry0: Bilewood Chest
 			BilewoodDresser.MapEntry: Bilewood Dresser
 			IngestaneOre.MapEntry: Ingestane
+			CliffsideChest.MapEntry0: Cliffside Chest
 
 			PlacedGems: {
 				Garnet: Mods.Xenon.Tiles.PlacedGems.Garnet
@@ -1223,7 +1365,16 @@ Mods: {
 			CorrodedCultist: No one knows why they worship what's essentially a digestive evil, however they're as deadly as any other mysterious cult member.
 			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until its dead.
 			MarbleElemental: Earth elementals manifest through many forms by taking on the properties of different materials, such as this sturdy marble.
-			OnyxPenguin: The Onyx Penguins are a oddity. Onyx gemstones only come from the area where even lava becomes frozen. so how did these penguins get here?
+			Aclugic: These slugs made out of acids move throughout the corrosion. spreading a viscous acidic substance that spreads the corrosion. their shell's however are hard and dangerous!
+			SpikedWhiteSlime: These slimes are weaker than most, so they evolved spikes to compensate. Ancient civilizations figured out how to use those same spikes to make unique projectiles for crossbows.
+			WhiteSlime: A mutation can rarely occur in white slimes, these white slimes are heavily endangered due to their lack of hunting capabilities due to their missing spikes.
+			NavySlime: Dis navy slime evolved t' live nigh beaches 'n on ocean surfaces. its a delicate creature requirin' salt water 'n coral reefs t' live. Aye dis entry was written by a pirate, do ye 'ave a problem wit' dat?
+			HoneySlime: When a jungle slime falls into a pool of honey, they tend to absorb the honey into themselves, turning them into these unique honey slime. they have symbiosis with bee's.
+			Sleye: A slime evolved to look like a demon eye, most creatures either dont attack it or they are afraid of it. seemingly they also developed lens.
+			SlimySkeleton: the Skeleton and White slime work together to hunt the living who invade the deep caverns. The slime gets food whilst the Skeleton gets to keep the bones of the victim.OnyxPenguin: The Onyx Penguins are a oddity. Onyx gemstones only come from the area where even lava becomes frozen. so how did these penguins get here?
+			JebelSlime: Native to mountainous terrain. they have adapted to the harsh environment by becoming fifty-percent rock.
+			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes, they often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
+			Sparrow: Sparrow's are resiliant birds that thrive on the high cliffs of the mountains.
 		}
 
 		Biomes: {
@@ -1251,6 +1402,16 @@ Mods: {
 				DisplayName: Corrosion Underground Ice
 				TownNPCDialogueName: the Corrosion Underground Ice
 			}
+
+			FrozenUnderworld: {
+				DisplayName: Scorching Ice
+				TownNPCDialogueName: the Scorching Ice
+			}
+
+			Mountain: {
+				DisplayName: Mountain
+				TownNPCDialogueName: the Mountains
+			}
 		}
 
 		Projectiles: {
@@ -1274,6 +1435,11 @@ Mods: {
 			YetiYoYoProj.DisplayName: Yeti
 			IronCaltropsProj.DisplayName: Iron Caltrops
 			LeadCaltropsProj.DisplayName: Lead Caltrops
+			ExampleBoltProj.DisplayName: Example Bolt Proj
+			FireBoltProj.DisplayName: Fire Bolt
+			MetalBoltProj.DisplayName: Metal Bolt
+			VitriolicPowder.DisplayName: Vitriolic Powder
+			UnholyBoltProj.DisplayName: Unholy Bolt
 		}
 
 		Buffs: {
@@ -1284,7 +1450,7 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Its so cold...
+				Description: Its so cold it burns!
 			}
 
 			FossilBlessingCooldown: {
@@ -1335,6 +1501,16 @@ Mods: {
 			Gnashed: {
 				DisplayName: Gnashed
 				Description: Moving decrease's your life!
+			}
+
+			Unpolished: {
+				DisplayName: Unpolished
+				Description: 25% Less Defense, 1.20X Coin Yield
+			}
+
+			WraithFlash: {
+				DisplayName: Irascible Wraith
+				Description: You move around faster, keep attacking to keep this up!
 			}
 		}
 	}

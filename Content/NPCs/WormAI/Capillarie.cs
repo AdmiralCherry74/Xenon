@@ -58,9 +58,9 @@ public class CapillarieHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.ZoneCrimson && NPC.downedBoss2)
+        if ((spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneRockLayerHeight || spawnInfo.Player.ZoneCrimson && NPC.downedBoss2) && !spawnInfo.Player.InPillarZone())
         {
-                return SpawnCondition.Crimson.Chance * 0.050f;
+                return SpawnCondition.Crimson.Chance * 0.50f;
         }
         return 0f;
     }

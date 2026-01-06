@@ -7,6 +7,7 @@ using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
+using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.BatAI;
 
@@ -35,7 +36,7 @@ public class RhyoliteSlimer : ModNPC
         NPC.DeathSound = SoundID.NPCDeath1;
         Banner = NPC.type;
         BannerItem = ModContent.ItemType<Items.Placeable.Banner.RhyoliteSlimerBanner>();
-        SpawnModBiomes = [ModContent.GetInstance<Biomes.Rhyolite>().Type];
+        SpawnModBiomes = [ModContent.GetInstance<Rhyolite>().Type];
     }
 	public override void HitEffect(NPC.HitInfo hit)
 	{
@@ -54,7 +55,7 @@ public class RhyoliteSlimer : ModNPC
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.InModBiome<Biomes.Rhyolite>() && !spawnInfo.Player.InPillarZone())
+        if (spawnInfo.Player.InModBiome<Rhyolite>() && !spawnInfo.Player.InPillarZone())
         {
             return 0.8f;
         }

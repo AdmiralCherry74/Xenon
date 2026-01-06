@@ -1,4 +1,4 @@
-displayName = Xenon Alpha
+displayName = Xenon Alpha January Build
 author = SeleneTheHoundGal
-version = 0.3.6.2
+version = 0.1.0
 weakReferences = AltLibrary@2.1.0.7

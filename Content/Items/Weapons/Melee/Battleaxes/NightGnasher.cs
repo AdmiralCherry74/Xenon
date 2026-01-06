@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Buffs;
 using Xenon.Content.Buffs.Debuffs;
 
 namespace Xenon.Content.Items.Weapons.Melee.Battleaxes;
@@ -30,6 +31,7 @@ public class NightGnasher : ModItem
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);
+        player.AddBuff(ModContent.BuffType<WraithFlash>(), 180);
     }
 
     public override void AddRecipes()
