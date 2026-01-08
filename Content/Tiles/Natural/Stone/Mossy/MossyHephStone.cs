@@ -31,7 +31,11 @@ public class MossyHephStone : ModTile
         Main.tileMerge[Type][ModContent.TileType<MossyAresStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHelioStone>()] = true;
-        Main.tileBlockLight[Type] = true;
+		Main.tileBrick[Type] = true;
+		TileID.Sets.NeedsGrassFraming[Type] = true;
+		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<HephStone>();
+		TileID.Sets.Grass[Type] = true;
+		Main.tileBlockLight[Type] = true;
         AddMapEntry(new Color(105, 99, 0));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;

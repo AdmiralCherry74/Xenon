@@ -26,9 +26,10 @@ Mods: {
 			'''
 
 		Generation: {
+			Mountains: Extruding mountains
 			Rhyolite: Erupting rhyolite
 			Quicksand: Sinking quicksand
-			Ice: Freezing Lava
+			Ice: Freezing lava
 			Corrosion.Message: Making the world hungry
 		}
 
@@ -1245,22 +1246,22 @@ Mods: {
 			}
 
 			AresStoneBlock: {
-				DisplayName: Ares Stone Block
+				DisplayName: Arestone Block
 				Tooltip: The god of war's essence contained in a crimstone.
 			}
 
 			HelioStoneBlock: {
-				DisplayName: Helio Stone Block
+				DisplayName: Heliostone Block
 				Tooltip: The god of the sun's essence contained in a pearlstone.
 			}
 
 			NyxStoneBlock: {
-				DisplayName: Nyx Stone Block
+				DisplayName: Nyxstone Block
 				Tooltip: The goddess of the night's essence contained in an ebonstone.
 			}
 
 			HephStoneBlock: {
-				DisplayName: Heph Stone Block
+				DisplayName: Hephstone Block
 				Tooltip: The god of metalurgy's essence contained in a gutstone.
 			}
 
@@ -1363,18 +1364,19 @@ Mods: {
 			TapeWorm: A class of parasitic worms that have adapted to go unnoticed by the Corrosion. other than that, they are quite weak however they can withstand plenty.
 			CorruptCultist: An unfortunate soul whose intent turned evil. They may be one of the most sadistic beings out there.
 			CorrodedCultist: No one knows why they worship what's essentially a digestive evil, however they're as deadly as any other mysterious cult member.
-			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until its dead.
+			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until it's dead.
 			MarbleElemental: Earth elementals manifest through many forms by taking on the properties of different materials, such as this sturdy marble.
-			Aclugic: These slugs made out of acids move throughout the corrosion. spreading a viscous acidic substance that spreads the corrosion. their shell's however are hard and dangerous!
+			Aclugic: These slugs made out of acids move throughout the land, spreading a viscous acidic substance that spreads the Corrosion. Their shells, however are hard and dangerous!
 			SpikedWhiteSlime: These slimes are weaker than most, so they evolved spikes to compensate. Ancient civilizations figured out how to use those same spikes to make unique projectiles for crossbows.
-			WhiteSlime: A mutation can rarely occur in white slimes, these white slimes are heavily endangered due to their lack of hunting capabilities due to their missing spikes.
+			WhiteSlime: A mutation that can rarely occur in white slimes, these white slimes are heavily endangered due to their lack of hunting capabilities due to their missing spikes.
 			NavySlime: Dis navy slime evolved t' live nigh beaches 'n on ocean surfaces. its a delicate creature requirin' salt water 'n coral reefs t' live. Aye dis entry was written by a pirate, do ye 'ave a problem wit' dat?
-			HoneySlime: When a jungle slime falls into a pool of honey, they tend to absorb the honey into themselves, turning them into these unique honey slime. they have symbiosis with bee's.
+			HoneySlime: When a jungle slime falls into a pool of honey, they tend to absorb the honey into themselves, turning them into these unique slime. They have symbiosis with bees.
 			Sleye: A slime evolved to look like a demon eye, most creatures either dont attack it or they are afraid of it. seemingly they also developed lens.
-			SlimySkeleton: the Skeleton and White slime work together to hunt the living who invade the deep caverns. The slime gets food whilst the Skeleton gets to keep the bones of the victim.OnyxPenguin: The Onyx Penguins are a oddity. Onyx gemstones only come from the area where even lava becomes frozen. so how did these penguins get here?
-			JebelSlime: Native to mountainous terrain. they have adapted to the harsh environment by becoming fifty-percent rock.
-			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes, they often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
-			Sparrow: Sparrow's are resiliant birds that thrive on the high cliffs of the mountains.
+			SlimySkeleton: the Skeleton and White Slime work together to hunt the living who invade the deep caverns. The slime gets food while the Skeleton gets to keep the bones of the victim
+			OnyxPenguin: The Onyx Penguins are an oddity. Onyx gemstones only come from the area where even lava becomes frozen, so how did these penguins get here?
+			JebelSlime: Native to mountainous terrain, they have adapted to the harsh environment by becoming fifty-percent rock.
+			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes. They often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
+			Sparrow: Sparrows are resilient birds that thrive on the high cliffs of the mountains.
 		}
 
 		Biomes: {

@@ -59,14 +59,14 @@ public class CorrosionStalac : GenPass
                 {
                     if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 + 1].HasTile && Main.tile[num19, num22 - 1].Slope == SlopeType.Solid)
                     {
-                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.CorrosionStalac>());
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.GutstoneStalac>());
                     }
                 }
                 if (Main.tile[num19, num22 + 1].TileType == ModContent.TileType<Gutstone>() && Main.tile[num19, num22 + 1].HasTile && WorldGen.genRand.NextBool(3))
                 {
                     if (!Main.tile[num19, num22].HasTile && !Main.tile[num19, num22 - 1].HasTile && Main.tile[num19, num22 + 1].Slope == SlopeType.Solid)
                     {
-                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.CorrosionStalac>());
+                        Utils.PlaceCustomTight(num19, num22, (ushort)ModContent.TileType<Tiles.Natural.Corrosion.GutstoneStalac>());
                     }
                 }
             }

@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Common.Globals;
 
@@ -207,6 +208,142 @@ internal class XenonWorld : ModSystem
                 WorldGen.KillTile(xCoord, yCoord);
             }
             #endregion
-        }
-    }
+
+            #region spreading biomes
+            if (Main.tile[xCoord, yCoord].HasUnactuatedTile)
+            {
+                UpdateSpreadingBiomes(xCoord, yCoord);
+            }
+			#endregion
+		}
+	}
+    public static void UpdateSpreadingBiomes(int i, int j)
+    {
+        if (Main.hardMode)
+        {
+            if (Main.tile[i, j].IsActuated)
+            {
+                return;
+            }
+			int type = Main.tile[i, j].TileType;
+            // corruption
+			if (type == TileID.CorruptGrass || type == TileID.Ebonstone || type == TileID.CorruptThorns ||
+                type == TileID.Ebonsand || type == TileID.CorruptIce || type == TileID.CorruptHardenedSand ||
+                type == TileID.CorruptSandstone || type == TileID.CorruptJungleGrass ||
+                type == ModContent.TileType<NyxStone>())
+			{
+				bool flag = true;
+				while (flag)
+				{
+					flag = false;
+					int num11 = i + WorldGen.genRand.Next(-3, 4);
+					int num12 = j + WorldGen.genRand.Next(-3, 4);
+					if (Main.tile[num11, num12 - 1].TileType != TileID.Sunflower)
+					{
+						if (Main.tile[num11, num12].TileType == ModContent.TileType<OuranoStone>() ||
+                            Main.tile[num11, num12].TileType == ModContent.TileType<AresStone>() ||
+                            Main.tile[num11, num12].TileType == ModContent.TileType<HephStone>() ||
+                            Main.tile[num11, num12].TileType == ModContent.TileType<HelioStone>())
+						{
+							if (WorldGen.genRand.NextBool(2))
+							{
+								flag = true;
+							}
+							Main.tile[num11, num12].TileType = (ushort)ModContent.TileType<NyxStone>();
+							WorldGen.SquareTileFrame(num11, num12, true);
+							NetMessage.SendTileSquare(-1, num11, num12, 1);
+						}
+					}
+				}
+			}
+            // crimson
+			if (type == TileID.CrimsonGrass || type == TileID.Crimstone || type == TileID.CrimsonThorns ||
+				type == TileID.Crimsand || type == TileID.FleshIce || type == TileID.CrimsonHardenedSand ||
+				type == TileID.CrimsonSandstone || type == TileID.CrimsonJungleGrass ||
+				type == ModContent.TileType<AresStone>())
+			{
+				bool flag = true;
+				while (flag)
+				{
+					flag = false;
+					int num11 = i + WorldGen.genRand.Next(-3, 4);
+					int num12 = j + WorldGen.genRand.Next(-3, 4);
+					if (Main.tile[num11, num12 - 1].TileType != TileID.Sunflower)
+					{
+						if (Main.tile[num11, num12].TileType == ModContent.TileType<OuranoStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<NyxStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<HephStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<HelioStone>())
+						{
+							if (WorldGen.genRand.NextBool(2))
+							{
+								flag = true;
+							}
+							Main.tile[num11, num12].TileType = (ushort)ModContent.TileType<AresStone>();
+							WorldGen.SquareTileFrame(num11, num12, true);
+							NetMessage.SendTileSquare(-1, num11, num12, 1);
+						}
+					}
+				}
+			}
+            // hallow
+			if (type == TileID.HallowedGrass || type == TileID.Pearlstone || type == TileID.Pearlsand ||
+                type == TileID.HallowedIce || type == TileID.HallowHardenedSand || type == TileID.HallowSandstone ||
+				type == ModContent.TileType<HelioStone>())
+			{
+				bool flag = true;
+				while (flag)
+				{
+					flag = false;
+					int num11 = i + WorldGen.genRand.Next(-3, 4);
+					int num12 = j + WorldGen.genRand.Next(-3, 4);
+					if (Main.tile[num11, num12 - 1].TileType != TileID.Sunflower)
+					{
+						if (Main.tile[num11, num12].TileType == ModContent.TileType<OuranoStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<NyxStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<HephStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<AresStone>())
+						{
+							if (WorldGen.genRand.NextBool(2))
+							{
+								flag = true;
+							}
+							Main.tile[num11, num12].TileType = (ushort)ModContent.TileType<HelioStone>();
+							WorldGen.SquareTileFrame(num11, num12, true);
+							NetMessage.SendTileSquare(-1, num11, num12, 1);
+						}
+					}
+				}
+			}
+			// corrosion
+			if (type == ModContent.TileType<CorrosionGrass>() || type == ModContent.TileType<Gutstone>() || type == ModContent.TileType<Gutsand>() ||
+				type == ModContent.TileType<TanIce>() || type == ModContent.TileType<HardenedGutsand>() || type == ModContent.TileType<Gutsandstone>() ||
+				type == ModContent.TileType<CorrosionJungleGrass>() || type == ModContent.TileType<HephStone>())
+			{
+				bool flag = true;
+				while (flag)
+				{
+					flag = false;
+					int num11 = i + WorldGen.genRand.Next(-3, 4);
+					int num12 = j + WorldGen.genRand.Next(-3, 4);
+					if (Main.tile[num11, num12 - 1].TileType != TileID.Sunflower)
+					{
+						if (Main.tile[num11, num12].TileType == ModContent.TileType<OuranoStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<NyxStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<HelioStone>() ||
+							Main.tile[num11, num12].TileType == ModContent.TileType<AresStone>())
+						{
+							if (WorldGen.genRand.NextBool(2))
+							{
+								flag = true;
+							}
+							Main.tile[num11, num12].TileType = (ushort)ModContent.TileType<HephStone>();
+							WorldGen.SquareTileFrame(num11, num12, true);
+							NetMessage.SendTileSquare(-1, num11, num12, 1);
+						}
+					}
+				}
+			}
+		}
+	}
 }

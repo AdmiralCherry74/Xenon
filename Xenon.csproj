@@ -4,7 +4,7 @@
 	<Import Project="..\tModLoader.targets" />
 	<ItemGroup>
 	  <Reference Include="AltLibrary">
-	    <HintPath>..\ModAssemblies\AltLibrary_v2.1.1.2.dll</HintPath>
+	    <HintPath>..\..\ModReader\AltLibrary\AltLibrary.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 

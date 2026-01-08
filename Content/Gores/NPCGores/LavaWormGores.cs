@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace Xenon.Content.Gores.NPCgores;
+namespace Xenon.Content.Gores.NPCGores;
 public class LavaWormHeadGore : ModGore
 {
 }

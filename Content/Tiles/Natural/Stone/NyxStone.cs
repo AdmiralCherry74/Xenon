@@ -35,7 +35,6 @@ public class NyxStone : ModTile
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
         AddMapEntry(new Color(115, 107, 159));
         Main.tileBlockLight[Type] = true;
-        AddMapEntry(new Color(115, 107, 159));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
     }
@@ -44,4 +43,26 @@ public class NyxStone : ModTile
     {
         num = fail ? 1 : 3;
     }
+	public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
+	{
+		if (!fail && !effectOnly)
+		{
+			if (Main.tile[i, j - 1].TileType == ModContent.TileType<NyxStalac>())
+			{
+				WorldGen.KillTile(i, j - 1);
+				if (Main.tile[i, j - 2].TileType == ModContent.TileType<NyxStalac>())
+				{
+					WorldGen.KillTile(i, j - 2);
+				}
+			}
+			if (Main.tile[i, j + 1].TileType == ModContent.TileType<NyxStalac>())
+			{
+				WorldGen.KillTile(i, j + 1);
+				if (Main.tile[i, j + 2].TileType == ModContent.TileType<NyxStalac>())
+				{
+					WorldGen.KillTile(i, j + 2);
+				}
+			}
+		}
+	}
 }

@@ -9,7 +9,7 @@ public class Mountain : ModBiome
 {
 	public override string BackgroundPath => base.BackgroundPath;
 	public override string MapBackground => BackgroundPath;
-	public override int Music => MusicID.ConsoleMenu;
+	public override int Music => MusicID.OtherworldlyUnderground;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
     public override bool IsBiomeActive(Player player)

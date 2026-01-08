@@ -4,6 +4,9 @@ using Terraria.ModLoader;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.NPCs.FlyingAI;
+using Xenon.Content.NPCs.PassiveAI;
+using Xenon.Content.NPCs.PassiveAI.BirdAI;
+using Xenon.Content.NPCs.SlimeAI;
 using Xenon.Content.NPCs.SpiderAI;
 using Xenon.Content.NPCs.WormAI;
 
@@ -13,6 +16,13 @@ internal class XenonGlobalNPC : GlobalNPC
 {
 	public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
 	{
+		if (spawnInfo.Player.InModBiome<Mountain>())
+		{
+			pool.Clear();
+			pool.Add(ModContent.NPCType<Sparrow>(), 0.4f);
+			pool.Add(ModContent.NPCType<JebelSlime>(), 0.4f);
+			pool.Add(ModContent.NPCType<Chipmunk>(), 0.4f);
+		}
 		if (spawnInfo.Player.InModBiome<Corrosion>())
 		{
 			pool.Clear();

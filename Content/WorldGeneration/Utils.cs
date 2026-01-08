@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
+using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -81,7 +82,12 @@ public class Utils
 		else if (WorldGen.SolidTile(x, y + 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y - 1].HasTile)
 		{
 			if (Main.tile[x, y + 1].TileType == ModContent.TileType<Tiles.Natural.Stone.Rhyolite>() ||
-				Main.tile[x, y + 1].TileType == ModContent.TileType<Gutstone>())
+				Main.tile[x, y + 1].TileType == ModContent.TileType<Gutstone>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<OuranoStone>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<NyxStone>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<HelioStone>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<HephStone>() ||
+				Main.tile[x, y + 1].TileType == ModContent.TileType<AresStone>())
 			{
 				if (preferSmall)
 				{
