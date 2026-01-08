@@ -28,7 +28,7 @@ internal class StalacHook : ModHook
 
 	private static void IL_AddStalacCheck(ILContext il)
 	{
-		HookUtilities.AddAlternativeIdChecks(il, TileID.Stalactite, id => TileSets.Stalac.Contains(id));
+		HookUtilities.AddAlternativeIdChecks(il, TileID.Stalactite, id => Common.Data.TileSets.Stalac.Contains(id));
 	}
 
 	private static void On_WorldGen_GetDesiredStalactiteStyle(On_WorldGen.orig_GetDesiredStalagtiteStyle orig, int x, int j, out bool fail, out int desiredStyle, out int height, out int y)

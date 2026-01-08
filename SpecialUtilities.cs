@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Stone;
+using Xenon.Content.Tiles.Natural.Stone.Mossy;
 
 namespace Xenon;
 
@@ -264,6 +265,11 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<OuranoStone>();
 			}
+			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
+				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
+			}
 		}
 		// convert to corruption
 		if (convert == ConversionType.Corruption)
@@ -278,6 +284,11 @@ public static class SpecialUtilities
 				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<NyxStone>();
+			}
+			if (type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHephStone>() ||
+				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<MossyNyxStone>();
 			}
 		}
 		// convert to crimson
@@ -294,6 +305,11 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<AresStone>();
 			}
+			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
+				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyOuranoStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<MossyAresStone>();
+			}
 		}
 		// convert to hallow
 		if (convert == ConversionType.Hallow)
@@ -308,6 +324,11 @@ public static class SpecialUtilities
 				type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<AresStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<HelioStone>();
+			}
+			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
+				type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyAresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<MossyHelioStone>();
 			}
 		}
 		// convert to jungle/mud

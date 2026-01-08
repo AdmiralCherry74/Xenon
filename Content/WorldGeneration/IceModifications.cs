@@ -159,7 +159,7 @@ public class IceChestHook : ModHook
 
 	private void IL_WorldGen_AddBuriedChest_int_int_int_bool_int_bool_ushort(MonoMod.Cil.ILContext il)
 	{
-		HookUtilities.AddAlternativeIdChecks(il, TileID.IceBlock, id => TileSets.Ice.Contains(id));
+		HookUtilities.AddAlternativeIdChecks(il, TileID.IceBlock, id => Common.Data.TileSets.Ice.Contains(id));
 	}
 }
 
