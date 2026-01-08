@@ -305,7 +305,7 @@ public class OtherSideOceanPass_OceanSand : GenPass
 				}
 				for (int k = 0; k < (Main.worldSurface + Main.rockLayer) / 2.0; k++)
 				{
-					if (Main.tile[j, k].HasTile)
+					if (WorldGen.InWorld(j, k) && Main.tile[j, k].HasTile)
 					{
 						if (j == (leftSide + rightSide) / 2 && WorldGen.genRand.Next(6) == 0)
 						{
@@ -327,7 +327,10 @@ public class OtherSideOceanPass_OceanSand : GenPass
 						{
 							if (j > leftSide + WorldGen.genRand.Next(5) && j < rightSide - WorldGen.genRand.Next(5))
 							{
-								Main.tile[j, l].TileType = TileID.Sand;
+								if (WorldGen.InWorld(j, l))
+								{
+									Main.tile[j, l].TileType = TileID.Sand;
+								}
 							}
 						}
 						break;
