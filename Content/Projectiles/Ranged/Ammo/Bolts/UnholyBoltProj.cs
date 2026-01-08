@@ -9,9 +9,9 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Projectiles.Ammo.Bolts
+namespace Xenon.Content.Projectiles.Ranged.Ammo.Bolts
 {
-    public class FireBoltProj : ModProjectile
+    public class UnholyBoltProj : ModProjectile
     {
 
         public override void SetDefaults()
@@ -22,6 +22,7 @@ namespace Xenon.Content.Projectiles.Ammo.Bolts
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.timeLeft = 1200;
+            Projectile.penetrate = 6;
         }
 
         public override void AI()
@@ -44,33 +45,12 @@ namespace Xenon.Content.Projectiles.Ammo.Bolts
         }
         public override void PostAI()
         {
-            Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Torch, default, 1);
+            Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Corruption, default, 1);
             d.noGravity = true;
             d.fadeIn = 1f;
-            d.velocity *= 0.25f;
-            d.velocity += Projectile.velocity * 0.25f;
+            d.velocity *= 0.50f;
+            d.velocity += Projectile.velocity * 0.50f;
         }
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, default, 1);
-                d.noGravity = true;
-                d.fadeIn = 1.3f;
-            }
-            target.AddBuff(BuffID.OnFire, 120);
-        }
-        public override void OnHitPlayer(Player target, Player.HurtInfo info)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, default, 1);
-                d.noGravity = true;
-                d.fadeIn = 1.3f;
-            }
-            target.AddBuff(BuffID.OnFire, 120);
-        }
-
         public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);

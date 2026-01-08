@@ -1278,6 +1278,16 @@ Mods: {
 					"Fit for a wind warrior"
 					'''
 			}
+
+			BunnyStaff: {
+				DisplayName: Forest Staff
+				Tooltip: Summons an armoured bunny to fight for you
+			}
+
+			FrostNade: {
+				DisplayName: Frost Grenade
+				Tooltip: Inflicts frostburn
+			}
 		}
 
 		NPCs: {
@@ -1440,6 +1450,8 @@ Mods: {
 			MetalBoltProj.DisplayName: Metal Bolt
 			VitriolicPowder.DisplayName: Vitriolic Powder
 			UnholyBoltProj.DisplayName: Unholy Bolt
+			BunnyMinionProj.DisplayName: Armored Bunny
+			FrostNadeProj.DisplayName: Frost Grenade
 		}
 
 		Buffs: {
@@ -1511,6 +1523,11 @@ Mods: {
 			WraithFlash: {
 				DisplayName: Irascible Wraith
 				Description: You move around faster, keep attacking to keep this up!
+			}
+
+			BunnyMinionBuff: {
+				DisplayName: Armoured Bunny
+				Description: The armoured bunny will fight for you
 			}
 		}
 	}

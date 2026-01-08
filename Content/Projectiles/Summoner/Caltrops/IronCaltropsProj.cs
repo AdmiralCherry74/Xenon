@@ -32,8 +32,6 @@ public class IronCaltropsProj : ModProjectile
         {
             angularVelocity = 0;
         }
-        Console.WriteLine(Projectile.velocity.X);
-        Console.WriteLine(Projectile.velocity.Y);
         Projectile.rotation += angularVelocity * Projectile.direction;
         Projectile.ai[0] += 1f; // Use a timer to wait 15 ticks before applying gravity.
         if (Projectile.ai[0] >= 15f)
