@@ -9,10 +9,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Projectiles.Ammo.Bolts
+namespace Xenon.Content.Projectiles.Ranged.Ammo.Bolts
 {
-    public class MetalBoltProj : ModProjectile
+    public class ExampleBoltProj : ModProjectile
     {
+        //Selene here. This was adapted from Example mods arrow. i kept some of the comments so I can remember what is doing what.
+        //Every Bolt will use this Example Bolt as a way to have crossbow's use any type of bolt. Like Fire bolts
+        //remove comments when making a proper bolt!
         public override void SetStaticDefaults()
         {
             // If this arrow would have strong effects (like Holy Arrow pierce), we can make it fire fewer projectiles from Daedalus Stormbow for game balance considerations like this:
@@ -21,8 +24,8 @@ namespace Xenon.Content.Projectiles.Ammo.Bolts
 
         public override void SetDefaults()
         {
-            Projectile.width = 10; // The width of projectile hitbox
-            Projectile.height = 22; // The height of projectile hitbox
+            Projectile.width = 10;
+            Projectile.height = 22;
 
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Ranged;

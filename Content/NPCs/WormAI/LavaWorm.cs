@@ -12,6 +12,7 @@ using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.NPCs.Template;
 using Xenon.Content.Biomes;
+using Xenon.Content.Gores.NPCGores;
 
 namespace Xenon.Content.NPCs.WormAI;
 
