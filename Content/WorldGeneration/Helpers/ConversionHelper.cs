@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Content.WorldGeneration.Helpers;
 
@@ -38,7 +39,8 @@ public static class ConversionHelper
                     ConvertTile<Gutsand>(x, y, type => TileID.Sets.Conversion.Sand[type]) ||
                     ConvertTile<HardenedGutsand>(x, y, type => TileID.Sets.Conversion.HardenedSand[type], false) ||
                     ConvertTile<Gutsandstone>(x, y, type => TileID.Sets.Conversion.Sandstone[type], false) ||
-                    ConvertTile<CorrosionThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false);
+                    ConvertTile<CorrosionThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false) ||
+                    ConvertTile<HephStone>(x, y, type => Common.Data.TileSets.MountainStone[type], false);
             }
         }
     }

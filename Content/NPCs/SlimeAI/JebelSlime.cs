@@ -1,5 +1,4 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.GameContent.Bestiary;
@@ -8,9 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 
 namespace Xenon.Content.NPCs.SlimeAI
 {
@@ -50,7 +47,7 @@ namespace Xenon.Content.NPCs.SlimeAI
 
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.WhiteSlime")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.JebelSlime")),
             ]);
         }
 

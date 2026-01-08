@@ -32,18 +32,18 @@ public class Gutstone : ModTile
     {
         if (!fail && !effectOnly)
         {
-            if (Main.tile[i, j - 1].TileType == ModContent.TileType<CorrosionStalac>())
+            if (Main.tile[i, j - 1].TileType == ModContent.TileType<GutstoneStalac>())
             {
                 WorldGen.KillTile(i, j - 1);
-                if (Main.tile[i, j - 2].TileType == ModContent.TileType<CorrosionStalac>())
+                if (Main.tile[i, j - 2].TileType == ModContent.TileType<GutstoneStalac>())
                 {
                     WorldGen.KillTile(i, j - 2);
                 }
             }
-            if (Main.tile[i, j + 1].TileType == ModContent.TileType<CorrosionStalac>())
+            if (Main.tile[i, j + 1].TileType == ModContent.TileType<GutstoneStalac>())
             {
                 WorldGen.KillTile(i, j + 1);
-                if (Main.tile[i, j + 2].TileType == ModContent.TileType<CorrosionStalac>())
+                if (Main.tile[i, j + 2].TileType == ModContent.TileType<GutstoneStalac>())
                 {
                     WorldGen.KillTile(i, j + 2);
                 }

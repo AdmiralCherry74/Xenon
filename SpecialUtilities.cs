@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon;
 
@@ -258,6 +259,11 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<Quicksand>();
 			}
+			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
+				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<OuranoStone>();
+			}
 		}
 		// convert to corruption
 		if (convert == ConversionType.Corruption)
@@ -267,6 +273,11 @@ public static class SpecialUtilities
 				type == ModContent.TileType<PowderedSnow>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Ebonquicksand>();
+			}
+			if (type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HephStone>() ||
+				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<NyxStone>();
 			}
 		}
 		// convert to crimson
@@ -278,6 +289,11 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<Crimquicksand>();
 			}
+			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
+				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<OuranoStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<AresStone>();
+			}
 		}
 		// convert to hallow
 		if (convert == ConversionType.Hallow)
@@ -287,6 +303,11 @@ public static class SpecialUtilities
 				type == ModContent.TileType<PowderedSnow>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Pearlquicksand>();
+			}
+			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
+				type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<AresStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<HelioStone>();
 			}
 		}
 		// convert to jungle/mud

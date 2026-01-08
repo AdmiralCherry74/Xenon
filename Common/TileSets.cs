@@ -9,6 +9,16 @@ namespace Xenon.Common;
 
 internal class TileSets
 {
-	public static readonly HashSet<int> Stalac = new() { ModContent.TileType<RhyoliteStalactgmites>(), ModContent.TileType<FrozenLavaStalac>(), ModContent.TileType<CorrosionStalac>() };
+	public static readonly HashSet<int> Stalac = new()
+	{
+		ModContent.TileType<RhyoliteStalactgmites>(),
+		ModContent.TileType<FrozenLavaStalac>(),
+		ModContent.TileType<GutstoneStalac>(),
+		ModContent.TileType<OuranoStalac>(),
+		ModContent.TileType<NyxStalac>(),
+		ModContent.TileType<HephStalac>(),
+		ModContent.TileType<AresStalac>(),
+		ModContent.TileType<HelioStalac>()
+	};
 	public static readonly HashSet<int> Ice = new() { ModContent.TileType<FrozenLava>() };
 }

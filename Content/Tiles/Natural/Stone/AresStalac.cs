@@ -2,11 +2,10 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 
-namespace Xenon.Content.Tiles.Natural.Corrosion;
+namespace Xenon.Content.Tiles.Natural.Stone;
 
-public class CorrosionStalac : ModTile
+public class AresStalac : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -15,11 +14,10 @@ public class CorrosionStalac : ModTile
         Main.tileFrameImportant[Type] = true;
         Main.tileObsidianKill[Type] = true;
         TileID.Sets.BreakableWhenPlacing[Type] = true;
-        Main.tileMerge[ModContent.TileType<Gutstone>()][Type] = true;
-        Main.tileMerge[Type][ModContent.TileType<Gutstone>()] = true;
-        DustType = ModContent.DustType<CorrosionDust>();
-        AddMapEntry(new Color(127, 115, 33));
-		//AltLibrarySupport.TryAddStalactite(Type, ModContent.TileType<Gutstone>(), ModContent.TileType<HardenedGutsand>(), ModContent.TileType<Gutsandstone>());
+        Main.tileMerge[ModContent.TileType<AresStone>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
+        DustType = DustID.Crimstone;
+		AddMapEntry(new Color(160, 95, 85));
 	}
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {

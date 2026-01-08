@@ -33,7 +33,11 @@ public class MossyOuranoStone : ModTile
         Main.tileMerge[Type][ModContent.TileType<HephStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
         Main.tileBlockLight[Type] = true;
-        AddMapEntry(new Color(13, 101, 46));
+		Main.tileBrick[Type] = true;
+		TileID.Sets.NeedsGrassFraming[Type] = true;
+		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<OuranoStone>();
+		TileID.Sets.Grass[Type] = true;
+		AddMapEntry(new Color(13, 101, 46));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
     }
