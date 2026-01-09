@@ -1289,6 +1289,71 @@ Mods: {
 				DisplayName: Frost Grenade
 				Tooltip: Inflicts frostburn
 			}
+
+			CreamQuicksandBlock: {
+				DisplayName: Cream Quicksand Block
+				Tooltip: Baked Sand that makes you fall through it
+			}
+
+			HestiaStoneBlock: {
+				DisplayName: Hestiastone Block
+				Tooltip: The god of the Hearth's essence contained in a creamstone
+			}
+
+			LivingJacarandawoodDoor: {
+				DisplayName: Living Jacarandawood Door
+				Tooltip: ""
+			}
+
+			LivingJacarandaleafWallUnsafe: {
+				DisplayName: Living Jacarandaleaf Wall Unsafe
+				Tooltip: ""
+			}
+
+			LivingJacarandawoodWallUnsafe: {
+				DisplayName: Living Jacarandawood Wall Unsafe
+				Tooltip: ""
+			}
+
+			LivingJacarandaleafWand: {
+				DisplayName: Living Jacarandaleaf Wand
+				Tooltip: ""
+			}
+
+			LivingJacarandawoodWand: {
+				DisplayName: Living Jacarandawood Wand
+				Tooltip: ""
+			}
+
+			TestingDoorBlock: {
+				DisplayName: Testing Door Block
+				Tooltip: Places the locked Living jacaranda door
+			}
+
+			LivingWoodenSword: {
+				DisplayName: Living Wooden Sword
+				Tooltip: This sword looks like it may fit in somewhere
+			}
+
+			AridPowder: {
+				DisplayName: Arid Powder
+				Tooltip: ""
+			}
+
+			SilverDoor: {
+				DisplayName: Silver Door
+				Tooltip: A door that can only be opened via wires
+			}
+
+			TungstenDoor: {
+				DisplayName: Tungsten Door
+				Tooltip: A door that can only be opened via wires
+			}
+
+			GravelBlock: {
+				DisplayName: Gravel Block
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1352,6 +1417,13 @@ Mods: {
 				Onyx: Mods.Xenon.Tiles.PlacedGems.Onyx
 				Lapis: Mods.Xenon.Tiles.PlacedGems.Lapis
 			}
+
+			LockedLivingJacarandawoodDoor.MapEntry: Locked Living JacarandawoodDoor
+			SwordLeverWild.MapEntry: Suspicious Looking Stone
+			SilverDoorClosed.MapEntry: Silver Door
+			SilverDoorOpened.MapEntry: Silver Door
+			TungstenDoorClosed.MapEntry: Tungsten Door
+			TungstenDoorOpened.MapEntry: Tungsten Door
 		}
 
 		Bestiary: {
@@ -1454,6 +1526,9 @@ Mods: {
 			UnholyBoltProj.DisplayName: Unholy Bolt
 			BunnyMinionProj.DisplayName: Armored Bunny
 			FrostNadeProj.DisplayName: Frost Grenade
+			AridPowderProj.DisplayName: Arid Powder
+			VitriolicPowderProj.DisplayName: Vitriolic Powder
+			GravelBallFallingProjectile.DisplayName: Gravel Ball
 		}
 
 		Buffs: {

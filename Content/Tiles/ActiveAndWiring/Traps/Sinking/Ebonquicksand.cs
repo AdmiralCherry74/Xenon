@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile;
 using Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 public class Ebonquicksand : ModTile
@@ -19,7 +20,12 @@ public class Ebonquicksand : ModTile
 		Main.tileMerge[Type][TileID.CorruptSandstone] = true;
 		Main.tileMerge[TileID.CorruptHardenedSand][Type] = true;
 		Main.tileMerge[Type][TileID.CorruptHardenedSand] = true;
-		MineResist = 0.5f;
+        Main.tileMerge[Type][ModContent.TileType<Quicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Crimquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Pearlquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Gutquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<CreamQuicksand>()] = true;
+        MineResist = 0.5f;
 		DustType = DustID.CorruptionThorns;
 
 		TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;

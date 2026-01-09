@@ -7,6 +7,9 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.OresandGems;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
 
 namespace Xenon.Common.Systems;
 
@@ -18,7 +21,12 @@ internal class BiomeTileCounts : ModSystem
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Quicksand>()];
-		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutquicksand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<CreamQuicksand>()];
+        Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<PowderedSnow>()];
@@ -49,10 +57,12 @@ internal class BiomeTileCounts : ModSystem
 						tileCounts[ModContent.TileType<AresStone>()] +
 						tileCounts[ModContent.TileType<HelioStone>()] +
 						tileCounts[ModContent.TileType<HephStone>()] +
+                        tileCounts[ModContent.TileType<HestiaStone>()] +
                         tileCounts[ModContent.TileType<MossyOuranoStone>()] +
                         tileCounts[ModContent.TileType<MossyNyxStone>()] +
                         tileCounts[ModContent.TileType<MossyAresStone>()] +
                         tileCounts[ModContent.TileType<MossyHelioStone>()] +
-                        tileCounts[ModContent.TileType<MossyHephStone>()];
+                        tileCounts[ModContent.TileType<MossyHephStone>()] +
+                        tileCounts[ModContent.TileType<MossyHestiaStone>()];
     }
 }

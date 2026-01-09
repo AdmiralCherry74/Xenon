@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon;
 
@@ -201,7 +202,8 @@ public static class SpecialUtilities
 			{
 				if (Main.tile[i, j].TileType == ModContent.TileType<Quicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Crimquicksand>() ||
 					Main.tile[i, j].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Pearlquicksand>() ||
-					Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() || Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>())
+                    Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<CreamQuicksand>() ||
+                    Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() || Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>()) 
 				{
 					int num5 = 0;
 					vector2.X = i * 16;
@@ -225,7 +227,9 @@ public static class SpecialUtilities
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Pearlquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Pearlquicksand>() ||
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Crimquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Crimquicksand>() ||
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() ||
-			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() ||
+            Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() ||
+            Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<CreamQuicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<CreamQuicksand>() ||
+            Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() ||
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>())
 		{
 			return true;

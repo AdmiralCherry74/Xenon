@@ -7,8 +7,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Projectiles.Tools.ConvertingTools.Powders;
 
-namespace Xenon.Content.Items.Tools.ConversionTools
+namespace Xenon.Content.Items.Tools.ConversionTools.Powders
 {
     public class VitriolicPowder : ModItem
     {
@@ -22,7 +23,7 @@ namespace Xenon.Content.Items.Tools.ConversionTools
             Item.shootSpeed = 4f;
             Item.consumable = true;
             Item.stack = 9999;
-            Item.shoot = ModContent.ProjectileType<Projectiles.Tools.ConvertingTools.VitriolicPowder>();
+            Item.shoot = ModContent.ProjectileType<VitriolicPowderProj>();
             Item.value = Item.sellPrice(copper: 20);
         }
 

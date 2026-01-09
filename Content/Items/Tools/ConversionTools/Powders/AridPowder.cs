@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Projectiles.Tools.ConvertingTools.Powders;
+
+namespace Xenon.Content.Items.Tools.ConversionTools.Powders
+{
+    public class AridPowder : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.ResearchUnlockCount = 25;
+            Item.UseSound = SoundID.Item1;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
+            Item.shootSpeed = 4f;
+            Item.consumable = true;
+            Item.stack = 9999;
+            Item.shoot = ModContent.ProjectileType<AridPowderProj>();
+            Item.value = Item.sellPrice(copper: 20);
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe(5).AddIngredient(ItemID.JungleSpores).AddTile(TileID.Bottles).Register();
+        }
+    }
+}

@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.WorldGeneration.Helpers;
 
-namespace Xenon.Content.Projectiles.Tools.ConvertingTools;
+namespace Xenon.Content.Projectiles.Tools.ConvertingTools.Solutions;
 
 public class CorrosionSpray : ModProjectile
 {

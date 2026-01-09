@@ -6,6 +6,8 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Snow;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
 
 namespace Xenon.Common.Data;
 
@@ -16,16 +18,18 @@ internal class TileSets
 		ModContent.TileType<NyxStone>(),
 		ModContent.TileType<HelioStone>(),
 		ModContent.TileType<AresStone>(),
-		ModContent.TileType<HephStone>()
-	);
+		ModContent.TileType<HephStone>(),
+		ModContent.TileType<HestiaStone>()
+    );
 
 	public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
 		ModContent.TileType<MossyOuranoStone>(),
 		ModContent.TileType<MossyNyxStone>(),
 		ModContent.TileType<MossyHelioStone>(),
 		ModContent.TileType<MossyAresStone>(),
-		ModContent.TileType<MossyHephStone>()
-	);
+		ModContent.TileType<MossyHephStone>(),
+		ModContent.TileType<MossyHestiaStone>()
+    );
 
 	public static readonly HashSet<int> Stalac = new()
 	{

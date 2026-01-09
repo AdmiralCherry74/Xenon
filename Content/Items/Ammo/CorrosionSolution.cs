@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Projectiles.Tools.ConvertingTools;
+using Xenon.Content.Projectiles.Tools.ConvertingTools.Solutions;
 
 namespace Xenon.Content.Items.Ammo;
 

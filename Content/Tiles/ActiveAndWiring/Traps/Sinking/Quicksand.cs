@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 public class Quicksand : ModTile
@@ -18,7 +19,12 @@ public class Quicksand : ModTile
 		Main.tileMerge[Type][TileID.Sandstone] = true;
 		Main.tileMerge[TileID.HardenedSand][Type] = true;
 		Main.tileMerge[Type][TileID.HardenedSand] = true;
-		MineResist = 0.5f;
+		Main.tileMerge[Type][ModContent.TileType<Ebonquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Crimquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Pearlquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Gutquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<CreamQuicksand>()] = true;
+        MineResist = 0.5f;
 		DustType = DustID.SandstormInABottle;
 
 		TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
@@ -28,8 +34,6 @@ public class Quicksand : ModTile
 		TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
 		TileID.Sets.GeneralPlacementTiles[Type] = false;
 		TileID.Sets.ChecksForMerge[Type] = true;
-
-		RegisterItemDrop(ModContent.ItemType<QuicksandBlock>());
 	}
 	public override bool HasWalkDust() => Main.rand.NextBool(3);
 

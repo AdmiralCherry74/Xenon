@@ -8,9 +8,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Projectiles.Tools.ConvertingTools
+namespace Xenon.Content.Projectiles.Tools.ConvertingTools.Powders
 {
-    public class VitriolicPowder : ModProjectile
+    public class AridPowderProj : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -40,7 +40,7 @@ namespace Xenon.Content.Projectiles.Tools.ConvertingTools
             if (Projectile.ai[1] <= 1f)
             {
                 Projectile.ai[1] = 2f;
-                int dustType = ModContent.DustType<Dusts.CorrosionSolutionDust>();
+                int dustType = DustID.JungleSpore;
                 int num90 = 30;
                 for (int num91 = 0; num91 < num90; num91++)
                 {
@@ -52,9 +52,9 @@ namespace Xenon.Content.Projectiles.Tools.ConvertingTools
             bool flag34 = Main.myPlayer == Projectile.owner;
 
             int num988 = (int)(Projectile.position.X / 16f) - 1;
-            int num999 = (int)((Projectile.position.X + (float)Projectile.width) / 16f) + 2;
+            int num999 = (int)((Projectile.position.X + Projectile.width) / 16f) + 2;
             int num1010 = (int)(Projectile.position.Y / 16f) - 1;
-            int num1021 = (int)((Projectile.position.Y + (float)Projectile.height) / 16f) + 2;
+            int num1021 = (int)((Projectile.position.Y + Projectile.height) / 16f) + 2;
             if (num988 < 0)
             {
                 num988 = 0;
@@ -71,7 +71,7 @@ namespace Xenon.Content.Projectiles.Tools.ConvertingTools
             {
                 num1021 = Main.maxTilesY;
             }
-            Vector2 vector57 = default(Vector2);
+            Vector2 vector57 = default;
             for (int num1032 = num988; num1032 < num999; num1032++)
             {
                 for (int num1043 = num1010; num1043 < num1021; num1043++)

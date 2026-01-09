@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Hooks;
 
@@ -22,7 +23,8 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Ebonquicksand>()] = false;
         Main.tileSolid[ModContent.TileType<Pearlquicksand>()] = false;
 		Main.tileSolid[ModContent.TileType<PowderedSnow>()] = false;
-        Main.tileSolid[ModContent.TileType<Gutquicksand>()] = false;
+		Main.tileSolid[ModContent.TileType<Gutquicksand>()] = false;
+        Main.tileSolid[ModContent.TileType<CreamQuicksand>()] = false;
         orig.Invoke(self, sw);
 	}
 
@@ -35,7 +37,8 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Ebonquicksand>()] = true;
         Main.tileSolid[ModContent.TileType<Pearlquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<PowderedSnow>()] = true;
-        Main.tileSolid[ModContent.TileType<Gutquicksand>()] = true;
+		Main.tileSolid[ModContent.TileType<Gutquicksand>()] = true;
+        Main.tileSolid[ModContent.TileType<CreamQuicksand>()] = true;
     }
 
 	private void On_Liquid_Update(On_Liquid.orig_Update orig, Liquid self)
@@ -46,7 +49,8 @@ internal class TileSolidHook : ModHook
 		Main.tileSolid[ModContent.TileType<Ebonquicksand>()] = true;
         Main.tileSolid[ModContent.TileType<Pearlquicksand>()] = true;
 		Main.tileSolid[ModContent.TileType<PowderedSnow>()] = true;
-        Main.tileSolid[ModContent.TileType<Gutquicksand>()] = true;
+		Main.tileSolid[ModContent.TileType<Gutquicksand>()] = true;
+        Main.tileSolid[ModContent.TileType<CreamQuicksand>()] = true;
         orig.Invoke(self);
 	}
 }
