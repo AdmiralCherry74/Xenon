@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Tiles.Natural.Stone.Mossy;
@@ -40,7 +41,8 @@ public class MossyOuranoStone : ModTile
 		AddMapEntry(new Color(13, 101, 46));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
-    }
+		RegisterItemDrop(ModContent.ItemType<OuranoStoneBlock>());
+	}
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

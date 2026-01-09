@@ -39,7 +39,7 @@ namespace Xenon.Content.NPCs.SlimeAI
             AIType = NPCID.BlueSlime;
             AnimationType = NPCID.BlueSlime;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+			BannerItem = ModContent.ItemType<JebelSlimeBanner>();
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -67,7 +67,7 @@ namespace Xenon.Content.NPCs.SlimeAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime)
+            if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime && Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].HasTile)
             {
                 return 0.75f;
             }

@@ -1290,6 +1290,17 @@ Mods: {
 				Tooltip: Inflicts frostburn
 			}
 
+			JebelSlimeBanner: {
+				DisplayName: Jebel Slime Banner
+				Tooltip: ""
+			}
+
+			JacarandaWood: {
+				DisplayName: Jacaranda Wood
+				Tooltip: ""
+			}
+		}
+
 			CreamQuicksandBlock: {
 				DisplayName: Cream Quicksand Block
 				Tooltip: Baked Sand that makes you fall through it

@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Tiles.Natural.Stone.Mossy;
@@ -39,7 +40,8 @@ public class MossyHephStone : ModTile
         AddMapEntry(new Color(105, 99, 0));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
-    }
+		RegisterItemDrop(ModContent.ItemType<HephStoneBlock>());
+	}
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

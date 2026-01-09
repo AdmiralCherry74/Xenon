@@ -111,14 +111,17 @@ public class MonsterBanner : ModTile
 				case 15:
 					t = ModContent.NPCType<SnowLeopard>();
 					break;
-				case 17:
+				case 16:
 					t = ModContent.NPCType<SporeSlime>();
 					break;
-				case 18:
+				case 17:
 					t = ModContent.NPCType<StomachBug>();
 					break;
-				case 19:
+				case 18:
 					t = ModContent.NPCType<TapeWormHead>();
+					break;
+				case 19:
+					t = ModContent.NPCType<JebelSlime>();
 					break;
 				default:
                     t = 0;
