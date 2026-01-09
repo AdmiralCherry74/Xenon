@@ -1289,6 +1289,16 @@ Mods: {
 				DisplayName: Frost Grenade
 				Tooltip: Inflicts frostburn
 			}
+
+			JebelSlimeBanner: {
+				DisplayName: Jebel Slime Banner
+				Tooltip: ""
+			}
+
+			JacarandaWood: {
+				DisplayName: Jacaranda Wood
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {

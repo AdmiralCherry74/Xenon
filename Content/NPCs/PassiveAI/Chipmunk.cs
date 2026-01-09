@@ -66,7 +66,7 @@ namespace Xenon.Content.NPCs.PassiveAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime)
+            if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime && Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].HasTile)
             {
                 return 1f;
             }

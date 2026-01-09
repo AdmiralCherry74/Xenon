@@ -66,7 +66,6 @@ public class MountainStalac : GenPass
 		}
 	}
 }
-
 public class OtherSideOceanPass_Beaches : GenPass
 {
 	public OtherSideOceanPass_Beaches() : base("Other Side Beaches", 10f)
@@ -272,9 +271,17 @@ public class OtherSideOceanPass_OceanSand : GenPass
 			{
 				leftSide = 0;
 			}
+			if (leftSide > Main.maxTilesX)
+			{
+				leftSide = Main.maxTilesX;
+			}
 			if (rightSide > Main.maxTilesX)
 			{
 				rightSide = Main.maxTilesX;
+			}
+			if (rightSide < 0)
+			{
+				rightSide = 0;
 			}
 			//if (i == 0)
 			//{
@@ -340,7 +347,6 @@ public class OtherSideOceanPass_OceanSand : GenPass
 		}
 	}
 }
-
 public class MountainsGenPass : GenPass
 {
 	public MountainsGenPass() : base("Mountains", 10f)
@@ -380,9 +386,22 @@ public class MountainsGenPass : GenPass
 				Tile tile = Main.tile[q, z];
 				// mossy stone logic
 				int grassLine = (int)(Main.worldSurface - 140);
-				if (tile.TileType == ModContent.TileType<OuranoStone>() &&
-					z > grassLine)
+				if (tile.TileType == ModContent.TileType<OuranoStone>())
 				{
+					if (z < grassLine)
+					{
+						if ((tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
+							(tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
+							(tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
+							(tile.HasTile && !Main.tile[q + 1, z].HasTile) ||
+							(tile.HasTile && !Main.tile[q - 1, z - 1].HasTile) ||
+							(tile.HasTile && !Main.tile[q - 1, z + 1].HasTile) ||
+							(tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
+							(tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
+						{
+							tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
+						}
+					}
 					if ((tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
 						(tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
 						(tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
@@ -392,7 +411,7 @@ public class MountainsGenPass : GenPass
 						(tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
 						(tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
 					{
-						tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
+						WorldGen.GrowTree(q, z - 1);
 					}
 				}
 			}
