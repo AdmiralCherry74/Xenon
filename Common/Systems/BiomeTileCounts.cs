@@ -4,7 +4,6 @@ using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.OresandGems;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
@@ -17,7 +16,7 @@ internal class BiomeTileCounts : ModSystem
 {
     public int CorrosionTiles { get; private set; }
 	public int FrozenLavaTiles { get; private set; }
-    public int MountainTiles { get; private set; }
+    public int MountainTiles { get; set; }
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];

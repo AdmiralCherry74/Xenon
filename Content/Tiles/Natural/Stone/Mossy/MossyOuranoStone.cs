@@ -38,7 +38,7 @@ public class MossyOuranoStone : ModTile
 		TileID.Sets.NeedsGrassFraming[Type] = true;
 		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<OuranoStone>();
 		TileID.Sets.Grass[Type] = true;
-		AddMapEntry(new Color(13, 101, 46));
+		AddMapEntry(new Color(190, 223, 232));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
 		RegisterItemDrop(ModContent.ItemType<OuranoStoneBlock>());

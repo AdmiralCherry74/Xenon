@@ -6,6 +6,12 @@
 	  <Reference Include="AltLibrary">
 	    <HintPath>..\..\ModReader\AltLibrary\AltLibrary.dll</HintPath>
 	  </Reference>
+	  <Reference Include="Avalon">
+	    <HintPath>..\..\ModReader\Avalon\Avalon.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TheConfectionRebirth">
+	    <HintPath>..\..\ModReader\TheConfectionRebirth\TheConfectionRebirth.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

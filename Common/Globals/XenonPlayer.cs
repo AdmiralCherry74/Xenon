@@ -173,7 +173,7 @@ public class XenonPlayer : ModPlayer
 			return;
 
 		bool mounted = false;
-		if (Player.mount.Type > 0 && MountID.Sets.Cart[Player.mount.Type] && Math.Abs(Player.velocity.X) > 5f)
+		if (Player.mount.Type > MountID.Rudolph && MountID.Sets.Cart[Player.mount.Type] && Math.Abs(Player.velocity.X) > 5f)
 			mounted = true;
 
 		Vector2 vector = SpecialUtilities.QuicksandTiles(Player.position, Player.velocity, Player.width, Player.height);

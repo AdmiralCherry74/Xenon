@@ -11,7 +11,8 @@ internal class XenonGlobalProjectile : GlobalProjectile
 	{
 		if (projectile.owner != Main.myPlayer || (projectile.type != ProjectileID.CorruptSpray && projectile.type != ProjectileID.CrimsonSpray &&
 			projectile.type != ProjectileID.HallowSpray && projectile.type != ProjectileID.PureSpray && projectile.type != ProjectileID.SnowSpray &&
-			projectile.type != ProjectileID.PurificationPowder && projectile.type != ProjectileID.MushroomSpray))
+			projectile.type != ProjectileID.PurificationPowder && projectile.type != ProjectileID.MushroomSpray && projectile.type != ProjectileID.ViciousPowder &&
+			projectile.type != ProjectileID.VilePowder))
 		{
 			return;
 		}

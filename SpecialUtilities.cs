@@ -3,10 +3,12 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon;
@@ -211,8 +213,22 @@ public static class SpecialUtilities
 					vector2.Y = j * 16;
 					if (vector.X + Width > vector2.X - num5 && vector.X < vector2.X + 16f + num5 && vector.Y + Height > vector2.Y && vector.Y < vector2.Y + 16.01)
 					{
-						//if (Main.tile[i, j].TileType == ModContent.TileType<Quicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
-						//	Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Sand);
+						if (Main.tile[i, j].TileType == ModContent.TileType<Quicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Sand);
+						if (Main.tile[i, j].TileType == ModContent.TileType<Crimquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Crimson);
+						if (Main.tile[i, j].TileType == ModContent.TileType<Ebonquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Corruption);
+						if (Main.tile[i, j].TileType == ModContent.TileType<Pearlquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Pearlsand);
+						if (Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, ModContent.DustType<GutsandDust>());
+						if (Main.tile[i, j].TileType == ModContent.TileType<CreamQuicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Dirt); // CHANGE TO CONFECTION
+						if (Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Mud);
+						if (Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.SnowBlock);
 						return new Vector2(i, j);
 					}
 				}
@@ -245,7 +261,8 @@ public static class SpecialUtilities
 		Crimson = 2,
 		Hallow = 3,
 		Mud = 4,
-		Snow = 5
+		Snow = 5,
+		Contagion = 6
 	}
 
 	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)

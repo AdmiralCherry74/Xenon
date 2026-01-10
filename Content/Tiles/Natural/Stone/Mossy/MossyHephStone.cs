@@ -37,7 +37,7 @@ public class MossyHephStone : ModTile
 		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<HephStone>();
 		TileID.Sets.Grass[Type] = true;
 		Main.tileBlockLight[Type] = true;
-        AddMapEntry(new Color(105, 99, 0));
+        AddMapEntry(new Color(190, 223, 232));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
 		RegisterItemDrop(ModContent.ItemType<HephStoneBlock>());
