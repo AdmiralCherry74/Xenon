@@ -46,7 +46,7 @@ Mods: {
 				DisplayName: Scarlet
 				Tooltip:
 					'''
-					"A Dented, Chipped and Dirty blade that served a hero well..."
+					'A Dented, Chipped and Dirty blade that served a hero well...'
 					Armor Pierces
 					'''
 			}
@@ -277,22 +277,22 @@ Mods: {
 
 			CrimquicksandBlock: {
 				DisplayName: Crimquicksand Block
-				Tooltip: Crimfied Sand that makes you fall through it
+				Tooltip: Crimfied sand that makes you fall through it
 			}
 
 			EbonquicksandBlock: {
 				DisplayName: Ebonquicksand Block
-				Tooltip: Corrupted Sand that makes you fall through it
+				Tooltip: Corrupted sand that makes you fall through it
 			}
 
 			PearlquicksandBlock: {
 				DisplayName: Pearlquicksand Block
-				Tooltip: Hallowed Sand that makes you fall through it
+				Tooltip: Hallowed sand that makes you fall through it
 			}
 
 			GutquicksandBlock: {
 				DisplayName: Gutquicksand Block
-				Tooltip: Corroded Sand that makes you fall through it
+				Tooltip: Corroded sand that makes you fall through it
 			}
 
 			PowderedSnowBlock: {
@@ -307,7 +307,7 @@ Mods: {
 
 			CarrotHeadBand: {
 				DisplayName: Carrot Head Band
-				Tooltip: Get the carrot! C'mon, get it!
+				Tooltip: "'Get the carrot! C'mon, get it!'"
 			}
 
 			GooberPainting: {
@@ -320,7 +320,7 @@ Mods: {
 				Tooltip:
 					'''
 					Fast firing gun with high critical strike chance
-					"Oh man, this is just like Counter-Strike!"
+					'Oh man, this is just like Counter-Strike!'
 					'''
 			}
 
@@ -329,7 +329,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increased damage, armor penetration and critical strike chance against boss and miniboss enemies
-					"Please revive me, I have the Ray Cannon!"
+					'Please revive me, I have the Ray Cannon!'
 					'''
 			}
 
@@ -399,7 +399,7 @@ Mods: {
 
 			WorldgenHelper: {
 				DisplayName: Worldgen Helper
-				Tooltip: Corrosion Generation Tool used by the dev's.
+				Tooltip: Generation tool used by the devs
 			}
 
 			UlceriteBar: {
@@ -432,7 +432,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases maximum life by 50 for a short time. During this time you lose that life slowly
-					"Ah, a little pick me up"
+					'Ah, a little pick me up'
 					'''
 			}
 
@@ -461,7 +461,7 @@ Mods: {
 					'''
 					Four-round burst rifle. Bursts can be fired in quick succession.
 					Only the first shot consumes ammo
-					'Too bad you cant find a grenade launcher attachment...'
+					'Too bad you can't find a grenade launcher attachment...'
 					'''
 			}
 
@@ -854,7 +854,7 @@ Mods: {
 			}
 
 			NightmareEyesPaintingItem: {
-				DisplayName: Nightmare Eyes Painting Item
+				DisplayName: Nightmare Eyes
 				Tooltip: ""
 			}
 
@@ -881,13 +881,13 @@ Mods: {
 					6 summon tag damage
 					Throw 5 caltrops with them hitting an enemy once before becoming useless
 					An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
-					'Historically, caltrops were part of defences that served to slow the advance of troops'
+					'Historically, caltrops were part of defenses that served to slow the advance of troops'
 					'''
 			}
 
 			TintedGlass: {
 				DisplayName: Tinted Glass
-				Tooltip: See through glass made from Onyx gems that doesnt let light through
+				Tooltip: See through glass made from onyx gems that doesn't let light through
 			}
 
 			JawSplitter: {
@@ -908,8 +908,8 @@ Mods: {
 				DisplayName: Cigarettes
 				Tooltip:
 					'''
-					'These are terrible for you. seriously dont smoke. instead sell these!'
-					Valueble
+					'These are terrible for you. Seriously don't smoke. Instead sell these!'
+					Valuable
 					'''
 			}
 
@@ -918,7 +918,7 @@ Mods: {
 				Tooltip:
 					'''
 					'A Chimera's eye harvested by you. Not sure what you could do with it, but someone may buy it for a fair price.'
-					Valueble
+					Valuable
 					'''
 			}
 
@@ -926,8 +926,8 @@ Mods: {
 				DisplayName: Diluted Bile
 				Tooltip:
 					'''
-					'A Gastritis's bile harvested by you. it smell's disgusting despite being diluted. might aswell sell it.'
-					Valueble
+					'A Gastritis's bile harvested by you. It smells disgusting despite being diluted. Might as well sell it.'
+					Valuable
 					'''
 			}
 
@@ -935,8 +935,8 @@ Mods: {
 				DisplayName: Eater Mandible
 				Tooltip:
 					'''
-					'An Eater Of Soul's mandible harvested by you. it looks too decayed to properly use, but could sell.'
-					Valueble
+					'An Eater of Soul's mandible harvested by you. It looks too decayed to properly use, but could sell.'
+					Valuable
 					'''
 			}
 
@@ -944,8 +944,8 @@ Mods: {
 				DisplayName: Old Manual
 				Tooltip:
 					'''
-					'An old manual. Not much use to you, but it could benifit someone else well for a fair price.'
-					Valueble
+					'An old manual. Not much use to you, but it could benefit someone else well for a fair price.'
+					Valuable
 					'''
 			}
 
@@ -954,7 +954,7 @@ Mods: {
 				Tooltip:
 					'''
 					'The Arms Dealer probably refurbishes these into those Illegal Gun parts. You should sell this before you get caught.'
-					Valueble
+					Valuable
 					'''
 			}
 
@@ -962,8 +962,8 @@ Mods: {
 				DisplayName: Interesting Book
 				Tooltip:
 					'''
-					'A rather... 'interesting' book. You should sell this, unless you are going to read it later~?'
-					Valueble
+					'A rather... 'interesting' book. You should sell this, unless you are going to read it later?'
+					Valuable
 					'''
 			}
 
@@ -1006,8 +1006,8 @@ Mods: {
 				DisplayName: Exotic Gem Pouch
 				Tooltip:
 					'''
-					'This Pouch contains every single type of gem you can find. Someone may want to buy these.'
-					Valueble
+					'This pouch contains every single type of gem you can find. Someone may want to buy these.'
+					Valuable
 					'''
 			}
 
@@ -1015,14 +1015,14 @@ Mods: {
 				DisplayName: Premium Gem Pouch
 				Tooltip:
 					'''
-					'This Pouch contains those more obscure gems. You could sell these to line your pockets with coin.'
-					Valueble
+					'This pouch contains more obscure gems. You could sell these to line your pockets with coin.'
+					Valuable
 					'''
 			}
 
 			TintedGlassPane: {
 				DisplayName: Tinted Glass Pane
-				Tooltip: See through glass pane that doesnt let light through
+				Tooltip: Transparent glass pane that doesn't let light through
 			}
 
 			GarnetGemsparkBlock: {
@@ -1097,7 +1097,7 @@ Mods: {
 
 			IngestaneOre: {
 				DisplayName: Ingestane Ore
-				Tooltip: pulsing with gastric energy
+				Tooltip: "'Pulsing with gastric energy'"
 			}
 
 			IndigoTorch: {
@@ -1152,7 +1152,7 @@ Mods: {
 
 			ExampleBolt: {
 				DisplayName: Example Bolt
-				Tooltip: UnusedDev Item / BasicBolt. You shouldnt have this
+				Tooltip: Unused dev item / BasicBolt. You shouldn't have this
 			}
 
 			FireBolt: {
@@ -1171,7 +1171,7 @@ Mods: {
 
 			AngerPotion: {
 				DisplayName: Anger Potion
-				Tooltip: Gives 5 armor penetration for 4 minutes
+				Tooltip: Increases armor penetration by 5
 			}
 
 			Lime: {
@@ -1183,8 +1183,8 @@ Mods: {
 				DisplayName: Tarot Card "Unpolished"
 				Tooltip:
 					'''
-					25% Less Defense, 1.20X Coin Yield until used again.
-					"This cursed card would make your armour not as effective"
+					25% less defense, 20% increased coin yield until used again
+					'This cursed card makes your armor not as effective'
 					'''
 			}
 
@@ -1192,8 +1192,8 @@ Mods: {
 				DisplayName: Burnt Tarot Card "Unpolished"
 				Tooltip:
 					'''
-					Will stop 25% Less Defense aswell as the 1.20X Coin Yield if used.
-					"To put out the fire on this card is to quell the curse"
+					Will stop 25% less defense as well as the 20% increased coin yield if used
+					'To put out the fire on this card is to quell the curse'
 					'''
 			}
 
@@ -1202,7 +1202,7 @@ Mods: {
 				Tooltip:
 					'''
 					Can be used to craft Bolts at an anvil
-					"Very pointy"
+					'Very pointy'
 					'''
 			}
 
@@ -1216,13 +1216,13 @@ Mods: {
 				Tooltip:
 					'''
 					Inflicts a cleaving effect on enemies
-					Consecutive hits enlarge your titties or something, ill think of an effect soon
+					Consecutive hits enlarge your titties or something, I'll think of an effect soon
 					'''
 			}
 
 			BasicCrossbow: {
 				DisplayName: Basic Crossbow
-				Tooltip: May or Maynot be removed later. no idea ngl
+				Tooltip: May or may not be removed later
 			}
 
 			UnholyBolt: {
@@ -1247,27 +1247,27 @@ Mods: {
 
 			AresStoneBlock: {
 				DisplayName: Arestone Block
-				Tooltip: The god of war's essence contained in a crimstone.
+				Tooltip: The god of war's essence contained in crimstone
 			}
 
 			HelioStoneBlock: {
 				DisplayName: Heliostone Block
-				Tooltip: The god of the sun's essence contained in a pearlstone.
+				Tooltip: The god of the sun's essence contained in pearlstone
 			}
 
 			NyxStoneBlock: {
 				DisplayName: Nyxstone Block
-				Tooltip: The goddess of the night's essence contained in an ebonstone.
+				Tooltip: The goddess of the night's essence contained in ebonstone
 			}
 
 			HephStoneBlock: {
 				DisplayName: Hephstone Block
-				Tooltip: The god of metalurgy's essence contained in a gutstone.
+				Tooltip: The god of metallurgy's essence contained in gutstone
 			}
 
 			TropicGrassSeeds: {
 				DisplayName: Tropic Grass Seeds
-				Tooltip: Used to plant Tropic Grass on sand.
+				Tooltip: Used to plant Tropic Grass on sand
 			}
 
 			ZephyrBoots: {
@@ -1275,19 +1275,19 @@ Mods: {
 				Tooltip:
 					'''
 					The wearer can run super fast in higher wind speeds
-					grants immunity to fall damage. maybe subject to change
-					"Fit for a wind warrior"
+					Grants immunity to fall damage
+					'Fit for a wind warrior'
 					'''
 			}
 
 			BunnyStaff: {
 				DisplayName: Forest Staff
-				Tooltip: Summons an armoured bunny to fight for you
+				Tooltip: Summons an armored bunny to fight for you
 			}
 
 			FrostNade: {
 				DisplayName: Frost Grenade
-				Tooltip: Inflicts frostburn
+				Tooltip: Inflicts Frostburn
 			}
 
 			JebelSlimeBanner: {
@@ -1301,43 +1301,43 @@ Mods: {
 			}
 
 			CreamQuicksandBlock: {
-				DisplayName: Cream Quicksand Block
-				Tooltip: Baked Sand that makes you fall through it
+				DisplayName: Creamquicksand Block
+				Tooltip: Baked sand that makes you fall through it
 			}
 
 			HestiaStoneBlock: {
 				DisplayName: Hestiastone Block
-				Tooltip: The god of the Hearth's essence contained in a creamstone
+				Tooltip: The god of the hearth's essence contained in a creamstone
 			}
 
 			LivingJacarandawoodDoor: {
-				DisplayName: Living Jacarandawood Door
+				DisplayName: Living Jacaranda Door
 				Tooltip: ""
 			}
 
 			LivingJacarandaleafWallUnsafe: {
-				DisplayName: Living Jacarandaleaf Wall Unsafe
+				DisplayName: Unsafe Living Jacaranda Leaf Wall
 				Tooltip: ""
 			}
 
 			LivingJacarandawoodWallUnsafe: {
-				DisplayName: Living Jacarandawood Wall Unsafe
+				DisplayName: Unsafe Living Jacaranda Wall
 				Tooltip: ""
 			}
 
 			LivingJacarandaleafWand: {
-				DisplayName: Living Jacarandaleaf Wand
+				DisplayName: Living Jacaranda Leaf Wand
 				Tooltip: ""
 			}
 
 			LivingJacarandawoodWand: {
-				DisplayName: Living Jacarandawood Wand
+				DisplayName: Living Jacaranda Wand
 				Tooltip: ""
 			}
 
 			TestingDoorBlock: {
 				DisplayName: Testing Door Block
-				Tooltip: Places the locked Living jacaranda door
+				Tooltip: Places the locked living jacaranda door
 			}
 
 			LivingWoodenSword: {
@@ -1387,6 +1387,16 @@ Mods: {
 
 			ExpiredLeftovers: {
 				DisplayName: Expired Leftovers
+				Tooltip: ""
+			}
+
+			PolloStoneBlock: {
+				DisplayName: Pollo Stone Block
+				Tooltip: ""
+			}
+
+			SnotquicksandBlock: {
+				DisplayName: Snotquicksand Block
 				Tooltip: ""
 			}
 		}

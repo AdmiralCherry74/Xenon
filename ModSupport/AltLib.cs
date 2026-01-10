@@ -54,9 +54,12 @@ internal class CorrosionAltBiome : AltBiome
         SeedType = ModContent.ItemType<CorrosionSeeds>();
         BiomeOre = ModContent.TileType<Content.Tiles.Natural.Corrosion.IngestaneOre>();
         BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
-        /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
+
+		AltarTile = ModContent.TileType<ExpiredAltar>();
+
+		/*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
-        AltarTile = ModContent.TileType<IckyAltar>();
+       
 
         BiomeChestItem = ModContent.ItemType<VirulentScythe>();
         BiomeChestTile = ModContent.TileType<CorrosionChest>();
@@ -69,7 +72,7 @@ internal class CorrosionAltBiome : AltBiome
         //BloodPenguin = ModContent.NPCType<ContaminatedPenguin>();
         //BloodGoldfish = ModContent.NPCType<ContaminatedGoldfish>();
         */
-        AddWallConversions<CorrosionLumpWallUnsafe>(
+		AddWallConversions<CorrosionLumpWallUnsafe>(
             WallID.RocksUnsafe3
         );
         AddWallConversions<CorrosionMoldWallUnsafe>(

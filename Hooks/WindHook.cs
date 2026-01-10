@@ -9,7 +9,7 @@ using Xenon.Content.Tiles.ActiveAndWiring.Buffs;
 
 namespace Xenon.Hooks
 {
-    internal class WindHook : ModHook //Should rename since its nolonger just hooks
+    internal class WindHook : ModHook
     {
         protected override void Apply()
         {

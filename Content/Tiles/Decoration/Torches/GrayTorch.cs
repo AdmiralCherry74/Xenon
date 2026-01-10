@@ -12,7 +12,7 @@ namespace Xenon.Content.Tiles.Decoration.Torches
 	{
 		public override Vector3 LightColor => new Vector3(0.5f, 0.5f, 0.5f);
 		public override int TorchItem => ModContent.ItemType<Items.Placeable.Tile.Decoration.Torches.GrayTorch>();
-		public override int dustType => DustID.Asphalt;
+		public override int dustType => DustID.Ash;
 		private static Asset<Texture2D> flameTexture;
 		public override void SetStaticDefaults()
 		{

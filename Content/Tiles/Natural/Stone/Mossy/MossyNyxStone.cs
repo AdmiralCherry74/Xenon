@@ -36,7 +36,7 @@ public class MossyNyxStone : ModTile
 		TileID.Sets.NeedsGrassFraming[Type] = true;
 		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<NyxStone>();
 		TileID.Sets.Grass[Type] = true;
-		AddMapEntry(new Color(72, 68, 114));
+		AddMapEntry(new Color(190, 223, 232));
         Main.tileBlockLight[Type] = true;
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;

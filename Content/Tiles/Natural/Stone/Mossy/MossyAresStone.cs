@@ -36,7 +36,7 @@ public class MossyAresStone : ModTile
 		TileID.Sets.NeedsGrassFraming[Type] = true;
 		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<AresStone>();
 		TileID.Sets.Grass[Type] = true;
-		AddMapEntry(new Color(136, 50, 49));
+		AddMapEntry(new Color(190, 223, 232));
         Main.tileBlockLight[Type] = true;
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;

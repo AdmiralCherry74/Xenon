@@ -36,7 +36,7 @@ public class MossyHelioStone : ModTile
 		TileID.Sets.NeedsGrassFraming[Type] = true;
 		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<HelioStone>();
 		TileID.Sets.Grass[Type] = true;
-		AddMapEntry(new Color(33, 88, 107));
+		AddMapEntry(new Color(190, 223, 232));
         Main.tileBlockLight[Type] = true;
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
