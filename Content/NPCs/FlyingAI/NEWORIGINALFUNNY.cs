@@ -6,6 +6,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.NPCs.FlyingAI
 {
@@ -27,12 +29,12 @@ namespace Xenon.Content.NPCs.FlyingAI
             NPC.width = 42;
             NPC.height = 78;
             NPC.damage = 10;
-            NPC.defense = 3;
-            NPC.lifeMax = 150;
+            NPC.defense = 17;
+            NPC.lifeMax = 20000;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 250;
-            NPC.knockBackResist = 1f;
+            NPC.value = 75000;
+            NPC.knockBackResist = 0f;
             NPC.aiStyle = 5; 
             
             AIType = NPCID.EaterofSouls;
@@ -62,19 +64,6 @@ namespace Xenon.Content.NPCs.FlyingAI
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneCorrupt)
-
-                {
-                    {
-                    return SpawnCondition.OverworldHallow.Chance * 0f;
-
-                    }
-            }
-            return 0f;
-        }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -96,8 +85,8 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<IngestaneBar>(), 1, 75, 75));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<FreshChyme>(), 1, 75, 75));
         }
     }
 }

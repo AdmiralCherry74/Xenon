@@ -22,44 +22,56 @@ public class XenonPlayer : ModPlayer
     public override void ResetEffects()
     {
         FossilBlessing = false;
-    }
-	public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
-	{
-		int bait = attempt.playerFishingConditions.BaitItemType;
-		int power = attempt.playerFishingConditions.BaitPower + attempt.playerFishingConditions.PolePower;
-		int questFish = attempt.questFish;
-		int poolSize = attempt.waterTilesCount;
-		bool water = !attempt.inHoney && !attempt.inLava;
-		bool lava = attempt.inLava;
-
-		Point point = Player.Center.ToTileCoordinates();
-		bool isCorrosionFishingAttempt = Player.InModBiome<Corrosion>() || Player.InModBiome<CorrosionUnderground>();
-
-		if (isCorrosionFishingAttempt && attempt.uncommon) // not possible via rifts anyways, so doesn't check for it
-		{
-			if (questFish == ModContent.ItemType<Giardia>())
-			{
-				itemDrop = ModContent.ItemType<Giardia>();
-				return;
-			}
-		}
-
-		if (attempt.uncommon && isCorrosionFishingAttempt)
-		{
-			int r = Main.rand.Next(1); // change later, to allow more fish
-			if (r == 0)
-			{
-				itemDrop = ModContent.ItemType<Corrodoras>();
-				return;
-			}
-			//else if (r == 1)
-			//{
-			//	itemDrop = ModContent.ItemType<Items.Fish.SicklyTrout>();
-			//	return;
-			//}
-		}
 	}
-	public override void PreUpdate()
+    public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
+    {
+        int bait = attempt.playerFishingConditions.BaitItemType;
+        int power = attempt.playerFishingConditions.BaitPower + attempt.playerFishingConditions.PolePower;
+        int questFish = attempt.questFish;
+        int poolSize = attempt.waterTilesCount;
+        bool water = !attempt.inHoney && !attempt.inLava;
+        bool lava = attempt.inLava;
+
+        Point point = Player.Center.ToTileCoordinates();
+        bool isCorrosionFishingAttempt = Player.InModBiome<Corrosion>() || Player.InModBiome<CorrosionUnderground>();
+
+        if (isCorrosionFishingAttempt && attempt.uncommon) // not possible via rifts anyways, so doesn't check for it
+        {
+            if (questFish == ModContent.ItemType<Giardia>())
+            {
+                itemDrop = ModContent.ItemType<Giardia>();
+                return;
+            }
+        }
+
+        if (attempt.uncommon && isCorrosionFishingAttempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<Corrodoras>();
+                return;
+            }
+            //else if (r == 1)
+            //{
+            //	itemDrop = ModContent.ItemType<Items.Fish.SicklyTrout>();
+            //	return;
+            //}
+        }
+        bool isGraniteFishingAttempt = Player.ZoneGranite;
+
+        if (attempt.uncommon && isGraniteFishingAttempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<GraniteFish>();
+                return;
+            }
+        }
+    }
+
+    public override void PreUpdate()
     {
         playerOldVelocity[2] = playerOldVelocity[1];
         playerOldVelocity[1] = playerOldVelocity[0];

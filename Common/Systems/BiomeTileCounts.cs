@@ -20,13 +20,14 @@ internal class BiomeTileCounts : ModSystem
     public int MountainTiles { get; private set; }
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
-		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Quicksand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Quicksand>()];
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutquicksand>()];
-        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<CreamQuicksand>()];
-        Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<CreamQuicksand>()];
+		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<PowderedSnow>()];

@@ -2,6 +2,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
@@ -42,8 +43,10 @@ public static class ConversionHelper
                     ConvertTile<Gutsandstone>(x, y, type => TileID.Sets.Conversion.Sandstone[type], false) ||
                     ConvertTile<CorrosionThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false) ||
                     ConvertTile<HephStone>(x, y, type => Common.Data.TileSets.MountainStone[type], false) ||
-				    ConvertTile<MossyHephStone>(x, y, type => Common.Data.TileSets.MossyMountainStone[type], false);
-			}
+                    ConvertTile<MossyHephStone>(x, y, type => Common.Data.TileSets.MossyMountainStone[type], false) ||
+                    ConvertTile<Gutquicksand>(x, y, type => Common.Data.TileSets.Quicksand[type], false) ||
+                    ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
+            }
         }
     }
 

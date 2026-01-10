@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.OresBarsGems;
+using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Wood;
 using Xenon.Content.Tiles.BuildingTiles.Stones;
 using Xenon.Content.Tiles.Natural.LivingWood;
 using Xenon.Content.Tiles.Natural.LivingWood.LeafBlocks;
@@ -22,11 +23,11 @@ public class LivingJacarandaleafWand : ModItem
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.autoReuse = true;
 		Item.useTurn = true;
-		Item.rare = ItemRarityID.Red;
+		Item.rare = ItemRarityID.Blue;
 		Item.value = Item.sellPrice(silver: 30);
 		Item.createTile = ModContent.TileType<LivingJacarandaleafBlock>();
-		Item.tileWand = ItemID.Shadewood;
-	}
+        Item.tileWand = ModContent.ItemType<JacarandaWood>();
+    }
     public override void SetStaticDefaults()
     {
         ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;

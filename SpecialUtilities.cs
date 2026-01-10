@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
@@ -259,8 +260,7 @@ public static class SpecialUtilities
 		if (convert == ConversionType.Purity)
 		{
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Ebonquicksand>() ||
-				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Quickmud>() ||
-				type == ModContent.TileType<PowderedSnow>())
+				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Quicksand>();
 			}
@@ -279,8 +279,7 @@ public static class SpecialUtilities
 		if (convert == ConversionType.Corruption)
 		{
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
-				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Quickmud>() ||
-				type == ModContent.TileType<PowderedSnow>())
+				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Ebonquicksand>();
 			}
@@ -294,14 +293,18 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyNyxStone>();
 			}
-		}
+            if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>())
+            {
+				tile.TileType = TileID.Demonite;
+            }
+        }
 		// convert to crimson
 		if (convert == ConversionType.Crimson)
 		{
 			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Quickmud>() ||
-				type == ModContent.TileType<PowderedSnow>())
-			{
+				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>())
+
+            {
 				tile.TileType = (ushort)ModContent.TileType<Crimquicksand>();
 			}
 			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
@@ -314,14 +317,17 @@ public static class SpecialUtilities
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyAresStone>();
 			}
-		}
+            if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>())
+            {
+				tile.TileType = TileID.Crimtane;
+            }
+        }
 		// convert to hallow
 		if (convert == ConversionType.Hallow)
 		{
 			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-				type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quickmud>() ||
-				type == ModContent.TileType<PowderedSnow>())
-			{
+				type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Gutquicksand>())
+            {
 				tile.TileType = (ushort)ModContent.TileType<Pearlquicksand>();
 			}
 			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
@@ -338,24 +344,20 @@ public static class SpecialUtilities
 		// convert to jungle/mud
 		if (convert == ConversionType.Mud)
 		{
-			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Crimquicksand>() ||
-				type == ModContent.TileType<PowderedSnow>())
+			if (type == ModContent.TileType<Quicksand>() || type == ModContent.TileType<PowderedSnow>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Quickmud>();
 			}
 		}
-		// convert to jungle/mud
+		// convert to snow
 		if (convert == ConversionType.Snow)
 		{
-			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Crimquicksand>() ||
-				type == ModContent.TileType<Quickmud>())
+			if (type == ModContent.TileType<Quicksand>() || type == ModContent.TileType<Quickmud>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<PowderedSnow>();
 			}
 		}
-		if (tileframe)
+        if (tileframe)
 		{
 			if (Main.netMode == NetmodeID.SinglePlayer)
 			{

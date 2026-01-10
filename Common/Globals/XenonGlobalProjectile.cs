@@ -25,11 +25,11 @@ internal class XenonGlobalProjectile : GlobalProjectile
 				{
 					SpecialUtilities.Convert(i, j, SpecialUtilities.ConversionType.Purity, !flag);
 				}
-				if (projectile.type == ProjectileID.CorruptSpray)
+				if (projectile.type == ProjectileID.CorruptSpray || projectile.type == ProjectileID.VilePowder)
 				{
 					SpecialUtilities.Convert(i, j, SpecialUtilities.ConversionType.Corruption, !flag);
 				}
-				if (projectile.type == ProjectileID.CrimsonSpray)
+				if (projectile.type == ProjectileID.CrimsonSpray || projectile.type == ProjectileID.ViciousPowder)
 				{
 					SpecialUtilities.Convert(i, j, SpecialUtilities.ConversionType.Crimson, !flag);
 				}

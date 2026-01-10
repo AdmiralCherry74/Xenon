@@ -1364,6 +1364,31 @@ Mods: {
 				DisplayName: Gravel Block
 				Tooltip: ""
 			}
+
+			GraniteFish: {
+				DisplayName: Granite Fish
+				Tooltip: ""
+			}
+
+			CausticHelmet: {
+				DisplayName: Caustic Helmet
+				Tooltip: 4% increased knockback
+			}
+
+			CausticScalemail: {
+				DisplayName: Caustic Scalemail
+				Tooltip: 4% increased knockback
+			}
+
+			CausticGreaves: {
+				DisplayName: Caustic Greaves
+				Tooltip: 4% increased knockback
+			}
+
+			ExpiredLeftovers: {
+				DisplayName: Expired Leftovers
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1382,7 +1407,7 @@ Mods: {
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
 			TempleSentry.DisplayName: Temple Sentry
-			NEWORIGINALFUNNY.DisplayName: N E W O R I G I N A L F U N N Y
+			NEWORIGINALFUNNY.DisplayName: Urg Beeg Bad Boss >:3
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
 			TapeWormHead.DisplayName: Tape Worm
@@ -1434,6 +1459,7 @@ Mods: {
 			SilverDoorOpened.MapEntry: Silver Door
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
+			ExpiredAltar.MapEntry: Expired Altar
 		}
 
 		Bestiary: {

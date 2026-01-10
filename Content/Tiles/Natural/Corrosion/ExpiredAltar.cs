@@ -1,0 +1,61 @@
+﻿using Microsoft.Xna.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Terraria.ObjectData;
+
+namespace Xenon.Content.Tiles.Natural.Corrosion
+{
+    public class ExpiredAltar : ModTile
+    {
+        public override void SetStaticDefaults()
+        {
+            AddMapEntry(new Color(125, 250, 50), this.GetLocalization("MapEntry"));
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
+            TileObjectData.newTile.LavaDeath = false;
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.addTile(Type);
+            Main.tileHammer[Type] = true;
+            Main.tileLighted[Type] = true;
+            Main.tileFrameImportant[Type] = true;
+            AdjTiles = new int[] { TileID.DemonAltar };
+            TileID.Sets.PreventsTileRemovalIfOnTopOfIt[Type] = true;
+            TileID.Sets.PreventsSandfall[Type] = true;
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+            HitSound = SoundID.Lavafall;
+        }
+
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            float brightness = Main.rand.Next(-5, 6) * 0.0025f;
+            r = 0.5f + brightness;
+            g = 0.9f + brightness * 2;
+            b = 0f;
+        }
+
+        public override bool CanExplode(int i, int j)
+        {
+            return false;
+        }
+
+        public override bool CanKillTile(int i, int j, ref bool blockDamaged)
+        {
+            if (!Main.hardMode)
+            {
+                blockDamaged = false;
+            }
+
+            return Main.hardMode;
+        }
+
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+            WorldGen.SmashAltar(i, j);
+        }
+    }
+}
