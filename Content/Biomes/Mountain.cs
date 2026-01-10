@@ -11,7 +11,7 @@ public class Mountain : ModBiome
 	public override string MapBackground => BackgroundPath;
 	public override int Music => MusicID.OtherworldlyUnderground;
     public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
+    public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
     public override bool IsBiomeActive(Player player)
 	{
         return ModContent.GetInstance<BiomeTileCounts>().MountainTiles > 10 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
