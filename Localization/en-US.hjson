@@ -292,7 +292,7 @@ Mods: {
 
 			GutquicksandBlock: {
 				DisplayName: Gutquicksand Block
-				Tooltip: Corroded sand that makes you fall through it
+				Tooltip: Digested sand that makes you fall through it
 			}
 
 			PowderedSnowBlock: {
@@ -826,7 +826,7 @@ Mods: {
 
 			TNTore: {
 				DisplayName: Trinitrotoluene Ore
-				Tooltip: A developer block used to make the Mountain Biome
+				Tooltip: an ore rumored to make the devs angry when you have this. SERIOUSLY MAN!?
 			}
 
 			CoarseDirt: {
@@ -836,7 +836,7 @@ Mods: {
 
 			OvergrownTurf: {
 				DisplayName: Overgrown Turf
-				Tooltip: Increases spawn rates. Cannot have plants grown on them. Cannot be Corrupted, Crimfied, Corroded, or Hallowed.
+				Tooltip: Increases spawn rates. Cannot have plants grown on them. Cannot be filled with the worlds forces of evil or light.
 			}
 
 			Maxe: {
@@ -1237,7 +1237,7 @@ Mods: {
 
 			OuranoStoneBlock: {
 				DisplayName: Ouranostone Block
-				Tooltip: The god of the sky's essence contained in a stone
+				Tooltip: The god of the sky's essence contained in a Stone
 			}
 
 			CliffsideChest: {
@@ -1247,22 +1247,22 @@ Mods: {
 
 			AresStoneBlock: {
 				DisplayName: Arestone Block
-				Tooltip: The god of war's essence contained in crimstone
+				Tooltip: The god of war's rage contained in Crimstone
 			}
 
 			HelioStoneBlock: {
 				DisplayName: Heliostone Block
-				Tooltip: The god of the sun's essence contained in pearlstone
+				Tooltip: The god of the sun's euphoria contained in Pearlstone
 			}
 
 			NyxStoneBlock: {
 				DisplayName: Nyxstone Block
-				Tooltip: The goddess of the night's essence contained in ebonstone
+				Tooltip: The goddess of the night's wraith contained in Ebonstone
 			}
 
 			HephStoneBlock: {
 				DisplayName: Hephstone Block
-				Tooltip: The god of metallurgy's essence contained in gutstone
+				Tooltip: The god of metallurgy's anger contained in Gutstone
 			}
 
 			TropicGrassSeeds: {
@@ -1307,7 +1307,7 @@ Mods: {
 
 			HestiaStoneBlock: {
 				DisplayName: Hestiastone Block
-				Tooltip: The god of the hearth's essence contained in a creamstone
+				Tooltip: The god of the hearth's zen contained in a Creamstone
 			}
 
 			LivingJacarandawoodDoor: {
@@ -1392,12 +1392,12 @@ Mods: {
 
 			PolloStoneBlock: {
 				DisplayName: Pollo Stone Block
-				Tooltip: ""
+				Tooltip: The god of health's fury contained in a Chunkstone
 			}
 
 			SnotquicksandBlock: {
 				DisplayName: Snotquicksand Block
-				Tooltip: ""
+				Tooltip: " sand that makes you fall through it"
 			}
 		}
 

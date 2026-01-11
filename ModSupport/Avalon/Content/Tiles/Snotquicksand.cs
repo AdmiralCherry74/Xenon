@@ -28,7 +28,6 @@ public class Snotquicksand : ModTile
 		Main.tileMerge[Type][ModContent.TileType<Ebonquicksand>()] = true;
 		Main.tileMerge[Type][ModContent.TileType<Pearlquicksand>()] = true;
 		Main.tileMerge[Type][ModContent.TileType<Gutquicksand>()] = true;
-		Main.tileMerge[Type][ModContent.TileType<CreamQuicksand>()] = true;
 		MineResist = 0.5f;
 		DustType = DustID.Crimstone;
 

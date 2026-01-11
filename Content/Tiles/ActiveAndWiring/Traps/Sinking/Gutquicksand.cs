@@ -24,7 +24,6 @@ public class Gutquicksand : ModTile
         Main.tileMerge[Type][ModContent.TileType<Ebonquicksand>()] = true;
         Main.tileMerge[Type][ModContent.TileType<Crimquicksand>()] = true;
         Main.tileMerge[Type][ModContent.TileType<Pearlquicksand>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<CreamQuicksand>()] = true;
         MineResist = 0.5f;
         DustType = ModContent.DustType<GutsandDust>();
 

@@ -10,7 +10,7 @@ using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Confection.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-public class CreamQuicksand : ModTile
+public class Creamquicksand : ModTile
 {
 	public override void SetStaticDefaults()
 	{

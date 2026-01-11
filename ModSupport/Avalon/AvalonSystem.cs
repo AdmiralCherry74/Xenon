@@ -83,7 +83,7 @@ public class AvalonSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyNyxStone>();
 			}
-			if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>())
+			if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>() || type == ModContent.TileType<HallowedOre>())
 			{
 				tile.TileType = TileID.Demonite;
 			}
@@ -109,7 +109,7 @@ public class AvalonSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyAresStone>();
 			}
-			if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>())
+			if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>() || type == ModContent.TileType<HallowedOre>())
 			{
 				tile.TileType = TileID.Crimtane;
 			}
@@ -135,7 +135,11 @@ public class AvalonSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyHelioStone>();
 			}
-		}
+            if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<HallowedOre>();
+            }
+        }
 		// convert to contagion
 		if (convert == ConversionType.Contagion)
 		{
@@ -157,7 +161,7 @@ public class AvalonSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyPolloStone>();
 			}
-			if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == TileID.Demonite)
+			if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<HallowedOre>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<BacciliteOre>();
 			}

@@ -13,7 +13,7 @@ namespace Xenon.ModSupport.Confection.Content.Items.Placeable.Tile.ActiveAndWiri
 
 		public override void SetDefaults()
 		{
-			Item.DefaultToPlaceableTile(ModContent.TileType<CreamQuicksand>());
+			Item.DefaultToPlaceableTile(ModContent.TileType<Creamquicksand>());
 		}
 	}
 }

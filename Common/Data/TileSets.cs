@@ -7,6 +7,7 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Snow;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
@@ -21,32 +22,51 @@ internal class TileSets
 		ModContent.TileType<HelioStone>(),
 		ModContent.TileType<AresStone>(),
 		ModContent.TileType<HephStone>(),
-		ModContent.TileType<HestiaStone>()
+		ModContent.TileType<HestiaStone>(),
+		ModContent.TileType<PolloStone>()
 	);
+
 	public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
 	ModContent.TileType<Quicksand>(),
 	ModContent.TileType<Ebonquicksand>(),
 	ModContent.TileType<Crimquicksand>(),
 	ModContent.TileType<Pearlquicksand>(),
 	ModContent.TileType<Gutquicksand>(),
-	ModContent.TileType<CreamQuicksand>()
-	);
-	public static bool[] EvilOre = TileID.Sets.Factory.CreateBoolSet(
-    TileID.Demonite,
-    TileID.Crimtane,
-	ModContent.TileType<IngestaneOre>()
+	ModContent.TileType<Creamquicksand>(),
+	ModContent.TileType<Snotquicksand>()
 	);
 
-    public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
+	public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
 		ModContent.TileType<MossyOuranoStone>(),
 		ModContent.TileType<MossyNyxStone>(),
 		ModContent.TileType<MossyHelioStone>(),
 		ModContent.TileType<MossyAresStone>(),
 		ModContent.TileType<MossyHephStone>(),
-		ModContent.TileType<MossyHestiaStone>()
+		ModContent.TileType<MossyHestiaStone>(),
+		ModContent.TileType<MossyPolloStone>()
+	);
+
+	public static bool[] EvilOre = TileID.Sets.Factory.CreateBoolSet(
+	TileID.Demonite,
+	TileID.Crimtane,
+	ModContent.TileType<IngestaneOre>()
+	);
+
+	public static bool[] Purity = TileID.Sets.Factory.CreateBoolSet(
+	//made for use with Confection compatibility. this will not be used in most other cases
+	TileID.Dirt,
+	TileID.Grass,
+	TileID.Stone,
+	TileID.SnowBlock,
+	TileID.IceBlock,
+	TileID.Sand,
+	TileID.Sandstone,
+	TileID.HardenedSand,
+	ModContent.TileType<Quicksand>(),
+	ModContent.TileType<OuranoStone>()
     );
 
-	public static readonly HashSet<int> Stalac = new()
+    public static readonly HashSet<int> Stalac = new()
 	{
 		ModContent.TileType<RhyoliteStalactgmites>(),
 		ModContent.TileType<FrozenLavaStalac>(),

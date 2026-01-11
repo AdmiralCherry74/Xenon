@@ -205,9 +205,10 @@ public static class SpecialUtilities
 			{
 				if (Main.tile[i, j].TileType == ModContent.TileType<Quicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Crimquicksand>() ||
 					Main.tile[i, j].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Pearlquicksand>() ||
-                    Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<CreamQuicksand>() ||
-                    Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() || Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>()) 
-				{
+                    Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() ||
+                    Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>())
+
+                {
 					int num5 = 0;
 					vector2.X = i * 16;
 					vector2.Y = j * 16;
@@ -223,8 +224,6 @@ public static class SpecialUtilities
 							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Pearlsand);
 						if (Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
 							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, ModContent.DustType<GutsandDust>());
-						if (Main.tile[i, j].TileType == ModContent.TileType<CreamQuicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
-							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Dirt); // CHANGE TO CONFECTION
 						if (Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
 							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Mud);
 						if (Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
@@ -245,7 +244,6 @@ public static class SpecialUtilities
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Crimquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Crimquicksand>() ||
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() ||
             Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() ||
-            Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<CreamQuicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<CreamQuicksand>() ||
             Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() ||
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>())
 		{
@@ -262,7 +260,8 @@ public static class SpecialUtilities
 		Hallow = 3,
 		Mud = 4,
 		Snow = 5,
-		Contagion = 6
+		Contagion = 6,
+		Confection = 7
 	}
 
 	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)

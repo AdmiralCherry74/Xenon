@@ -13,6 +13,7 @@ namespace Xenon
         public static Color CorrosionBiomeSightColor = new Color(177, 186, 58);
         public const string TextureAssetsPath = "Assets/Textures";
 		public static bool AvalonContentEnabled = ModLoader.HasMod("Avalon");
+        public static bool TheConfectionRebirthContentEnabled = ModLoader.HasMod("TheConfectionRebirth");
         public override void Load()
 		{
 			while (ModHook.RegisteredHooks.TryDequeue(out ModHook? hook))

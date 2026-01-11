@@ -25,7 +25,6 @@ internal class BiomeTileCounts : ModSystem
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutquicksand>()];
-		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<CreamQuicksand>()];
 		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
