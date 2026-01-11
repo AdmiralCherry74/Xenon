@@ -28,8 +28,8 @@ namespace Xenon.Content.NPCs.FlyingAI
 
         public override void SetDefaults()
         {
-            NPC.width = 42;
-            NPC.height = 78;
+            NPC.width = 34;
+            NPC.height = 72;
             NPC.damage = 10;
             NPC.defense = 3;
             NPC.lifeMax = 150;

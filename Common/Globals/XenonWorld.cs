@@ -40,7 +40,7 @@ internal class XenonWorld : ModSystem
             backgroundColor.G = (byte)sunG;
             backgroundColor.B = (byte)sunB;
 
-            int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 3f);
+            int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 2.70f);
             byte readableTint_R = 132;
             byte readableTint_G = 121;
             byte readableTint_B = 63;

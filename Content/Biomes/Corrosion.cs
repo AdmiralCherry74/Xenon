@@ -63,7 +63,7 @@ public class CorrosionIce : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && (player.ZoneOverworldHeight || player.ZoneRockLayerHeight || player.ZoneDirtLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
     }
 }
 public class CorrosionUndergroundIce : ModBiome
