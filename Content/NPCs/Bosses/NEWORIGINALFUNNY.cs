@@ -9,7 +9,7 @@ using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Materials.OresBarsGems;
 
-namespace Xenon.Content.NPCs.FlyingAI
+namespace Xenon.Content.NPCs.Bosses
 {
     public class NEWORIGINALFUNNY : ModNPC
     {

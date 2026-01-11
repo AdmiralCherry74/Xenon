@@ -6,18 +6,17 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Materials.EvilMaterials;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Xenon.Content.Biomes;
+using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.FlyingAI
+namespace Xenon.Content.NPCs.SpiderAI
 {
-    public class Gastritis : ModNPC
+    public class StomachBugWall : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.EaterofSouls];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -28,30 +27,29 @@ namespace Xenon.Content.NPCs.FlyingAI
 
         public override void SetDefaults()
         {
-            NPC.width = 42;
-            NPC.height = 78;
+            NPC.width = 52;
+            NPC.height = 56;
             NPC.damage = 10;
-            NPC.defense = 3;
-            NPC.lifeMax = 150;
-            NPC.noGravity = true;
+            NPC.defense = 12;
+            NPC.lifeMax = 120;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 250;
-            NPC.knockBackResist = 1f;
-            NPC.aiStyle = 5; 
-            
-            AIType = NPCID.EaterofSouls;
-            AnimationType = NPCID.EaterofSouls;
+            NPC.value = 1000;
+            NPC.knockBackResist = 0.20f;
+            NPC.aiStyle = 40;
+            NPC.noGravity = true;
+            AIType = NPCID.WallCreeper;
+            AnimationType = NPCID.WallCreeper;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<GastritisBanner>();
+			BannerItem = ModContent.ItemType<StomachBugBanner>();
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Gastritis")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
             ]);
         }
 
@@ -71,10 +69,9 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>() ||
-            spawnInfo.Player.InModBiome<CorrosionUnderground>() && !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
             {
-                return 2f;
+                return 0.15f;
             }
             return 0;
         }
@@ -98,10 +95,9 @@ namespace Xenon.Content.NPCs.FlyingAI
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Burger, 100, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3));
         }
     }
 }

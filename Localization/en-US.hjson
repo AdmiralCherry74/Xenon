@@ -1445,6 +1445,7 @@ Mods: {
 			JebelSlime.DisplayName: Jebel Slime
 			Chipmunk.DisplayName: Chipmunk
 			Sparrow.DisplayName: Sparrow
+			StomachBugWall.DisplayName: Stomach Bug Wall
 		}
 
 		Tiles: {

@@ -8,7 +8,7 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Tools.ConversionTools.Powders;
-using Xenon.Content.NPCs.FlyingAI;
+using Xenon.Content.NPCs.Bosses;
 
 namespace Xenon.Content.Items.Consumables.BossSummons;
 
