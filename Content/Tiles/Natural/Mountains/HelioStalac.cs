@@ -2,11 +2,10 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 
-namespace Xenon.Content.Tiles.Natural.Stone;
+namespace Xenon.Content.Tiles.Natural.Mountains;
 
-public class HephStalac : ModTile
+public class HelioStalac : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -15,10 +14,10 @@ public class HephStalac : ModTile
         Main.tileFrameImportant[Type] = true;
         Main.tileObsidianKill[Type] = true;
         TileID.Sets.BreakableWhenPlacing[Type] = true;
-        Main.tileMerge[ModContent.TileType<HephStone>()][Type] = true;
-        Main.tileMerge[Type][ModContent.TileType<HephStone>()] = true;
-        DustType = ModContent.DustType<CorrosionDust>();
-		AddMapEntry(new Color(195, 200, 135));
+        Main.tileMerge[ModContent.TileType<HelioStone>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
+        DustType = DustID.Pearlwood;
+		AddMapEntry(new Color(191, 143, 185));
 	}
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {

@@ -1,6 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Stone;
+using Xenon.Content.Tiles.Natural.Mountains;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 

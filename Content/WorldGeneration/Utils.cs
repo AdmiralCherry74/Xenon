@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Tiles.Natural.Stone;
+using Xenon.Content.Tiles.Natural.Mountains;
 
 namespace Xenon.Content.WorldGeneration;
 

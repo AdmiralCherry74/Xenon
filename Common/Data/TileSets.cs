@@ -4,9 +4,10 @@ using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Snow;
 using Xenon.Content.Tiles.Natural.Stone;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
@@ -27,13 +28,13 @@ internal class TileSets
 	);
 
 	public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
-	ModContent.TileType<Quicksand>(),
-	ModContent.TileType<Ebonquicksand>(),
-	ModContent.TileType<Crimquicksand>(),
-	ModContent.TileType<Pearlquicksand>(),
-	ModContent.TileType<Gutquicksand>(),
-	ModContent.TileType<Creamquicksand>(),
-	ModContent.TileType<Snotquicksand>()
+		ModContent.TileType<Quicksand>(),
+		ModContent.TileType<Ebonquicksand>(),
+		ModContent.TileType<Crimquicksand>(),
+		ModContent.TileType<Pearlquicksand>(),
+		ModContent.TileType<Gutquicksand>(),
+		ModContent.TileType<Creamquicksand>(),
+		ModContent.TileType<Snotquicksand>()
 	);
 
 	public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
@@ -47,23 +48,23 @@ internal class TileSets
 	);
 
 	public static bool[] EvilOre = TileID.Sets.Factory.CreateBoolSet(
-	TileID.Demonite,
-	TileID.Crimtane,
-	ModContent.TileType<IngestaneOre>()
+		TileID.Demonite,
+		TileID.Crimtane,
+		ModContent.TileType<IngestaneOre>()
 	);
 
 	public static bool[] Purity = TileID.Sets.Factory.CreateBoolSet(
 	//made for use with Confection compatibility. this will not be used in most other cases
-	TileID.Dirt,
-	TileID.Grass,
-	TileID.Stone,
-	TileID.SnowBlock,
-	TileID.IceBlock,
-	TileID.Sand,
-	TileID.Sandstone,
-	TileID.HardenedSand,
-	ModContent.TileType<Quicksand>(),
-	ModContent.TileType<OuranoStone>()
+		TileID.Dirt,
+		TileID.Grass,
+		TileID.Stone,
+		TileID.SnowBlock,
+		TileID.IceBlock,
+		TileID.Sand,
+		TileID.Sandstone,
+		TileID.HardenedSand,
+		ModContent.TileType<Quicksand>(),
+		ModContent.TileType<OuranoStone>()
     );
 
     public static readonly HashSet<int> Stalac = new()

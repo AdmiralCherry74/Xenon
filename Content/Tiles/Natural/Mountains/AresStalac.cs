@@ -3,9 +3,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Tiles.Natural.Stone;
+namespace Xenon.Content.Tiles.Natural.Mountains;
 
-public class HelioStalac : ModTile
+public class AresStalac : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -14,10 +14,10 @@ public class HelioStalac : ModTile
         Main.tileFrameImportant[Type] = true;
         Main.tileObsidianKill[Type] = true;
         TileID.Sets.BreakableWhenPlacing[Type] = true;
-        Main.tileMerge[ModContent.TileType<HelioStone>()][Type] = true;
-        Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
-        DustType = DustID.Pearlwood;
-		AddMapEntry(new Color(191, 143, 185));
+        Main.tileMerge[ModContent.TileType<AresStone>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
+        DustType = DustID.Crimstone;
+		AddMapEntry(new Color(160, 95, 85));
 	}
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {

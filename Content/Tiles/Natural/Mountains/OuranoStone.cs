@@ -4,15 +4,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 
-namespace Xenon.Content.Tiles.Natural.Stone;
+namespace Xenon.Content.Tiles.Natural.Mountains;
 
-public class HelioStone : ModTile
+public class OuranoStone : ModTile
 {
     public override void SetStaticDefaults()
     {
-        //HelioStone was named after the greek god of the sun Helios
+        //The inspiration behind this was Shale. then I gave it a new name. Thought of the greek god of the sky, thus OuranoStone
         Main.tileSolid[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileMerge[Type][TileID.Stone] = true;
@@ -24,17 +24,17 @@ public class HelioStone : ModTile
         Main.tileMerge[Type][TileID.HallowedGrass] = true;
         Main.tileMerge[Type][ModContent.TileType<CorrosionGrass>()] = true;
         Main.tileMerge[Type][ModContent.TileType<Gutstone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<MossyHelioStone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<OuranoStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyOuranoStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<NyxStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyNyxStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyAresStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<MossyHelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HephStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
-        AddMapEntry(new Color(203, 152, 191));
         Main.tileBlockLight[Type] = true;
+        AddMapEntry(new Color(131, 187, 224));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
     }
@@ -47,18 +47,18 @@ public class HelioStone : ModTile
 	{
 		if (!fail && !effectOnly)
 		{
-			if (Main.tile[i, j - 1].TileType == ModContent.TileType<HelioStalac>())
+			if (Main.tile[i, j - 1].TileType == ModContent.TileType<OuranoStalac>())
 			{
 				WorldGen.KillTile(i, j - 1);
-				if (Main.tile[i, j - 2].TileType == ModContent.TileType<HelioStalac>())
+				if (Main.tile[i, j - 2].TileType == ModContent.TileType<OuranoStalac>())
 				{
 					WorldGen.KillTile(i, j - 2);
 				}
 			}
-			if (Main.tile[i, j + 1].TileType == ModContent.TileType<HelioStalac>())
+			if (Main.tile[i, j + 1].TileType == ModContent.TileType<OuranoStalac>())
 			{
 				WorldGen.KillTile(i, j + 1);
-				if (Main.tile[i, j + 2].TileType == ModContent.TileType<HelioStalac>())
+				if (Main.tile[i, j + 2].TileType == ModContent.TileType<OuranoStalac>())
 				{
 					WorldGen.KillTile(i, j + 2);
 				}

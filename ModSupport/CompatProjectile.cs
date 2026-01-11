@@ -1,25 +1,26 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
+using TheConfectionRebirth.Projectiles;
 using Microsoft.Xna.Framework;
 using Avalon.Projectiles;
 
-namespace Xenon.ModSupport.Avalon;
+namespace Xenon.ModSupport;
 
-[ExtendsFromMod("Avalon")]
-internal class AvalonSupportProjectile : GlobalProjectile
+[ExtendsFromMod("TheConfectionRebirth", "Avalon")]
+internal class CompatProjectile : GlobalProjectile
 {
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return XenonMod.AvalonContentEnabled && !XenonMod.TheConfectionRebirthContentEnabled;
+		return XenonMod.TheConfectionRebirthContentEnabled && XenonMod.AvalonContentEnabled;
 	}
 	public override void PostAI(Projectile projectile)
 	{
 		if (projectile.owner != Main.myPlayer || (projectile.type != ProjectileID.CorruptSpray && projectile.type != ProjectileID.CrimsonSpray &&
 			projectile.type != ProjectileID.HallowSpray && projectile.type != ProjectileID.PureSpray && projectile.type != ProjectileID.SnowSpray &&
 			projectile.type != ProjectileID.PurificationPowder && projectile.type != ProjectileID.MushroomSpray &&
-			projectile.type != ModContent.ProjectileType<ContagionSpray>() && projectile.type != ProjectileID.ViciousPowder &&
-			projectile.type != ProjectileID.VilePowder && projectile.type != ModContent.ProjectileType<VirulentPowder>()))
+			projectile.type != ModContent.ProjectileType<CreamSolution>() && projectile.type != ProjectileID.ViciousPowder &&
+			projectile.type != ProjectileID.VilePowder && projectile.type != ModContent.ProjectileType<ContagionSpray>()))
 		{
 			return;
 		}
@@ -31,32 +32,35 @@ internal class AvalonSupportProjectile : GlobalProjectile
 			{
 				if (projectile.type == ProjectileID.PureSpray || projectile.type == ProjectileID.PurificationPowder)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Purity, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Purity, !flag);
 				}
 				if (projectile.type == ProjectileID.CorruptSpray || projectile.type == ProjectileID.VilePowder)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Corruption, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Corruption, !flag);
 				}
 				if (projectile.type == ProjectileID.CrimsonSpray || projectile.type == ProjectileID.ViciousPowder)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Crimson, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Crimson, !flag);
 				}
-				if (projectile.type == ModContent.ProjectileType<ContagionSpray>() ||
-					projectile.type == ModContent.ProjectileType<VirulentPowder>())
+				if (projectile.type == ModContent.ProjectileType<CreamSolution>())
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Contagion, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Confection, !flag);
+				}
+				if (projectile.type == ModContent.ProjectileType<ContagionSpray>())
+				{
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Contagion, !flag);
 				}
 				if (projectile.type == ProjectileID.HallowSpray)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Hallow, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Hallow, !flag);
 				}
 				if (projectile.type == ProjectileID.SnowSpray)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Snow, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Snow, !flag);
 				}
 				if (projectile.type == ProjectileID.MushroomSpray)
 				{
-					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
+					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
 				}
 				NetMessage.SendTileSquare(-1, i, j, 1, 1);
 			}

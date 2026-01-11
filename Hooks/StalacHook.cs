@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Snow;
 using Xenon.Content.Tiles.Natural.Stone;
 

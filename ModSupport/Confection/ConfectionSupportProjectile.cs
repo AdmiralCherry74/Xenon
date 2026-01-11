@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using TheConfectionRebirth.Projectiles;
-using Xenon.ModSupport.Confection;
 
 namespace Xenon.ModSupport.Confection;
 
@@ -12,7 +11,7 @@ internal class ConfectionSupportProjectile : GlobalProjectile
 {
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return XenonMod.TheConfectionRebirthContentEnabled;
+		return XenonMod.TheConfectionRebirthContentEnabled && !XenonMod.AvalonContentEnabled;
 	}
 	public override void PostAI(Projectile projectile)
 	{
@@ -42,7 +41,7 @@ internal class ConfectionSupportProjectile : GlobalProjectile
 				{
 					ConfectionSystem.Convert(i, j, SpecialUtilities.ConversionType.Crimson, !flag);
 				}
-				if (projectile.type == ModContent.ProjectileType<CreamSolution>());
+				if (projectile.type == ModContent.ProjectileType<CreamSolution>())
 				{
 					ConfectionSystem.Convert(i, j, SpecialUtilities.ConversionType.Confection, !flag);
 				}
