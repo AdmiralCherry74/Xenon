@@ -6,10 +6,10 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using System;
 using Terraria.ID;
-using Xenon.Content.Tiles.Natural.Stone;
 using Microsoft.Xna.Framework;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
 using System.Reflection;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 
 namespace Xenon.Content.WorldGeneration;
 

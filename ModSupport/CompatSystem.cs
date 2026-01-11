@@ -1,37 +1,22 @@
-﻿using Avalon.Systems;
-using Microsoft.Xna.Framework;
-using System;
+﻿using Terraria.ID;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.Decoration.Torches;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Avalon.Content.Tiles;
 using static Xenon.SpecialUtilities;
-using Xenon.Content.Tiles.Natural.Corrosion;
-using Avalon.Tiles.Ores;
-using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.ModSupport.Avalon.Content.Tiles;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
+using Avalon.Tiles.Ores;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
-namespace Xenon.ModSupport.Avalon;
+namespace Xenon.ModSupport;
 
-[ExtendsFromMod("Avalon")]
-public class AvalonSystem : ModSystem
+[ExtendsFromMod("Avalon", "TheConfectionRebirth")]
+internal class CompatSystem : ModSystem
 {
-	public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
-	{
-		if (XenonMod.AvalonContentEnabled)
-		{
-			ModContent.GetInstance<Common.Systems.BiomeTileCounts>().MountainTiles +=
-				tileCounts[ModContent.TileType<PolloStone>()] +
-				tileCounts[ModContent.TileType<MossyPolloStone>()];
-
-			ModContent.GetInstance<BiomeTileCounts>().ContagionTiles +=
-				tileCounts[ModContent.TileType<PolloStone>()] +
-				tileCounts[ModContent.TileType<MossyPolloStone>()] +
-				tileCounts[ModContent.TileType<Snotquicksand>()];
-		}
-	}
 	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)
 	{
 		Tile tile = Main.tile[x, y];
@@ -45,19 +30,19 @@ public class AvalonSystem : ModSystem
 		{
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Ebonquicksand>() ||
 				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
-				type == ModContent.TileType<Snotquicksand>())
+				type == ModContent.TileType<Creamquicksand>() || type == ModContent.TileType<Snotquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Quicksand>();
 			}
 			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
 				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
-				type == ModContent.TileType<PolloStone>())
+				type == ModContent.TileType<HestiaStone>() || type == ModContent.TileType<PolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<OuranoStone>();
 			}
 			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
 				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
-				type == ModContent.TileType<MossyPolloStone>())
+				type == ModContent.TileType<MossyHestiaStone>() || type == ModContent.TileType<MossyPolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
 			}
@@ -67,23 +52,24 @@ public class AvalonSystem : ModSystem
 		{
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
 				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
-				type == ModContent.TileType<Snotquicksand>())
+				type == ModContent.TileType<Creamquicksand>() || type == ModContent.TileType<Snotquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Ebonquicksand>();
 			}
 			if (type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HephStone>() ||
 				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
-				type == ModContent.TileType<PolloStone>())
+				type == ModContent.TileType<HestiaStone>() || type == ModContent.TileType<PolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<NyxStone>();
 			}
 			if (type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHephStone>() ||
 				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
-				type == ModContent.TileType<MossyPolloStone>())
+				type == ModContent.TileType<MossyHestiaStone>() || type == ModContent.TileType<MossyPolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyNyxStone>();
 			}
-			if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>() || type == ModContent.TileType<HallowedOre>())
+			if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() ||
+				type == ModContent.TileType<BacciliteOre>())
 			{
 				tile.TileType = TileID.Demonite;
 			}
@@ -93,23 +79,25 @@ public class AvalonSystem : ModSystem
 		{
 			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
 				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
-				type == ModContent.TileType<Snotquicksand>())
+				type == ModContent.TileType<Creamquicksand>() || type == ModContent.TileType<Snotquicksand>())
+
 			{
 				tile.TileType = (ushort)ModContent.TileType<Crimquicksand>();
 			}
 			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
 				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<OuranoStone>() ||
-				type == ModContent.TileType<PolloStone>())
+				type == ModContent.TileType<HestiaStone>() || type == ModContent.TileType<PolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<AresStone>();
 			}
 			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
 				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyOuranoStone>() ||
-				type == ModContent.TileType<MossyPolloStone>())
+				type == ModContent.TileType<MossyHestiaStone>() || type == ModContent.TileType<MossyPolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyAresStone>();
 			}
-			if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>() || type == ModContent.TileType<HallowedOre>())
+			if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() ||
+				type == ModContent.TileType<BacciliteOre>())
 			{
 				tile.TileType = TileID.Crimtane;
 			}
@@ -119,51 +107,69 @@ public class AvalonSystem : ModSystem
 		{
 			if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
 				type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
-				type == ModContent.TileType<Snotquicksand>())
+				type == ModContent.TileType<Creamquicksand>() || type == ModContent.TileType<Snotquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Pearlquicksand>();
 			}
 			if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
 				type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<AresStone>() ||
-				type == ModContent.TileType<PolloStone>())
+				type == ModContent.TileType<HestiaStone>() || type == ModContent.TileType<PolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<HelioStone>();
 			}
 			if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
 				type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyAresStone>() ||
-				type == ModContent.TileType<MossyPolloStone>())
+				type == ModContent.TileType<MossyHestiaStone>() || type == ModContent.TileType<MossyPolloStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyHelioStone>();
 			}
-            if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<BacciliteOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<HallowedOre>();
-            }
-        }
-		// convert to contagion
+		}
 		if (convert == ConversionType.Contagion)
 		{
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
 				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
-				type == ModContent.TileType<Quicksand>())
+				type == ModContent.TileType<Quicksand>() || type == ModContent.TileType<Creamquicksand>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<Snotquicksand>();
 			}
 			if (type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HephStone>() ||
 				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
-				type == ModContent.TileType<NyxStone>())
+				type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HestiaStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<PolloStone>();
 			}
 			if (type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHephStone>() ||
 				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
-				type == ModContent.TileType<MossyNyxStone>())
+				type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHestiaStone>())
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyPolloStone>();
 			}
-			if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<HallowedOre>())
+			if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() ||
+				type == TileID.Crimtane)
 			{
 				tile.TileType = (ushort)ModContent.TileType<BacciliteOre>();
+			}
+		}
+		// convert to confection
+		if (convert == ConversionType.Confection)
+		{
+			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
+				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
+				type == ModContent.TileType<Quicksand>() || type == ModContent.TileType<Snotquicksand>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<Creamquicksand>();
+			}
+			if (type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HephStone>() ||
+				type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
+				type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<PolloStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<HestiaStone>();
+			}
+			if (type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHephStone>() ||
+				type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
+				type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyPolloStone>())
+			{
+				tile.TileType = (ushort)ModContent.TileType<MossyHestiaStone>();
 			}
 		}
 		// convert to jungle/mud
@@ -193,35 +199,5 @@ public class AvalonSystem : ModSystem
 				NetMessage.SendTileSquare(-1, x, y, 1);
 			}
 		}
-	}
-	public override void PostSetupContent()
-	{
-		if (!ModLoader.TryGetMod("Avalon", out Mod avalon))
-		{
-			return;
-		}
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), new Vector3(0.8f, 1.4f, 0));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), (int)DustID.JungleTorch);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), -1);
-
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<GrayTorch>(), new Vector3(0.5f, 0.5f, 0.5f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<GrayTorch>(), (int)DustID.Ash);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.GrayTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.GrayTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<GrayTorch>(), -1);
-
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<IndigoTorch>(), new Vector3(0.75f, 0.55f, 1.5f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<IndigoTorch>(), (int)DustID.ShadowbeamStaff);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.IndigoTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.IndigoTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<IndigoTorch>(), -1);
-
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<RoseTorch>(), new Vector3(1.3f, 0.43f, 0.93f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<RoseTorch>(), (int)DustID.PinkTorch);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.RoseTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Decoration.Torches.RoseTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<RoseTorch>(), -1);
 	}
 }

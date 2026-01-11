@@ -1,37 +1,36 @@
-﻿using Avalon.Dusts;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TheConfectionRebirth.Dusts;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Avalon.Content.Tiles;
+using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
-namespace Xenon.ModSupport.Avalon;
+namespace Xenon.ModSupport.Confection;
 
-[ExtendsFromMod("Avalon")]
-internal class AvalonSupportPlayer : ModPlayer
+[ExtendsFromMod("TheConfectionRebirth")]
+internal class ConfectionSupportPlayer : ModPlayer
 {
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return XenonMod.AvalonContentEnabled;
+		return XenonMod.TheConfectionRebirthContentEnabled;
 	}
 
 	public override void PostUpdate()
 	{
 		QuicksandMovement();
 
-		if (SubmergedInSnotquicksand(Player.position))
+		if (SubmergedInCreamquicksand(Player.position))
 		{
 			Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
 		}
 	}
 
-	public static bool SubmergedInSnotquicksand(Vector2 Position)
+	public static bool SubmergedInCreamquicksand(Vector2 Position)
 	{
 		Point tileCoord = Position.ToTileCoordinates();
-		if (Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Snotquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Snotquicksand>())
+		if (Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Creamquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Creamquicksand>())
 		{
 			return true;
 		}
@@ -127,15 +126,15 @@ internal class AvalonSupportPlayer : ModPlayer
 		{
 			for (int j = num3; j < num4; j++)
 			{
-				if (Main.tile[i, j].TileType == ModContent.TileType<Snotquicksand>())
+				if (Main.tile[i, j].TileType == ModContent.TileType<Creamquicksand>())
 				{
 					int num5 = 0;
 					vector2.X = i * 16;
 					vector2.Y = j * 16;
 					if (vector.X + Width > vector2.X - num5 && vector.X < vector2.X + 16f + num5 && vector.Y + Height > vector2.Y && vector.Y < vector2.Y + 16.01)
 					{
-						if (Main.tile[i, j].TileType == ModContent.TileType<Snotquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
-							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, ModContent.DustType<SnotsandDust>());
+						if (Main.tile[i, j].TileType == ModContent.TileType<Creamquicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, ModContent.DustType<CreamsandDust>());
 						return new Vector2(i, j);
 					}
 				}

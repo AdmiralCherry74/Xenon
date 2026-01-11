@@ -9,6 +9,7 @@ internal class XenonGlobalProjectile : GlobalProjectile
 {
 	public override void PostAI(Projectile projectile)
 	{
+		if (XenonMod.AvalonContentEnabled && XenonMod.TheConfectionRebirthContentEnabled) return;
 		if (projectile.owner != Main.myPlayer || (projectile.type != ProjectileID.CorruptSpray && projectile.type != ProjectileID.CrimsonSpray &&
 			projectile.type != ProjectileID.HallowSpray && projectile.type != ProjectileID.PureSpray && projectile.type != ProjectileID.SnowSpray &&
 			projectile.type != ProjectileID.PurificationPowder && projectile.type != ProjectileID.MushroomSpray && projectile.type != ProjectileID.ViciousPowder &&

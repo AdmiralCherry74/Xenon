@@ -1,12 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Stone;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
 
 namespace Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
@@ -39,7 +37,7 @@ public class HestiaStone : ModTile
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHestiaStone>()] = true;
         Main.tileBlockLight[Type] = true;
-        AddMapEntry(new Color(131, 187, 224));
+        AddMapEntry(new Color(201, 106, 63));
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
     }
@@ -52,18 +50,18 @@ public class HestiaStone : ModTile
 	{
 		if (!fail && !effectOnly)
 		{
-			if (Main.tile[i, j - 1].TileType == ModContent.TileType<OuranoStalac>())
+			if (Main.tile[i, j - 1].TileType == ModContent.TileType<HestiaStalac>())
 			{
 				WorldGen.KillTile(i, j - 1);
-				if (Main.tile[i, j - 2].TileType == ModContent.TileType<OuranoStalac>())
+				if (Main.tile[i, j - 2].TileType == ModContent.TileType<HestiaStalac>())
 				{
 					WorldGen.KillTile(i, j - 2);
 				}
 			}
-			if (Main.tile[i, j + 1].TileType == ModContent.TileType<OuranoStalac>())
+			if (Main.tile[i, j + 1].TileType == ModContent.TileType<HestiaStalac>())
 			{
 				WorldGen.KillTile(i, j + 1);
-				if (Main.tile[i, j + 2].TileType == ModContent.TileType<OuranoStalac>())
+				if (Main.tile[i, j + 2].TileType == ModContent.TileType<HestiaStalac>())
 				{
 					WorldGen.KillTile(i, j + 2);
 				}

@@ -5,8 +5,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Stone;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
 
 namespace Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;

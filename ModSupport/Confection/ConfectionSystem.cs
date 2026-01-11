@@ -6,9 +6,8 @@ using TheConfectionRebirth.Biomes;
 using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Stone;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
-using Xenon.ModSupport.Avalon.Content.Tiles;
+using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
@@ -49,17 +48,20 @@ internal class ConfectionSystem : ModSystem
         if (convert == ConversionType.Purity)
         {
             if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Ebonquicksand>() ||
-                type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() || type == ModContent.TileType<Creamquicksand>())
+                type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
+                type == ModContent.TileType<Creamquicksand>())
             {
                 tile.TileType = (ushort)ModContent.TileType<Quicksand>();
             }
             if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
-                type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() || type == ModContent.TileType<HestiaStone>())
+                type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
+                type == ModContent.TileType<HestiaStone>())
             {
                 tile.TileType = (ushort)ModContent.TileType<OuranoStone>();
             }
             if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
-                type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() || type == ModContent.TileType<MossyHestiaStone>())
+                type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
+                type == ModContent.TileType<MossyHestiaStone>())
             {
                 tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
             }
@@ -67,21 +69,25 @@ internal class ConfectionSystem : ModSystem
             if (convert == ConversionType.Corruption)
             {
                 if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
-                    type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() || type == ModContent.TileType<Creamquicksand>())
+                    type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
+                    type == ModContent.TileType<Creamquicksand>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<Ebonquicksand>();
                 }
                 if (type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HephStone>() ||
-                    type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() || type == ModContent.TileType<HestiaStone>())
+                    type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<AresStone>() ||
+                    type == ModContent.TileType<HestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<NyxStone>();
                 }
                 if (type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHephStone>() ||
-                    type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() || type == ModContent.TileType<MossyHestiaStone>())
+                    type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyAresStone>() ||
+                    type == ModContent.TileType<MossyHestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<MossyNyxStone>();
                 }
-                if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<NeapoliniteOre>())
+                if (type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() ||
+                    type == ModContent.TileType<NeapoliniteOre>())
                 {
                     tile.TileType = TileID.Demonite;
                 }
@@ -90,22 +96,26 @@ internal class ConfectionSystem : ModSystem
             if (convert == ConversionType.Crimson)
             {
                 if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-                    type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() || type == ModContent.TileType<Creamquicksand>())
+                    type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
+                    type == ModContent.TileType<Creamquicksand>())
 
                 {
                     tile.TileType = (ushort)ModContent.TileType<Crimquicksand>();
                 }
                 if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
-                    type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<HestiaStone>())
+                    type == ModContent.TileType<HelioStone>() || type == ModContent.TileType<OuranoStone>() ||
+                    type == ModContent.TileType<HestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<AresStone>();
                 }
                 if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
-                    type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyHestiaStone>())
+                    type == ModContent.TileType<MossyHelioStone>() || type == ModContent.TileType<MossyOuranoStone>() ||
+                    type == ModContent.TileType<MossyHestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<MossyAresStone>();
                 }
-                if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<NeapoliniteOre>())
+                if (type == TileID.Demonite || type == ModContent.TileType<IngestaneOre>() ||
+                    type == ModContent.TileType<NeapoliniteOre>())
                 {
                     tile.TileType = TileID.Crimtane;
                 }
@@ -114,17 +124,20 @@ internal class ConfectionSystem : ModSystem
             if (convert == ConversionType.Hallow)
             {
                 if (type == ModContent.TileType<Ebonquicksand>() || type == ModContent.TileType<Quicksand>() ||
-                    type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Gutquicksand>() || type == ModContent.TileType<Creamquicksand>())
+                    type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
+                    type == ModContent.TileType<Creamquicksand>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<Pearlquicksand>();
                 }
                 if (type == ModContent.TileType<NyxStone>() || type == ModContent.TileType<HephStone>() ||
-                    type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<AresStone>() || type == ModContent.TileType<HestiaStone>())
+                    type == ModContent.TileType<OuranoStone>() || type == ModContent.TileType<AresStone>() ||
+                    type == ModContent.TileType<HestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<HelioStone>();
                 }
                 if (type == ModContent.TileType<MossyNyxStone>() || type == ModContent.TileType<MossyHephStone>() ||
-                    type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyAresStone>() || type == ModContent.TileType<MossyHestiaStone>())
+                    type == ModContent.TileType<MossyOuranoStone>() || type == ModContent.TileType<MossyAresStone>() ||
+                    type == ModContent.TileType<MossyHestiaStone>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<MossyHelioStone>();
                 }
@@ -150,7 +163,8 @@ internal class ConfectionSystem : ModSystem
                 {
                     tile.TileType = (ushort)ModContent.TileType<MossyHestiaStone>();
                 }
-                if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() || type == ModContent.TileType<HallowedOre>())
+                if (type == TileID.Demonite || type == TileID.Crimtane || type == ModContent.TileType<IngestaneOre>() ||
+                    type == ModContent.TileType<HallowedOre>())
                 {
                     tile.TileType = (ushort)ModContent.TileType<NeapoliniteOre>();
                 }

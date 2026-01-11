@@ -2,11 +2,10 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 
-namespace Xenon.Content.Tiles.Natural.Stone;
+namespace Xenon.Content.Tiles.Natural.Mountains;
 
-public class NyxStalac : ModTile
+public class OuranoStalac : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -15,10 +14,10 @@ public class NyxStalac : ModTile
         Main.tileFrameImportant[Type] = true;
         Main.tileObsidianKill[Type] = true;
         TileID.Sets.BreakableWhenPlacing[Type] = true;
-        Main.tileMerge[ModContent.TileType<NyxStone>()][Type] = true;
-        Main.tileMerge[Type][ModContent.TileType<NyxStone>()] = true;
-        DustType = DustID.Ebonwood;
-		AddMapEntry(new Color(100, 100, 149));
+        Main.tileMerge[ModContent.TileType<OuranoStone>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<OuranoStone>()] = true;
+        DustType = DustID.Stone;
+		AddMapEntry(new Color(121, 180, 200));
 	}
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {

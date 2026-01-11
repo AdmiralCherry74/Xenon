@@ -3,16 +3,17 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 
-namespace Xenon.Content.Tiles.Natural.Stone;
+namespace Xenon.Content.Tiles.Natural.Mountains;
 
-public class NyxStone : ModTile
+public class AresStone : ModTile
 {
     public override void SetStaticDefaults()
     {
-        //Nyxstone is named after the greek goddess of the night, Nyx
+        //AresStone is named after the greek God Of War, Ares
         Main.tileSolid[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileMerge[Type][TileID.Stone] = true;
@@ -24,16 +25,16 @@ public class NyxStone : ModTile
         Main.tileMerge[Type][TileID.HallowedGrass] = true;
         Main.tileMerge[Type][ModContent.TileType<CorrosionGrass>()] = true;
         Main.tileMerge[Type][ModContent.TileType<Gutstone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<MossyNyxStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<MossyAresStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<OuranoStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyOuranoStone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<MossyAresStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<NyxStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<MossyNyxStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HephStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
-        AddMapEntry(new Color(115, 107, 159));
+        AddMapEntry(new Color(178, 101, 88));
         Main.tileBlockLight[Type] = true;
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
@@ -43,22 +44,23 @@ public class NyxStone : ModTile
     {
         num = fail ? 1 : 3;
     }
+
 	public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
 	{
 		if (!fail && !effectOnly)
 		{
-			if (Main.tile[i, j - 1].TileType == ModContent.TileType<NyxStalac>())
+			if (Main.tile[i, j - 1].TileType == ModContent.TileType<AresStalac>())
 			{
 				WorldGen.KillTile(i, j - 1);
-				if (Main.tile[i, j - 2].TileType == ModContent.TileType<NyxStalac>())
+				if (Main.tile[i, j - 2].TileType == ModContent.TileType<AresStalac>())
 				{
 					WorldGen.KillTile(i, j - 2);
 				}
 			}
-			if (Main.tile[i, j + 1].TileType == ModContent.TileType<NyxStalac>())
+			if (Main.tile[i, j + 1].TileType == ModContent.TileType<AresStalac>())
 			{
 				WorldGen.KillTile(i, j + 1);
-				if (Main.tile[i, j + 2].TileType == ModContent.TileType<NyxStalac>())
+				if (Main.tile[i, j + 2].TileType == ModContent.TileType<AresStalac>())
 				{
 					WorldGen.KillTile(i, j + 2);
 				}

@@ -1,14 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
 
-namespace Xenon.Content.Tiles.Natural.Stone.Mossy;
+namespace Xenon.Content.Tiles.Natural.Mountains.Mossy;
 
-public class MossyNyxStone : ModTile
+public class MossyAresStone : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -23,25 +22,25 @@ public class MossyNyxStone : ModTile
         Main.tileMerge[Type][TileID.HallowedGrass] = true;
         Main.tileMerge[Type][ModContent.TileType<CorrosionGrass>()] = true;
         Main.tileMerge[Type][ModContent.TileType<Gutstone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<NyxStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<OuranoStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyOuranoStone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<AresStone>()] = true;
-        Main.tileMerge[Type][ModContent.TileType<MossyAresStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<NyxStone>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<MossyNyxStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHelioStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<HephStone>()] = true;
         Main.tileMerge[Type][ModContent.TileType<MossyHephStone>()] = true;
 		Main.tileBrick[Type] = true;
 		TileID.Sets.NeedsGrassFraming[Type] = true;
-		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<NyxStone>();
+		TileID.Sets.NeedsGrassFramingDirt[Type] = ModContent.TileType<AresStone>();
 		TileID.Sets.Grass[Type] = true;
 		AddMapEntry(new Color(190, 223, 232));
         Main.tileBlockLight[Type] = true;
         HitSound = SoundID.Tink;
         DustType = DustID.Stone;
-		RegisterItemDrop(ModContent.ItemType<NyxStoneBlock>());
-	}
+        RegisterItemDrop(ModContent.ItemType<AresStoneBlock>());
+    }
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

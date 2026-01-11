@@ -5,8 +5,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Stone.Mossy;
-using Xenon.Content.Tiles.Natural.Stone;
+using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 
 namespace Xenon.Content.Tiles.Natural.Mountains;
 
