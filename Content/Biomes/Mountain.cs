@@ -12,9 +12,11 @@ public class Mountain : ModBiome
 	public override int Music => MusicID.OtherworldlyUnderground;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
+    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/MountainWaterStyle");
+
     public override bool IsBiomeActive(Player player)
 	{
-        return ModContent.GetInstance<BiomeTileCounts>().MountainTiles > 10 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().MountainTiles > 1500 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {

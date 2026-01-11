@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles.Natural.OresandGems;
 
-public class TNTore : ModTile
+public class Zeolite : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -15,7 +15,7 @@ public class TNTore : ModTile
         Main.tileBlockLight[Type] = true;
         AddMapEntry(new Color(250, 50, 50));
         HitSound = SoundID.Tink;
-        DustType = DustID.Adamantite;
+        DustType = DustID.CrimsonTorch;
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)
