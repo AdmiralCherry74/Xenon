@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Buffs.Epibuffs;
 
 namespace Xenon.Content.Items.Consumables.GlugGlugs;
     public class AngerPotion : ModItem
@@ -30,7 +31,7 @@ namespace Xenon.Content.Items.Consumables.GlugGlugs;
             Item.consumable = true;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(silver: 2);
-            Item.buffType = ModContent.BuffType<Buffs.Anger>(); // Specify an existing buff to be applied when used.
+            Item.buffType = ModContent.BuffType<Anger>(); // Specify an existing buff to be applied when used.
             Item.buffTime = 14400; // The amount of time the buff declared in Item.buffType will last in ticks. 14400 / 60 is 240, so this buff will last 240 seconds.
         }
     }

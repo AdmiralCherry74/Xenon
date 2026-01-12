@@ -1404,6 +1404,26 @@ Mods: {
 				DisplayName: Dungeon Red Bricks
 				Tooltip: ""
 			}
+
+			SeedPacket: {
+				DisplayName: Seed Packet
+				Tooltip: ""
+			}
+
+			Warflail: {
+				DisplayName: Warflail
+				Tooltip: ""
+			}
+
+			TheRange: {
+				DisplayName: The Range
+				Tooltip: ""
+			}
+
+			ImpWings: {
+				DisplayName: Imp Wings
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1451,6 +1471,7 @@ Mods: {
 			Chipmunk.DisplayName: Chipmunk
 			Sparrow.DisplayName: Sparrow
 			StomachBugWall.DisplayName: Stomach Bug
+			Aslugic.DisplayName: Aslugic
 		}
 
 		Tiles: {
@@ -1476,6 +1497,7 @@ Mods: {
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: GastricAltar
+			GastricAltar.MapEntry: Gastric Altar
 		}
 
 		Bestiary: {
@@ -1500,7 +1522,7 @@ Mods: {
 			CorrodedCultist: No one knows why they worship what's essentially a digestive evil, however they're as deadly as any other mysterious cult member.
 			Tiger: A predator native to the jungle that sneaks up on its prey and pounces on it until it's dead.
 			MarbleElemental: Earth elementals manifest through many forms by taking on the properties of different materials, such as this sturdy marble.
-			Aclugic: These slugs made out of acids move throughout the land, spreading a viscous acidic substance that spreads the Corrosion. Their shells, however are hard and dangerous!
+			Aslugic: These slugs made out of acids move throughout the land, spreading a viscous acidic substance that spreads the Corrosion. Their shells, however are hard and dangerous!
 			SpikedWhiteSlime: These slimes are weaker than most, so they evolved spikes to compensate. Ancient civilizations figured out how to use those same spikes to make unique projectiles for crossbows.
 			WhiteSlime: A mutation that can rarely occur in white slimes, these white slimes are heavily endangered due to their lack of hunting capabilities due to their missing spikes.
 			NavySlime: Dis navy slime evolved t' live nigh beaches 'n on ocean surfaces. its a delicate creature requirin' salt water 'n coral reefs t' live. Aye dis entry was written by a pirate, do ye 'ave a problem wit' dat?
@@ -1539,11 +1561,6 @@ Mods: {
 				TownNPCDialogueName: the Corrosion Underground Ice
 			}
 
-			FrozenUnderworld: {
-				DisplayName: Scorching Ice
-				TownNPCDialogueName: the Scorching Ice
-			}
-
 			Mountain: {
 				DisplayName: Mountain
 				TownNPCDialogueName: the Mountains
@@ -1551,7 +1568,7 @@ Mods: {
 
 			CorrosionCaveDesert: {
 				DisplayName: Corrosion Cave Desert
-				TownNPCDialogueName: the Corrosion Cave Desert
+				TownNPCDialogueName: the Underground Corrosion Desert
 			}
 
 			CorrosionDesert: {
@@ -1596,6 +1613,9 @@ Mods: {
 			AridPowderProj.DisplayName: Arid Powder
 			VitriolicPowderProj.DisplayName: Vitriolic Powder
 			GravelBallFallingProjectile.DisplayName: Gravel Ball
+			WarflailBall.DisplayName: Warflail Ball
+			RangeYoYoProj.DisplayName: Range Yo Yo Proj
+			GraveBuster.DisplayName: Grave Buster
 		}
 
 		Buffs: {
@@ -1672,6 +1692,11 @@ Mods: {
 			BunnyMinionBuff: {
 				DisplayName: Armoured Bunny
 				Description: The armored bunny will fight for you
+			}
+
+			GraveBuster: {
+				DisplayName: Grave Buster
+				Description: Mods.Xenon.Buffs.GraveBuster.Description
 			}
 		}
 	}

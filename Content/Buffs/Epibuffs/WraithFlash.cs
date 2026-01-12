@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Buffs
+namespace Xenon.Content.Buffs.Epibuffs
 {
     public class WraithFlash : ModBuff
     {

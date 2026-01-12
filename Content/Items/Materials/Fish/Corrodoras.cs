@@ -2,9 +2,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Fish;
+namespace Xenon.Content.Items.Materials.Fish;
 
-public class GraniteFish : ModItem
+public class Corrodoras : ModItem
 {
 	public override void SetStaticDefaults()
 	{

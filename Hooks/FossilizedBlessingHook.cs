@@ -5,7 +5,7 @@ using Terraria.Graphics.Renderers;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Xenon.Common;
-using Xenon.Content.Buffs;
+using Xenon.Content.Buffs.Other;
 
 namespace Xenon.Hooks;
 
