@@ -1,8 +1,8 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Epibuffs;
 
 namespace Xenon.Content.Items.Weapons.Melee.Battleaxes;
 

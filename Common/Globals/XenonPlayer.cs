@@ -5,10 +5,10 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
-using Xenon.Content.Buffs;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Items.Fish;
-using Xenon.Content.Items.Fish.Quest;
+using Xenon.Content.Buffs.Other;
+using Xenon.Content.Items.Materials.Fish;
+using Xenon.Content.Items.Materials.Fish.Quest;
 
 namespace Xenon.Common.Globals;
 

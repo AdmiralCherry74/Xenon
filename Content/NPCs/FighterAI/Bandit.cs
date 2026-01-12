@@ -6,7 +6,9 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Items.Weapons.Melee.Flails;
 
 namespace Xenon.Content.NPCs.FighterAI
 {
@@ -111,6 +113,7 @@ namespace Xenon.Content.NPCs.FighterAI
             npcLoot.Add(ItemDropRule.Common(ItemID.ThrowingKnife, 5, 50, 250));
             npcLoot.Add(ItemDropRule.Common(ItemID.TinOre, 2, 3, 15));
             npcLoot.Add(ItemDropRule.Common(ItemID.Torch, 1, 10, 20));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Warflail>(), 10, 1, 1));
         }
     }
 }

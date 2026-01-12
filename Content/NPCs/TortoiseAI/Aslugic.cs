@@ -11,12 +11,10 @@ using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.TortoiseAI
 {
-    public class Aclugic : ModNPC
+    public class Aslugic : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = 12;
-
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f
@@ -46,7 +44,7 @@ namespace Xenon.Content.NPCs.TortoiseAI
 
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Aclugic")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Aslugic")),
             ]);
         }
 
