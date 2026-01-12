@@ -6,17 +6,59 @@ using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Tiles.Natural.Mountains;
+using System.Collections.Generic;
+using Xenon.Content.Items.Accessories;
+using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Content.WorldGeneration;
 
 public class Utils
 {
-    /// <summary>
-    /// A helper method to find the actual surface of the world.
-    /// </summary>
-    /// <param name="positionX">The x position.</param>
-    /// <returns>The surface of the world.</returns>
-    public static int TileCheck(int positionX)
+	public static int CliffsideItemCount;
+	public static int CliffsideItemResult;
+	public static int GetNextCliffsideChestItem()
+	{
+		//int result = ModContent.ItemType<Items.Accessories.PreHardmode.OilBottle>();
+		//switch (HellfireItemCount % 2)
+		//{
+		//	case 0:
+		//		result = ModContent.ItemType<Items.Accessories.PreHardmode.OilBottle>();
+		//		break;
+		//	case 1:
+		//		result = ModContent.ItemType<Items.Tools.PreHardmode.EruptionHook>();
+		//		break;
+		//}
+
+		//HellfireItemCount++;
+		//return result;
+		List<int> items = new()
+		{
+			ModContent.ItemType<ZephyrBoots>(),
+			ModContent.ItemType<RubberHandleSword>(),
+			//ModContent.ItemType<Items.Placeable.Furniture.BasaltObelisk>(),
+		};
+		if (CliffsideItemCount % 2 == 0)
+		{
+			CliffsideItemResult = WorldGen.genRand.Next(items.Count);
+			CliffsideItemCount++;
+			return items[CliffsideItemResult];
+		}
+		else
+		{
+			List<int> excludeFirstItem = items;
+			excludeFirstItem.Remove(excludeFirstItem[CliffsideItemResult]);
+			int result2 = WorldGen.genRand.Next(excludeFirstItem.Count);
+			CliffsideItemCount++;
+			return excludeFirstItem[result2];
+		}
+	}
+
+	/// <summary>
+	/// A helper method to find the actual surface of the world.
+	/// </summary>
+	/// <param name="positionX">The x position.</param>
+	/// <returns>The surface of the world.</returns>
+	public static int TileCheck(int positionX)
     {
         for (int i = (int)(GenVars.worldSurfaceLow - 30); i < Main.maxTilesY; i++)
         {

@@ -1397,7 +1397,7 @@ Mods: {
 
 			SnotquicksandBlock: {
 				DisplayName: Snotquicksand Block
-				Tooltip: " sand that makes you fall through it"
+				Tooltip: Snotsand that makes you fall through it
 			}
 
 			DungeonRedBrickBlock: {
@@ -1464,19 +1464,18 @@ Mods: {
 			CliffsideChest.MapEntry0: Cliffside Chest
 
 			PlacedGems: {
-				Garnet: Mods.Xenon.Tiles.PlacedGems.Garnet
-				Onyx: Mods.Xenon.Tiles.PlacedGems.Onyx
-				Lapis: Mods.Xenon.Tiles.PlacedGems.Lapis
+				Garnet: Garnet
+				Onyx: Onyx
+				Lapis: Lapis
 			}
 
-			LockedLivingJacarandawoodDoor.MapEntry: Locked Living JacarandawoodDoor
+			LockedLivingJacarandawoodDoor.MapEntry: Locked Living Jacaranda Door
 			SwordLeverWild.MapEntry: Suspicious Looking Stone
 			SilverDoorClosed.MapEntry: Silver Door
 			SilverDoorOpened.MapEntry: Silver Door
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
-			ExpiredAltar.MapEntry: Expired Altar
-			GastricAltar.MapEntry: Mods.Xenon.Tiles.GastricAltar.MapEntry
+			GastricAltar.MapEntry: GastricAltar
 		}
 
 		Bestiary: {
@@ -1571,7 +1570,7 @@ Mods: {
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Cannon
 			RayProj.DisplayName: Ray Cannon
-			GutsandBallFallingProjectile.DisplayName: Gutsand Ball Falling Block
+			GutsandBallFallingProjectile.DisplayName: Gutsand Ball
 			GutsandSandgunProjectile.DisplayName: Gutsand Sandgun
 			CorrosionSpray.DisplayName: Corrosion Spray
 			RHSProj.DisplayName: Rubber Handle Sword
@@ -1637,7 +1636,7 @@ Mods: {
 
 			Cleaved: {
 				DisplayName: Cleaved
-				Description: Severe blood loss inflicted by a Waraxe
+				Description: Severe blood loss inflicted by a waraxe
 			}
 
 			IronCaltropTagDamage: {
@@ -1657,12 +1656,12 @@ Mods: {
 
 			Gnashed: {
 				DisplayName: Gnashed
-				Description: Moving decrease's your life!
+				Description: Moving decreases your life!
 			}
 
 			Unpolished: {
 				DisplayName: Unpolished
-				Description: 25% Less Defense, 1.20X Coin Yield
+				Description: 25% less defense, 20% increased coin drops
 			}
 
 			WraithFlash: {
@@ -1672,7 +1671,7 @@ Mods: {
 
 			BunnyMinionBuff: {
 				DisplayName: Armoured Bunny
-				Description: The armoured bunny will fight for you
+				Description: The armored bunny will fight for you
 			}
 		}
 	}

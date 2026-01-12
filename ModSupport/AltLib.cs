@@ -20,7 +20,7 @@ internal class CorrosionAltBiome : AltBiome
     public override string IconSmall => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconCorrosion";
     public override Color OuterColor => new(167, 158, 29);
     public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Corrosion>();
-    public override Color NameColor => Color.YellowGreen;
+    public override Color NameColor => new Color(232, 221, 102);
     public override void SetStaticDefaults()
     {
         BiomeType = AltLibrary.BiomeType.Evil;

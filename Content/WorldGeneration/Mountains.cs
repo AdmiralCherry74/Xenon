@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework;
 using System.Reflection;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Common;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -21,10 +22,15 @@ public class MountainGen : ModSystem
 		int index = tasks.FindIndex(genPass => genPass.Name == "Beaches");
 		if (index != -1)
 		{
-			tasks[index] = new MountainsGenPass();
+			tasks.RemoveAt(index);
 			currentPass = new OtherSideOceanPass_Beaches();
-			tasks.Insert(index + 1, currentPass);
+			tasks.Insert(index, currentPass);
 			totalWeight += currentPass.Weight;
+		}
+		index = tasks.FindIndex(genPass => genPass.Name == "Gems");
+		if (index != -1)
+		{
+			tasks.Insert(index + 1, new MountainsGenPass());
 		}
 		index = tasks.FindIndex(genPass => genPass.Name == "Ocean Sand");
 		if (index != -1)
@@ -37,8 +43,54 @@ public class MountainGen : ModSystem
 			currentPass = new MountainStalac();
 			tasks.Insert(index + 1, currentPass);
 			totalWeight += currentPass.Weight;
+
+			currentPass = new MountainChests();
+			tasks.Insert(index + 2, currentPass);
+			totalWeight += currentPass.Weight;
 		}
 		//1.1.CorruptBiome.2035325171
+	}
+}
+public class MountainChests : GenPass
+{
+	public MountainChests() : base("Mountain Chests", 20f)
+	{
+	}
+
+	protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
+	{
+		if (GenVars.dungeonSide == -1)
+		{
+			for (int x = 0; x < 350; x++)
+			{
+				for (int y = 0; y < Main.worldSurface; y++)
+				{
+					if (Main.tile[x, y].HasTile && Main.tile[x, y].TileType == ModContent.TileType<OuranoStone>() &&
+						Main.tile[x + 1, y].HasTile && Main.tile[x + 1, y].TileType == ModContent.TileType<OuranoStone>() &&
+						!Main.tile[x, y - 1].HasTile && !Main.tile[x + 1, y - 1].HasTile)
+					{
+						if (WorldGen.genRand.NextBool(15))
+							WorldGen.AddBuriedChest(x, y - 2, Utils.GetNextCliffsideChestItem());
+					}
+				}
+			}
+		}
+		else if (GenVars.dungeonSide == 1)
+		{
+			for (int x = Main.maxTilesX - 350; x < Main.maxTilesX; x++)
+			{
+				for (int y = 0; y < Main.worldSurface; y++)
+				{
+					if (Main.tile[x, y].HasTile && Main.tile[x, y].TileType == ModContent.TileType<OuranoStone>() &&
+						Main.tile[x - 1, y].HasTile && Main.tile[x - 1, y].TileType == ModContent.TileType<OuranoStone>() &&
+						!Main.tile[x, y - 1].HasTile && !Main.tile[x + 1, y - 1].HasTile)
+					{
+						if (WorldGen.genRand.NextBool(15))
+							WorldGen.AddBuriedChest(x, y - 2, Utils.GetNextCliffsideChestItem());
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -156,6 +208,7 @@ public class OtherSideOceanPass_Beaches : GenPass
 							{
 								GenVars.shellStartXLeft = num7;
 							}
+							GenVars.shellStartXRight = 500;
 						}
 					}
 					else if (k > j)
@@ -201,6 +254,7 @@ public class OtherSideOceanPass_Beaches : GenPass
 							{
 								GenVars.shellStartXRight = m;
 							}
+							GenVars.shellStartXLeft = 500;
 						}
 					}
 					else if (n > j)
@@ -260,7 +314,7 @@ public class OtherSideOceanPass_OceanSand : GenPass
 			if (GenVars.dungeonSide == -1)
 			{
 				leftSide = GenVars.rightBeachStart;
-				rightSide = Main.maxTilesX;
+				rightSide = Main.maxTilesX - 1;
 			}
 			else
 			{
@@ -273,11 +327,11 @@ public class OtherSideOceanPass_OceanSand : GenPass
 			}
 			if (leftSide > Main.maxTilesX)
 			{
-				leftSide = Main.maxTilesX;
+				leftSide = Main.maxTilesX - 1;
 			}
 			if (rightSide > Main.maxTilesX)
 			{
-				rightSide = Main.maxTilesX;
+				rightSide = Main.maxTilesX - 1;
 			}
 			if (rightSide < 0)
 			{
@@ -358,7 +412,7 @@ public class MountainsGenPass : GenPass
 		progress.Message = Language.GetTextValue("Mods.Xenon.Generation.Mountains");
 		int mountainsPerSide = 3;
 
-		int baseHeight = 45;
+		int baseHeight = 35;
 		int baseWidth = 80;
 
 		if (GenVars.dungeonSide == -1)
@@ -367,7 +421,7 @@ public class MountainsGenPass : GenPass
 			for (int i = 0; i < mountainsPerSide; i++)
 			{
 				int centerX = 60 + i * 140;
-				GenerateMountain(centerX, baseHeight + i * 30, baseWidth + i * 35);
+				GenerateMountain(centerX, baseHeight + i * 20, baseWidth + i * 35);
 			}
 		}
 		else
@@ -376,40 +430,40 @@ public class MountainsGenPass : GenPass
 			for (int i = 0; i < mountainsPerSide; i++)
 			{
 				int centerX = Main.maxTilesX - 60 - i * 140;
-				GenerateMountain(centerX, baseHeight + i * 30, baseWidth + i * 35);
+				GenerateMountain(centerX, baseHeight + i * 20, baseWidth + i * 35);
 			}
 		}
-		for (int q = 0; q < Main.maxTilesX; q++)
+		for (int q = 20; q < Main.maxTilesX - 20; q++)
 		{
 			for (int z = 100; z < Main.maxTilesY / 2; z++)
 			{
 				Tile tile = Main.tile[q, z];
-				// mossy stone logic
+				// snowy stone logic
 				int grassLine = (int)(Main.worldSurface - 140);
 				if (tile.TileType == ModContent.TileType<OuranoStone>())
 				{
 					if (z < grassLine)
 					{
-						if ((tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
-							(tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
-							(tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
-							(tile.HasTile && !Main.tile[q + 1, z].HasTile) ||
-							(tile.HasTile && !Main.tile[q - 1, z - 1].HasTile) ||
-							(tile.HasTile && !Main.tile[q - 1, z + 1].HasTile) ||
-							(tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
-							(tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
+						if ((WorldGen.InWorld(q, z - 1) && tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
+							(WorldGen.InWorld(q, z + 1) && tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
+							(WorldGen.InWorld(q - 1, z) && tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
+							(WorldGen.InWorld(q + 1, z) && tile.HasTile && !Main.tile[q + 1, z].HasTile) ||
+							(WorldGen.InWorld(q - 1, z + 1) && tile.HasTile && !Main.tile[q - 1, z - 1].HasTile) ||
+							(WorldGen.InWorld(q + 1, z - 1) && tile.HasTile && !Main.tile[q - 1, z + 1].HasTile) ||
+							(WorldGen.InWorld(q + 1, z - 1) && tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
+							(WorldGen.InWorld(q + 1, z + 1) && tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
 						{
 							tile.TileType = (ushort)ModContent.TileType<MossyOuranoStone>();
 						}
 					}
-					if ((tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
-						(tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
-						(tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
-						(tile.HasTile && !Main.tile[q + 1, z].HasTile) ||
-						(tile.HasTile && !Main.tile[q - 1, z - 1].HasTile) ||
-						(tile.HasTile && !Main.tile[q - 1, z + 1].HasTile) ||
-						(tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
-						(tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
+					if ((WorldGen.InWorld(q, z - 1) && tile.HasTile && !Main.tile[q, z - 1].HasTile) ||
+						(WorldGen.InWorld(q, z + 1) && tile.HasTile && !Main.tile[q, z + 1].HasTile) ||
+						(WorldGen.InWorld(q - 1, z) && tile.HasTile && !Main.tile[q - 1, z].HasTile) ||
+						(WorldGen.InWorld(q + 1, z) && tile.HasTile && !Main.tile[q + 1, z].HasTile) ||
+						(WorldGen.InWorld(q - 1, z + 1) && tile.HasTile && !Main.tile[q - 1, z - 1].HasTile) ||
+						(WorldGen.InWorld(q + 1, z - 1) && tile.HasTile && !Main.tile[q - 1, z + 1].HasTile) ||
+						(WorldGen.InWorld(q + 1, z - 1) && tile.HasTile && !Main.tile[q + 1, z - 1].HasTile) ||
+						(WorldGen.InWorld(q + 1, z + 1) && tile.HasTile && !Main.tile[q + 1, z + 1].HasTile))
 					{
 						WorldGen.GrowTree(q, z - 1);
 					}
@@ -435,18 +489,17 @@ public class MountainsGenPass : GenPass
 				continue;
 
 			int peakHeight = (int)(height * heightFactor);
-			float blendStrength = MathHelper.Lerp(1f, 0.35f, dist);
 			int surfaceY = Utils.TileCheck(worldX) + 5;
 
 			for (int y = surfaceY; y > surfaceY - peakHeight; y--)
 			{
-				if (y < 0) break;
-				if (!WorldGen.InWorld(worldX, y)) continue;
+				if (y < 20) break;
+				if (!WorldGen.InWorld(worldX, y, 5)) continue;
 				if (Main.tileSolid[Main.tile[worldX, y].TileType] && Main.tile[worldX, y].HasTile)
 					continue;
 
 				float depthFactor = (surfaceY - y) / (float)peakHeight;
-				if (WorldGen.InWorld(worldX, y))
+				if (WorldGen.InWorld(worldX, y, 5))
 				{
 					Tile tile = Main.tile[worldX, y];
 					tile.HasTile = true;
@@ -457,5 +510,19 @@ public class MountainsGenPass : GenPass
 				}
 			}
 		}
+	}
+}
+public class ShellPileHook : ModHook
+{
+	protected override void Apply()
+	{
+		On_WorldGen.ShellPile += On_WorldGen_ShellPile;
+	}
+
+	private bool On_WorldGen_ShellPile(On_WorldGen.orig_ShellPile orig, int X, int Y)
+	{
+		if (X < Main.maxTilesX / 2 && GenVars.dungeonSide == -1) return false;
+		if (X > Main.maxTilesX / 2 && GenVars.dungeonSide == 1) return false;
+		return orig.Invoke(X, Y);
 	}
 }

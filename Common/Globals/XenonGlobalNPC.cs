@@ -8,6 +8,7 @@ using Xenon.Content.NPCs.PassiveAI;
 using Xenon.Content.NPCs.PassiveAI.BirdAI;
 using Xenon.Content.NPCs.SlimeAI;
 using Xenon.Content.NPCs.SpiderAI;
+using Xenon.Content.NPCs.TortoiseAI;
 using Xenon.Content.NPCs.WormAI;
 
 namespace Xenon.Common.Globals;
@@ -23,12 +24,27 @@ internal class XenonGlobalNPC : GlobalNPC
 			pool.Add(ModContent.NPCType<JebelSlime>(), 0.4f);
 			pool.Add(ModContent.NPCType<Chipmunk>(), 0.4f);
 		}
+		if (spawnInfo.Player.InModBiome<CorrosionDesert>())
+		{
+			pool.Clear();
+			pool.Add(ModContent.NPCType<Gastritis>(), 0.5f);
+			pool.Add(ModContent.NPCType<StomachBug>(), 0.5f);
+			if (NPC.downedBoss2)
+			{
+				pool.Add(ModContent.NPCType<TapeWormHead>(), 0.5f);
+			}
+			pool.Add(ModContent.NPCType<Aclugic>(), 0.5f);
+		}
 		if (spawnInfo.Player.InModBiome<Corrosion>())
 		{
 			pool.Clear();
 			pool.Add(ModContent.NPCType<Gastritis>(), 0.5f);
 			pool.Add(ModContent.NPCType<StomachBug>(), 0.5f);
-			pool.Add(ModContent.NPCType<TapeWormHead>(), 0.5f);
+			if (NPC.downedBoss2)
+			{
+				pool.Add(ModContent.NPCType<TapeWormHead>(), 0.5f);
+			}
+			pool.Add(ModContent.NPCType<Aclugic>(), 0.5f);
 
 			//if (Main.hardMode)
 			//{

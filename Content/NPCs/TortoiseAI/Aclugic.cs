@@ -66,7 +66,7 @@ namespace Xenon.Content.NPCs.TortoiseAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>()|| spawnInfo.Player.InModBiome<CorrosionUnderground>() || spawnInfo.Player.InModBiome<CorrosionDesert>())
+            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionUnderground>() || spawnInfo.Player.InModBiome<CorrosionDesert>())
             {
                 return 0.75f;
             }
