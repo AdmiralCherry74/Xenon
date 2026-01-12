@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Biomes
 {
-    public class FrozenUnderworldBackgroundStyle : ModUndergroundBackgroundStyle
+    public class ScorchingIceBackgroundStyle : ModUndergroundBackgroundStyle
     {
         public override void FillTextureArray(int[] textureSlots)
         {

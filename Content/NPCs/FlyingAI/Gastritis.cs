@@ -35,7 +35,7 @@ namespace Xenon.Content.NPCs.FlyingAI
             NPC.lifeMax = 150;
             NPC.noGravity = true;
             NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.DeathSound = SoundID.NPCDeath2;
             NPC.value = 250;
             NPC.knockBackResist = 1f;
             NPC.aiStyle = 5; 
@@ -71,8 +71,7 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>() ||
-            spawnInfo.Player.InModBiome<CorrosionUnderground>() && !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionDesert>() || spawnInfo.Player.InModBiome<CorrosionUnderground>())
             {
                 return 2f;
             }

@@ -14,8 +14,9 @@ namespace Xenon.Common.Systems;
 
 internal class BiomeTileCounts : ModSystem
 {
-    public int CorrosionTiles { get; private set; }
-	public int FrozenLavaTiles { get; private set; }
+	public int CorrosionTiles { get; private set; }
+    public int CorrosionDesertTiles { get; private set; }
+    public int FrozenLavaTiles { get; private set; }
     public int MountainTiles { get; set; }
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
@@ -44,10 +45,16 @@ internal class BiomeTileCounts : ModSystem
 						 tileCounts[ModContent.TileType<Gutsandstone>()] +
 						 tileCounts[ModContent.TileType<CorrosionGrass>()] +
 						 tileCounts[ModContent.TileType<CorrosionJungleGrass>()] +
-						 tileCounts[ModContent.TileType<Gutsand>()] +
+                         tileCounts[ModContent.TileType<Gutquicksand>()] +
+                         tileCounts[ModContent.TileType<Gutsand>()] +
 						 tileCounts[ModContent.TileType<TanIce>()] +
 						 tileCounts[ModContent.TileType<HephStone>()] +
 						 tileCounts[ModContent.TileType<MossyHephStone>()];
+
+		CorrosionDesertTiles = tileCounts[ModContent.TileType<Gutsand>()] +
+							   tileCounts[ModContent.TileType<HardenedGutsand>()] +
+							   tileCounts[ModContent.TileType<Gutsandstone>()] +
+							   tileCounts[ModContent.TileType<Gutquicksand>()];
 
         FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
 

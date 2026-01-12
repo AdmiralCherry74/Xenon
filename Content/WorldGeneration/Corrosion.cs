@@ -187,11 +187,11 @@ public class Corrosion : EvilBiomeGenerationPass
                 }
                 if (num228 > 10 || (Main.tile[num229, num230 + 1].HasTile && Main.tile[num229, num230 + 1].TileType == ModContent.TileType<Gutstone>()))
                 {
-                    //WorldGen.Place3x2(num229, num230, (ushort)ModContent.TileType<IckyAltar>());
-                    //if (Main.tile[num229, num230].TileType == (ushort)ModContent.TileType<IckyAltar>())
-                    //{
-                    //    flag14 = true;
-                    //}
+                    WorldGen.Place3x2(num229, num230, (ushort)ModContent.TileType<GastricAltar>());
+                    if (Main.tile[num229, num230].TileType == (ushort)ModContent.TileType<GastricAltar>())
+                    {
+                        flag14 = true;
+                    }
                 }
                 if (num228 > 100)
                 {

@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion
 {
-    public class ExpiredAltar : ModTile
+    public class GastricAltar : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -27,7 +28,7 @@ namespace Xenon.Content.Tiles.Natural.Corrosion
             TileID.Sets.PreventsTileRemovalIfOnTopOfIt[Type] = true;
             TileID.Sets.PreventsSandfall[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
-            HitSound = SoundID.Lavafall;
+            HitSound = SoundID.NPCHit1;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
@@ -51,11 +52,13 @@ namespace Xenon.Content.Tiles.Natural.Corrosion
             }
 
             return Main.hardMode;
+
         }
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
             WorldGen.SmashAltar(i, j);
+            SoundEngine.PlaySound(SoundID.NPCDeath2);
         }
     }
 }

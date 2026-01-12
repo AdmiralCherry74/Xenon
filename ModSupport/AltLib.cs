@@ -8,6 +8,7 @@ using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
+using Xenon.Content.NPCs.FighterAI;
 
 namespace Xenon.ModSupport;
 
@@ -19,7 +20,7 @@ internal class CorrosionAltBiome : AltBiome
     public override string IconSmall => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconCorrosion";
     public override Color OuterColor => new(167, 158, 29);
     public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Corrosion>();
-    public override Color NameColor => Color.Yellow;
+    public override Color NameColor => Color.YellowGreen;
     public override void SetStaticDefaults()
     {
         BiomeType = AltLibrary.BiomeType.Evil;
@@ -55,9 +56,11 @@ internal class CorrosionAltBiome : AltBiome
         BiomeOre = ModContent.TileType<Content.Tiles.Natural.Corrosion.IngestaneOre>();
         BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
 
-		AltarTile = ModContent.TileType<ExpiredAltar>();
+        AltarTile = ModContent.TileType<GastricAltar>();
 
-		/*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
+        BloodBunny = ModContent.NPCType<SulfirBunny>();
+
+        /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
        
 
@@ -68,11 +71,11 @@ internal class CorrosionAltBiome : AltBiome
 
         MimicType = ModContent.NPCType<CorrosionMimic>();
 
-        //BloodBunny = ModContent.NPCType<ContaminatedBunny>();
+
         //BloodPenguin = ModContent.NPCType<ContaminatedPenguin>();
         //BloodGoldfish = ModContent.NPCType<ContaminatedGoldfish>();
         */
-		AddWallConversions<CorrosionLumpWallUnsafe>(
+        AddWallConversions<CorrosionLumpWallUnsafe>(
             WallID.RocksUnsafe3
         );
         AddWallConversions<CorrosionMoldWallUnsafe>(

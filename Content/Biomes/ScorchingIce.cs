@@ -7,7 +7,7 @@ using Xenon.Content.Walls.NaturalWalls.Stone;
 
 namespace Xenon.Content.Biomes;
 
-public class FrozenUnderworld : ModBiome
+public class ScorchingIce : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
@@ -22,7 +22,7 @@ public class FrozenUnderworld : ModBiome
     {
         get
         {
-            return ModContent.GetInstance<FrozenUnderworldBackgroundStyle>();
+            return ModContent.GetInstance<ScorchingIceBackgroundStyle>();
         }
     }
 }

@@ -68,7 +68,7 @@ namespace Xenon.Content.NPCs.SpiderAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
+            if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
             {
                 return 0.15f;
             }

@@ -76,8 +76,10 @@ namespace Xenon.Content.NPCs.CasterAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss1 && !spawnInfo.Player.InPillarZone())
+            if(spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss1 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss1 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss1)
+            {
                 return 0.05f;
+            }
             return 0;
         }
 

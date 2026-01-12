@@ -1399,6 +1399,11 @@ Mods: {
 				DisplayName: Snotquicksand Block
 				Tooltip: " sand that makes you fall through it"
 			}
+
+			DungeonRedBrickBlock: {
+				DisplayName: Dungeon Red Bricks
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1445,7 +1450,7 @@ Mods: {
 			JebelSlime.DisplayName: Jebel Slime
 			Chipmunk.DisplayName: Chipmunk
 			Sparrow.DisplayName: Sparrow
-			StomachBugWall.DisplayName: Stomach Bug Wall
+			StomachBugWall.DisplayName: Stomach Bug
 		}
 
 		Tiles: {
@@ -1471,6 +1476,7 @@ Mods: {
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			ExpiredAltar.MapEntry: Expired Altar
+			GastricAltar.MapEntry: Mods.Xenon.Tiles.GastricAltar.MapEntry
 		}
 
 		Bestiary: {
@@ -1485,9 +1491,9 @@ Mods: {
 			SnowLeopard: A solitary predator that seeks its prey in the tundra. It rarely hunts humans...
 			Wartornmelon: Cut enemy for now
 			TempleSentry: A dangerous sentry that patrols the Lihzahrd Temple, shooting lasers and ramming into those who run into the temple uninvited. Low grade weapons won't even scratch it without the help of souls being released...
-			HalfDigested: An unfortunate bipedal mortal like a human or goblin, ate and spat out by the Stomach Of Cthulhu. They now run about to harm those not yet under this affliction.
+			HalfDigested: An unfortunate bipedal mortal like a human or goblin, ate and spat out by the Insatiable Gannet. They now run about to harm those not yet under this affliction.
 			StomachBug: A small stinkbug now turned into a denizen of the Corrosion. Stomach Bugs run about gathering food for the ever hungry overlord, all the while covering the land in their noxious fumes.
-			Gastritis: Annoying, plentiful, ugly, reckless, and deadly. That's what Gastritis are, and that's bad news for you.
+			Gastritis: Annoying, plentiful, ugly, reckless, and deadly. Some addapted to let the local Corroded Cultists feed it, so they burrow in the ground changing themselves.
 			Evphila: These cockroaches adapted to the environment over quite a few centuries. Born into a vile and evil world, they feed off the sins of their surroundings. Thankfully, they can't fly.
 			Capillarie: Aggressive crimified worms that tunnel fast. They are extremely small and frail; however, they compensate with their surprising lethality.
 			TapeWorm: A class of parasitic worms that have adapted to go unnoticed by the Corrosion. other than that, they are quite weak however they can withstand plenty.
@@ -1542,6 +1548,21 @@ Mods: {
 			Mountain: {
 				DisplayName: Mountain
 				TownNPCDialogueName: the Mountains
+			}
+
+			CorrosionCaveDesert: {
+				DisplayName: Corrosion Cave Desert
+				TownNPCDialogueName: the Corrosion Cave Desert
+			}
+
+			CorrosionDesert: {
+				DisplayName: Corrosion Desert
+				TownNPCDialogueName: the Corrosion Desert
+			}
+
+			ScorchingIce: {
+				DisplayName: Scorching Ice
+				TownNPCDialogueName: the Scorching Ice
 			}
 		}
 
