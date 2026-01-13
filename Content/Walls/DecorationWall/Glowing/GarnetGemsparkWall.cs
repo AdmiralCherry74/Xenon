@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
-using Xenon.Content.Tiles;
 
 namespace Xenon.Content.Walls.DecorationWall.Glowing;
 

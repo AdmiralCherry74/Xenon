@@ -6,18 +6,15 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Xenon.Content.NPCs.CorrosionMobs;
+using Xenon.Content.NPCs.CorruptionMobs;
+using Xenon.Content.NPCs.CrimsonMobs;
+using Xenon.Content.NPCs.MountainsMobs;
+using Xenon.Content.NPCs.Other;
+using Xenon.Content.NPCs.RhyoliteMobs;
+using Xenon.Content.NPCs.SnowMobs;
+using Xenon.Content.NPCs.UndergroundMobs;
 using static Terraria.GameContent.Drawing.TileDrawing;
-using Xenon.Content.NPCs.CasterAI;
-using Xenon.Content.NPCs.FighterAI;
-using Xenon.Content.NPCs.MimicAI;
-using Xenon.Content.NPCs.SpiderAI;
-using Xenon.Content.NPCs.WormAI;
-using Xenon.Content.NPCs.FlyingAI;
-using Xenon.Content.NPCs.UniqueAI;
-using Xenon.Content.NPCs.UnicornAI;
-using Xenon.Content.NPCs.BatAI;
-using Xenon.Content.NPCs.SlimeAI;
-using Xenon.Content.NPCs.FighterAI.UniqueFighterAI;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Buffs;
 
@@ -122,6 +119,9 @@ public class MonsterBanner : ModTile
 					break;
 				case 19:
 					t = ModContent.NPCType<JebelSlime>();
+					break;
+				case 20:
+					t = ModContent.NPCType<StarvedManEater>();
 					break;
 				default:
                     t = 0;

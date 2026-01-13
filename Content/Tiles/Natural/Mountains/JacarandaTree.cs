@@ -6,6 +6,8 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.ModSupport.Avalon.Content.Tiles;
+using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Content.Tiles.Natural.Mountains;
 
@@ -25,22 +27,23 @@ public class JacarandaTree : ModTree
 
     public override void SetStaticDefaults()
     {
-        if (GrowsOnTileId == null)
-        {
-            GrowsOnTileId =
-            [
-                ModContent.TileType<MossyOuranoStone>(),
-                ModContent.TileType<MossyAresStone>(),
-                ModContent.TileType<MossyNyxStone>(),
-                ModContent.TileType<MossyHelioStone>(),
-                ModContent.TileType<MossyHephStone>(),
-                ModContent.TileType<OuranoStone>(),
-                ModContent.TileType<AresStone>(),
-                ModContent.TileType<NyxStone>(),
-                ModContent.TileType<HelioStone>(),
-                ModContent.TileType<HephStone>()
-            ];
-        }
+        GrowsOnTileId =
+        [
+			ModContent.TileType<MossyOuranoStone>(),
+			ModContent.TileType<MossyAresStone>(),
+			ModContent.TileType<MossyNyxStone>(),
+			ModContent.TileType<MossyHelioStone>(),
+			ModContent.TileType<MossyHephStone>(),
+			ModContent.TileType<MossyPolloStone>(),
+			ModContent.TileType<MossyHestiaStone>(),
+			ModContent.TileType<OuranoStone>(),
+			ModContent.TileType<AresStone>(),
+			ModContent.TileType<NyxStone>(),
+			ModContent.TileType<HelioStone>(),
+			ModContent.TileType<HephStone>(),
+			ModContent.TileType<PolloStone>(),
+			ModContent.TileType<HestiaStone>()
+		];
 		texture = ModContent.Request<Texture2D>("Xenon/Content/Tiles/Natural/Mountains/JacarandaTree");
 		branchesTexture = ModContent.Request<Texture2D>("Xenon/Content/Tiles/Natural/Mountains/JacarandaTreeBranches");
 		topsTexture = ModContent.Request<Texture2D>("Xenon/Content/Tiles/Natural/Mountains/JacarandaTreeTops");

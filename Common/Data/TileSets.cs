@@ -9,9 +9,7 @@ using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Snow;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Avalon.Content.Tiles;
-using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
-using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Data;
 

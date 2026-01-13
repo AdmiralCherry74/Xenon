@@ -5,8 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Hooks;
 using Xenon.ModSupport.Avalon.Content.Tiles;
-using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
+using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.ModSupport.Confection;
 

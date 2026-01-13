@@ -2,9 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile;
 using Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 public class Crimquicksand : ModTile

@@ -10,10 +10,6 @@ namespace Xenon.ModSupport.Avalon.Content.Tiles;
 
 public class PolloStone : ModTile
 {
-	public override bool IsLoadingEnabled(Mod mod)
-	{
-		return XenonMod.AvalonContentEnabled;
-	}
 	public override void SetStaticDefaults()
 	{
 		Main.tileSolid[Type] = true;

@@ -4,7 +4,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Traps.Sinking;
-using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 public class Gutquicksand : ModTile

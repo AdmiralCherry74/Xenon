@@ -512,11 +512,19 @@ public class MountainsGenPass : GenPass
 		}
 	}
 }
-public class ShellPileHook : ModHook
+public class MountainsHooks : ModHook
 {
 	protected override void Apply()
 	{
 		On_WorldGen.ShellPile += On_WorldGen_ShellPile;
+		On_WorldGen.oceanCave += On_WorldGen_oceanCave;
+	}
+
+	private void On_WorldGen_oceanCave(On_WorldGen.orig_oceanCave orig, int i, int j)
+	{
+		if (i < Main.maxTilesX / 2 && GenVars.dungeonSide == -1) return;
+		if (i > Main.maxTilesX / 2 && GenVars.dungeonSide == 1) return;
+		orig.Invoke(i, j);
 	}
 
 	private bool On_WorldGen_ShellPile(On_WorldGen.orig_ShellPile orig, int X, int Y)

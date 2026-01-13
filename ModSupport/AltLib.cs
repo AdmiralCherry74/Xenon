@@ -8,7 +8,7 @@ using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
-using Xenon.Content.NPCs.FighterAI;
+using Xenon.Content.NPCs.Other;
 
 namespace Xenon.ModSupport;
 
@@ -58,7 +58,7 @@ internal class CorrosionAltBiome : AltBiome
 
         AltarTile = ModContent.TileType<GastricAltar>();
 
-        BloodBunny = ModContent.NPCType<SulfirBunny>();
+        BloodBunny = ModContent.NPCType<SulfurBunny>();
 
         /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
         ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();

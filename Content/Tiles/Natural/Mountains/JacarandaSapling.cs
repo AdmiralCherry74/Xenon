@@ -8,8 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.ModSupport.Avalon.Content.Tiles;
-using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone;
-using Xenon.ModSupport.Confection.Content.Tiles.Natural.Stone.Mossy;
+using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Content.Tiles.Natural.Mountains;
 
@@ -30,80 +29,23 @@ public class JacarandaSapling : ModTile
         TileObjectData.newTile.CoordinateHeights = [16, 18];
         TileObjectData.newTile.CoordinateWidth = 16;
         TileObjectData.newTile.CoordinatePadding = 2;
-		#region anchor tiles
-		if (XenonMod.AvalonContentEnabled)
-        {
-			TileObjectData.newTile.AnchorValidTiles =
-		    [
-			    ModContent.TileType<MossyOuranoStone>(),
-			    ModContent.TileType<MossyAresStone>(),
-			    ModContent.TileType<MossyNyxStone>(),
-			    ModContent.TileType<MossyHelioStone>(),
-			    ModContent.TileType<MossyHephStone>(),
-				ModContent.TileType<MossyPolloStone>(),
-				ModContent.TileType<OuranoStone>(),
-			    ModContent.TileType<AresStone>(),
-			    ModContent.TileType<NyxStone>(),
-			    ModContent.TileType<HelioStone>(),
-			    ModContent.TileType<HephStone>(),
-				ModContent.TileType<PolloStone>()
-			];
-		}
-		else if (XenonMod.TheConfectionRebirthContentEnabled)
-		{
-			TileObjectData.newTile.AnchorValidTiles =
-			[
-				ModContent.TileType<MossyOuranoStone>(),
-				ModContent.TileType<MossyAresStone>(),
-				ModContent.TileType<MossyNyxStone>(),
-				ModContent.TileType<MossyHelioStone>(),
-				ModContent.TileType<MossyHephStone>(),
-				ModContent.TileType<MossyHestiaStone>(),
-				ModContent.TileType<OuranoStone>(),
-				ModContent.TileType<AresStone>(),
-				ModContent.TileType<NyxStone>(),
-				ModContent.TileType<HelioStone>(),
-				ModContent.TileType<HephStone>(),
-				ModContent.TileType<HestiaStone>()
-			];
-		}
-        else if (XenonMod.TheConfectionRebirthContentEnabled && XenonMod.AvalonContentEnabled)
-        {
-            TileObjectData.newTile.AnchorValidTiles =
-            [
-                ModContent.TileType<MossyOuranoStone>(),
-                ModContent.TileType<MossyAresStone>(),
-                ModContent.TileType<MossyNyxStone>(),
-                ModContent.TileType<MossyHelioStone>(),
-                ModContent.TileType<MossyHephStone>(),
-                ModContent.TileType<MossyPolloStone>(),
-                ModContent.TileType<MossyHestiaStone>(),
-                ModContent.TileType<OuranoStone>(),
-                ModContent.TileType<AresStone>(),
-                ModContent.TileType<NyxStone>(),
-                ModContent.TileType<HelioStone>(),
-                ModContent.TileType<HephStone>(),
-                ModContent.TileType<PolloStone>(),
-                ModContent.TileType<HestiaStone>()
-            ];
-        }
-        else
-        {
-            TileObjectData.newTile.AnchorValidTiles =
-            [
-                ModContent.TileType<MossyOuranoStone>(),
-                ModContent.TileType<MossyAresStone>(),
-                ModContent.TileType<MossyNyxStone>(),
-                ModContent.TileType<MossyHelioStone>(),
-                ModContent.TileType<MossyHephStone>(),
-                ModContent.TileType<OuranoStone>(),
-                ModContent.TileType<AresStone>(),
-                ModContent.TileType<NyxStone>(),
-                ModContent.TileType<HelioStone>(),
-                ModContent.TileType<HephStone>()
-            ];
-        }
-		#endregion
+		TileObjectData.newTile.AnchorValidTiles =
+		[
+			ModContent.TileType<MossyOuranoStone>(),
+			ModContent.TileType<MossyAresStone>(),
+			ModContent.TileType<MossyNyxStone>(),
+			ModContent.TileType<MossyHelioStone>(),
+			ModContent.TileType<MossyHephStone>(),
+			ModContent.TileType<MossyPolloStone>(),
+			ModContent.TileType<MossyHestiaStone>(),
+			ModContent.TileType<OuranoStone>(),
+			ModContent.TileType<AresStone>(),
+			ModContent.TileType<NyxStone>(),
+			ModContent.TileType<HelioStone>(),
+			ModContent.TileType<HephStone>(),
+			ModContent.TileType<PolloStone>(),
+			ModContent.TileType<HestiaStone>()
+		];
 		TileObjectData.newTile.StyleHorizontal = true;
         TileObjectData.newTile.DrawFlipHorizontal = true;
         TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;

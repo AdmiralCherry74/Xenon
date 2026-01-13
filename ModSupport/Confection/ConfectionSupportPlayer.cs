@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using TheConfectionRebirth.Dusts;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.ModSupport.Confection.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.ModSupport.Confection;
 
