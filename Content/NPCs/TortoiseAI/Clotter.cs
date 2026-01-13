@@ -6,12 +6,12 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
+using Terraria.ModLoader.Utilities;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.TortoiseAI
 {
-    public class Aslugic : ModNPC
+    public class Clotter : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -27,25 +27,26 @@ namespace Xenon.Content.NPCs.TortoiseAI
         {
             NPC.width = 32;
             NPC.height = 16;
-            NPC.damage = 17;
-            NPC.defense = 16;
-            NPC.lifeMax = 50;
+            NPC.damage = 21;
+            NPC.defense = 10;
+            NPC.lifeMax = 30;
             NPC.HitSound = SoundID.NPCHit13;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 30;
-            NPC.knockBackResist = 0.25f;
+            NPC.knockBackResist = 0.75f;
             NPC.aiStyle = NPCAIStyleID.GiantTortoise;
             AnimationType = NPCID.GiantShelly;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
-		}
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Aslugic")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCrimson,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Clotter")),
             ]);
         }
 
@@ -65,11 +66,11 @@ namespace Xenon.Content.NPCs.TortoiseAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<Corrosion>()|| spawnInfo.Player.InModBiome<CorrosionUnderground>() || spawnInfo.Player.InModBiome<CorrosionDesert>())
+            if (spawnInfo.Player.ZoneCrimson && NPC.downedBoss2 || spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneDirtLayerHeight && NPC.downedBoss2 || spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneRockLayerHeight && NPC.downedBoss2)
             {
-                return 0.75f;
+                return SpawnCondition.Crimson.Chance * 0.50f;
             }
-            return 0;
+            return 0f;
         }
 
         public override void HitEffect(NPC.HitInfo hit)

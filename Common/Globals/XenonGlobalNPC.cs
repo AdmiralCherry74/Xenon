@@ -33,7 +33,7 @@ internal class XenonGlobalNPC : GlobalNPC
 			{
 				pool.Add(ModContent.NPCType<TapeWormHead>(), 0.5f);
 			}
-			pool.Add(ModContent.NPCType<Aclugic>(), 0.5f);
+			pool.Add(ModContent.NPCType<Aslugic>(), 0.5f);
 		}
 		if (spawnInfo.Player.InModBiome<Corrosion>())
 		{
@@ -44,7 +44,7 @@ internal class XenonGlobalNPC : GlobalNPC
 			{
 				pool.Add(ModContent.NPCType<TapeWormHead>(), 0.5f);
 			}
-			pool.Add(ModContent.NPCType<Aclugic>(), 0.5f);
+			pool.Add(ModContent.NPCType<Aslugic>(), 0.5f);
 
 			//if (Main.hardMode)
 			//{

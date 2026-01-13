@@ -1472,6 +1472,9 @@ Mods: {
 			Sparrow.DisplayName: Sparrow
 			StomachBugWall.DisplayName: Stomach Bug
 			Aslugic.DisplayName: Aslugic
+			Clotter.DisplayName: Clotter
+			Venial.DisplayName: Venial
+			StarvedManEater.DisplayName: Starved Man Eater
 		}
 
 		Tiles: {
@@ -1496,7 +1499,6 @@ Mods: {
 			SilverDoorOpened.MapEntry: Silver Door
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
-			GastricAltar.MapEntry: GastricAltar
 			GastricAltar.MapEntry: Gastric Altar
 		}
 
@@ -1533,6 +1535,8 @@ Mods: {
 			JebelSlime: Native to mountainous terrain, they have adapted to the harsh environment by becoming fifty-percent rock.
 			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes. They often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
 			Sparrow: Sparrows are resilient birds that thrive on the high cliffs of the mountains.
+			Venial: Feeding off sins, they grew to this size. not much else to say
+			Clotter: When these first hatch, they burrow into the nearest living host and hide inside the victims bloodstream leeching off of it until it becomes an adult. sometimes these result in blood clots.
 		}
 
 		Biomes: {

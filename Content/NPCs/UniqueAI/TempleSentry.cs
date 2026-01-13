@@ -30,6 +30,7 @@ namespace Xenon.Content.NPCs.UniqueAI
             NPC.height = 106;
             NPC.damage = 10000;
             NPC.defense = 99999;
+            NPC.SuperArmor = true;
             NPC.lifeMax = 19998;
             NPC.dontTakeDamage = !Main.hardMode;
             NPC.HitSound = SoundID.NPCHit4;

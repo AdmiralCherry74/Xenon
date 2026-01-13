@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
@@ -6,18 +8,20 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Materials.EvilMaterials;
-using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Biomes;
+using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
-namespace Xenon.Content.NPCs.FlyingAI
+namespace Xenon.Content.NPCs.PlantAI
 {
-    public class CorrodedHornet : ModNPC
+    public class StarvedManEater : ModNPC
     {
+        private static Asset<Texture2D> VineTexture;
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.HornetLeafy];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.ManEater];
+            VineTexture = Mod.Assets.Request<Texture2D>("Content/NPCs/PlantA/StarvedManEater_Vine");
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -34,14 +38,16 @@ namespace Xenon.Content.NPCs.FlyingAI
             NPC.defense = 3;
             NPC.lifeMax = 150;
             NPC.noGravity = true;
+            NPC.noTileCollide = true;
+            NPC.lavaImmune = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 250;
-            NPC.knockBackResist = 1f;
-            NPC.aiStyle = 5; 
+            NPC.knockBackResist = 0f;
+            NPC.aiStyle = 13; 
             
-            AIType = NPCID.HornetLeafy;
-            AnimationType = NPCID.HornetLeafy;
+            AIType = NPCID.ManEater;
+            AnimationType = NPCID.ManEater;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<GastritisBanner>();
 		}
@@ -71,9 +77,9 @@ namespace Xenon.Content.NPCs.FlyingAI
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneJungle)
+            if (spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneJungle && spawnInfo.SpawnTileType == ModContent.TileType<CorrosionJungleGrass>())
             {
-                return 1.5f;
+                return 0.50f;
             }   
             return 0;
         }
@@ -100,7 +106,7 @@ namespace Xenon.Content.NPCs.FlyingAI
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 3, 0, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Vine, 2, 1, 1));
         }
     }
 }
