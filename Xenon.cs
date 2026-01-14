@@ -1,59 +1,20 @@
-using System.Collections.Generic;
-using System;
-using Terraria;
+using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Microsoft.Xna.Framework;
-using Xenon.Content.Biomes;
 
-namespace Xenon
+namespace Xenon;
+
+public class XenonMod : Mod
 {
-	public class XenonMod : Mod
+	public static Color CorrosionBiomeSightColor = new Color(227, 236, 58);
+	public const string TextureAssetsPath = "Assets/Textures";
+	public static bool AvalonContentEnabled = ModLoader.HasMod("Avalon");
+	public static bool TheConfectionRebirthContentEnabled = ModLoader.HasMod("TheConfectionRebirth");
+	public override void Load()
 	{
-        public static Color CorrosionBiomeSightColor = new Color(227, 236, 58);
-        public const string TextureAssetsPath = "Assets/Textures";
-		public static bool AvalonContentEnabled = ModLoader.HasMod("Avalon");
-        public static bool TheConfectionRebirthContentEnabled = ModLoader.HasMod("TheConfectionRebirth");
-        public override void Load()
+		while (ModHook.RegisteredHooks.TryDequeue(out ModHook? hook))
 		{
-			while (ModHook.RegisteredHooks.TryDequeue(out ModHook? hook))
-			{
-				hook.ApplyHook();
-			}
-		}
-		public void BTitlesHook_SetupBiomeCheckers(out Func<Player, string> miniBiomeChecker, out Func<Player, string> biomeChecker)
-		{
-			miniBiomeChecker = player =>
-			{
-
-
-				return "";
-			};
-			biomeChecker = player =>
-			{
-				if (player.InModBiome<Rhyolite>()) return "Rhyolite";
-
-				return "";
-			};
-		}
-
-		public string BTitlesHook_BiomeChecker(Player player)
-		{
-			if (player.InModBiome<Rhyolite>()) return "Rhyolite";
-
-			return "";
-		}
-
-		public IEnumerable<dynamic> BTitlesHook_GetBiomes()
-		{
-			yield return new
-			{
-				Key = "Rhyolite",
-				Title = "Rhyolite Cave",
-				SubTitle = "Xenon",
-				TitleColor = new Color(150, 101, 93),
-				TitleStroke = new Color(53, 40, 37),
-			};
+			hook.ApplyHook();
 		}
 	}
 }

@@ -1,12 +1,7 @@
-using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
-using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Wood;
-using Xenon.Content.Tiles.BuildingTiles.Stones;
 using Xenon.Content.Tiles.Natural.LivingWood;
 
 namespace Xenon.Content.Items.Tools.BlockPlacingWands;

@@ -4,10 +4,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using TheConfectionRebirth.Biomes;
 using TheConfectionRebirth.Tiles;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.Other;
 using Xenon.ModSupport.Confection.Content.Tiles;
 using static Xenon.SpecialUtilities;
 

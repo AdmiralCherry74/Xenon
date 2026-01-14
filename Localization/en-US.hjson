@@ -358,7 +358,7 @@ Mods: {
 			}
 
 			VitriolicMushroom: {
-				DisplayName: Vitriolic Mushroom
+				DisplayName: Vitreolic Mushroom
 				Tooltip: ""
 			}
 
@@ -1207,7 +1207,7 @@ Mods: {
 			}
 
 			VitriolicPowder: {
-				DisplayName: Vitriolic Powder
+				DisplayName: Vitreolic Powder
 				Tooltip: Spreads the Corrosion
 			}
 
@@ -1660,12 +1660,12 @@ Mods: {
 			ExampleBoltProj.DisplayName: Example Bolt Proj
 			FireBoltProj.DisplayName: Fire Bolt
 			MetalBoltProj.DisplayName: Metal Bolt
-			VitriolicPowder.DisplayName: Vitriolic Powder
+			VitriolicPowder.DisplayName: Vitreolic Powder
 			UnholyBoltProj.DisplayName: Unholy Bolt
 			BunnyMinionProj.DisplayName: Armored Bunny
 			FrostNadeProj.DisplayName: Frost Grenade
 			AridPowderProj.DisplayName: Arid Powder
-			VitriolicPowderProj.DisplayName: Vitriolic Powder
+			VitriolicPowderProj.DisplayName: Vitreolic Powder
 			GravelBallFallingProjectile.DisplayName: Gravel Ball
 			WarflailBall.DisplayName: Warflail
 			RangeYoYoProj.DisplayName: The Range

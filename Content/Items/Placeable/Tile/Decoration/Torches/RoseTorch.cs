@@ -18,7 +18,7 @@ public class RoseTorch : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToTorch(ModContent.TileType<Tiles.Decoration.Torches.RoseTorch>(), 0, false);
+		Item.DefaultToTorch(ModContent.TileType<Tiles.Furniture.Torches.RoseTorch>(), 0, false);
 		Item.value = Item.sellPrice(0, 0, 0, 40);
 		Item.notAmmo = true;
 		Item.ammo = ItemID.Torch;

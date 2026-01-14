@@ -15,7 +15,7 @@ public class RhyoliteColumn : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.General.Background.RhyoliteColumn>();
+        Item.createTile = ModContent.TileType<Tiles.Natural.Other.RhyoliteColumn>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

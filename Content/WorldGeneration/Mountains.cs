@@ -93,7 +93,6 @@ public class MountainChests : GenPass
 		}
 	}
 }
-
 public class MountainStalac : GenPass
 {
 	public MountainStalac() : base("Mountain Stalac", 20f)

@@ -8,7 +8,7 @@ public class BilewoodChair : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodChair>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodChair>());
 		Item.width = 12;
 		Item.height = 30;
 		Item.value = Item.sellPrice(copper: 30);

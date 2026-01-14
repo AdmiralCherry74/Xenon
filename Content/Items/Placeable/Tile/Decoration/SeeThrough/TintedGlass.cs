@@ -14,7 +14,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Decoration.SeeThrough
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.SeeThrough.TintedGlass>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Other.TintedGlass>());
         }
         public override void AddRecipes()
         {

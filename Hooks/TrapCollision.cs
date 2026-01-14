@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Hooks
 {

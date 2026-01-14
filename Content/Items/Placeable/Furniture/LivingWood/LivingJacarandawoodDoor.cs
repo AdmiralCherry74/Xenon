@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Decoration.Furniture.LivingWood;
+using Xenon.Content.Tiles.Furniture.LivingWood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.LivingWood;
 

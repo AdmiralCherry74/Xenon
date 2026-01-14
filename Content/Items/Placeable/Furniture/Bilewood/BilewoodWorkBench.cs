@@ -7,7 +7,7 @@ public class BilewoodWorkBench : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodWorkBench>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodWorkBench>());
 		Item.width = 28;
 		Item.height = 14;
 		Item.value = Item.sellPrice(copper: 30);

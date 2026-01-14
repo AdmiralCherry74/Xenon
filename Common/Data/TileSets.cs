@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Snow;
+using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;

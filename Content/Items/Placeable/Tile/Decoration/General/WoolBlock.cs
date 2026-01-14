@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Decoration.General
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.General.WoolBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Other.WoolBlock>());
         }
 
         public override void AddRecipes()

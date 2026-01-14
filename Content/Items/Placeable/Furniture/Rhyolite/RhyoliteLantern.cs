@@ -12,7 +12,7 @@ public class RhyoliteLantern : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteLantern>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteLantern>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

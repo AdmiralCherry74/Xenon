@@ -12,7 +12,7 @@ public class RhyoliteTable : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteTable>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteTable>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

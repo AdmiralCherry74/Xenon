@@ -9,7 +9,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
         public override void SetDefaults()
         {
             Item.ResearchUnlockCount = 100;
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.OresandGems.OnyxIceBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.OnyxIceBlock>());
         }
         public override void SetStaticDefaults()
         {

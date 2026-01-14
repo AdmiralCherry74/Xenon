@@ -1,6 +1,5 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Decoration.General.Background;
 
 namespace Xenon.Content.Items.Materials.OresBarsGems;
 

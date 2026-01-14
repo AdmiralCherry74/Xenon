@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Rarities;
-using Xenon.Content.Tiles.Decoration.General.Background;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Materials.OresBarsGems;
 

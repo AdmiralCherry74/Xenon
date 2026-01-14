@@ -9,7 +9,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
         public override void SetDefaults()
         {
             Item.ResearchUnlockCount = 100;
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.OresandGems.GarnetCoralstoneBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.GarnetCoralstoneBlock>());
         }
         public override void SetStaticDefaults()
         {

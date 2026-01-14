@@ -8,7 +8,7 @@ public class BilewoodChandelier : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodChandelier>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodChandelier>());
 		Item.width = 26;
 		Item.height = 26;
 		Item.value = Item.sellPrice(silver: 6);

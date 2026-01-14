@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Decoration.Furniture.Bilewood;
+using Xenon.Content.Tiles.Furniture.Bilewood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 

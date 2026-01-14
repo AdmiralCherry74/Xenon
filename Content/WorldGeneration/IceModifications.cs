@@ -6,8 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Common;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Tiles.Natural.Snow;
+using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Hooks;
 
 namespace Xenon.Content.WorldGeneration;

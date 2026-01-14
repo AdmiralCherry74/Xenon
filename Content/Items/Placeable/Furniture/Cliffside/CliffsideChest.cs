@@ -8,7 +8,7 @@ public class CliffsideChest : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Cliffside.CliffsideChest>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Cliffside.CliffsideChest>());
 		Item.width = 26;
 		Item.height = 22;
 		Item.value = Item.sellPrice(silver: 1);

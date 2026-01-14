@@ -9,12 +9,11 @@ using System.Linq;
 using System;
 using Terraria.GameContent.Generation;
 using Terraria.Localization;
-using Xenon.Content.Tiles.Decoration.Furniture.Rhyolite;
 using Xenon.Content.Tiles.Natural.Stone;
-using Xenon.Content.Tiles.Decoration.General.Background;
-using Xenon.Content.Tiles.BuildingTiles.Stones;
 using Xenon.Content.Walls.NaturalWalls.Stone;
 using Xenon.Content.Walls.BuildingWalls.Stones;
+using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Furniture.Rhyolite;
 
 namespace Xenon.Content.WorldGeneration;
 

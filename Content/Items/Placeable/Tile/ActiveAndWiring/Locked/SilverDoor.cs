@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Locked;
+using Xenon.Content.Tiles.Furniture;
 
 namespace Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Locked;
 

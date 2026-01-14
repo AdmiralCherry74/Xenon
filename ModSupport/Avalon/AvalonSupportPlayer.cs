@@ -5,7 +5,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 
 namespace Xenon.ModSupport.Avalon;

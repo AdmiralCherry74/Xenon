@@ -12,7 +12,7 @@ public class RhyoliteSofa : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteSofa>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteSofa>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

@@ -8,7 +8,7 @@ public class BilewoodLamp : ModItem
 {
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Decoration.Furniture.Bilewood.BilewoodLamp>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodLamp>());
 		Item.width = 10;
 		Item.height = 24;
 		Item.value = Item.sellPrice(silver: 1);

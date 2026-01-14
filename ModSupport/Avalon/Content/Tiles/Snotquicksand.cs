@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.ModSupport.Avalon.Content.Tiles;
 

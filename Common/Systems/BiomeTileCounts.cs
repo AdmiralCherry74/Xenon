@@ -2,11 +2,10 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.Other;
 using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Systems;

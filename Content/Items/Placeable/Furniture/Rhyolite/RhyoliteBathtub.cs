@@ -10,7 +10,7 @@ public class RhyoliteBathtub : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteBathtub>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteBathtub>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

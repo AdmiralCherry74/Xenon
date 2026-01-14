@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Grass;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 

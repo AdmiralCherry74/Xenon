@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.Other;
-using Xenon.Content.Tiles.Natural.FallingTiles;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Projectiles.FallingTiles;
 

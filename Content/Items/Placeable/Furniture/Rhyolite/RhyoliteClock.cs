@@ -12,7 +12,7 @@ public class RhyoliteClock : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteClock>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteClock>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

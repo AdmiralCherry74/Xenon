@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.FakeNatural
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.FakeNatural.CoarseDirt>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Other.CoarseDirt>());
         }
     }
 }

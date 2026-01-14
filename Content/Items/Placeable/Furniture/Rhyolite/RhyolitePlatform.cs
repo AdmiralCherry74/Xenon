@@ -17,7 +17,7 @@ public class RhyolitePlatform : ModItem
     {
         
         Item.autoReuse = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyolitePlatform>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyolitePlatform>();
         Item.consumable = true;
         Item.width = 16;
         Item.useTurn = true;

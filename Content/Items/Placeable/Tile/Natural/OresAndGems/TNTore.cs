@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.OresandGems.TNTore>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.TNTore>());
         }
     }
 }

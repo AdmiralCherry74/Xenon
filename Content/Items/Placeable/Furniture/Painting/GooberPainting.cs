@@ -17,7 +17,7 @@ public class GooberPainting : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Painting.GooberPainting>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Painting.GooberPainting>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

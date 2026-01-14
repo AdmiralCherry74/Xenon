@@ -12,7 +12,7 @@ public class RhyoliteDresser : ModItem
         
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Decoration.Furniture.Rhyolite.RhyoliteDresser>();
+        Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteDresser>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
