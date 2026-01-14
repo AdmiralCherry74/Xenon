@@ -9,9 +9,9 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorrosionMobs
+namespace Xenon.Content.NPCs.CrimsonMobs
 {
-    public class CorrodedHornet : ModNPC
+    public class CrimfiedHornet : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -36,20 +36,20 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 250;
             NPC.knockBackResist = 1f;
-            NPC.aiStyle = 5;
-
+            NPC.aiStyle = 5; 
+            
             AIType = NPCID.HornetLeafy;
             AnimationType = NPCID.HornetLeafy;
-            Banner = NPC.type;
+			Banner = NPC.type;
             BannerItem = ModContent.ItemType<GastritisBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorrosionUndergroundJungle>().Type };
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CrimsonJungle>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorrodedHornet")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CrimfiedHornet")),
             ]);
         }
 
@@ -69,7 +69,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneJungle)
+            if (spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneJungle && spawnInfo.Player.ZoneDirtLayerHeight || spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneJungle && spawnInfo.Player.ZoneRockLayerHeight)
             {
                 return 1.5f;
             }   
@@ -97,7 +97,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 3, 0, 1));
         }
     }

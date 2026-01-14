@@ -41,14 +41,14 @@ public class Gastritis : ModNPC
         AIType = NPCID.EaterofSouls;
         AnimationType = NPCID.EaterofSouls;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<GastritisBanner>();
-		}
+        BannerItem = ModContent.ItemType<GastritisBanner>();
+        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+    }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
 
         bestiaryEntry.Info.AddRange([
-            BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Gastritis")),
         ]);
     }

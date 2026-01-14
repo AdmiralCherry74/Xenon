@@ -1,5 +1,6 @@
 ﻿using System;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps.Sinking;
@@ -15,13 +16,16 @@ internal class BiomeTileCounts : ModSystem
 	public int CorrosionTiles { get; private set; }
     public int CorrosionDesertTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
-    public int MountainTiles { get; set; }
-    public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
+	public int MountainTiles { get; set; }
+	public int CorrosionJungleTiles { get; set; }
+	public int CorruptionJungleTiles { get; set; }
+    public int CrimsonJungleTiles { get; set; }
+	public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
-        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];
-        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Quicksand>()];
-        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
-        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Quicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
+		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutquicksand>()];
 		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
@@ -32,7 +36,7 @@ internal class BiomeTileCounts : ModSystem
 		Main.SceneMetrics.JungleTileCount += tileCounts[ModContent.TileType<CorrosionJungleGrass>()];
 		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<NyxStone>()];
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<AresStone>()];
-        Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<HelioStone>()];
+		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<HelioStone>()];
 		Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<MossyNyxStone>()];
 		Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<MossyAresStone>()];
 		Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<MossyHelioStone>()];
@@ -43,8 +47,8 @@ internal class BiomeTileCounts : ModSystem
 						 tileCounts[ModContent.TileType<Gutsandstone>()] +
 						 tileCounts[ModContent.TileType<CorrosionGrass>()] +
 						 tileCounts[ModContent.TileType<CorrosionJungleGrass>()] +
-                         tileCounts[ModContent.TileType<Gutquicksand>()] +
-                         tileCounts[ModContent.TileType<Gutsand>()] +
+						 tileCounts[ModContent.TileType<Gutquicksand>()] +
+						 tileCounts[ModContent.TileType<Gutsand>()] +
 						 tileCounts[ModContent.TileType<TanIce>()] +
 						 tileCounts[ModContent.TileType<HephStone>()] +
 						 tileCounts[ModContent.TileType<MossyHephStone>()];
@@ -54,7 +58,13 @@ internal class BiomeTileCounts : ModSystem
 							   tileCounts[ModContent.TileType<Gutsandstone>()] +
 							   tileCounts[ModContent.TileType<Gutquicksand>()];
 
-        FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
+		CorruptionJungleTiles = tileCounts[TileID.CorruptJungleGrass];
+
+		CrimsonJungleTiles = tileCounts[TileID.CrimsonJungleGrass];
+
+		CorrosionJungleTiles = tileCounts[ModContent.TileType<CorrosionJungleGrass>()];
+
+FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
 
 		MountainTiles = tileCounts[ModContent.TileType<OuranoStone>()] +
 						tileCounts[ModContent.TileType<NyxStone>()] +

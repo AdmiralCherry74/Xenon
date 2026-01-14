@@ -45,8 +45,41 @@ public class CorrosionDesert : ModBiome
     {
         get
         {
-          return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
+            return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
         }
+    }
+}
+public class CorrosionJungle : ModBiome
+{
+    public override string BackgroundPath => base.BackgroundPath;
+    public override string MapBackground => BackgroundPath;
+    public override int Music => MusicID.Corruption;
+    public override string BestiaryIcon => base.BestiaryIcon;
+    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
+    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
+    public override bool IsBiomeActive(Player player)
+    {
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneOverworldHeight && !player.ZoneDesert || player.ZoneDirtLayerHeight && !player.ZoneDesert);
+    }
+    public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
+    {
+        get
+        {
+            return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
+        }
+    }
+}
+public class CorrosionIce : ModBiome
+{
+    public override string BackgroundPath => base.BackgroundPath;
+    public override string MapBackground => BackgroundPath;
+    public override int Music => MusicID.OtherworldlyCorruption;
+    public override string BestiaryIcon => base.BestiaryIcon;
+    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
+    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
+    public override bool IsBiomeActive(Player player)
+    {
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
     }
 }
 public class CorrosionUnderground : ModBiome
@@ -93,17 +126,24 @@ public class CorrosionCaveDesert : ModBiome
         }
     }
 }
-public class CorrosionIce : ModBiome
+public class CorrosionUndergroundJungle : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicID.OtherworldlyCorruption;
+    public override int Music => MusicID.Corruption;
     public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
+    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneDirtLayerHeight && !player.ZoneDesert) || ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneRockLayerHeight && !player.ZoneDesert);
+    }
+    public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle
+    {
+        get
+        {
+            return ModContent.GetInstance<CorrosionUndergroundBackgroundStyle>();
+        }
     }
 }
 public class CorrosionUndergroundIce : ModBiome

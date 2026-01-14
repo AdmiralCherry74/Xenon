@@ -53,6 +53,8 @@ public class CapillarieHead : WormHead
     {
         bestiaryEntry.Info.AddRange(
         [
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCrimson,
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Capillarie"))
         ]);
     }

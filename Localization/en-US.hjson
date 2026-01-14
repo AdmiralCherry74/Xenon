@@ -1429,6 +1429,11 @@ Mods: {
 				DisplayName: Starved Man Eater Banner
 				Tooltip: ""
 			}
+
+			AncientTerraBlade: {
+				DisplayName: Ancient Terra Blade
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1481,6 +1486,10 @@ Mods: {
 			Venial.DisplayName: Venial
 			StarvedManEater.DisplayName: Starved Man Eater
 			SulfurBunny.DisplayName: Sulfur Bunny
+			CorruptHornet.DisplayName: Corrupt Hornet
+			SinfulManEater.DisplayName: Sinful Man Eater
+			CrimfiedHornet.DisplayName: Crimfied Hornet
+			NeuroticManEater.DisplayName: Neurotic Man Eater
 		}
 
 		Tiles: {
@@ -1534,15 +1543,20 @@ Mods: {
 			SpikedWhiteSlime: These slimes are weaker than most, so they evolved spikes to compensate. Ancient civilizations figured out how to use those same spikes to make unique projectiles for crossbows.
 			WhiteSlime: A mutation that can rarely occur in white slimes, these white slimes are heavily endangered due to their lack of hunting capabilities due to their missing spikes.
 			NavySlime: Dis navy slime evolved t' live nigh beaches 'n on ocean surfaces. its a delicate creature requirin' salt water 'n coral reefs t' live. Aye dis entry was written by a pirate, do ye 'ave a problem wit' dat?
-			HoneySlime: When a jungle slime falls into a pool of honey, they tend to absorb the honey into themselves, turning them into these unique slime. They have symbiosis with bees.
 			Sleye: A slime evolved to look like a demon eye, most creatures either dont attack it or they are afraid of it. seemingly they also developed lens.
 			SlimySkeleton: the Skeleton and White Slime work together to hunt the living who invade the deep caverns. The slime gets food while the Skeleton gets to keep the bones of the victim
 			OnyxPenguin: The Onyx Penguins are an oddity. Onyx gemstones only come from the area where even lava becomes frozen, so how did these penguins get here?
 			JebelSlime: Native to mountainous terrain, they have adapted to the harsh environment by becoming fifty-percent rock.
 			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes. They often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
 			Sparrow: Sparrows are resilient birds that thrive on the high cliffs of the mountains.
-			Venial: Feeding off sins, they grew to this size. not much else to say
+			Venial: Feeding off sins, they grew to this size. Now they flingthemselves at those who are pure.
 			Clotter: When these first hatch, they burrow into the nearest living host and hide inside the victims bloodstream leeching off of it until it becomes an adult. sometimes these result in blood clots.
+			CorruptHornet: A hornet that had been corrupt. It goes through the jungle stinging anything thats not corrupt.
+			CrimfiedHornet: A hornet that had been crimfied. It spreads the crimson by flinging its stingers throughout the jungle.
+			CorrodedHornet: A hornet that had been corroded. Its poison is extra potent thanks to the acidic bile.
+			SinfulManEater: This eats the man who sin...
+			NeuroticManEater: Brains are the most nutricious to them...
+			StarvedManEater: The feeling of hunger overwhelm them...
 		}
 
 		Biomes: {
@@ -1590,6 +1604,36 @@ Mods: {
 				DisplayName: Scorching Ice
 				TownNPCDialogueName: the Scorching Ice
 			}
+
+			CorrosionJungle: {
+				DisplayName: Corrosion Jungle
+				TownNPCDialogueName: the Corrosion Jungle
+			}
+
+			CorrosionUndergroundJungle: {
+				DisplayName: Corrosion Underground Jungle
+				TownNPCDialogueName: the Corrosion Underground Jungle
+			}
+
+			CrimsonJungle: {
+				DisplayName: Crimson Jungle
+				TownNPCDialogueName: the Crimson Jungle
+			}
+
+			UndergroundCrimsonJungle: {
+				DisplayName: Underground Crimson Jungle
+				TownNPCDialogueName: the Underground Crimson Jungle
+			}
+
+			CorruptionJungle: {
+				DisplayName: Corruption Jungle
+				TownNPCDialogueName: the Corruption Jungle
+			}
+
+			UndergroundCorruptionJungle: {
+				DisplayName: Underground Corruption Jungle
+				TownNPCDialogueName: the Underground Corruption Jungle
+			}
 		}
 
 		Projectiles: {
@@ -1623,9 +1667,10 @@ Mods: {
 			AridPowderProj.DisplayName: Arid Powder
 			VitriolicPowderProj.DisplayName: Vitriolic Powder
 			GravelBallFallingProjectile.DisplayName: Gravel Ball
-			WarflailBall.DisplayName: Warflail Ball
-			RangeYoYoProj.DisplayName: Range Yo Yo Proj
+			WarflailBall.DisplayName: Warflail
+			RangeYoYoProj.DisplayName: The Range
 			GraveBuster.DisplayName: Grave Buster
+			AncientTerraBeam.DisplayName: Ancient Terra Beam
 		}
 
 		Buffs: {
@@ -1706,7 +1751,7 @@ Mods: {
 
 			GraveBuster: {
 				DisplayName: Grave Buster
-				Description: Mods.Xenon.Buffs.GraveBuster.Description
+				Description: He isnt as mean as he looks!
 			}
 		}
 	}

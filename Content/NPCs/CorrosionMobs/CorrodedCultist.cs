@@ -39,14 +39,14 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             AIType = NPCID.Tim;
             AnimationType = NPCID.Tim;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<CorrodedCultistBanner>();
-		}
+            BannerItem = ModContent.ItemType<CorrodedCultistBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type};
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Oasis,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorrodedCultist")),
             ]);
         }

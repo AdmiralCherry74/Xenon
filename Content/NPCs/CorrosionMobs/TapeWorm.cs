@@ -48,8 +48,9 @@ public class TapeWormHead : WormHead
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
 		Banner = NPC.type;
-		BannerItem = ModContent.ItemType<TapeWormBanner>();
-	}
+        BannerItem = ModContent.ItemType<TapeWormBanner>();
+        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+    }
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(

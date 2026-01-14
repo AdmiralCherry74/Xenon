@@ -12,9 +12,9 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorrosionMobs
+namespace Xenon.Content.NPCs.CorruptionMobs
 {
-	public class StarvedManEater : ModNPC
+	public class SinfulManEater : ModNPC
 	{
 		private float PosX = 0f;
 		private float PosY = 0f;
@@ -24,7 +24,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 		public override void SetStaticDefaults()
 		{
 			Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.ManEater];
-			VineTexture = Mod.Assets.Request<Texture2D>("Content/NPCs/CorrosionMobs/StarvedManEater_Vine");
+			VineTexture = Mod.Assets.Request<Texture2D>("Content/NPCs/CorruptionMobs/SinfulManEater_Vine");
 
 			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
@@ -37,8 +37,8 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 		{
 			NPC.width = 30;
 			NPC.height = 30;
-			NPC.damage = 10;
-			NPC.defense = 3;
+			NPC.damage = 25;
+			NPC.defense = 1;
 			NPC.lifeMax = 150;
 			NPC.noGravity = true;
 			NPC.noTileCollide = true;
@@ -51,7 +51,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 			AnimationType = NPCID.ManEater;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<StarvedManEaterBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorrosionUndergroundJungle>().Type };
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorruptionJungle>().Type };
         }
 		public override bool PreDraw(SpriteBatch spriteBatch, Vector2 v, Color drawColor)
 		{
@@ -84,7 +84,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 		{
 
 			bestiaryEntry.Info.AddRange([
-				new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StarvedManEater")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SinfulManEater")),
 			]);
 		}
 
@@ -162,7 +162,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 		}
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			if (spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneJungle)
+			if (spawnInfo.Player.ZoneCorrupt && spawnInfo.Player.ZoneJungle && spawnInfo.Player.ZoneDirtLayerHeight || spawnInfo.Player.ZoneCorrupt && spawnInfo.Player.ZoneJungle && spawnInfo.Player.ZoneRockLayerHeight)
 			{
 				return 0.5f;
 			}   
@@ -190,8 +190,8 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 		}
 			public override void ModifyNPCLoot(NPCLoot npcLoot)
 		{
-			npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
-			npcLoot.Add(ItemDropRule.Common(ItemID.Vine, 2, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Vine, 2, 1, 1));
 		}
 	}
 }

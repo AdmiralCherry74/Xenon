@@ -40,14 +40,14 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             AIType = NPCID.ZombieMushroomHat;
             AnimationType = NPCID.PirateCorsair;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<HalfDigestedBanner>();
-		}
+            BannerItem = ModContent.ItemType<HalfDigestedBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HalfDigested")),
             ]);
         }

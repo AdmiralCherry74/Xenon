@@ -37,14 +37,14 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             NPC.aiStyle = NPCAIStyleID.GiantTortoise;
             AnimationType = NPCID.GiantShelly;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
-		}
+            BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Aslugic")),
             ]);
         }
