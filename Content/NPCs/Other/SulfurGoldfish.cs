@@ -16,11 +16,11 @@ using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.Other
 {
-    public class SulfurBunny : ModNPC
+    public class SulfurGoldfish : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.CorruptBunny];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.CorruptGoldfish];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -31,29 +31,29 @@ namespace Xenon.Content.NPCs.Other
 
         public override void SetDefaults()
         {
-            NPC.width = 32;
-            NPC.height = 44;
-            NPC.damage = 19;
-            NPC.defense = 6;
-            NPC.lifeMax = 80;
+            NPC.width = 24;
+            NPC.height = 22;
+            NPC.damage = 30;
+            NPC.defense = 7;
+            NPC.lifeMax = 105;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 200;
+            NPC.value = 500;
             NPC.knockBackResist = 1f;
-            NPC.aiStyle = 3; 
-            
-            AIType = NPCID.CorruptBunny;
-            AnimationType = NPCID.CorruptBunny;
-			//Banner = NPC.type;
-			//BannerItem = ModContent.ItemType<HauntedArmorBanner>();
-		}
+            NPC.aiStyle = 16;
+
+            AIType = NPCID.CorruptGoldfish;
+            AnimationType = NPCID.CorruptGoldfish;
+            //Banner = NPC.type;
+            //BannerItem = ModContent.ItemType<HauntedArmorBanner>();
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.BloodMoon,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SulfurBunny")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SulfurGoldfish")),
             ]);
         }
 
@@ -89,10 +89,6 @@ namespace Xenon.Content.NPCs.Other
                 gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height - 20f), NPC.velocity, 99, NPC.scale);
                 Main.gore[gore].velocity *= 0.3f;
             }
-        }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
-        {
-            npcLoot.Add(ItemDropRule.Common(ItemID.BunnyHood, 113, 1, 1));
         }
     }
 }

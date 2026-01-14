@@ -3,6 +3,6 @@ that extends into the lava layer to a new evil biome, the Corrosion. A semi-full
 
 - The Rhyolite Cave biome (this is also its own mod)
 - The Corrosion, an alternate to the Corruption and Crimson
-- An expanded Ice biome, which extends into the lava layer and has a new tile called Frozen Lava
+- An expanded Ice biome, which extends into the lava layer and has a new tile called Scorching Ice
 - Quicksand-type tiles for all sand variants, mud, and snow
 - Various new enemies for some biomes
