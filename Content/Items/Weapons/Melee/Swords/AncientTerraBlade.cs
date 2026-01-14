@@ -21,9 +21,9 @@ public class AncientTerraBlade : ModItem
         Item.autoReuse = true;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 85;
+        Item.damage = 999999999; //change this back to 85 damage come beta playthroughs. i just wanted a debug sword
         Item.knockBack = 6.5f;
-        Item.crit = 0;
+        Item.crit = 100; //change this back to 0 when beta playthroughs happen
         Item.shoot = ModContent.ProjectileType<AncientTerraBeam>();
         Item.shootSpeed = 16;
 
@@ -42,7 +42,7 @@ public class AncientTerraBlade : ModItem
             Vector2 v = new(velX, velY); v.Normalize(); v *= Item.shootSpeed;
 			int p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.Center, v, ModContent.ProjectileType<AncientTerraBeam>(), 87, 6f);
 			Main.projectile[p].owner = player.whoAmI;
-			fireDelay = 75;
+			fireDelay = 24;
 		}
 	}
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

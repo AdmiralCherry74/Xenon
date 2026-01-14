@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Consumables;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Other;
@@ -52,11 +53,11 @@ public class XenonPlayer : ModPlayer
                 itemDrop = ModContent.ItemType<Corrodoras>();
                 return;
             }
-            //else if (r == 1)
-            //{
-            //	itemDrop = ModContent.ItemType<Items.Fish.SicklyTrout>();
-            //	return;
-            //}
+            else if (r == 1)
+            {
+            	itemDrop = ModContent.ItemType<CorrosionCrate>();
+            	return;
+            }
         }
         bool isGraniteFishingAttempt = Player.ZoneGranite;
 

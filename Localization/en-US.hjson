@@ -1432,6 +1432,16 @@ Mods: {
 
 			AncientTerraBlade: {
 				DisplayName: Ancient Terra Blade
+				Tooltip: Old heros used this...
+			}
+
+			CorrosionCrate: {
+				DisplayName: Corrosion Crate
+				Tooltip: Press M2 or B to open
+			}
+
+			IngestaneBrick: {
+				DisplayName: Ingestane Brick
 				Tooltip: ""
 			}
 		}
@@ -1517,6 +1527,7 @@ Mods: {
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: Gastric Altar
+			CorrosionCrateTile.MapEntry: Corrosion Crate Tile
 		}
 
 		Bestiary: {

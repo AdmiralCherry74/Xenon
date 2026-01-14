@@ -4,12 +4,11 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Xenon.Content.WorldGeneration;
-using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
-using Xenon.Content.Tiles.BuildingTiles.Stones;
+using Xenon.Content.Tiles.Bricks;
 
 namespace Xenon.ModSupport;
 
