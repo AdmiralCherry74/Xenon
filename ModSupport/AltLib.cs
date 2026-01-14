@@ -9,6 +9,7 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
+using Xenon.Content.Tiles.BuildingTiles.Stones;
 
 namespace Xenon.ModSupport;
 
@@ -57,11 +58,14 @@ internal class CorrosionAltBiome : AltBiome
         BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
 
         AltarTile = ModContent.TileType<GastricAltar>();
+        BiomeOreBrick = ModContent.TileType<IngestaneBrick>();
 
         BloodBunny = ModContent.NPCType<SulfurBunny>();
+        BloodPenguin = ModContent.NPCType<SulfurPenguin>();
+        BloodGoldfish = ModContent.NPCType<SulfurGoldfish>();
 
-        /*BiomeOreBrick = ModContent.TileType<Tiles.BacciliteBrick>();
-        ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
+
+        /*ArrowType = ModContent.ItemType<Items.Ammo.IckyArrow>();
        
 
         BiomeChestItem = ModContent.ItemType<VirulentScythe>();
@@ -71,9 +75,6 @@ internal class CorrosionAltBiome : AltBiome
 
         MimicType = ModContent.NPCType<CorrosionMimic>();
 
-
-        //BloodPenguin = ModContent.NPCType<ContaminatedPenguin>();
-        //BloodGoldfish = ModContent.NPCType<ContaminatedGoldfish>();
         */
         AddWallConversions<CorrosionLumpWallUnsafe>(
             WallID.RocksUnsafe3

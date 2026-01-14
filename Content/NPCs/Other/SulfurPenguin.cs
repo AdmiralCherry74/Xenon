@@ -16,11 +16,11 @@ using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.Other
 {
-    public class SulfurBunny : ModNPC
+    public class SulfurPenguin : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.CorruptBunny];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.CorruptPenguin];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -42,8 +42,8 @@ namespace Xenon.Content.NPCs.Other
             NPC.knockBackResist = 1f;
             NPC.aiStyle = 3; 
             
-            AIType = NPCID.CorruptBunny;
-            AnimationType = NPCID.CorruptBunny;
+            AIType = NPCID.CorruptPenguin;
+            AnimationType = NPCID.CorruptPenguin;
 			//Banner = NPC.type;
 			//BannerItem = ModContent.ItemType<HauntedArmorBanner>();
 		}
@@ -92,7 +92,9 @@ namespace Xenon.Content.NPCs.Other
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.BunnyHood, 113, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.PedguinHat, 670, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.PedguinShirt, 670, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.PedguinPants, 670, 1, 1));
         }
     }
 }

@@ -1490,6 +1490,8 @@ Mods: {
 			SinfulManEater.DisplayName: Sinful Man Eater
 			CrimfiedHornet.DisplayName: Crimfied Hornet
 			NeuroticManEater.DisplayName: Neurotic Man Eater
+			SulfurGoldfish.DisplayName: Sulfur Goldfish
+			SulfurPenguin.DisplayName: Sulfur Penguin
 		}
 
 		Tiles: {
