@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Tiles.BuildingTiles.Stones;
+namespace Xenon.Content.Tiles.Bricks;
 
 public class IngestaneBrick : ModTile
 {

@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Maintenance", "CommonCollisionName:Common type collision name", Justification = "<Pending>", Scope = "namespace", Target = "~N:Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems")]
+[assembly: SuppressMessage("Maintenance", "CommonCollisionName:Common type collision name", Justification = "<Pending>", Scope = "namespace", Target = "~N:Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone")]

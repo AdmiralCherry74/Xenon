@@ -2,11 +2,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
 using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
-using Xenon.Content.Tiles.BuildingTiles.Stones;
 
 namespace Xenon.Content.Items.Placeable.Tile.BuildingTiles.Stone;
 
-public class IngestaneBrickBlock : ModItem
+public class IngestaneBrick : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -20,7 +19,7 @@ public class IngestaneBrickBlock : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<IngestaneBrick>();
+        Item.createTile = ModContent.TileType<Tiles.Bricks.IngestaneBrick>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
