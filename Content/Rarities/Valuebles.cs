@@ -68,11 +68,11 @@ namespace Xenon.Content.Rarities
                 return ModContent.RarityType<Corroded>();
             }
             else if (offset > 0)
-                return ModContent.RarityType<Xenon>();
+                return ModContent.RarityType<Xenonic>();
             return Type;
         }
     }
-    internal class Xenon : ModRarity
+    internal class Xenonic : ModRarity
     {
         public override Color RarityColor
         {

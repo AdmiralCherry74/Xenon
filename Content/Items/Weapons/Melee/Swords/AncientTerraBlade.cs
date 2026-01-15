@@ -9,8 +9,8 @@ namespace Xenon.Content.Items.Weapons.Melee.Swords;
 
 public class AncientTerraBlade : ModItem
 {
-	private int fireDelay = 24;
-	public override void SetDefaults()
+    private int fireDelay = 24;
+    public override void SetDefaults()
     {
         Item.width = 46;
         Item.height = 54;
@@ -21,9 +21,9 @@ public class AncientTerraBlade : ModItem
         Item.autoReuse = true;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 999999999; //change this back to 85 damage come beta playthroughs. i just wanted a debug sword
+        Item.damage = 85;
         Item.knockBack = 6.5f;
-        Item.crit = 100; //change this back to 0 when beta playthroughs happen
+        Item.crit = 0;
         Item.shoot = ModContent.ProjectileType<AncientTerraBeam>();
         Item.shootSpeed = 16;
 

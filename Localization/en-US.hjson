@@ -1459,6 +1459,26 @@ Mods: {
 				DisplayName: Iodine Greatbow
 				Tooltip: ""
 			}
+
+			ExampleThumper: {
+				DisplayName: Example Thumper
+				Tooltip: ""
+			}
+
+			WoodenGrenadeLauncher: {
+				DisplayName: Light Grenade Launcher
+				Tooltip: Thats why they call me thumper
+			}
+
+			ThumperGrenadeI: {
+				DisplayName: Thumper Grenade I
+				Tooltip: works only with the Light Grenade Launcher
+			}
+
+			ExoticTerraBlade: {
+				DisplayName: Exotic Terra Blade
+				Tooltip: "When developers are feeling down. theyll pick this debug sword up"
+			}
 		}
 
 		NPCs: {
@@ -1542,7 +1562,7 @@ Mods: {
 			TungstenDoorClosed.MapEntry: Tungsten Door
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: Gastric Altar
-			CorrosionCrateTile.MapEntry: Corrosion Crate Tile
+			CorrosionCrateTile.MapEntry: Corrosion Crate
 		}
 
 		Bestiary: {
@@ -1699,6 +1719,9 @@ Mods: {
 			RangeYoYoProj.DisplayName: The Range
 			GraveBuster.DisplayName: Grave Buster
 			AncientTerraBeam.DisplayName: Ancient Terra Beam
+			ExampleThumperProj.DisplayName: Example Thumper Proj
+			ThumperGrenadeIProj.DisplayName: Thumper Grenade I
+			ExoticTerraBeam.DisplayName: Exotic Terra Beam
 		}
 
 		Buffs: {
