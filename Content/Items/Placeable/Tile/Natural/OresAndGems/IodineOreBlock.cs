@@ -1,10 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
 {
-    public class TNTore : ModItem
+    public class IodineOreBlock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -13,7 +14,8 @@ namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.TNTore>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<IodineOre>());
+            Item.rare = ItemRarityID.Expert;
         }
     }
 }

@@ -5,16 +5,19 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles.Natural.Ores;
 
-public class Zeolite : ModTile
+public class IodineOre : ModTile
 {
+    //originally TNT ore, now changed to Iodine
+    //Iodine is a tier two ore planned for insane mode
+    //will be unused for now. uses palladium texture
     public override void SetStaticDefaults()
     {
         Main.tileSolid[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBlockLight[Type] = true;
-        AddMapEntry(new Color(250, 50, 50));
+        AddMapEntry(new Color(63, 8, 114));
         HitSound = SoundID.Tink;
-        DustType = DustID.CrimsonTorch;
+        DustType = DustID.ArgonMoss; //change later to a custom 
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)

@@ -824,11 +824,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TNTore: {
-				DisplayName: Trinitrotoluene Ore
-				Tooltip: an ore rumored to make the devs angry when you have this. SERIOUSLY MAN!?
-			}
-
 			CoarseDirt: {
 				DisplayName: Coarse Dirt
 				Tooltip: Dirt that cant have grass grown on it
@@ -1442,6 +1437,26 @@ Mods: {
 
 			IngestaneBrick: {
 				DisplayName: Ingestane Brick
+				Tooltip: ""
+			}
+
+			IodineBar: {
+				DisplayName: Iodine Bar
+				Tooltip: Glowing dark violet with energy...
+			}
+
+			IodineOreBlock: {
+				DisplayName: Iodine Ore
+				Tooltip: Glowing dark violet with energy...
+			}
+
+			IodineGreatsword: {
+				DisplayName: Iodine Greatsword
+				Tooltip: ""
+			}
+
+			IodineGreatbow: {
+				DisplayName: Iodine Greatbow
 				Tooltip: ""
 			}
 		}
