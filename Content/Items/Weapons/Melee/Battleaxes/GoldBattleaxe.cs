@@ -20,7 +20,7 @@ public class GoldBattleaxe : ModItem
         Item.DamageType = DamageClass.Melee;
         Item.damage = 14;
         Item.knockBack = 6;
-        Item.crit = 6;
+        Item.crit = 2;
 
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;

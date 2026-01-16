@@ -1,25 +1,27 @@
-﻿using Terraria;
+﻿using Avalon.Items.Material.Bars;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Items.Materials.OresBarsGems;
 
-namespace Xenon.Content.Items.Weapons.Melee.Battleaxes;
+namespace Xenon.ModSupport.Avalon.Content.Items.Weapons.Battleaxes;
 
-public class PlatinumBattleaxe : ModItem
+public class NickelBattleaxe : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 36;
-        Item.height = 36;
+        Item.width = 34;
+        Item.height = 34;
 
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTime = 25;
-        Item.useAnimation = 25;
+        Item.useTime = 30;
+        Item.useAnimation = 30;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 15;
-        Item.knockBack = 6;
+        Item.damage = 12;
+        Item.knockBack = 5;
         Item.crit = 2;
 
         Item.value = Item.sellPrice(copper: 90);
@@ -35,7 +37,7 @@ public class PlatinumBattleaxe : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.PlatinumBar, 9)
+            .AddIngredient(ModContent.ItemType<NickelBar>(), 9)
             .AddTile(TileID.Anvils)
             .Register();
     }

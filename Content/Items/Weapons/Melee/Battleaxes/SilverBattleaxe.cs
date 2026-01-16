@@ -20,7 +20,7 @@ public class SilverBattleaxe : ModItem
         Item.DamageType = DamageClass.Melee;
         Item.damage = 12;
         Item.knockBack = 5.5f;
-        Item.crit = 4;
+        Item.crit = 2;
 
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;

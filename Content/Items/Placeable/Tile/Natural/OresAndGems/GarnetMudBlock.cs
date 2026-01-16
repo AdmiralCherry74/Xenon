@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems
 {
-    public class LapisMudBlock : ModItem
+    public class GarnetMudBlock : ModItem
     {
         public override void SetDefaults()
         {
             Item.ResearchUnlockCount = 100;
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.LapisMudBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.GarnetMud>());
         }
         public override void SetStaticDefaults()
         {

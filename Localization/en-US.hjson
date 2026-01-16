@@ -1477,7 +1477,57 @@ Mods: {
 
 			ExoticTerraBlade: {
 				DisplayName: Exotic Terra Blade
-				Tooltip: "When developers are feeling down. theyll pick this debug sword up"
+				Tooltip: When developers are feeling rundown. theyll pick this debug sword up
+			}
+
+			BronzeBattleaxe: {
+				DisplayName: Bronze Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			BismuthBattleaxe: {
+				DisplayName: Bismuth Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			NickelBattleaxe: {
+				DisplayName: Nickel Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			ZincBattleaxe: {
+				DisplayName: Zinc Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			BlackPhaseblade: {
+				DisplayName: Black Phaseblade
+				Tooltip: ""
+			}
+
+			IndigoPhaseblade: {
+				DisplayName: Indigo Phaseblade
+				Tooltip: ""
+			}
+
+			RosePhaseblade: {
+				DisplayName: Rose Phaseblade
+				Tooltip: ""
+			}
+
+			OnyxStaff: {
+				DisplayName: Onyx Staff
+				Tooltip: Sets enemies on fire
+			}
+
+			GarnetMudBlock: {
+				DisplayName: Garnet Mud Block
+				Tooltip: ""
+			}
+
+			LapisSandstoneBlock: {
+				DisplayName: Lapis Sandstone Block
+				Tooltip: ""
 			}
 		}
 
@@ -1722,6 +1772,7 @@ Mods: {
 			ExampleThumperProj.DisplayName: Example Thumper Proj
 			ThumperGrenadeIProj.DisplayName: Thumper Grenade I
 			ExoticTerraBeam.DisplayName: Exotic Terra Beam
+			OnyxGemball.DisplayName: Onyx Gemball
 		}
 
 		Buffs: {
