@@ -2,7 +2,7 @@ using Humanizer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.Natural.OresAndGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.Rarities;
 using Xenon.Content.Tiles.Natural.Ores;
 using Xenon.Content.Tiles.Natural.Other;

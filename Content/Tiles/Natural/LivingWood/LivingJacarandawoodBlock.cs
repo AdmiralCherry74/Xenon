@@ -3,7 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.BuildingTiles.Wood;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Tiles.Natural.LivingWood;
 

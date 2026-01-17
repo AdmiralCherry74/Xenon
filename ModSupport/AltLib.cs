@@ -5,10 +5,10 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Xenon.Content.WorldGeneration;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Items.Placeable.Tile.Natural.Seed;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
 using Xenon.Content.Tiles.Bricks;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 
 namespace Xenon.ModSupport;
 
@@ -54,7 +54,7 @@ internal class CorrosionAltBiome : AltBiome
 
         SeedType = ModContent.ItemType<CorrosionSeeds>();
         BiomeOre = ModContent.TileType<Content.Tiles.Natural.Corrosion.IngestaneOre>();
-        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Tile.Natural.OresAndGems.IngestaneOre>();
+        BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Blocks.Natural.OresAndGems.IngestaneOre>();
 
         AltarTile = ModContent.TileType<GastricAltar>();
         BiomeOreBrick = ModContent.TileType<IngestaneBrick>();

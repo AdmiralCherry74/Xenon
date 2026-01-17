@@ -66,7 +66,7 @@ public class CorrosionTree : ModTree
 
     public override int DropWood()
     {
-        return ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.Bilewood>();
+        return ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>();
     }
     public override bool CanDropAcorn()
     {
@@ -84,7 +84,7 @@ public class CorrosionTree : ModTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.Bilewood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

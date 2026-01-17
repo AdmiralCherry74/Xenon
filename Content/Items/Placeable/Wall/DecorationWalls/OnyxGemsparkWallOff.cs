@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Placeable.Tile.ActiveAndWiring.Lighting;
+using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 
 namespace Xenon.Content.Items.Placeable.Wall.DecorationWalls;
 

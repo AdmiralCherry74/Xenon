@@ -1,6 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Common.Globals;

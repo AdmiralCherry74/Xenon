@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Cliffside;
 
@@ -17,7 +18,7 @@ public class CliffsideChest : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.Natural.Stone.OuranoStoneBlock>(), 8)
+			.AddIngredient(ModContent.ItemType<OuranoStoneBlock>(), 8)
 			.AddRecipeGroup("IronBar", 2)
 			.AddTile(TileID.WorkBenches).Register();
 	}

@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.NPCs.Other
 {

@@ -18,7 +18,7 @@ public class BilewoodDoor : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 6)
+			.AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 6)
 			.AddTile(TileID.WorkBenches).Register();
 	}
 }

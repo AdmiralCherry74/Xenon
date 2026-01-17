@@ -19,7 +19,7 @@ public class BilewoodPlatform : ModItem
 
 	public override void AddRecipes()
 	{
-		CreateRecipe(2).AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>()).Register();
-		Recipe.Create(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>()).AddIngredient(this, 2).Register();
+		CreateRecipe(2).AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>()).Register();
+		Recipe.Create(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>()).AddIngredient(this, 2).Register();
 	}
 }

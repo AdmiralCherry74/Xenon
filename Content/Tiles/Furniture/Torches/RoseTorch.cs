@@ -11,7 +11,7 @@ namespace Xenon.Content.Tiles.Furniture.Torches
 	public class RoseTorch : ModTorch
 	{
 		public override Vector3 LightColor => new Vector3(1.3f, 0.43f, 0.93f);
-		public override int TorchItem => ModContent.ItemType<Items.Placeable.Tile.Decoration.Torches.RoseTorch>();
+		public override int TorchItem => ModContent.ItemType<Items.Placeable.Blocks.Decoration.Torches.RoseTorch>();
 		public override int dustType => DustID.PinkTorch;
 		private static Asset<Texture2D> flameTexture;
 		public override void SetStaticDefaults()

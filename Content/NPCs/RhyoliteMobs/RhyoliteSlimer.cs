@@ -6,8 +6,8 @@ using Terraria.GameContent.Bestiary;
 using Xenon.Content.Items.Placeable.Furniture.Painting;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Consumables.NomNoms;
-using Xenon.Content.Items.Placeable.Tile.Natural.Stone;
 using Xenon.Content.Biomes;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.NPCs.RhyoliteMobs;
 

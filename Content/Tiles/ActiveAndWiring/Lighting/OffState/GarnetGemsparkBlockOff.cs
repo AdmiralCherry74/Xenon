@@ -15,7 +15,7 @@ public class GarnetGemsparkBlockOff : ModTile
         TileID.Sets.AllBlocksWithSmoothBordersToResolveHalfBlockIssue[Type] = true;
         TileID.Sets.ForcedDirtMerging[Type] = true;
         TileID.Sets.GemsparkFramingTypes[Type] = Type;
-        RegisterItemDrop(ModContent.ItemType<Items.Placeable.Tile.ActiveAndWiring.Lighting.GarnetGemsparkBlock>(), 1);
+        RegisterItemDrop(ModContent.ItemType<Items.Placeable.Blocks.ActiveAndWiring.Lighting.GarnetGemsparkBlock>(), 1);
         HitSound = SoundID.Dig;
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)

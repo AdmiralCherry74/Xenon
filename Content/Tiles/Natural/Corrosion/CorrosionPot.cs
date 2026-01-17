@@ -177,7 +177,7 @@ public class CorrosionPot : ModTile
                     }
                     else if (Main.LocalPlayer.InModBiome<Biomes.Corrosion>() && Main.tile[i, j].LiquidAmount < 0)
                     {
-                        Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), torchStack); //Corrosion Torch
+                        Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), torchStack); //Corrosion Torch
                     }
                     else if (Main.tile[i, j].LiquidAmount > 0 && !Main.LocalPlayer.ZoneSnow && !Main.LocalPlayer.ZoneRockLayerHeight)
                     {

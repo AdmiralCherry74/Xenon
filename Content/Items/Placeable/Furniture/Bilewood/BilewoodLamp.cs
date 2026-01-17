@@ -18,7 +18,7 @@ public class BilewoodLamp : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ItemID.Torch)
-			.AddIngredient(ModContent.ItemType<Tile.BuildingTiles.Wood.Bilewood>(), 3)
+			.AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 3)
 			.AddTile(TileID.WorkBenches).Register();
 	}
 }

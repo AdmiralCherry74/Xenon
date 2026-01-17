@@ -4,7 +4,6 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Tile.Decoration.Torches;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using static Xenon.SpecialUtilities;
 using Xenon.Content.Tiles.Natural.Corrosion;
@@ -201,28 +200,28 @@ public class AvalonSystem : ModSystem
 		{
 			return;
 		}
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), new Vector3(0.8f, 1.4f, 0));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), (int)DustID.JungleTorch);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.CorrosionTorch>(), -1);
+		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), new Vector3(0.8f, 1.4f, 0));
+		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), (int)DustID.JungleTorch);
+		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture);
+		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Natural.Corrosion.CorrosionTorch>().Texture + "_Flame");
+		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), -1);
 
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.GrayTorch>(), new Vector3(0.5f, 0.5f, 0.5f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.GrayTorch>(), (int)DustID.Ash);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.GrayTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.GrayTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.GrayTorch>(), -1);
+		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.GrayTorch>(), new Vector3(0.5f, 0.5f, 0.5f));
+		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.GrayTorch>(), (int)DustID.Ash);
+		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.GrayTorch>().Texture);
+		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.GrayTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.GrayTorch>().Texture + "_Flame");
+		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.GrayTorch>(), -1);
 
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.IndigoTorch>(), new Vector3(0.75f, 0.55f, 1.5f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.IndigoTorch>(), (int)DustID.ShadowbeamStaff);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.IndigoTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.IndigoTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.IndigoTorch>(), -1);
+		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.IndigoTorch>(), new Vector3(0.75f, 0.55f, 1.5f));
+		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.IndigoTorch>(), (int)DustID.ShadowbeamStaff);
+		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.IndigoTorch>().Texture);
+		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.IndigoTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.IndigoTorch>().Texture + "_Flame");
+		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.IndigoTorch>(), -1);
 
-		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.RoseTorch>(), new Vector3(1.3f, 0.43f, 0.93f));
-		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.RoseTorch>(), (int)DustID.PinkTorch);
-		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.RoseTorch>().Texture);
-		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.RoseTorch>().Texture + "_Flame");
-		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Tile.Decoration.Torches.RoseTorch>(), -1);
+		avalon.Call("AddTorchLauncherLightColor", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.RoseTorch>(), new Vector3(1.3f, 0.43f, 0.93f));
+		avalon.Call("AddTorchLauncherDust", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.RoseTorch>(), (int)DustID.PinkTorch);
+		avalon.Call("AddTorchLauncherTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.RoseTorch>().Texture);
+		avalon.Call("AddTorchLauncherFlameTexture", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.RoseTorch>(), ModContent.GetInstance<Xenon.Content.Tiles.Furniture.Torches.RoseTorch>().Texture + "_Flame");
+		avalon.Call("AddTorchLauncherDebuffType", ModContent.ItemType<Xenon.Content.Items.Placeable.Blocks.Decoration.Torches.RoseTorch>(), -1);
 	}
 }
