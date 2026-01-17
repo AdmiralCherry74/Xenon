@@ -1529,6 +1529,16 @@ Mods: {
 				DisplayName: Lapis Sandstone Block
 				Tooltip: ""
 			}
+
+			GarnetStaff: {
+				DisplayName: Garnet Staff
+				Tooltip: ""
+			}
+
+			LapisStaff: {
+				DisplayName: Lapis Staff
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1773,6 +1783,8 @@ Mods: {
 			ThumperGrenadeIProj.DisplayName: Thumper Grenade I
 			ExoticTerraBeam.DisplayName: Exotic Terra Beam
 			OnyxGemball.DisplayName: Onyx Gemball
+			GarnetGemball.DisplayName: Garnet Gemball
+			LapisGemball.DisplayName: Lapis Gemball
 		}
 
 		Buffs: {
