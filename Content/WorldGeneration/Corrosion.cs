@@ -13,6 +13,7 @@ using Xenon.Content.WorldGeneration.Passes;
 using Terraria.IO;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -150,6 +151,10 @@ public class Corrosion : EvilBiomeGenerationPass
                     {
                         Main.tile[num57, num224].TileType = (ushort)ModContent.TileType<Gutsandstone>();
                     }
+                    if (Main.tile[num57, num224].TileType == ModContent.TileType<Quicksand>())
+                    {
+                        Main.tile[num57, num224].TileType = (ushort)ModContent.TileType<Gutquicksand>();
+                    }
                 }
                 num224++;
             }
@@ -208,6 +213,7 @@ public class Corrosion : EvilBiomeGenerationPass
 
     public override void PostGenerateEvil() { }
     public static void CorrosionRunner(int i, int j)
+        //traffic cone
     {
         ushort stone = (ushort)ModContent.TileType<Gutstone>();
 
@@ -268,7 +274,7 @@ public class Corrosion : EvilBiomeGenerationPass
 
         CorrosionEnt(i, j, stone, radius, !flag);
     }
-
+    //traffic cone
     public static void PlaceCorrosionOrb(int i, int j)
     {
         MakeCircle(i, j, 6, (ushort)ModContent.TileType<Gutstone>(), true);
@@ -383,7 +389,7 @@ public class Corrosion : EvilBiomeGenerationPass
         num2 = WorldGen.genRand.Next(40, 55);
         for (int n = 0; n < 50; n++)
         {
-            int num4 = (int)position.X + WorldGen.genRand.Next(-20, 21);
+            int num4 = (int)position.X + WorldGen.genRand.Next(-30, 31);
             int num5 = (int)position.Y + WorldGen.genRand.Next(-20, 21);
             for (int num6 = (int)(num4 - num2 / 2.0); num6 < num4 + num2 / 2.0; num6++)
             {
