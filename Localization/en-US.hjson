@@ -1539,6 +1539,11 @@ Mods: {
 				DisplayName: Lapis Staff
 				Tooltip: ""
 			}
+
+			PechaBerry: {
+				DisplayName: Pecha Berry
+				Tooltip: "Can cure you of poisonous effects"
+			}
 		}
 
 		NPCs: {
@@ -1623,6 +1628,7 @@ Mods: {
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: Gastric Altar
 			CorrosionCrateTile.MapEntry: Corrosion Crate
+			PechaBerryHerb.MapEntry: Mods.Xenon.Tiles.PechaBerryHerb.MapEntry
 		}
 
 		Bestiary: {

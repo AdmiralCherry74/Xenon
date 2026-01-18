@@ -4,22 +4,19 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Common.Templates;
-using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
+using Xenon.Content.Items.Consumables.NomNoms.Berries;
 
-namespace Xenon.Content.Tiles.Natural.Corrosion;
+namespace Xenon.Content.Tiles.Natural.Other.Berries;
 
-public class Liverwort : ModHerb
+public class PechaBerryHerb : ModHerb
 {
-    public override int HerbDrop => ModContent.ItemType<Items.Materials.EvilMaterials.Liverwort>();
-    public override int SeedDrop => ModContent.ItemType<LiverwortSeeds>();
+    public override int HerbDrop => ModContent.ItemType<PechaBerry>();
     public override int[] ValidAnchorTiles =>
-	[
-		ModContent.TileType<CorrosionGrass>(),
-        ModContent.TileType<Gutstone>()
+    [
+        TileID.JungleGrass
     ];
     public override LocalizedText MapName => this.GetLocalization("MapEntry");
-    public override Color MapColor => new Color(0, 200, 50);
+    public override Color MapColor => new Color(100, 50, 50);
     public override int Dust => DustID.Grass;
     public override void SetStaticDefaults()
     {
@@ -39,7 +36,7 @@ public class Liverwort : ModHerb
         }
         if (stage == PlantStage.Mature)
         {
-            if (Main.bloodMoon || Main.moonPhase == 0)
+            if (Main.dayTime)
             {
                 tile.TileFrameX = 36;
             }
@@ -47,7 +44,7 @@ public class Liverwort : ModHerb
             if (Main.netMode != NetmodeID.SinglePlayer)
                 NetMessage.SendTileSquare(-1, i, j, 1);
         }
-        if (stage == PlantStage.Blooming && (!Main.bloodMoon || Main.moonPhase != 0))
+        if (stage == PlantStage.Blooming && (!Main.dayTime))
         {
             tile.TileFrameX = 18;
             if (Main.netMode != NetmodeID.SinglePlayer)
