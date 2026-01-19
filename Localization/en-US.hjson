@@ -1542,7 +1542,17 @@ Mods: {
 
 			PechaBerry: {
 				DisplayName: Pecha Berry
-				Tooltip: "Can cure you of poisonous effects"
+				Tooltip: Can cure you of poisonous effects
+			}
+
+			Piranha: {
+				DisplayName: Piranha
+				Tooltip: ""
+			}
+
+			ExampleFish: {
+				DisplayName: Example Fish
+				Tooltip: ""
 			}
 		}
 

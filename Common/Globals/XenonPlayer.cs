@@ -10,6 +10,7 @@ using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Other;
 using Xenon.Content.Items.Materials.Fish;
 using Xenon.Content.Items.Materials.Fish.Quest;
+using Xenon.Content.Items.Materials.Fish.Valuable;
 
 namespace Xenon.Common.Globals;
 
@@ -67,6 +68,26 @@ public class XenonPlayer : ModPlayer
             if (r == 0)
             {
                 itemDrop = ModContent.ItemType<GraniteFish>();
+                return;
+            }
+        }
+        bool isjanuaryfishingattempt = Player.ZoneForest && DateTime.Now.Month == 1;
+        if (attempt.uncommon && isjanuaryfishingattempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<ExampleFish>();
+                return;
+            }
+        }
+        bool isaprilfishingattempt = Player.ZoneJungle && DateTime.Now.Month == 4 || Player.ZoneJungle && Player.ZoneDirtLayerHeight && DateTime.Now.Month == 4 || Player.ZoneJungle && Player.ZoneRockLayerHeight && DateTime.Now.Month == 4;
+        if (attempt.uncommon && isaprilfishingattempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<Piranha>();
                 return;
             }
         }
