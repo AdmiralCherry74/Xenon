@@ -8,9 +8,9 @@ using Xenon.Content.Items.Consumables;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Other;
-using Xenon.Content.Items.Materials.Fish;
-using Xenon.Content.Items.Materials.Fish.Quest;
-using Xenon.Content.Items.Materials.Fish.Valuable;
+using Xenon.Content.Items.Fish;
+using Xenon.Content.Items.Fish.Quest;
+using Xenon.Content.Items.Fish.Valuable;
 
 namespace Xenon.Common.Globals;
 
@@ -77,7 +77,7 @@ public class XenonPlayer : ModPlayer
             int r = Main.rand.Next(1); // change later, to allow more fish
             if (r == 0)
             {
-                itemDrop = ModContent.ItemType<ExampleFish>();
+                itemDrop = ModContent.ItemType<ExampleFish>(); //change later to be a different fish
                 return;
             }
         }
@@ -88,6 +88,26 @@ public class XenonPlayer : ModPlayer
             if (r == 0)
             {
                 itemDrop = ModContent.ItemType<Piranha>();
+                return;
+            }
+        }
+        bool ismayfishingattempt = Player.ZoneBeach && DateTime.Now.Month == 5 || Player.ZoneBeach && Player.ZoneDirtLayerHeight && DateTime.Now.Month == 5;
+        if (attempt.uncommon && ismayfishingattempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<AnglerFish>();
+                return;
+            }
+        }
+        bool isnovemberfishingattempt = Player.ZoneForest && !Main.dayTime && DateTime.Now.Month == 11;
+        if (attempt.uncommon && isnovemberfishingattempt)
+        {
+            int r = Main.rand.Next(1); // change later, to allow more fish
+            if (r == 0)
+            {
+                itemDrop = ModContent.ItemType<Foxfish>();
                 return;
             }
         }

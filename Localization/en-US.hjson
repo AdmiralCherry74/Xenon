@@ -1547,12 +1547,37 @@ Mods: {
 
 			Piranha: {
 				DisplayName: Piranha
-				Tooltip: ""
+				Tooltip:
+					'''
+					"Despite their reputation, they are actually omnivorous creatures. feeding on plant matter aswell as other animals."
+					Can only be caught in the Jungle during April
+					Valuable
+					'''
 			}
 
 			ExampleFish: {
 				DisplayName: Example Fish
-				Tooltip: ""
+				Tooltip: This is an example feesh, it is the best feesh :3
+			}
+
+			AnglerFish: {
+				DisplayName: Angler Fish
+				Tooltip:
+					'''
+					"Using their Bioluminesent dorsal fins, they lure prey torwards themselves."
+					Can only be caught in the Ocean during May
+					Valuable
+					'''
+			}
+
+			Foxfish: {
+				DisplayName: Foxfish
+				Tooltip:
+					'''
+					"A fox-fish hybrid. often comes out during this month in celebration of the Moon Fox's birth month."
+					Can only be caught at Night in the Forest during Novemeber
+					Valuable
+					'''
 			}
 		}
 
@@ -1638,7 +1663,7 @@ Mods: {
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: Gastric Altar
 			CorrosionCrateTile.MapEntry: Corrosion Crate
-			PechaBerryHerb.MapEntry: Mods.Xenon.Tiles.PechaBerryHerb.MapEntry
+			PechaBerryHerb.MapEntry: Pecha Berry
 		}
 
 		Bestiary: {

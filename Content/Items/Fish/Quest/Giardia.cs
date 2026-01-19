@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Materials.Fish.Quest;
+namespace Xenon.Content.Items.Fish.Quest;
 
 public class Giardia : ModItem
 {

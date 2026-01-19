@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Rarities;
 
-namespace Xenon.Content.Items.Materials.Fish.Valuable;
+namespace Xenon.Content.Items.Fish.Valuable;
 
 public class ExampleFish : ModItem
 {
