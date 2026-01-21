@@ -1542,7 +1542,7 @@ Mods: {
 
 			PechaBerry: {
 				DisplayName: Pecha Berry
-				Tooltip: Can cure you of poisonous effects
+				Tooltip: Eating this stops the Poison debuff
 			}
 
 			Piranha: {
@@ -1578,6 +1578,11 @@ Mods: {
 					Can only be caught at Night in the Forest during Novemeber
 					Valuable
 					'''
+			}
+
+			ColburBerry: {
+				DisplayName: Colbur Berry
+				Tooltip: Eating this stops the Darkness debuff
 			}
 		}
 

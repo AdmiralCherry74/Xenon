@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Consumables.NomNoms.Berries
 {
-    public class PechaBerry : ModItem
+    public class ColburBerry : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -33,7 +33,7 @@ namespace Xenon.Content.Items.Consumables.NomNoms.Berries
 
         public override bool? UseItem(Player player)
         {
-            player.ClearBuff(BuffID.Poisoned);
+            player.ClearBuff(BuffID.Darkness);
             return true;
         }
     }
