@@ -1584,6 +1584,11 @@ Mods: {
 				DisplayName: Colbur Berry
 				Tooltip: Eating this stops the Darkness debuff
 			}
+
+			Flint: {
+				DisplayName: Flint
+				Tooltip: a fragment of gravel...
+			}
 		}
 
 		NPCs: {

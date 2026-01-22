@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Materials;
 
-public class SpikedGel : ModItem
+public class Flint : ModItem
 {
     public override void SetStaticDefaults()
     {
         Item.ResearchUnlockCount = 100;
-        Item.value = Item.buyPrice(silver: 10);
-        Item.rare = 1;
+        Item.value = Item.buyPrice(copper: 5);
+        Item.rare = ItemRarityID.Blue;
     }
 }
