@@ -1542,15 +1542,15 @@ Mods: {
 
 			PechaBerry: {
 				DisplayName: Pecha Berry
-				Tooltip: Eating this stops the Poison debuff
+				Tooltip: Eating this removes the Poison debuff
 			}
 
 			Piranha: {
 				DisplayName: Piranha
 				Tooltip:
 					'''
-					"Despite their reputation, they are actually omnivorous creatures. feeding on plant matter aswell as other animals."
-					Can only be caught in the Jungle during April
+					'Despite their reputation, they are actually omnivorous creatures, feeding on plant matter as well as other animals'
+					Can only be caught in the Jungle during the month of April
 					Valuable
 					'''
 			}
@@ -1564,8 +1564,8 @@ Mods: {
 				DisplayName: Angler Fish
 				Tooltip:
 					'''
-					"Using their Bioluminesent dorsal fins, they lure prey torwards themselves."
-					Can only be caught in the Ocean during May
+					'Using their bioluminesent dorsal fins, they lure prey torwards themselves'
+					Can only be caught in the Ocean during the month of May
 					Valuable
 					'''
 			}
@@ -1574,20 +1574,20 @@ Mods: {
 				DisplayName: Foxfish
 				Tooltip:
 					'''
-					"A fox-fish hybrid. often comes out during this month in celebration of the Moon Fox's birth month."
-					Can only be caught at Night in the Forest during Novemeber
+					'A fox-fish hybrid. Often comes out during this month in celebration of the Moon Fox's birth month'
+					Can only be caught at Night in the Forest during the month of November
 					Valuable
 					'''
 			}
 
 			ColburBerry: {
 				DisplayName: Colbur Berry
-				Tooltip: Eating this stops the Darkness debuff
+				Tooltip: Eating this removes the Darkness debuff
 			}
 
 			Flint: {
 				DisplayName: Flint
-				Tooltip: a fragment of gravel...
+				Tooltip: "'A fragment of gravel'"
 			}
 		}
 
@@ -1708,13 +1708,13 @@ Mods: {
 			JebelSlime: Native to mountainous terrain, they have adapted to the harsh environment by becoming fifty-percent rock.
 			Chipmunk: Chipmunks are unique squirrels built for surviving in mountain biomes. They often burrow food inside the dirt of the mountains. It's rumored that they either become detectives or band members.
 			Sparrow: Sparrows are resilient birds that thrive on the high cliffs of the mountains.
-			Venial: Feeding off sins, they grew to this size. Now they flingthemselves at those who are pure.
-			Clotter: When these first hatch, they burrow into the nearest living host and hide inside the victims bloodstream leeching off of it until it becomes an adult. sometimes these result in blood clots.
-			CorruptHornet: A hornet that had been corrupt. It goes through the jungle stinging anything thats not corrupt.
-			CrimfiedHornet: A hornet that had been crimfied. It spreads the crimson by flinging its stingers throughout the jungle.
-			CorrodedHornet: A hornet that had been corroded. Its poison is extra potent thanks to the acidic bile.
-			SinfulManEater: This eats the man who sin...
-			NeuroticManEater: Brains are the most nutricious to them...
+			Venial: Feeding off sins, they grew to this size. Now they fling themselves at those who are pure.
+			Clotter: When these first hatch, they burrow into the nearest living host and hide inside the victim's bloodstream, leeching off it until it becomes an adult. Sometimes these result in blood clots.
+			CorruptHornet: A hornet that has been corrupted. It goes through the Jungle, stinging anything that isn't corrupted.
+			CrimfiedHornet: A hornet that has been crimfied. It spreads the Crimson by flinging its stingers throughout the Jungle.
+			CorrodedHornet: A hornet that has been corroded. Its poison is extra potent thanks to the acidic bile.
+			SinfulManEater: This eats the man who sins...
+			NeuroticManEater: Brains are the most nutritious to them...
 			StarvedManEater: The feeling of hunger overwhelm them...
 		}
 
