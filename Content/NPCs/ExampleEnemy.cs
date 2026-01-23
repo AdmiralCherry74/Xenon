@@ -86,11 +86,11 @@ namespace Xenon.Content.NPCs
             //modify this to see how enemies apply debuffs to players. it was last used to test charmed
             if (Main.rand.NextBool(3) && Main.expertMode)
             {
-                target.AddBuff(ModContent.BuffType<Charmed>(), 600);
+                target.AddBuff(ModContent.BuffType<Surprised>(), 600);
             }
             else if (Main.rand.NextBool(3) && Main.masterMode)
             {
-                target.AddBuff(ModContent.BuffType<Charmed>(), 900);
+                target.AddBuff(ModContent.BuffType<Surprised>(), 900);
             }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)

@@ -1599,6 +1599,16 @@ Mods: {
 				DisplayName: Medkit
 				Tooltip: Immunity to Gnashed
 			}
+
+			Countermeasures: {
+				DisplayName: Countermeasures
+				Tooltip: Immunity to Surprised
+			}
+
+			BuffTester: {
+				DisplayName: Buff Tester
+				Tooltip: helps developers test buffs for 193 days...
+			}
 		}
 
 		NPCs: {
@@ -1932,7 +1942,12 @@ Mods: {
 
 			Charmed: {
 				DisplayName: Charmed
-				Description: Melee attacks are 20% weaker
+				Description: Melee attacks are weaker
+			}
+
+			Surprised: {
+				DisplayName: Surprised
+				Description: Youve mismanaged your minions
 			}
 		}
 	}
