@@ -1589,6 +1589,16 @@ Mods: {
 				DisplayName: Flint
 				Tooltip: "'A fragment of gravel'"
 			}
+
+			ChastityRing: {
+				DisplayName: Chastity Ring
+				Tooltip: Immunity to Charmed
+			}
+
+			Medkit: {
+				DisplayName: Medkit
+				Tooltip: Immunity to Gnashed
+			}
 		}
 
 		NPCs: {
@@ -1647,6 +1657,7 @@ Mods: {
 			NeuroticManEater.DisplayName: Neurotic Man Eater
 			SulfurGoldfish.DisplayName: Sulfur Goldfish
 			SulfurPenguin.DisplayName: Sulfur Penguin
+			ExampleEnemy.DisplayName: Bad Guy, urrrg >:3
 		}
 
 		Tiles: {
@@ -1917,6 +1928,11 @@ Mods: {
 			GraveBuster: {
 				DisplayName: Grave Buster
 				Description: He isnt as mean as he looks!
+			}
+
+			Charmed: {
+				DisplayName: Charmed
+				Description: Melee attacks are 20% weaker
 			}
 		}
 	}

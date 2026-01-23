@@ -5,17 +5,16 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.SnowMobs
+namespace Xenon.Content.NPCs
 {
-    public class SnowLeopard : ModNPC
+    public class ExampleEnemy : ModNPC
     {
+        //This is based off the Haunted Armor Enemy, Selene (I) use this to test various things
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Wolf];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PossessedArmor];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -28,28 +27,25 @@ namespace Xenon.Content.NPCs.SnowMobs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 25;
-            NPC.defense = 7;
-            NPC.lifeMax = 150;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 2000;
-            NPC.knockBackResist = 0.3f;
-            NPC.aiStyle = 26; 
-            
-            AIType = NPCID.Wolf;
-            AnimationType = NPCID.Wolf;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SnowLeopardBanner>();
-		}
+            NPC.damage = 1;
+            NPC.defense = 0;
+            NPC.lifeMax = 100;
+            NPC.HitSound = SoundID.NPCHit4;
+            NPC.DeathSound = SoundID.NPCDeath33;
+            NPC.value = 200;
+            NPC.knockBackResist = 1f;
+            NPC.aiStyle = NPCAIStyleID.Fighter;
+
+            AIType = NPCID.PossessedArmor;
+            AnimationType = NPCID.PossessedArmor;
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SnowLeopard")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HauntedArmor")),
             ]);
         }
 
@@ -67,31 +63,6 @@ namespace Xenon.Content.NPCs.SnowMobs
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneSnow)
-
-            {
-                {
-                    return SpawnCondition.OverworldNightMonster.Chance * 0.09f;
-
-                }
-            }
-            return 0f;
-        }
-
-        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-        {
-            if (Main.rand.NextBool(3) && Main.expertMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 600);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode)
-                {
-                    target.AddBuff(ModContent.BuffType<Gnashed>(), 900);
-                }
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
@@ -110,9 +81,22 @@ namespace Xenon.Content.NPCs.SnowMobs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.ThinIce, 5, 10, 20));
+            //modify this to see how enemies apply debuffs to players. it was last used to test charmed
+            if (Main.rand.NextBool(3) && Main.expertMode)
+            {
+                target.AddBuff(ModContent.BuffType<Charmed>(), 600);
+            }
+            else if (Main.rand.NextBool(3) && Main.masterMode)
+            {
+                target.AddBuff(ModContent.BuffType<Charmed>(), 900);
+            }
+        }
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            //modify this to see how items work
+            npcLoot.Add(ItemDropRule.Common(ItemID.IronOre, 3, 0, 3));
         }
     }
 }
