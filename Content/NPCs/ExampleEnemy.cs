@@ -5,7 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Content.NPCs
 {

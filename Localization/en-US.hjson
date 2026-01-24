@@ -1609,6 +1609,28 @@ Mods: {
 				DisplayName: Buff Tester
 				Tooltip: helps developers test buffs for 193 days...
 			}
+
+			Monocle: {
+				DisplayName: Monocle
+				Tooltip: Immunity to Oblivious
+			}
+
+			DSR: {
+				DisplayName: Anti-Material Rifle
+				Tooltip:
+					'''
+					"used to fire faster"
+					Fires a special, slow but powerful round.
+					Thank you Zerona for the sprite!
+					Thank you Guardiangames for the code!
+					Unobtainable
+					'''
+			}
+
+			AntiMaterialRound: {
+				DisplayName: Anti Material Round
+				Tooltip: Unobtainable
+			}
 		}
 
 		NPCs: {
@@ -1857,6 +1879,8 @@ Mods: {
 			OnyxGemball.DisplayName: Onyx Gemball
 			GarnetGemball.DisplayName: Garnet Gemball
 			LapisGemball.DisplayName: Lapis Gemball
+			AntiMaterialRound.DisplayName: Anti Material Round
+			AntiMaterialRoundProj.DisplayName: Anti Material Round Proj
 		}
 
 		Buffs: {
@@ -1948,6 +1972,11 @@ Mods: {
 			Surprised: {
 				DisplayName: Surprised
 				Description: Youve mismanaged your minions
+			}
+
+			Oblivious: {
+				DisplayName: Oblivious
+				Description: You cannot get critical strikes
 			}
 		}
 	}

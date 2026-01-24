@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Content.NPCs.JungleMobs
 {

@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Hooks

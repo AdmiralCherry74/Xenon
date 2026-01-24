@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Content.Items.Accessories.Immunity
 {

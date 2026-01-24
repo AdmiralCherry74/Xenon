@@ -7,9 +7,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals;
-using Xenon.Content.Buffs.Debuffs;
 
-namespace Xenon.Content.Buffs.Debuffs;
+namespace Xenon.Content.Buffs.Debuffs.Counterable;
 
 public class Gnashed : ModBuff
 {

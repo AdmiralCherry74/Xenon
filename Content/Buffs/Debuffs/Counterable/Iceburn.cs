@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Buffs.Debuffs;
+namespace Xenon.Content.Buffs.Debuffs.Counterable;
 
 public class Iceburn : ModBuff
 {

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Buffs.Debuffs
+namespace Xenon.Content.Buffs.Debuffs.Counterable
 {
-    public class Surprised : ModBuff
+    public class Charmed : ModBuff
     {
         public override void SetStaticDefaults()
         {
@@ -18,12 +18,7 @@ namespace Xenon.Content.Buffs.Debuffs
         }
         public override void Update(Player player, ref int buffIndex)
         {
-            player.maxMinions -= 3;
-
-            if (player.maxMinions > 3)
-            {
-                player.maxMinions = 3;
-            }
+            player.GetDamage(DamageClass.Melee) -= 0.2f;
         }
     }
 }

@@ -5,18 +5,18 @@ using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Content.Items.Accessories.Immunity
 {
-    public class Medkit : ModItem
+    public class Monocle : ModItem
     {
         public override void SetDefaults()
         {
             Item.DefaultToAccessory();
             Item.rare = ItemRarityID.LightRed;
-            Item.value = Item.sellPrice(0, 1);
+            Item.value = Item.sellPrice(0, 4);
         }
-        
+
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.buffImmune[ModContent.BuffType<Gnashed>()] = true;
+            player.buffImmune[ModContent.BuffType<Oblivious>()] = true;
         }
     }
 }

@@ -11,6 +11,7 @@ using Xenon.Content.Buffs.Other;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Fish.Quest;
 using Xenon.Content.Items.Fish.Valuable;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Common.Globals;
 
