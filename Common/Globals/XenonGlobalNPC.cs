@@ -9,6 +9,7 @@ using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
+using Xenon.Content.NPCs.UndergroundMobs;
 
 namespace Xenon.Common.Globals;
 
@@ -117,6 +118,18 @@ internal class XenonGlobalNPC : GlobalNPC
         {
             pool.Clear();
             pool.Add(ModContent.NPCType<TempleSentry>(), 1);
+        }
+        if (spawnInfo.Player.ZoneDungeon && NPC.downedBoss3)
+        {
+            pool.Add(ModContent.NPCType<SmallSawblade>(), 0.75f);
+            pool.Add(ModContent.NPCType<Sawblade>(), 0.50f);
+            pool.Add(ModContent.NPCType<LargeSawblade>(), 0.25f);
+        }
+        if (spawnInfo.Player.ZoneRockLayerHeight)
+        {
+            pool.Add(ModContent.NPCType<SmallSawblade>(), 0.85f);
+            pool.Add(ModContent.NPCType<Sawblade>(), 0.60f);
+            pool.Add(ModContent.NPCType<LargeSawblade>(), 0.35f);
         }
 
         //if (Main.hardMode)
