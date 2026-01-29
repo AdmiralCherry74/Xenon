@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.Localization;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.UndergroundMobs
+namespace Xenon.Content.NPCs.Other
 {
     public class BanditLooter : ModNPC
     {

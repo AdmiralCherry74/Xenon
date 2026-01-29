@@ -1619,7 +1619,7 @@ Mods: {
 				DisplayName: Anti-Material Rifle
 				Tooltip:
 					'''
-					"used to fire faster"
+					"Has a magazine stored, can also be used as a foregrip"
 					Fires a special, slow but powerful round.
 					Thank you Zerona for the sprite!
 					Thank you Guardiangames for the code!
@@ -1630,6 +1630,16 @@ Mods: {
 			AntiMaterialRound: {
 				DisplayName: Anti Material Round
 				Tooltip: Unobtainable
+			}
+
+			CopperFurnace: {
+				DisplayName: Copper Furnace
+				Tooltip: Used to smelt ores
+			}
+
+			SandballTrapItem: {
+				DisplayName: Sandball Trap
+				Tooltip: When powered it flings quicksand
 			}
 		}
 
@@ -1690,6 +1700,9 @@ Mods: {
 			SulfurGoldfish.DisplayName: Sulfur Goldfish
 			SulfurPenguin.DisplayName: Sulfur Penguin
 			ExampleEnemy.DisplayName: Bad Guy, urrrg >:3
+			Sawblade.DisplayName: Sawblade
+			LargeSawblade.DisplayName: Large Sawblade
+			SmallSawblade.DisplayName: Small Sawblade
 		}
 
 		Tiles: {
@@ -1716,7 +1729,8 @@ Mods: {
 			TungstenDoorOpened.MapEntry: Tungsten Door
 			GastricAltar.MapEntry: Gastric Altar
 			CorrosionCrateTile.MapEntry: Corrosion Crate
-			PechaBerryHerb.MapEntry: Pecha Berry
+			CopperFurnaceTile.MapEntry: Copper Furnace
+			SandballTrap.MapEntry: Mods.Xenon.Tiles.SandballTrap.MapEntry
 		}
 
 		Bestiary: {
@@ -1841,6 +1855,7 @@ Mods: {
 		Projectiles: {
 			EbonStabberProj.DisplayName: Ebon Stabber
 			QuicksandBallFallingProjectile.DisplayName: Quicksand Ball
+			QuicksandBall.DisplayName: Quicksand Ball
 			RayExplosion.DisplayName: Ray Cannon
 			RayProj.DisplayName: Ray Cannon
 			GutsandBallFallingProjectile.DisplayName: Gutsand Ball
@@ -1880,7 +1895,7 @@ Mods: {
 			GarnetGemball.DisplayName: Garnet Gemball
 			LapisGemball.DisplayName: Lapis Gemball
 			AntiMaterialRound.DisplayName: Anti Material Round
-			AntiMaterialRoundProj.DisplayName: Anti Material Round Proj
+			AntiMaterialRoundProj.DisplayName: Anti Material Round
 		}
 
 		Buffs: {
@@ -1971,7 +1986,7 @@ Mods: {
 
 			Surprised: {
 				DisplayName: Surprised
-				Description: Youve mismanaged your minions
+				Description: You will have less minions
 			}
 
 			Oblivious: {

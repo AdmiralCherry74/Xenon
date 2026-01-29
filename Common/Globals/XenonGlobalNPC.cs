@@ -7,6 +7,7 @@ using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
+using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
 
 namespace Xenon.Common.Globals;
@@ -111,6 +112,11 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(ModContent.NPCType<Evphila>(), 0.10f);
                 pool.Add(ModContent.NPCType<Venial>(), 0.10f);
             }
+        }
+        if (spawnInfo.Player.ZoneLihzhardTemple && !NPC.downedPlantBoss)
+        {
+            pool.Clear();
+            pool.Add(ModContent.NPCType<TempleSentry>(), 1);
         }
 
         //if (Main.hardMode)

@@ -75,7 +75,9 @@ namespace Xenon.Content.NPCs.JungleMobs
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             if (spawnInfo.Player.ZoneLihzhardTemple && !NPC.downedPlantBoss)
+            {
                 return SpawnCondition.JungleTemple.Chance * 10f;
+            }
             return 0f;
         }
 
