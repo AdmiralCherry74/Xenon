@@ -13,6 +13,28 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
+	public static int GetPickaxePower(int tileType, int yPos)
+	{
+		if (!TileID.Sets.Ore[tileType]) return -1;
+
+		int power = 0;
+		if (TileLoader.GetTile(tileType) is ModTile modTile)
+		{
+			power = modTile.MinPick;
+		}
+		else
+		{
+			if (tileType == TileID.Chlorophyte) power = 200;
+			if (tileType == TileID.Meteorite) power = 50;
+			if ((tileType == TileID.Demonite || tileType == TileID.Crimtane) && yPos > Main.worldSurface) power = 55;
+			if (tileType == TileID.Hellstone) power = 70;
+			if (tileType == TileID.Cobalt || tileType == TileID.Palladium) power = 100;
+			if (tileType == TileID.Mythril || tileType == TileID.Orichalcum) power = 110;
+			if (tileType == TileID.Adamantite || tileType == TileID.Titanium) power = 150;
+		}
+
+		return power;
+	}
 	public static Player GetPlayerForTile(int x, int y)
 	{
 		return Main.player[Player.FindClosest(new Vector2(x, y) * 16f, 16, 16)];

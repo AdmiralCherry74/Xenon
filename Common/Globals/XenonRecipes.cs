@@ -151,6 +151,8 @@ namespace Xenon.Common.Globals
         }
         public override void PostAddRecipes()
         {
+            // return out if the config is off
+            if (!ModContent.GetInstance<XenonConfig>().RequirePreviousArmorsForNextArmor) return;
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
                 //Beginning of armor recipe changes
