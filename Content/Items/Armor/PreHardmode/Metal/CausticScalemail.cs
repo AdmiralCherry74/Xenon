@@ -31,6 +31,7 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<IngestaneBar>(), 25)
                 .AddIngredient(ModContent.ItemType<FreshChyme>(), 20)
+                .AddRecipeGroup("GoldChainmail", 1)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

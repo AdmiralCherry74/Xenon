@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using Steamworks;
+using System.Collections;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Tools.MiningPickaxes;
+using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Common.Globals
 {
@@ -100,33 +102,52 @@ namespace Xenon.Common.Globals
             //End of Armor recipe groups
 
             //Beginning of Pickaxe recipe groups
-            //Beginning of Tier 1 Pickaxe recipe groups
             RecipeGroup CopperPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperPickaxe)}", ItemID.CopperPickaxe, ItemID.TinPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperPickaxe), CopperPickaxe);
             //Tier 1 Pickaxe recipe group
 
-            //Beginning of Tier 2 Pickaxe recipe groups
             RecipeGroup IronPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronPickaxe)}", ItemID.IronPickaxe, ItemID.LeadPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.IronPickaxe), IronPickaxe);
             //Tier 2 Pickaxe recipe group
 
-            //Beginning of Tier 3 Pickaxe recipe groups
             RecipeGroup SilverPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverPickaxe)}", ItemID.SilverPickaxe, ItemID.TungstenPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverPickaxe), SilverPickaxe);
             //Tier 3 Pickaxe recipe group
 
-            //Beginning of Tier 4 Pickaxe recipe groups
             RecipeGroup GoldPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldPickaxe)}", ItemID.GoldPickaxe, ItemID.PlatinumPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldPickaxe), GoldPickaxe);
             //Tier 4 Pickaxe recipe group
 
-            //Beginning of Evil Tier Pickaxe recipe groups
             RecipeGroup NightmarePickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.NightmarePickaxe)}", ItemID.NightmarePickaxe, ItemID.DeathbringerPickaxe, (ModContent.ItemType<IngestedPickaxe>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.NightmarePickaxe), NightmarePickaxe);
             //Evil Tier Pickaxe recipe group
             //End of Pickaxe recipe groups
 
+            //Beginning of Broadsword recipe groups
+            RecipeGroup WoodenSword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodenSword)}", ItemID.WoodenSword, ItemID.PalmWoodSword, ItemID.BorealWoodSword, ItemID.RichMahoganySword, ItemID.CactusSword);
+            RecipeGroup.RegisterGroup(nameof(ItemID.WoodenSword), WoodenSword);
+            //Wooden Broadsword recipe groups
 
+            RecipeGroup CopperBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBroadsword)}", ItemID.CopperBroadsword, ItemID.TinBroadsword);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBroadsword), CopperBroadsword);
+            //Tier 1 Broadsword recipe group
+
+            RecipeGroup IronBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronBroadsword)}", ItemID.IronBroadsword, ItemID.LeadBroadsword);
+            RecipeGroup.RegisterGroup(nameof(ItemID.IronBroadsword), IronBroadsword);
+            //Tier 2 Broadsword recipe group
+
+            RecipeGroup SilverBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBroadsword)}", ItemID.SilverBroadsword, ItemID.TungstenBroadsword);
+            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBroadsword), SilverBroadsword);
+            //Tier 3 Broadsword recipe group
+
+            RecipeGroup GoldBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBroadsword)}", ItemID.GoldBroadsword, ItemID.PlatinumBroadsword);
+            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBroadsword), GoldBroadsword);
+            //Tier 4 Broadsword recipe group
+
+            RecipeGroup LightsBane = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.LightsBane)}", ItemID.LightsBane, ItemID.BloodButcherer, (ModContent.ItemType<TheIndigestion>()));
+            RecipeGroup.RegisterGroup(nameof(ItemID.LightsBane), LightsBane);
+            //Tier Evil Broadsword recipe group
+            //End of Broadsword recipe groups
         }
         public override void PostAddRecipes()
         {
@@ -587,6 +608,111 @@ namespace Xenon.Common.Globals
                 }
                 //Molten Pickaxe Recipe
                 //End of Pickaxe recipe changes
+
+                Recipe CopperBroadswordCraft = Main.recipe[i];
+                if (CopperBroadswordCraft.HasIngredient(ItemID.CopperBar) && CopperBroadswordCraft.HasTile(TileID.Anvils) && CopperBroadswordCraft.HasResult(ItemID.CopperBroadsword))
+                {
+                    CopperBroadswordCraft.AddRecipeGroup("WoodenSword");
+                }
+                //Copper Broadsword Recipe
+
+                Recipe TinBroadswordCraft = Main.recipe[i];
+                if (TinBroadswordCraft.HasIngredient(ItemID.TinBar) && TinBroadswordCraft.HasTile(TileID.Anvils) && TinBroadswordCraft.HasResult(ItemID.TinBroadsword))
+                {
+                    TinBroadswordCraft.AddRecipeGroup("WoodenSword");
+                }
+                //Tin Broadsword Recipe
+
+                Recipe IronBroadswordCraft = Main.recipe[i];
+                if (IronBroadswordCraft.HasIngredient(ItemID.IronBar) && IronBroadswordCraft.HasTile(TileID.Anvils) && IronBroadswordCraft.HasResult(ItemID.IronBroadsword))
+                {
+                    IronBroadswordCraft.AddRecipeGroup("CopperBroadsword");
+                    if (IronBroadswordCraft.TryGetIngredient(ItemID.IronBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Iron Broadsword Recipe
+
+                Recipe LeadBroadswordCraft = Main.recipe[i];
+                if (LeadBroadswordCraft.HasIngredient(ItemID.LeadBar) && LeadBroadswordCraft.HasTile(TileID.Anvils) && LeadBroadswordCraft.HasResult(ItemID.LeadBroadsword))
+                {
+                    LeadBroadswordCraft.AddRecipeGroup("CopperBroadsword");
+                    if (LeadBroadswordCraft.TryGetIngredient(ItemID.LeadBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Lead Broadsword Recipe
+
+                Recipe SilverBroadswordCraft = Main.recipe[i];
+                if (SilverBroadswordCraft.HasIngredient(ItemID.SilverBar) && SilverBroadswordCraft.HasTile(TileID.Anvils) && SilverBroadswordCraft.HasResult(ItemID.SilverBroadsword))
+                {
+                    SilverBroadswordCraft.AddRecipeGroup("IronBroadsword");
+                    if (SilverBroadswordCraft.TryGetIngredient(ItemID.SilverBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Silver Broadsword Recipe
+
+                Recipe TungstenBroadswordCraft = Main.recipe[i];
+                if (TungstenBroadswordCraft.HasIngredient(ItemID.TungstenBar) && TungstenBroadswordCraft.HasTile(TileID.Anvils) && TungstenBroadswordCraft.HasResult(ItemID.TungstenBroadsword))
+                {
+                    TungstenBroadswordCraft.AddRecipeGroup("IronBroadsword");
+                    if (TungstenBroadswordCraft.TryGetIngredient(ItemID.TungstenBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Tungsten Broadsword Recipe
+
+                Recipe GoldBroadswordCraft = Main.recipe[i];
+                if (GoldBroadswordCraft.HasIngredient(ItemID.GoldBar) && GoldBroadswordCraft.HasTile(TileID.Anvils) && GoldBroadswordCraft.HasResult(ItemID.GoldBroadsword))
+                {
+                    GoldBroadswordCraft.AddRecipeGroup("SilverBroadsword");
+                    if (GoldBroadswordCraft.TryGetIngredient(ItemID.GoldBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Gold Broadsword Recipe
+
+                Recipe PlatinumBroadswordCraft = Main.recipe[i];
+                if (PlatinumBroadswordCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumBroadswordCraft.HasTile(TileID.Anvils) && PlatinumBroadswordCraft.HasResult(ItemID.PlatinumBroadsword))
+                {
+                    PlatinumBroadswordCraft.AddRecipeGroup("SilverBroadsword");
+                    if (PlatinumBroadswordCraft.TryGetIngredient(ItemID.PlatinumBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Broadsword Recipe
+
+                Recipe LightsBaneCraft = Main.recipe[i];
+                if (LightsBaneCraft.HasIngredient(ItemID.DemoniteBar) && LightsBaneCraft.HasTile(TileID.Anvils) && LightsBaneCraft.HasResult(ItemID.LightsBane))
+                {
+                    LightsBaneCraft.AddRecipeGroup("GoldBroadsword");
+                    if (LightsBaneCraft.TryGetIngredient(ItemID.DemoniteBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Lights Bane Recipe
+
+                Recipe BloodButchererCraft = Main.recipe[i];
+                if (BloodButchererCraft.HasIngredient(ItemID.CrimtaneBar) && BloodButchererCraft.HasTile(TileID.Anvils) && BloodButchererCraft.HasResult(ItemID.BloodButcherer))
+                {
+                    BloodButchererCraft.AddRecipeGroup("GoldBroadsword");
+                    if (BloodButchererCraft.TryGetIngredient(ItemID.CrimtaneBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Blood Butcherer Recipe
+                //End of Broadsword Recipe changes
+
+                //Skipping Fiery Greatsword / Volcano because that is apart of Nights Edge recipe and Nights Edge also uses Lights Bane, Blood Butcherer, and Indegestion. would mean you have to get 2 copies of Lights Bane every time
 
                 //Just gonna wait until the hardmode update to further update the recipes
             }

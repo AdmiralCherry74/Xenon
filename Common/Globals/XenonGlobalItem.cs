@@ -48,6 +48,7 @@ public class XenonGlobalItem : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ItemID.TallyCounter] = ItemID.Radar;
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.TerraBlade] = ModContent.ItemType<AncientTerraBlade>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AncientTerraBlade>()] = ItemID.TerraBlade;
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.SlimeGun] = ItemID.WaterGun;
         ItemID.Sets.ShimmerTransformToItem[ItemID.WaterGun] = ItemID.SlimeGun; //change to shimmer gun when tmod is 1.4.5

@@ -19,5 +19,6 @@ public class FreshChyme : ModItem
         Item.height = 20;
         Item.rare = 3;
         Item.value = Item.sellPrice(0, 0, 21);
+        Item.maxStack = 9999;
     }
 }

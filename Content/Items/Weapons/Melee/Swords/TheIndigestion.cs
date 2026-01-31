@@ -29,7 +29,8 @@ public class TheIndigestion : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 5)
+            .AddRecipeGroup("GoldBroadsword", 1)
             .AddTile(TileID.Anvils)
             .Register();
 
