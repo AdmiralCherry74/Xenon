@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Weapons.Ranged.Bows;
 
 namespace Xenon.Common.Globals
 {
@@ -16,7 +17,7 @@ namespace Xenon.Common.Globals
         public override void AddRecipeGroups()
         {
             //Beginning of Armor recipe groups
-            //Beginning of Wooden Armor recipe groups
+            #region wood recipe group
             RecipeGroup WoodenHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodHelmet)}", ItemID.WoodHelmet, ItemID.PalmWoodHelmet, ItemID.BorealWoodHelmet, ItemID.RichMahoganyHelmet, ItemID.CactusHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodHelmet), WoodenHelmet);
             //Wood Helmet recipe group
@@ -28,9 +29,9 @@ namespace Xenon.Common.Globals
             RecipeGroup WoodGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodGreaves)}", ItemID.WoodGreaves, ItemID.PalmWoodGreaves, ItemID.BorealWoodGreaves, ItemID.RichMahoganyGreaves, ItemID.CactusLeggings);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodGreaves), WoodGreaves);
             //Wood Greaves recipe group
-            //End of Wooden Armor recipe groups
+            #endregion
 
-            //Beginning of Tier 1 ore Armor recipe groups
+            #region copper tier recipe group
             RecipeGroup CopperHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperHelmet)}", ItemID.CopperHelmet, ItemID.TinHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperHelmet), CopperHelmet);
             //Copper Helmet recipe group
@@ -42,9 +43,9 @@ namespace Xenon.Common.Globals
             RecipeGroup CopperGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperGreaves)}", ItemID.CopperGreaves, ItemID.TinGreaves);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperGreaves), CopperGreaves);
             //Copper Greaves recipe group
-            //End of Tier 1 ore Armor recipe groups
+            #endregion
 
-            //Beginning of Tier 2 ore Armor recipe groups
+            #region iron tier recipe group
             RecipeGroup IronHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronHelmet)}", ItemID.IronHelmet, ItemID.LeadHelmet, ItemID.AncientIronHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.IronHelmet), IronHelmet);
             //Iron Helmet recipe group
@@ -56,9 +57,9 @@ namespace Xenon.Common.Globals
             RecipeGroup IronGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronGreaves)}", ItemID.IronGreaves, ItemID.LeadGreaves);
             RecipeGroup.RegisterGroup(nameof(ItemID.IronGreaves), IronGreaves);
             //Iron Greaves recipe group
-            //End of Tier 2 ore Armor recipe groups
+            #endregion
 
-            //Beginning of Tier 3 ore Armor recipe groups
+            #region silver tier recipe group
             RecipeGroup SilverHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverHelmet)}", ItemID.SilverHelmet, ItemID.TungstenHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverHelmet), SilverHelmet);
             //Silver Helmet recipe group
@@ -71,8 +72,10 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverGreaves), SilverGreaves);
             //Silver Greaves recipe group
             //End of Tier 3 ore Armor recipe groups
+            #endregion
 
-            //Beginning of Tier 4 ore Armor recipe groups
+            #region gold tier recipe group
+
             RecipeGroup GoldHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldHelmet)}", ItemID.GoldHelmet, ItemID.PlatinumHelmet, ItemID.AncientGoldHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldHelmet), GoldHelmet);
             //Gold Helmet recipe group
@@ -85,11 +88,13 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldGreaves), GoldGreaves);
             //Gold Greaves recipe group
             //End of Tier 4 ore Armor recipe groups
+            #endregion
 
-            //Beginning of Evil ore Armor recipe groups
+            #region evil tier recipe group
             RecipeGroup ShadowHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.ShadowHelmet)}", ItemID.ShadowHelmet, ItemID.CrimsonHelmet, ItemID.AncientShadowHelmet, (ModContent.ItemType<CausticHelmet>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowHelmet), ShadowHelmet);
             //Evil Helmet recipe group
+
 
             RecipeGroup ShadowScalemail = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.ShadowScalemail)}", ItemID.ShadowScalemail, ItemID.CrimsonScalemail, ItemID.AncientShadowScalemail, (ModContent.ItemType<CausticScalemail>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowScalemail), ShadowScalemail);
@@ -98,65 +103,125 @@ namespace Xenon.Common.Globals
             RecipeGroup ShadowGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.ShadowGreaves)}", ItemID.ShadowGreaves, ItemID.CrimsonGreaves, ItemID.AncientShadowGreaves, (ModContent.ItemType<CausticGreaves>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowGreaves), ShadowGreaves);
             //Evil Greaves recipe group
-            //End of Evil ore Armor recipe groups
+            #endregion
             //End of Armor recipe groups
 
             //Beginning of Pickaxe recipe groups
+            #region copper tier recipe group
             RecipeGroup CopperPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperPickaxe)}", ItemID.CopperPickaxe, ItemID.TinPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperPickaxe), CopperPickaxe);
             //Tier 1 Pickaxe recipe group
+            #endregion
 
+            #region iron tier recipe group
             RecipeGroup IronPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronPickaxe)}", ItemID.IronPickaxe, ItemID.LeadPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.IronPickaxe), IronPickaxe);
             //Tier 2 Pickaxe recipe group
+            #endregion
 
+            #region silver tier recipe group
             RecipeGroup SilverPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverPickaxe)}", ItemID.SilverPickaxe, ItemID.TungstenPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverPickaxe), SilverPickaxe);
             //Tier 3 Pickaxe recipe group
+            #endregion
 
+            #region gold tier recipe group
             RecipeGroup GoldPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldPickaxe)}", ItemID.GoldPickaxe, ItemID.PlatinumPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldPickaxe), GoldPickaxe);
             //Tier 4 Pickaxe recipe group
+            #endregion
 
+            #region evil tier recipe group
             RecipeGroup NightmarePickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.NightmarePickaxe)}", ItemID.NightmarePickaxe, ItemID.DeathbringerPickaxe, (ModContent.ItemType<IngestedPickaxe>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.NightmarePickaxe), NightmarePickaxe);
             //Evil Tier Pickaxe recipe group
+            #endregion
             //End of Pickaxe recipe groups
 
             //Beginning of Broadsword recipe groups
+            #region wood recipe group
             RecipeGroup WoodenSword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodenSword)}", ItemID.WoodenSword, ItemID.PalmWoodSword, ItemID.BorealWoodSword, ItemID.RichMahoganySword, ItemID.CactusSword);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodenSword), WoodenSword);
             //Wooden Broadsword recipe groups
+            #endregion
 
+            #region copper tier recipe group
             RecipeGroup CopperBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBroadsword)}", ItemID.CopperBroadsword, ItemID.TinBroadsword);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBroadsword), CopperBroadsword);
             //Tier 1 Broadsword recipe group
+            #endregion
 
+            #region iron tier recipe group
             RecipeGroup IronBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronBroadsword)}", ItemID.IronBroadsword, ItemID.LeadBroadsword);
             RecipeGroup.RegisterGroup(nameof(ItemID.IronBroadsword), IronBroadsword);
             //Tier 2 Broadsword recipe group
+            #endregion
 
+            #region silver tier recipe group
             RecipeGroup SilverBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBroadsword)}", ItemID.SilverBroadsword, ItemID.TungstenBroadsword);
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverBroadsword), SilverBroadsword);
             //Tier 3 Broadsword recipe group
+            #endregion
 
+            #region gold tier recipe group
             RecipeGroup GoldBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBroadsword)}", ItemID.GoldBroadsword, ItemID.PlatinumBroadsword);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBroadsword), GoldBroadsword);
             //Tier 4 Broadsword recipe group
+            #endregion
 
+            #region evil tier recipe group
             RecipeGroup LightsBane = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.LightsBane)}", ItemID.LightsBane, ItemID.BloodButcherer, (ModContent.ItemType<TheIndigestion>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.LightsBane), LightsBane);
             //Tier Evil Broadsword recipe group
+            #endregion region
             //End of Broadsword recipe groups
+
+            //Beginning of Bow recipe groups
+            #region wood recipe group
+            RecipeGroup WoodenBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodenBow)}", ItemID.WoodenBow, ItemID.PalmWoodBow, ItemID.BorealWoodBow, ItemID.RichMahoganyBow);
+            RecipeGroup.RegisterGroup(nameof(ItemID.WoodenBow), WoodenBow);
+            //Wooden Bow recipe groups
+            #endregion
+
+            #region copper tier recipe group
+            RecipeGroup CopperBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBow)}", ItemID.CopperBow, ItemID.TinBow);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBow), CopperBow);
+            //Tier 1 Bow recipe group
+            #endregion
+
+            #region iron tier recipe group
+            RecipeGroup IronBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronBow)}", ItemID.IronBow, ItemID.LeadBow);
+            RecipeGroup.RegisterGroup(nameof(ItemID.IronBow), IronBow);
+            //Tier 2 Bow recipe group
+            #endregion
+
+            #region silver tier recipe group
+            RecipeGroup SilverBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBow)}", ItemID.SilverBow, ItemID.TungstenBow);
+            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBow), SilverBow);
+            //Tier 3 Bow recipe group
+            #endregion
+
+            #region gold tier recipe group
+            RecipeGroup GoldBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBow)}", ItemID.GoldBow, ItemID.PlatinumBow);
+            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBow), GoldBow);
+            //Tier 4 Bow recipe group
+            #endregion
+
+            #region evil tier recipe group
+            RecipeGroup DemonBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DemonBow)}", ItemID.DemonBow, ItemID.TendonBow, (ModContent.ItemType<SulfirBow>()));
+            RecipeGroup.RegisterGroup(nameof(ItemID.DemonBow), DemonBow);
+            //Tier Evil Bow recipe group
+            #endregion region
+            //End of Bow recipe groups
         }
         public override void PostAddRecipes()
         {
             // return out if the config is off
-            if (!ModContent.GetInstance<XenonConfig>().RequirePreviousArmorsForNextArmor) return;
+            if (!ModContent.GetInstance<XenonConfig>().RequirePreviousOreTierForNext) return;
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
                 //Beginning of armor recipe changes
-                //Beginning of Copper armor recipe changes
+                #region copper armor
                 Recipe CopperHelmetCraft = Main.recipe[i];
                 if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
                 {
@@ -178,8 +243,9 @@ namespace Xenon.Common.Globals
                 }
                 //Copper Greaves recipe
                 //End of Copper armor recipe changes
+                #endregion
 
-                //Beginning of Tin armor recipe changes
+                #region tin armor
                 Recipe TinHelmetCraft = Main.recipe[i];
                 if (TinHelmetCraft.HasIngredient(ItemID.TinBar) && TinHelmetCraft.HasTile(TileID.Anvils) && TinHelmetCraft.HasResult(ItemID.TinHelmet))
                 {
@@ -200,9 +266,9 @@ namespace Xenon.Common.Globals
                     TinGreavesCraft.AddRecipeGroup("WoodGreaves");
                 }
                 //Tin Greaves recipe
-                //End of Tin armor recipe changes
+                #endregion
 
-                //Beginning of Iron armor recipe changes
+                #region iron armor
                 Recipe IronHelmetCraft = Main.recipe[i];
                 if (IronHelmetCraft.HasIngredient(ItemID.IronBar) && IronHelmetCraft.HasTile(TileID.Anvils) && IronHelmetCraft.HasResult(ItemID.IronHelmet))
                 {
@@ -235,9 +301,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Iron Greaves recipe
-                //End of Iron armor recipe changes
+                #endregion
 
-                //Beginning of Lead armor recipe changes
+                #region lead armor
                 Recipe LeadHelmetCraft = Main.recipe[i];
                 if (LeadHelmetCraft.HasIngredient(ItemID.LeadBar) && LeadHelmetCraft.HasTile(TileID.Anvils) && LeadHelmetCraft.HasResult(ItemID.LeadHelmet))
                 {
@@ -247,7 +313,6 @@ namespace Xenon.Common.Globals
                         ingredient.stack /= 2;
                     }
                 }
-                //Lead Helmet recipe
 
                 Recipe LeadChainmailCraft = Main.recipe[i];
                 if (LeadChainmailCraft.HasIngredient(ItemID.LeadBar) && LeadChainmailCraft.HasTile(TileID.Anvils) && LeadChainmailCraft.HasResult(ItemID.LeadChainmail))
@@ -270,9 +335,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Lead Greaves recipe
-                //End of Lead armor recipe changes
+                #endregion
 
-                //Beginning of Silver armor recipe changes
+                #region silver armor
                 Recipe SilverHelmetCraft = Main.recipe[i];
                 if (SilverHelmetCraft.HasIngredient(ItemID.SilverBar) && SilverHelmetCraft.HasTile(TileID.Anvils) && SilverHelmetCraft.HasResult(ItemID.SilverHelmet))
                 {
@@ -305,9 +370,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Silver Greaves recipe
-                //End of Silver armor recipe changes
+                #endregion
 
-                //Beginning of Tungsten armor recipe changes
+                #region tungsten armor
                 Recipe TungstenHelmetCraft = Main.recipe[i];
                 if (TungstenHelmetCraft.HasIngredient(ItemID.TungstenBar) && TungstenHelmetCraft.HasTile(TileID.Anvils) && TungstenHelmetCraft.HasResult(ItemID.TungstenHelmet))
                 {
@@ -340,9 +405,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Tungsten Greaves recipe
-                //End of Tungsten armor recipe changes
+                #endregion
 
-                //Beginning of Gold armor recipe changes
+                #region gold armor
                 Recipe GoldHelmetCraft = Main.recipe[i];
                 if (GoldHelmetCraft.HasIngredient(ItemID.GoldBar) && GoldHelmetCraft.HasTile(TileID.Anvils) && GoldHelmetCraft.HasResult(ItemID.GoldHelmet))
                 {
@@ -375,9 +440,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Gold Greaves recipe
-                //End of Gold armor recipe changes
+                #endregion
 
-                //Beginning of Platinum armor recipe changes
+                #region platinum armor
                 Recipe PlatinumHelmetCraft = Main.recipe[i];
                 if (PlatinumHelmetCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumHelmetCraft.HasTile(TileID.Anvils) && PlatinumHelmetCraft.HasResult(ItemID.PlatinumHelmet))
                 {
@@ -410,9 +475,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Platinum Greaves recipe
-                //End of Platinum armor recipe changes
+                #endregion
 
-                //Beginning of Shadow armor recipe changes
+                #region shadow armor
                 Recipe ShadowHelmetCraft = Main.recipe[i];
                 if (ShadowHelmetCraft.HasIngredient(ItemID.DemoniteBar) && ShadowHelmetCraft.HasTile(TileID.Anvils) && ShadowHelmetCraft.HasResult(ItemID.ShadowHelmet))
                 {
@@ -445,9 +510,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Shadow Greaves recipe
-                //End of Shadow armor recipe changes
+                #endregion
 
-                //Beginning of Crimson armor recipe changes
+                #region crimson armor
                 Recipe CrimsonHelmetCraft = Main.recipe[i];
                 if (CrimsonHelmetCraft.HasIngredient(ItemID.CrimtaneBar) && CrimsonHelmetCraft.HasTile(TileID.Anvils) && CrimsonHelmetCraft.HasResult(ItemID.CrimsonHelmet))
                 {
@@ -480,11 +545,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Crimson Greaves recipe
-                //End of Crimson armor recipe changes
+                #endregion
 
-                //We skip Caustic armor cause we can just code it into the actual items themselves
-
-                //Beginning of Molten armor recipe changes
+                #region molten armor
                 Recipe MoltenHelmetCraft = Main.recipe[i];
                 if (MoltenHelmetCraft.HasIngredient(ItemID.HellstoneBar) && MoltenHelmetCraft.HasTile(TileID.Anvils) && MoltenHelmetCraft.HasResult(ItemID.MoltenHelmet))
                 {
@@ -517,10 +580,11 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Molten Greaves recipe
-                //End of Molten armor recipe changes
+                #endregion
                 //End of armor recipe changes
 
                 //Beginning of Pickaxe recipe changes
+                #region iron tier pickaxes
                 Recipe IronPickaxeCraft = Main.recipe[i];
                 if (IronPickaxeCraft.HasIngredient(ItemID.IronBar) && IronPickaxeCraft.HasTile(TileID.Anvils) && IronPickaxeCraft.HasResult(ItemID.IronPickaxe))
                 {
@@ -536,7 +600,9 @@ namespace Xenon.Common.Globals
                     LeadPickaxeCraft.RemoveIngredient(ItemID.Wood);
                 }
                 //Lead Pickaxe Recipe
+                #endregion
 
+                #region silver tier pickaxe
                 Recipe SilverPickaxeCraft = Main.recipe[i];
                 if (SilverPickaxeCraft.HasIngredient(ItemID.SilverBar) && SilverPickaxeCraft.HasTile(TileID.Anvils) && SilverPickaxeCraft.HasResult(ItemID.SilverPickaxe))
                 {
@@ -560,7 +626,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Tungsten Pickaxe Recipe
+                #endregion
 
+                #region gold tier pickaxe
                 Recipe GoldPickaxeCraft = Main.recipe[i];
                 if (GoldPickaxeCraft.HasIngredient(ItemID.GoldBar) && GoldPickaxeCraft.HasTile(TileID.Anvils) && GoldPickaxeCraft.HasResult(ItemID.GoldPickaxe))
                 {
@@ -584,7 +652,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Platinum Pickaxe Recipe
+                #endregion
 
+                #region evil and molten tier pickaxes
                 Recipe NightmarePickaxeCraft = Main.recipe[i];
                 if (NightmarePickaxeCraft.HasIngredient(ItemID.DemoniteBar) && NightmarePickaxeCraft.HasTile(TileID.Anvils) && NightmarePickaxeCraft.HasResult(ItemID.NightmarePickaxe))
                 {
@@ -609,8 +679,11 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Molten Pickaxe Recipe
+                #endregion
                 //End of Pickaxe recipe changes
 
+                //Beginning of Broadsword recipe changes
+                #region copper tier broadsword
                 Recipe CopperBroadswordCraft = Main.recipe[i];
                 if (CopperBroadswordCraft.HasIngredient(ItemID.CopperBar) && CopperBroadswordCraft.HasTile(TileID.Anvils) && CopperBroadswordCraft.HasResult(ItemID.CopperBroadsword))
                 {
@@ -624,7 +697,9 @@ namespace Xenon.Common.Globals
                     TinBroadswordCraft.AddRecipeGroup("WoodenSword");
                 }
                 //Tin Broadsword Recipe
+                #endregion
 
+                #region iron tier broadsword
                 Recipe IronBroadswordCraft = Main.recipe[i];
                 if (IronBroadswordCraft.HasIngredient(ItemID.IronBar) && IronBroadswordCraft.HasTile(TileID.Anvils) && IronBroadswordCraft.HasResult(ItemID.IronBroadsword))
                 {
@@ -646,7 +721,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Lead Broadsword Recipe
+                #endregion
 
+                #region silver tier broadsword
                 Recipe SilverBroadswordCraft = Main.recipe[i];
                 if (SilverBroadswordCraft.HasIngredient(ItemID.SilverBar) && SilverBroadswordCraft.HasTile(TileID.Anvils) && SilverBroadswordCraft.HasResult(ItemID.SilverBroadsword))
                 {
@@ -668,7 +745,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Tungsten Broadsword Recipe
+                #endregion
 
+                #region gold tier broadsword
                 Recipe GoldBroadswordCraft = Main.recipe[i];
                 if (GoldBroadswordCraft.HasIngredient(ItemID.GoldBar) && GoldBroadswordCraft.HasTile(TileID.Anvils) && GoldBroadswordCraft.HasResult(ItemID.GoldBroadsword))
                 {
@@ -690,7 +769,9 @@ namespace Xenon.Common.Globals
                     }
                 }
                 //Broadsword Recipe
+                #endregion
 
+                #region evil tier broadsword
                 Recipe LightsBaneCraft = Main.recipe[i];
                 if (LightsBaneCraft.HasIngredient(ItemID.DemoniteBar) && LightsBaneCraft.HasTile(TileID.Anvils) && LightsBaneCraft.HasResult(ItemID.LightsBane))
                 {
@@ -715,6 +796,131 @@ namespace Xenon.Common.Globals
                 //End of Broadsword Recipe changes
 
                 //Skipping Fiery Greatsword / Volcano because that is apart of Nights Edge recipe and Nights Edge also uses Lights Bane, Blood Butcherer, and Indegestion. would mean you have to get 2 copies of Lights Bane every time
+                #endregion
+
+                //Beginning of Bow recipe changes
+                #region copper tier bow
+                Recipe CopperBowCraft = Main.recipe[i];
+                if (CopperBowCraft.HasIngredient(ItemID.CopperBar) && CopperBowCraft.HasTile(TileID.Anvils) && CopperBowCraft.HasResult(ItemID.CopperBow))
+                {
+                    CopperBowCraft.AddRecipeGroup("WoodenBow");
+                }
+                //Copper Bow Recipe
+
+                Recipe TinBowCraft = Main.recipe[i];
+                if (TinBowCraft.HasIngredient(ItemID.TinBar) && TinBowCraft.HasTile(TileID.Anvils) && TinBowCraft.HasResult(ItemID.TinBow))
+                {
+                    TinBowCraft.AddRecipeGroup("WoodenBow");
+                }
+                //Tin Bow Recipe
+                #endregion
+
+                #region iron tier bow
+                Recipe IronBowCraft = Main.recipe[i];
+                if (IronBowCraft.HasIngredient(ItemID.IronBar) && IronBowCraft.HasTile(TileID.Anvils) && IronBowCraft.HasResult(ItemID.IronBow))
+                {
+                    IronBowCraft.AddRecipeGroup("CopperBow");
+                    if (IronBowCraft.TryGetIngredient(ItemID.IronBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Iron Bow Recipe
+
+                Recipe LeadBowCraft = Main.recipe[i];
+                if (LeadBowCraft.HasIngredient(ItemID.LeadBar) && LeadBowCraft.HasTile(TileID.Anvils) && LeadBowCraft.HasResult(ItemID.LeadBow))
+                {
+                    LeadBowCraft.AddRecipeGroup("CopperBow");
+                    if (LeadBowCraft.TryGetIngredient(ItemID.LeadBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Lead Bow Recipe
+                #endregion
+
+                #region silver tier bow
+                Recipe SilverBowCraft = Main.recipe[i];
+                if (SilverBowCraft.HasIngredient(ItemID.SilverBar) && SilverBowCraft.HasTile(TileID.Anvils) && SilverBowCraft.HasResult(ItemID.SilverBow))
+                {
+                    SilverBowCraft.AddRecipeGroup("IronBow");
+                    if (SilverBowCraft.TryGetIngredient(ItemID.SilverBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Silver Bow Recipe
+
+                Recipe TungstenBowCraft = Main.recipe[i];
+                if (TungstenBowCraft.HasIngredient(ItemID.TungstenBar) && TungstenBowCraft.HasTile(TileID.Anvils) && TungstenBowCraft.HasResult(ItemID.TungstenBow))
+                {
+                    TungstenBowCraft.AddRecipeGroup("IronBow");
+                    if (TungstenBowCraft.TryGetIngredient(ItemID.TungstenBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Tungsten Bow Recipe
+                #endregion
+
+                #region gold tier bow
+                Recipe GoldBowCraft = Main.recipe[i];
+                if (GoldBowCraft.HasIngredient(ItemID.GoldBar) && GoldBowCraft.HasTile(TileID.Anvils) && GoldBowCraft.HasResult(ItemID.GoldBow))
+                {
+                    GoldBowCraft.AddRecipeGroup("SilverBow");
+                    if (GoldBowCraft.TryGetIngredient(ItemID.GoldBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Gold Bow Recipe
+
+                Recipe PlatinumBowCraft = Main.recipe[i];
+                if (PlatinumBowCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumBowCraft.HasTile(TileID.Anvils) && PlatinumBowCraft.HasResult(ItemID.PlatinumBow))
+                {
+                    PlatinumBowCraft.AddRecipeGroup("SilverBow");
+                    if (PlatinumBowCraft.TryGetIngredient(ItemID.PlatinumBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //PLatinum Bow Recipe
+                #endregion
+
+                #region evil and molten tier bow
+                Recipe DemonBowCraft = Main.recipe[i];
+                if (DemonBowCraft.HasIngredient(ItemID.DemoniteBar) && DemonBowCraft.HasTile(TileID.Anvils) && DemonBowCraft.HasResult(ItemID.DemonBow))
+                {
+                    DemonBowCraft.AddRecipeGroup("GoldBow");
+                    if (DemonBowCraft.TryGetIngredient(ItemID.DemoniteBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Demon Bow Recipe
+
+                Recipe TendonBowCraft = Main.recipe[i];
+                if (TendonBowCraft.HasIngredient(ItemID.CrimtaneBar) && TendonBowCraft.HasTile(TileID.Anvils) && TendonBowCraft.HasResult(ItemID.TendonBow))
+                {
+                    TendonBowCraft.AddRecipeGroup("GoldBow");
+                    if (TendonBowCraft.TryGetIngredient(ItemID.CrimtaneBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Tendon Bow Recipe
+
+                Recipe MoltenFuryCraft = Main.recipe[i];
+                if (MoltenFuryCraft.HasIngredient(ItemID.HellstoneBar) && MoltenFuryCraft.HasTile(TileID.Anvils) && MoltenFuryCraft.HasResult(ItemID.MoltenFury))
+                {
+                    MoltenFuryCraft.AddRecipeGroup("DemonBow");
+                    if (MoltenFuryCraft.TryGetIngredient(ItemID.HellstoneBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //End of Bow Recipe changes
+                #endregion
 
                 //Just gonna wait until the hardmode update to further update the recipes
             }
