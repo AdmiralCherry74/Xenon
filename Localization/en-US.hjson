@@ -2024,5 +2024,30 @@ Mods: {
 				Description: You cannot get critical strikes
 			}
 		}
+
+		Configs: {
+			XenonConfig: {
+				DisplayName: Xenon Config
+
+				RequirePreviousArmorsForNextArmor: {
+					Label: Armor Crafting Tweak
+					Tooltip:
+					'''
+					Makes each armor tier require the previous tier to craft
+					Also reduces the number of bars of that tier required to craft the armor
+					'''
+				}
+
+				PickaxeRequiredForNextOreTier: {
+					Label: Require Previous Tier Pickaxe For Ores
+					Tooltip:
+					'''
+					Makes Silver-tier and Gold-tier ores require the previous pickaxe to mine
+					'''
+				}
+			}
+		}
+
+		Config.ItemHeader: Xenon Client Config
 	}
 }
