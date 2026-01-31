@@ -16,12 +16,13 @@ namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Firing
         public override void SetDefaults()
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<SandballTrap>());
+            Item.mech = true;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<QuicksandBlock>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<QuicksandBlock>(), 5);
             recipe.AddIngredient(ItemID.DartTrap, 1);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();

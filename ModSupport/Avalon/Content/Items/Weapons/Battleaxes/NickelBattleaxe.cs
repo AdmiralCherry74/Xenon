@@ -7,8 +7,13 @@ using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.ModSupport.Avalon.Content.Items.Weapons.Battleaxes;
 
+[ExtendsFromMod("Avalon")]
 public class NickelBattleaxe : ModItem
 {
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
     public override void SetDefaults()
     {
         Item.width = 34;

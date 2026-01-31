@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -76,14 +77,8 @@ internal class XenonGlobalNPC : GlobalNPC
         }
         if (spawnInfo.Player.InModBiome<CrimsonJungle>())
         {
-            pool.Clear();
             pool.Add(ModContent.NPCType<CrimfiedHornet>(), 1.5f);
             pool.Add(ModContent.NPCType<NeuroticManEater>(), 0.5f);
-            pool.Add(NPCID.FaceMonster, 0.75f);
-            pool.Add(NPCID.Crimera, 1);
-            pool.Add(NPCID.LittleCrimera, 1);
-            pool.Add(NPCID.BigCrimera, 1);
-            pool.Add(NPCID.BloodCrawler, 0.50f);
             if (NPC.downedBoss1)
             {
                 pool.Add(ModContent.NPCType<CrimsonCultist>(), 0.25f);
@@ -96,13 +91,8 @@ internal class XenonGlobalNPC : GlobalNPC
         }
         if (spawnInfo.Player.InModBiome<CorruptionJungle>())
         {
-            pool.Clear();
             pool.Add(ModContent.NPCType<CorruptHornet>(), 1.5f);
             pool.Add(ModContent.NPCType<SinfulManEater>(), 0.5f);
-            pool.Add(NPCID.EaterofSouls, 1f);
-            pool.Add(NPCID.LittleEater, 1f);
-            pool.Add(NPCID.BigEater, 1f);
-            pool.Add(NPCID.DevourerHead, 0.50f);
             if (NPC.downedBoss1)
             {
                 pool.Add(ModContent.NPCType<CorruptCultist>(), 0.25f);
@@ -119,11 +109,39 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Clear();
             pool.Add(ModContent.NPCType<TempleSentry>(), 1);
         }
-        if (spawnInfo.Player.ZoneDungeon && NPC.downedBoss3)
+        if (spawnInfo.Player.ZoneDungeon && NPC.downedBoss3) //It made no sense for all of the skeletons to not be in the dungeon. so i added them, I also added the sawblades
         {
-            pool.Add(ModContent.NPCType<SmallSawblade>(), 0.75f);
-            pool.Add(ModContent.NPCType<Sawblade>(), 0.50f);
-            pool.Add(ModContent.NPCType<LargeSawblade>(), 0.25f);
+            //Normal Skeleton
+            pool.Add(NPCID.SmallSkeleton, 0.05f);
+            pool.Add(NPCID.Skeleton, 0.05f);
+            pool.Add(NPCID.BigSkeleton, 0.05f);
+            pool.Add(NPCID.SmallHeadacheSkeleton, 0.05f);
+            pool.Add(NPCID.HeadacheSkeleton, 0.05f);
+            pool.Add(NPCID.BigHeadacheSkeleton, 0.05f);
+            pool.Add(NPCID.SmallMisassembledSkeleton, 0.05f);
+            pool.Add(NPCID.MisassembledSkeleton, 0.05f);
+            pool.Add(NPCID.BigMisassembledSkeleton, 0.05f);
+            pool.Add(NPCID.SmallPantlessSkeleton, 0.05f);
+            pool.Add(NPCID.PantlessSkeleton, 0.05f);
+            pool.Add(NPCID.BigPantlessSkeleton, 0.05f);
+
+            if (Main.expertMode)
+            {
+                pool.Add(NPCID.BoneThrowingSkeleton, 0.025f);
+                pool.Add(NPCID.BoneThrowingSkeleton2, 0.025f);
+                pool.Add(NPCID.BoneThrowingSkeleton3, 0.025f);
+            }
+
+            //Varients
+            pool.Add(NPCID.GreekSkeleton, 0.015f);
+            pool.Add(NPCID.Tim, 0.005f);
+
+            if (DateTime.Now.Month == 10)
+            {
+                pool.Add(NPCID.SkeletonAstonaut, 0.025f);
+                pool.Add(NPCID.SkeletonTopHat, 0.025f);
+                pool.Add(NPCID.SkeletonAlien, 0.025f);
+            }
         }
         if (spawnInfo.Player.ZoneRockLayerHeight)
         {

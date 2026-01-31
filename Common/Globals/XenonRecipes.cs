@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
+using Xenon.Content.Items.Tools.MiningPickaxes;
 
 namespace Xenon.Common.Globals
 {
@@ -12,6 +13,7 @@ namespace Xenon.Common.Globals
     {
         public override void AddRecipeGroups()
         {
+            //Beginning of Armor recipe groups
             //Beginning of Wooden Armor recipe groups
             RecipeGroup WoodenHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodHelmet)}", ItemID.WoodHelmet, ItemID.PalmWoodHelmet, ItemID.BorealWoodHelmet, ItemID.RichMahoganyHelmet, ItemID.CactusHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodHelmet), WoodenHelmet);
@@ -95,11 +97,42 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowGreaves), ShadowGreaves);
             //Evil Greaves recipe group
             //End of Evil ore Armor recipe groups
+            //End of Armor recipe groups
+
+            //Beginning of Pickaxe recipe groups
+            //Beginning of Tier 1 Pickaxe recipe groups
+            RecipeGroup CopperPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperPickaxe)}", ItemID.CopperPickaxe, ItemID.TinPickaxe);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CopperPickaxe), CopperPickaxe);
+            //Tier 1 Pickaxe recipe group
+
+            //Beginning of Tier 2 Pickaxe recipe groups
+            RecipeGroup IronPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronPickaxe)}", ItemID.IronPickaxe, ItemID.LeadPickaxe);
+            RecipeGroup.RegisterGroup(nameof(ItemID.IronPickaxe), IronPickaxe);
+            //Tier 2 Pickaxe recipe group
+
+            //Beginning of Tier 3 Pickaxe recipe groups
+            RecipeGroup SilverPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverPickaxe)}", ItemID.SilverPickaxe, ItemID.TungstenPickaxe);
+            RecipeGroup.RegisterGroup(nameof(ItemID.SilverPickaxe), SilverPickaxe);
+            //Tier 3 Pickaxe recipe group
+
+            //Beginning of Tier 4 Pickaxe recipe groups
+            RecipeGroup GoldPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldPickaxe)}", ItemID.GoldPickaxe, ItemID.PlatinumPickaxe);
+            RecipeGroup.RegisterGroup(nameof(ItemID.GoldPickaxe), GoldPickaxe);
+            //Tier 4 Pickaxe recipe group
+
+            //Beginning of Evil Tier Pickaxe recipe groups
+            RecipeGroup NightmarePickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.NightmarePickaxe)}", ItemID.NightmarePickaxe, ItemID.DeathbringerPickaxe, (ModContent.ItemType<IngestedPickaxe>()));
+            RecipeGroup.RegisterGroup(nameof(ItemID.NightmarePickaxe), NightmarePickaxe);
+            //Evil Tier Pickaxe recipe group
+            //End of Pickaxe recipe groups
+
+
         }
         public override void PostAddRecipes()
         {
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
+                //Beginning of armor recipe changes
                 //Beginning of Copper armor recipe changes
                 Recipe CopperHelmetCraft = Main.recipe[i];
                 if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
@@ -462,8 +495,100 @@ namespace Xenon.Common.Globals
                 }
                 //Molten Greaves recipe
                 //End of Molten armor recipe changes
+                //End of armor recipe changes
 
-                //Just gonna wait until the hardmode update to further update the armor recipes
+                //Beginning of Pickaxe recipe changes
+                Recipe IronPickaxeCraft = Main.recipe[i];
+                if (IronPickaxeCraft.HasIngredient(ItemID.IronBar) && IronPickaxeCraft.HasTile(TileID.Anvils) && IronPickaxeCraft.HasResult(ItemID.IronPickaxe))
+                {
+                    IronPickaxeCraft.AddRecipeGroup("CopperPickaxe");
+                    IronPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                }
+                //Iron Pickaxe Recipe
+
+                Recipe LeadPickaxeCraft = Main.recipe[i];
+                if (LeadPickaxeCraft.HasIngredient(ItemID.LeadBar) && LeadPickaxeCraft.HasTile(TileID.Anvils) && LeadPickaxeCraft.HasResult(ItemID.LeadPickaxe))
+                {
+                    LeadPickaxeCraft.AddRecipeGroup("CopperPickaxe");
+                    LeadPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                }
+                //Lead Pickaxe Recipe
+
+                Recipe SilverPickaxeCraft = Main.recipe[i];
+                if (SilverPickaxeCraft.HasIngredient(ItemID.SilverBar) && SilverPickaxeCraft.HasTile(TileID.Anvils) && SilverPickaxeCraft.HasResult(ItemID.SilverPickaxe))
+                {
+                    SilverPickaxeCraft.AddRecipeGroup("IronPickaxe");
+                    SilverPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    if (SilverPickaxeCraft.TryGetIngredient(ItemID.SilverBar, out Item ingredient))
+                    {
+                        ingredient.stack -= 2;
+                    }
+                }
+                //Silver Pickaxe Recipe
+
+                Recipe TungstenPickaxeCraft = Main.recipe[i];
+                if (TungstenPickaxeCraft.HasIngredient(ItemID.TungstenBar) && TungstenPickaxeCraft.HasTile(TileID.Anvils) && TungstenPickaxeCraft.HasResult(ItemID.TungstenPickaxe))
+                {
+                    TungstenPickaxeCraft.AddRecipeGroup("IronPickaxe");
+                    TungstenPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    if (TungstenPickaxeCraft.TryGetIngredient(ItemID.TungstenBar, out Item ingredient))
+                    {
+                        ingredient.stack -= 2;
+                    }
+                }
+                //Tungsten Pickaxe Recipe
+
+                Recipe GoldPickaxeCraft = Main.recipe[i];
+                if (GoldPickaxeCraft.HasIngredient(ItemID.GoldBar) && GoldPickaxeCraft.HasTile(TileID.Anvils) && GoldPickaxeCraft.HasResult(ItemID.GoldPickaxe))
+                {
+                    GoldPickaxeCraft.AddRecipeGroup("SilverPickaxe");
+                    GoldPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    if (GoldPickaxeCraft.TryGetIngredient(ItemID.GoldBar, out Item ingredient))
+                    {
+                        ingredient.stack -= 2;
+                    }
+                }
+                //Gold Pickaxe Recipe
+
+                Recipe PlatinumPickaxeCraft = Main.recipe[i];
+                if (PlatinumPickaxeCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumPickaxeCraft.HasTile(TileID.Anvils) && PlatinumPickaxeCraft.HasResult(ItemID.PlatinumPickaxe))
+                {
+                    PlatinumPickaxeCraft.AddRecipeGroup("SilverPickaxe");
+                    PlatinumPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    if (PlatinumPickaxeCraft.TryGetIngredient(ItemID.PlatinumBar, out Item ingredient))
+                    {
+                        ingredient.stack -= 2;
+                    }
+                }
+                //Platinum Pickaxe Recipe
+
+                Recipe NightmarePickaxeCraft = Main.recipe[i];
+                if (NightmarePickaxeCraft.HasIngredient(ItemID.DemoniteBar) && NightmarePickaxeCraft.HasTile(TileID.Anvils) && NightmarePickaxeCraft.HasResult(ItemID.NightmarePickaxe))
+                {
+                    NightmarePickaxeCraft.AddRecipeGroup("GoldPickaxe");
+                }
+                //Nightmare Pickaxe Recipe
+
+                Recipe DeathbringerPickaxeCraft = Main.recipe[i];
+                if (DeathbringerPickaxeCraft.HasIngredient(ItemID.CrimtaneBar) && DeathbringerPickaxeCraft.HasTile(TileID.Anvils) && DeathbringerPickaxeCraft.HasResult(ItemID.DeathbringerPickaxe))
+                {
+                    DeathbringerPickaxeCraft.AddRecipeGroup("GoldPickaxe");
+                }
+                //Deathrbinger Pickaxe Recipe
+
+                Recipe MoltenPickaxeCraft = Main.recipe[i];
+                if (MoltenPickaxeCraft.HasIngredient(ItemID.HellstoneBar) && MoltenPickaxeCraft.HasTile(TileID.Anvils) && MoltenPickaxeCraft.HasResult(ItemID.MoltenPickaxe))
+                {
+                    MoltenPickaxeCraft.AddRecipeGroup("NightmarePickaxe");
+                    if (MoltenPickaxeCraft.TryGetIngredient(ItemID.HellstoneBar, out Item ingredient))
+                    {
+                        ingredient.stack -= 5;
+                    }
+                }
+                //Molten Pickaxe Recipe
+                //End of Pickaxe recipe changes
+
+                //Just gonna wait until the hardmode update to further update the recipes
             }
         }
     }

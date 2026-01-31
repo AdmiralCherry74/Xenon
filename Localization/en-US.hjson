@@ -1501,7 +1501,7 @@ Mods: {
 			}
 
 			BlackPhaseblade: {
-				DisplayName: Black Phaseblade
+				DisplayName: Charcoal Phaseblade
 				Tooltip: ""
 			}
 
@@ -1640,6 +1640,36 @@ Mods: {
 			SandballTrapItem: {
 				DisplayName: Sandball Trap
 				Tooltip: When powered it flings quicksand
+			}
+
+			XenonMossparkBlock: {
+				DisplayName: Xenon Mosspark Block
+				Tooltip: Life could be a dream (sh-boom)
+			}
+
+			NeonMossparkBlock: {
+				DisplayName: Neon Mosspark Block
+				Tooltip: Life could be a dream (sh-boom)
+			}
+
+			ArgonMossparkBlock: {
+				DisplayName: Argon Mosspark Block
+				Tooltip: Life could be a dream (sh-boom)
+			}
+
+			KryptonMossparkBlock: {
+				DisplayName: Krypton Mosspark Block
+				Tooltip: Life could be a dream (sh-boom)
+			}
+
+			LavaMossparkBlock: {
+				DisplayName: Lava Mosspark Block
+				Tooltip: Life could be a dream (sh-boom)
+			}
+
+			HeliumMossparkBlock: {
+				DisplayName: Helium Mosspark Block
+				Tooltip: ""
 			}
 		}
 

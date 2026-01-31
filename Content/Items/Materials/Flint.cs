@@ -10,6 +10,6 @@ public class Flint : ModItem
     {
         Item.ResearchUnlockCount = 100;
         Item.value = Item.buyPrice(copper: 5);
-        Item.rare = ItemRarityID.Blue;
+        Item.rare = ItemRarityID.Expert;
     }
 }
