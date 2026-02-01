@@ -38,3 +38,20 @@ internal class PickPower : ModHook
 		return num;
 	}
 }
+internal class PickPower2 : ModHook
+{
+	protected override void Apply()
+	{
+		On_Player.GetPickaxeDamage += On_Player_GetPickaxeDamage;
+	}
+
+	private int On_Player_GetPickaxeDamage(On_Player.orig_GetPickaxeDamage orig, Player self, int x, int y, int pickPower, int hitBufferIndex, Tile tileTarget)
+	{
+		int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
+		if (Main.tileDungeon[tileTarget.TileType] && pickPower < 75)
+		{
+			num = 0;
+		}	
+		return num;
+	}
+}

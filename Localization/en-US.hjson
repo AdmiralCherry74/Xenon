@@ -2042,7 +2042,7 @@ Mods: {
 					Label: Require Previous Tier Pickaxe For Ores
 					Tooltip:
 					'''
-					Makes Silver-tier and Gold-tier ores require the previous pickaxe to mine
+					Makes Silver-tier and Gold-tier ores require the previous tier pickaxe to mine
 					'''
 				}
 			}
