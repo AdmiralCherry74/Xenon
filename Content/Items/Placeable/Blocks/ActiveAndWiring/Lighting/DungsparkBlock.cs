@@ -5,7 +5,7 @@ using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting
 {
-    public class OnyxGemsparkBlock : ModItem
+    public class DungsparkBlock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -14,12 +14,12 @@ namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.ActiveAndWiring.Lighting.OnyxGemsparkBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.ActiveAndWiring.Lighting.DungsparkBlock>());
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe(20);
-            recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
+            recipe.AddIngredient(ItemID.PoopBlock, 1);
             recipe.AddIngredient(ItemID.Glass, 20);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
