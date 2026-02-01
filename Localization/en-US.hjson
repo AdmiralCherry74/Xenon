@@ -1671,6 +1671,16 @@ Mods: {
 				DisplayName: Helium Mosspark Block
 				Tooltip: Life could be a dream (sh-boom)
 			}
+
+			DungsparkBlock: {
+				DisplayName: Dungspark Block
+				Tooltip: Wow... what a stinky light source
+			}
+
+			DirtPickaxe: {
+				DisplayName: Dirt Pickaxe
+				Tooltip: poop lel
+			}
 		}
 
 		NPCs: {
@@ -2029,25 +2039,31 @@ Mods: {
 			XenonConfig: {
 				DisplayName: Xenon Config
 
-				RequirePreviousArmorsForNextArmor: {
-					Label: Armor Crafting Tweak
+				RequirePreviousOreTierForNext: {
+					Label: Require Previous Ore Tier For Next
 					Tooltip:
-					'''
-					Makes each armor tier require the previous tier to craft
-					Also reduces the number of bars of that tier required to craft the armor
-					'''
+						'''
+						Makes each Ore Armor, Weapons, and Most Tools tier require the previous tier to craft
+						Also reduces the number of bars of that tier required to craft the next item.
+						By default: Off
+						'''
 				}
 
 				PickaxeRequiredForNextOreTier: {
-					Label: Require Previous Tier Pickaxe For Ores
+					Label: Pickaxe Required For Next Ore Tier
 					Tooltip:
 					'''
 					Makes Silver-tier and Gold-tier ores require the previous tier pickaxe to mine
 					'''
+						'''
+						Makes Silver-tier require Iron-tier pickaxes or above to mine
+						Makes Gold-tier ores require Silver-tier pickaxes or above to mine
+						By default: On
+						'''
 				}
 			}
 		}
 
-		Config.ItemHeader: Xenon Client Config
+		Config.ItemHeader: Require Previous Ore Tier For Next Header
 	}
 }

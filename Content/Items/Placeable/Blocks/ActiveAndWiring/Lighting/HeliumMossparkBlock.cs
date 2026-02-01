@@ -31,7 +31,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting
         }
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
+            Recipe recipe = CreateRecipe(20);
             recipe.AddIngredient(ItemID.RainbowMoss);
             recipe.AddIngredient(ItemID.Glass, 20);
             recipe.AddTile(TileID.WorkBenches);
