@@ -7,6 +7,6 @@ public class Frigeration : ModBuff
 {
     public override void Update(Player player, ref int buffIndex)
     {
-        player.GetModPlayer<XenonPlayer>().HotDamageResist = true;
+        player.GetModPlayer<XenonPlayer>().HotDamageResistPotion = true;
     }
 }

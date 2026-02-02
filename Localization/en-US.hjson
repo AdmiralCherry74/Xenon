@@ -1730,6 +1730,34 @@ Mods: {
 					7 minute 30 second duration
 					'''
 			}
+
+			DeathforcePotion: {
+				DisplayName: Deathforce Potion
+				Tooltip:
+					'''
+					Decreases life by 20%
+					8 minute duration
+					'Best used for splash potions'
+					'''
+			}
+
+			DeathforceSplashPotion: {
+				DisplayName: Deathforce Splash Potion
+				Tooltip:
+					'''
+					Decreases life by 20%
+					4 minute duration
+					'''
+			}
+
+			LifeforceSplashPotion: {
+				DisplayName: Lifeforce Splash Potion
+				Tooltip:
+					'''
+					Increases life by 20%
+					4 minute duration
+					'''
+			}
 		}
 
 		NPCs: {
@@ -1985,6 +2013,8 @@ Mods: {
 			LapisGemball.DisplayName: Lapis Gemball
 			AntiMaterialRound.DisplayName: Anti Material Round
 			AntiMaterialRoundProj.DisplayName: Anti Material Round
+			DeathforceSplashPotionProj.DisplayName: Deathforce Splash Potion
+			LifeforceSplashPotionProj.DisplayName: Lifeforce Splash Potion
 		}
 
 		Buffs: {
@@ -2086,6 +2116,11 @@ Mods: {
 			Frigeration: {
 				DisplayName: Refrigeration
 				Description: Reduces damage from hot sources
+			}
+
+			Deathforce: {
+				DisplayName: Deathforce
+				Description: Decreases life by 20%
 			}
 		}
 
