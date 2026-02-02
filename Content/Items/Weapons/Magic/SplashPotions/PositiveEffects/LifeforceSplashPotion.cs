@@ -25,6 +25,7 @@ public class LifeforceSplashPotion : ModItem
         Item.useTime = 40;
         Item.useStyle = ItemUseStyleID.Swing;
         Item.noMelee = true;
+        Item.noUseGraphic = true;
 
         Item.damage = 30;
         Item.DamageType = DamageClass.Magic;
@@ -51,6 +52,7 @@ public class LifeforceSplashPotion : ModItem
         .AddIngredient(ItemID.Moonglow)
         .AddIngredient(ItemID.Shiverthorn)
         .AddIngredient(ItemID.Waterleaf)
+        .AddIngredient(ModContent.ItemType<Flint>())
         .AddIngredient(ItemID.BottledWater)
         .AddTile(TileID.Bottles)
         .Register();

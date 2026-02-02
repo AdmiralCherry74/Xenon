@@ -4,9 +4,10 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.GlugGlugs;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj;
+using Xenon.Content.Projectiles.Magic.SplashPotionProj.PositiveEffectsProj;
 
-namespace Xenon.Content.Items.Weapons.Magic.SplashPotions.NegativeEffects;
-public class DeathforceSplashPotion : ModItem
+namespace Xenon.Content.Items.Weapons.Magic.SplashPotions.PositiveEffects;
+public class AmmoReservationSplashPotion : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -31,7 +32,7 @@ public class DeathforceSplashPotion : ModItem
         Item.shootSpeed = 6f;
         Item.knockBack = 0.35f;
         Item.crit = -2147483646; //Splash potions wont crit, thats intended
-        Item.shoot = ModContent.ProjectileType<DeathforceSplashPotionProj>();
+        Item.shoot = ModContent.ProjectileType<AmmoReserveSplashPotionProj>();
         Item.consumable = true;
 
         Item.value = 1000;
@@ -41,16 +42,14 @@ public class DeathforceSplashPotion : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(3)
-        .AddIngredient(ModContent.ItemType<DeathforcePotion>())
+        .AddIngredient(ItemID.AmmoReservationPotion)
         .AddIngredient(ModContent.ItemType<Flint>())
         .AddTile(TileID.Bottles)
         .Register();
 
         CreateRecipe(3)
-        .AddRecipeGroup("Ebonkoi", 1)
+        .AddIngredient(ItemID.DoubleCod)
         .AddIngredient(ItemID.Moonglow)
-        .AddIngredient(ItemID.Shiverthorn)
-        .AddIngredient(ItemID.Waterleaf)
         .AddIngredient(ItemID.BottledWater)
         .AddIngredient(ModContent.ItemType<Flint>())
         .AddTile(TileID.Bottles)

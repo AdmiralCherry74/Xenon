@@ -1745,6 +1745,66 @@ Mods: {
 				DisplayName: Lifeforce Splash Potion
 				Tooltip: Increases life by 20%
 			}
+
+			AmmoReservationSplashPotion: {
+				DisplayName: Ammo Reservation Splash Potion
+				Tooltip: 20% chance to save ammo
+			}
+
+			ArcherySplashPotion: {
+				DisplayName: Archery Splash Potion
+				Tooltip: 10% increased bow damage and 20% increased arrow speed
+			}
+
+			BattleSplashPotion: {
+				DisplayName: Battle Splash Potion
+				Tooltip: Increases enemy spawn rate
+			}
+
+			BiomeSightSplashPotion: {
+				DisplayName: Biome Sight Splash Potion
+				Tooltip: Shows the location of infected blocks
+			}
+
+			BuilderSplashPotion: {
+				DisplayName: Builder Splash Potion
+				Tooltip: Increases placement speed and range
+			}
+
+			CalmingSplashPotion: {
+				DisplayName: Calming Splash Potion
+				Tooltip: Decreases enemy spawn rate
+			}
+
+			CrateSplashPotion: {
+				DisplayName: Crate Splash Potion
+				Tooltip: Increases chance to get a crate
+			}
+
+			DangersenseSplashPotion: {
+				DisplayName: Dangersense Splash Potion
+				Tooltip: Allows you to see nearby danger sources
+			}
+
+			EnduranceSplashPotion: {
+				DisplayName: Endurance Splash Potion
+				Tooltip: Reduces damage taken by 10%
+			}
+
+			FeatherfallSplashPotion: {
+				DisplayName: Featherfall Splash Potion
+				Tooltip: Slows falling speed
+			}
+
+			FishingSplashPotion: {
+				DisplayName: Fishing Splash Potion
+				Tooltip: Increases fishing power by 15
+			}
+
+			FlipperSplashPotion: {
+				DisplayName: Flipper Splash Potion
+				Tooltip: Lets you move swiftly in liquids
+			}
 		}
 
 		NPCs: {
@@ -2002,6 +2062,18 @@ Mods: {
 			AntiMaterialRoundProj.DisplayName: Anti Material Round
 			DeathforceSplashPotionProj.DisplayName: Deathforce Splash Potion
 			LifeforceSplashPotionProj.DisplayName: Lifeforce Splash Potion
+			AmmoReserveSplashPotionProj.DisplayName: Ammo Reservation Splash Potion
+			ArcherySplashPotionProj.DisplayName: Archery Splash Potion
+			BattleSplashPotionProj.DisplayName: Battle Splash Potion
+			BiomeSightSplashPotionProj.DisplayName: Biome Sight Splash Potion
+			BuilderSplashPotionProj.DisplayName: Builder Splash Potion
+			CalmingSplashPotionProj.DisplayName: Calming Splash Potion
+			CrateSplashPotionProj.DisplayName: Crate Splash Potion
+			DangersenseSplashPotionProj.DisplayName: Dangersense Splash Potion
+			EnduranceSplashPotionProj.DisplayName: Endurance Splash Potion
+			FeatherfallSplashPotionProj.DisplayName: Featherfall Splash Potion
+			FishingSplashPotionProj.DisplayName: Fishing Splash Potion
+			FlipperSplashPotionProj.DisplayName: Flipper Splash Potion
 		}
 
 		Buffs: {

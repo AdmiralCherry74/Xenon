@@ -11,7 +11,7 @@ namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.PositiveEffectsProj
 
         public override void SetDefaults()
         {
-            Projectile.width = 20;
+            Projectile.width = 24;
             Projectile.height = 24;
 
             Projectile.friendly = true;

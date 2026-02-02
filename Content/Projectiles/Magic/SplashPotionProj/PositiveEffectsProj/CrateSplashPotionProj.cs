@@ -3,11 +3,10 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs;
 
-namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
+namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.PositiveEffectsProj
 {
-    public class DeathforceSplashPotionProj : ModProjectile
+    public class CrateSplashPotionProj : ModProjectile
     {
 
         public override void SetDefaults()
@@ -40,7 +39,7 @@ namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
         }
         public override void PostAI()
         {
-            Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Adamantite, default, 1);
+            Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Copper, default, 1);
             d.noGravity = true;
             d.fadeIn = 1f;
             d.velocity *= 0.25f;
@@ -50,21 +49,21 @@ namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
         {
             for (int i = 0; i < 10; i++)
             {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Adamantite, default, 1);
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Copper, default, 1);
                 d.noGravity = true;
                 d.fadeIn = 1.3f;
             }
-            target.AddBuff(ModContent.BuffType<Deathforce>(), 14400);
+            target.AddBuff(BuffID.Crate, 7200);
         }
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             for (int i = 0; i < 10; i++)
             {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Adamantite, default, 1);
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Copper, default, 1);
                 d.noGravity = true;
                 d.fadeIn = 1.3f;
             }
-            target.AddBuff(ModContent.BuffType<Deathforce>(), 14400);
+            target.AddBuff(BuffID.Crate, 7500);
         }
 
         public override void OnKill(int timeLeft)
@@ -72,7 +71,7 @@ namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
             SoundEngine.PlaySound(SoundID.Shatter, Projectile.position);
             for (int i = 0; i < 5; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Adamantite);
+                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Copper);
                 dust.noGravity = true;
                 dust.velocity *= 1.5f;
                 dust.scale *= 0.9f;
