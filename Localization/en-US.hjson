@@ -1723,7 +1723,7 @@ Mods: {
 			}
 
 			FrigerationPotion: {
-				DisplayName: Frigeration Potion
+				DisplayName: Refrigeration Potion
 				Tooltip:
 					'''
 					Reduces damage from hot sources
@@ -1819,7 +1819,7 @@ Mods: {
 			GastricAltar.MapEntry: Gastric Altar
 			CorrosionCrateTile.MapEntry: Corrosion Crate
 			CopperFurnaceTile.MapEntry: Copper Furnace
-			SandballTrap.MapEntry: SandballTrap
+			SandballTrap.MapEntry: Sandball Trap
 		}
 
 		Bestiary: {
@@ -1861,7 +1861,7 @@ Mods: {
 			CorrodedHornet: A hornet that has been corroded. Its poison is extra potent thanks to the acidic bile.
 			SinfulManEater: This eats the man who sins...
 			NeuroticManEater: Brains are the most nutritious to them...
-			StarvedManEater: The feeling of hunger overwhelm them...
+			StarvedManEater: The feeling of hunger overwhelms them...
 		}
 
 		Biomes: {
@@ -2059,7 +2059,7 @@ Mods: {
 			}
 
 			BunnyMinionBuff: {
-				DisplayName: Armoured Bunny
+				DisplayName: Armored Bunny
 				Description: The armored bunny will fight for you
 			}
 
@@ -2084,7 +2084,7 @@ Mods: {
 			}
 
 			Frigeration: {
-				DisplayName: Frigeration
+				DisplayName: Refrigeration
 				Description: Reduces damage from hot sources
 			}
 		}
