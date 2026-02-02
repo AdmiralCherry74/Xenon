@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
+using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
@@ -213,6 +214,12 @@ namespace Xenon.Common.Globals
             //Tier Evil Bow recipe group
             #endregion region
             //End of Bow recipe groups
+
+            #region Material recipe groups
+            RecipeGroup EvilFish = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.Ebonkoi)}", ItemID.Ebonkoi, ItemID.Hemopiranha, (ModContent.ItemType<Corrodoras>()));
+            RecipeGroup.RegisterGroup(nameof(ItemID.Ebonkoi), EvilFish);
+            //Evil Fish recipe group
+            #endregion region
         }
         public override void PostAddRecipes()
         {

@@ -14,7 +14,6 @@ namespace Xenon.Content.Buffs.Debuffs
         {
             Main.debuff[Type] = true;  // Is it a debuff?
             Main.pvpBuff[Type] = true; // Players can give other players buffs, which are listed as pvpBuff
-            Main.buffNoSave[Type] = true; // Causes this buff not to persist when exiting and rejoining the world
         }
 
         // Allows you to make this buff give certain effects to the given player

@@ -24,12 +24,14 @@ public class XenonPlayer : ModPlayer
     public bool FossilBlessingActive;
     public Vector2[] playerOldVelocity = new Vector2[3];
     public bool GroundPoundActivated;
-    public bool HotDamageResist;
+    public bool HotDamageResistShield;
+    public bool HotDamageResistPotion;
 
     public override void ResetEffects()
     {
         FossilBlessing = false;
-        HotDamageResist = false;
+        HotDamageResistShield = false;
+        HotDamageResistPotion = false;
     }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
     {
@@ -279,7 +281,7 @@ public class XenonPlayer : ModPlayer
     }
     public override void ModifyHitByNPC(NPC npc, ref Player.HurtModifiers modifiers)
     {
-        if (HotDamageResist)
+        if (HotDamageResistPotion) //Fridge Potion
         {
             int dmgPlaceholder = npc.damage;
             if (Common.Data.NPCSets.NPCFireDamage[npc.type])
@@ -287,15 +289,31 @@ public class XenonPlayer : ModPlayer
                 modifiers.IncomingDamageMultiplier *= 0.7f;
             }
         }
+        if (HotDamageResistShield)  //Bone Serpent Coccyx
+        {
+            int dmgPlaceholder = npc.damage;
+            if (Common.Data.NPCSets.NPCFireDamage[npc.type])
+            {
+                modifiers.IncomingDamageMultiplier *= 0.8f;
+            }
+        }
     }
     public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
     {
-        if (HotDamageResist)
+        if (HotDamageResistPotion) //Fridge potion
         {
             int dmgPlaceholder = proj.damage;
             if (Common.Data.ProjectileSets.ProjFireDamage[proj.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.7f;
+            }
+        }
+        if (HotDamageResistShield) //Bone Serpent Coccyx
+        {
+            int dmgPlaceholder = proj.damage;
+            if (Common.Data.ProjectileSets.ProjFireDamage[proj.type])
+            {
+                modifiers.IncomingDamageMultiplier *= 0.8f;
             }
         }
     }

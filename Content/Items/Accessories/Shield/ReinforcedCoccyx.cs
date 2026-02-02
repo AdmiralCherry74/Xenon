@@ -21,7 +21,7 @@ public class ReinforcedCoccyx : ModItem
 	}
 	public override void UpdateAccessory(Player player, bool hideVisual)
 	{
-		player.GetModPlayer<XenonPlayer>().HotDamageResist = true;
+		player.GetModPlayer<XenonPlayer>().HotDamageResistShield = true;
 	}
     public override void AddRecipes()
     {
