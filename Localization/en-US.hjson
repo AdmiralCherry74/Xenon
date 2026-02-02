@@ -1724,11 +1724,7 @@ Mods: {
 
 			FrigerationPotion: {
 				DisplayName: Refrigeration Potion
-				Tooltip:
-					'''
-					Reduces damage from hot sources
-					7 minute 30 second duration
-					'''
+				Tooltip: Reduces damage from hot sources
 			}
 
 			DeathforcePotion: {
@@ -1736,27 +1732,18 @@ Mods: {
 				Tooltip:
 					'''
 					Decreases life by 20%
-					8 minute duration
 					'Best used for splash potions'
 					'''
 			}
 
 			DeathforceSplashPotion: {
 				DisplayName: Deathforce Splash Potion
-				Tooltip:
-					'''
-					Decreases life by 20%
-					4 minute duration
-					'''
+				Tooltip: Decreases life by 20%
 			}
 
 			LifeforceSplashPotion: {
 				DisplayName: Lifeforce Splash Potion
-				Tooltip:
-					'''
-					Increases life by 20%
-					4 minute duration
-					'''
+				Tooltip: Increases life by 20%
 			}
 		}
 
