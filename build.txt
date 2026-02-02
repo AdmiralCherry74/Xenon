@@ -1,4 +1,4 @@
-displayName = Xenon Alpha January Build
-author = SeleneTheHoundGal
-version = 0.1.4.1
+displayName = Xenon Alpha Febuary Build
+author = AdmiralCherry74
+version = 0.1.4.2
 weakReferences = AltLibrary@2.1.0.7,Avalon,TheConfectionRebirth

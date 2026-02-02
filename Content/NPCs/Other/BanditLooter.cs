@@ -575,7 +575,7 @@ namespace Xenon.Content.NPCs.Other
 
             {
                 {
-                    return SpawnCondition.Cavern.Chance * 0.05f;
+                    return SpawnCondition.Cavern.Chance * 0.005f;
 
                 }
             }

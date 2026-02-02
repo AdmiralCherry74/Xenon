@@ -73,7 +73,7 @@ namespace Xenon.Content.NPCs.Other
 
                 {
                     {
-                    return SpawnCondition.Overworld.Chance * 0.05f;
+                    return SpawnCondition.Overworld.Chance * 0.005f;
 
                     }
             }

@@ -2,8 +2,9 @@
 using Terraria;
 using Terraria.ID;
 
-namespace Xenon.Content.Items.Accessories;
+namespace Xenon.Content.Items.Accessories.Shield;
 
+//[AutoloadEquip(EquipType.Shield)]
 public class BiliaryShield : ModItem
 {
 	public override void SetDefaults()

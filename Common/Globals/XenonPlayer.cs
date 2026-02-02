@@ -1,17 +1,20 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon;
+using Avalon.Buffs.Debuffs;
+using Microsoft.Xna.Framework;
 using System;
+using System.Security.Cryptography.X509Certificates;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Consumables;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Buffs.Other;
+using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Fish.Quest;
 using Xenon.Content.Items.Fish.Valuable;
-using Xenon.Content.Buffs.Debuffs.Counterable;
 
 namespace Xenon.Common.Globals;
 
@@ -21,11 +24,13 @@ public class XenonPlayer : ModPlayer
     public bool FossilBlessingActive;
     public Vector2[] playerOldVelocity = new Vector2[3];
     public bool GroundPoundActivated;
+    public bool HotDamageResist;
 
     public override void ResetEffects()
     {
         FossilBlessing = false;
-	}
+        HotDamageResist = false;
+    }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
     {
         int bait = attempt.playerFishingConditions.BaitItemType;
@@ -208,68 +213,90 @@ public class XenonPlayer : ModPlayer
 		if (SpecialUtilities.SubmergedInQuicksandTiles(Player.position))
 		{
 			Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
-		}
-	}
-	public void QuicksandMovement()
-	{
-		if (Player.shimmering)
-			return;
+        }
+    }
+    public void QuicksandMovement()
+    {
+        if (Player.shimmering)
+            return;
 
-		bool mounted = false;
-		if (Player.mount.Type > MountID.Rudolph && MountID.Sets.Cart[Player.mount.Type] && Math.Abs(Player.velocity.X) > 5f)
-			mounted = true;
+        bool mounted = false;
+        if (Player.mount.Type > MountID.Rudolph && MountID.Sets.Cart[Player.mount.Type] && Math.Abs(Player.velocity.X) > 5f)
+            mounted = true;
 
-		Vector2 vector = SpecialUtilities.QuicksandTiles(Player.position, Player.velocity, Player.width, Player.height);
-		if (vector.Y != -1f && vector.X != -1f)
-		{
-			int num3 = (int)vector.X;
-			int num4 = (int)vector.Y;
-			int type = Main.tile[num3, num4].TileType;
+        Vector2 vector = SpecialUtilities.QuicksandTiles(Player.position, Player.velocity, Player.width, Player.height);
+        if (vector.Y != -1f && vector.X != -1f)
+        {
+            int num3 = (int)vector.X;
+            int num4 = (int)vector.Y;
+            int type = Main.tile[num3, num4].TileType;
 
-			if (mounted)
-				return;
+            if (mounted)
+                return;
 
-			Player.fallStart = (int)(Player.position.Y / 16f);
-			if (type != 229)
-				Player.jump = 0;
+            Player.fallStart = (int)(Player.position.Y / 16f);
+            if (type != 229)
+                Player.jump = 0;
 
-			if (Player.velocity.X > 1f)
-				Player.velocity.X = 1f;
+            if (Player.velocity.X > 1f)
+                Player.velocity.X = 1f;
 
-			if (Player.velocity.X < -1f)
-				Player.velocity.X = -1f;
+            if (Player.velocity.X < -1f)
+                Player.velocity.X = -1f;
 
-			if (Player.velocity.X > 0.75f || Player.velocity.X < -0.75f)
-				Player.velocity.X *= 0.95f;
-			else
-				Player.velocity.X *= 0.9f;
+            if (Player.velocity.X > 0.75f || Player.velocity.X < -0.75f)
+                Player.velocity.X *= 0.95f;
+            else
+                Player.velocity.X *= 0.9f;
 
-			if (Player.gravDir == -1f)
-			{
-				if (Player.velocity.Y < -1f)
-					Player.velocity.Y = -1f;
+            if (Player.gravDir == -1f)
+            {
+                if (Player.velocity.Y < -1f)
+                    Player.velocity.Y = -1f;
 
-				if (Player.velocity.Y > 5f)
-					Player.velocity.Y = 5f;
+                if (Player.velocity.Y > 5f)
+                    Player.velocity.Y = 5f;
 
-				if (Player.velocity.Y > 0f)
-					Player.velocity.Y *= 0.99f;
-				else
-					Player.velocity.Y *= 0.6f;
-			}
-			else
-			{
-				if (Player.velocity.Y > 1f)
-					Player.velocity.Y = 1f;
+                if (Player.velocity.Y > 0f)
+                    Player.velocity.Y *= 0.99f;
+                else
+                    Player.velocity.Y *= 0.6f;
+            }
+            else
+            {
+                if (Player.velocity.Y > 1f)
+                    Player.velocity.Y = 1f;
 
-				if (Player.velocity.Y < -5f)
-					Player.velocity.Y = -5f;
+                if (Player.velocity.Y < -5f)
+                    Player.velocity.Y = -5f;
 
-				if (Player.velocity.Y < 0f)
-					Player.velocity.Y *= 0.99f;
-				else
-					Player.velocity.Y *= 0.6f;
-			}
-		}
-	}
+                if (Player.velocity.Y < 0f)
+                    Player.velocity.Y *= 0.99f;
+                else
+                    Player.velocity.Y *= 0.6f;
+            }
+        }
+    }
+    public override void ModifyHitByNPC(NPC npc, ref Player.HurtModifiers modifiers)
+    {
+        if (HotDamageResist)
+        {
+            int dmgPlaceholder = npc.damage;
+            if (Common.Data.NPCSets.NPCFireDamage[npc.type])
+            {
+                modifiers.IncomingDamageMultiplier *= 0.7f;
+            }
+        }
+    }
+    public override void ModifyHitByProjectile(Projectile proj, ref Player.HurtModifiers modifiers)
+    {
+        if (HotDamageResist)
+        {
+            int dmgPlaceholder = proj.damage;
+            if (Common.Data.ProjectileSets.ProjFireDamage[proj.type])
+            {
+                modifiers.IncomingDamageMultiplier *= 0.7f;
+            }
+        }
+    }
 }

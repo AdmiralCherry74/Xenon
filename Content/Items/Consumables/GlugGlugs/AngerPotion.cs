@@ -10,7 +10,7 @@ namespace Xenon.Content.Items.Consumables.GlugGlugs;
     {
         public override void SetStaticDefaults()
         {
-            Item.ResearchUnlockCount = 20;
+            Item.ResearchUnlockCount = 30;
 
             // Dust that will appear in these colors when the item with ItemUseStyleID.DrinkLiquid is used
             ItemID.Sets.DrinkParticleColors[Type] = [

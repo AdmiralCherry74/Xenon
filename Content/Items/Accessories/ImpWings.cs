@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Terraria;
+﻿using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -31,9 +30,9 @@ namespace Xenon.Content.Items.Accessories
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
             ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
         {
-            ascentWhenFalling = 0.85f; // Falling glide speed
-            ascentWhenRising = 0.15f; // Rising speed
-            maxCanAscendMultiplier = 1f;
+            ascentWhenFalling = 0.90f; // Falling glide speed
+            ascentWhenRising = 0.20f; // Rising speed
+            maxCanAscendMultiplier = 1.1f;
             maxAscentMultiplier = 1.5f;
         }
     }

@@ -1681,6 +1681,55 @@ Mods: {
 				DisplayName: Dirt Pickaxe
 				Tooltip: poop lel
 			}
+
+			BrokenPickaxeHead: {
+				DisplayName: Broken Pickaxe Head
+				Tooltip: ""
+			}
+
+			AncientCopperOreItem: {
+				DisplayName: Ancient Copper Ore
+				Tooltip: ""
+			}
+
+			AncientGoldOreItem: {
+				DisplayName: Ancient Gold Ore
+				Tooltip: ""
+			}
+
+			AncientIronOreItem: {
+				DisplayName: Ancient Iron Ore
+				Tooltip: ""
+			}
+
+			AncientSilverOreItem: {
+				DisplayName: Ancient Silver Ore
+				Tooltip: ""
+			}
+
+			EnchantedPickaxe: {
+				DisplayName: Enchanted Pickaxe
+				Tooltip: Enchanted with speed in mind
+			}
+
+			BoneSerpentCoccyx: {
+				DisplayName: Bone Serpent Coccyx
+				Tooltip: Reduces damage from hot sources
+			}
+
+			ReinforcedCoccyx: {
+				DisplayName: Reinforced Coccyx
+				Tooltip: Reduces damage from hot sources
+			}
+
+			FrigerationPotion: {
+				DisplayName: Frigeration Potion
+				Tooltip:
+					'''
+					Reduces damage from hot sources
+					7 minute 30 second duration
+					'''
+			}
 		}
 
 		NPCs: {
@@ -1770,7 +1819,7 @@ Mods: {
 			GastricAltar.MapEntry: Gastric Altar
 			CorrosionCrateTile.MapEntry: Corrosion Crate
 			CopperFurnaceTile.MapEntry: Copper Furnace
-			SandballTrap.MapEntry: Mods.Xenon.Tiles.SandballTrap.MapEntry
+			SandballTrap.MapEntry: SandballTrap
 		}
 
 		Bestiary: {
@@ -2033,6 +2082,11 @@ Mods: {
 				DisplayName: Oblivious
 				Description: You cannot get critical strikes
 			}
+
+			Frigeration: {
+				DisplayName: Frigeration
+				Description: Reduces damage from hot sources
+			}
 		}
 
 		Configs: {
@@ -2042,18 +2096,15 @@ Mods: {
 				RequirePreviousOreTierForNext: {
 					Label: Ore Tier Crafting Tweak
 					Tooltip:
-					'''
-					Makes each ore armor, weapon, and most tools require the previous tier to craft
-					Also reduces the number of bars of that tier required to craft the next item
-					'''
+						'''
+						Makes each ore armor, weapon, and most tools require the previous tier to craft
+						Also reduces the number of bars of that tier required to craft the next item
+						'''
 				}
 
 				PickaxeRequiredForNextOreTier: {
 					Label: Require Previous Tier Pickaxe For Ores
-					Tooltip:
-					'''
-					Makes Silver-tier and Gold-tier ores require the previous tier pickaxe to mine
-					'''
+					Tooltip: Makes Silver-tier and Gold-tier ores require the previous tier pickaxe to mine
 				}
 			}
 		}

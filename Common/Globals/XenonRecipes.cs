@@ -925,5 +925,18 @@ namespace Xenon.Common.Globals
                 //Just gonna wait until the hardmode update to further update the recipes
             }
         }
+        public override void AddRecipes()
+        {
+            //Beginning of Material recipe adding
+            #region Magical recipe changes
+            Recipe.Create(ItemID.SpellTome)
+                .AddIngredient(ItemID.Book)
+                .AddIngredient(ItemID.ManaCrystal, 3)
+                .AddTile(TileID.Bookcases)
+                //.SortAfterFirstRecipesOf(ItemID.Titties)
+                .Register();
+            #endregion
+
+        }
     }
 }

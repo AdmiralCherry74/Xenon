@@ -1,1 +1,34 @@
-This description will show up on the steam page, check out https://steamcommunity.com/comment/Guide/formattinghelp.
+[h1] Welcome to Xenon! [/h1]
+
+Xenon is a mod that is meant to be for those who prefer a slower paced gameplay, whilst still managing to make it engaging
+Theres a slew of changes, new content and planned features. For now this mod will only cover Pre-Hardmode.
+however a Hardmode update is planned, and even a brand new [b]'Insane Mode'[/b], check out Xenon's discord for more information! (Found here: https://discord.gg/ndHRWEnbyf)
+
+[h2] You should try these mods with Xenon for maximum enjoyment, as they are supported and highly Recommended! [/h2]
+- The Confection REBAKED (Found Here: https://steamcommunity.com/sharedfiles/filedetails/?id=2601885797)
+- Ore Spears (Found Here: https://steamcommunity.com/sharedfiles/filedetails/?id=3223714083)
+
+[h2] Here's a few changes to really catch your eye! [/h2]
+
+[h3] Adds 4 new biomes: [/h3]
+- A newly erupted mini-biome generating in the roof of hell. The [b] Rhyolite Caves [/b] biome. This is also its own mod. Check out here to see! https://steamcommunity.com/sharedfiles/filedetails/?id=3467015068&searchtext=Rhyolite)
+- An new acidic, stomach themed Alternative world evil called The Corrosion that seeks to eat your entire world and you for breakfast! Inspired but expanded on from the fan ideas wiki! https://terrariafanideas.fandom.com/wiki/The_Corrosion
+- Scorching Ice, a new Hot Cold mini-biome generating in the bottom of the Underground Snow! Watch out for Frozen Lava!
+- Mountains, a new biome replacing the dungeons ocean that can be converted between evils and lights aswell as giving some new accessories!
+
+[h3] Adds 5 new Item types: [/h3]
+- Unique trinkets found through out the world that are valueble. selling at great prices! they even have their own rarity!
+- Battleaxes are a new type of melee weapon that are slower, but have higher critical strike chance and inflict various new buffs to enemies and yourself!
+- Crossbows, a new powerful and far-ranged but slow and costly style of ranged weapon that requires a new bolt type of ammunition to be crafted and use!
+- Splash potions, a way for mage to fight without mana! these potions are a new consumable throwing-styled weapon in which you use magical potions and buffs to take down enemies or heal allies!
+- Caltrops are a new gadget for Summons to play with to expand their arsenal against groups of enemies. inflicting normal and tag damage per one caltrop!
+
+[h3] Adds 3 types of enemies: [/h3]
+- Bandits. a good for nothing human survivor who arnt a friend, but a foe. killing them will not only net you tons of goodies, but also make the world safer!
+- Environmental enemies. Sawblades, <so and so>, <so and so> and more provide new life to the cavenrs, making them more dangerous next time you explore underground!
+- Evil cultists. three new spell weaving cultists appear once the Eye of Cthulu has been slained. they serve the three world evil's devoutedly, no matter the cost...
+
+[h3] Adds Mod support for the following mods: [/h3]
+- Exxo Avalon Origins (Found Here: https://steamcommunity.com/sharedfiles/filedetails/?id=3150760112. Thank you for helping development so much BlahBlahBal!)
+- Terradux (Found Here: <Insert Link here>)
+- Arcadia (Found Here: <Insert Link here>)
