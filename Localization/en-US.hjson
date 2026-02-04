@@ -1728,7 +1728,7 @@ Mods: {
 			}
 
 			DeathforcePotion: {
-				DisplayName: Deathforce Potion
+				DisplayName: Wither Potion
 				Tooltip:
 					'''
 					Decreases life by 20%
@@ -1737,7 +1737,7 @@ Mods: {
 			}
 
 			DeathforceSplashPotion: {
-				DisplayName: Deathforce Splash Potion
+				DisplayName: Wither Splash Potion
 				Tooltip: Decreases life by 20%
 			}
 
@@ -1804,6 +1804,71 @@ Mods: {
 			FlipperSplashPotion: {
 				DisplayName: Flipper Splash Potion
 				Tooltip: Lets you move swiftly in liquids
+			}
+
+			GillsSplashPotion: {
+				DisplayName: Gills Splash Potion
+				Tooltip: Allows you to breathe in liquids
+			}
+
+			GravitationSplashPotion: {
+				DisplayName: Gravitation Splash Potion
+				Tooltip: Allows the control of gravity
+			}
+
+			GreaterLuckSplashPotion: {
+				DisplayName: Greater Luck Splash Potion
+				Tooltip: Increases the Luck of the user
+			}
+
+			HeartreachSplashPotion: {
+				DisplayName: Heartreach Splash Potion
+				Tooltip: Increases pickup range for life hearts
+			}
+
+			HunterSplashPotion: {
+				DisplayName: Hunter Splash Potion
+				Tooltip: Shows the location of enemies
+			}
+
+			InfernoSplashPotion: {
+				DisplayName: Inferno Splash Potion
+				Tooltip: Ignites nearby enemies
+			}
+
+			InvisibilitySplashPotion: {
+				DisplayName: Invisibility Splash Potion
+				Tooltip: Grants invisibility and lowers the spawn rate of enemies
+			}
+
+			IronskinSplashPotion: {
+				DisplayName: Ironskin Splash Potion
+				Tooltip: Increase defense by 8
+			}
+
+			LesserLuckSplashPotion: {
+				DisplayName: Lesser Luck Splash Potion
+				Tooltip: Increases the Luck of the user
+			}
+
+			LuckSplashPotion: {
+				DisplayName: Luck Splash Potion
+				Tooltip: Increases the Luck of the user
+			}
+
+			MagicPowerSplashPotion: {
+				DisplayName: Magic Power Splash Potion
+				Tooltip: 20% increased magic damage
+			}
+
+			ManaRegenerationSplashPotion: {
+				DisplayName: Mana Regeneration Splash Potion
+				Tooltip: Increased mana regeneration
+			}
+
+			MiningSplashPotion: {
+				DisplayName: Mining Splash Potion
+				Tooltip: Increases mining speed by 25%
 			}
 		}
 
@@ -2074,6 +2139,19 @@ Mods: {
 			FeatherfallSplashPotionProj.DisplayName: Featherfall Splash Potion
 			FishingSplashPotionProj.DisplayName: Fishing Splash Potion
 			FlipperSplashPotionProj.DisplayName: Flipper Splash Potion
+			GillsSplashPotionProj.DisplayName: Gills Splash Potion
+			GravitationSplashPotionProj.DisplayName: Gravitation Splash Potion
+			GreaterLuckSplashPotionProj.DisplayName: Greater Luck Splash Potion
+			HeartreachSplashPotionProj.DisplayName: Heartreach Splash Potion
+			HunterSplashPotionProj.DisplayName: Hunter Splash Potion
+			InfernoSplashPotionProj.DisplayName: Inferno Splash Potion
+			InvisibilitySplashPotionProj.DisplayName: Invisibility Splash Potion
+			IronskinSplashPotionProj.DisplayName: Ironskin Splash Potion
+			LesserLuckSplashPotionProj.DisplayName: Lesser Luck Splash Potion 
+			LuckSplashPotionProj.DisplayName: Luck Splash Potion
+			MagicPowerSplashPotionProj.DisplayName: Magic Power Splash Potion
+			ManaRegenerationSplashPotionProj.DisplayName: Mana Regeneration Splash Potion
+			MiningSplashPotionProj.DisplayName: Mining Splash Potion
 		}
 
 		Buffs: {
@@ -2178,7 +2256,7 @@ Mods: {
 			}
 
 			Deathforce: {
-				DisplayName: Deathforce
+				DisplayName: Withered
 				Description: Decreases life by 20%
 			}
 		}
