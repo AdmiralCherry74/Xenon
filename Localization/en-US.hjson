@@ -1892,7 +1892,7 @@ Mods: {
 			}
 
 			PeriwinkleCatacombBrickBlock: {
-				DisplayName: Periwinkle Catacomb Brick Block
+				DisplayName: Periwinkle Catacomb Brick
 				Tooltip: ""
 			}
 		}
