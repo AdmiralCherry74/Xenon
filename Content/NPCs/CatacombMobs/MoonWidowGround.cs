@@ -44,7 +44,7 @@ namespace Xenon.Content.NPCs.CatacombMobs
         {
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.MoonWidow")),
             ]);
         }
 

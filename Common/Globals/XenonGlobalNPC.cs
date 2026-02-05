@@ -11,6 +11,7 @@ using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
+using Xenon.Content.NPCs.Other;
 
 namespace Xenon.Common.Globals;
 
@@ -18,6 +19,17 @@ internal class XenonGlobalNPC : GlobalNPC
 {
     public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
     {
+        if (!Main.dayTime && spawnInfo.Player.ZoneOverworldHeight)
+        {
+            if (NPC.downedBoss1)
+            {
+                pool.Add(ModContent.NPCType<ConeheadZombie>(), 0.5f);
+            }
+            if (NPC.downedBoss2)
+            {
+                pool.Add(ModContent.NPCType<ConeheadZombie>(), 0.5f);
+            }
+        }
         if (spawnInfo.Player.InModBiome<Mountain>())
         {
             pool.Clear();
@@ -146,15 +158,21 @@ internal class XenonGlobalNPC : GlobalNPC
         if (spawnInfo.Player.InModBiome<Catacombs>())
         {
             pool.Clear();
-            pool.Add(NPCID.Zombie, 0.5f);
-            pool.Add(ModContent.NPCType<SmallFallenSurvivor>(), 1.1f);
-            pool.Add(ModContent.NPCType<FallenSurvivor>(), 1);
-            pool.Add(ModContent.NPCType<BigFallenSurvivor>(), 0.9f);
+            pool.Add(NPCID.Zombie, 1); //temporary
+            pool.Add(NPCID.PincushionZombie, 1); //temporary
+            pool.Add(NPCID.TorchZombie, 1); //temporary
+            pool.Add(ModContent.NPCType<MoonWidowWall>(), 0.1f);
+            pool.Add(ModContent.NPCType<SmallFallenSurvivor>(), 0.5f);
+            pool.Add(ModContent.NPCType<FallenSurvivor>(), 0.4f);
+            pool.Add(ModContent.NPCType<BigFallenSurvivor>(), 0.3f);
             if (Main.expertMode)
             {
-                pool.Add(ModContent.NPCType<SmallFallenSurvivorExpert>(), 0.27f);
-                pool.Add(ModContent.NPCType<FallenSurvivorExpert>(), 0.25f);
-                pool.Add(ModContent.NPCType<BigFallenSurvivorExpert>(), 0.23f);
+                pool.Add(NPCID.ArmedZombie, 0.5f); //temporary
+                pool.Add(NPCID.ArmedZombiePincussion, 0.5f); //temporary
+                pool.Add(NPCID.ArmedTorchZombie, 0.5f); //temporary
+                pool.Add(ModContent.NPCType<SmallFallenSurvivorExpert>(), 0.4f);
+                pool.Add(ModContent.NPCType<FallenSurvivorExpert>(), 0.3f);
+                pool.Add(ModContent.NPCType<BigFallenSurvivorExpert>(), 0.2f);
             }
         }
 

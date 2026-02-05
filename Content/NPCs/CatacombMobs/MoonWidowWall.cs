@@ -44,17 +44,8 @@ namespace Xenon.Content.NPCs.CatacombMobs
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
             bestiaryEntry.Info.AddRange([
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.MoonWidow")),
             ]);
-        }
-
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
-            {
-                return 0.15f;
-            }
-            return 0;
         }
 
         public override void HitEffect(NPC.HitInfo hit)

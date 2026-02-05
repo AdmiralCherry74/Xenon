@@ -1895,6 +1895,11 @@ Mods: {
 				DisplayName: Periwinkle Catacomb Brick
 				Tooltip: ""
 			}
+
+			NightOwlSplashPotion: {
+				DisplayName: Night Owl Splash Potion
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1964,6 +1969,9 @@ Mods: {
 			SmallFallenSurvivor.DisplayName: Small Fallen Survivor
 			SmallFallenSurvivorExpert.DisplayName: Small Fallen Survivor
 			MoonWidowGround.DisplayName: Moon Widow
+			MoonWidowWall.DisplayName: Moon Widow
+			BucketheadZombie.DisplayName: Buckethead Zombie
+			ConeheadZombie.DisplayName: Conehead Zombie
 		}
 
 		Tiles: {
@@ -2037,6 +2045,9 @@ Mods: {
 			BigFallenSurvivor: These guys threw out some of the evil cultists, the cultists soon lead back a hoard of zombies
 			FallenSurvivor: When people inhabited the catacombs, they tried fighting off the swarm of zombies that invaded.
 			SmallFallenSurvivor: Little zombie, big trouble.
+			ConeheadZombie: This zombie like to party. he mistook the traffic cone for a party hat.
+			BucketheadZombie: This zombie forgot that he was wearing the bucket.
+			MoonWidow: Sticky webs lead to sticky situations.
 		}
 
 		Biomes: {
@@ -2197,6 +2208,7 @@ Mods: {
 			MagicPowerSplashPotionProj.DisplayName: Magic Power Splash Potion
 			ManaRegenerationSplashPotionProj.DisplayName: Mana Regeneration Splash Potion
 			MiningSplashPotionProj.DisplayName: Mining Splash Potion
+			NightOwlSplashPotionProj.DisplayName: Night Owl Splash Potion
 		}
 
 		Buffs: {

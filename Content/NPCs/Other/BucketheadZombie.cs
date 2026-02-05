@@ -5,13 +5,13 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs.Counterable;
-using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Weapons.Melee.Swords;
+using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Items.Weapons.Melee.Flails;
 
-namespace Xenon.Content.NPCs.CatacombMobs
+namespace Xenon.Content.NPCs.Other
 {
-    public class BigFallenSurvivor : ModNPC
+    public class BucketheadZombie : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -27,29 +27,30 @@ namespace Xenon.Content.NPCs.CatacombMobs
         public override void SetDefaults()
         {
             NPC.width = 34;
-            NPC.height = 44;
-            NPC.scale = 1.17f;
-            NPC.damage = 34;
-            NPC.defense = 9;
-            NPC.lifeMax = 230;
-            NPC.HitSound = SoundID.NPCHit1;
+            NPC.height = 62;
+            NPC.damage = 17;
+            NPC.defense = 11;
+            NPC.lifeMax = 70;
+            NPC.HitSound = SoundID.NPCHit4;
             NPC.DeathSound = SoundID.NPCDeath2;
-            NPC.value = 9000;
-            NPC.knockBackResist = 0.4f;
-            NPC.aiStyle = NPCAIStyleID.Fighter;
-
+            NPC.value = 1000;
+            NPC.knockBackResist = 0.15f;
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
+            
             AIType = NPCID.Zombie;
             AnimationType = NPCID.Zombie;
             //Banner = NPC.type;
             //BannerItem = ModContent.ItemType<BanditBanner>();
-        }
+		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.BigFallenSurvivor")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Graveyard,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.BucketheadZombie")),
             ]);
         }
 
@@ -67,19 +68,6 @@ namespace Xenon.Content.NPCs.CatacombMobs
                 return;
             }
         }
-
-        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-        {
-            if (Main.rand.NextBool(3) && Main.expertMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 300);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 600);
-            }
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
@@ -98,11 +86,9 @@ namespace Xenon.Content.NPCs.CatacombMobs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-        public override void ModifyNPCLoot(NPCLoot npcLoot)
+         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            //npcLoot.Add(ItemDropRule.Common(ItemID.Aglet, 35, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenPickaxeHead>(), 10, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Scarlet>(), 40, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.ZombieArm, 40, 1, 1));
         }
     }
 }
