@@ -1,9 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks;
-using Xenon.Content.Rarities;
-using Xenon.Content.Tiles;
 
 namespace Xenon.Content.Items.Materials.EvilMaterials;
 
@@ -17,7 +14,7 @@ public class FreshChyme : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.rare = 3;
+        Item.rare = ItemRarityID.Orange;
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }

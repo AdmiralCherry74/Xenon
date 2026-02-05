@@ -1,8 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.OresBarsGems;
-using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems

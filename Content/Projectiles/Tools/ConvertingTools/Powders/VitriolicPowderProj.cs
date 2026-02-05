@@ -1,9 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,7 +11,7 @@ namespace Xenon.Content.Projectiles.Tools.ConvertingTools.Powders
         {
             Projectile.width = 48;
             Projectile.height = 48;
-            Projectile.aiStyle = 6;
+            Projectile.aiStyle = ProjAIStyleID.Powder;
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
@@ -84,7 +79,7 @@ namespace Xenon.Content.Projectiles.Tools.ConvertingTools.Powders
                     }
                     WorldGeneration.Helpers.ConversionHelper.ConvertToCorrosion(num1032, num1043, 2);
                     Tile tile = Main.tile[num1032, num1043];
-                    if (tile.TileType >= 0 && tile.TileType < TileID.Count && TileID.Sets.CommonSapling[tile.TileType])
+                    if (tile.TileType >= TileID.Dirt && tile.TileType < TileID.Count && TileID.Sets.CommonSapling[tile.TileType])
                     {
                         if (Main.remixWorld && num1043 >= (int)Main.worldSurface - 1 && num1043 < Main.maxTilesY - 20)
                         {

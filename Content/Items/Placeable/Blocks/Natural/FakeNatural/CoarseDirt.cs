@@ -1,5 +1,4 @@
 ﻿using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.FakeNatural

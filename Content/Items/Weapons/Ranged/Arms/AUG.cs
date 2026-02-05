@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Arms;
 

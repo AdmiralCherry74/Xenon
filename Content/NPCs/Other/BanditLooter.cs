@@ -125,7 +125,7 @@ namespace Xenon.Content.NPCs.Other
             }
             else if (!(NPC.ai[2] > 0f) || !NPC.DespawnEncouragement_AIStyle3_Fighters_CanBeBusyWithAction(NPC.type))
             {
-                if (Main.IsItDay() && (double)(NPC.position.Y / 16f) < Main.worldSurface && NPC.type != 624 && NPC.type != 631)
+                if (Main.IsItDay() && (double)(NPC.position.Y / 16f) < Main.worldSurface && NPC.type != NPCID.Gnome && NPC.type != NPCID.RockGolem)
                 {
                     NPC.EncourageDespawn(10);
                 }
@@ -428,7 +428,7 @@ namespace Xenon.Content.NPCs.Other
             {
                 int num104 = (int)((NPC.position.X + NPC.width / 2 + 15 * NPC.direction) / 16f);
                 int num105 = (int)((NPC.position.Y + NPC.height - 15f) / 16f);
-                if (Main.tile[num104, num105 - 1].HasUnactuatedTile && (TileLoader.IsClosedDoor(Main.tile[num104, num105 - 1]) || Main.tile[num104, num105 - 1].TileType == 388) && flag26)
+                if (Main.tile[num104, num105 - 1].HasUnactuatedTile && (TileLoader.IsClosedDoor(Main.tile[num104, num105 - 1]) || Main.tile[num104, num105 - 1].TileType == TileID.TallGateClosed) && flag26)
                 {
                     NPC.ai[2] += 1f;
                     NPC.ai[3] = 0f;
@@ -442,7 +442,7 @@ namespace Xenon.Content.NPCs.Other
                         }
                         NPC.velocity.X = 0.5f * -NPC.direction;
                         int num106 = 5;
-                        if (Main.tile[num104, num105 - 1].TileType == 388)
+                        if (Main.tile[num104, num105 - 1].TileType == TileID.TallGateClosed)
                         {
                             num106 = 2;
                         }
@@ -455,7 +455,7 @@ namespace Xenon.Content.NPCs.Other
                             NPC.ai[1] = 10f;
                         }
                         WorldGen.KillTile(num104, num105 - 1, fail: true);
-                        if ((Main.netMode != 1 || !flag18) && flag18 && Main.netMode != 1)
+                        if ((Main.netMode != NetmodeID.MultiplayerClient || !flag18) && flag18 && Main.netMode != NetmodeID.MultiplayerClient)
                         {
                             if (TileLoader.IsClosedDoor(Main.tile[num104, num105 - 1]))
                             {
@@ -465,12 +465,12 @@ namespace Xenon.Content.NPCs.Other
                                     NPC.ai[3] = num154;
                                     NPC.netUpdate = true;
                                 }
-                                if (Main.netMode == 2 && flag19)
+                                if (Main.netMode == NetmodeID.Server && flag19)
                                 {
-                                    NetMessage.SendData(19, -1, -1, null, 0, num104, num105 - 1, NPC.direction);
+                                    NetMessage.SendData(MessageID.ToggleDoorState, -1, -1, null, 0, num104, num105 - 1, NPC.direction);
                                 }
                             }
-                            if (Main.tile[num104, num105 - 1].TileType == 388)
+                            if (Main.tile[num104, num105 - 1].TileType == TileID.TallGateClosed)
                             {
                                 bool flag20 = WorldGen.ShiftTallGate(num104, num105 - 1, closing: false);
                                 if (!flag20)
@@ -478,9 +478,9 @@ namespace Xenon.Content.NPCs.Other
                                     NPC.ai[3] = num154;
                                     NPC.netUpdate = true;
                                 }
-                                if (Main.netMode == 2 && flag20)
+                                if (Main.netMode == NetmodeID.Server && flag20)
                                 {
-                                    NetMessage.SendData(19, -1, -1, null, 4, num104, num105 - 1);
+                                    NetMessage.SendData(MessageID.ToggleDoorState, -1, -1, null, 4, num104, num105 - 1);
                                 }
                             }
                         }
@@ -589,7 +589,7 @@ namespace Xenon.Content.NPCs.Other
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

@@ -1,5 +1,4 @@
-﻿using Terraria;
-using Terraria.ID;
+﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;

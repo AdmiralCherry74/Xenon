@@ -5,10 +5,10 @@ using static Xenon.SpecialUtilities;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.ModSupport.Avalon.Content.Tiles;
-using Avalon.Tiles.Ores;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.ModSupport.Confection.Content.Tiles;
 using Xenon.Content.Tiles.Natural.Other;
+using Avalon.Tiles.Ores;
 
 namespace Xenon.ModSupport;
 

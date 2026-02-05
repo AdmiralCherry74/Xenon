@@ -82,20 +82,20 @@ public class IceModGenPass : GenPass
 			{
 				if (ypos < lavaLine)
 				{
-					if (Main.tile[xpos, ypos].WallType == 2)
-						Main.tile[xpos, ypos].WallType = 40;
+					if (Main.tile[xpos, ypos].WallType == WallID.DirtUnsafe)
+						Main.tile[xpos, ypos].WallType = WallID.SnowWallUnsafe;
 
 					switch (Main.tile[xpos, ypos].TileType)
 					{
-						case 0:
-						case 2:
-						case 23:
-						case 40:
-						case 53:
-							Main.tile[xpos, ypos].TileType = 147;
+						case TileID.Dirt:
+						case TileID.Grass:
+						case TileID.CorruptGrass:
+						case TileID.ClayBlock:
+						case TileID.Sand:
+							Main.tile[xpos, ypos].TileType = TileID.SnowBlock;
 							break;
-						case 1:
-							Main.tile[xpos, ypos].TileType = 161;
+						case TileID.Stone:
+							Main.tile[xpos, ypos].TileType = TileID.IceBlock;
 							break;
 					}
 					if (WorldGen.genRand.NextBool(60))
@@ -120,20 +120,20 @@ public class IceModGenPass : GenPass
 
 					for (int num982 = ypos; num982 < ypos + num979; num982++)
 					{
-						if (Main.tile[xpos, num982].WallType == 2)
-							Main.tile[xpos, num982].WallType = 40;
+						if (Main.tile[xpos, num982].WallType == WallID.DirtUnsafe)
+							Main.tile[xpos, num982].WallType = WallID.SnowWallUnsafe;
 
 						switch (Main.tile[xpos, num982].TileType)
 						{
-							case 0:
-							case 2:
-							case 23:
-							case 40:
-							case 53:
-								Main.tile[xpos, num982].TileType = 147;
+							case TileID.Dirt:
+							case TileID.Grass:
+							case TileID.CorruptGrass:
+							case TileID.ClayBlock:
+							case TileID.Sand:
+								Main.tile[xpos, num982].TileType = TileID.SnowBlock;
 								break;
-							case 1:
-								Main.tile[xpos, num982].TileType = 161;
+							case TileID.Stone:
+								Main.tile[xpos, num982].TileType = TileID.IceBlock;
 								break;
 						}
 						if (WorldGen.genRand.NextBool(60))

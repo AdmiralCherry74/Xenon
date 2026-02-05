@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
-using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.ModSupport.Avalon.Content.Items.Weapons.Battleaxes;
 
@@ -31,7 +30,7 @@ public class BismuthBattleaxe : ModItem
 
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;
-        Item.rare = 0;
+        Item.rare = ItemRarityID.White;
     }
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

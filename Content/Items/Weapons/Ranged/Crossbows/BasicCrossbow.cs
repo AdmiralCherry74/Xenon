@@ -1,14 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using System.ComponentModel;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Ammo.Bolts;
 using Xenon.Content.Items.Materials.EvilMaterials;
-using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Projectiles.Ranged.Ammo.Bolts;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Crossbows;
 

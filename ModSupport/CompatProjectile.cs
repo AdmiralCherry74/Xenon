@@ -1,8 +1,8 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using TheConfectionRebirth.Projectiles;
 using Microsoft.Xna.Framework;
+using TheConfectionRebirth.Projectiles;
 using Avalon.Projectiles;
 
 namespace Xenon.ModSupport;

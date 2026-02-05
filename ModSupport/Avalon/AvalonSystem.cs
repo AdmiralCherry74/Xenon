@@ -1,5 +1,4 @@
-﻿using Avalon.Systems;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -7,11 +6,11 @@ using Terraria.ModLoader;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using static Xenon.SpecialUtilities;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Avalon.Tiles.Ores;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Furniture.Torches;
 using Xenon.Content.Tiles.Natural.Other;
+using Avalon.Tiles.Ores;
+using Avalon.Systems;
 
 namespace Xenon.ModSupport.Avalon;
 

@@ -10,6 +10,6 @@ public class SpikedGel : ModItem
     {
         Item.ResearchUnlockCount = 100;
         Item.value = Item.buyPrice(silver: 10);
-        Item.rare = 1;
+        Item.rare = ItemRarityID.Blue;
     }
 }

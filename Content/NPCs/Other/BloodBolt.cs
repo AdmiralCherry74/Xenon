@@ -29,7 +29,7 @@ public class BloodBolt : ModNPC
         NPC.DeathSound = SoundID.NPCDeath3;
         NPC.value = 250;
         NPC.knockBackResist = 1f;
-        NPC.aiStyle = 9;
+        NPC.aiStyle = NPCAIStyleID.Spell;
 
         AIType = NPCID.ChaosBallTim;
         AnimationType = NPCID.ChaosBallTim;
@@ -56,7 +56,7 @@ public class BloodBolt : ModNPC
         {
             for (int l = 0; l < 20; l++)
             {
-                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                 Main.dust[dust].velocity *= 2f;
                 Main.dust[dust].noGravity = true;
             }

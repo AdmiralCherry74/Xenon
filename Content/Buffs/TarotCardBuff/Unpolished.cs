@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.DataStructures;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
 
 namespace Xenon.Content.Buffs.TarotCardBuff;
 

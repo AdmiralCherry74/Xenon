@@ -2,8 +2,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
-using Xenon.Content.Walls.BuildingWalls.Stones;
-using Xenon.Content.Walls.NaturalWalls.Stone;
 
 namespace Xenon.Content.Biomes;
 

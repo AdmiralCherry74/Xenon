@@ -1,7 +1,5 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Tiles.Bricks;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;

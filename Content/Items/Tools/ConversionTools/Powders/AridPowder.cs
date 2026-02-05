@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Projectiles.Tools.ConvertingTools.Powders;
 
 namespace Xenon.Content.Items.Tools.ConversionTools.Powders

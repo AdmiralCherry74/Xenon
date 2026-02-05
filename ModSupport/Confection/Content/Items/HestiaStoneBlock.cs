@@ -1,6 +1,5 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.ModSupport.Confection.Content.Items;

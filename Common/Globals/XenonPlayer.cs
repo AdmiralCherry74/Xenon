@@ -1,8 +1,5 @@
-﻿using Avalon;
-using Avalon.Buffs.Debuffs;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
-using System.Security.Cryptography.X509Certificates;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -142,28 +139,28 @@ public class XenonPlayer : ModPlayer
             }
             if (Main.rand.NextBool(20))
             {
-                int D = Dust.NewDust(Player.position, Player.width, Player.height, 9, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D].noGravity = true;
                 Main.dust[D].velocity.X *= 1.2f;
                 Main.dust[D].velocity.X *= 1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D2 = Dust.NewDust(Player.position, Player.width, Player.height, 9, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D2 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D2].noGravity = true;
                 Main.dust[D2].velocity.X *= -1.2f;
                 Main.dust[D2].velocity.X *= 1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D3 = Dust.NewDust(Player.position, Player.width, Player.height, 9, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D3 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D3].noGravity = true;
                 Main.dust[D3].velocity.X *= 1.2f;
                 Main.dust[D3].velocity.X *= -1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D4 = Dust.NewDust(Player.position, Player.width, Player.height, 9, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D4 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D4].noGravity = true;
                 Main.dust[D4].velocity.X *= -1.2f;
                 Main.dust[D4].velocity.X *= -1.2f;

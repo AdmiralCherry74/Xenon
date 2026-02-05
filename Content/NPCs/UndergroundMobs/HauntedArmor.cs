@@ -34,7 +34,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             NPC.DeathSound = SoundID.NPCDeath33;
             NPC.value = 200;
             NPC.knockBackResist = 0.25f;
-            NPC.aiStyle = 3; 
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
             
             AIType = NPCID.PossessedArmor;
             AnimationType = NPCID.PossessedArmor;
@@ -85,7 +85,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

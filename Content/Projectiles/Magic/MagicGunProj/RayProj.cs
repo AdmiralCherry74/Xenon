@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.Audio;
-using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -21,7 +18,7 @@ namespace Xenon.Content.Projectiles.Magic.MagicGunProj
         {
             Projectile.width = 8; // The width of projectile hitbox
             Projectile.height = 8; // The height of projectile hitbox
-            Projectile.aiStyle = 1; // The ai style of the projectile, please reference the source code of Terraria
+            Projectile.aiStyle = ProjAIStyleID.Arrow; // The ai style of the projectile, please reference the source code of Terraria
             Projectile.friendly = true; // Can the projectile deal damage to enemies?
             Projectile.hostile = false; // Can the projectile deal damage to the player?
             Projectile.DamageType = DamageClass.Magic; // Is the projectile shoot by a ranged weapon?

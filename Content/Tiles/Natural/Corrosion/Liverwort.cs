@@ -4,7 +4,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Common.Templates;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;

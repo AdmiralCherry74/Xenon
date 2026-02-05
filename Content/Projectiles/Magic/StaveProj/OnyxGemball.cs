@@ -1,11 +1,4 @@
-﻿using Avalon.Prefixes;
-using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;

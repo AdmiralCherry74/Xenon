@@ -35,7 +35,7 @@ namespace Xenon.Content.NPCs.JungleMobs
             NPC.DeathSound = SoundID.NPCDeath14;
             NPC.value = 0;
             NPC.knockBackResist = 0f;
-            NPC.aiStyle = 11;
+            NPC.aiStyle = NPCAIStyleID.SkeletronHead;
             NPC.noGravity = true;
             NPC.noTileCollide = true;
             NPCID.Sets.CanHitPastShimmer[Type] = true;

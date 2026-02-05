@@ -1,22 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Biomes;
 
-namespace Xenon.Content.NPCs.CorruptionMobs
+namespace Xenon.Content.NPCs.CatacombMobs
 {
-    public class MoonWindowGround : ModNPC
+    public class MoonWidowGround : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.BlackRecluse];
 
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new()
             {
                 Velocity = 1f
             };
@@ -34,36 +32,20 @@ namespace Xenon.Content.NPCs.CorruptionMobs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
             NPC.knockBackResist = 0.75f;
-            NPC.aiStyle = 3;
-
+            NPC.aiStyle = NPCAIStyleID.Fighter;
             AIType = NPCID.WallCreeper;
-            AnimationType = NPCID.WallCreeper;
-            //Banner = NPC.type;
-            //BannerItem = ModContent.ItemType<EvphilaBanner>();
+            AnimationType = NPCID.BlackRecluse;
+            SpawnModBiomes = [ModContent.GetInstance<Corrosion>().Type, ModContent.GetInstance<Catacombs>().Type];
+            //Banner = Type;
+            //BannerItem = ModContent.ItemType<MoonWidowBanner>();
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
             ]);
-        }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
         }
 
         public override void HitEffect(NPC.HitInfo hit)
@@ -72,7 +54,7 @@ namespace Xenon.Content.NPCs.CorruptionMobs
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

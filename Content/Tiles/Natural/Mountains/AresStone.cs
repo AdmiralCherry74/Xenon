@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 

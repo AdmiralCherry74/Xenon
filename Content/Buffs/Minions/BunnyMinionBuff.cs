@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Weapons.Summon.MinionWands;
 using Xenon.Content.Projectiles.Summoner.Minions;
 
 namespace Xenon.Content.Buffs.Minions

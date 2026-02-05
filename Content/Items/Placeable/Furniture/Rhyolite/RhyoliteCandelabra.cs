@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;

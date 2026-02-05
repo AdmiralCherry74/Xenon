@@ -2,16 +2,11 @@
 
 	<!-- Import tModLoader mod properties -->
 	<Import Project="..\tModLoader.targets" />
+
+	<!-- References -->
 	<ItemGroup>
-	  <Reference Include="AltLibrary">
-	    <HintPath>..\..\ModReader\AltLibrary\AltLibrary.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Avalon">
-	    <HintPath>..\..\ModReader\Avalon\Avalon.dll</HintPath>
-	  </Reference>
-	  <Reference Include="TheConfectionRebirth">
-	    <HintPath>..\..\ModReader\TheConfectionRebirth\TheConfectionRebirth.dll</HintPath>
-	  </Reference>
+		<!-- Include all DLLs in lib/ -->
+		<Reference Include="lib/*.dll" />
 	</ItemGroup>
 
 </Project>

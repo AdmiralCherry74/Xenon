@@ -1,10 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs.Counterable;
-using Xenon.Content.Buffs.Epibuffs;
 
 namespace Xenon.Content.Items.DeveloperItems;
     public class BuffTester : ModItem

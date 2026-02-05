@@ -1963,6 +1963,7 @@ Mods: {
 			FallenSurvivorExpert.DisplayName: Fallen Survivor
 			SmallFallenSurvivor.DisplayName: Small Fallen Survivor
 			SmallFallenSurvivorExpert.DisplayName: Small Fallen Survivor
+			MoonWidowGround.DisplayName: Moon Widow
 		}
 
 		Tiles: {

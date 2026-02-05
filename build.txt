@@ -1,4 +1,5 @@
 displayName = Xenon Alpha Febuary Build
 author = AdmiralCherry74
 version = 0.1.4.3
-weakReferences = AltLibrary@2.1.0.7,Avalon,TheConfectionRebirth
+modReferences = AltLibrary@2.1.0.7
+weakReferences = Avalon, TheConfectionRebirth

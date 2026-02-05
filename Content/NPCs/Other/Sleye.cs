@@ -1,5 +1,4 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.GameContent.Bestiary;
@@ -7,9 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.NPCs.Other
 {

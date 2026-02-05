@@ -1,11 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.OresBarsGems;
-using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Tiles.Natural.Ores;

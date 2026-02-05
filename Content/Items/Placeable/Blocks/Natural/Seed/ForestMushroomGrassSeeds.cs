@@ -4,7 +4,6 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.ForestMushroom;
-using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 

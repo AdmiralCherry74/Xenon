@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using System.ComponentModel;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.DeveloperItems.CutItems.CutWeapons;
 
@@ -27,7 +24,7 @@ class VeinPiercer : ModItem
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.value = 9000;
         Item.useAnimation = 24;
-        Item.rare = 3;
+        Item.rare = ItemRarityID.Orange;
     }
     public override void AddRecipes()
     {

@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.TarotCardBuff;
 
 namespace Xenon.Content.Items.Consumables.TarotCards;
@@ -19,7 +18,7 @@ public class TarotCard1Used : ModItem
         Item.UseSound = SoundID.Item60;
         Item.maxStack = 1;
         Item.consumable = false;
-        Item.rare = -13;
+        Item.rare = ItemRarityID.Master;
         Item.value = 0;
     }
 

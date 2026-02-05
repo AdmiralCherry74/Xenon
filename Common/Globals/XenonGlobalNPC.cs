@@ -11,8 +11,6 @@ using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
-using Xenon.Content.NPCs.Other;
-using Xenon.Content.NPCs.UndergroundMobs;
 
 namespace Xenon.Common.Globals;
 

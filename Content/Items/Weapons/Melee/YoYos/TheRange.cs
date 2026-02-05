@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles.Melee.YoYo;
 
 namespace Xenon.Content.Items.Weapons.Melee.YoYos;
@@ -33,7 +32,7 @@ public class TheRange : ModItem
         Item.knockBack = 3.80f;
         Item.crit = 0;
         Item.channel = true;
-        Item.rare = 3;
+        Item.rare = ItemRarityID.Orange;
         Item.value = Item.sellPrice(silver: 20);
 
         Item.shoot = ModContent.ProjectileType<RangeYoYoProj>();

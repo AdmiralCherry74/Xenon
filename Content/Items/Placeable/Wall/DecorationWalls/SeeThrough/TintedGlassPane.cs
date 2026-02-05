@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Blocks.Decoration.SeeThrough;
 using Xenon.Content.Walls.DecorationWall.SeeThrough;
 

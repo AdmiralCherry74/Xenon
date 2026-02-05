@@ -1,10 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Epibuffs;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.Items.Consumables.GlugGlugs;

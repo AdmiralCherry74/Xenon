@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Arms;
 
@@ -28,7 +27,7 @@ public class Mauser : ModItem
         Item.value = 1500;
         Item.useAnimation = 15;
         Item.UseSound = SoundID.Item41;
-        Item.rare = 1;
+        Item.rare = ItemRarityID.Blue;
         Item.autoReuse = false;
     }
 

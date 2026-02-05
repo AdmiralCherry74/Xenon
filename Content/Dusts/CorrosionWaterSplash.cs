@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Xenon.Content.Dusts;
@@ -7,7 +8,7 @@ public class CorrosionWaterSplash : ModDust
 {
     public override void SetStaticDefaults()
     {
-        UpdateType = 33;
+        UpdateType = DustID.Water;
     }
 
     public override void OnSpawn(Dust dust)

@@ -4,7 +4,6 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.ActiveAndWiring.Lighting;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Lighting.OffState;
 

@@ -23,7 +23,7 @@ public class GooberPainting : ModTile
         };
         TileObjectData.newTile.AnchorWall = true;
         TileObjectData.addTile(Type);
-        DustType = 7;
+        DustType = DustID.WoodFurniture;
         TileID.Sets.DisableSmartCursor[Type] = true;
         AddMapEntry(new Color(120, 85, 60));
     }

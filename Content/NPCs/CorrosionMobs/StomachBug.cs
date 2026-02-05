@@ -17,7 +17,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
         {
             Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
 
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new()
             {
                 Velocity = 1f
             };
@@ -35,45 +35,29 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
             NPC.knockBackResist = 0.20f;
-            NPC.aiStyle = 3; 
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
             AIType = NPCID.WallCreeper;
             AnimationType = NPCID.WallCreeper;
 			Banner = NPC.type;
             BannerItem = ModContent.ItemType<StomachBugBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+            SpawnModBiomes = [ModContent.GetInstance<Corrosion>().Type, ModContent.GetInstance<CorrosionUnderground>().Type];
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-
             bestiaryEntry.Info.AddRange([
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
             ]);
         }
 
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
             {
                 return 0.15f;
             }
-                return 0;
+            return 0;
         }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -81,7 +65,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }
@@ -93,6 +77,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3));

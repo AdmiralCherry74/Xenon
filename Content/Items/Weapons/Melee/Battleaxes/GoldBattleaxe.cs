@@ -24,7 +24,7 @@ public class GoldBattleaxe : ModItem
 
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;
-        Item.rare = 0;
+        Item.rare = ItemRarityID.White;
     }
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

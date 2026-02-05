@@ -1,8 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Projectiles.Ranged.Ammo.Bolts;
 
 namespace Xenon.Content.Items.Ammo.Bolts;

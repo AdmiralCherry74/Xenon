@@ -38,11 +38,11 @@ public class CorrosionPot : ModTile
         _ = i - Main.tile[i, j].TileFrameX / 18;
         SoundEngine.PlaySound(SoundID.NPCDeath1, new Vector2(i * 16, j * 16));
         SoundEngine.PlaySound(SoundID.Dig, new Vector2(i * 16, j * 16));
-        Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, 22, 0f, 0f, 0, default, 1f);
+        Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Pot, 0f, 0f, 0, default, 1f);
         Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, ModContent.GoreType<Gores.CorrosionPotGore1>());
         Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, ModContent.GoreType<Gores.CorrosionPotGore2>());
         Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, ModContent.GoreType<Gores.CorrosionPotGore3>());
-        if (!WorldGen.gen && Main.netMode != 1)
+        if (!WorldGen.gen && Main.netMode != NetmodeID.MultiplayerClient)
         {
             if (WorldGen.genRand.NextBool(15))
             {

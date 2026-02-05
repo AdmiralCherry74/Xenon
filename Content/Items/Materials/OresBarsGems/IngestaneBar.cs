@@ -2,7 +2,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
-using Xenon.Content.Rarities;
 using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Materials.OresBarsGems;
@@ -18,7 +17,7 @@ public class IngestaneBar : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = 2;
+        Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 0, 21);
 	}
 	public override void AddRecipes()

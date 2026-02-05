@@ -3,7 +3,6 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.EvilMaterials;
@@ -30,7 +29,7 @@ public class TheDisembowelment : ModItem
 
 		Item.value = Item.sellPrice(copper: 90);
 		Item.UseSound = SoundID.Item1;
-		Item.rare = 2;
+		Item.rare = ItemRarityID.Green;
 	}
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {

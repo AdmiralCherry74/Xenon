@@ -1,5 +1,4 @@
-﻿using AltLibrary.Common.AltBiomes;
-using Terraria.GameContent.Personalities;
+﻿using Terraria.GameContent.Personalities;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
@@ -9,6 +8,7 @@ using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
 using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
+using AltLibrary.Common.AltBiomes;
 
 namespace Xenon.ModSupport;
 

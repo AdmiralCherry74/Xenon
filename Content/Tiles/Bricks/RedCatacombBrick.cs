@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using Xenon.Content.Dusts;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

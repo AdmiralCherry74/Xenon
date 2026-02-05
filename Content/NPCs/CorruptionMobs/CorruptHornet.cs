@@ -5,8 +5,6 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
-using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.CorruptionMobs
@@ -36,7 +34,7 @@ namespace Xenon.Content.NPCs.CorruptionMobs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 250;
             NPC.knockBackResist = 1f;
-            NPC.aiStyle = 5; 
+            NPC.aiStyle = NPCAIStyleID.Flying; 
             
             AIType = NPCID.HornetLeafy;
             AnimationType = NPCID.HornetLeafy;
@@ -83,7 +81,7 @@ namespace Xenon.Content.NPCs.CorruptionMobs
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

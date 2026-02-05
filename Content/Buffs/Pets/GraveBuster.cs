@@ -1,4 +1,3 @@
-using Xenon.Content.Projectiles;
 using Terraria;
 using Terraria.ModLoader;
 

@@ -7,13 +7,13 @@ using System;
 using System.Collections.Generic;
 using Terraria.WorldBuilding;
 using Terraria.Localization;
-using AltLibrary.Core.Generation;
-using AltLibrary.Common.Systems;
 using Xenon.Content.WorldGeneration.Passes;
 using Terraria.IO;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.Tiles.Natural.Other;
+using AltLibrary.Core.Generation;
+using AltLibrary.Common.Systems;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -306,7 +306,7 @@ public class Corrosion : EvilBiomeGenerationPass
                         t.WallType = (ushort)ModContent.WallType<GutstoneWall>();
                     }
                     // Make the walls at the top of the entrance randomly jut out
-                    if (Main.tile[x, y - 1].WallType == 0 && Main.tile[x, y].WallType == (ushort)ModContent.WallType<GutstoneWall>() && (y < j - radius - 45))
+                    if (Main.tile[x, y - 1].WallType == WallID.None && Main.tile[x, y].WallType == (ushort)ModContent.WallType<GutstoneWall>() && (y < j - radius - 45))
                     {
                         int doubleWide = (WorldGen.genRand.NextBool() ? -1 : 1);
                         Main.tile[x, y - 1].WallType = (ushort)ModContent.WallType<GutstoneWall>();
@@ -348,7 +348,7 @@ public class Corrosion : EvilBiomeGenerationPass
                         t.WallType = (ushort)ModContent.WallType<GutstoneWall>();
                     }
                     // Make the walls at the top of the entrance randomly jut out
-                    if (Main.tile[x, y - 1].WallType == 0 && Main.tile[x, y].WallType == (ushort)ModContent.WallType<GutstoneWall>() && (y < j - radius - 45))
+                    if (Main.tile[x, y - 1].WallType == WallID.None && Main.tile[x, y].WallType == (ushort)ModContent.WallType<GutstoneWall>() && (y < j - radius - 45))
                     {
                         int doubleWide = (WorldGen.genRand.NextBool() ? -1 : 1);
                         Main.tile[x, y - 1].WallType = (ushort)ModContent.WallType<GutstoneWall>();

@@ -33,7 +33,7 @@ namespace Xenon.Content.NPCs.CutNPCs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
             NPC.knockBackResist = 0f;
-            NPC.aiStyle = 3; 
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
             AIType = NPCID.FaceMonster;
             AnimationType = NPCID.MourningWood;
         }
@@ -77,7 +77,7 @@ namespace Xenon.Content.NPCs.CutNPCs
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

@@ -6,7 +6,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Weapons.Melee.Flails;
 
@@ -36,7 +35,7 @@ namespace Xenon.Content.NPCs.Other
             NPC.DeathSound = SoundID.NPCDeath50;
             NPC.value = 1000;
             NPC.knockBackResist = 0.5f;
-            NPC.aiStyle = 3; 
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
             
             AIType = NPCID.ZombieMushroomHat;
             AnimationType = NPCID.PirateCorsair;
@@ -87,7 +86,7 @@ namespace Xenon.Content.NPCs.Other
             {
                 for (int l = 0; l < 20; l++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, 54, 0f, 0f, 50, default, 1.5f);
+                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                     Main.dust[dust].velocity *= 2f;
                     Main.dust[dust].noGravity = true;
                 }

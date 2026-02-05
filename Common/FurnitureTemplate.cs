@@ -310,7 +310,7 @@ public abstract class DresserTemplate : FurnitureTemplate
 		if (player.cursorItemIconText == "")
 		{
 			player.cursorItemIconEnabled = false;
-			player.cursorItemIconID = 0;
+			player.cursorItemIconID = ItemID.None;
 		}
 	}
 
@@ -797,7 +797,7 @@ public abstract class ChestTemplate : FurnitureTemplate
 		if (player.cursorItemIconText == "")
 		{
 			player.cursorItemIconEnabled = false;
-			player.cursorItemIconID = 0;
+			player.cursorItemIconID = ItemID.None;
 		}
 	}
 }

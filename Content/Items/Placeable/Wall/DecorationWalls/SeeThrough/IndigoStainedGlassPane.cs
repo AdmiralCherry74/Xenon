@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using tModPorter.Rewriters;
 using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Walls.DecorationWall.SeeThrough;
 

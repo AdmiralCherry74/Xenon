@@ -23,7 +23,7 @@ public class Scarlet : ModItem
 
         Item.value = Item.buyPrice(gold: 10);
         Item.UseSound = SoundID.Item1;
-        Item.rare = 2;
+        Item.rare = ItemRarityID.Green;
     }
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Arms;
 
@@ -28,7 +27,7 @@ public class MAC10 : ModItem
         Item.value = 1000;
         Item.useAnimation = 9;
         Item.UseSound = SoundID.Item11;
-        Item.rare = 3;
+        Item.rare = ItemRarityID.Orange;
         Item.autoReuse = true;
     }
 

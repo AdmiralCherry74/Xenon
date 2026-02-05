@@ -2,7 +2,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Tiles.Natural.Mountains;
 
