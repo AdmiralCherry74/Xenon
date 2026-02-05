@@ -2,7 +2,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.ForestMushroom;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
@@ -16,9 +18,11 @@ internal class BiomeTileCounts : ModSystem
     public int CorrosionDesertTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
 	public int MountainTiles { get; set; }
-	public int CorrosionJungleTiles { get; set; }
+    public int ForestMushroomTiles { get; set; }
+    public int CorrosionJungleTiles { get; set; }
 	public int CorruptionJungleTiles { get; set; }
-    public int CrimsonJungleTiles { get; set; }
+	public int CrimsonJungleTiles { get; set; }
+	public int CatacombTiles {  get; set; }
 	public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
 		Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];
@@ -63,19 +67,25 @@ internal class BiomeTileCounts : ModSystem
 
 		CorrosionJungleTiles = tileCounts[ModContent.TileType<CorrosionJungleGrass>()];
 
-FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
+		FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
 
 		MountainTiles = tileCounts[ModContent.TileType<OuranoStone>()] +
 						tileCounts[ModContent.TileType<NyxStone>()] +
 						tileCounts[ModContent.TileType<AresStone>()] +
 						tileCounts[ModContent.TileType<HelioStone>()] +
 						tileCounts[ModContent.TileType<HephStone>()] +
-                        tileCounts[ModContent.TileType<HestiaStone>()] +
-                        tileCounts[ModContent.TileType<MossyOuranoStone>()] +
-                        tileCounts[ModContent.TileType<MossyNyxStone>()] +
-                        tileCounts[ModContent.TileType<MossyAresStone>()] +
-                        tileCounts[ModContent.TileType<MossyHelioStone>()] +
-                        tileCounts[ModContent.TileType<MossyHephStone>()] +
-                        tileCounts[ModContent.TileType<MossyHestiaStone>()];
-    }
+						tileCounts[ModContent.TileType<HestiaStone>()] +
+						tileCounts[ModContent.TileType<MossyOuranoStone>()] +
+						tileCounts[ModContent.TileType<MossyNyxStone>()] +
+						tileCounts[ModContent.TileType<MossyAresStone>()] +
+						tileCounts[ModContent.TileType<MossyHelioStone>()] +
+						tileCounts[ModContent.TileType<MossyHephStone>()] +
+						tileCounts[ModContent.TileType<MossyHestiaStone>()];
+
+		ForestMushroomTiles = tileCounts[ModContent.TileType<MushroomGrass>()];
+
+		CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
+						tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +
+						tileCounts[ModContent.TileType<PeriwinkleCatacombBrick>()];
+	}
 }

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles.Bricks;
 
-public class DungeonRedBrick : ModTile
+public class RedCatacombBrick : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -15,8 +15,12 @@ public class DungeonRedBrick : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBrick[Type] = true;
-        DustType = ModContent.DustType<CorrosionDust>();
-		HitSound = SoundID.Tink;
-		TileID.Sets.GeneralPlacementTiles[Type] = false;
-	}
+        DustType = DustID.RedMoss;
+        HitSound = SoundID.Tink;
+        MinPick = 75;
+    }
+    public override bool CanExplode(int i, int j)
+    {
+        return false;
+    }
 }

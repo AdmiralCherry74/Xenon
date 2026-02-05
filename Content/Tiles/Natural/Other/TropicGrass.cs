@@ -13,6 +13,8 @@ namespace Xenon.Content.Tiles.Natural.Other
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileMerge[Type][TileID.Grass] = true;
+            Main.tileMerge[Type][TileID.Dirt] = true;
+            Main.tileMerge[Type][TileID.DirtiestBlock] = true;
             Main.tileMerge[Type][TileID.Sand] = true;
             Main.tileMerge[Type][TileID.Stone] = true;
             Main.tileMerge[Type][TileID.Ebonstone] = true;

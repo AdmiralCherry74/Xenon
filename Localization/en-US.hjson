@@ -1395,11 +1395,6 @@ Mods: {
 				Tooltip: Snotsand that makes you fall through it
 			}
 
-			DungeonRedBrickBlock: {
-				DisplayName: Dungeon Red Bricks
-				Tooltip: ""
-			}
-
 			SeedPacket: {
 				DisplayName: Seed Packet
 				Tooltip: ""
@@ -1870,6 +1865,36 @@ Mods: {
 				DisplayName: Mining Splash Potion
 				Tooltip: Increases mining speed by 25%
 			}
+
+			RedCatacombBrickBlock: {
+				DisplayName: Red Catacomb Brick
+				Tooltip: ""
+			}
+
+			MushroomBlock: {
+				DisplayName: Mushroom Block
+				Tooltip: ""
+			}
+
+			ForestMushroomGrassSeeds: {
+				DisplayName: Forest Mushroom Grass Seeds
+				Tooltip: ""
+			}
+
+			RedCatacombWallItem: {
+				DisplayName: Red Catacomb Brick Wall Unsafe
+				Tooltip: ""
+			}
+
+			CharcoalCatacombBrickBlock: {
+				DisplayName: Charcoal Catacomb Brick
+				Tooltip: ""
+			}
+
+			PeriwinkleCatacombBrickBlock: {
+				DisplayName: Periwinkle Catacomb Brick Block
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1932,6 +1957,12 @@ Mods: {
 			Sawblade.DisplayName: Sawblade
 			LargeSawblade.DisplayName: Large Sawblade
 			SmallSawblade.DisplayName: Small Sawblade
+			BigFallenSurvivor.DisplayName: Big Fallen Survivor
+			BigFallenSurvivorExpert.DisplayName: Big Fallen Survivor
+			FallenSurvivor.DisplayName: Fallen Survivor
+			FallenSurvivorExpert.DisplayName: Fallen Survivor
+			SmallFallenSurvivor.DisplayName: Small Fallen Survivor
+			SmallFallenSurvivorExpert.DisplayName: Small Fallen Survivor
 		}
 
 		Tiles: {
@@ -2002,6 +2033,9 @@ Mods: {
 			SinfulManEater: This eats the man who sins...
 			NeuroticManEater: Brains are the most nutritious to them...
 			StarvedManEater: The feeling of hunger overwhelms them...
+			BigFallenSurvivor: These guys threw out some of the evil cultists, the cultists soon lead back a hoard of zombies
+			FallenSurvivor: When people inhabited the catacombs, they tried fighting off the swarm of zombies that invaded.
+			SmallFallenSurvivor: Little zombie, big trouble.
 		}
 
 		Biomes: {
@@ -2079,6 +2113,16 @@ Mods: {
 				DisplayName: Underground Corruption Jungle
 				TownNPCDialogueName: the Underground Corruption Jungle
 			}
+
+			ForestMushroom: {
+				DisplayName: Forest Mushroom
+				TownNPCDialogueName: the Forest Mushroom
+			}
+
+			Catacombs: {
+				DisplayName: Catacombs
+				TownNPCDialogueName: the Catacombs
+			}
 		}
 
 		Projectiles: {
@@ -2147,7 +2191,7 @@ Mods: {
 			InfernoSplashPotionProj.DisplayName: Inferno Splash Potion
 			InvisibilitySplashPotionProj.DisplayName: Invisibility Splash Potion
 			IronskinSplashPotionProj.DisplayName: Ironskin Splash Potion
-			LesserLuckSplashPotionProj.DisplayName: Lesser Luck Splash Potion 
+			LesserLuckSplashPotionProj.DisplayName: Lesser Luck Splash Potion
 			LuckSplashPotionProj.DisplayName: Luck Splash Potion
 			MagicPowerSplashPotionProj.DisplayName: Magic Power Splash Potion
 			ManaRegenerationSplashPotionProj.DisplayName: Mana Regeneration Splash Potion

@@ -5,29 +5,31 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.NPCs.CatacombMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
+using Xenon.Content.NPCs.Other;
 using Xenon.Content.NPCs.UndergroundMobs;
 
 namespace Xenon.Common.Globals;
 
 internal class XenonGlobalNPC : GlobalNPC
 {
-	public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
-	{
-		if (spawnInfo.Player.InModBiome<Mountain>())
-		{
-			pool.Clear();
-			pool.Add(ModContent.NPCType<Sparrow>(), 0.4f);
-			pool.Add(ModContent.NPCType<JebelSlime>(), 0.4f);
-			pool.Add(ModContent.NPCType<Chipmunk>(), 0.4f);
-		}
-		if (spawnInfo.Player.InModBiome<CorrosionDesert>())
-		{
-			pool.Clear();
+    public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
+    {
+        if (spawnInfo.Player.InModBiome<Mountain>())
+        {
+            pool.Clear();
+            pool.Add(ModContent.NPCType<Sparrow>(), 0.4f);
+            pool.Add(ModContent.NPCType<JebelSlime>(), 0.4f);
+            pool.Add(ModContent.NPCType<Chipmunk>(), 0.4f);
+        }
+        if (spawnInfo.Player.InModBiome<CorrosionDesert>())
+        {
+            pool.Clear();
             pool.Add(ModContent.NPCType<Gastritis>(), 1);
             pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
             if (NPC.downedBoss1)
@@ -40,13 +42,13 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(ModContent.NPCType<StomachBug>(), 0.50f);
                 pool.Add(ModContent.NPCType<HalfDigested>(), 0.75f);
             }
-		}
+        }
         if (spawnInfo.Player.InModBiome<CorrosionJungle>())
         {
             pool.Clear();
             pool.Add(ModContent.NPCType<Gastritis>(), 1);
-			pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
-			pool.Add(ModContent.NPCType<CorrodedHornet>(), 1.5f);
+            pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
+            pool.Add(ModContent.NPCType<CorrodedHornet>(), 1.5f);
             pool.Add(ModContent.NPCType<CorrodedHornet>(), 0.5f);
             if (NPC.downedBoss1)
             {
@@ -60,8 +62,8 @@ internal class XenonGlobalNPC : GlobalNPC
             }
         }
         if (spawnInfo.Player.InModBiome<Corrosion>())
-		{
-			pool.Clear();
+        {
+            pool.Clear();
             pool.Add(ModContent.NPCType<Gastritis>(), 1);
             pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
             if (NPC.downedBoss1)
@@ -69,7 +71,7 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(ModContent.NPCType<CorrodedCultist>(), 0.25f);
             }
             if (NPC.downedBoss2)
-			{
+            {
                 pool.Add(ModContent.NPCType<TapeWormHead>(), 0.50f);
                 pool.Add(ModContent.NPCType<StomachBug>(), 0.50f);
                 pool.Add(ModContent.NPCType<HalfDigested>(), 0.75f);
@@ -143,11 +145,19 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(NPCID.SkeletonAlien, 0.025f);
             }
         }
-        if (spawnInfo.Player.ZoneRockLayerHeight)
+        if (spawnInfo.Player.InModBiome<Catacombs>())
         {
-            pool.Add(ModContent.NPCType<SmallSawblade>(), 0.85f);
-            pool.Add(ModContent.NPCType<Sawblade>(), 0.60f);
-            pool.Add(ModContent.NPCType<LargeSawblade>(), 0.35f);
+            pool.Clear();
+            pool.Add(NPCID.Zombie, 0.5f);
+            pool.Add(ModContent.NPCType<SmallFallenSurvivor>(), 1.1f);
+            pool.Add(ModContent.NPCType<FallenSurvivor>(), 1);
+            pool.Add(ModContent.NPCType<BigFallenSurvivor>(), 0.9f);
+            if (Main.expertMode)
+            {
+                pool.Add(ModContent.NPCType<SmallFallenSurvivorExpert>(), 0.27f);
+                pool.Add(ModContent.NPCType<FallenSurvivorExpert>(), 0.25f);
+                pool.Add(ModContent.NPCType<BigFallenSurvivorExpert>(), 0.23f);
+            }
         }
 
         //if (Main.hardMode)

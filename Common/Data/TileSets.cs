@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.ForestMushroom;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
@@ -23,7 +25,11 @@ internal class TileSets
 		ModContent.TileType<PolloStone>()
 	);
 
-	public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
+    public static bool[] ForestMushroomBiome = TileID.Sets.Factory.CreateBoolSet(
+        ModContent.TileType<MushroomGrass>()
+    );
+
+    public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
 		ModContent.TileType<Quicksand>(),
 		ModContent.TileType<Ebonquicksand>(),
 		ModContent.TileType<Crimquicksand>(),
@@ -48,6 +54,12 @@ internal class TileSets
 		TileID.Crimtane,
 		ModContent.TileType<IngestaneOre>()
 	);
+
+	public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
+		ModContent.TileType<RedCatacombBrick>(),
+        ModContent.TileType<CharcoalCatacombBrick>(),
+		ModContent.TileType<PeriwinkleCatacombBrick>()
+    );
 
 	public static bool[] Purity = TileID.Sets.Factory.CreateBoolSet(
 	//made for use with Confection compatibility. this will not be used in most other cases

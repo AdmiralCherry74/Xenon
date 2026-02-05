@@ -6,7 +6,7 @@ using Xenon.Content.Tiles.Bricks;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 
-public class DungeonRedBrickBlock : ModItem
+public class PeriwinkleCatacombBrickBlock : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -20,7 +20,7 @@ public class DungeonRedBrickBlock : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<DungeonRedBrick>();
+        Item.createTile = ModContent.TileType<PeriwinkleCatacombBrick>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;
