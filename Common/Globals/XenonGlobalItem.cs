@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
+using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Common.Globals;
@@ -48,6 +49,13 @@ public class XenonGlobalItem : GlobalItem
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.TerraBlade] = ModContent.ItemType<AncientTerraBlade>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AncientTerraBlade>()] = ItemID.TerraBlade;
+
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RedCatacombWallItem>()] = ModContent.ItemType<RedCatacombWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RedCatacombWallUnsafeItem>()] = ModContent.ItemType<RedCatacombWallItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<LavenderCatacombWallItem>()] = ModContent.ItemType<LavenderCatacombWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<LavenderCatacombWallUnsafeItem>()] = ModContent.ItemType<LavenderCatacombWallItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CharcoalCatacombWallItem>()] = ModContent.ItemType<CharcoalCatacombWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CharcoalCatacombWallUnsafeItem>()] = ModContent.ItemType<CharcoalCatacombWallItem>();
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.SlimeGun] = ItemID.WaterGun;
         ItemID.Sets.ShimmerTransformToItem[ItemID.WaterGun] = ItemID.SlimeGun; //change to shimmer gun when tmod is 1.4.5

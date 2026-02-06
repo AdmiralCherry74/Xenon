@@ -21,7 +21,7 @@ public class NightGnasher : ModItem
         Item.DamageType = DamageClass.Melee;
         Item.damage = 15;
         Item.knockBack = 4.5f;
-        Item.crit = 6;
+        Item.crit = 4;
 
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;

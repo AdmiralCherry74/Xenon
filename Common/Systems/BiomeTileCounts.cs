@@ -86,6 +86,6 @@ internal class BiomeTileCounts : ModSystem
 
 		CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
 						tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +
-						tileCounts[ModContent.TileType<PeriwinkleCatacombBrick>()];
+						tileCounts[ModContent.TileType<LavenderCatacombBrick>()];
 	}
 }

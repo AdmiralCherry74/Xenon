@@ -1882,7 +1882,7 @@ Mods: {
 			}
 
 			RedCatacombWallItem: {
-				DisplayName: Red Catacomb Brick Wall Unsafe
+				DisplayName: Red Catacomb Wall
 				Tooltip: ""
 			}
 
@@ -1932,6 +1932,56 @@ Mods: {
 			WhiteSlimeBlockItem: {
 				DisplayName: White Slime Block
 				Tooltip: Resistance to Explosives, Weaker to pickaxes
+			}
+
+			LavenderCatacombBrickBlock: {
+				DisplayName: Lavender Catacomb Brick
+				Tooltip: ""
+			}
+
+			Denix: {
+				DisplayName: Denix
+				Tooltip: ""
+			}
+
+			PlatinumKey: {
+				DisplayName: Platinum Key
+				Tooltip: ""
+			}
+
+			PlatinumChest: {
+				DisplayName: Platinum Chest
+				Tooltip: ""
+			}
+
+			CharcoalCatacombWallItem: {
+				DisplayName: Charcoal Catacomb Wall
+				Tooltip: ""
+			}
+
+			CharcoalCatacombWallUnsafeItem: {
+				DisplayName: Cadaverous Charcoal Catacomb Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombWallItem: {
+				DisplayName: Lavender Catacomb Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombWallUnsafeItem: {
+				DisplayName: Cadaverous Lavender Catacomb Wall
+				Tooltip: ""
+			}
+
+			RedCatacombWallUnsafeItem: {
+				DisplayName: Cadaverous Red Catacomb Wall
+				Tooltip: ""
+			}
+
+			RedCatacombWebWallUnsafeItem: {
+				DisplayName: Red Catacomb Web Wall Unsafe Item
+				Tooltip: ""
 			}
 		}
 
@@ -2023,7 +2073,6 @@ Mods: {
 				Lapis: Lapis
 			}
 
-			LockedLivingJacarandawoodDoor.MapEntry: Locked Living Jacaranda Door
 			SwordLeverWild.MapEntry: Suspicious Looking Stone
 			SilverDoorClosed.MapEntry: Silver Door
 			SilverDoorOpened.MapEntry: Silver Door
@@ -2033,6 +2082,11 @@ Mods: {
 			CorrosionCrateTile.MapEntry: Corrosion Crate
 			CopperFurnaceTile.MapEntry: Copper Furnace
 			SandballTrap.MapEntry: Sandball Trap
+
+			PlatinumChest: {
+				MapEntry0: Platinum Chest
+				MapEntry1: Platinum Chest
+			}
 		}
 
 		Bestiary: {

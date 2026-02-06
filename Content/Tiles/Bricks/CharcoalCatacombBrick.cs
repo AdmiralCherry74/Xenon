@@ -14,7 +14,7 @@ public class CharcoalCatacombBrick : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBrick[Type] = true;
-        DustType = DustID.Lead;
+        DustType = DustID.Asphalt;
         HitSound = SoundID.Tink;
         MinPick = 75;
     }

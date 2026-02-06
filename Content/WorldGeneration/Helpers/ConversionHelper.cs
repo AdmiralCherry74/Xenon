@@ -65,12 +65,12 @@ public static class ConversionHelper
                     continue;
 
                 // Walls
-                _ = ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallPink[type], false);
-                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallGreen[type], false) ||
-                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallBlue[type], false);
+                _ = ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallPink[type], false) ||
+                ConvertWall<CharcoalCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallGreen[type], false) ||
+                ConvertWall<LavenderCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallBlue[type], false);
 
                 // Tiles
-                _ = ConvertTile<PeriwinkleCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertBlue[type], false) ||
+                _ = ConvertTile<LavenderCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertBlue[type], false) ||
                     ConvertTile<CharcoalCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertGreen[type], false) ||
                     ConvertTile<RedCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertPink[type], false);
             }
@@ -90,9 +90,9 @@ public static class ConversionHelper
                     continue;
 
                 // Walls
-                _ = ConvertWall(x, y, type => Common.Data.WallSets.CatacombConvertWallRed[type], WallID.PinkDungeonUnsafe);
-                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallGreen[type], false) ||
-                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallBlue[type], false);
+                _ = ConvertWall(x, y, type => Common.Data.WallSets.CatacombConvertWallRed[type], WallID.PinkDungeonUnsafe) ||
+                ConvertWall(x, y, type => Common.Data.WallSets.CatacombConvertWallCharcoal[type], WallID.GreenDungeonUnsafe) ||
+                ConvertWall(x, y, type => Common.Data.WallSets.CatacombConvertWallLavender[type], WallID.BlueDungeonUnsafe);
 
                 // Tiles
                 _ = ConvertTile(x, y, type => Common.Data.TileSets.CatacombConvertRed[type], TileID.PinkDungeonBrick) ||

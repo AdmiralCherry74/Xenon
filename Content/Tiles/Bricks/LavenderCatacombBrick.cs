@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Tiles.Bricks;
 
-public class PeriwinkleCatacombBrick : ModTile
+public class LavenderCatacombBrick : ModTile
 {
     public override void SetStaticDefaults()
     {

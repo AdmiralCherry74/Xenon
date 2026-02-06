@@ -4,7 +4,7 @@ using Xenon.Content.Tiles.Bricks;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 
-public class PeriwinkleCatacombBrickBlock : ModItem
+public class LavenderCatacombBrickBlock : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -18,7 +18,7 @@ public class PeriwinkleCatacombBrickBlock : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<PeriwinkleCatacombBrick>();
+        Item.createTile = ModContent.TileType<LavenderCatacombBrick>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

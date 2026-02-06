@@ -58,7 +58,7 @@ internal class TileSets
 	public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
 		ModContent.TileType<RedCatacombBrick>(),
 		ModContent.TileType<CharcoalCatacombBrick>(),
-		ModContent.TileType<PeriwinkleCatacombBrick>()
+		ModContent.TileType<LavenderCatacombBrick>()
 	);
 
 	public static bool[] DungeonConvertBlue = TileID.Sets.Factory.CreateBoolSet(
@@ -68,7 +68,7 @@ internal class TileSets
 
 	public static bool[] CatacombConvertPeriwinkle = TileID.Sets.Factory.CreateBoolSet(
 		//Just using this for conversions
-		ModContent.TileType<PeriwinkleCatacombBrick>()
+		ModContent.TileType<LavenderCatacombBrick>()
 	);
 
 	public static bool[] DungeonConvertPink = TileID.Sets.Factory.CreateBoolSet(

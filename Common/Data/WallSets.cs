@@ -16,20 +16,37 @@ namespace Xenon.Common.Data;
 
 internal class WallSets
 {
-	public static bool[] DungeonConvertWallBlue = WallID.Sets.Factory.CreateBoolSet(
+
+	public static bool[] CatacombWalls = WallID.Sets.Factory.CreateBoolSet(
+	ModContent.WallType<RedCatacombWallUnsafe>(),
+	ModContent.WallType<LavenderCatacombWallUnsafe>(),
+	ModContent.WallType<CharcoalCatacombWallUnsafe>()
+	);
+
+    #region Conversion
+    public static bool[] DungeonConvertWallBlue = WallID.Sets.Factory.CreateBoolSet(
 		//Just using this for conversions
 		WallID.BlueDungeonUnsafe
+	);
+
+	public static bool[] CatacombConvertWallLavender = WallID.Sets.Factory.CreateBoolSet(
+	ModContent.WallType<LavenderCatacombWallUnsafe>()
 	);
 
 	public static bool[] DungeonConvertWallPink = WallID.Sets.Factory.CreateBoolSet(
 		WallID.PinkDungeonUnsafe
 	);
 
-    public static bool[] CatacombConvertWallRed = WallID.Sets.Factory.CreateBoolSet(
+	public static bool[] CatacombConvertWallRed = WallID.Sets.Factory.CreateBoolSet(
 		ModContent.WallType<RedCatacombWallUnsafe>()
 	);
 
-    public static bool[] DungeonConvertWallGreen = WallID.Sets.Factory.CreateBoolSet(
+	public static bool[] DungeonConvertWallGreen = WallID.Sets.Factory.CreateBoolSet(
 		WallID.GreenDungeonUnsafe
 	);
+
+	public static bool[] CatacombConvertWallCharcoal = WallID.Sets.Factory.CreateBoolSet(
+	ModContent.WallType<CharcoalCatacombWallUnsafe>()
+	);
+    #endregion
 }

@@ -20,7 +20,7 @@ public class MoissaniteTriAxe : ModItem
         Item.DamageType = DamageClass.Melee;
         Item.damage = 38;
         Item.knockBack = 6;
-        Item.crit = 12;
+        Item.crit = 6;
 
         Item.value = Item.sellPrice(silver: 64);
         Item.UseSound = SoundID.Item1;

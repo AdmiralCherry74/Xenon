@@ -5,13 +5,13 @@ using Terraria.ID;
 
 namespace Xenon.Content.Walls.BuildingWalls.Stones;
 
-public class RedCatacombWallUnsafe : ModWall
+public class RedCatacombWebWallUnsafe : ModWall
 {
 	public override void SetStaticDefaults()
 	{
 		Main.wallHouse[Type] = false;
 		AddMapEntry(new Color(50, 30, 27));
 		DustType = DustID.RedMoss;
-		RegisterItemDrop(ModContent.ItemType<Items.Placeable.Wall.BuildingWalls.Stone.RedCatacombWallItem>());
+		RegisterItemDrop(ModContent.ItemType<Items.Placeable.Wall.BuildingWalls.Stone.RedCatacombWebWallUnsafeItem>());
 	}
 }
