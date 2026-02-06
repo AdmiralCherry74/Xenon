@@ -28,11 +28,11 @@ public class SmoothRhyoliteBlock : ModItem
         Item.useAnimation = 15;
         Item.height = 16;
     }
-	public override void AddRecipes()
-	{
+    public override void AddRecipes()
+    {
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<RhyoliteBlock>())
             .AddTile(TileID.WorkBenches)
             .Register();
-	}
+    }
 }

@@ -31,22 +31,22 @@ public class AncientTerraBlade : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Yellow;
     }
-	public override void HoldItem(Player player)
-	{
-		if (fireDelay > 0 && player.itemAnimation > 0) fireDelay--;
-		if (fireDelay == 0)
+    public override void HoldItem(Player player)
+    {
+        if (fireDelay > 0 && player.itemAnimation > 0) fireDelay--;
+        if (fireDelay == 0)
         {
-			Vector2 mousePos = Main.MouseScreen;
+            Vector2 mousePos = Main.MouseScreen;
             float velX = mousePos.X + Main.screenPosition.X - player.Center.X;
-			float velY = mousePos.Y + Main.screenPosition.Y - player.Center.Y;
+            float velY = mousePos.Y + Main.screenPosition.Y - player.Center.Y;
             Vector2 v = new(velX, velY); v.Normalize(); v *= Item.shootSpeed;
-			int p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.Center, v, ModContent.ProjectileType<AncientTerraBeam>(), 87, 6f);
-			Main.projectile[p].owner = player.whoAmI;
-			fireDelay = 24;
-		}
-	}
-	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-	{
+            int p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.Center, v, ModContent.ProjectileType<AncientTerraBeam>(), 87, 6f);
+            Main.projectile[p].owner = player.whoAmI;
+            fireDelay = 24;
+        }
+    }
+    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+    {
         return false;
-	}
+    }
 }

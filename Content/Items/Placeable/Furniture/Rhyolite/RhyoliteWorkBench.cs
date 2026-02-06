@@ -8,7 +8,7 @@ public class RhyoliteWorkBench : ModItem
 {
     public override void SetDefaults()
     {
-        
+
         Item.autoReuse = true;
         Item.consumable = true;
         Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyoliteWorkBench>();

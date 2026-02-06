@@ -16,7 +16,7 @@ public class MetalBolt : ModItem
         Item.width = 10;
         Item.height = 22;
 
-        Item.damage = 10; 
+        Item.damage = 10;
         Item.DamageType = DamageClass.Ranged;
 
         Item.maxStack = Item.CommonMaxStack;

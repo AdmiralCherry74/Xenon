@@ -21,7 +21,7 @@ public class TheRange : ModItem
         Item.height = 16;
 
         Item.useStyle = ItemUseStyleID.Shoot;
-        Item.useTime = 25; 
+        Item.useTime = 25;
         Item.useAnimation = 25;
         Item.noMelee = true;
         Item.noUseGraphic = true;
@@ -36,6 +36,6 @@ public class TheRange : ModItem
         Item.value = Item.sellPrice(silver: 20);
 
         Item.shoot = ModContent.ProjectileType<RangeYoYoProj>();
-        Item.shootSpeed = 16f;		
+        Item.shootSpeed = 16f;
     }
 }

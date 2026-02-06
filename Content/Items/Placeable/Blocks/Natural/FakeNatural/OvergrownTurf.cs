@@ -15,7 +15,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.Natural.FakeNatural
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Other.OvergrownTurf>());
         }
-    
+
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

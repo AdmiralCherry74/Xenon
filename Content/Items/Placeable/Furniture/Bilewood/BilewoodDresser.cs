@@ -6,18 +6,18 @@ namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
 public class BilewoodDresser : ModItem
 {
-	public override void SetDefaults()
-	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodDresser>());
-		Item.width = 20;
-		Item.height = 20;
-		Item.value = Item.sellPrice(copper: 60);
-	}
+    public override void SetDefaults()
+    {
+        Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.Bilewood.BilewoodDresser>());
+        Item.width = 20;
+        Item.height = 20;
+        Item.value = Item.sellPrice(copper: 60);
+    }
 
-	public override void AddRecipes()
-	{
-		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 16)
-			.AddTile(TileID.Sawmill).Register();
-	}
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 16)
+            .AddTile(TileID.Sawmill).Register();
+    }
 }

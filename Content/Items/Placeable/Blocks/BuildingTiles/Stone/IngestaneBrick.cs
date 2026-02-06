@@ -28,12 +28,12 @@ public class IngestaneBrick : ModItem
         Item.useAnimation = 15;
         Item.height = 16;
     }
-	public override void AddRecipes()
-	{
+    public override void AddRecipes()
+    {
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<IngestaneOre>())
             .AddIngredient(ModContent.ItemType<GutstoneBlock>(), 5)
             .AddTile(TileID.Furnaces)
             .Register();
-	}
+    }
 }

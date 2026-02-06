@@ -9,7 +9,7 @@ public class RhyoliteDoor : ModItem
 {
     public override void SetDefaults()
     {
-        
+
         Item.consumable = true;
         Item.createTile = ModContent.TileType<RhyoliteDoorClosed>();
         Item.width = 16;

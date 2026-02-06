@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.UndergroundMobs
@@ -96,7 +97,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteGel>(), 1, 10, 14));
         }
     }
 }

@@ -24,8 +24,8 @@ public class AUG : ModItem
         Item.reuseDelay = 17;
         Item.shoot = ProjectileID.Bullet;
         Item.useStyle = ItemUseStyleID.Shoot;
-		Item.consumeAmmoOnLastShotOnly = true;
-		Item.value = 1000;
+        Item.consumeAmmoOnLastShotOnly = true;
+        Item.value = 1000;
         Item.useAnimation = 30;
         Item.UseSound = SoundID.Item31;
         Item.rare = ItemRarityID.Blue;

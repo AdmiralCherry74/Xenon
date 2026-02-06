@@ -9,7 +9,7 @@ public class Pouch : ModItem
     public override void SetStaticDefaults()
     {
         Item.ResearchUnlockCount = 100;
-        Item.value = Item.buyPrice(silver:10);
+        Item.value = Item.buyPrice(silver: 10);
         Item.rare = ItemRarityID.Quest;
     }
     public override void AddRecipes()

@@ -4,16 +4,16 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Stone
 {
-	public class GutstoneBlock : ModItem
-	{
-		public override void SetStaticDefaults()
-		{
-			Item.ResearchUnlockCount = 100;
-		}
+    public class GutstoneBlock : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 100;
+        }
 
-		public override void SetDefaults()
-		{
-			Item.DefaultToPlaceableTile(ModContent.TileType<Gutstone>());
-		}
-	}
+        public override void SetDefaults()
+        {
+            Item.DefaultToPlaceableTile(ModContent.TileType<Gutstone>());
+        }
+    }
 }

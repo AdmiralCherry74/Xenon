@@ -8,7 +8,7 @@ public class RhyoliteCandle : ModItem
 {
     public override void SetDefaults()
     {
-        
+
         Item.autoReuse = true;
         Item.noWet = true;
         Item.consumable = true;

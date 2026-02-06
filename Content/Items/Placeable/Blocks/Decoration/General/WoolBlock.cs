@@ -19,7 +19,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.Decoration.General
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.Cobweb, 4);
+            recipe.AddIngredient(ItemID.Cobweb, 1);
             recipe.AddTile(TileID.Loom);
             recipe.Register();
         }

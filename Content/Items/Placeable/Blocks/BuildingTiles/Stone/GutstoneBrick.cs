@@ -28,11 +28,11 @@ public class GutstoneBrick : ModItem
         Item.useAnimation = 15;
         Item.height = 16;
     }
-	public override void AddRecipes()
-	{
+    public override void AddRecipes()
+    {
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<GutstoneBlock>(), 2)
             .AddTile(TileID.WorkBenches)
             .Register();
-	}
+    }
 }

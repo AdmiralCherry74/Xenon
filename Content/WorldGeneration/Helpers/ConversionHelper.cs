@@ -2,10 +2,12 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Walls.BuildingWalls.Stones;
 
 namespace Xenon.Content.WorldGeneration.Helpers;
 
@@ -48,9 +50,58 @@ public static class ConversionHelper
                     ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
             }
         }
+
+    }
+    public static void ConvertToCatacomb(int i, int j, int size = 4)
+    {
+        for (var x = i - size; x <= i + size; x++)
+        {
+            for (var y = j - size; y <= j + size; y++)
+            {
+                if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - i) + Math.Abs(y - j) >= Math.Sqrt(size * size + size * size))
+                    continue;
+
+                if (Main.tile[x, y].TileType > TileLoader.TileCount || Main.tile[x, y].WallType > WallLoader.WallCount)
+                    continue;
+
+                // Walls
+                _ = ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallPink[type], false);
+                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallGreen[type], false) ||
+                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallBlue[type], false);
+
+                // Tiles
+                _ = ConvertTile<PeriwinkleCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertBlue[type], false) ||
+                    ConvertTile<CharcoalCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertGreen[type], false) ||
+                    ConvertTile<RedCatacombBrick>(x, y, type => Common.Data.TileSets.DungeonConvertPink[type], false);
+            }
+        }
     }
 
-    private static bool ConvertWall<TWall>(int x, int y, Func<int, bool> validTypePredicate) where TWall : ModWall
+    public static void ConvertToDungeon(int i, int j, int size = 4)
+    {
+        for (var x = i - size; x <= i + size; x++)
+        {
+            for (var y = j - size; y <= j + size; y++)
+            {
+                if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - i) + Math.Abs(y - j) >= Math.Sqrt(size * size + size * size))
+                    continue;
+
+                if (Main.tile[x, y].TileType > TileLoader.TileCount || Main.tile[x, y].WallType > WallLoader.WallCount)
+                    continue;
+
+                // Walls
+                _ = ConvertWall(x, y, type => Common.Data.WallSets.CatacombConvertWallRed[type], WallID.PinkDungeonUnsafe);
+                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallGreen[type], false) ||
+                //ConvertWall<RedCatacombWallUnsafe>(x, y, type => Common.Data.WallSets.DungeonConvertWallBlue[type], false);
+
+                // Tiles
+                _ = ConvertTile(x, y, type => Common.Data.TileSets.CatacombConvertRed[type], TileID.PinkDungeonBrick) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.CatacombConvertCharcoal[type], TileID.GreenDungeonBrick) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.CatacombConvertPeriwinkle[type], TileID.BlueDungeonBrick);
+            }
+        }
+    }
+    private static bool ConvertWall<TWall>(int x, int y, Func<int, bool> validTypePredicate, bool v) where TWall : ModWall
     {
         return ConvertWall(x, y, validTypePredicate, ModContent.WallType<TWall>());
     }

@@ -96,8 +96,8 @@ namespace Xenon.Content.NPCs.UndergroundMobs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 2));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpikedGel>(), 3, 1, 3));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteGel>(), 1, 2, 4));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<HardenedWhiteGel>(), 10, 1, 3));
         }
     }
 }

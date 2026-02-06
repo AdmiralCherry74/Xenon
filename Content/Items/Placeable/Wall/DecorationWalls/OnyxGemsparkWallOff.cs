@@ -19,11 +19,11 @@ public class OnyxGemsparkWallOff : ModItem
         Item.width = 32;
         Item.height = 32;
         Item.useTurn = true;
-        Item.useTime = 15;
+        Item.useTime = 5;
         Item.createWall = ModContent.WallType<Walls.DecorationWall.General.OnyxGemsparkWallOff>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
-        Item.useAnimation = 15;
+        Item.useAnimation = 10;
     }
 
     public override void AddRecipes()

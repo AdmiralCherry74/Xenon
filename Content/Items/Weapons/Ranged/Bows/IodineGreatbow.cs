@@ -30,8 +30,8 @@ class IodineGreatbow : ModItem
     }
 }
 
-        //public override void AddRecipes()
-        //CreateRecipe()
-        //    .AddIngredient(ModContent.ItemType<IodineBar>(), 20)
-        //    .AddTile(TileID.Anvils)
-        //    .Register();
+//public override void AddRecipes()
+//CreateRecipe()
+//    .AddIngredient(ModContent.ItemType<IodineBar>(), 20)
+//    .AddTile(TileID.Anvils)
+//    .Register();

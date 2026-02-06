@@ -4,16 +4,16 @@ using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Sinking
 {
-	public class QuickmudBlock : ModItem
-	{
-		public override void SetStaticDefaults()
-		{
-			Item.ResearchUnlockCount = 100;
-		}
+    public class QuickmudBlock : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 100;
+        }
 
-		public override void SetDefaults()
-		{
-			Item.DefaultToPlaceableTile(ModContent.TileType<Quickmud>());
-		}
-	}
+        public override void SetDefaults()
+        {
+            Item.DefaultToPlaceableTile(ModContent.TileType<Quickmud>());
+        }
+    }
 }

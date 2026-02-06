@@ -6,10 +6,10 @@ using Terraria.ModLoader;
 using Xenon.Content.Projectiles.Melee.Sword;
 using Xenon.Content.Rarities;
 
-namespace Xenon.Content.Items.Weapons.Melee.Swords;
+namespace Xenon.Content.Items.DeveloperItems;
 
 public class ExoticTerraBlade : ModItem
-    //test weapon and shit. this is meant to be broken and unobtainable
+//test weapon and shit. this is meant to be broken and unobtainable
 {
     private int fireDelay = 5;
     public override void SetDefaults()

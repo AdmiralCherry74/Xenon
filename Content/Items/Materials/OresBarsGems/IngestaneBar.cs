@@ -8,23 +8,23 @@ namespace Xenon.Content.Items.Materials.OresBarsGems;
 
 public class IngestaneBar : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		Item.ResearchUnlockCount = 25;
-	}
-	public override void SetDefaults()
-	{
+    public override void SetStaticDefaults()
+    {
+        Item.ResearchUnlockCount = 25;
+    }
+    public override void SetDefaults()
+    {
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
         Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 0, 21);
-	}
-	public override void AddRecipes()
-	{
-		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<IngestaneOre>(), 3)
-			.AddTile(TileID.Furnaces)
-			.Register();
-	}
+    }
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<IngestaneOre>(), 3)
+            .AddTile(TileID.Furnaces)
+            .Register();
+    }
 }

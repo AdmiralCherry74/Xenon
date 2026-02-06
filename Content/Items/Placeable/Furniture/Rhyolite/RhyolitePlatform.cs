@@ -14,7 +14,7 @@ public class RhyolitePlatform : ModItem
 
     public override void SetDefaults()
     {
-        
+
         Item.autoReuse = true;
         Item.createTile = ModContent.TileType<Tiles.Furniture.Rhyolite.RhyolitePlatform>();
         Item.consumable = true;

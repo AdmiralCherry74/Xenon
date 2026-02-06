@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.OresBarsGems;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Decoration.SeeThrough
 {
@@ -21,7 +21,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.Decoration.SeeThrough
             Recipe recipe = CreateRecipe(4);
 
             recipe.AddIngredient(ItemID.Glass, 4);
-            recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Flint>(), 1);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
         }

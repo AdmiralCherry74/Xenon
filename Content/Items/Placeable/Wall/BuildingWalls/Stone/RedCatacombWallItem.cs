@@ -19,11 +19,11 @@ public class RedCatacombWallItem : ModItem
         Item.consumable = true;
         Item.width = 16;
         Item.useTurn = true;
-        Item.useTime = 10;
+        Item.useTime = 5;
         Item.createWall = ModContent.WallType<Walls.BuildingWalls.Stones.RedCatacombWallUnsafe>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
-        Item.useAnimation = 15;
+        Item.useAnimation = 10;
         Item.height = 16;
     }
 

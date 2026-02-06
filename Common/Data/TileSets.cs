@@ -57,11 +57,41 @@ internal class TileSets
 
 	public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
 		ModContent.TileType<RedCatacombBrick>(),
-        ModContent.TileType<CharcoalCatacombBrick>(),
+		ModContent.TileType<CharcoalCatacombBrick>(),
 		ModContent.TileType<PeriwinkleCatacombBrick>()
+	);
+
+	public static bool[] DungeonConvertBlue = TileID.Sets.Factory.CreateBoolSet(
+		//Just using this for conversions
+		TileID.BlueDungeonBrick
+	);
+
+	public static bool[] CatacombConvertPeriwinkle = TileID.Sets.Factory.CreateBoolSet(
+		//Just using this for conversions
+		ModContent.TileType<PeriwinkleCatacombBrick>()
+	);
+
+	public static bool[] DungeonConvertPink = TileID.Sets.Factory.CreateBoolSet(
+        //Just using this for conversions
+        TileID.PinkDungeonBrick
+	);
+
+	public static bool[] CatacombConvertRed = TileID.Sets.Factory.CreateBoolSet(
+		//Just using this for conversions
+		ModContent.TileType<RedCatacombBrick>()
+	);
+
+	public static bool[] DungeonConvertGreen = TileID.Sets.Factory.CreateBoolSet(
+		//Just using this for conversions
+		TileID.GreenDungeonBrick
+	);
+
+    public static bool[] CatacombConvertCharcoal = TileID.Sets.Factory.CreateBoolSet(
+        //Just using this for conversions
+        ModContent.TileType<CharcoalCatacombBrick>()
     );
 
-	public static bool[] Purity = TileID.Sets.Factory.CreateBoolSet(
+    public static bool[] Purity = TileID.Sets.Factory.CreateBoolSet(
 	//made for use with Confection compatibility. this will not be used in most other cases
 		TileID.Dirt,
 		TileID.Grass,
