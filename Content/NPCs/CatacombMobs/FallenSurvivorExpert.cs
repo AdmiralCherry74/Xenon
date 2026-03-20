@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.NPCs.CatacombMobs
@@ -100,6 +101,8 @@ namespace Xenon.Content.NPCs.CatacombMobs
         {
             //npcLoot.Add(ItemDropRule.Common(ItemID.Aglet, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenPickaxeHead>(), 10, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlatinumKey>(), 152, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Viscera>(), 2, 1, 3));
         }
     }
 }

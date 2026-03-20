@@ -165,6 +165,7 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(ModContent.NPCType<SmallFallenSurvivor>(), 0.5f);
             pool.Add(ModContent.NPCType<FallenSurvivor>(), 0.4f);
             pool.Add(ModContent.NPCType<BigFallenSurvivor>(), 0.3f);
+            pool.Add(ModContent.NPCType<Revenant>(), 0.2f);
             if (Main.expertMode)
             {
                 pool.Add(NPCID.ArmedZombie, 0.5f); //temporary

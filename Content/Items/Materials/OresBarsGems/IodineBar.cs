@@ -17,6 +17,7 @@ public class IodineBar : ModItem
         Item.height = 20;
         Item.rare = ItemRarityID.Master;
         Item.value = Item.sellPrice(0, 0, 21);
+        Item.maxStack = 9999;
     }
 
     public override void AddRecipes()

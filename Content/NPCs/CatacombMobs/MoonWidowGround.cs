@@ -1,10 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
+using Xenon.Content.Items.Consumables;
+using Xenon.Content.Items.Materials;
 
 namespace Xenon.Content.NPCs.CatacombMobs
 {
@@ -65,6 +68,12 @@ namespace Xenon.Content.NPCs.CatacombMobs
                 gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height - 20f), NPC.velocity, 99, NPC.scale);
                 Main.gore[gore].velocity *= 0.3f;
             }
+        }
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            //npcLoot.Add(ItemDropRule.Common(ItemID.Aglet, 35, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlatinumKey>(), 152, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Viscera>(), 2, 1, 3));
         }
     }
 }

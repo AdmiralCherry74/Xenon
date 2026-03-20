@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs.Counterable;
+using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 
@@ -103,6 +104,8 @@ namespace Xenon.Content.NPCs.CatacombMobs
             //npcLoot.Add(ItemDropRule.Common(ItemID.Aglet, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BrokenPickaxeHead>(), 10, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Scarlet>(), 40, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlatinumKey>(), 152, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Viscera>(), 2, 1, 3));
         }
     }
 }

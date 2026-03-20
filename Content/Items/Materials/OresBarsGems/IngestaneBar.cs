@@ -19,6 +19,7 @@ public class IngestaneBar : ModItem
         Item.height = 20;
         Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 0, 21);
+        Item.maxStack = 9999;
     }
     public override void AddRecipes()
     {

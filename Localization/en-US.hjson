@@ -14,7 +14,7 @@ Mods: {
 				DisplayName: Corrosion
 				Description: Gastric hunger is guaranteed to be present in your world.
 				GenPassName: Making the world hungry
-				DryadTextDescriptor: Corrosion
+				DryadTextDescriptor: corroded
 			}
 		}
 
@@ -1582,7 +1582,7 @@ Mods: {
 
 			Flint: {
 				DisplayName: Flint
-				Tooltip: "'A fragment of gravel'"
+				Tooltip: Best used for splash potions
 			}
 
 			ChastityRing: {
@@ -1906,6 +1906,7 @@ Mods: {
 				Tooltip:
 					'''
 					Used by the Clentaminator
+					Used as a developer tool
 					Spreads the Catacombs
 					'''
 			}
@@ -1915,6 +1916,7 @@ Mods: {
 				Tooltip:
 					'''
 					Used by the Clentaminator
+					Used as a developer tool
 					Spreads the Dungeon
 					'''
 			}
@@ -1979,8 +1981,98 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RedCatacombWebWallUnsafeItem: {
-				DisplayName: Red Catacomb Web Wall Unsafe Item
+			CharcoalCatacombTileWallItem: {
+				DisplayName: Charcoal Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			CharcoalCatacombTileWallUnsafeItem: {
+				DisplayName: Cadaverous Charcoal Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombTileWallItem: {
+				DisplayName: Lavender Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombTileWallUnsafeItem: {
+				DisplayName: Cadaverous Lavender Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			RedCatacombTileWallItem: {
+				DisplayName: Red Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			RedCatacombTileWallUnsafeItem: {
+				DisplayName: Cadaverous Red Catacomb Tile Wall
+				Tooltip: ""
+			}
+
+			CharcoalCatacombSlabWallItem: {
+				DisplayName: Charcoal Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			CharcoalCatacombSlabWallUnsafeItem: {
+				DisplayName: Cadaverous Charcoal Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombSlabWallItem: {
+				DisplayName: Lavender Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			LavenderCatacombSlabWallUnsafeItem: {
+				DisplayName: Cadaverous Lavender Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			RedCatacombSlabWallItem: {
+				DisplayName: Red Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			RedCatacombSlabWallUnsafeItem: {
+				DisplayName: Cadaverous Red Catacomb Slab Wall
+				Tooltip: ""
+			}
+
+			Viscera: {
+				DisplayName: Viscera
+				Tooltip: ""
+			}
+
+			IndiumOreBlock: {
+				DisplayName: Indium Ore
+				Tooltip: ""
+			}
+
+			BlackLensBlockItem: {
+				DisplayName: Black Lens Block
+				Tooltip: ""
+			}
+
+			LensBlockItem: {
+				DisplayName: Lens Block
+				Tooltip: ""
+			}
+
+			IndiumBar: {
+				DisplayName: Indium Bar
+				Tooltip: ""
+			}
+
+			Stratono: {
+				DisplayName: Stratono
+				Tooltip: ""
+			}
+
+			AlluminumOreBlock: {
+				DisplayName: Alluminum Ore Block
 				Tooltip: ""
 			}
 		}
@@ -2055,6 +2147,7 @@ Mods: {
 			MoonWidowWall.DisplayName: Moon Widow
 			BucketheadZombie.DisplayName: Buckethead Zombie
 			ConeheadZombie.DisplayName: Conehead Zombie
+			Revenant.DisplayName: Revenant
 		}
 
 		Tiles: {
@@ -2135,6 +2228,7 @@ Mods: {
 			ConeheadZombie: This zombie like to party. he mistook the traffic cone for a party hat.
 			BucketheadZombie: This zombie forgot that he was wearing the bucket.
 			MoonWidow: Sticky webs lead to sticky situations.
+			Revenant: Abandoned in this grave of the dead. Revenants are a type of spirit that haunt the living if they dare enter.
 		}
 
 		Biomes: {

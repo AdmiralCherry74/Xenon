@@ -11,7 +11,7 @@ public class ScorchingIce : ModBiome
     public override string MapBackground => BackgroundPath;
     public override int Music => MusicID.Ice;
     public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
+    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override bool IsBiomeActive(Player player)
     {
         return ModContent.GetInstance<BiomeTileCounts>().FrozenLavaTiles > 150 && player.ZoneRockLayerHeight;

@@ -100,27 +100,24 @@ public class MonsterBanner : ModTile
 					t = ModContent.NPCType<MarbleElemental>();
 					break;
 				case 13:
-					t = ModContent.NPCType<Mimicling>();
-					break;
-				case 14:
 					t = ModContent.NPCType<NightmareWalker>();
 					break;
-				case 15:
+				case 14:
 					t = ModContent.NPCType<SnowLeopard>();
 					break;
-				case 16:
+				case 15:
 					t = ModContent.NPCType<SporeSlime>();
 					break;
-				case 17:
+				case 16:
 					t = ModContent.NPCType<StomachBug>();
 					break;
-				case 18:
+				case 17:
 					t = ModContent.NPCType<TapeWormHead>();
 					break;
-				case 19:
+				case 18:
 					t = ModContent.NPCType<JebelSlime>();
 					break;
-				case 20:
+				case 19:
 					t = ModContent.NPCType<StarvedManEater>();
 					break;
 				default:
