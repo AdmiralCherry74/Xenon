@@ -1,8 +1,8 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.EvilMaterials;
-using Xenon.Content.Items.Materials.OresBarsGems;
 using Xenon.Content.Projectiles.Melee.Boomerang;
 
 namespace Xenon.Content.Items.Weapons.Melee.Boomerangs;

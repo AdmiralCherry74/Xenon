@@ -15,6 +15,13 @@ public class IndiumOre : ModTile
         Main.tileSpelunker[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBlockLight[Type] = true;
+        Main.tileShine2[Type] = true;
+        Main.tileShine[Type] = 1025;
+        Main.tileOreFinderPriority[Type] = 255;
+        Main.tileSpelunker[Type] = true;
+        Main.tileBlockLight[Type] = true;
+        Main.tileMerge[Type][TileID.Mud] = true;
+        Main.tileMerge[TileID.Mud][Type] = true;
         AddMapEntry(new Color(31, 35, 84));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<IndiumDust>();

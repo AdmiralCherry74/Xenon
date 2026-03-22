@@ -2072,7 +2072,42 @@ Mods: {
 			}
 
 			AlluminumOreBlock: {
-				DisplayName: Alluminum Ore Block
+				DisplayName: Alluminum Ore
+				Tooltip: ""
+			}
+
+			CinnabarOreBlock: {
+				DisplayName: Cinnabar Ore
+				Tooltip: ""
+			}
+
+			XieiteOreBlock: {
+				DisplayName: Xieite Ore
+				Tooltip: ""
+			}
+
+			AluminumBar: {
+				DisplayName: Aluminum Bar
+				Tooltip: ""
+			}
+
+			CinnabarBar: {
+				DisplayName: Cinnabar Bar
+				Tooltip: ""
+			}
+
+			XieiteBar: {
+				DisplayName: Xieite Bar
+				Tooltip: ""
+			}
+
+			AluminumOreBlock: {
+				DisplayName: Aluminum Ore Block
+				Tooltip: ""
+			}
+
+			CinnabarAnvilItem: {
+				DisplayName: Cinnabar Anvil Item
 				Tooltip: ""
 			}
 		}
@@ -2283,8 +2318,8 @@ Mods: {
 			}
 
 			CorrosionUndergroundJungle: {
-				DisplayName: Corrosion Underground Jungle
-				TownNPCDialogueName: the Corrosion Underground Jungle
+				DisplayName: Underground Corrosion Jungle
+				TownNPCDialogueName: the  Underground Corrosion Jungle
 			}
 
 			CrimsonJungle: {

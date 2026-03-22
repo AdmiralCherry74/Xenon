@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 
-namespace Xenon.Content.Tiles.Natural.Corrosion;
+namespace Xenon.Content.Tiles.Natural.Ores;
 
 public class IngestaneOre : ModTile
 {

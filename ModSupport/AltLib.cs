@@ -9,6 +9,7 @@ using Xenon.Content.NPCs.Other;
 using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using AltLibrary.Common.AltBiomes;
+using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.ModSupport;
 
@@ -53,7 +54,7 @@ internal class CorrosionAltBiome : AltBiome
         //FountainTileStyle = 0;
 
         SeedType = ModContent.ItemType<CorrosionSeeds>();
-        BiomeOre = ModContent.TileType<Content.Tiles.Natural.Corrosion.IngestaneOre>();
+        BiomeOre = ModContent.TileType<IngestaneOre>();
         BiomeOreItem = ModContent.ItemType<Content.Items.Placeable.Blocks.Natural.OresAndGems.IngestaneOre>();
 
         AltarTile = ModContent.TileType<GastricAltar>();

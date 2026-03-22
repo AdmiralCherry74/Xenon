@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Materials.OresBarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems;
 
 public class Garnet : ModItem
 {

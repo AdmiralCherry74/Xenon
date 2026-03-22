@@ -5,7 +5,7 @@ using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems
 {
-    public class AlluminumOreBlock : ModItem
+    public class CinnabarOreBlock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -14,7 +14,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<AlluminumOre>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CinnabarOre>());
             Item.rare = ItemRarityID.White;
         }
     }

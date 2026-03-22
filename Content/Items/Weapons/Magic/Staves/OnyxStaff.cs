@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.OresBarsGems;
+using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Projectiles.Magic.StaveProj;
 
 namespace Xenon.Content.Items.Weapons.Magic.Staves

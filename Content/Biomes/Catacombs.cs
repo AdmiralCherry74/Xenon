@@ -15,9 +15,9 @@ public class Catacombs : ModBiome
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override bool IsBiomeActive(Player player)
 	{
-        return player.ZoneRockLayerHeight && ModContent.GetInstance<BiomeTileCounts>().CatacombTiles >= 250 &&
-        Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<RedCatacombWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<LavenderCatacombWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<CharcoalCatacombWallUnsafe>() ||
+        return (player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight) && ModContent.GetInstance<BiomeTileCounts>().CatacombTiles >= 250 &&
+        (Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<RedCatacombWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<LavenderCatacombWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<CharcoalCatacombWallUnsafe>() ||
 		Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<RedCatacombTileWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<LavenderCatacombTileWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<CharcoalCatacombTileWallUnsafe>() ||
-		Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<RedCatacombSlabWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<LavenderCatacombSlabWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<CharcoalCatacombSlabWallUnsafe>();
+		Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<RedCatacombSlabWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<LavenderCatacombSlabWallUnsafe>() || Framing.GetTileSafely(player.Center).WallType == ModContent.WallType<CharcoalCatacombSlabWallUnsafe>());
 	}
 }

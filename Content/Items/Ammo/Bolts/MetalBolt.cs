@@ -1,6 +1,8 @@
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
 using Xenon.Content.Projectiles.Ranged.Ammo.Bolts;
 
 namespace Xenon.Content.Items.Ammo.Bolts;
@@ -30,9 +32,9 @@ public class MetalBolt : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.ObsidianShield)
-            //.AddIngredient(ModContent.ItemType<FireWired:3>)
-            .AddTile(TileID.TinkerersWorkbench)
+            .AddIngredient(RecipeGroupID.IronBar, 1)
+            .AddIngredient(ModContent.ItemType<HardenedWhiteGel>(), 1)
+            .AddTile(TileID.WorkBenches)
             .Register();
     }
 }

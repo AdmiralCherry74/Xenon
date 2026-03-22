@@ -6,6 +6,7 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.ForestMushroom;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.Ores;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Tiles.Natural.Stone;
 using Xenon.ModSupport.Avalon.Content.Tiles;

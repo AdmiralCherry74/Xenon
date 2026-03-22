@@ -4,6 +4,8 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Fish;
+using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
@@ -218,6 +220,17 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.Ebonkoi), EvilFish);
             //Evil Fish recipe group
             #endregion region
+
+            #region Adding Modded items to vanilla recipe groups
+            //Wood recipe group
+            RecipeGroup groupwood = RecipeGroup.recipeGroups[RecipeGroupID.Wood];
+            groupwood.ValidItems.Add(ModContent.ItemType<Bilewood>());
+            groupwood.ValidItems.Add(ModContent.ItemType<JacarandaWood>());
+
+            //Iron recipe group
+            RecipeGroup groupiron = RecipeGroup.recipeGroups[RecipeGroupID.IronBar];
+            groupiron.ValidItems.Add(ModContent.ItemType<CinnabarBar>());
+            #endregion
         }
         public override void PostAddRecipes()
         {
@@ -926,7 +939,6 @@ namespace Xenon.Common.Globals
                 }
                 //End of Bow Recipe changes
                 #endregion
-
                 //Just gonna wait until the hardmode update to further update the recipes
             }
         }

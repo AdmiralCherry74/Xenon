@@ -2,11 +2,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
-using Xenon.Content.Tiles.Natural.Other;
 
-namespace Xenon.Content.Items.Materials.OresBarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems;
 
-public class IngestaneBar : ModItem
+public class IodineBar : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -14,18 +13,18 @@ public class IngestaneBar : ModItem
     }
     public override void SetDefaults()
     {
-        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ItemRarityID.Green;
+        Item.rare = ItemRarityID.Master;
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneOre>(), 3)
-            .AddTile(TileID.Furnaces)
+            .AddIngredient(ModContent.ItemType<IodineOreBlock>(), 10)
+            .AddTile(TileID.AdamantiteForge)
             .Register();
     }
 }

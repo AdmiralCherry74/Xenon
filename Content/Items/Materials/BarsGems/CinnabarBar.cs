@@ -3,9 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 
-namespace Xenon.Content.Items.Materials.OresBarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems;
 
-public class IndiumBar : ModItem
+public class CinnabarBar : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -23,7 +23,7 @@ public class IndiumBar : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IndiumOreBlock>(), 4)
+            .AddIngredient(ModContent.ItemType<CinnabarOreBlock>(), 3)
             .AddTile(TileID.Furnaces)
             .Register();
     }

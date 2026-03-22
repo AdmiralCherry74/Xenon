@@ -5,12 +5,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using static Xenon.SpecialUtilities;
-using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
 using Avalon.Tiles.Ores;
 using Avalon.Systems;
+using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.ModSupport.Avalon;
 

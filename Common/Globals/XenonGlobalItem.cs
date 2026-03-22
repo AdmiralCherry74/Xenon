@@ -1,7 +1,10 @@
-﻿using Terraria.GameContent.UI.Elements;
+﻿using Terraria;
+using Terraria.GameContent.UI.Elements;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
+using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Weapons.Melee.Swords;
@@ -12,6 +15,7 @@ public class XenonGlobalItem : GlobalItem
 {
     public override void SetStaticDefaults()
     {
+        #region Shimmering
         ItemID.Sets.ShimmerTransformToItem[ItemID.Marble] = ItemID.Granite;
         ItemID.Sets.ShimmerTransformToItem[ItemID.Granite] = ModContent.ItemType<RhyoliteBlock>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RhyoliteBlock>()] = ItemID.Marble;
@@ -74,6 +78,7 @@ public class XenonGlobalItem : GlobalItem
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.SlimeGun] = ItemID.WaterGun;
         ItemID.Sets.ShimmerTransformToItem[ItemID.WaterGun] = ItemID.SlimeGun; //change to shimmer gun when tmod is 1.4.5
-        //ItemID.Sets.ShimmerTransformToItem[ItemID.ShimmerGun] = ItemID.SlimeGun; change this to shimmer gun
+                                                                               //ItemID.Sets.ShimmerTransformToItem[ItemID.ShimmerGun] = ItemID.SlimeGun; change this to shimmer gun
+        #endregion
     }
 }

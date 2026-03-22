@@ -4,8 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
+using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.EvilMaterials;
-using Xenon.Content.Items.Materials.OresBarsGems;
 
 namespace Xenon.Content.Items.Tools.DriverHammers;
 
