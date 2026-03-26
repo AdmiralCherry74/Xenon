@@ -238,7 +238,7 @@ namespace Xenon.Common.Globals
             if (!ModContent.GetInstance<XenonConfig>().RequirePreviousOreTierForNext) return;
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
-                //Beginning of armor recipe changes
+                #region Beginning of armor recipe changes
                 #region copper armor
                 Recipe CopperHelmetCraft = Main.recipe[i];
                 if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
@@ -565,6 +565,40 @@ namespace Xenon.Common.Globals
                 //Crimson Greaves recipe
                 #endregion
 
+                #region caustic armor
+                Recipe CausticHelmetCraft = Main.recipe[i];
+                if (CausticHelmetCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && CausticHelmetCraft.HasTile(TileID.Anvils) && CausticHelmetCraft.HasResult(ModContent.ItemType<CausticHelmet>()))
+                {
+                    CausticHelmetCraft.AddRecipeGroup("GoldHelmet");
+                    if (CausticHelmetCraft.TryGetIngredient(ModContent.ItemType<IngestaneBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Crimson Helmet recipe
+
+                Recipe CausticScalemailCraft = Main.recipe[i];
+                if (CausticScalemailCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && CausticScalemailCraft.HasTile(TileID.Anvils) && CausticScalemailCraft.HasResult(ModContent.ItemType<CausticScalemail>()))
+                {
+                    CausticScalemailCraft.AddRecipeGroup("GoldChainmail");
+                    if (CausticScalemailCraft.TryGetIngredient(ModContent.ItemType<IngestaneBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Crimson Scalemail recipe
+
+                Recipe CausticGreavesCraft = Main.recipe[i];
+                if (CausticGreavesCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && CausticGreavesCraft.HasTile(TileID.Anvils) && CausticGreavesCraft.HasResult(ModContent.ItemType<CausticGreaves>()))
+                {
+                    CausticGreavesCraft.AddRecipeGroup("GoldGreaves");
+                    if (CausticGreavesCraft.TryGetIngredient(ModContent.ItemType<IngestaneBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                #endregion
+
                 #region molten armor
                 Recipe MoltenHelmetCraft = Main.recipe[i];
                 if (MoltenHelmetCraft.HasIngredient(ItemID.HellstoneBar) && MoltenHelmetCraft.HasTile(TileID.Anvils) && MoltenHelmetCraft.HasResult(ItemID.MoltenHelmet))
@@ -599,7 +633,7 @@ namespace Xenon.Common.Globals
                 }
                 //Molten Greaves recipe
                 #endregion
-                //End of armor recipe changes
+                #endregion End of armor recipe changes
 
                 //Beginning of Pickaxe recipe changes
                 #region iron tier pickaxes

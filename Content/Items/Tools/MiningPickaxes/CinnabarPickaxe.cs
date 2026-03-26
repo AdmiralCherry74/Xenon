@@ -8,22 +8,22 @@ using Xenon.Content.Items.Materials.BarsGems;
 
 namespace Xenon.Content.Items.Tools.MiningPickaxes;
 
-public class AluminumPickaxe : ModItem
+public class CinnabarPickaxe : ModItem
 {
     public override void SetDefaults()
     {
         Item.width = 32;
         Item.height = 32;
-        Item.useTime = 15;
-        Item.useAnimation = 21;
+        Item.useTime = 13;
+        Item.useAnimation = 18;
         Item.useStyle = ItemUseStyleID.Swing;
         Item.autoReuse = true;
         Item.useTurn = true;
         Item.UseSound = SoundID.Item1;
 
-        Item.pick = 35;
+        Item.pick = 42;
         Item.knockBack = 2f;
-        Item.damage = 4;
+        Item.damage = 5;
         Item.DamageType = DamageClass.Melee;
 
         Item.rare = ItemRarityID.White;
@@ -32,7 +32,7 @@ public class AluminumPickaxe : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumBar>(), 8)
+            .AddIngredient(ModContent.ItemType<CinnabarBar>(), 10)
             .AddRecipeGroup(RecipeGroupID.Wood, 4)
             .AddTile(TileID.Anvils)
             .Register();

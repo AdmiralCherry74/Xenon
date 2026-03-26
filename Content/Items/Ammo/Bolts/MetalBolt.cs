@@ -1,4 +1,3 @@
-using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,19 +18,20 @@ public class MetalBolt : ModItem
         Item.height = 22;
 
         Item.damage = 10;
+        Item.knockBack = 3f;
         Item.DamageType = DamageClass.Ranged;
 
-        Item.maxStack = Item.CommonMaxStack;
-        Item.consumable = true;
-        Item.knockBack = 3f;
-        Item.value = Item.sellPrice(0, 0, 1, 0);
         Item.ammo = ModContent.ItemType<ExampleBolt>();
         Item.shoot = ModContent.ProjectileType<MetalBoltProj>();
         Item.shootSpeed = 4;
+        Item.maxStack = Item.CommonMaxStack;
+        Item.consumable = true;
+
+        Item.value = Item.sellPrice(0, 0, 1, 0);
     }
     public override void AddRecipes()
     {
-        CreateRecipe()
+        CreateRecipe(25)
             .AddIngredient(RecipeGroupID.IronBar, 1)
             .AddIngredient(ModContent.ItemType<HardenedWhiteGel>(), 1)
             .AddTile(TileID.WorkBenches)

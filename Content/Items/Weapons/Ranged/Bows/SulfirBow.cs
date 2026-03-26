@@ -11,19 +11,21 @@ class SulfirBow : ModItem
     {
         Item.width = 18;
         Item.height = 40;
-        Item.UseSound = SoundID.Item5;
-        Item.damage = 17;
         Item.scale = 1f;
-        Item.shootSpeed = 6.7f;
-        Item.useAmmo = AmmoID.Arrow;
-        Item.DamageType = DamageClass.Ranged;
-        Item.noMelee = true;
+        Item.UseSound = SoundID.Item5;
         Item.useTime = 27;
+        Item.useAnimation = 27;
+        Item.useStyle = ItemUseStyleID.Shoot;
+        Item.noMelee = true;
+
+        Item.damage = 17;
+        Item.DamageType = DamageClass.Ranged;
         Item.knockBack = 1f;
         Item.shoot = ProjectileID.WoodenArrowFriendly;
-        Item.useStyle = ItemUseStyleID.Shoot;
+        Item.shootSpeed = 6.7f;
+        Item.useAmmo = AmmoID.Arrow;
+
         Item.value = 360;
-        Item.useAnimation = 27;
     }
     public override void AddRecipes()
     {

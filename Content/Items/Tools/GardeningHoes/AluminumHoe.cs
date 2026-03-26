@@ -3,12 +3,13 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.BarsGems;
 
-namespace Xenon.Content.Items.Tools.MiningPickaxes;
+namespace Xenon.Content.Items.Tools.GardeningHoes;
 
-public class AluminumPickaxe : ModItem
+public class AluminumHoe : ModItem
 {
     public override void SetDefaults()
     {
@@ -21,7 +22,7 @@ public class AluminumPickaxe : ModItem
         Item.useTurn = true;
         Item.UseSound = SoundID.Item1;
 
-        Item.pick = 35;
+        Item.GetGlobalItem<HoePower>().hoePower = 35;
         Item.knockBack = 2f;
         Item.damage = 4;
         Item.DamageType = DamageClass.Melee;
@@ -32,8 +33,8 @@ public class AluminumPickaxe : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumBar>(), 8)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddIngredient(ModContent.ItemType<AluminumBar>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
             .Register();
     }

@@ -86,7 +86,7 @@ public class CorrosionUnderground : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicID.UndergroundCorruption;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
@@ -110,7 +110,7 @@ public class CorrosionCaveDesert : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicID.Corruption;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
@@ -130,7 +130,7 @@ public class CorrosionUndergroundJungle : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicID.Corruption;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
@@ -150,7 +150,7 @@ public class CorrosionUndergroundIce : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicID.OtherworldlyUGCrimson;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");

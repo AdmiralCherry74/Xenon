@@ -41,6 +41,8 @@ Mods: {
 			Iceburn_2: "{0} went up in icy flames."
 		}
 
+		TooltipsHoePower.HoePowerTooltip: "{0}% hoe power"
+
 		Items: {
 			Scarlet: {
 				DisplayName: Scarlet
@@ -2108,6 +2110,131 @@ Mods: {
 
 			CinnabarAnvilItem: {
 				DisplayName: Cinnabar Anvil Item
+				Tooltip: ""
+			}
+
+			CorrodedThorns: {
+				DisplayName: Corroded Thorns
+				Tooltip: ""
+			}
+
+			AluminumAxe: {
+				DisplayName: Aluminum Axe
+				Tooltip: ""
+			}
+
+			CinnabarAxe: {
+				DisplayName: Cinnabar Axe
+				Tooltip: ""
+			}
+
+			IndiumAxe: {
+				DisplayName: Indium Axe
+				Tooltip: ""
+			}
+
+			XieiteAxe: {
+				DisplayName: Xieite Axe
+				Tooltip: ""
+			}
+
+			AluminumHammer: {
+				DisplayName: Aluminum Hammer
+				Tooltip: ""
+			}
+
+			CinnabarHammer: {
+				DisplayName: Cinnabar Hammer
+				Tooltip: ""
+			}
+
+			IndiumHammer: {
+				DisplayName: Indium Hammer
+				Tooltip: ""
+			}
+
+			XieiteHammer: {
+				DisplayName: Xieite Hammer
+				Tooltip: ""
+			}
+
+			AluminumHoe: {
+				DisplayName: Aluminum Hoe
+				Tooltip: ""
+			}
+
+			CopperHoe: {
+				DisplayName: Copper Hoe
+				Tooltip: ""
+			}
+
+			AluminumPickaxe: {
+				DisplayName: Aluminum Pickaxe
+				Tooltip: ""
+			}
+
+			CinnabarPickaxe: {
+				DisplayName: Cinnabar Pickaxe
+				Tooltip: ""
+			}
+
+			IndiumPickaxe: {
+				DisplayName: Indium Pickaxe
+				Tooltip: ""
+			}
+
+			XieitePickaxe: {
+				DisplayName: Xieite Pickaxe
+				Tooltip: ""
+			}
+
+			CinnabarHoe: {
+				DisplayName: Cinnabar Hoe
+				Tooltip: ""
+			}
+
+			GoldHoe: {
+				DisplayName: Gold Hoe
+				Tooltip: ""
+			}
+
+			IndiumHoe: {
+				DisplayName: Indium Hoe
+				Tooltip: ""
+			}
+
+			IronHoe: {
+				DisplayName: Iron Hoe
+				Tooltip: ""
+			}
+
+			LeadHoe: {
+				DisplayName: Lead Hoe
+				Tooltip: ""
+			}
+
+			PlatinumHoe: {
+				DisplayName: Platinum Hoe
+				Tooltip: ""
+			}
+
+			SilverHoe: {
+				DisplayName: Silver Hoe
+				Tooltip: ""
+			}
+
+			TinHoe: {
+				DisplayName: Tin Hoe
+				Tooltip: ""
+			}
+
+			TungstenHoe: {
+				DisplayName: Tungsten Hoe
+				Tooltip: ""
+			}
+
+			XieiteHoe: {
+				DisplayName: Xieite Hoe
 				Tooltip: ""
 			}
 		}

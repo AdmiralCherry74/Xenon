@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.EvilMaterials;
 
@@ -16,9 +17,11 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
         {
             Item.width = 22;
             Item.height = 18;
+
+            Item.defense = 6;
+
             Item.value = Item.sellPrice(0, 0, 52, 5); // (Platinum, Gold, Silver, Copper)
             Item.rare = ItemRarityID.Blue;
-            Item.defense = 6;
         }
 
         public override void UpdateEquip(Player player)
@@ -29,9 +32,8 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ModContent.ItemType<IngestaneBar>(), 15)
-                .AddIngredient(ModContent.ItemType<FreshChyme>(), 10)
-                .AddRecipeGroup("GoldGreaves", 1)
+                .AddIngredient(ModContent.ItemType<IngestaneBar>(), 20)
+                .AddIngredient(ModContent.ItemType<FreshChyme>(), 15)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

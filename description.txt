@@ -6,7 +6,7 @@ Here's a few changes to really catch your eye!
 Adds 4 new biomes:
 - A newly erupted mini-biome generating in the roof of hell. The [b] Rhyolite Caves [/b] biome. This is also its own mod. Check out here to see! https://steamcommunity.com/sharedfiles/filedetails/?id=3467015068&searchtext=Rhyolite)
 - An new acidic, stomach-themed alternative world evil called The Corrosion that seeks to eat your entire world and you for breakfast! Inspired but expanded on from the fan ideas wiki! https://terrariafanideas.fandom.com/wiki/The_Corrosion
-- Scorching Ice, a new hot/cold mini-biome generating in the bottom of the Underground Snow! Watch out for Frozen Lava!
+- Scorching Ice, a new hot/cold mini-biome generating in the bottom of the Underground Snow / Ice biome! Watch out for Frozen Lava!
 - Mountains, a new biome replacing the dungeons ocean that can be converted between evils and lights as well as giving some new accessories!
 
 Adds 5 new item types:

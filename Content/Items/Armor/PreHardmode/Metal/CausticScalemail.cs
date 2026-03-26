@@ -16,9 +16,11 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
         {
             Item.width = 38;
             Item.height = 20;
+
+            Item.defense = 7;
+
             Item.value = Item.sellPrice(0, 0, 70, 0); // (Platinum, Gold, Silver, Copper)
             Item.rare = ItemRarityID.Blue;
-            Item.defense = 7;
         }
 
         public override void UpdateEquip(Player player)
@@ -31,7 +33,6 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<IngestaneBar>(), 25)
                 .AddIngredient(ModContent.ItemType<FreshChyme>(), 20)
-                .AddRecipeGroup("GoldChainmail", 1)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

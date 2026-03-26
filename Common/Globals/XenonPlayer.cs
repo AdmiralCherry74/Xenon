@@ -314,4 +314,8 @@ public class XenonPlayer : ModPlayer
             }
         }
     }
+    public override void PostItemCheck()
+    {
+        base.PostItemCheck();
+    }
 }

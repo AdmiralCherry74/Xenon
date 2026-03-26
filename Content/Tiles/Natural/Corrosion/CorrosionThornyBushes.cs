@@ -1,8 +1,11 @@
-using Xenon.Content.Dusts;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals;
+using Xenon.Content.Dusts;
+using Xenon.Content.Items.Materials.Organic;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -19,6 +22,7 @@ public class CorrosionThornyBushes : ModTile
         Main.tileCut[Type] = true;
         Main.tileLavaDeath[Type] = true;
         Main.tileBlockLight[Type] = true;
+        ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;
         TileID.Sets.Conversion.Thorn[Type] = true;
         TileID.Sets.TileCutIgnore.IgnoreDontHurtNature[Type] = true;
         TileID.Sets.GetsDestroyedForMeteors[Type] = true;
@@ -37,8 +41,14 @@ public class CorrosionThornyBushes : ModTile
         DustType = ModContent.DustType<CorrosionDust>();
     }
 
-    //public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
-    //{
-
-    //}
+    public override IEnumerable<Item> GetItemDrops(int i, int j)
+    {
+        Vector2 worldPosition = new Vector2(i, j).ToWorldCoordinates();
+        Player nearestPlayer = Main.player[Player.FindClosest(worldPosition, 16, 16)];
+        if (nearestPlayer.active)
+        {
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35)
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+        }
+    }
 }

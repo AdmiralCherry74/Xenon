@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Weapons.Ranged.Bows;
 
 namespace Xenon.Content.Items.Tools.CuttingAxes;
 
@@ -12,18 +13,20 @@ public class DirtySwamp : ModItem
 {
     public override void SetDefaults()
     {
-        Item.axe = 15;
-        Item.knockBack = 6f;
-        Item.damage = 24;
-        Item.useTime = 13;
-        Item.useAnimation = 21;
         Item.width = 24;
         Item.height = 24;
-        Item.DamageType = DamageClass.Melee;
+        Item.useTime = 13;
+        Item.useAnimation = 21;
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.autoReuse = true;
         Item.useTurn = true;
         Item.UseSound = SoundID.Item1;
+        Item.autoReuse = true;
+
+        Item.damage = 24;
+        Item.DamageType = DamageClass.Melee;
+        Item.axe = 15;
+        Item.knockBack = 6f;
+
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(silver: 27);
     }
@@ -51,6 +54,7 @@ public class DirtySwamp : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
             .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ItemID.CrimsonYoyo)
             .Register();
     }
 }
