@@ -1,4 +1,5 @@
 ﻿using Avalon.Items.Material.Bars;
+using Avalon.Items.Weapons.Melee.PreHardmode.OreSwords;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -43,6 +44,7 @@ public class ZincBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<ZincBar>(), 9)
             .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<ZincShortsword>())
             .Register();
     }
 }

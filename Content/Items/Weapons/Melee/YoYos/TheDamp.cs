@@ -33,17 +33,10 @@ public class TheDamp : ModItem
         Item.knockBack = 5f; // The amount of knockback the item inflicts.
         Item.crit = 0; // The percent chance for the weapon to deal a critical strike. Defaults to 4.
         Item.channel = true; // Set to true for items that require the attack button to be held out (e.g. yoyos and magic missile weapons)
-        Item.rare = ItemRarityID.Orange; // The item's rarity. This changes the color of the item's name.
+        Item.rare = ItemRarityID.Blue; // The item's rarity. This changes the color of the item's name.
         Item.value = Item.sellPrice(gold: 1); // The amount of money that the item is can be bought for.
 
         Item.shoot = ModContent.ProjectileType<DampYoYoProj>(); // Which projectile this item will shoot. We set this to our corresponding projectile.
         Item.shootSpeed = 16f; // The velocity of the shot projectile.			
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 12)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

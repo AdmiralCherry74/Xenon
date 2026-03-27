@@ -31,12 +31,4 @@ public class TinBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.TinBar, 7)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

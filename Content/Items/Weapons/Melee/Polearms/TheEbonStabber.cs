@@ -57,13 +57,5 @@ namespace Xenon.Content.Items.Weapons.Melee.Polearms
 
             return null;
         }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient(ItemID.DemoniteBar, 12)
-                .AddIngredient(ItemID.ShadowScale, 6)
-                .AddTile(TileID.Anvils)
-                .Register();
-        }
     }
 }

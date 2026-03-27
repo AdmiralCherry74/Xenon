@@ -31,12 +31,4 @@ public class CinnabarHammer : ModItem
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 36);
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<CinnabarBar>(), 8)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

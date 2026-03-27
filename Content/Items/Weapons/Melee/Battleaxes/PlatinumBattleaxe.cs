@@ -31,12 +31,4 @@ public class PlatinumBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.PlatinumBar, 9)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

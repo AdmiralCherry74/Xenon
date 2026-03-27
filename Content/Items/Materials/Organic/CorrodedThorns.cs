@@ -1,6 +1,6 @@
+using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Materials.Organic;
 
@@ -14,5 +14,6 @@ public class CorrodedThorns : ModItem
     {
         Item.width = 12;
         Item.height = 12;
+        Item.maxStack = 9999;
     }
 }

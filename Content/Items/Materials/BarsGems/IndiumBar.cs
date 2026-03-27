@@ -19,12 +19,4 @@ public class IndiumBar : ModItem
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IndiumOreBlock>(), 4)
-            .AddTile(TileID.Furnaces)
-            .Register();
-    }
 }

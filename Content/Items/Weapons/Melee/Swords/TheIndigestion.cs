@@ -26,22 +26,4 @@ public class TheIndigestion : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 5)
-            .AddRecipeGroup("GoldBroadsword", 1)
-            .AddTile(TileID.Anvils)
-            .Register();
-
-
-
-        Recipe.Create(ItemID.NightsEdge)
-            .AddIngredient(ModContent.ItemType<TheIndigestion>(), 1)
-            .AddIngredient(ItemID.BladeofGrass, 1)
-            .AddIngredient(ItemID.FieryGreatsword, 1)
-            .AddIngredient(ItemID.Muramasa, 1)
-            .AddTile(TileID.DemonAltar)
-            .Register();
-    }
 }

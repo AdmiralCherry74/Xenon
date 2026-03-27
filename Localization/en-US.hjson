@@ -2160,12 +2160,12 @@ Mods: {
 
 			AluminumHoe: {
 				DisplayName: Aluminum Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			CopperHoe: {
 				DisplayName: Copper Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			AluminumPickaxe: {
@@ -2190,51 +2190,86 @@ Mods: {
 
 			CinnabarHoe: {
 				DisplayName: Cinnabar Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			GoldHoe: {
 				DisplayName: Gold Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			IndiumHoe: {
 				DisplayName: Indium Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			IronHoe: {
 				DisplayName: Iron Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			LeadHoe: {
 				DisplayName: Lead Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			PlatinumHoe: {
 				DisplayName: Platinum Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			SilverHoe: {
 				DisplayName: Silver Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			TinHoe: {
 				DisplayName: Tin Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			TungstenHoe: {
 				DisplayName: Tungsten Hoe
-				Tooltip: ""
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
 			}
 
 			XieiteHoe: {
 				DisplayName: Xieite Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			BismuthHoe: {
+				DisplayName: Bismuth Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			BronzeHoe: {
+				DisplayName: Bronze Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			NickelHoe: {
+				DisplayName: Nickel Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			ZincHoe: {
+				DisplayName: Zinc Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			Pukivator: {
+				DisplayName: Pukivator
+				Tooltip: ""
+			}
+
+			PukivatorMark2: {
+				DisplayName: Pukivator Mark2
+				Tooltip: ""
+			}
+
+			SweetTooth: {
+				DisplayName: Sweet Tooth
 				Tooltip: ""
 			}
 		}
@@ -2594,7 +2629,7 @@ Mods: {
 
 			Cleaved: {
 				DisplayName: Cleaved
-				Description: Severe blood loss inflicted by a waraxe
+				Description: Severe blood loss inflicted by a Battleaxe
 			}
 
 			IronCaltropTagDamage: {

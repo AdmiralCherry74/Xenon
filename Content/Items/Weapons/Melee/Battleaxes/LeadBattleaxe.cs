@@ -31,12 +31,4 @@ public class LeadBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.LeadBar, 9)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

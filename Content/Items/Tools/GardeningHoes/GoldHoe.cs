@@ -12,9 +12,9 @@ public class GoldHoe : ModItem
         Item.width = 24;
         Item.height = 24;
 
-        Item.GetGlobalItem<HoePower>().hoePower = 35;
+        Item.GetGlobalItem<HoePower>().hoePower = 55;
         Item.knockBack = 1f;
-        Item.damage = 5;
+        Item.damage = 7;
         Item.DamageType = DamageClass.Melee;
 
         Item.useTime = 17;
@@ -27,12 +27,5 @@ public class GoldHoe : ModItem
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 36);
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.GoldBar, 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }
+

@@ -4,8 +4,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Items.Tools.MiningPickaxes;
 
@@ -46,13 +44,5 @@ public class IngestedPickaxe : ModItem
             Main.dust[num15].velocity += vector2 * 5f;
             Main.dust[num15].velocity.Y *= 0.3f;
         }
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 12)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 6)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

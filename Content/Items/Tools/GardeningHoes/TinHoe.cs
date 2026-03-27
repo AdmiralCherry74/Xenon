@@ -14,7 +14,7 @@ public class TinHoe : ModItem
 
         Item.GetGlobalItem<HoePower>().hoePower = 35;
         Item.knockBack = 1f;
-        Item.damage = 5;
+        Item.damage = 3;
         Item.DamageType = DamageClass.Melee;
 
         Item.useTime = 14;
@@ -26,13 +26,5 @@ public class TinHoe : ModItem
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 36);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.TinBar, 4)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

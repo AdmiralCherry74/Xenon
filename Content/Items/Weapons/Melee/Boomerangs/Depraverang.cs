@@ -26,12 +26,4 @@ public class Depraverang : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.DemoniteBar, 8)
-            .AddIngredient(ItemID.ShadowScale, 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

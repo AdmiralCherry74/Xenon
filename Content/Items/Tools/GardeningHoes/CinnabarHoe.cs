@@ -24,18 +24,10 @@ public class CinnabarHoe : ModItem
 
         Item.GetGlobalItem<HoePower>().hoePower = 42;
         Item.knockBack = 2f;
-        Item.damage = 5;
+        Item.damage = 4;
         Item.DamageType = DamageClass.Melee;
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 1, 23, 0);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<CinnabarBar>(), 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

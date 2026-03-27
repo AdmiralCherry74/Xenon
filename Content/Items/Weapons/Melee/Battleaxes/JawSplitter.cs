@@ -32,12 +32,4 @@ public class JawSplitter : ModItem
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);
         player.AddBuff(ModContent.BuffType<FlashRage>(), 180);
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.CrimtaneBar, 7)
-            .AddIngredient(ItemID.TissueSample, 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

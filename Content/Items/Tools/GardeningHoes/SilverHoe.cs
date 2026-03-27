@@ -12,7 +12,7 @@ public class SilverHoe : ModItem
         Item.width = 24;
         Item.height = 24;
 
-        Item.GetGlobalItem<HoePower>().hoePower = 35;
+        Item.GetGlobalItem<HoePower>().hoePower = 45;
         Item.knockBack = 1f;
         Item.damage = 5;
         Item.DamageType = DamageClass.Melee;
@@ -26,13 +26,5 @@ public class SilverHoe : ModItem
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 36);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.SilverBar, 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

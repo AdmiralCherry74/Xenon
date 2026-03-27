@@ -32,12 +32,4 @@ public class NauseaCudgel : ModItem
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(silver: 54);
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

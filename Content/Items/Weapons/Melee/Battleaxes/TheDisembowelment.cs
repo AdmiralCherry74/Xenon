@@ -55,12 +55,4 @@ public class TheDisembowelment : ModItem
             Main.dust[num15].velocity.Y *= 0.3f;
         }
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 9)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

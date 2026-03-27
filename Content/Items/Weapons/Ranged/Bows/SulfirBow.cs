@@ -27,11 +27,4 @@ class SulfirBow : ModItem
 
         Item.value = 360;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

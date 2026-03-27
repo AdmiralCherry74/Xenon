@@ -23,19 +23,11 @@ public class IndiumHoe : ModItem
         Item.UseSound = SoundID.Item1;
 
         Item.GetGlobalItem<HoePower>().hoePower = 48;
-        Item.knockBack = 2f;
+        Item.knockBack = 1f;
         Item.damage = 6;
         Item.DamageType = DamageClass.Melee;
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 1, 23, 0);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IndiumBar>(), 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

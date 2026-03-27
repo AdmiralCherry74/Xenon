@@ -26,12 +26,4 @@ public class Zygomatarang : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.CrimtaneBar, 8)
-            .AddIngredient(ItemID.TissueSample, 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

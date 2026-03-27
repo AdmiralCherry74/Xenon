@@ -1,10 +1,7 @@
-using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.BarsGems;
 
 namespace Xenon.Content.Items.Tools.GardeningHoes;
@@ -30,13 +27,5 @@ public class XieiteHoe : ModItem
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 1, 23, 0);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<XieiteBar>(), 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

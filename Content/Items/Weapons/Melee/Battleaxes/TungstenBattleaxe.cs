@@ -31,12 +31,4 @@ public class TungstenBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.TungstenBar, 9)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

@@ -33,13 +33,4 @@ public class NightGnasher : ModItem
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);
         player.AddBuff(ModContent.BuffType<WraithFlash>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.DemoniteBar, 9)
-            .AddIngredient(ItemID.ShadowScale, 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

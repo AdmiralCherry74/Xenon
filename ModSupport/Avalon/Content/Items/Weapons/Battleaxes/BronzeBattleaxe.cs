@@ -1,4 +1,5 @@
 ﻿using Avalon.Items.Material.Bars;
+using Avalon.Items.Weapons.Melee.PreHardmode.OreSwords;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -43,6 +44,7 @@ public class BronzeBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<BronzeBar>(), 7)
             .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<BronzeShortsword>())
             .Register();
     }
 }

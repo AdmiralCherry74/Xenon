@@ -31,12 +31,4 @@ public class CopperBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.CopperBar, 7)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

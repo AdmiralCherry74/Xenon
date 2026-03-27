@@ -12,9 +12,9 @@ public class LeadHoe : ModItem
         Item.width = 24;
         Item.height = 24;
 
-        Item.GetGlobalItem<HoePower>().hoePower = 35;
+        Item.GetGlobalItem<HoePower>().hoePower = 43;
         Item.knockBack = 1f;
-        Item.damage = 5;
+        Item.damage = 4;
         Item.DamageType = DamageClass.Melee;
 
         Item.useTime = 12;
@@ -26,13 +26,5 @@ public class LeadHoe : ModItem
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 36);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.LeadBar, 5)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

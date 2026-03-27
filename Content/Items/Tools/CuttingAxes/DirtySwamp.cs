@@ -49,12 +49,4 @@ public class DirtySwamp : ModItem
             Main.dust[num15].velocity.Y *= 0.3f;
         }
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 10)
-            .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ItemID.CrimsonYoyo)
-            .Register();
-    }
 }

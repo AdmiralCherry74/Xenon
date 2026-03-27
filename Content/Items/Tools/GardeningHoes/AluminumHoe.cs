@@ -22,20 +22,12 @@ public class AluminumHoe : ModItem
         Item.useTurn = true;
         Item.UseSound = SoundID.Item1;
 
-        Item.GetGlobalItem<HoePower>().hoePower = 35;
+        Item.GetGlobalItem<HoePower>().hoePower = 37;
         Item.knockBack = 2f;
-        Item.damage = 4;
+        Item.damage = 2;
         Item.DamageType = DamageClass.Melee;
 
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 1, 23, 0);
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumBar>(), 4)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

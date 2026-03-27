@@ -9,12 +9,13 @@ Adds 4 new biomes:
 - Scorching Ice, a new hot/cold mini-biome generating in the bottom of the Underground Snow / Ice biome! Watch out for Frozen Lava!
 - Mountains, a new biome replacing the dungeons ocean that can be converted between evils and lights as well as giving some new accessories!
 
-Adds 5 new item types:
-- Unique trinkets found through out the world that are valuable. They sell at great prices and even have their own rarity!
+Adds 6 new item types:
+- Unique trinkets found through out the world that are called Valuables. They sell at great prices and even have their own rarity!
 - Battleaxes are a new type of melee weapon that are slower, but have higher critical strike chance and inflict various new buffs to enemies and yourself!
-- Crossbows, a new powerful and far-ranged but slow and costly style of ranged weapon that requires a new bolt type of ammunition to be crafted and use!
+- Crossbows, a new powerful but slow and costly style of ranged weapon that requires a new bolt type of ammunition to be crafted and use!
 - Splash potions, a way for mages to fight without mana! These potions are a new consumable throwing-styled weapon in which you use magical potions and buffs to take down enemies or heal allies!
 - Caltrops are a new gadget for summons to play with to expand their arsenal against groups of enemies, inflicting normal and tag damage per one caltrop!
+- Hoes are new tool used to collect from the soft and fragile tiles around you. being able to harvest unique materials, building blocks and more from grass, vines, thorns, and even Webs (plus way more)
 
 Adds 3 types of enemies:
 - Bandits, a good-for-nothing human survivor that aren't friends, but foes. Killing them will not only net you tons of goodies, but also make the world safer!
@@ -23,5 +24,6 @@ Adds 3 types of enemies:
 
 Adds Mod support for the following mods:
 - Exxo Avalon Origins (Found Here: https://steamcommunity.com/sharedfiles/filedetails/?id=3150760112. Thank you for helping development so much blahblahbal!)
-- Terradux (Found Here: <Insert Link here>
-- Arcadia (Found Here: <Insert Link here>
+- The Confection REBAKED (Found Here: https://steamcommunity.com/sharedfiles/filedetails/?id=2601885797. Check out The Confection!) 
+- Terradux (Found Here: <Insert Link here>)
+- Arcadia (Found Here: <Insert Link here>)

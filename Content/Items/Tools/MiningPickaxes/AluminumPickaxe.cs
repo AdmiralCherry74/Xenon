@@ -29,12 +29,4 @@ public class AluminumPickaxe : ModItem
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 1, 23, 0);
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumBar>(), 8)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

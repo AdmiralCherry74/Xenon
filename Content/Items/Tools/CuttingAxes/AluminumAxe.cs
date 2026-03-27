@@ -30,13 +30,4 @@ public class AluminumAxe : ModItem
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 27);
     }
- 
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumBar>(), 6)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

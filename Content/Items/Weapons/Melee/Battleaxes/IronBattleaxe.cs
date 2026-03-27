@@ -31,12 +31,4 @@ public class IronBattleaxe : ModItem
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 180);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.IronBar, 9)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

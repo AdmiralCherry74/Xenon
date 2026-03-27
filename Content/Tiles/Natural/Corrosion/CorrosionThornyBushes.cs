@@ -47,8 +47,34 @@ public class CorrosionThornyBushes : ModTile
         Player nearestPlayer = Main.player[Player.FindClosest(worldPosition, 16, 16)];
         if (nearestPlayer.active)
         {
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35)
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 50)
+            {
                 yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 75)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 100)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 125)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 150)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 175)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
+            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 200)
+            {
+                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
+            }
         }
     }
 }

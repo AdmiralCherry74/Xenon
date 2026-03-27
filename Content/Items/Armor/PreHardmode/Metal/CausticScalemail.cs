@@ -27,14 +27,5 @@ namespace Xenon.Content.Items.Armor.PreHardmode.Metal
         {
             player.GetKnockback<GenericDamageClass>() += PercentIncrease / 10;
         }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient(ModContent.ItemType<IngestaneBar>(), 25)
-                .AddIngredient(ModContent.ItemType<FreshChyme>(), 20)
-                .AddTile(TileID.Anvils)
-                .Register();
-        }
     }
 }

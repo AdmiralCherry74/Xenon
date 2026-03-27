@@ -1,5 +1,7 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials.Organic;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood
 {

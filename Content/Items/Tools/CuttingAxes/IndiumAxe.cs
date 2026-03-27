@@ -30,13 +30,4 @@ public class IndiumAxe : ModItem
         Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(silver: 27);
     }
- 
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IndiumBar>(), 8)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

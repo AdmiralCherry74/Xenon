@@ -19,12 +19,4 @@ public class AluminumBar : ModItem
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<AluminumOreBlock>(), 3)
-            .AddTile(TileID.Furnaces)
-            .Register();
-    }
 }

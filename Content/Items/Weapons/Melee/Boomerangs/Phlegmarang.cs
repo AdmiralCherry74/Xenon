@@ -28,12 +28,4 @@ public class Phlegmarang : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 2)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

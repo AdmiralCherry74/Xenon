@@ -48,12 +48,4 @@ public class Squasher : ModItem
             Main.dust[num15].velocity.Y *= 0.3f;
         }
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 11)
-            .AddIngredient(ModContent.ItemType<FreshChyme>(), 4)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }
