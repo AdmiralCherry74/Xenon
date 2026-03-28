@@ -39,7 +39,6 @@ public class BismuthHoe : ModItem
             .AddIngredient(ModContent.ItemType<BismuthBar>(), 5)
             .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<BismuthHammer>())
             .Register();
     }
 }

@@ -44,7 +44,6 @@ public class ZincBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<ZincBar>(), 9)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<ZincShortsword>())
             .Register();
     }
 }

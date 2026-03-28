@@ -17,6 +17,7 @@ using Xenon.Content.Items.Weapons.Melee.Polearms;
 using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
+using Xenon.Content.Items.Weapons.Summon.Caltrops;
 using Xenon.Content.Tiles.Furniture.CraftingStations;
 
 namespace Xenon.Common.Globals
@@ -127,7 +128,7 @@ namespace Xenon.Common.Globals
 
             //Silver Battleaxe
             Recipe.Create(ModContent.ItemType<SilverBattleaxe>())
-                .AddIngredient(ItemID.SilverBar, 8)
+                .AddIngredient(ItemID.SilverBar, 9)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ItemID.SilverShortsword)
                 .Register();
@@ -151,6 +152,20 @@ namespace Xenon.Common.Globals
                 .AddIngredient(ItemID.PlatinumBar, 9)
                 .SortAfterFirstRecipesOf(ItemID.PlatinumShortsword)
                 .AddTile(TileID.Anvils)
+                .Register();
+            #endregion
+
+            #region Caltrops
+            Recipe.Create(ModContent.ItemType<IronCaltrops>(), 5)
+                .AddIngredient(ItemID.IronBar, 1)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.IronBow)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<LeadCaltrops>(), 5)
+                .AddIngredient(ItemID.LeadBar, 1)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.LeadBow)
                 .Register();
             #endregion
 
@@ -241,12 +256,32 @@ namespace Xenon.Common.Globals
                 .Register();
 
             //Broadsword
+            Recipe.Create(ModContent.ItemType<AluminumBroadsword>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 6)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumHoe>())
+                .Register();
 
             //Shortsword
+            Recipe.Create(ModContent.ItemType<AluminumShortsword>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 5)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumBroadsword>())
+                .Register();
 
             //Battleaxe
+            Recipe.Create(ModContent.ItemType<AluminumBattleaxe>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 7)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumShortsword>())
+                .Register();
 
             //Bow
+            Recipe.Create(ModContent.ItemType<AluminumBow>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 7)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumBattleaxe>())
+                .Register();
 
             //Helmet
 
@@ -302,12 +337,34 @@ namespace Xenon.Common.Globals
                 .Register();
 
             //Broadsword
+            Recipe.Create(ModContent.ItemType<CinnabarBroadsword>())
+                .AddIngredient(ModContent.ItemType<CinnabarBar>(), 8)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarHoe>())
+                .Register();
 
             //Shortsword
+            Recipe.Create(ModContent.ItemType<CinnabarShortsword>())
+                .AddIngredient(ModContent.ItemType<CinnabarBar>(), 6)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarBroadsword>())
+                .Register();
 
             //Battleaxe
+            Recipe.Create(ModContent.ItemType<CinnabarBattleaxe>())
+                .AddIngredient(ModContent.ItemType<CinnabarBar>(), 9)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarShortsword>())
+                .Register();
 
             //Bow
+            Recipe.Create(ModContent.ItemType<CinnabarBow>())
+                .AddIngredient(ModContent.ItemType<CinnabarBar>(), 7)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarBattleaxe>())
+                .Register();
+
+            //Caltrop
 
             //Helmet
 
@@ -357,12 +414,32 @@ namespace Xenon.Common.Globals
                 .Register();
 
             //Broadsword
+            Recipe.Create(ModContent.ItemType<IndiumBroadsword>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 8)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumHoe>())
+                .Register();
 
             //Shortsword
+            Recipe.Create(ModContent.ItemType<IndiumShortsword>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 6)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumBroadsword>())
+                .Register();
 
             //Battleaxe
+            Recipe.Create(ModContent.ItemType<IndiumBattleaxe>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 9)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumShortsword>())
+                .Register();
 
             //Bow
+            Recipe.Create(ModContent.ItemType<IndiumBow>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 7)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumBattleaxe>())
+                .Register();
 
             //Helmet
 
@@ -411,12 +488,32 @@ namespace Xenon.Common.Globals
                 .Register();
 
             //Broadsword
+            Recipe.Create(ModContent.ItemType<XieiteBroadsword>())
+                .AddIngredient(ModContent.ItemType<XieiteBar>(), 8)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteHoe>())
+                .Register();
 
             //Shortsword
+            Recipe.Create(ModContent.ItemType<XieiteShortsword>())
+                .AddIngredient(ModContent.ItemType<XieiteBar>(), 6)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBroadsword>())
+                .Register();
 
             //Battleaxe
+            Recipe.Create(ModContent.ItemType<XieiteBattleaxe>())
+                .AddIngredient(ModContent.ItemType<XieiteBar>(), 9)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteShortsword>())
+                .Register();
 
             //Bow
+            Recipe.Create(ModContent.ItemType<XieiteBow>())
+                .AddIngredient(ModContent.ItemType<XieiteBar>(), 7)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBattleaxe>())
+                .Register();
 
             //Helmet
 

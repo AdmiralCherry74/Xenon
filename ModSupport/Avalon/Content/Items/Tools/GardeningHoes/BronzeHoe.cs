@@ -39,7 +39,6 @@ public class BronzeHoe : ModItem
             .AddIngredient(ModContent.ItemType<BronzeBar>(), 4)
             .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<BronzeHammer>())
             .Register();
     }
 }

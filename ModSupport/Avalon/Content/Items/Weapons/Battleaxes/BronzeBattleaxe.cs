@@ -44,7 +44,6 @@ public class BronzeBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<BronzeBar>(), 7)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<BronzeShortsword>())
             .Register();
     }
 }

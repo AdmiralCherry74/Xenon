@@ -39,7 +39,6 @@ public class ZincHoe : ModItem
             .AddIngredient(ModContent.ItemType<ZincBar>(), 5)
             .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<ZincHammer>())
             .Register();
     }
 }

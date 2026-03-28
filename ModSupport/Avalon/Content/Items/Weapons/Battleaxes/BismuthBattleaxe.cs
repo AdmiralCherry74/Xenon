@@ -44,7 +44,6 @@ public class BismuthBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<BismuthBar>(), 9)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<BismuthShortsword>())
             .Register();
     }
 }

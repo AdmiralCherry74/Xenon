@@ -39,7 +39,6 @@ public class NickelHoe : ModItem
             .AddIngredient(ModContent.ItemType<NickelBar>(), 5)
             .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<NickelHammer>())
             .Register();
     }
 }

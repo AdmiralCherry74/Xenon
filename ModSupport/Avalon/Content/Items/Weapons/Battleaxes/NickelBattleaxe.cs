@@ -44,7 +44,6 @@ public class NickelBattleaxe : ModItem
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<NickelBar>(), 9)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<NickelShortsword>())
             .Register();
     }
 }

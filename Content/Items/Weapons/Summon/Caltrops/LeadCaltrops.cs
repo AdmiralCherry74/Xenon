@@ -49,11 +49,4 @@ public class LeadCaltrops : ModItem
 
         return false;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe(5)
-            .AddIngredient(ItemID.LeadBar, 1)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

@@ -49,11 +49,4 @@ public class IronCaltrops : ModItem
 
         return false;
     }
-    public override void AddRecipes()
-    {
-        CreateRecipe(5)
-            .AddIngredient(ItemID.IronBar, 1)
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

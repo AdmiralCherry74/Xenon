@@ -2072,7 +2072,7 @@ Mods: {
 
 			Stratono: {
 				DisplayName: Stratono
-				Tooltip: ""
+				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
 			AlluminumOreBlock: {
@@ -2106,12 +2106,12 @@ Mods: {
 			}
 
 			AluminumOreBlock: {
-				DisplayName: Aluminum Ore Block
+				DisplayName: Aluminum Ore
 				Tooltip: ""
 			}
 
 			CinnabarAnvilItem: {
-				DisplayName: Cinnabar Anvil Item
+				DisplayName: Cinnabar Anvil
 				Tooltip: ""
 			}
 
@@ -2272,6 +2272,86 @@ Mods: {
 
 			SweetTooth: {
 				DisplayName: Sweet Tooth
+				Tooltip: ""
+			}
+
+			AluminumBattleaxe: {
+				DisplayName: Aluminum Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			CinnabarBattleaxe: {
+				DisplayName: Cinnabar Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			IndiumBattleaxe: {
+				DisplayName: Indium Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			XieiteBattleaxe: {
+				DisplayName: Xieite Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			AluminumBroadsword: {
+				DisplayName: Aluminum Broadsword
+				Tooltip:
+			}
+
+			AluminumShortsword: {
+				DisplayName: Aluminum Shortsword
+				Tooltip: ""
+			}
+
+			CinnabarBroadsword: {
+				DisplayName: Cinnabar Broadsword
+				Tooltip: ""
+			}
+
+			CinnabarShortsword: {
+				DisplayName: Cinnabar Shortsword
+				Tooltip: ""
+			}
+
+			IndiumBroadsword: {
+				DisplayName: Indium Broadsword
+				Tooltip: ""
+			}
+
+			IndiumShortsword: {
+				DisplayName: Indium Shortsword
+				Tooltip: ""
+			}
+
+			XieiteBroadsword: {
+				DisplayName: Xieite Broadsword
+				Tooltip: ""
+			}
+
+			XieiteShortsword: {
+				DisplayName: Xieite Shortsword
+				Tooltip: ""
+			}
+
+			AluminumBow: {
+				DisplayName: Aluminum Bow
+				Tooltip: ""
+			}
+
+			CinnabarBow: {
+				DisplayName: Cinnabar Bow
+				Tooltip: ""
+			}
+
+			IndiumBow: {
+				DisplayName: Indium Bow
+				Tooltip: ""
+			}
+
+			XieiteBow: {
+				DisplayName: Xieite Bow
 				Tooltip: ""
 			}
 		}
@@ -2591,6 +2671,10 @@ Mods: {
 			NightOwlSplashPotionProj.DisplayName: Night Owl Splash Potion
 			CatacombSpray.DisplayName: Catacomb Spray
 			DungeonSpray.DisplayName: Dungeon Spray
+			AluminumShortswordProj.DisplayName: Aluminum Shortsword
+			CinnabarShortswordProj.DisplayName: Cinnabar Shortsword
+			IndiumShortswordProj.DisplayName: Indium Shortsword
+			XieiteShortswordProj.DisplayName: Xieite Shortsword
 		}
 
 		Buffs: {
