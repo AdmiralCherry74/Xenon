@@ -10,9 +10,54 @@ using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using AltLibrary.Common.AltBiomes;
 using Xenon.Content.Tiles.Natural.Ores;
+using AltLibrary.Common.AltOres;
+using Xenon.Content.Items.Materials.BarsGems;
 
 namespace Xenon.ModSupport;
 
+[ExtendsFromMod(nameof(AltLibrary))]
+public class AluminumAltOre : AltOre
+{
+	public override OreSlot OreSlot => ModContent.GetInstance<CopperOreSlot>();
+	public override void SetStaticDefaults()
+	{
+		ore = ModContent.TileType<AluminumOre>();
+		bar = ModContent.ItemType<AluminumBar>();
+		//Watch = ModContent.ItemType<AluminumWatch>();
+	}
+}
+[ExtendsFromMod(nameof(AltLibrary))]
+public class CinnabarAltOre : AltOre
+{
+	public override OreSlot OreSlot => ModContent.GetInstance<IronOreSlot>();
+	public override void SetStaticDefaults()
+	{
+		ore = ModContent.TileType<CinnabarOre>();
+		bar = ModContent.ItemType<CinnabarBar>();
+	}
+}
+[ExtendsFromMod(nameof(AltLibrary))]
+public class IndiumAltOre : AltOre
+{
+	public override OreSlot OreSlot => ModContent.GetInstance<SilverOreSlot>();
+	public override void SetStaticDefaults()
+	{
+		ore = ModContent.TileType<IndiumOre>();
+		bar = ModContent.ItemType<IndiumBar>();
+		//Watch = ModContent.ItemType<IndiumWatch>();
+	}
+}
+[ExtendsFromMod(nameof(AltLibrary))]
+public class XieiteAltOre : AltOre
+{
+	public override OreSlot OreSlot => ModContent.GetInstance<GoldOreSlot>();
+	public override void SetStaticDefaults()
+	{
+		ore = ModContent.TileType<XieiteOre>();
+		bar = ModContent.ItemType<XieiteBar>();
+		//Watch = ModContent.ItemType<XieiteWatch>();
+	}
+}
 [ExtendsFromMod(nameof(AltLibrary))]
 internal class CorrosionAltBiome : AltBiome
 {
