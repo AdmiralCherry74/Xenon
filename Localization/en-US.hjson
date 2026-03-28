@@ -9,6 +9,8 @@ Mods: {
 			}
 		}
 
+		SetBonuses.Caustic: Increases knockback velocity
+
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
@@ -2719,5 +2721,27 @@ Mods: {
 		}
 
 		Config.ItemHeader: Xenon Client Config
+
+		AltOres: {
+			AluminumAltOre: {
+				DisplayName: Aluminum Alt Ore
+				Description: ""
+			}
+
+			CinnabarAltOre: {
+				DisplayName: Cinnabar Alt Ore
+				Description: ""
+			}
+
+			IndiumAltOre: {
+				DisplayName: Indium Alt Ore
+				Description: ""
+			}
+
+			XieiteAltOre: {
+				DisplayName: Xieite Alt Ore
+				Description: ""
+			}
+		}
 	}
 }
