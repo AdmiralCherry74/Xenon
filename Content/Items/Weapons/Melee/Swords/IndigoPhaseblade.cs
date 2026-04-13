@@ -32,6 +32,7 @@ public class IndigoPhaseblade : ModItem
             .AddIngredient(ItemID.MeteoriteBar, 15)
             .AddIngredient(ModContent.ItemType<Lapis>(), 10)
             .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ItemID.GreenPhaseblade)
             .Register();
     }
 }

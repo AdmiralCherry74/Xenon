@@ -17,9 +17,9 @@ namespace Xenon.Content.Projectiles.Magic.StaveProj
             Projectile.height = 16;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Magic;
-            Projectile.penetrate = 3;
+            Projectile.penetrate = 2;
             Projectile.timeLeft = 600;
-            Projectile.alpha = 0;
+            Projectile.alpha = 255;
         }
 
         public override void AI()

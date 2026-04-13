@@ -12,6 +12,7 @@ using AltLibrary.Common.AltBiomes;
 using Xenon.Content.Tiles.Natural.Ores;
 using AltLibrary.Common.AltOres;
 using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Accessories;
 
 namespace Xenon.ModSupport;
 
@@ -23,7 +24,7 @@ public class AluminumAltOre : AltOre
 	{
 		ore = ModContent.TileType<AluminumOre>();
 		bar = ModContent.ItemType<AluminumBar>();
-		//Watch = ModContent.ItemType<AluminumWatch>();
+		Watch = ModContent.ItemType<AluminumWatch>();
 	}
 }
 [ExtendsFromMod(nameof(AltLibrary))]
@@ -44,7 +45,7 @@ public class IndiumAltOre : AltOre
 	{
 		ore = ModContent.TileType<IndiumOre>();
 		bar = ModContent.ItemType<IndiumBar>();
-		//Watch = ModContent.ItemType<IndiumWatch>();
+		Watch = ModContent.ItemType<IndiumWatch>();
 	}
 }
 [ExtendsFromMod(nameof(AltLibrary))]
@@ -55,7 +56,7 @@ public class XieiteAltOre : AltOre
 	{
 		ore = ModContent.TileType<XieiteOre>();
 		bar = ModContent.ItemType<XieiteBar>();
-		//Watch = ModContent.ItemType<XieiteWatch>();
+		Watch = ModContent.ItemType<XieiteWatch>();
 	}
 }
 [ExtendsFromMod(nameof(AltLibrary))]

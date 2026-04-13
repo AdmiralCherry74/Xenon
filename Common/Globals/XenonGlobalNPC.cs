@@ -27,8 +27,13 @@ internal class XenonGlobalNPC : GlobalNPC
             }
             if (NPC.downedBoss2)
             {
-                pool.Add(ModContent.NPCType<ConeheadZombie>(), 0.5f);
+                pool.Add(ModContent.NPCType<BucketheadZombie>(), 0.5f);
             }
+        }
+        if (spawnInfo.Player.ZoneSkyHeight && !Main.hardMode)
+        {
+            pool.Remove(NPCID.Harpy);
+            pool.Add(NPCID.Harpy, 0.33f);
         }
         if (spawnInfo.Player.InModBiome<Mountain>())
         {
@@ -120,40 +125,6 @@ internal class XenonGlobalNPC : GlobalNPC
         {
             pool.Clear();
             pool.Add(ModContent.NPCType<TempleSentry>(), 1);
-        }
-        if (spawnInfo.Player.ZoneDungeon && NPC.downedBoss3) //It made no sense for all of the skeletons to not be in the dungeon. so i added them, I also added the sawblades
-        {
-            //Normal Skeleton
-            pool.Add(NPCID.SmallSkeleton, 0.05f);
-            pool.Add(NPCID.Skeleton, 0.05f);
-            pool.Add(NPCID.BigSkeleton, 0.05f);
-            pool.Add(NPCID.SmallHeadacheSkeleton, 0.05f);
-            pool.Add(NPCID.HeadacheSkeleton, 0.05f);
-            pool.Add(NPCID.BigHeadacheSkeleton, 0.05f);
-            pool.Add(NPCID.SmallMisassembledSkeleton, 0.05f);
-            pool.Add(NPCID.MisassembledSkeleton, 0.05f);
-            pool.Add(NPCID.BigMisassembledSkeleton, 0.05f);
-            pool.Add(NPCID.SmallPantlessSkeleton, 0.05f);
-            pool.Add(NPCID.PantlessSkeleton, 0.05f);
-            pool.Add(NPCID.BigPantlessSkeleton, 0.05f);
-
-            if (Main.expertMode)
-            {
-                pool.Add(NPCID.BoneThrowingSkeleton, 0.025f);
-                pool.Add(NPCID.BoneThrowingSkeleton2, 0.025f);
-                pool.Add(NPCID.BoneThrowingSkeleton3, 0.025f);
-            }
-
-            //Varients
-            pool.Add(NPCID.GreekSkeleton, 0.015f);
-            pool.Add(NPCID.Tim, 0.005f);
-
-            if (DateTime.Now.Month == 10)
-            {
-                pool.Add(NPCID.SkeletonAstonaut, 0.025f);
-                pool.Add(NPCID.SkeletonTopHat, 0.025f);
-                pool.Add(NPCID.SkeletonAlien, 0.025f);
-            }
         }
         if (spawnInfo.Player.InModBiome<Catacombs>())
         {

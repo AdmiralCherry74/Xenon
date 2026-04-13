@@ -18,7 +18,7 @@ public class LeadBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 11;
+        Item.damage = 12;
         Item.knockBack = 5;
         Item.crit = 2;
 

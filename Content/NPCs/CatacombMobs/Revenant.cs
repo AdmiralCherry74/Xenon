@@ -110,7 +110,7 @@ namespace Xenon.Content.NPCs.CatacombMobs
         {
             npcLoot.Add(ItemDropRule.Common(ItemID.Nazar, 100, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlatinumKey>(), 152, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Viscera>(), 2, 1, 3));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Brain>(), 2, 1, 3));
         }
     }
 }

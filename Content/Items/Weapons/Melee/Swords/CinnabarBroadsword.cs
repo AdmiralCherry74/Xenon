@@ -17,8 +17,8 @@ public class CinnabarBroadsword : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 1;
-        Item.knockBack = 0;
+        Item.damage = 12;
+        Item.knockBack = 5.75f;
         Item.crit = 0;
 
         Item.value = Item.buyPrice(silver: 50);

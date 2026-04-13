@@ -11,6 +11,7 @@ public class Pouch : ModItem
         Item.ResearchUnlockCount = 100;
         Item.value = Item.buyPrice(silver: 10);
         Item.rare = ItemRarityID.Quest;
+        Item.maxStack = 9999;
     }
     public override void AddRecipes()
     {

@@ -18,7 +18,7 @@ public class TinBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 8;
+        Item.damage = 9;
         Item.knockBack = 5;
         Item.crit = 2;
 

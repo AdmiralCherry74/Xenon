@@ -13,16 +13,16 @@ class IndiumBow : ModItem
         Item.height = 40;
         Item.scale = 1f;
         Item.UseSound = SoundID.Item5;
-        Item.useTime = 1;
-        Item.useAnimation = 1;
+        Item.useTime = 27;
+        Item.useAnimation = 26;
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.noMelee = true;
 
-        Item.damage = 1;
+        Item.damage = 10;
         Item.DamageType = DamageClass.Ranged;
         Item.knockBack = 0f;
         Item.shoot = ProjectileID.WoodenArrowFriendly;
-        Item.shootSpeed = 0f;
+        Item.shootSpeed = 6.6f;
         Item.useAmmo = AmmoID.Arrow;
 
         Item.value = 360;

@@ -9,12 +9,18 @@ Mods: {
 			}
 		}
 
-		SetBonuses.Caustic: Increases knockback velocity
+		SetBonuses: {
+			OneDefense: 1 defense
+			ThreeDefense: 3 defense
+			FourDefense: 4 defense
+			CloudArmor: 4% magic critical strike chance, increases your max numbers of minions by 1, and 1% increased magic and summon damage
+			Caustic: Increases knockback velocity
+		}
 
 		AltBiomes: {
 			CorrosionAltBiome: {
 				DisplayName: Corrosion
-				Description: Gastric hunger is guaranteed to be present in your world.
+				Description: a Gastric hunger of the corrosion is guaranteed to be present in your world.
 				GenPassName: Making the world hungry
 				DryadTextDescriptor: corroded
 			}
@@ -44,6 +50,7 @@ Mods: {
 		}
 
 		TooltipsHoePower.HoePowerTooltip: "{0}% hoe power"
+		VanillaItemRenames.CrimsonHelmet: Ancient Crimson Helmet
 
 		Items: {
 			Scarlet: {
@@ -1967,7 +1974,7 @@ Mods: {
 
 			CharcoalCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			LavenderCatacombWallItem: {
@@ -1977,12 +1984,12 @@ Mods: {
 
 			LavenderCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			RedCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			CharcoalCatacombTileWallItem: {
@@ -1992,7 +1999,7 @@ Mods: {
 
 			CharcoalCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Tile Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			LavenderCatacombTileWallItem: {
@@ -2002,7 +2009,7 @@ Mods: {
 
 			LavenderCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Tile Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			RedCatacombTileWallItem: {
@@ -2012,7 +2019,7 @@ Mods: {
 
 			RedCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Tile Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			CharcoalCatacombSlabWallItem: {
@@ -2022,7 +2029,7 @@ Mods: {
 
 			CharcoalCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Slab Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			LavenderCatacombSlabWallItem: {
@@ -2032,7 +2039,7 @@ Mods: {
 
 			LavenderCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Slab Wall
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			RedCatacombSlabWallItem: {
@@ -2042,12 +2049,7 @@ Mods: {
 
 			RedCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Slab Wall
-				Tooltip: ""
-			}
-
-			Viscera: {
-				DisplayName: Viscera
-				Tooltip: ""
+				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
 			}
 
 			IndiumOreBlock: {
@@ -2295,11 +2297,6 @@ Mods: {
 				Tooltip: Inflicts a cleaving effect on enemies
 			}
 
-			AluminumBroadsword: {
-				DisplayName: Aluminum Broadsword
-				Tooltip:
-			}
-
 			AluminumShortsword: {
 				DisplayName: Aluminum Shortsword
 				Tooltip: ""
@@ -2353,6 +2350,411 @@ Mods: {
 			XieiteBow: {
 				DisplayName: Xieite Bow
 				Tooltip: ""
+			}
+
+			AluminumBroadsword: {
+				DisplayName: Aluminum Broadsword
+				Tooltip: ""
+			}
+
+			AluminumWatch: {
+				DisplayName: Aluminum Watch
+				Tooltip: Tells the time
+			}
+
+			IndiumWatch: {
+				DisplayName: Indium Watch
+				Tooltip: Tells the time
+			}
+
+			XieiteWatch: {
+				DisplayName: Xieite Watch
+				Tooltip: Tells the time
+			}
+
+			AncientCrimsonHelmet: {
+				DisplayName: Ancient Crimson Helmet
+				Tooltip: ""
+			}
+
+			CrimsonHelmetNew: {
+				DisplayName: Crimson Helmet New
+				Tooltip: ""
+			}
+
+			AluminumChainmail: {
+				DisplayName: Aluminum Chainmail
+				Tooltip: ""
+			}
+
+			AluminumGreaves: {
+				DisplayName: Aluminum Greaves
+				Tooltip: ""
+			}
+
+			AluminumHelmet: {
+				DisplayName: Aluminum Helmet
+				Tooltip: ""
+			}
+
+			CinnabarChainmail: {
+				DisplayName: Cinnabar Chainmail
+				Tooltip: ""
+			}
+
+			CinnabarGreaves: {
+				DisplayName: Cinnabar Greaves
+				Tooltip: ""
+			}
+
+			CinnabarHelmet: {
+				DisplayName: Cinnabar Helmet
+				Tooltip: ""
+			}
+
+			IndiumChainmail: {
+				DisplayName: Indium Chainmail
+				Tooltip: ""
+			}
+
+			IndiumGreaves: {
+				DisplayName: Indium Greaves
+				Tooltip: ""
+			}
+
+			IndiumHelmet: {
+				DisplayName: Indium Helmet
+				Tooltip: ""
+			}
+
+			XieiteChainmail: {
+				DisplayName: Xieite Chainmail
+				Tooltip: ""
+			}
+
+			XieiteGreaves: {
+				DisplayName: Xieite Greaves
+				Tooltip: ""
+			}
+
+			XieiteHelmet: {
+				DisplayName: Xieite Helmet
+				Tooltip: ""
+			}
+
+			Jade: {
+				DisplayName: Jade
+				Tooltip: ""
+			}
+
+			JadeGemsparkBlock: {
+				DisplayName: Jade Gemspark Block
+				Tooltip: ""
+			}
+
+			JadeStoneBlock: {
+				DisplayName: Jade Stone Block
+				Tooltip: ""
+			}
+
+			JadeGemsparkWall: {
+				DisplayName: Jade Gemspark Wall
+				Tooltip: ""
+			}
+
+			JadeGemsparkWallOff: {
+				DisplayName: Jade Gemspark Wall Off
+				Tooltip: ""
+			}
+
+			OliveStainedGlassPane: {
+				DisplayName: Olive Stained Glass Pane
+				Tooltip: ""
+			}
+
+			OliveTorch: {
+				DisplayName: Olive Torch
+				Tooltip: ""
+			}
+
+			FlintFrozenLavaBlockItem: {
+				DisplayName: Flint Frozen Lava Block
+				Tooltip: ""
+			}
+
+			GarnetStoneBlock: {
+				DisplayName: Garnet Stone Block
+				Tooltip: ""
+			}
+
+			LapisStoneBlock: {
+				DisplayName: Lapis Stone Block
+				Tooltip: ""
+			}
+
+			FlintStaff: {
+				DisplayName: Flint Staff
+				Tooltip: ""
+			}
+
+			JadeStaff: {
+				DisplayName: Jade Staff
+				Tooltip: ""
+			}
+
+			OlivePhaseblade: {
+				DisplayName: Olive Phaseblade
+				Tooltip: ""
+			}
+
+			AmberBlockItem: {
+				DisplayName: Amber Block
+				Tooltip: ""
+			}
+
+			AmethystBlockItem: {
+				DisplayName: Amethyst Block
+				Tooltip: ""
+			}
+
+			DiamondBlockItem: {
+				DisplayName: Diamond Block
+				Tooltip: ""
+			}
+
+			EmeraldBlockItem: {
+				DisplayName: Emerald Block
+				Tooltip: ""
+			}
+
+			GarnetBlockItem: {
+				DisplayName: Garnet Block
+				Tooltip: ""
+			}
+
+			JadeBlockItem: {
+				DisplayName: Jade Block
+				Tooltip: ""
+			}
+
+			LapisBlockItem: {
+				DisplayName: Lapis Block
+				Tooltip: ""
+			}
+
+			RubyBlockItem: {
+				DisplayName: Ruby Block
+				Tooltip: ""
+			}
+
+			SapphireBlockItem: {
+				DisplayName: Sapphire Block
+				Tooltip: ""
+			}
+
+			TopazBlockItem: {
+				DisplayName: Topaz Block
+				Tooltip: ""
+			}
+
+			AmberBrickItem: {
+				DisplayName: Amber Brick
+				Tooltip: ""
+			}
+
+			AmethystBrickItem: {
+				DisplayName: Amethyst Brick
+				Tooltip: ""
+			}
+
+			DiamondBrickItem: {
+				DisplayName: Diamond Brick
+				Tooltip: ""
+			}
+
+			EmeraldBrickItem: {
+				DisplayName: Emerald Brick
+				Tooltip: ""
+			}
+
+			GarnetBrickItem: {
+				DisplayName: Garnet Brick
+				Tooltip: ""
+			}
+
+			JadeBrickItem: {
+				DisplayName: Jade Brick
+				Tooltip: ""
+			}
+
+			LapisBrickItem: {
+				DisplayName: Lapis Brick
+				Tooltip: ""
+			}
+
+			RubyBrickItem: {
+				DisplayName: Ruby Brick
+				Tooltip: ""
+			}
+
+			SapphireBrickItem: {
+				DisplayName: Sapphire Brick
+				Tooltip: ""
+			}
+
+			TopazBrickItem: {
+				DisplayName: Topaz Brick
+				Tooltip: ""
+			}
+
+			AmberWallItem: {
+				DisplayName: Amber Wall
+				Tooltip: ""
+			}
+
+			AmethystWallItem: {
+				DisplayName: Amethyst Wall
+				Tooltip: ""
+			}
+
+			DiamondWallItem: {
+				DisplayName: Diamond Wall
+				Tooltip: ""
+			}
+
+			EmeraldWallItem: {
+				DisplayName: Emerald Wall
+				Tooltip: ""
+			}
+
+			GarnetWallItem: {
+				DisplayName: Garnet Wall
+				Tooltip: ""
+			}
+
+			JadeWallItem: {
+				DisplayName: Jade Wall
+				Tooltip: ""
+			}
+
+			LapisWallItem: {
+				DisplayName: Lapis Wall
+				Tooltip: ""
+			}
+
+			RubyWallItem: {
+				DisplayName: Ruby Wall
+				Tooltip: ""
+			}
+
+			SapphireWallItem: {
+				DisplayName: Sapphire Wall
+				Tooltip: ""
+			}
+
+			TopazWallItem: {
+				DisplayName: Topaz Wall
+				Tooltip: ""
+			}
+
+			AmberBrickWallItem: {
+				DisplayName: Amber Brick Wall
+				Tooltip: ""
+			}
+
+			AmethystBrickWallItem: {
+				DisplayName: Amethyst Brick Wall
+				Tooltip: ""
+			}
+
+			DiamondBrickWallItem: {
+				DisplayName: Diamond Brick Wall
+				Tooltip: ""
+			}
+
+			EmeraldBrickWallItem: {
+				DisplayName: Emerald Brick Wall
+				Tooltip: ""
+			}
+
+			GarnetBrickWallItem: {
+				DisplayName: Garnet Brick Wall
+				Tooltip: ""
+			}
+
+			JadeBrickWallItem: {
+				DisplayName: Jade Brick Wall
+				Tooltip: ""
+			}
+
+			LapisBrickWallItem: {
+				DisplayName: Lapis Brick Wall
+				Tooltip: ""
+			}
+
+			RubyBrickWallItem: {
+				DisplayName: Ruby Brick Wall
+				Tooltip: ""
+			}
+
+			SapphireBrickWallItem: {
+				DisplayName: Sapphire Brick Wall
+				Tooltip: ""
+			}
+
+			TopazBrickWallItem: {
+				DisplayName: Topaz Brick Wall
+				Tooltip: ""
+			}
+
+			CloudChestplate: {
+				DisplayName: Cloud Chestplate
+				Tooltip: 1% increased magic and summon damage
+			}
+
+			CloudHeadgear: {
+				DisplayName: Cloud Headgear
+				Tooltip: 1% increased magic and summon damage
+			}
+
+			CloudLeggings: {
+				DisplayName: Cloud Leggings
+				Tooltip: 1% increased magic and summon damage
+			}
+
+			PlankedPearlWallItem: {
+				DisplayName: Planked Pearl Wall
+				Tooltip: ""
+			}
+
+			AbandonedPlankedPearlWallItem: {
+				DisplayName: Abandoned Planked Pearl Wall
+				Tooltip: "An abandoned bit of Planked Pearl wall that retains its properties prior to the souls being unleashed"
+			}
+
+			Brain: {
+				DisplayName: Brain
+				Tooltip: "Good source of cholesterol"
+			}
+
+			Sludge: {
+				DisplayName: Sludge
+				Tooltip: horrible tasting substance that is hard when solidified
+			}
+
+			BoggedPearlwoodItem: {
+				DisplayName: Bogged Pearlwood
+				Tooltip: Pearlwood that is filled with Sludge, very hard to mine
+			}
+
+			OuranoStoneWallItem: {
+				DisplayName: Ourano Stone Wall
+				Tooltip: ""
+			}
+
+			OuranoStoneWallItemUnsafe: {
+				DisplayName: Natural Ourano Stone Wall
+				Tooltip: "Abit of natural ourano stone wall that will spawn monsters infront of it"
 			}
 		}
 
@@ -2427,6 +2829,9 @@ Mods: {
 			BucketheadZombie.DisplayName: Buckethead Zombie
 			ConeheadZombie.DisplayName: Conehead Zombie
 			Revenant.DisplayName: Revenant
+			BoneSerpentGiantHead.DisplayName: Colossus
+			BoneSerpentGiantBody.DisplayName: Colossus
+			BoneSerpentGiantTail.DisplayName: Colossus
 		}
 
 		Tiles: {
@@ -2508,6 +2913,7 @@ Mods: {
 			BucketheadZombie: This zombie forgot it was wearing the bucket.
 			MoonWidow: Sticky webs lead to sticky situations.
 			Revenant: Abandoned in this grave of the dead, Revenants are a type of spirit that haunt the living if they dare to enter.
+			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. but was revived and now its angry you disturbed its forever slumber...
 		}
 
 		Biomes: {
@@ -2675,6 +3081,8 @@ Mods: {
 			CinnabarShortswordProj.DisplayName: Cinnabar Shortsword
 			IndiumShortswordProj.DisplayName: Indium Shortsword
 			XieiteShortswordProj.DisplayName: Xieite Shortsword
+			Flintball.DisplayName: Flintball
+			JadeGemball.DisplayName: Jade Gemball
 		}
 
 		Buffs: {
@@ -2808,22 +3216,22 @@ Mods: {
 
 		AltOres: {
 			AluminumAltOre: {
-				DisplayName: Aluminum Alt Ore
+				DisplayName: Aluminum
 				Description: ""
 			}
 
 			CinnabarAltOre: {
-				DisplayName: Cinnabar Alt Ore
+				DisplayName: Cinnabar
 				Description: ""
 			}
 
 			IndiumAltOre: {
-				DisplayName: Indium Alt Ore
+				DisplayName: Indium
 				Description: ""
 			}
 
 			XieiteAltOre: {
-				DisplayName: Xieite Alt Ore
+				DisplayName: Xieite
 				Description: ""
 			}
 		}

@@ -30,8 +30,9 @@ public class RosePhaseblade : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.MeteoriteBar, 15)
-            .AddIngredient(ModContent.ItemType<Lapis>(), 10)
+            .AddIngredient(ModContent.ItemType<Garnet>(), 10)
             .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ItemID.RedPhaseblade)
             .Register();
     }
 }

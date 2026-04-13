@@ -18,7 +18,7 @@ public class SilverBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 12;
+        Item.damage = 13;
         Item.knockBack = 5.5f;
         Item.crit = 2;
 

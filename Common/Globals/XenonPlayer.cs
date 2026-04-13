@@ -124,7 +124,7 @@ public class XenonPlayer : ModPlayer
         // caustic armor setbonus
 		if (KnockbackBoost)
         {
-            modifiers.Knockback += 3f;
+            modifiers.Knockback += 1f;
         }
 	}
 	public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
@@ -132,7 +132,7 @@ public class XenonPlayer : ModPlayer
         // caustic armor setbonus
 		if (KnockbackBoost)
 		{
-			modifiers.Knockback += 3f;
+			modifiers.Knockback += 1f;
 		}
 	}
 	public override void PreUpdate()

@@ -20,6 +20,10 @@ public class LavenderCatacombBrick : ModTile
     }
     public override bool CanExplode(int i, int j)
     {
+        if (Main.hardMode)
+        {
+            return true;
+        }
         return false;
     }
 }

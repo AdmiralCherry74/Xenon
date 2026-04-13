@@ -18,30 +18,22 @@ namespace Xenon.Content.Items.Weapons.Magic.Staves
             Item.width = 32;
             Item.height = 32;
 
-            Item.useTime = 30;
-            Item.useAnimation = 30;
+            Item.useTime = 27;
+            Item.useAnimation = 27;
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
 
             Item.DamageType = DamageClass.Magic;
-            Item.damage = 25;
-            Item.knockBack = 6.5f;
+            Item.damage = 22;
+            Item.knockBack = 5.125f;
             Item.crit = 0;
-            Item.mana = 11;
+            Item.mana = 8;
             Item.shoot = ModContent.ProjectileType<LapisGemball>();
-            Item.shootSpeed = 8f;
+            Item.shootSpeed = 9.25f;
 
             Item.value = Item.sellPrice(copper: 90);
             Item.UseSound = SoundID.Item43;
             Item.rare = ItemRarityID.Green;
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient(ItemID.CrimtaneBar, 10)
-                .AddIngredient(ModContent.ItemType<Lapis>(), 8)
-                .AddTile(TileID.Anvils)
-                .Register();
         }
     }
 }

@@ -17,8 +17,8 @@ public class IndiumBroadsword : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 1;
-        Item.knockBack = 0;
+        Item.damage = 14;
+        Item.knockBack = 6.1f;
         Item.crit = 0;
 
         Item.value = Item.buyPrice(silver: 50);

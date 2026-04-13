@@ -18,7 +18,7 @@ public class TungstenBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 13;
+        Item.damage = 15;
         Item.knockBack = 5.5f;
         Item.crit = 2;
 

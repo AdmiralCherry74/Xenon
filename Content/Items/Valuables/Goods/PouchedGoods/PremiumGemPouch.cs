@@ -24,7 +24,7 @@ namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
             recipe.AddIngredient(ModContent.ItemType<Materials.Pouch>());
             recipe.AddIngredient(ModContent.ItemType<Garnet>(), 6);
             recipe.AddIngredient(ModContent.ItemType<Lapis>(), 3);
-            recipe.AddIngredient(ModContent.ItemType<Onyx>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Jade>(), 1);
             recipe.AddIngredient(ItemID.Amber, 1);
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);

@@ -11,5 +11,6 @@ public class BrokenPickaxeHead : ModItem
         Item.ResearchUnlockCount = 20;
         Item.value = Item.buyPrice(copper: 1);
         Item.rare = ItemRarityID.Blue;
+        Item.maxStack = 9999;
     }
 }

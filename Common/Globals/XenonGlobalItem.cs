@@ -1,13 +1,11 @@
-﻿using Terraria;
-using Terraria.GameContent.UI.Elements;
-using Terraria.ID;
+﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
+using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
 
 namespace Xenon.Common.Globals;
 
@@ -57,6 +55,10 @@ public class XenonGlobalItem : GlobalItem
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.TerraBlade] = ModContent.ItemType<AncientTerraBlade>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AncientTerraBlade>()] = ItemID.TerraBlade;
+
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<PlankedPearlWallItem>()] = ModContent.ItemType<AbandonedPlankedPearlWallItem>();
+
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<OuranoStoneWallItem>()] = ModContent.ItemType<OuranoStoneWallItemUnsafe>();
 
         #region Normal Catacombs
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RedCatacombWallItem>()] = ModContent.ItemType<RedCatacombWallUnsafeItem>();

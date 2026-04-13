@@ -13,14 +13,13 @@ public class XieiteShortsword : ModItem
         Item.height = 32;
 
         Item.useStyle = ItemUseStyleID.Rapier; // Makes the player do the proper arm motion
-        Item.useAnimation = 1;
-        Item.useTime = 1;
+        Item.useAnimation = 10;
+        Item.useTime = 11;
         Item.UseSound = SoundID.Item1;
         Item.noUseGraphic = true; // The sword is actually a "projectile", so the item should not be visible when used
-        Item.autoReuse = true;
 
-        Item.damage = 1;
-        Item.knockBack = 0.1f;
+        Item.damage = 12;
+        Item.knockBack = 5.1f;
         Item.DamageType = DamageClass.MeleeNoSpeed;
         Item.noMelee = true; // The projectile will do the damage and not the item
         Item.shoot = ModContent.ProjectileType<XieiteShortswordProj>();

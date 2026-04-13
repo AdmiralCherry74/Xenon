@@ -17,8 +17,8 @@ public class XieiteBroadsword : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 1;
-        Item.knockBack = 0;
+        Item.damage = 15;
+        Item.knockBack = 6.6f;
         Item.crit = 0;
 
         Item.value = Item.buyPrice(silver: 50);

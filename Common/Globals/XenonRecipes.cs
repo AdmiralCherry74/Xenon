@@ -17,7 +17,8 @@ namespace Xenon.Common.Globals
     {
         public override void AddRecipeGroups()
         {
-            //Beginning of Armor recipe groups
+            #region Ore themed tools, weapons, items, and armor recipe groups
+            #region Armor recipe groups
             #region wood recipe group
             RecipeGroup WoodenHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodHelmet)}", ItemID.WoodHelmet, ItemID.PalmWoodHelmet, ItemID.BorealWoodHelmet, ItemID.RichMahoganyHelmet, ItemID.CactusHelmet);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodHelmet), WoodenHelmet);
@@ -105,9 +106,9 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowGreaves), ShadowGreaves);
             //Evil Greaves recipe group
             #endregion
-            //End of Armor recipe groups
+            #endregion
 
-            //Beginning of Pickaxe recipe groups
+            #region Pickaxe recipe groups
             #region copper tier recipe group
             RecipeGroup CopperPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperPickaxe)}", ItemID.CopperPickaxe, ItemID.TinPickaxe);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperPickaxe), CopperPickaxe);
@@ -137,9 +138,9 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.NightmarePickaxe), NightmarePickaxe);
             //Evil Tier Pickaxe recipe group
             #endregion
-            //End of Pickaxe recipe groups
+            #endregion
 
-            //Beginning of Broadsword recipe groups
+            #region Broadsword recipe groups
             #region wood recipe group
             RecipeGroup WoodenSword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodenSword)}", ItemID.WoodenSword, ItemID.PalmWoodSword, ItemID.BorealWoodSword, ItemID.RichMahoganySword, ItemID.CactusSword);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodenSword), WoodenSword);
@@ -175,9 +176,9 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.LightsBane), LightsBane);
             //Tier Evil Broadsword recipe group
             #endregion region
-            //End of Broadsword recipe groups
+            #endregion
 
-            //Beginning of Bow recipe groups
+            #region Bow recipe groups
             #region wood recipe group
             RecipeGroup WoodenBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.WoodenBow)}", ItemID.WoodenBow, ItemID.PalmWoodBow, ItemID.BorealWoodBow, ItemID.RichMahoganyBow);
             RecipeGroup.RegisterGroup(nameof(ItemID.WoodenBow), WoodenBow);
@@ -213,12 +214,16 @@ namespace Xenon.Common.Globals
             RecipeGroup.RegisterGroup(nameof(ItemID.DemonBow), DemonBow);
             //Tier Evil Bow recipe group
             #endregion region
-            //End of Bow recipe groups
+            #endregion
+            #endregion
 
             #region Material recipe groups
             RecipeGroup EvilFish = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.Ebonkoi)}", ItemID.Ebonkoi, ItemID.Hemopiranha, (ModContent.ItemType<Corrodoras>()));
             RecipeGroup.RegisterGroup(nameof(ItemID.Ebonkoi), EvilFish);
             //Evil Fish recipe group
+
+            RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar, (ModContent.ItemType<AluminumBar>()));
+            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
             #endregion region
 
             #region Adding Modded items to vanilla recipe groups
@@ -978,16 +983,31 @@ namespace Xenon.Common.Globals
         }
         public override void AddRecipes()
         {
-            //Beginning of Material recipe adding
-            #region Magical recipe changes
+            #region Material recipe adding
+            #region Adding Recipes
             Recipe.Create(ItemID.SpellTome)
                 .AddIngredient(ItemID.Book)
                 .AddIngredient(ItemID.ManaCrystal, 3)
                 .AddTile(TileID.Bookcases)
                 //.SortAfterFirstRecipesOf(ItemID.Titties)
                 .Register();
-            #endregion
 
+            Recipe.Create(ItemID.SnowGlobe)
+                .AddIngredient(ItemID.SnowBlock, 25)
+                .AddIngredient(ItemID.Glass, 5)
+                .AddIngredient(ItemID.Bone, 1)
+                .AddTile(TileID.DemonAltar)
+                .SortAfterFirstRecipesOf(ItemID.GoblinBattleStandard)
+                .Register();
+
+            Recipe.Create(ItemID.Hook)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 4)
+            .AddRecipeGroup("CopperBar")
+            .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ItemID.Chain)
+            .Register();
+            #endregion
+            #endregion
         }
     }
 }

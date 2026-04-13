@@ -11,5 +11,6 @@ public class WhiteGel : ModItem
         Item.ResearchUnlockCount = 100;
         Item.value = Item.buyPrice(silver: 10);
         Item.rare = ItemRarityID.Blue;
+        Item.maxStack = 9999;
     }
 }

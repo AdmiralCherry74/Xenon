@@ -18,7 +18,7 @@ public class CinnabarBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 1;
+        Item.damage = 11;
         Item.knockBack = 5;
         Item.crit = 2;
 

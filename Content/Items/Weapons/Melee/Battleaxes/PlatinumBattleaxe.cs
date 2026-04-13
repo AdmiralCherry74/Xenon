@@ -18,7 +18,7 @@ public class PlatinumBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 15;
+        Item.damage = 18;
         Item.knockBack = 6;
         Item.crit = 2;
 

@@ -18,7 +18,7 @@ public class IndiumBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 1;
+        Item.damage = 14;
         Item.knockBack = 5;
         Item.crit = 2;
 

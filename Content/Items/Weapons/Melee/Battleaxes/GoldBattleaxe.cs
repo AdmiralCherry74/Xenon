@@ -18,7 +18,7 @@ public class GoldBattleaxe : ModItem
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 14;
+        Item.damage = 16;
         Item.knockBack = 6;
         Item.crit = 2;
 
