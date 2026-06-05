@@ -14,36 +14,29 @@ namespace Xenon.Content.NPCs.Bosses.CorrodedTerror;
 
 public class CorrodedTerrorBoss : ModNPC
 {
-    // Reminder: Selene is a big fat fucking bitch who enslaved me to work on this boss.
-    // I will make sure they pay the ultimate price one day. :)
-    // - Vaema
-
-    // April 4th, 2026:
-    // TODO: Finish this boss. I will work more on this tomorrow or the day after if possible.
-    // We also need to plan out the attacks thoroughly.
+    // TODO: This boss is still unfinished. However, feedback is appreciated.
+    // TODO: Make this boss enrage if the player is outside of the Corrosion.
 
     public enum State
     {
-        SummonAnimation
+        SummonAnimation,
+
+        // Phase one attacks.
+        Crawl,
+        //BreatheVenom,
+        //Charge,
+        //SummonMinions,
+        //ShootWebs,
+
+        // Phase two attacks.
+        //EnterPhase2,
+        //OrbitingGoo,
+        //VenomSpores,
+
+        //DeathAnimation
     }
-
-    public State CurrentState
-    {
-        get => (State)(int)NPC.ai[0];
-        set => NPC.ai[0] = (int)value;
-    }
-
-    public ref float AttackTimer => ref NPC.ai[1];
-
-    public ref float StepTimer => ref NPC.ai[2];
-
-    public ref float Phase => ref NPC.ai[3];
-
-    public float LifeRatio => NPC.life / (float)NPC.lifeMax;
 
     public float Depth = 0.8f;
-
-    public Player Target => Main.player[NPC.target];
 
     public List<CorrodedTerrorLeg> Legs = [];
 
@@ -83,15 +76,21 @@ public class CorrodedTerrorBoss : ModNPC
 
     public override void AI()
     {
+        State currentState = (State)(int)NPC.ai[0];
+        ref float attackTimer = ref NPC.ai[1];
+        ref float stepTimer = ref NPC.ai[2];
+
+        Player target = Main.player[NPC.target];
+
         // Find the nearest target.
         NPC.TargetClosest();
 
         // Despawn if all remaining targets are dead.
-        if (Target.dead || !Target.active)
+        if (target.dead || !target.active)
         {
             // Crawl down.
             NPC.velocity.Y++;
-            if (NPC.Distance(Target.Center) > 30f)
+            if (NPC.Distance(target.Center) > 30f)
             {
                 NPC.active = false;
                 NPC.netUpdate = true;
@@ -102,30 +101,75 @@ public class CorrodedTerrorBoss : ModNPC
         // Pulse the depth.
         Depth = 0.75f + (float)Math.Sin(Main.GlobalTimeWrappedHourly) * 0.05f;
 
-        // Find the target's center and move accordingly.
-        Vector2 targetPosition = Target.Center + new Vector2(0, -200);
-        NPC.Center = Vector2.Lerp(NPC.Center, targetPosition, 0.05f);
-
         // Update the legs based on the step timer.
-        StepTimer++;
+        stepTimer++;
         foreach (var leg in Legs)
-            leg.Update(NPC, Target, ref StepTimer);
+            leg.Update(NPC, target, ref stepTimer);
 
         // Switch between states.
-        switch (CurrentState)
+        switch (currentState)
         {
             case State.SummonAnimation:
-                SummonAnimation();
+                SummonAnimation(NPC, target, ref attackTimer);
+                break;
+            case State.Crawl:
+                Crawl(NPC, target);
                 break;
         }
 
         // Increment the attack timer.
-        AttackTimer++;
+        attackTimer++;
     }
 
-    public static void SummonAnimation()
+    public static void SummonAnimation(NPC npc, Player target, ref float attackTimer)
     {
-        // TODO: Summon animation.
+        // Summon somewhere near the target.
+        if (attackTimer == 0)
+        {
+            Vector2 spawnOffset = Main.rand.NextVector2CircularEdge(325f, 325f);
+            npc.Center = target.Center + spawnOffset;
+        }
+
+        // Perform the summon animation.
+        if (attackTimer >= 5 && attackTimer <= 240)
+        {
+            // Crawl a bit closer.
+            if (attackTimer <= 75)
+                npc.velocity = npc.DirectionTo(target.Center) * 0.3f;
+            // Stop moving shortly afterwards.
+            else
+                npc.velocity = Vector2.Zero;
+
+            // TODO: Make the camera focus on the boss during the summon animation.
+            // I (Vaema) will make the system for that later.
+        }
+
+        if (attackTimer > 240)
+            SelectNextAttack(npc);
+    }
+
+    public static void Crawl(NPC npc, Player target)
+    {
+        // As of right now, just do this. I will return to this later.
+        npc.velocity = npc.DirectionTo(target.Center) * 0.75f;
+    }
+
+    public static void SelectNextAttack(NPC npc)
+    {
+        State oldState = (State)(int)npc.ai[0];
+        State newState = State.Crawl;
+
+        // TODO: Implement the other states and ensure the boss switches to them.
+        switch (oldState)
+        {
+            case State.SummonAnimation:
+                newState = State.Crawl;
+                break;
+        }
+
+        npc.ai[0] = (int)newState;
+        npc.ai[1] = 0;
+        npc.netUpdate = true;
     }
 
     public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)

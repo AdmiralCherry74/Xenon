@@ -14,6 +14,7 @@ public class CorrodedTerrorLeg(int i)
     public float Lower = 60f;
 
     private float stepProgress;
+    private bool isSteppingActive;
 
     private int index = i;
     private int group = i % 2;
@@ -33,25 +34,39 @@ public class CorrodedTerrorLeg(int i)
         Vector2 desired = Root + outward * 120f;
 
         // Add jitter to simulate crawling across surface.
-        desired += new Vector2((float)Math.Sin(globalTimer * 0.05f + index) * 10f, (float)Math.Cos(globalTimer * 0.04f + index) * 10f);
+        float jitterX = (float)Math.Sin(globalTimer * 0.05f + index) * 10f;
+        float jitterY = (float)Math.Cos(globalTimer * 0.04f + index) * 10f;
+        desired += new Vector2(jitterX, jitterY);
 
         Target = desired;
 
         // Alternate stepping.
-        if ((globalTimer / 20) % 2 == group)
+        bool shouldStep = (globalTimer / 20) % 2 == group;
+        float distanceToTarget = Vector2.Distance(Foot, Target);
+
+        if (shouldStep && distanceToTarget > 25f)
         {
-            if (Vector2.Distance(Foot, Target) > 25f)
-            {
-                stepProgress += 0.08f;
+            isSteppingActive = true;
+            stepProgress += 0.08f;
 
-                Vector2 lifted = Vector2.Lerp(Foot, Target, stepProgress);
-                float height = (float)Math.Sin(stepProgress * Math.PI) * 20f;
-                lifted.Y -= height;
+            Vector2 lifted = Vector2.Lerp(Foot, Target, stepProgress);
+            float height = (float)Math.Sin(stepProgress * Math.PI) * 20f;
+            lifted.Y -= height;
 
-                Foot = lifted;
-            }
-            else
-                stepProgress = 0f;
+            Foot = lifted;
+        }
+        else if (isSteppingActive && distanceToTarget <= 25f)
+        {
+            // Smooth transition when reaching target.
+            stepProgress = 0f;
+            isSteppingActive = false;
+            Foot = Target;
+        }
+        else if (!shouldStep)
+        {
+            // Reset when this leg's group isn't active.
+            stepProgress = 0f;
+            isSteppingActive = false;
         }
 
         SolveIK(Root, Foot);
