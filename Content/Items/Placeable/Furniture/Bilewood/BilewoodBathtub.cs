@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
@@ -17,7 +18,7 @@ public class BilewoodBathtub : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 14)
+            .AddIngredient(ModContent.ItemType<BilewoodItem>(), 14)
             .AddTile(TileID.Sawmill).Register();
     }
 }

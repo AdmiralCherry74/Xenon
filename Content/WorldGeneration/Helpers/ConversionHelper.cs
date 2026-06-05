@@ -2,12 +2,12 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Bricks;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
+using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Ores;
-using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
 namespace Xenon.Content.WorldGeneration.Helpers;
@@ -40,7 +40,7 @@ public static class ConversionHelper
                 _ = ConvertTile<Gutstone>(x, y, type => Main.tileMoss[type] || TileID.Sets.Conversion.Stone[type]) ||
                     ConvertTile<CorrosionJungleGrass>(x, y, type => TileID.Sets.Conversion.JungleGrass[type]) ||
                     ConvertTile<CorrosionGrass>(x, y, type => TileID.Sets.Conversion.Grass[type]) ||
-                    ConvertTile<TanIce>(x, y, type => TileID.Sets.Conversion.Ice[type]) ||
+                    ConvertTile<BrownIce>(x, y, type => TileID.Sets.Conversion.Ice[type]) ||
                     ConvertTile<Gutsand>(x, y, type => TileID.Sets.Conversion.Sand[type]) ||
                     ConvertTile<HardenedGutsand>(x, y, type => TileID.Sets.Conversion.HardenedSand[type], false) ||
                     ConvertTile<Gutsandstone>(x, y, type => TileID.Sets.Conversion.Sandstone[type], false) ||

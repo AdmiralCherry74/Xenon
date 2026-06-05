@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Ammo.Bolts;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Projectiles.Ranged.Ammo.Bolts;
 
@@ -30,8 +29,8 @@ class BasicCrossbow : ModItem
         Item.crit = 0;
         Item.noMelee = true;
         Item.shootSpeed = 17f;
-        Item.shoot = ModContent.ProjectileType<ExampleBoltProj>();
-        Item.useAmmo = ModContent.ItemType<ExampleBolt>();
+        Item.shoot = AmmoID.Arrow;
+        Item.useAmmo = AmmoID.Arrow;
 
         Item.value = 360;
     }

@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.ModSupport.Confection.Content.Items;
 
 namespace Xenon.ModSupport.Confection.Content.Tiles;

@@ -5,8 +5,8 @@ using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
+using Xenon.Content.Tiles.Natural.NaturalStone;
 using Xenon.Content.Tiles.Natural.Other;
-using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Hooks;
 

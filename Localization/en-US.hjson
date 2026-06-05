@@ -893,7 +893,7 @@ Mods: {
 
 			TintedGlass: {
 				DisplayName: Tinted Glass
-				Tooltip: See through glass made from onyx gems that doesn't let light through
+				Tooltip: See through glass made from flint that doesn't let light through
 			}
 
 			JawSplitter: {
@@ -1974,7 +1974,7 @@ Mods: {
 
 			CharcoalCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			LavenderCatacombWallItem: {
@@ -1984,12 +1984,12 @@ Mods: {
 
 			LavenderCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			RedCatacombWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			CharcoalCatacombTileWallItem: {
@@ -1999,7 +1999,7 @@ Mods: {
 
 			CharcoalCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Tile Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			LavenderCatacombTileWallItem: {
@@ -2009,7 +2009,7 @@ Mods: {
 
 			LavenderCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Tile Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			RedCatacombTileWallItem: {
@@ -2019,7 +2019,7 @@ Mods: {
 
 			RedCatacombTileWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Tile Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			CharcoalCatacombSlabWallItem: {
@@ -2029,7 +2029,7 @@ Mods: {
 
 			CharcoalCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Charcoal Catacomb Slab Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			LavenderCatacombSlabWallItem: {
@@ -2039,7 +2039,7 @@ Mods: {
 
 			LavenderCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Lavender Catacomb Slab Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			RedCatacombSlabWallItem: {
@@ -2049,7 +2049,7 @@ Mods: {
 
 			RedCatacombSlabWallUnsafeItem: {
 				DisplayName: Cadaverous Red Catacomb Slab Wall
-				Tooltip: "An entombed segment of Catacomb wall that will spawn monsters infront of it"
+				Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
 			}
 
 			IndiumOreBlock: {
@@ -2729,12 +2729,12 @@ Mods: {
 
 			AbandonedPlankedPearlWallItem: {
 				DisplayName: Abandoned Planked Pearl Wall
-				Tooltip: "An abandoned bit of Planked Pearl wall that retains its properties prior to the souls being unleashed"
+				Tooltip: An abandoned bit of Planked Pearl wall that retains its properties prior to the souls being unleashed
 			}
 
 			Brain: {
 				DisplayName: Brain
-				Tooltip: "Good source of cholesterol"
+				Tooltip: Good source of cholesterol
 			}
 
 			Sludge: {
@@ -2754,7 +2754,96 @@ Mods: {
 
 			OuranoStoneWallItemUnsafe: {
 				DisplayName: Natural Ourano Stone Wall
-				Tooltip: "Abit of natural ourano stone wall that will spawn monsters infront of it"
+				Tooltip: Abit of natural ourano stone wall that will spawn monsters infront of it
+			}
+
+			BilewoodItem: {
+				DisplayName: Bilewood
+				Tooltip: ""
+			}
+
+			PalladiumBuckler: {
+				DisplayName: Palladium Buckler
+				Tooltip:
+					'''
+					Grants immunity to knockback
+					Very slowly regenerates life
+					'''
+			}
+
+			SmoothStoneItem: {
+				DisplayName: Smooth Stone Item
+				Tooltip: ""
+			}
+
+			RedCatacombBookcaseItem: {
+				DisplayName: Red Catacomb Bookcase Item
+				Tooltip: ""
+			}
+
+			BisexualPrideBannerItem: {
+				DisplayName: Bisexual Pride Banner Item
+				Tooltip: ""
+			}
+
+			GayPrideBannerItem: {
+				DisplayName: Gay Pride Banner Item
+				Tooltip: ""
+			}
+
+			LesbianPrideBannerItem: {
+				DisplayName: Lesbian Pride Banner Item
+				Tooltip: ""
+			}
+
+			OmnisexualPrideBannerItem: {
+				DisplayName: Omnisexual Pride Banner Item
+				Tooltip: ""
+			}
+
+			PansexualPrideBannerItem: {
+				DisplayName: Pansexual Pride Banner Item
+				Tooltip: ""
+			}
+
+			TransgenderPrideBannerItem: {
+				DisplayName: Transgender Pride Banner Item
+				Tooltip: ""
+			}
+
+			BilewoodBroadsword: {
+				DisplayName: Bilewood Broadsword
+				Tooltip: ""
+			}
+
+			BrownIceBlock: {
+				DisplayName: Brown Ice Block
+				Tooltip: ""
+			}
+
+			BilewoodBreastplate: {
+				DisplayName: Bilewood Breastplate
+				Tooltip: ""
+			}
+
+			BilewoodGreaves: {
+				DisplayName: Bilewood Greaves
+				Tooltip: ""
+			}
+
+			BilewoodHelmet: {
+				DisplayName: Bilewood Helmet
+				Tooltip: ""
+			}
+
+			BilewoodHammer: {
+				DisplayName: Bilewood Hammer
+				Tooltip: ""
+			}
+
+			BilewoodBow: {
+				DisplayName: Bilewood Bow
+				Tooltip: ""
 			}
 		}
 
@@ -2832,6 +2921,7 @@ Mods: {
 			BoneSerpentGiantHead.DisplayName: Colossus
 			BoneSerpentGiantBody.DisplayName: Colossus
 			BoneSerpentGiantTail.DisplayName: Colossus
+			CrystalineGolem.DisplayName: Crystaline Golem
 		}
 
 		Tiles: {
@@ -2914,6 +3004,7 @@ Mods: {
 			MoonWidow: Sticky webs lead to sticky situations.
 			Revenant: Abandoned in this grave of the dead, Revenants are a type of spirit that haunt the living if they dare to enter.
 			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. but was revived and now its angry you disturbed its forever slumber...
+			CrystalineGolem: For some odd reason, this bit of Crystal went rouge and became alive. resisting weapons and projectiles under most circumstances. youll need to be clever to rid of these mimicing distractions
 		}
 
 		Biomes: {

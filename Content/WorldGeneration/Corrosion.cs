@@ -11,9 +11,9 @@ using Xenon.Content.WorldGeneration.Passes;
 using Terraria.IO;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
-using Xenon.Content.Tiles.Natural.Other;
 using AltLibrary.Core.Generation;
 using AltLibrary.Common.Systems;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -141,7 +141,7 @@ public class Corrosion : EvilBiomeGenerationPass
                     }
                     if (Main.tile[num57, num224].TileType == TileID.IceBlock)
                     {
-                        Main.tile[num57, num224].TileType = (ushort)ModContent.TileType<TanIce>();
+                        Main.tile[num57, num224].TileType = (ushort)ModContent.TileType<BrownIce>();
                     }
                     if (Main.tile[num57, num224].TileType == TileID.HardenedSand)
                     {

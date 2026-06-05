@@ -2,11 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Accessories;
+using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Furniture.Crafting;
@@ -25,8 +27,6 @@ using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
 using Xenon.Content.Items.Weapons.Summon.Caltrops;
-using Xenon.Content.Tiles.Furniture.CraftingStations;
-using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Common.Globals
 {
@@ -474,11 +474,25 @@ namespace Xenon.Common.Globals
                 .Register();
             #endregion
             #endregion
+
+            #region Stone based blocks
+            //Smooth Stone
+            Recipe.Create(ModContent.ItemType<SmoothStoneItem>(), 1)
+            .AddIngredient(ItemID.StoneBlock, 2)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.GrayBrickWall)
+            .Register();
             #endregion
 
-            #region Ore based gear, tools, weapons and armor recipes
+            #region Catacombs
+            #region Red Catacombs
+            #endregion
+            #endregion
+            #endregion
 
-            #region Vanilla Ore Recipes
+            #region Ore and Wood based gear, tools, weapons and armor recipes
+
+            #region Vanilla Ore based Recipes
 
             #region Hoes
             //Copper Hoe
@@ -661,6 +675,52 @@ namespace Xenon.Common.Globals
             .SortAfterFirstRecipesOf(ItemID.CrimsonYoyo)
             .Register();
 
+            #endregion
+            #endregion
+
+            #region Xenon Wood Recipes
+            #region Bilewood
+            //Bilewood Helmet
+            Recipe.Create(ModContent.ItemType<BilewoodHelmet>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 20)
+                .SortAfterFirstRecipesOf(ItemID.EbonwoodBow)
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Bilewood Breastplate
+            Recipe.Create(ModContent.ItemType<BilewoodBreastplate>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 30)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<BilewoodHelmet>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Bilewood Greaves
+            Recipe.Create(ModContent.ItemType<BilewoodGreaves>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 25)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<BilewoodBreastplate>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Bilewood Broadsword
+            Recipe.Create(ModContent.ItemType<BilewoodBroadsword>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 7)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<BilewoodGreaves>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Bilewood Hammer
+            Recipe.Create(ModContent.ItemType<BilewoodHammer>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 8)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<BilewoodBroadsword>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Bilewood Bow
+            Recipe.Create(ModContent.ItemType<BilewoodBow>())
+                .AddIngredient(ModContent.ItemType<BilewoodItem>(), 10)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<BilewoodHammer>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
             #endregion
             #endregion
 

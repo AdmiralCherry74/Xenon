@@ -2,7 +2,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Bricks;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
+using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
@@ -51,7 +52,7 @@ internal class BiomeTileCounts : ModSystem
                          tileCounts[ModContent.TileType<CorrosionJungleGrass>()] +
                          tileCounts[ModContent.TileType<Gutquicksand>()] +
                          tileCounts[ModContent.TileType<Gutsand>()] +
-                         tileCounts[ModContent.TileType<TanIce>()] +
+                         tileCounts[ModContent.TileType<BrownIce>()] +
                          tileCounts[ModContent.TileType<HephStone>()] +
                          tileCounts[ModContent.TileType<MossyHephStone>()];
 

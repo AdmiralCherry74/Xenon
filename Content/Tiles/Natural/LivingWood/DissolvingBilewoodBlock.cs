@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.Tiles.Building.Wood;
 
 namespace Xenon.Content.Tiles.Natural.LivingWood;
 
@@ -19,7 +20,7 @@ public class DissolvingBilewoodBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         ItemID.Sets.DisableAutomaticPlaceableDrop[Type] = true;
-        RegisterItemDrop(ModContent.ItemType<Bilewood>());
+        RegisterItemDrop(ModContent.ItemType<BilewoodItem>());
         AddMapEntry(new Color(125, 117, 143));
         HitSound = SoundID.Dig;
         DustType = ModContent.DustType<Dusts.BilewoodDust>();

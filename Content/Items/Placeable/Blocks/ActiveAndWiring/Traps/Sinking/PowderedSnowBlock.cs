@@ -1,6 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 
 namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Sinking
 {

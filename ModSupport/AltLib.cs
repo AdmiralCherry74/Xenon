@@ -6,13 +6,13 @@ using Xenon.Content.WorldGeneration;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
-using Xenon.Content.Tiles.Bricks;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using AltLibrary.Common.AltBiomes;
 using Xenon.Content.Tiles.Natural.Ores;
 using AltLibrary.Common.AltOres;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Accessories;
+using Xenon.Content.Tiles.Building.Bricks;
 
 namespace Xenon.ModSupport;
 
@@ -78,7 +78,7 @@ internal class CorrosionAltBiome : AltBiome
         AddTileConversion(ModContent.TileType<Gutsand>(), TileID.Sand);
         AddTileConversion(ModContent.TileType<Gutsandstone>(), TileID.Sandstone);
         AddTileConversion(ModContent.TileType<HardenedGutsand>(), TileID.HardenedSand);
-        AddTileConversion(ModContent.TileType<TanIce>(), TileID.IceBlock);
+        AddTileConversion(ModContent.TileType<BrownIce>(), TileID.IceBlock);
 
         GERunnerConversion.Add(TileID.Silt, ModContent.TileType<Gutsand>());
 

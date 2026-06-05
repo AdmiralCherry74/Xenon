@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
@@ -18,7 +19,7 @@ public class BilewoodLamp : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Torch)
-            .AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 3)
+            .AddIngredient(ModContent.ItemType<BilewoodItem>(), 3)
             .AddTile(TileID.WorkBenches).Register();
     }
 }

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
@@ -19,7 +20,7 @@ public class BilewoodClock : ModItem
         CreateRecipe()
             .AddRecipeGroup("IronBar", 3)
             .AddIngredient(ItemID.Glass, 6)
-            .AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 10)
+            .AddIngredient(ModContent.ItemType<BilewoodItem>(), 10)
             .AddTile(TileID.Sawmill).Register();
     }
 }

@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -31,7 +32,7 @@ public class CorrosionPalmTree : ModPalmTree
     public override Asset<Texture2D> GetTopTextures() => topsTexture;
     public override int TreeLeaf() => ModContent.GoreType<CorrosionTreeLeaf>();
 
-    public override int DropWood() => ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>();
+    public override int DropWood() => ModContent.ItemType<BilewoodItem>();
 
     public override int CreateDust() => ModContent.DustType<BilewoodDust>();
     public override bool Shake(int x, int y, ref bool createLeaves)
@@ -46,7 +47,7 @@ public class CorrosionPalmTree : ModPalmTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<BilewoodItem>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

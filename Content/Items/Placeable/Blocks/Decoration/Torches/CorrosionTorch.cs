@@ -28,7 +28,7 @@ public class CorrosionTorch : ModItem
     {
         CreateRecipe(3).AddIngredient(ItemID.Torch, 3).AddIngredient(ModContent.ItemType<GutstoneBlock>()).Register();
         CreateRecipe(3).AddIngredient(ItemID.Torch, 3).AddIngredient(ModContent.ItemType<HardenedGutsandBlock>()).Register();
-        CreateRecipe(3).AddIngredient(ItemID.Torch, 3).AddIngredient(ModContent.ItemType<TanIceBlock>()).Register();
+        CreateRecipe(3).AddIngredient(ItemID.Torch, 3).AddIngredient(ModContent.ItemType<BrownIceBlock>()).Register();
     }
     public override void HoldItem(Player player)
     {

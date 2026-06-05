@@ -94,7 +94,7 @@ public class Utils
 		variation = Terraria.Utils.Clamp(variation, 0, 2);
 		if (WorldGen.SolidTile(x, y - 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y + 1].HasTile)
 		{
-			if (Main.tile[x, y - 1].TileType == ModContent.TileType<Tiles.Natural.Stone.Rhyolite>() ||
+			if (Main.tile[x, y - 1].TileType == ModContent.TileType<Tiles.Natural.NaturalStone.Rhyolite>() ||
 				Main.tile[x, y - 1].TileType == ModContent.TileType<FrozenLava>() ||
 				Main.tile[x, y - 1].TileType == ModContent.TileType<Gutstone>())
 			{
@@ -124,7 +124,7 @@ public class Utils
 		}
 		else if (WorldGen.SolidTile(x, y + 1) && !Main.tile[x, y].HasTile && !Main.tile[x, y - 1].HasTile)
 		{
-			if (Main.tile[x, y + 1].TileType == ModContent.TileType<Tiles.Natural.Stone.Rhyolite>() ||
+			if (Main.tile[x, y + 1].TileType == ModContent.TileType<Tiles.Natural.NaturalStone.Rhyolite>() ||
 				Main.tile[x, y + 1].TileType == ModContent.TileType<Gutstone>() ||
 				Main.tile[x, y + 1].TileType == ModContent.TileType<OuranoStone>() ||
 				Main.tile[x, y + 1].TileType == ModContent.TileType<NyxStone>() ||

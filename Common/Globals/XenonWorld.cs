@@ -354,7 +354,7 @@ internal class XenonWorld : ModSystem
 			}
 			// corrosion
 			if (type == ModContent.TileType<CorrosionGrass>() || type == ModContent.TileType<Gutstone>() || type == ModContent.TileType<Gutsand>() ||
-				type == ModContent.TileType<TanIce>() || type == ModContent.TileType<HardenedGutsand>() || type == ModContent.TileType<Gutsandstone>() ||
+				type == ModContent.TileType<BrownIce>() || type == ModContent.TileType<HardenedGutsand>() || type == ModContent.TileType<Gutsandstone>() ||
 				type == ModContent.TileType<CorrosionJungleGrass>() || type == ModContent.TileType<HephStone>() || type == ModContent.TileType<MossyHephStone>())
 			{
 				bool flag = true;

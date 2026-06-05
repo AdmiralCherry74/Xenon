@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
@@ -15,6 +16,6 @@ public class BilewoodWorkBench : ModItem
 
     public override void AddRecipes()
     {
-        CreateRecipe().AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 10).Register();
+        CreateRecipe().AddIngredient(ModContent.ItemType<BilewoodItem>(), 10).Register();
     }
 }

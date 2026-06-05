@@ -5,7 +5,7 @@ using Terraria.IO;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 
 namespace Xenon.Content.WorldGeneration;
 

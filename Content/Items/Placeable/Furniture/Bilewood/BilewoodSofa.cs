@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Placeable.Furniture.Bilewood;
 
@@ -17,7 +18,7 @@ public class BilewoodSofa : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Blocks.BuildingTiles.Wood.Bilewood>(), 5)
+            .AddIngredient(ModContent.ItemType<BilewoodItem>(), 5)
             .AddIngredient(ItemID.Silk, 2)
             .AddTile(TileID.Sawmill).Register();
     }

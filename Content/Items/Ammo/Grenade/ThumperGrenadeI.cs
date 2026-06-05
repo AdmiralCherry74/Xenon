@@ -24,16 +24,8 @@ public class ThumperGrenadeI : ModItem
         Item.consumable = true;
         Item.knockBack = 10f;
         Item.value = Item.sellPrice(0, 0, 0, 0);
-        Item.ammo = ModContent.ItemType<ExampleThumper>();
+        Item.ammo = ItemID.Grenade;
         Item.shoot = ModContent.ProjectileType<ThumperGrenadeIProj>();
         Item.shootSpeed = 1;
-    }
-    public override void AddRecipes()
-    {
-        CreateRecipe(3)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 6)
-            .AddIngredient(ItemID.Grenade, 3)
-            .AddTile(TileID.Anvils)
-            .Register();
     }
 }

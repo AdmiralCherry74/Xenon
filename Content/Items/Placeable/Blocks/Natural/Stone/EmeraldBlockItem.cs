@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Building.BuildingStone.CombinedGems;
 using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Stone;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 

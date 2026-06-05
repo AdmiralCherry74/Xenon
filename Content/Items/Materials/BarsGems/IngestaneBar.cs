@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Building.Decorational;
 
 namespace Xenon.Content.Items.Materials.BarsGems;
 

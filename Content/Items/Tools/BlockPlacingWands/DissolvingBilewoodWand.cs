@@ -20,7 +20,7 @@ public class DissolvingBilewoodWand : ModItem
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(silver: 30);
         Item.createTile = ModContent.TileType<DissolvingBilewoodBlock>();
-        Item.tileWand = ModContent.ItemType<Bilewood>();
+        Item.tileWand = ModContent.ItemType<BilewoodItem>();
     }
     public override void SetStaticDefaults()
     {

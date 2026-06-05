@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 
 namespace Xenon.Hooks;
 

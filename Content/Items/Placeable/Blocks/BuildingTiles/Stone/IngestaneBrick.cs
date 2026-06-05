@@ -19,7 +19,7 @@ public class IngestaneBrick : ModItem
     {
         Item.autoReuse = true;
         Item.consumable = true;
-        Item.createTile = ModContent.TileType<Tiles.Bricks.IngestaneBrick>();
+        Item.createTile = ModContent.TileType<Tiles.Building.Bricks.IngestaneBrick>();
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 10;

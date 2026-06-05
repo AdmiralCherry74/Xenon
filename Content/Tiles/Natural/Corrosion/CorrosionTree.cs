@@ -6,6 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -64,7 +65,7 @@ public class CorrosionTree : ModTree
 
     public override int DropWood()
     {
-        return ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>();
+        return ModContent.ItemType<BilewoodItem>();
     }
     public override bool CanDropAcorn()
     {
@@ -82,7 +83,7 @@ public class CorrosionTree : ModTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.Bilewood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<BilewoodItem>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -12,6 +13,7 @@ namespace Xenon.Content.NPCs
     public class ExampleEnemy : ModNPC
     {
         //This is based off the Haunted Armor Enemy, Selene (I) use this to test various things
+
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PossessedArmor];
@@ -30,7 +32,7 @@ namespace Xenon.Content.NPCs
             NPC.damage = 1;
             NPC.defense = 0;
             NPC.lifeMax = 100;
-            NPC.HitSound = SoundID.NPCHit4;
+            NPC.HitSound = new SoundStyle($"{nameof(Xenon)}/Assets/SFX/CrystalineGolemHit") { Pitch = 0f, Volume = 0.8f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.DeathSound = SoundID.NPCDeath33;
             NPC.value = 200;
             NPC.knockBackResist = 1f;

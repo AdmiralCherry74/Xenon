@@ -1,6 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Bricks;
+using Xenon.Content.Tiles.Building.Bricks;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 

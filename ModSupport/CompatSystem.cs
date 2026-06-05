@@ -6,9 +6,9 @@ using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
-using Xenon.Content.Tiles.Natural.Other;
 using Avalon.Tiles.Ores;
 using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 
 namespace Xenon.ModSupport;
 
