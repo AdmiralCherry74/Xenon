@@ -49,6 +49,7 @@ Mods: {
 			Iceburn_2: "{0} went up in icy flames."
 		}
 
+		DropConditions.SoulOfRight: Drops in the Purity Cavern biome in hardmode
 		TooltipsHoePower.HoePowerTooltip: "{0}% hoe power"
 		VanillaItemRenames.CrimsonHelmet: Ancient Crimson Helmet
 
@@ -2845,6 +2846,141 @@ Mods: {
 				DisplayName: Bilewood Bow
 				Tooltip: ""
 			}
+
+			JacarandawoodBreastplate: {
+				DisplayName: Jacaranda Wood Breastplate
+				Tooltip: ""
+			}
+
+			JacarandawoodGreaves: {
+				DisplayName: Jacaranda Wood Greaves
+				Tooltip: ""
+			}
+
+			JacarandawoodHelmet: {
+				DisplayName: Jacaranda Wood Helmet
+				Tooltip: ""
+			}
+
+			JacarandawoodItem: {
+				DisplayName: Jacaranda Wood
+				Tooltip: ""
+			}
+
+			JacarandawoodHammer: {
+				DisplayName: Jacaranda Wood Hammer
+				Tooltip: ""
+			}
+
+			JacarandawoodBroadsword: {
+				DisplayName: Jacaranda Wood Broadsword
+				Tooltip: ""
+			}
+
+			JacarandawoodBow: {
+				DisplayName: Jacaranda Wood Bow
+				Tooltip: ""
+			}
+
+			Regurgitator: {
+				DisplayName: Regurgitator
+				Tooltip: ""
+			}
+
+			SoulOfRight: {
+				DisplayName: Soul Of Right
+				Tooltip: "'The essence of harmonic creatures'"
+			}
+
+			BakersHandbookBeach1: {
+				DisplayName: Bakers Handbook To Ocean cuisine v1
+				Tooltip: Allows for unique food recipes from the ocean
+			}
+
+			BakersHandbookCorrosion1: {
+				DisplayName: Bakers Handbook for safer Corroded cooking v1
+				Tooltip: Allows for safe cooking of corrosion based materials
+			}
+
+			BakersHandbookCorrupt1: {
+				DisplayName: Bakers Handbook for safer Corrupted cooking v1
+				Tooltip: Allows for safe cooking of corruption based materials
+			}
+
+			BakersHandbookCrimson1: {
+				DisplayName: Bakers Handbook for safer Crimfied cooking v1
+				Tooltip: Allows for safe cooking of crimson based materials
+			}
+
+			BakersHandbookJungle1: {
+				DisplayName: Bakers Handbook to Vegiation and Fruit meals v1
+				Tooltip: Allows for fruits and veggies to be used in new recipes
+			}
+
+			BakersHandbookPurity1: {
+				DisplayName: Bakers Handbook for beginners
+				Tooltip: Allows for certain ingrediants to be used in food
+			}
+
+			BakersHandbookSnow1: {
+				DisplayName: Bakers Handbook for frozen meals v1
+				Tooltip: Allows for colder recipes to be used
+			}
+
+			BakersHandbookUnderworld1: {
+				DisplayName: Bakers Handook for spicy meals v1
+				Tooltip: Allows food from the underworld to be used
+			}
+
+			Beetroot: {
+				DisplayName: Beetroot
+				Tooltip: ""
+			}
+
+			Broccoli: {
+				DisplayName: Broccoli
+				Tooltip: ""
+			}
+
+			Cabbage: {
+				DisplayName: Cabbage
+				Tooltip: ""
+			}
+
+			Corn: {
+				DisplayName: Corn
+				Tooltip: ""
+			}
+
+			Garlic: {
+				DisplayName: Garlic
+				Tooltip: ""
+			}
+
+			Kohlrabi: {
+				DisplayName: Kohlrabi
+				Tooltip: ""
+			}
+
+			Leek: {
+				DisplayName: Leek
+				Tooltip: ""
+			}
+
+			Potato: {
+				DisplayName: Potato
+				Tooltip: ""
+			}
+
+			Rhubarb: {
+				DisplayName: Rhubarb
+				Tooltip: ""
+			}
+
+			Spinach: {
+				DisplayName: Spinach
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -2922,6 +3058,70 @@ Mods: {
 			BoneSerpentGiantBody.DisplayName: Colossus
 			BoneSerpentGiantTail.DisplayName: Colossus
 			CrystalineGolem.DisplayName: Crystaline Golem
+			BigGastritis.DisplayName: Gastritis
+			LittleGastritis.DisplayName: Gastritis
+
+			Baker: {
+				DisplayName: Baker
+
+				Dialouge: {
+					PartyGirlDialouge1: Have you seen {0}? *sigh* Of course she is out partying again... That girl was supposed to be here helping me bake cake!
+					PartyGirlDialouge2: "{0} stopped by to ask if I wanted to bake a cake for another one of her parties. I swear she's always getting me to bake something, but it brings customers."
+					PartyGirlDialouge3: You know, {0} reminds me of myself when I was younger. An loud girl who enjoys the company of everyone around enjoying what life has to offer.
+					PartyGirlDialouge4: Next time you see {0}, can you tell her to keep it down? Last time she partied this hard, it nearly toppled over my latest confections!
+					ArmsDealerDialouge1: "{0} and I have met before... and he is extremely shady."
+					ArmsDealerDialouge2: I've heard plenty of rumors about {0} and alot of them are true. I'd know...
+					ArmsDealerDialouge3: "{0} is flirty torwards everyone except me. Thank goodness i put on some weight, keeps him away from me."
+					ArmsDealerDialouge4: I've heard rumores you did deals with {0} before. I know you can handle yourself, but be careful around him, ok?
+					NurseDialouge1: Yes, I understand that {0} is a nurse, but the snide comments torwards my weight that arnt warrented.
+					NurseDialouge2: "{0} is just horrible to be around! She spreads rumors, says stuff behind peoples backs, and is just plain rude, even to her patients!"
+					NurseDialouge3: How did {0} become a nurse with her attitude. Why are so many nurses just this... well i dont wanna say it. Lets just say she acts like a female dog.
+					StylistDialouge1: Thank you for saving {0}. I was worried about her since she dissapeared a while ago...
+					StylistDialouge2: "{0} and I met back in high school, and were still great friends today! She does my hair, you should go to her if you need yours done, tell her I sent you."
+					StylistDialouge3: Tell {0} that im nearly finished with a batch of cupcakes. Im gifting it to her!
+					AnglerDialouge: Tell {0} to stop stealing my deserts, its costs too much for me to replace it!
+					PrincessDialouge: Oh dearie, can you ask {0} to stop by? I have a delightful gift for her
+					DryadDialouge: You know. I have tried getting slim. I asked {0} for advice. She said to just sit in the woods and not eat anything and let nature take its course.
+					PartyGirlArmsDealerDialouge1: Tell {0} to stay away from {1}. That man aint nothing but trouble!
+					PartyGirlArmsDealerDialouge2: I always worry for {0} whenever shes around {1}... He is very shady and I dont want {0} to end up in trouble.
+					ArmsDealerNurseDialouge1: I dont know how {1} puts up with {0}. Seriously, most of her patients come from gunshot wounds! He just creates extra work for her.
+					ArmsDealerNurseDialouge2: "{1} and {0} are perfect for each other... annoying sociopaths who dont care about anything."
+					ArmsDealerDemolitionistDialouge1: "{1} is dangerous, but at least he doesnt sell his goods to criminals knowingly... while {0}..."
+					ArmsDealerDemolitionistDialouge2: I hear both {0} and {1} argue over whats better at killing things. my question is... why even argue about something violent?
+					StandardDialouge1: Despite being called a baker, my position is actually a Confectionist
+					StandardDialouge2: What can I do for you dearie? an applepie? chocolate chip cookies? taffy? cheese cake?
+					StandardDialouge3: You just go around shakeing trees with your axe for fruit? Just seems destructive and reckless of you, Your gonna get hurt someday!
+					StandardDialouge4: The monsters tend to drop food when they die, I question if they need to eat aswell.
+					StandardDialouge5: You know I was the one who discovered how tasty the gel from slime were. I made a slime pie with it and it tasted really good!
+					CommonDialouge: Hey, how you doing dearie? Want me to make you something, just let me know and ill order it in and it'll be fresh and warm!
+					UncommonDialouge1: I think some of my bakers handbooks are lost out in the world... if you find them, i bet you can use it yourself and learn how to bake goods like i do!
+					UncommonDialouge2: Oh boy, all these deserts are not helping my waistline. Oh! Hi Dearie, what can i bake you today?
+					BloodMoonDialouge1: *chewing loudly* What? Im stressed, and im eating!
+					BloodMoonDialouge2: Please tell me that I didnt leave the door open. I dont want my night to be worse.
+					BloodMoonDialouge3: Sometimes... I just use the blood moon as an excuse to be mean
+					BloodMoonDialouge4: Oh what did {0} do now!?
+					NightDialouge: Ill be honest, the creatures outside scare me alot.
+				}
+
+				TownNPCMood: {
+					Content: Im doing fine, Dearie. Baking and Cooking like no tommorrow! Would you like to try a cookie?
+					NoHome: Oh dear... I dont have a house... How am I going to even bake goods if I have no house with no oven!
+					FarFromHome: Look, dear, its obvious I ain't athletic, and I didnt sign up for a marathon just to go home to my oven.
+					LoveSpace: So much space to bake! I think i might try some new recipes!
+					DislikeCrowded: Uh dearie, do you think theres maybe one too many people here?
+					HateCrowded: Not enough space for me to bake anything, let alone breath! you outta seperate us dear.
+					LoveBiome: I love the {BiomeName}! Sure the seagulls are annoying and all, picking at my food, but... I like the serene calmness.
+					LikeBiome: I like the {BiomeName} enough, Its happy and go lucky. I just wish the creatures werent as... much.
+					DislikeBiome: "{BiomeName} and desserts do not mix!"
+					HateBiome: "{BiomeName} is horrible! I never seen it but I heard rumors and... my word."
+					LoveNPC: Of course I love {NPCName}, Why would I not love my sweet little sugar.
+					LikeNPC: "{NPCName} and I met back in high school, we talk and she does my hair. You should go to her if you need your hair done!"
+					DislikeNPC: "{NPCName} and I met back in high school. She always made fun of my weight, well im sorry im fat. You cant trust a thin baker!"
+					HateNPC: I see {NPCName} dealing with Bandits during the night and I fear for my safety, no all of our safety!
+					LikeNPC_Princess: "{NPCName} often asks me to make her all sorts of cakes and cookies aswell as ice cream and... im getting hungry again."
+					Princess_LovesNPC: "{NPCName} often asks me to make her all sorts of cakes and cookies asweel as ice cream and... im getting hungry again."
+				}
+			}
 		}
 
 		Tiles: {
@@ -3005,6 +3205,7 @@ Mods: {
 			Revenant: Abandoned in this grave of the dead, Revenants are a type of spirit that haunt the living if they dare to enter.
 			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. but was revived and now its angry you disturbed its forever slumber...
 			CrystalineGolem: For some odd reason, this bit of Crystal went rouge and became alive. resisting weapons and projectiles under most circumstances. youll need to be clever to rid of these mimicing distractions
+			Baker: This 'larger than life' Baker came too this land to find inspiration for her Baker's handbooks she is currently writing.
 		}
 
 		Biomes: {
@@ -3092,6 +3293,11 @@ Mods: {
 				DisplayName: Catacombs
 				TownNPCDialogueName: the Catacombs
 			}
+
+			TheMirage: {
+				DisplayName: The Mirage
+				TownNPCDialogueName: The Mirage
+			}
 		}
 
 		Projectiles: {
@@ -3174,6 +3380,7 @@ Mods: {
 			XieiteShortswordProj.DisplayName: Xieite Shortsword
 			Flintball.DisplayName: Flintball
 			JadeGemball.DisplayName: Jade Gemball
+			Regurgitator_Bobber.DisplayName: Regurgitator Bobber
 		}
 
 		Buffs: {
@@ -3293,6 +3500,7 @@ Mods: {
 						'''
 						Makes each ore armor, weapon, and most tools require the previous tier to craft
 						Also reduces the number of bars of that tier required to craft the next item
+						(Only effects Pre-Hardmode Items as of right now! keep that in mind)
 						'''
 				}
 
@@ -3326,5 +3534,7 @@ Mods: {
 				Description: ""
 			}
 		}
+
+		Emotes.BakerEmote.Command: Baker Emote
 	}
 }

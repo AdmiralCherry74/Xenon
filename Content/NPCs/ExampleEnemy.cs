@@ -29,10 +29,10 @@ namespace Xenon.Content.NPCs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 1;
+            NPC.damage = 5;
             NPC.defense = 0;
             NPC.lifeMax = 100;
-            NPC.HitSound = new SoundStyle($"{nameof(Xenon)}/Assets/SFX/CrystalineGolemHit") { Pitch = 0f, Volume = 0.8f, PitchVariance = 0f, MaxInstances = 5 };
+            NPC.HitSound = new SoundStyle($"Xenon/Assets/SFX/CrystalineGolemHit") { Pitch = 0f, Volume = 0.4f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.DeathSound = SoundID.NPCDeath33;
             NPC.value = 200;
             NPC.knockBackResist = 1f;

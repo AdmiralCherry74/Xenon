@@ -16,6 +16,7 @@ using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone;
 using Xenon.Content.Items.Placeable.Wall.Natural.Stone;
 using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.DriverHammers;
+using Xenon.Content.Items.Tools.FishingRods;
 using Xenon.Content.Items.Tools.GardeningHoes;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Magic.Staves;
@@ -28,7 +29,7 @@ using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
 using Xenon.Content.Items.Weapons.Summon.Caltrops;
 
-namespace Xenon.Common.Globals
+namespace Xenon.Common.Globals.XenonItemGlobals
 {
     public class RecipeSorting : ModSystem
     {
@@ -722,6 +723,50 @@ namespace Xenon.Common.Globals
                 .AddTile(TileID.WorkBenches)
                 .Register();
             #endregion
+
+            #region JacarandaWood
+            //Jacarandawood Helmet
+            Recipe.Create(ModContent.ItemType<JacarandawoodHelmet>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 20)
+                .SortAfterFirstRecipesOf(ItemID.PalmWoodBow)
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Jacarandawood Breastplate
+            Recipe.Create(ModContent.ItemType<JacarandawoodBreastplate>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 30)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JacarandawoodHelmet>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Jacarandawood Greaves
+            Recipe.Create(ModContent.ItemType<JacarandawoodGreaves>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 25)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JacarandawoodBreastplate>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Jacarandawood Broadsword
+            Recipe.Create(ModContent.ItemType<JacarandawoodBroadsword>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 7)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JacarandawoodGreaves>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Jacarandawood Hammer
+            Recipe.Create(ModContent.ItemType<JacarandawoodHammer>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 8)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JacarandawoodBroadsword>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            //Jacarandawood Bow
+            Recipe.Create(ModContent.ItemType<JacarandawoodBow>())
+                .AddIngredient(ModContent.ItemType<JacarandawoodItem>(), 10)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JacarandawoodHammer>())
+                .AddTile(TileID.WorkBenches)
+                .Register();
+            #endregion
             #endregion
 
             #region Aluminum Recipes
@@ -1151,16 +1196,21 @@ namespace Xenon.Common.Globals
             Recipe.Create(ModContent.ItemType<IngestaneBar>())
             .AddIngredient(ModContent.ItemType<IngestaneOre>(), 3)
             .AddTile(TileID.Furnaces)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<Zygomatarang>())
+            .SortAfterFirstRecipesOf(ModContent.ItemType<Depraverang>())
             .Register();
 
             //Fishing Rod
+            Recipe.Create(ModContent.ItemType<Regurgitator>())
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
+            .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<IngestaneBar>())
+            .Register();
 
             //Bow
             Recipe.Create(ModContent.ItemType<SulfirBow>())
             .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<IngestaneBar>()) //change this to fishing rod later
+            .SortAfterFirstRecipesOf(ModContent.ItemType<Regurgitator>())
             .Register();
 
             //Axe

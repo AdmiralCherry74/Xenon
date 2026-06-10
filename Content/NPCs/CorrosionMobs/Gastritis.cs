@@ -28,14 +28,14 @@ public class Gastritis : ModNPC
     {
         NPC.width = 34;
         NPC.height = 72;
-        NPC.damage = 10;
-        NPC.defense = 3;
-        NPC.lifeMax = 150;
+        NPC.damage = 22;
+        NPC.defense = 8;
+        NPC.lifeMax = 40;
         NPC.noGravity = true;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath2;
-        NPC.value = 250;
-        NPC.knockBackResist = 1f;
+        NPC.value = 90;
+        NPC.knockBackResist = 0.5f;
         NPC.aiStyle = NPCAIStyleID.Flying; 
         
         AIType = NPCID.EaterofSouls;
@@ -67,15 +67,6 @@ public class Gastritis : ModNPC
             return;
         }
     }
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
-    {
-        if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionDesert>() || spawnInfo.Player.InModBiome<CorrosionUnderground>())
-        {
-            return 2f;
-        }
-        return 0;
-    }
-
 
     public override void HitEffect(NPC.HitInfo hit)
     {

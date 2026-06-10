@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
@@ -80,7 +81,7 @@ public class JacarandaTree : ModTree
 
     public override int DropWood()
     {
-        return ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.JacarandaWood>(); //ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.JacarandaWood>();
+        return ModContent.ItemType<JacarandawoodItem>(); //ModContent.ItemType<Items.Placeable.Tile.BuildingTiles.Wood.JacarandaWood>();
     }
     public override bool CanDropAcorn()
     {
@@ -98,7 +99,7 @@ public class JacarandaTree : ModTree
         }
         else if (Main.rand.NextBool(12))
         {
-            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.BuildingTiles.Wood.JacarandaWood>(), Main.rand.Next(1, 4));
+            Item.NewItem(new EntitySource_ShakeTree(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<JacarandawoodItem>(), Main.rand.Next(1, 4));
         }
         else if (Main.rand.NextBool(20))
         {

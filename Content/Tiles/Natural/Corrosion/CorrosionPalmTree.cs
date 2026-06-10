@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.NPCs.CorrosionMobs;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -85,10 +86,10 @@ public class CorrosionPalmTree : ModPalmTree
         {
             NPC.NewNPC(new EntitySource_ShakeTree(x, y), x * 16, y * 16, NPCID.Seagull2);
         }
-        //else if (Main.rand.NextBool(30))
-        //{
-        //    NPC.NewNPC(new EntitySource_ShakeTree(x, y), x * 16 + 8, (y - 1) * 16, ModContent.NPCType<Bactus>());
-        //}
+        else if (Main.rand.NextBool(30))
+        {
+            NPC.NewNPC(new EntitySource_ShakeTree(x, y), x * 16 + 8, (y - 1) * 16, ModContent.NPCType<LittleGastritis>());
+        }
         //else if (Main.rand.NextBool(12))
         //{
         //    Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, (!Main.rand.NextBool(2)) ? ModContent.ItemType<Items.Food.Durian>() : ModContent.ItemType<Items.Food.Medlar>());

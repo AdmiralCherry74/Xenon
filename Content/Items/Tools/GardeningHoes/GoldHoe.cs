@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonItemGlobals;
 namespace Xenon.Content.Items.Tools.GardeningHoes;
 
 public class GoldHoe : ModItem

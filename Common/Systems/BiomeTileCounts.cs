@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Avalon.Tiles.Contagion;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
+using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Systems;
@@ -18,6 +21,8 @@ internal class BiomeTileCounts : ModSystem
     public int CorrosionDesertTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
     public int MountainTiles { get; set; }
+    public int MirageTiles { get; set; }
+    public int SoftMirageTiles { get; set; }
     public int ForestMushroomTiles { get; set; }
     public int CorrosionJungleTiles { get; set; }
     public int CorruptionJungleTiles { get; set; }
@@ -81,6 +86,38 @@ internal class BiomeTileCounts : ModSystem
                         tileCounts[ModContent.TileType<MossyHelioStone>()] +
                         tileCounts[ModContent.TileType<MossyHephStone>()] +
                         tileCounts[ModContent.TileType<MossyHestiaStone>()];
+
+        MirageTiles = tileCounts[TileID.HardenedSand] +
+                      tileCounts[TileID.CorruptHardenedSand] +
+                      tileCounts[TileID.CrimsonHardenedSand] +
+                      tileCounts[ModContent.TileType<HardenedGutsand>()] +
+                      tileCounts[ModContent.TileType<HardenedSnotsand>()] +
+                      tileCounts[TileID.HallowHardenedSand] +
+                      tileCounts[ModContent.TileType<HardenedCreamsand>()] +
+                      tileCounts[TileID.Sandstone] +
+                      tileCounts[TileID.CorruptSandstone] +
+                      tileCounts[TileID.CrimsonSandstone] +
+                      tileCounts[ModContent.TileType<Gutsandstone>()] +
+                      tileCounts[ModContent.TileType<Snotsandstone>()] +
+                      tileCounts[TileID.HallowSandstone] +
+                      tileCounts[ModContent.TileType<Creamsandstone>()];
+
+        SoftMirageTiles = tileCounts[TileID.Sand] +
+                          tileCounts[TileID.Ebonsand] +
+                          tileCounts[TileID.Crimsand] +
+                          tileCounts[ModContent.TileType<Gutsand>()] +
+                          tileCounts[ModContent.TileType<Snotsand>()] +
+                          tileCounts[TileID.Pearlsand] +
+                          tileCounts[ModContent.TileType<Creamsand>()] +
+                          tileCounts[ModContent.TileType<Quicksand>()] +
+                          tileCounts[ModContent.TileType<Ebonquicksand>()] +
+                          tileCounts[ModContent.TileType<Crimquicksand>()] +
+                          tileCounts[ModContent.TileType<Gutquicksand>()] +
+                          tileCounts[ModContent.TileType<Snotquicksand>()] +
+                          tileCounts[ModContent.TileType<Pearlquicksand>()] +
+                          tileCounts[ModContent.TileType<Creamquicksand>()];
+
+        //Makes it so sand and quicksand is counted torwards The Mirage. this is seperate because of the underground sand patches out in worlds sometimes
 
         CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
                         tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +

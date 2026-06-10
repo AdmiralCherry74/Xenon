@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using TheConfectionRebirth.Items;
 using TheConfectionRebirth.Items.Placeable;
 using TheConfectionRebirth.Items.Weapons;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonItemGlobals;
 
 namespace Xenon.ModSupport.Confection.Content.Items.Tools.GardeningHoes;
 

@@ -7,7 +7,7 @@ using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
 
-namespace Xenon.Common.Globals;
+namespace Xenon.Common.Globals.XenonItemGlobals;
 
 public class XenonGlobalItem : GlobalItem
 {

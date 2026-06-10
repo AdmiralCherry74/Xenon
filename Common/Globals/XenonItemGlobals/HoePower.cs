@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Xenon.Common.Globals
+namespace Xenon.Common.Globals.XenonItemGlobals
 {
     public class HoePower : GlobalItem
     {
@@ -19,7 +19,7 @@ namespace Xenon.Common.Globals
         {
            if (hoePower > 0)
            {
-                int tooltipInsert = tooltips.FindIndex((TooltipLine line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
+                int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                 if (tooltipInsert != 1)
                 {
                     tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "hoePower", Language.GetTextValue("Mods.Xenon.TooltipsHoePower.HoePowerTooltip", item.GetGlobalItem<HoePower>().hoePower)));

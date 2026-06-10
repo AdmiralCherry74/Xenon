@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.Organic;
 

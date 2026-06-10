@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Biomes;
 
@@ -19,5 +20,17 @@ internal class MountainBiomeMusicHook : ModHook
 		{
 			Main.newMusic = MusicID.OtherworldlyUnderground;
 		}
-	}
+        if (!Main.gameMenu && Main.player[Main.myPlayer].InModBiome<Mountain>() && Main.player[Main.myPlayer].ZoneCorrupt)
+        {
+            Main.newMusic = MusicID.UndergroundCorruption;
+        }
+        if (!Main.gameMenu && Main.player[Main.myPlayer].InModBiome<Mountain>() && Main.player[Main.myPlayer].ZoneCrimson)
+        {
+            Main.newMusic = MusicID.UndergroundCrimson;
+        }
+        if (!Main.gameMenu && Main.player[Main.myPlayer].InModBiome<Mountain>() && Main.player[Main.myPlayer].InModBiome<Corrosion>())
+        {
+            Main.newMusic = MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
+        }
+    }
 }

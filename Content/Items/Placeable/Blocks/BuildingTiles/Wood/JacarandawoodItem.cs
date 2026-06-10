@@ -1,9 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Building.Wood;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood
 {
-    public class JacarandaWood : ModItem
+    public class JacarandawoodItem : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -12,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Mountains.JacarandaWood>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Bilewood>());
         }
     }
 }

@@ -3,7 +3,8 @@ using Avalon.Items.Tools.PreHardmode;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonItemGlobals;
+
 namespace Xenon.ModSupport.Avalon.Content.Items.Tools.GardeningHoes;
 
 [ExtendsFromMod("Avalon")]

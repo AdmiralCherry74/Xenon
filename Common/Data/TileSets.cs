@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Avalon.Tiles.Contagion;
+using System.Collections.Generic;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
@@ -24,6 +26,23 @@ internal class TileSets
         ModContent.TileType<HephStone>(),
         ModContent.TileType<HestiaStone>(),
         ModContent.TileType<PolloStone>()
+    );
+
+    public static bool[] MirageTileSet = TileID.Sets.Factory.CreateBoolSet(
+        TileID.HardenedSand,
+        TileID.CorruptHardenedSand,
+        TileID.CrimsonHardenedSand,
+        ModContent.TileType<HardenedGutsand>(),
+        ModContent.TileType<HardenedSnotsand>(),
+        TileID.HallowHardenedSand,
+        ModContent.TileType<HardenedCreamsand>(),
+        TileID.Sandstone,
+        TileID.CorruptSandstone,
+        TileID.CrimsonSandstone,
+        ModContent.TileType<Gutsandstone>(),
+        ModContent.TileType<Snotsandstone>(),
+        TileID.HallowSandstone,
+        ModContent.TileType<Creamsandstone>()
     );
 
     public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
