@@ -21,12 +21,10 @@ namespace Xenon.Content.NPCs.TownNPCs
     public class Baker : ModNPC
     {
         public const string ShopName = "Shop";
-        public int NumberOfTimesTalkedTo = 0;
 
         //private static int ShimmerHeadIndex;
         private static Profiles.StackedNPCProfile NPCProfile;
 
-        
         //public override void Load()
         //{
         //    // Adds our Shimmer Head to the NPCHeadLoader.
@@ -65,17 +63,16 @@ namespace Xenon.Content.NPCs.TownNPCs
             // Set Example Person's biome and neighbor preferences with the NPCHappiness hook. You can add happiness text and remarks with localization (See an example in ExampleMod/Localization/en-US.lang).
             // NOTE: The following code uses chaining - a style that works due to the fact that the SetXAffection methods return the same NPCHappiness instance they're called on.
             NPC.Happiness
-                .SetBiomeAffection<OceanBiome>(AffectionLevel.Love) // loves the ocean.
-                .SetBiomeAffection<HallowBiome>(AffectionLevel.Like) // prefers the hallow.
-                .SetBiomeAffection<DesertBiome>(AffectionLevel.Dislike) // dislikes the desert.
-                .SetNPCAffection(NPCID.PartyGirl, AffectionLevel.Love) // Loves living near the party girl.
+                .SetBiomeAffection<OceanBiome>(AffectionLevel.Love)
+                .SetBiomeAffection<HallowBiome>(AffectionLevel.Like)
+                .SetBiomeAffection<DesertBiome>(AffectionLevel.Dislike)
+                .SetNPCAffection(NPCID.PartyGirl, AffectionLevel.Love)
                 .SetNPCAffection(NPCID.Stylist, AffectionLevel.Like)
                 .SetNPCAffection(NPCID.Princess, AffectionLevel.Like)
-                .SetNPCAffection(NPCID.Nurse, AffectionLevel.Dislike) // Dislikes living near the nurse.
-                .SetNPCAffection(NPCID.ArmsDealer, AffectionLevel.Hate) // Hates living near the arms dealer.
-            ; // < Mind the semicolon!
+                .SetNPCAffection(NPCID.Nurse, AffectionLevel.Dislike)
+                .SetNPCAffection(NPCID.ArmsDealer, AffectionLevel.Hate);
+                
 
-            // This creates a "profile" for ExamplePerson, which allows for different textures during a party and/or while the NPC is shimmered.
             NPCProfile = new Profiles.StackedNPCProfile(
                 new Profiles.DefaultNPCProfile(Texture, NPCHeadLoader.GetHeadSlot(HeadTexture), Texture + "_Party")
             //new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")

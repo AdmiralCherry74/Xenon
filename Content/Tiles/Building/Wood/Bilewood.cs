@@ -8,7 +8,7 @@ public class Bilewood : ModTile
 {
     public override void SetStaticDefaults()
     {
-        AddMapEntry(new Color(98, 128, 108));
+        AddMapEntry(new Color(116, 103, 49));
         Main.tileSolid[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileMergeDirt[Type] = true;

@@ -2981,6 +2981,21 @@ Mods: {
 				DisplayName: Spinach
 				Tooltip: ""
 			}
+
+			ArigrowthItem: {
+				DisplayName: Arigrowth
+				Tooltip: ""
+			}
+
+			ArigrowthSeeds: {
+				DisplayName: Arigrowth Seeds
+				Tooltip: ""
+			}
+
+			MirageGrassSeeds: {
+				DisplayName: Mirage Grass Seeds
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -3154,6 +3169,8 @@ Mods: {
 				MapEntry0: Platinum Chest
 				MapEntry1: Platinum Chest
 			}
+
+			Arigrowth.MapEntry: Arigrowth
 		}
 
 		Bestiary: {

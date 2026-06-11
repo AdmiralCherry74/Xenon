@@ -3,11 +3,11 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.TheMirage;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 
-public class TropicGrassSeeds : ModItem
+public class MirageGrassSeeds : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -47,7 +47,7 @@ public class TropicGrassSeeds : ModItem
         {
             if (tile.TileType == TileID.Sand)
             {
-                Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<TropicGrass>();
+                Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<MirageGrass>();
                 WorldGen.SquareTileFrame(Player.tileTargetX, Player.tileTargetY, true);
                 SoundEngine.PlaySound(SoundID.Dig, player.Center);
                 return true;

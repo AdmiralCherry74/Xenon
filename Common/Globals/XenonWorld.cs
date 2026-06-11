@@ -26,12 +26,12 @@ internal class XenonWorld : ModSystem
             int sunR = backgroundColor.R;
             int sunG = backgroundColor.G;
             int sunB = backgroundColor.B;
-            byte readableSunR = 191;
-            byte readableSunG = 198;
-            byte readableSunB = 73;
-            sunR -= (int)((byte.MaxValue - readableSunR) * CorrosionStrength / 1.6f * (backgroundColor.R / 255f));
-            sunG -= (int)((byte.MaxValue - readableSunG) * CorrosionStrength / 1.6f * (backgroundColor.G / 255f));
-            sunB -= (int)((byte.MaxValue - readableSunB) * CorrosionStrength / 1.6f * (backgroundColor.B / 255f));
+            byte readableSunR = 206;
+            byte readableSunG = 187;
+            byte readableSunB = 83;
+            sunR -= (int)((byte.MaxValue - readableSunR) * CorrosionStrength / 1.5f * (backgroundColor.R / 255f));
+            sunG -= (int)((byte.MaxValue - readableSunG) * CorrosionStrength / 1.5f * (backgroundColor.G / 255f));
+            sunB -= (int)((byte.MaxValue - readableSunB) * CorrosionStrength / 1.5f * (backgroundColor.B / 255f));
 
             sunR = Utils.Clamp(sunR, 15, 255);
             sunG = Utils.Clamp(sunG, 15, 255);
@@ -41,9 +41,9 @@ internal class XenonWorld : ModSystem
             backgroundColor.B = (byte)sunB;
 
             int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 2.70f);
-            byte readableTint_R = 132;
-            byte readableTint_G = 121;
-            byte readableTint_B = 63;
+            byte readableTint_R = 206;
+            byte readableTint_G = 187;
+            byte readableTint_B = 83;
             int tileTint_R = (byte)((byte.MaxValue - readableTint_R) * CorrosionStrength * (backgroundColorAverage / 255f));
             int tileTint_G = (byte)((byte.MaxValue - readableTint_G) * CorrosionStrength * (backgroundColorAverage / 255f));
             int tileTint_B = (byte)((byte.MaxValue - readableTint_B) * CorrosionStrength * (backgroundColorAverage / 255f));
