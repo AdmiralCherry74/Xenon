@@ -8,7 +8,7 @@ using Xenon.Content.WorldGeneration.Helpers;
 
 namespace Xenon.Content.Projectiles.Tools.ConvertingTools.Solutions;
 
-public class CatacombSpray : ModProjectile
+public class SnoozeSpray : ModProjectile
 {
     private int Progress
     {
@@ -41,7 +41,7 @@ public class CatacombSpray : ModProjectile
         {
             var size = largerSize ? 3 : 2;
             var point = Projectile.Center.ToTileCoordinates();
-            ConversionHelper.ConvertToCatacomb(point.X, point.Y, size);
+            ConversionHelper.ConvertToSomnolent(point.X, point.Y, size);
         }
 
         Projectile.timeLeft = Math.Min(Projectile.timeLeft, 133);

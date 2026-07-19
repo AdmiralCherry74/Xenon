@@ -55,6 +55,43 @@ internal class XenonWorld : ModSystem
             tileColor.G = (byte)Math.Clamp(tileColor.G <= tileTint_G ? 1 : tileColor.G - tileTint_G, CorrosionStrength * 15f, 255f);
             tileColor.B = (byte)Math.Clamp(tileColor.B <= tileTint_B ? 1 : tileColor.B - tileTint_B, CorrosionStrength * 15f, 255f);
         }
+        float SomnolentStrength = ModContent.GetInstance<BiomeTileCounts>().SomnolentTiles / 350f;
+        if (SomnolentStrength != 0)
+        {
+            SomnolentStrength = Math.Min(SomnolentStrength, 1f);
+
+            int sunR = backgroundColor.R;
+            int sunG = backgroundColor.G;
+            int sunB = backgroundColor.B;
+            byte readableSunR = 10;
+            byte readableSunG = 25;
+            byte readableSunB = 75;
+            sunR -= (int)((byte.MaxValue - readableSunR) * SomnolentStrength / 1.5f * (backgroundColor.R / 255f));
+            sunG -= (int)((byte.MaxValue - readableSunG) * SomnolentStrength / 1.5f * (backgroundColor.G / 255f));
+            sunB -= (int)((byte.MaxValue - readableSunB) * SomnolentStrength / 1.5f * (backgroundColor.B / 255f));
+
+            sunR = Utils.Clamp(sunR, 15, 255);
+            sunG = Utils.Clamp(sunG, 15, 255);
+            sunB = Utils.Clamp(sunB, 15, 255);
+            backgroundColor.R = (byte)sunR;
+            backgroundColor.G = (byte)sunG;
+            backgroundColor.B = (byte)sunB;
+
+            int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 2.70f);
+            byte readableTint_R = 10;
+            byte readableTint_G = 25;
+            byte readableTint_B = 75;
+            int tileTint_G = (byte)((byte.MaxValue - readableTint_G) * SomnolentStrength * (backgroundColorAverage / 255f));
+            int tileTint_B = (byte)((byte.MaxValue - readableTint_B) * SomnolentStrength * (backgroundColorAverage / 255f));
+            int tileTint_R = (byte)((byte.MaxValue - readableTint_R) * SomnolentStrength * (backgroundColorAverage / 255f));
+            tileTint_R = (int)(tileTint_R - (SomnolentStrength * 7f));
+            tileTint_G = (int)(tileTint_G - (SomnolentStrength * 7f));
+            tileTint_B = (int)(tileTint_B - (SomnolentStrength * 7f));
+
+            tileColor.R = (byte)Math.Clamp(tileColor.R <= tileTint_R ? 1 : tileColor.R - tileTint_R, SomnolentStrength * 15f, 255f);
+            tileColor.G = (byte)Math.Clamp(tileColor.G <= tileTint_G ? 1 : tileColor.G - tileTint_G, SomnolentStrength * 15f, 255f);
+            tileColor.B = (byte)Math.Clamp(tileColor.B <= tileTint_B ? 1 : tileColor.B - tileTint_B, SomnolentStrength * 15f, 255f);
+        }
     }
     public override void PostUpdateWorld()
     {

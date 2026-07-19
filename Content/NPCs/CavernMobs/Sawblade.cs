@@ -7,9 +7,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace Xenon.Content.NPCs.UndergroundMobs
+namespace Xenon.Content.NPCs.CavernMobs
 {
-    public class LargeSawblade : ModNPC
+    public class Sawblade : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -26,7 +26,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
         {
             NPC.width = 30;
             NPC.height = 30;
-            NPC.damage = 85;
+            NPC.damage = 75;
             NPC.defense = 100;
             NPC.lifeMax = 100;
             NPC.dontTakeDamage = true;
@@ -35,7 +35,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             NPC.value = 0;
             NPC.knockBackResist = 0f;
             NPC.aiStyle = NPCAIStyleID.FaceClosestPlayer;
-            NPC.scale = 3;
+            NPC.scale = 2;
             NPC.noGravity = true;
 
             AIType = NPCID.BoundGoblin;
@@ -58,7 +58,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
         }
         public override void OnSpawn(IEntitySource source)
         {
-            NPC.position.Y += 48;
+            NPC.position.Y += 32;
             Point tilePos = NPC.Center.ToTileCoordinates();
             if (!(Main.tile[tilePos.X - 1, tilePos.Y].HasTile && Main.tileSolid[Main.tile[tilePos.X - 1, tilePos.Y].TileType] &&
                 Main.tile[tilePos.X + 1, tilePos.Y].HasTile && Main.tileSolid[Main.tile[tilePos.X + 1, tilePos.Y].TileType]))
@@ -78,12 +78,12 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             SoundEngine.PlaySound(SoundID.Item22);
             if (Main.rand.NextBool(3) && Main.expertMode)
             {
-                target.AddBuff(BuffID.Bleeding, 450);
+                target.AddBuff(BuffID.Bleeding, 300);
                 SoundEngine.PlaySound(SoundID.Item23);
             }
             else if (Main.rand.NextBool(3) && Main.masterMode)
             {
-                target.AddBuff(BuffID.Bleeding, 1200);
+                target.AddBuff(BuffID.Bleeding, 600);
                 SoundEngine.PlaySound(SoundID.Item23);
             }
         }

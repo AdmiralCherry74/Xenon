@@ -1,0 +1,20 @@
+﻿using Terraria;
+using Terraria.ModLoader;
+using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Somnolent;
+
+namespace Xenon.Content.Items.Placeable.Blocks.Natural.Stone
+{
+    public class SnoozestoneBlock : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 100;
+        }
+
+        public override void SetDefaults()
+        {
+            Item.DefaultToPlaceableTile(ModContent.TileType<Snoozestone>());
+        }
+    }
+}

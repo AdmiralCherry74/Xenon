@@ -1,19 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.UndergroundMobs
+namespace Xenon.Content.NPCs.CavernMobs
 {
-    public class Sawblade : ModNPC
+    public class HauntedArmor : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.BlazingWheel];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PossessedArmor];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -24,28 +25,29 @@ namespace Xenon.Content.NPCs.UndergroundMobs
 
         public override void SetDefaults()
         {
-            NPC.width = 30;
-            NPC.height = 30;
-            NPC.damage = 75;
-            NPC.defense = 100;
-            NPC.lifeMax = 100;
-            NPC.dontTakeDamage = true;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 0;
-            NPC.knockBackResist = 0f;
-            NPC.aiStyle = NPCAIStyleID.FaceClosestPlayer;
-            NPC.scale = 2;
-            NPC.noGravity = true;
+            NPC.width = 32;
+            NPC.height = 44;
+            NPC.damage = 28;
+            NPC.defense = 14;
+            NPC.lifeMax = 130;
+            NPC.HitSound = SoundID.NPCHit4;
+            NPC.DeathSound = SoundID.NPCDeath33;
+            NPC.value = 200;
+            NPC.knockBackResist = 0.25f;
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
+            
+            AIType = NPCID.PossessedArmor;
+            AnimationType = NPCID.PossessedArmor;
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<HauntedArmorBanner>();
+		}
 
-            AIType = NPCID.BoundGoblin;
-            AnimationType = NPCID.BlazingWheel;
-        }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HauntedArmor")),
             ]);
         }
 
@@ -56,16 +58,6 @@ namespace Xenon.Content.NPCs.UndergroundMobs
                 return;
             }
         }
-        public override void OnSpawn(IEntitySource source)
-        {
-            NPC.position.Y += 32;
-            Point tilePos = NPC.Center.ToTileCoordinates();
-            if (!(Main.tile[tilePos.X - 1, tilePos.Y].HasTile && Main.tileSolid[Main.tile[tilePos.X - 1, tilePos.Y].TileType] &&
-                Main.tile[tilePos.X + 1, tilePos.Y].HasTile && Main.tileSolid[Main.tile[tilePos.X + 1, tilePos.Y].TileType]))
-            {
-                NPC.active = false;
-            }
-        }
         public override void OnKill()
         {
             if (Main.netMode == NetmodeID.MultiplayerClient)
@@ -73,25 +65,15 @@ namespace Xenon.Content.NPCs.UndergroundMobs
                 return;
             }
         }
-        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-        {
-            SoundEngine.PlaySound(SoundID.Item22);
-            if (Main.rand.NextBool(3) && Main.expertMode)
-            {
-                target.AddBuff(BuffID.Bleeding, 300);
-                SoundEngine.PlaySound(SoundID.Item23);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode)
-            {
-                target.AddBuff(BuffID.Bleeding, 600);
-                SoundEngine.PlaySound(SoundID.Item23);
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneRockLayerHeight)
+            if (spawnInfo.Player.ZoneNormalCaverns && !NPC.AnyNPCs(Type))
             {
-                return SpawnCondition.Cavern.Chance * 0.5f;
+                {
+                    return SpawnCondition.Cavern.Chance * 0.25f;
+
+
+                }
             }
             return 0f;
         }
@@ -114,6 +96,10 @@ namespace Xenon.Content.NPCs.UndergroundMobs
                 gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height - 20f), NPC.velocity, 99, NPC.scale);
                 Main.gore[gore].velocity *= 0.3f;
             }
+        }
+         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(ItemID.IronOre, 3, 0, 3));
         }
     }
 }

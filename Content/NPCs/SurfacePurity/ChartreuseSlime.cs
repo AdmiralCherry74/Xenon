@@ -6,12 +6,11 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.UndergroundMobs
+namespace Xenon.Content.NPCs.SurfacePurity
 {
-    public class WhiteSlime : ModNPC
+    public class ChartreuseSlime : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -22,34 +21,34 @@ namespace Xenon.Content.NPCs.UndergroundMobs
                 Velocity = 1f
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Bleeding] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
         }
 
         public override void SetDefaults()
         {
             NPC.width = 32;
             NPC.height = 22;
-            NPC.damage = 5;
+            NPC.damage = 9;
             NPC.defense = 0;
-            NPC.lifeMax = 10;
+            NPC.lifeMax = 21;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 2000;
-            NPC.knockBackResist = 1f;
+            NPC.value = 4;
+            NPC.knockBackResist = 1.10f;
             NPC.aiStyle = NPCAIStyleID.Slime;
-            NPC.rarity = 4;
-            AIType = NPCID.BlueSlime;
+            AIType = NPCID.GreenSlime;
             AnimationType = NPCID.BlueSlime;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+			//Banner = NPC.type;
+			//BannerItem = ModContent.ItemType<SporeSlimeBanner>();
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Underground,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.WhiteSlime")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SlimeDefault")),
             ]);
         }
 
@@ -67,22 +66,13 @@ namespace Xenon.Content.NPCs.UndergroundMobs
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneNormalCaverns)
-            {
-                return 0.02f;
-            }
-            return 0;
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 145, 213, 5, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].color = new Color(16, 94, 135);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.5f, 5) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -5));
                 }
@@ -90,14 +80,15 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             else
                 for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 145, 213, 5, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].color = new Color(16, 94, 135);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteGel>(), 1, 10, 14));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 2, 3));
+            npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 95, 1, 1));
         }
     }
 }

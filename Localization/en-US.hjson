@@ -2996,6 +2996,56 @@ Mods: {
 				DisplayName: Mirage Grass Seeds
 				Tooltip: ""
 			}
+
+			CorrosionThornyBushItem: {
+				DisplayName: Corroded Thorny Bush
+				Tooltip: Used in poisons
+			}
+
+			CorrodedThornyBushItem: {
+				DisplayName: Corroded Thorny Bush
+				Tooltip: ""
+			}
+
+			CorruptedThornyBushItem: {
+				DisplayName: Corrupted Thorny Bush
+				Tooltip: ""
+			}
+
+			CrimfiedThornyBushItem: {
+				DisplayName: Crimfied Thorny Bush
+				Tooltip: ""
+			}
+
+			JungleThornyBushItem: {
+				DisplayName: Jungle Thorny Bush
+				Tooltip: ""
+			}
+
+			Poison: {
+				DisplayName: Poison
+				Tooltip: Inflicts Poisoned
+			}
+
+			ThornyBush: {
+				DisplayName: Thorny Bush
+				Tooltip: ""
+			}
+
+			PlatformArcitectsHandbook: {
+				DisplayName: Platform Arcitects Handbook
+				Tooltip: ""
+			}
+
+			SnoozeSolution: {
+				DisplayName: Snooze Solution
+				Tooltip: The Solution for an Alternative Light right now called 'The Somnolent'. See this item in actual gameplay upon the hardmode update!
+			}
+
+			SnoozestoneBlock: {
+				DisplayName: Snoozestone Block
+				Tooltip: The Stone tile for an Alternative Light right now called 'The Somnolent'. See this item in actual gameplay upon the hardmode update!
+			}
 		}
 
 		NPCs: {
@@ -3137,6 +3187,11 @@ Mods: {
 					Princess_LovesNPC: "{NPCName} often asks me to make her all sorts of cakes and cookies asweel as ice cream and... im getting hungry again."
 				}
 			}
+
+			ChartreuseSlime.DisplayName: Chartreuse Slime
+			OrangeSlime.DisplayName: Orange Slime
+			VioletSlime.DisplayName: Violet Slime
+			CyanSlime.DisplayName: Cyan Slime
 		}
 
 		Tiles: {
@@ -3223,6 +3278,7 @@ Mods: {
 			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. but was revived and now its angry you disturbed its forever slumber...
 			CrystalineGolem: For some odd reason, this bit of Crystal went rouge and became alive. resisting weapons and projectiles under most circumstances. youll need to be clever to rid of these mimicing distractions
 			Baker: This 'larger than life' Baker came too this land to find inspiration for her Baker's handbooks she is currently writing.
+			SlimeDefault: A strange breed of slime that seemd to form out of strange circumstances.
 		}
 
 		Biomes: {
@@ -3315,6 +3371,11 @@ Mods: {
 				DisplayName: The Mirage
 				TownNPCDialogueName: The Mirage
 			}
+
+			Somnolent: {
+				DisplayName: Somnolent
+				TownNPCDialogueName: the Somnolent
+			}
 		}
 
 		Projectiles: {
@@ -3398,6 +3459,7 @@ Mods: {
 			Flintball.DisplayName: Flintball
 			JadeGemball.DisplayName: Jade Gemball
 			Regurgitator_Bobber.DisplayName: Regurgitator Bobber
+			SnoozeSpray.DisplayName: Snooze Spray
 		}
 
 		Buffs: {

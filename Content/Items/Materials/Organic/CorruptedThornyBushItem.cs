@@ -4,7 +4,7 @@ using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
 namespace Xenon.Content.Items.Materials.Organic;
 
-public class CorrodedThorns : ModItem
+public class CorruptedThornyBushItem : ModItem
 {
     public override void SetStaticDefaults()
     {

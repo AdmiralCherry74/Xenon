@@ -16,6 +16,9 @@ using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
 using Xenon.Content.NPCs.Other;
+using Xenon.Content.NPCs.SurfacePurity;
+using Xenon.Content.NPCs.UndergroundMobs;
+using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
 namespace Xenon.Common.Globals;
 
@@ -37,7 +40,16 @@ internal class XenonGlobalNPC : GlobalNPC
         }
 
         #region Adds enemies to existing biomes on boss deaths
-        if (!Main.dayTime && spawnInfo.Player.ZoneOverworldHeight)
+        if (Main.dayTime && spawnInfo.Player.ZoneForest && !Main.hardMode)
+        {
+            if (NPC.downedBoss1)
+            {
+                pool.Add(ModContent.NPCType<ChartreuseSlime>(), 1f);
+                pool.Add(ModContent.NPCType<VioletSlime>(), 0.80f);
+                pool.Add(ModContent.NPCType<OrangeSlime>(), 0.20f);
+            }
+        }
+        if (!Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !Main.hardMode)
         {
             if (NPC.downedBoss1)
             {
@@ -46,6 +58,13 @@ internal class XenonGlobalNPC : GlobalNPC
             if (NPC.downedBoss2)
             {
                 pool.Add(ModContent.NPCType<BucketheadZombie>(), 0.5f);
+            }
+        }
+        if (spawnInfo.Player.ZoneNormalUnderground && !Main.hardMode)
+        {
+            if (!NPC.downedBoss1)
+            {
+                pool.Add(ModContent.NPCType<CyanSlime>(), 0.90f);
             }
         }
         #endregion

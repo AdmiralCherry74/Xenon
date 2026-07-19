@@ -7,7 +7,7 @@ using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.Items.Consumables.GlugGlugs;
-public class FrigerationPotion : ModItem
+public class Poison : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -32,15 +32,16 @@ public class FrigerationPotion : ModItem
         Item.consumable = true;
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(silver: 2);
-        Item.buffType = ModContent.BuffType<Frigeration>();
-        Item.buffTime = 27000;
+        Item.buffType = BuffID.Poisoned;
+        Item.buffTime = 13500;
     }
     public override void AddRecipes()
     {
         CreateRecipe()
-        .AddIngredient(ModContent.ItemType<RhyoliteBlock>())
-        .AddIngredient(ModContent.ItemType<ArigrowthItem>())
         .AddIngredient(ItemID.BottledWater)
+        .AddIngredient(ItemID.Blinkroot)
+        .AddRecipeGroup("Xenon:Thorns")
+        .SortAfterFirstRecipesOf(ItemID.WrathPotion)
         .AddTile(TileID.Bottles)
         .Register();
     }

@@ -6,6 +6,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Xenon.Content.NPCs.CavernMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
@@ -13,7 +14,6 @@ using Xenon.Content.NPCs.MountainsMobs;
 using Xenon.Content.NPCs.Other;
 using Xenon.Content.NPCs.RhyoliteMobs;
 using Xenon.Content.NPCs.SnowMobs;
-using Xenon.Content.NPCs.UndergroundMobs;
 using static Terraria.GameContent.Drawing.TileDrawing;
 
 namespace Xenon.Content.Tiles.Furniture;

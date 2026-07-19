@@ -40,41 +40,4 @@ public class CorrosionThornyBushes : ModTile
         AddMapEntry(new Color(155, 174, 50));
         DustType = ModContent.DustType<CorrosionDust>();
     }
-
-    public override IEnumerable<Item> GetItemDrops(int i, int j)
-    {
-        Vector2 worldPosition = new Vector2(i, j).ToWorldCoordinates();
-        Player nearestPlayer = Main.player[Player.FindClosest(worldPosition, 16, 16)];
-        if (nearestPlayer.active)
-        {
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 50)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 75)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 100)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 125)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 150)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 175)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-            if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 200)
-            {
-                yield return new Item(ModContent.ItemType<CorrodedThorns>(), 1);
-            }
-        }
-    }
 }

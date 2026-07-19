@@ -24,6 +24,7 @@ public class XenonPlayer : ModPlayer
     public bool HotDamageResistShield;
     public bool HotDamageResistPotion;
     public bool KnockbackBoost;
+    public bool BiomePlatform;
 
     public override void ResetEffects()
     {
@@ -31,6 +32,7 @@ public class XenonPlayer : ModPlayer
         HotDamageResistShield = false;
         HotDamageResistPotion = false;
         KnockbackBoost = false;
+        BiomePlatform = false;
     }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
     {

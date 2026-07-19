@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Dusts;
 
-public class CatacombSolutionDust : ModDust
+public class SnoozeSolutionDust : ModDust
 {
     public override bool Update(Dust dust)
     {

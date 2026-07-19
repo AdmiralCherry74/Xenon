@@ -10,6 +10,7 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.Somnolent;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 
@@ -19,6 +20,7 @@ internal class BiomeTileCounts : ModSystem
 {
     public int CorrosionTiles { get; private set; }
     public int CorrosionDesertTiles { get; private set; }
+    public int SomnolentTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
     public int MountainTiles { get; set; }
     public int MirageTiles { get; set; }
@@ -65,6 +67,8 @@ internal class BiomeTileCounts : ModSystem
                                tileCounts[ModContent.TileType<HardenedGutsand>()] +
                                tileCounts[ModContent.TileType<Gutsandstone>()] +
                                tileCounts[ModContent.TileType<Gutquicksand>()];
+
+        SomnolentTiles = tileCounts[ModContent.TileType<Snoozestone>()];
 
         CorruptionJungleTiles = tileCounts[TileID.CorruptJungleGrass];
 

@@ -8,9 +8,9 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.Other
+namespace Xenon.Content.NPCs.UndergroundMobs
 {
-    public class Sleye : ModNPC
+    public class CyanSlime : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -21,24 +21,26 @@ namespace Xenon.Content.NPCs.Other
                 Velocity = 1f
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Bleeding] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
         }
 
         public override void SetDefaults()
         {
             NPC.width = 32;
             NPC.height = 22;
-            NPC.damage = 12;
-            NPC.defense = 1;
-            NPC.lifeMax = 45;
+            NPC.damage = 14;
+            NPC.defense = 4;
+            NPC.lifeMax = 53;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 2000;
-            NPC.knockBackResist = 1f;
+            NPC.value = 10;
+            NPC.knockBackResist = 0.95f;
             NPC.aiStyle = NPCAIStyleID.Slime;
-            AIType = NPCID.BlueSlime;
+            AIType = NPCID.RedSlime;
             AnimationType = NPCID.BlueSlime;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+			//Banner = NPC.type;
+			//BannerItem = ModContent.ItemType<SporeSlimeBanner>();
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -46,8 +48,7 @@ namespace Xenon.Content.NPCs.Other
 
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.BloodMoon,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Sleye")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SlimeDefault")),
             ]);
         }
 
@@ -65,22 +66,13 @@ namespace Xenon.Content.NPCs.Other
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneForest & Main.bloodMoon)
-            {
-                return 0.75f;
-            }
-            return 0;
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 130, 5, 59, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].color = new Color(16, 94, 135);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.5f, 5) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -5));
                 }
@@ -88,16 +80,15 @@ namespace Xenon.Content.NPCs.Other
             else
                 for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 130, 5, 59, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].color = new Color(16, 94, 135);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 2));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Lens, 3, 1, 2));
-            npcLoot.Add(ItemDropRule.Common(ItemID.BlackLens, 100, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 3, 6));
+            npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 95, 1, 1));
         }
     }
 }

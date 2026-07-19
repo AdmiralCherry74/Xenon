@@ -7,9 +7,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Items.DeveloperItems.DeveloperItems;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.Items.Tools.GardeningHoes;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {
@@ -23,6 +26,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar, ModContent.ItemType<AluminumBar>());
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
+
+            RecipeGroup Thorns = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<ThornyBush>())}", ModContent.ItemType<JungleThornyBushItem>(), ModContent.ItemType<CorruptedThornyBushItem>(), ModContent.ItemType<CrimfiedThornyBushItem>(), ModContent.ItemType<CorrodedThornyBushItem>());
+            RecipeGroup.RegisterGroup("Xenon:Thorns", Thorns);
+            //Thorns recipe group 
 
             //Wood recipe group
             RecipeGroup groupwood = RecipeGroup.recipeGroups[RecipeGroupID.Wood];

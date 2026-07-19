@@ -12,6 +12,7 @@ namespace Xenon;
 public class XenonMod : Mod
 {
     public static Color CorrosionBiomeSightColor = new Color(227, 236, 58);
+    public static Color SomnolentBiomeSightColor = new Color(10, 25, 75);
     public const string TextureAssetsPath = "Assets/Textures";
     public static bool AvalonContentEnabled = ModLoader.HasMod("Avalon");
     public static bool TheConfectionRebirthContentEnabled = ModLoader.HasMod("TheConfectionRebirth");
