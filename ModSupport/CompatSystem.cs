@@ -18,7 +18,11 @@ namespace Xenon.ModSupport;
 [ExtendsFromMod("Avalon", "TheConfectionRebirth")]
 internal class CompatSystem : ModSystem
 {
-	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled && XenonMod.AvalonContentEnabled;
+    }
+    public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)
 	{
 		Tile tile = Main.tile[x, y];
 		int type = tile.TileType;

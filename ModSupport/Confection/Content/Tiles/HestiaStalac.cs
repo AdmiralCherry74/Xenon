@@ -7,7 +7,11 @@ namespace Xenon.ModSupport.Confection.Content.Tiles;
 
 public class HestiaStalac : ModTile
 {
-	public override void SetStaticDefaults()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled;
+    }
+    public override void SetStaticDefaults()
 	{
 		Main.tileSolid[Type] = false;
 		Main.tileNoFail[Type] = true;

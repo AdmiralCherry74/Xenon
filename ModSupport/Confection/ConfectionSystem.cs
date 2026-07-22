@@ -18,7 +18,7 @@ internal class ConfectionSystem : ModSystem
 {
     public override bool IsLoadingEnabled(Mod mod)
     {
-        return ModLoader.HasMod("TheConfectionRebirth");
+        return XenonMod.TheConfectionRebirthContentEnabled;
     }
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
     {

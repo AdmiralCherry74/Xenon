@@ -17,7 +17,11 @@ namespace Xenon.ModSupport.Avalon;
 [ExtendsFromMod("Avalon")]
 public class AvalonSystem : ModSystem
 {
-	public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
+    public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
 	{
 		if (XenonMod.AvalonContentEnabled)
 		{

@@ -6,7 +6,11 @@ namespace Xenon.ModSupport.Avalon.Content.Items;
 
 public class PolloStoneBlock : ModItem
 {
-	public override void SetStaticDefaults()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
+    public override void SetStaticDefaults()
 	{
 		Item.ResearchUnlockCount = 100;
 	}

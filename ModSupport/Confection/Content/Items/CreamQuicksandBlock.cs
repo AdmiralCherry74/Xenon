@@ -6,7 +6,11 @@ namespace Xenon.ModSupport.Confection.Content.Items
 {
 	public class CreamQuicksandBlock : ModItem
 	{
-		public override void SetStaticDefaults()
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return XenonMod.TheConfectionRebirthContentEnabled;
+        }
+        public override void SetStaticDefaults()
 		{
 			Item.ResearchUnlockCount = 100;
 		}

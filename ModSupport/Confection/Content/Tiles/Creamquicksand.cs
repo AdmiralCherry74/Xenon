@@ -8,7 +8,11 @@ using Xenon.ModSupport.Confection.Content.Items;
 namespace Xenon.ModSupport.Confection.Content.Tiles;
 public class Creamquicksand : ModTile
 {
-	public override void SetStaticDefaults()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled;
+    }
+    public override void SetStaticDefaults()
 	{
 		AddMapEntry(new Color(211, 151, 68));
 		Main.tileSolid[Type] = false;

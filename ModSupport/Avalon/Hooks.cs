@@ -10,7 +10,11 @@ namespace Xenon.ModSupport.Avalon;
 
 public class AvalonTileSolidHook : ModHook
 {
-	protected override void Apply()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
+    protected override void Apply()
 	{
 		if (XenonMod.AvalonContentEnabled)
 		{

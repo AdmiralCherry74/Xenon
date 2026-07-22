@@ -8,7 +8,11 @@ namespace Xenon.ModSupport.Avalon.Content.Tiles;
 
 public class Snotquicksand : ModTile
 {
-	public override void SetStaticDefaults()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
+    public override void SetStaticDefaults()
 	{
 		AddMapEntry(new Color(104, 80, 76));
 		Main.tileSolid[Type] = false;

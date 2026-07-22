@@ -10,6 +10,10 @@ namespace Xenon.ModSupport.Confection.Content.Tiles;
 
 public class MossyHestiaStone : ModTile
 {
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled;
+    }
     public override void SetStaticDefaults()
     {
         //Confection's GreekStone. named after the god of Hearth and Food, Hestia

@@ -6,6 +6,10 @@ namespace Xenon.ModSupport.Confection.Content.Items;
 
 public class HestiaStoneBlock : ModItem
 {
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled;
+    }
     public override void SetStaticDefaults()
     {
         Item.ResearchUnlockCount = 100;

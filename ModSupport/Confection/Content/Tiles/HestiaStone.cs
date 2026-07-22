@@ -10,6 +10,10 @@ namespace Xenon.ModSupport.Confection.Content.Tiles;
 
 public class HestiaStone : ModTile
 {
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.TheConfectionRebirthContentEnabled;
+    }
     public override void SetStaticDefaults()
     {
         //The inspiration behind this was Shale. then I gave it a new name. Thought of the greek god of the sky, thus OuranoStone

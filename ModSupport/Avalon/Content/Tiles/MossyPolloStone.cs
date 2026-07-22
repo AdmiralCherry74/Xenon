@@ -11,7 +11,11 @@ namespace Xenon.ModSupport.Avalon.Content.Tiles;
 
 public class MossyPolloStone : ModTile
 {
-	public override void SetStaticDefaults()
+    public override bool IsLoadingEnabled(Mod mod)
+    {
+        return XenonMod.AvalonContentEnabled;
+    }
+    public override void SetStaticDefaults()
 	{
 		Main.tileSolid[Type] = true;
 		Main.tileMergeDirt[Type] = true;
