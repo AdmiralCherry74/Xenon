@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalon.Tiles.Contagion;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,6 +9,7 @@ using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 using static Xenon.SpecialUtilities;
 
@@ -31,6 +33,14 @@ internal class ConfectionSystem : ModSystem
             ModContent.GetInstance<ConfectionBiomeTileCount>().confectionBlockCount +=
                 tileCounts[ModContent.TileType<HestiaStone>()] +
                 tileCounts[ModContent.TileType<MossyHestiaStone>()] +
+                tileCounts[ModContent.TileType<Creamquicksand>()];
+
+            ModContent.GetInstance<Common.Systems.BiomeTileCounts>().MirageTiles +=
+                tileCounts[ModContent.TileType<HardenedCreamsand>()] +
+                tileCounts[ModContent.TileType<Creamsandstone>()];
+
+            ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SoftMirageTiles +=
+                tileCounts[ModContent.TileType<Creamsand>()] +
                 tileCounts[ModContent.TileType<Creamquicksand>()];
         }
     }

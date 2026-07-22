@@ -63,10 +63,6 @@ internal class CompatProjectile : GlobalProjectile
 				{
 					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
 				}
-                if (projectile.type == ModContent.ProjectileType<SelenetionProj>())
-                {
-                    CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.XenonOre, !flag);
-                }
                 NetMessage.SendTileSquare(-1, i, j, 1, 1);
 			}
 		}

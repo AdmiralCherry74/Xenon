@@ -12,6 +12,7 @@ using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Avalon.Tiles.Contagion;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using TheConfectionRebirth.Tiles;
+using System;
 
 namespace Xenon.ModSupport;
 
@@ -129,8 +130,9 @@ internal class CompatSystem : ModSystem
 				tile.TileType = (ushort)ModContent.TileType<MossyHelioStone>();
 			}
 		}
-		if (convert == ConversionType.Contagion)
-		{
+
+        if (convert == ConversionType.Contagion)
+        {
 			if (type == ModContent.TileType<Crimquicksand>() || type == ModContent.TileType<Quicksand>() ||
 				type == ModContent.TileType<Pearlquicksand>() || type == ModContent.TileType<Gutquicksand>() ||
 				type == ModContent.TileType<Quicksand>() || type == ModContent.TileType<Creamquicksand>())

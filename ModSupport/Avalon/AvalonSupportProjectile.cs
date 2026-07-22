@@ -59,10 +59,6 @@ internal class AvalonSupportProjectile : GlobalProjectile
 				{
 					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
 				}
-                if (projectile.type == ModContent.ProjectileType<SelenetionProj>())
-                {
-                    AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.XenonOre, !flag);
-                }
                 NetMessage.SendTileSquare(-1, i, j, 1, 1);
 			}
 		}

@@ -139,8 +139,6 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
                 //Main.instance.SetBackgroundOffsets(textureSlot2, backgroundTopMagicNumber, pushBGTopHack);
                 bgScale *= bgGlobalScaleMultiplier;
                 //Main.instance.LoadBackground(textureSlot2);
-                if (ConfectionWorldGeneration.confectionBG == 4)
-                    bgParallax = 0.27;
                 bgWidthScaled = (int)((float)ModContent.Request<Texture2D>(TexturePath2).Width() * bgScale);
                 SkyManager.Instance.DrawToDepth(Main.spriteBatch, 1f / (float)bgParallax);
                 bgStartX = (int)(0.0 - Math.IEEERemainder((double)Main.screenPosition.X * bgParallax, bgWidthScaled) - (double)(bgWidthScaled / 2));
@@ -166,7 +164,6 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
                 bgTopY = (int)(backgroundTopMagicNumber * 2100.0 + 2000.0) + (int)scAdj + pushBGTopHack;
                 //Main.instance.SetBackgroundOffsets(textureSlot3, backgroundTopMagicNumber, pushBGTopHack);
                 bgScale *= bgGlobalScaleMultiplier;
-                if (ConfectionWorldGeneration.confectionBG == 4)
                     bgParallax = 0.4;
                 //Main.instance.LoadBackground(textureSlot3);
                 bgWidthScaled = (int)((float)ModContent.Request<Texture2D>(TexturePath).Width() * bgScale);

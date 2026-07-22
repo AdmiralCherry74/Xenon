@@ -281,12 +281,10 @@ public static class SpecialUtilities
 		Hallow = 3,
 		Mud = 4,
 		Snow = 5,
-		Contagion = 6,
-		Confection = 7,
-		XenonOre = 8
-	}
-
-	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)
+        Confection = 6,
+        Contagion = 7
+    }
+    public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)
 	{
 		Tile tile = Main.tile[x, y];
 		int type = tile.TileType;
@@ -395,30 +393,6 @@ public static class SpecialUtilities
 				tile.TileType = (ushort)ModContent.TileType<PowderedSnow>();
 			}
 		}
-        // convert to snow
-        if (convert == ConversionType.XenonOre)
-        {
-            if (type == ModContent.TileType<BronzeOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<AluminumOre>();
-            }
-            if (type == ModContent.TileType<NickelOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<CinnabarOre>();
-            }
-            if (type == ModContent.TileType<ZincOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<IndiumOre>();
-            }
-            if (type == ModContent.TileType<BismuthOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<FluoriteOre>();
-            }
-            if (type == ModContent.TileType<BacciliteOre>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<IngestaneOre>();
-            }
-        }
         if (tileframe)
 		{
 			if (Main.netMode == NetmodeID.SinglePlayer)

@@ -23,9 +23,7 @@ internal class TileSets
         ModContent.TileType<NyxStone>(),
         ModContent.TileType<HelioStone>(),
         ModContent.TileType<AresStone>(),
-        ModContent.TileType<HephStone>(),
-        ModContent.TileType<HestiaStone>(),
-        ModContent.TileType<PolloStone>()
+        ModContent.TileType<HephStone>()
     );
 
     public static bool[] MirageTileSet = TileID.Sets.Factory.CreateBoolSet(
@@ -33,16 +31,12 @@ internal class TileSets
         TileID.CorruptHardenedSand,
         TileID.CrimsonHardenedSand,
         ModContent.TileType<HardenedGutsand>(),
-        ModContent.TileType<HardenedSnotsand>(),
         TileID.HallowHardenedSand,
-        ModContent.TileType<HardenedCreamsand>(),
         TileID.Sandstone,
         TileID.CorruptSandstone,
         TileID.CrimsonSandstone,
         ModContent.TileType<Gutsandstone>(),
-        ModContent.TileType<Snotsandstone>(),
-        TileID.HallowSandstone,
-        ModContent.TileType<Creamsandstone>()
+        TileID.HallowSandstone
     );
 
     public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
@@ -50,9 +44,7 @@ internal class TileSets
         ModContent.TileType<Ebonquicksand>(),
         ModContent.TileType<Crimquicksand>(),
         ModContent.TileType<Pearlquicksand>(),
-        ModContent.TileType<Gutquicksand>(),
-        ModContent.TileType<Creamquicksand>(),
-        ModContent.TileType<Snotquicksand>()
+        ModContent.TileType<Gutquicksand>()
     );
 
     public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
@@ -60,9 +52,7 @@ internal class TileSets
         ModContent.TileType<MossyNyxStone>(),
         ModContent.TileType<MossyHelioStone>(),
         ModContent.TileType<MossyAresStone>(),
-        ModContent.TileType<MossyHephStone>(),
-        ModContent.TileType<MossyHestiaStone>(),
-        ModContent.TileType<MossyPolloStone>()
+        ModContent.TileType<MossyHephStone>()
     );
 
     public static bool[] EvilOre = TileID.Sets.Factory.CreateBoolSet(
