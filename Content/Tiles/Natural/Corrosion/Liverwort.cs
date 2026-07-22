@@ -10,7 +10,7 @@ namespace Xenon.Content.Tiles.Natural.Corrosion;
 
 public class Liverwort : ModHerb
 {
-    public override int HerbDrop => ModContent.ItemType<Items.Materials.EvilMaterials.Liverwort>();
+    public override int HerbDrop => ModContent.ItemType<Items.Materials.WorldInfectionMaterials.Liverwort>();
     public override int SeedDrop => ModContent.ItemType<LiverwortSeeds>();
     public override int[] ValidAnchorTiles =>
 	[

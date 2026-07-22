@@ -26,7 +26,7 @@ public class AluminumOre : ModTile
         Main.tileMerge[TileID.Mud][Type] = true;
         AddMapEntry(new Color(31, 35, 84));
         HitSound = SoundID.Tink;
-        DustType = ModContent.DustType<IndiumDust>();
+        DustType = ModContent.DustType<AluminumDust>();
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)

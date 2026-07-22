@@ -3,8 +3,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Common.Globals;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Items.Armor.PreHardmode.Metal;
 
@@ -29,13 +27,13 @@ public class CausticHelmet : ModItem
     {
         player.GetKnockback<GenericDamageClass>() += PercentIncrease / 10;
     }
-	public override bool IsArmorSet(Item head, Item body, Item legs)
-	{
+    public override bool IsArmorSet(Item head, Item body, Item legs)
+    {
         return head.type == Type && body.type == ModContent.ItemType<CausticScalemail>() && legs.type == ModContent.ItemType<CausticGreaves>();
-	}
-	public override void UpdateArmorSet(Player player)
-	{
-		player.setBonus = Language.GetTextValue("Mods.Xenon.SetBonuses.Caustic");
-        player.GetModPlayer<XenonPlayer>().KnockbackBoost = true;
-	}
+    }
+    public override void UpdateArmorSet(Player player)
+    {
+        player.setBonus = Language.GetTextValue("Mods.Xenon.SetBonuses.Caustic");
+        player.GetModPlayer<XenonPlayer>().KnockbackBoostCaustic = true;
+    }
 }

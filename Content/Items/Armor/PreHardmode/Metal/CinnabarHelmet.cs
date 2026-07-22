@@ -2,9 +2,6 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Items.Armor.PreHardmode.Metal;
 
@@ -23,11 +20,11 @@ public class CinnabarHelmet : ModItem
         Item.rare = ItemRarityID.White;
     }
 
-	public override bool IsArmorSet(Item head, Item body, Item legs)
-	{
+    public override bool IsArmorSet(Item head, Item body, Item legs)
+    {
         return head.type == Type && body.type == ModContent.ItemType<CinnabarChainmail>() && legs.type == ModContent.ItemType<CinnabarGreaves>();
-	}
-	public override void UpdateArmorSet(Player player)
+    }
+    public override void UpdateArmorSet(Player player)
     {
         player.setBonus = Language.GetTextValue("Mods.Xenon.SetBonuses.ThreeDefense");
         player.statDefense += 3;

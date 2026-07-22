@@ -4,9 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Buffs.Epibuffs;
 using Xenon.Content.Dusts;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Items.Weapons.Melee.Battleaxes;
 
@@ -34,7 +33,7 @@ public class TheDisembowelment : ModItem
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);
-        //player.AddBuff(ModContent.BuffType<Shitass>(), 180);
+        player.AddBuff(ModContent.BuffType<BlindAnger>(), 180);
     }
     public override void MeleeEffects(Player player, Rectangle hitbox)
     {

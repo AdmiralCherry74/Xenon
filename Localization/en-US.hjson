@@ -51,7 +51,14 @@ Mods: {
 
 		DropConditions.SoulOfRight: Drops in the Purity Cavern biome in hardmode
 		TooltipsHoePower.HoePowerTooltip: "{0}% hoe power"
-		VanillaItemRenames.CrimsonHelmet: Ancient Crimson Helmet
+
+		VanillaItemRenames: {
+			HellstoneRename: Vulcanite Ore
+			HellstoneBarRename: Vulcanite Bar
+			HellstoneBrickRename: Vulcanite Brick
+			HellstoneBrickWallRename: Vulcanite Brick Wall
+			HellstoneCrateRename: Vulcanite Crate
+		}
 
 		Items: {
 			Scarlet: {
@@ -1223,7 +1230,7 @@ Mods: {
 				Tooltip:
 					'''
 					Inflicts a cleaving effect on enemies
-					Consecutive hits enlarge your titties or something, I'll think of an effect soon
+					Consecutive hits increase your knockback's velocity
 					'''
 			}
 
@@ -2773,12 +2780,12 @@ Mods: {
 			}
 
 			SmoothStoneItem: {
-				DisplayName: Smooth Stone Item
+				DisplayName: Smooth Stone
 				Tooltip: ""
 			}
 
 			RedCatacombBookcaseItem: {
-				DisplayName: Red Catacomb Bookcase Item
+				DisplayName: Red Catacomb Bookcase
 				Tooltip: ""
 			}
 
@@ -3039,12 +3046,146 @@ Mods: {
 
 			SnoozeSolution: {
 				DisplayName: Snooze Solution
-				Tooltip: The Solution for an Alternative Light right now called 'The Somnolent'. See this item in actual gameplay upon the hardmode update!
+				Tooltip:
+					'''
+					Used by the Clentaminator
+					Spreads the Somnolent
+					'''
+			}
+
+			UlcerBlockItem: {
+				DisplayName: Ulcer Block
+				Tooltip: ""
+			}
+
+			SleepingSeeds: {
+				DisplayName: Sleeping Seeds
+				Tooltip: ""
 			}
 
 			SnoozestoneBlock: {
 				DisplayName: Snoozestone Block
-				Tooltip: The Stone tile for an Alternative Light right now called 'The Somnolent'. See this item in actual gameplay upon the hardmode update!
+				Tooltip: ""
+			}
+
+			CinnabarBrickItem: {
+				DisplayName: Cinnabar Brick
+				Tooltip: ""
+			}
+
+			IndigoIceBlock: {
+				DisplayName: Indigo Ice
+				Tooltip: ""
+			}
+
+			AluminumBrickItem: {
+				DisplayName: Aluminum Brick
+				Tooltip: ""
+			}
+
+			FluoriteWatch: {
+				DisplayName: Fluorite Watch
+				Tooltip: Tells the time
+			}
+
+			FluoriteChainmail: {
+				DisplayName: Fluorite Chainmail
+				Tooltip: ""
+			}
+
+			FluoriteGreaves: {
+				DisplayName: Fluorite Greaves
+				Tooltip: ""
+			}
+
+			FluoriteHelmet: {
+				DisplayName: Fluorite Helmet
+				Tooltip: ""
+			}
+
+			FluoriteBar: {
+				DisplayName: Fluorite Bar
+				Tooltip: ""
+			}
+
+			FluoriteOreBlock: {
+				DisplayName: Fluorite Ore
+				Tooltip: ""
+			}
+
+			FluoriteAxe: {
+				DisplayName: Fluorite Axe
+				Tooltip: ""
+			}
+
+			FluoriteHammer: {
+				DisplayName: Fluorite Hammer
+				Tooltip: ""
+			}
+
+			FluoriteHoe: {
+				DisplayName: Fluorite Hoe
+				Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+			}
+
+			FluoritePickaxe: {
+				DisplayName: Fluorite Pickaxe
+				Tooltip: ""
+			}
+
+			FluoriteBattleaxe: {
+				DisplayName: Fluorite Battleaxe
+				Tooltip: Inflicts a cleaving effect on enemies
+			}
+
+			FluoriteBroadsword: {
+				DisplayName: Fluorite Broadsword
+				Tooltip: ""
+			}
+
+			FluoriteShortsword: {
+				DisplayName: Fluorite Shortsword
+				Tooltip: ""
+			}
+
+			FluoriteBow: {
+				DisplayName: Fluorite Bow
+				Tooltip: ""
+			}
+
+			IndiumBrickItem: {
+				DisplayName: Indium Brick
+				Tooltip: ""
+			}
+
+			FluoriteBrickItem: {
+				DisplayName: Fluorite Brick
+				Tooltip: ""
+			}
+
+			SoulofSpite: {
+				DisplayName: Soul of Spite
+				Tooltip: "'The essence of meat creatures'"
+			}
+
+			Selention: {
+				DisplayName: Selention
+				Tooltip: This shit for Xenon ores -Selene
+			}
+
+			SoulofBlight: {
+				DisplayName: Soul of Blight
+				Tooltip: "'The essence of starved creatures'"
+			}
+
+			SoulofTwilight: {
+				DisplayName: Soul of Twilight
+				Tooltip: "'The essence of somber creatures'"
+			}
+
+			ClothBlockItem: {
+				DisplayName: Cloth Block
+				Tooltip: ""
 			}
 		}
 
@@ -3064,7 +3205,7 @@ Mods: {
 			Wartornmelon.DisplayName: Mahogster
 			Mimicling.DisplayName: Mimicling
 			TempleSentry.DisplayName: Temple Sentry
-			NEWORIGINALFUNNY.DisplayName: Urg Beeg Bad Boss >:3
+			NEWORIGINALFUNNY.DisplayName: Gerald
 			StomachBug.DisplayName: Stomach Bug
 			HalfDigested.DisplayName: Half-Digested
 			TapeWormHead.DisplayName: Tape Worm
@@ -3460,6 +3601,8 @@ Mods: {
 			JadeGemball.DisplayName: Jade Gemball
 			Regurgitator_Bobber.DisplayName: Regurgitator Bobber
 			SnoozeSpray.DisplayName: Snooze Spray
+			FluoriteShortswordProj.DisplayName: Fluorite Shortsword
+			SelenetionProj.DisplayName: Selenetion Proj
 		}
 
 		Buffs: {
@@ -3567,6 +3710,16 @@ Mods: {
 				DisplayName: Withered
 				Description: Decreases life by 20%
 			}
+
+			BlindAnger: {
+				DisplayName: Blind Anger
+				Description: You knockback enemies faster, keep attacking to keep this up!
+			}
+
+			Boomed: {
+				DisplayName: Boomed
+				Description: Attack damage is lowered by 10. Enemies spawn more frequently and will target you no matter what
+			}
 		}
 
 		Configs: {
@@ -3586,6 +3739,11 @@ Mods: {
 				PickaxeRequiredForNextOreTier: {
 					Label: Require Previous Tier Pickaxe For Ores
 					Tooltip: Makes Silver-tier and Gold-tier ores require the previous tier pickaxe to mine
+				}
+
+				HellstoneRename: {
+					Label: Hellstone Rename
+					Tooltip: Makes it so Hellstone items are renamed to Vulcanite for extra flavor. Name credited to Lune
 				}
 			}
 		}
@@ -3610,6 +3768,11 @@ Mods: {
 
 			XieiteAltOre: {
 				DisplayName: Xieite
+				Description: Renamed to Fluorite for context
+			}
+
+			FluoriteAltOre: {
+				DisplayName: Fluorite
 				Description: ""
 			}
 		}

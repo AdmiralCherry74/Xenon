@@ -1,4 +1,7 @@
-﻿using Avalon.DropConditions;
+﻿using Avalon.Biomes;
+using Avalon.Buffs.AdvancedBuffs;
+using Avalon.Common.Players;
+using Avalon.DropConditions;
 using System.Collections.Generic;
 using System.Security.Policy;
 using Terraria;
@@ -299,8 +302,15 @@ internal class XenonGlobalNPC : GlobalNPC
         //	}
         //}
     }
+    public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
+    {
+        if (player.GetModPlayer<XenonPlayer>().Boomed)
+        {
+            spawnRate = (int)(spawnRate * Boomed.RateMultiplier);
+            maxSpawns = (int)(maxSpawns * Boomed.SpawnMultiplier);
+        }
+    }
 }
-
 public class DamageOverTimeGlobalNPC : GlobalNPC
 {
     public override bool InstancePerEntity => true;

@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Projectiles.Tools.ConvertingTools.Powders;
 
 namespace Xenon.Content.Items.Tools.ConversionTools.Powders

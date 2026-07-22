@@ -13,6 +13,7 @@ using AltLibrary.Common.AltOres;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Tiles.Building.Bricks;
+using Xenon.Content.Tiles.Building.Decorational;
 
 namespace Xenon.ModSupport;
 
@@ -49,14 +50,14 @@ public class IndiumAltOre : AltOre
 	}
 }
 [ExtendsFromMod(nameof(AltLibrary))]
-public class XieiteAltOre : AltOre
+public class FluoriteAltOre : AltOre
 {
 	public override OreSlot OreSlot => ModContent.GetInstance<GoldOreSlot>();
 	public override void SetStaticDefaults()
 	{
-		ore = ModContent.TileType<XieiteOre>();
-		bar = ModContent.ItemType<XieiteBar>();
-		Watch = ModContent.ItemType<XieiteWatch>();
+		ore = ModContent.TileType<FluoriteOre>();
+		bar = ModContent.ItemType<FluoriteBar>();
+		Watch = ModContent.ItemType<FluoriteWatch>();
 	}
 }
 [ExtendsFromMod(nameof(AltLibrary))]
@@ -82,9 +83,9 @@ internal class CorrosionAltBiome : AltBiome
 
         GERunnerConversion.Add(TileID.Silt, ModContent.TileType<Gutsand>());
 
-        /* missing flesh/lesion counterpart
-		BiomeFlesh = ;
-		BiomeFleshWall = ;
+
+		BiomeFlesh = ModContent.TileType<UlcerBlock>();
+		/*BiomeFleshWall = ;
 
 		FleshDoorTile = ;
 		FleshChairTile = ;

@@ -83,15 +83,15 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             #region gold tier recipe group
 
-            RecipeGroup GoldHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldHelmet)}", ItemID.GoldHelmet, ItemID.PlatinumHelmet, ItemID.AncientGoldHelmet, ModContent.ItemType<XieiteHelmet>());
+            RecipeGroup GoldHelmet = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldHelmet)}", ItemID.GoldHelmet, ItemID.PlatinumHelmet, ItemID.AncientGoldHelmet, ModContent.ItemType<FluoriteHelmet>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldHelmet), GoldHelmet);
             //Gold Helmet recipe group
 
-            RecipeGroup GoldChainmail = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldChainmail)}", ItemID.GoldChainmail, ItemID.PlatinumChainmail, ModContent.ItemType<XieiteChainmail>());
+            RecipeGroup GoldChainmail = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldChainmail)}", ItemID.GoldChainmail, ItemID.PlatinumChainmail, ModContent.ItemType<FluoriteChainmail>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldChainmail), GoldChainmail);
             //Gold Chainmail recipe group
 
-            RecipeGroup GoldGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldGreaves)}", ItemID.GoldGreaves, ItemID.PlatinumGreaves, ModContent.ItemType<XieiteGreaves>());
+            RecipeGroup GoldGreaves = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldGreaves)}", ItemID.GoldGreaves, ItemID.PlatinumGreaves, ModContent.ItemType<FluoriteGreaves>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldGreaves), GoldGreaves);
             //Gold Greaves recipe group
             //End of Tier 4 ore Armor recipe groups
@@ -173,19 +173,19 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #endregion
 
             #region gold tier recipe group
-            RecipeGroup GoldPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldPickaxe)}", ItemID.GoldPickaxe, ItemID.PlatinumPickaxe, ModContent.ItemType<XieitePickaxe>());
+            RecipeGroup GoldPickaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldPickaxe)}", ItemID.GoldPickaxe, ItemID.PlatinumPickaxe, ModContent.ItemType<FluoritePickaxe>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldPickaxe), GoldPickaxe);
             //Tier 4 Pickaxe recipe group
 
-            RecipeGroup GoldAxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldAxe)}", ItemID.GoldAxe, ItemID.PlatinumAxe, ModContent.ItemType<XieiteAxe>());
+            RecipeGroup GoldAxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldAxe)}", ItemID.GoldAxe, ItemID.PlatinumAxe, ModContent.ItemType<FluoriteAxe>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldAxe), GoldAxe);
             //Tier 4 Axe recipe group
 
-            RecipeGroup GoldHammer = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldHammer)}", ItemID.GoldHammer, ItemID.PlatinumHammer, ModContent.ItemType<XieiteHammer>());
+            RecipeGroup GoldHammer = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldHammer)}", ItemID.GoldHammer, ItemID.PlatinumHammer, ModContent.ItemType<FluoriteHammer>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldHammer), GoldHammer);
             //Tier 4 Hammer recipe group
 
-            RecipeGroup GoldHoe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<GoldHoe>())}", ModContent.ItemType<GoldHoe>(), ModContent.ItemType<PlatinumHoe>(), ModContent.ItemType<XieiteHoe>());
+            RecipeGroup GoldHoe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<GoldHoe>())}", ModContent.ItemType<GoldHoe>(), ModContent.ItemType<PlatinumHoe>(), ModContent.ItemType<FluoriteHoe>());
             RecipeGroup.RegisterGroup("Xenon:GoldHoe", GoldHoe);
             //Tier 4 Hoe recipe group
             #endregion
@@ -263,19 +263,19 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #endregion
 
             #region gold tier recipe group
-            RecipeGroup GoldBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBroadsword)}", ItemID.GoldBroadsword, ItemID.PlatinumBroadsword, ModContent.ItemType<XieiteBroadsword>());
+            RecipeGroup GoldBroadsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBroadsword)}", ItemID.GoldBroadsword, ItemID.PlatinumBroadsword, ModContent.ItemType<FluoriteBroadsword>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBroadsword), GoldBroadsword);
             //Tier 4 Broadsword recipe group
 
-            RecipeGroup GoldShortsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldShortsword)}", ItemID.GoldShortsword, ItemID.PlatinumShortsword, ModContent.ItemType<XieiteShortsword>());
+            RecipeGroup GoldShortsword = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldShortsword)}", ItemID.GoldShortsword, ItemID.PlatinumShortsword, ModContent.ItemType<FluoriteShortsword>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldShortsword), GoldShortsword);
             //Tier 4 Shortsword recipe group
 
-            RecipeGroup GoldBattleaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<GoldBattleaxe>())}", ModContent.ItemType<GoldBattleaxe>(), ModContent.ItemType<PlatinumBattleaxe>(), ModContent.ItemType<XieiteBattleaxe>());
+            RecipeGroup GoldBattleaxe = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<GoldBattleaxe>())}", ModContent.ItemType<GoldBattleaxe>(), ModContent.ItemType<PlatinumBattleaxe>(), ModContent.ItemType<FluoriteBattleaxe>());
             RecipeGroup.RegisterGroup("Xenon:GoldBattleaxe", GoldBattleaxe);
             //Tier 4 Battleaxe recipe group
 
-            RecipeGroup GoldBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBow)}", ItemID.GoldBow, ItemID.PlatinumBow, ModContent.ItemType<XieiteBow>());
+            RecipeGroup GoldBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBow)}", ItemID.GoldBow, ItemID.PlatinumBow, ModContent.ItemType<FluoriteBow>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBow), GoldBow);
             //Tier 4 Bow recipe group
             #endregion
@@ -654,10 +654,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
                 #region xieite armor
                 Recipe XieiteHelmetCraft = Main.recipe[i];
-                if (XieiteHelmetCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteHelmetCraft.HasTile(TileID.Anvils) && XieiteHelmetCraft.HasResult(ModContent.ItemType<XieiteHelmet>()))
+                if (XieiteHelmetCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteHelmetCraft.HasTile(TileID.Anvils) && XieiteHelmetCraft.HasResult(ModContent.ItemType<FluoriteHelmet>()))
                 {
                     XieiteHelmetCraft.AddRecipeGroup("SilverHelmet");
-                    if (XieiteHelmetCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteHelmetCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -665,10 +665,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Xieite Helmet recipe
 
                 Recipe XieiteChainmailCraft = Main.recipe[i];
-                if (XieiteChainmailCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteChainmailCraft.HasTile(TileID.Anvils) && XieiteChainmailCraft.HasResult(ModContent.ItemType<XieiteChainmail>()))
+                if (XieiteChainmailCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteChainmailCraft.HasTile(TileID.Anvils) && XieiteChainmailCraft.HasResult(ModContent.ItemType<FluoriteChainmail>()))
                 {
                     XieiteChainmailCraft.AddRecipeGroup("SilverChainmail");
-                    if (XieiteChainmailCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteChainmailCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -676,10 +676,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Xieite Chainmail recipe
 
                 Recipe XieiteGreavesCraft = Main.recipe[i];
-                if (XieiteGreavesCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteGreavesCraft.HasTile(TileID.Anvils) && XieiteGreavesCraft.HasResult(ModContent.ItemType<XieiteGreaves>()))
+                if (XieiteGreavesCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteGreavesCraft.HasTile(TileID.Anvils) && XieiteGreavesCraft.HasResult(ModContent.ItemType<FluoriteGreaves>()))
                 {
                     XieiteGreavesCraft.AddRecipeGroup("SilverGreaves");
-                    if (XieiteGreavesCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteGreavesCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -919,11 +919,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Pickaxe Recipe
 
                 Recipe XieitePickaxeCraft = Main.recipe[i];
-                if (XieitePickaxeCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieitePickaxeCraft.HasTile(TileID.Anvils) && XieitePickaxeCraft.HasResult(ModContent.ItemType<XieitePickaxe>()))
+                if (XieitePickaxeCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieitePickaxeCraft.HasTile(TileID.Anvils) && XieitePickaxeCraft.HasResult(ModContent.ItemType<FluoritePickaxe>()))
                 {
                     XieitePickaxeCraft.AddRecipeGroup("SilverPickaxe");
                     XieitePickaxeCraft.RemoveIngredient(ItemID.Wood);
-                    if (XieitePickaxeCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieitePickaxeCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack -= 2;
                     }
@@ -1057,11 +1057,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Axe Recipe
 
                 Recipe XieiteAxeCraft = Main.recipe[i];
-                if (XieiteAxeCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteAxeCraft.HasTile(TileID.Anvils) && XieiteAxeCraft.HasResult(ModContent.ItemType<XieiteAxe>()))
+                if (XieiteAxeCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteAxeCraft.HasTile(TileID.Anvils) && XieiteAxeCraft.HasResult(ModContent.ItemType<FluoriteAxe>()))
                 {
                     XieiteAxeCraft.AddRecipeGroup("SilverAxe");
                     XieiteAxeCraft.RemoveIngredient(ItemID.Wood);
-                    if (XieiteAxeCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteAxeCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack -= 2;
                     }
@@ -1210,11 +1210,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Hammer Recipe
 
                 Recipe XieiteHammerCraft = Main.recipe[i];
-                if (XieiteHammerCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteHammerCraft.HasTile(TileID.Anvils) && XieiteHammerCraft.HasResult(ModContent.ItemType<XieiteHammer>()))
+                if (XieiteHammerCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteHammerCraft.HasTile(TileID.Anvils) && XieiteHammerCraft.HasResult(ModContent.ItemType<FluoriteHammer>()))
                 {
                     XieiteHammerCraft.AddRecipeGroup("SilverHammer");
                     XieiteHammerCraft.RemoveIngredient(ItemID.Wood);
-                    if (XieiteHammerCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteHammerCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack -= 2;
                     }
@@ -1337,11 +1337,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Hoe Recipe
 
                 Recipe XieiteHoeCraft = Main.recipe[i];
-                if (XieiteHoeCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteHoeCraft.HasTile(TileID.Anvils) && XieiteHoeCraft.HasResult(ModContent.ItemType<XieiteHoe>()))
+                if (XieiteHoeCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteHoeCraft.HasTile(TileID.Anvils) && XieiteHoeCraft.HasResult(ModContent.ItemType<FluoriteHoe>()))
                 {
                     XieiteHoeCraft.AddRecipeGroup("Xenon:SilverHoe");
                     XieiteHoeCraft.RemoveIngredient(ItemID.Wood);
-                    if (XieiteHoeCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteHoeCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack -= 2;
                     }
@@ -1493,10 +1493,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Broadsword Recipe
 
                 Recipe XieiteBroadswordCraft = Main.recipe[i];
-                if (XieiteBroadswordCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteBroadswordCraft.HasTile(TileID.Anvils) && XieiteBroadswordCraft.HasResult(ModContent.ItemType<XieiteBroadsword>()))
+                if (XieiteBroadswordCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteBroadswordCraft.HasTile(TileID.Anvils) && XieiteBroadswordCraft.HasResult(ModContent.ItemType<FluoriteBroadsword>()))
                 {
                     XieiteBroadswordCraft.AddRecipeGroup("SilverBroadsword");
-                    if (XieiteBroadswordCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteBroadswordCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -1638,10 +1638,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Shortsword Recipe
 
                 Recipe XieiteShortswordCraft = Main.recipe[i];
-                if (XieiteShortswordCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteShortswordCraft.HasTile(TileID.Anvils) && XieiteShortswordCraft.HasResult(ModContent.ItemType<XieiteShortsword>()))
+                if (XieiteShortswordCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteShortswordCraft.HasTile(TileID.Anvils) && XieiteShortswordCraft.HasResult(ModContent.ItemType<FluoriteShortsword>()))
                 {
                     XieiteShortswordCraft.AddRecipeGroup("SilverShortsword");
-                    if (XieiteShortswordCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteShortswordCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -1745,10 +1745,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Battleaxe Recipe
 
                 Recipe XieiteBattleaxeCraft = Main.recipe[i];
-                if (XieiteBattleaxeCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteBattleaxeCraft.HasTile(TileID.Anvils) && XieiteBattleaxeCraft.HasResult(ModContent.ItemType<XieiteBattleaxe>()))
+                if (XieiteBattleaxeCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteBattleaxeCraft.HasTile(TileID.Anvils) && XieiteBattleaxeCraft.HasResult(ModContent.ItemType<FluoriteBattleaxe>()))
                 {
                     XieiteBattleaxeCraft.AddRecipeGroup("Xenon:SilverBattleaxe");
-                    if (XieiteBattleaxeCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteBattleaxeCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }
@@ -1910,10 +1910,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Platinum Bow Recipe
 
                 Recipe XieiteBowCraft = Main.recipe[i];
-                if (XieiteBowCraft.HasIngredient(ModContent.ItemType<XieiteBar>()) && XieiteBowCraft.HasTile(TileID.Anvils) && XieiteBowCraft.HasResult(ModContent.ItemType<XieiteBow>()))
+                if (XieiteBowCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteBowCraft.HasTile(TileID.Anvils) && XieiteBowCraft.HasResult(ModContent.ItemType<FluoriteBow>()))
                 {
                     XieiteBowCraft.AddRecipeGroup("SilverBow");
-                    if (XieiteBowCraft.TryGetIngredient(ModContent.ItemType<XieiteBar>(), out Item ingredient))
+                    if (XieiteBowCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
                     {
                         ingredient.stack /= 2;
                     }

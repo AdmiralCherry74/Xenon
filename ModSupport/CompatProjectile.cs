@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using TheConfectionRebirth.Projectiles;
 using Avalon.Projectiles;
+using Xenon.Content.Projectiles.Tools.ConvertingTools.Solutions;
 
 namespace Xenon.ModSupport;
 
@@ -62,7 +63,11 @@ internal class CompatProjectile : GlobalProjectile
 				{
 					CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
 				}
-				NetMessage.SendTileSquare(-1, i, j, 1, 1);
+                if (projectile.type == ModContent.ProjectileType<SelenetionProj>())
+                {
+                    CompatSystem.Convert(i, j, SpecialUtilities.ConversionType.XenonOre, !flag);
+                }
+                NetMessage.SendTileSquare(-1, i, j, 1, 1);
 			}
 		}
 	}

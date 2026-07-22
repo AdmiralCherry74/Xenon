@@ -1,9 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 
 namespace Xenon.Content.Items.Armor.PreHardmode.Metal
 {

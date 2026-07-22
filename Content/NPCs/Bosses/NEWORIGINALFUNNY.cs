@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 
 namespace Xenon.Content.NPCs.Bosses
 {

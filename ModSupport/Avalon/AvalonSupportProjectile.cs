@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Avalon.Projectiles;
+using Xenon.Content.Projectiles.Tools.ConvertingTools.Solutions;
 
 namespace Xenon.ModSupport.Avalon;
 
@@ -58,7 +59,11 @@ internal class AvalonSupportProjectile : GlobalProjectile
 				{
 					AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.Mud, !flag);
 				}
-				NetMessage.SendTileSquare(-1, i, j, 1, 1);
+                if (projectile.type == ModContent.ProjectileType<SelenetionProj>())
+                {
+                    AvalonSystem.Convert(i, j, SpecialUtilities.ConversionType.XenonOre, !flag);
+                }
+                NetMessage.SendTileSquare(-1, i, j, 1, 1);
 			}
 		}
 	}

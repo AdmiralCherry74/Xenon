@@ -14,4 +14,8 @@ internal class XenonConfig : ModConfig
 	[DefaultValue(true)]
 	[ReloadRequired]
 	public bool PickaxeRequiredForNextOreTier;
+
+    [DefaultValue(false)]
+    [ReloadRequired]
+    public bool HellstoneRename;
 }

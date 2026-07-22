@@ -5,7 +5,7 @@ using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
@@ -1086,108 +1086,108 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             #region Xieite Recipes
             //Bar
-            Recipe.Create(ModContent.ItemType<XieiteBar>())
-                .AddIngredient(ModContent.ItemType<XieiteOreBlock>(), 3)
+            Recipe.Create(ModContent.ItemType<FluoriteBar>())
+                .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 3)
                 .AddTile(TileID.Furnaces)
                 .SortAfterFirstRecipesOf(ItemID.GoldWatch)
                 .Register();
 
             //Pickaxe
-            Recipe.Create(ModContent.ItemType<XieitePickaxe>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 10)
+            Recipe.Create(ModContent.ItemType<FluoritePickaxe>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 10)
                 .AddRecipeGroup(RecipeGroupID.Wood, 4)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBar>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteBar>())
                 .Register();
 
             //Axe
-            Recipe.Create(ModContent.ItemType<XieiteAxe>())
-            .AddIngredient(ModContent.ItemType<XieiteBar>(), 8)
+            Recipe.Create(ModContent.ItemType<FluoriteAxe>())
+            .AddIngredient(ModContent.ItemType<FluoriteBar>(), 8)
             .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ModContent.ItemType<XieitePickaxe>())
+            .SortAfterFirstRecipesOf(ModContent.ItemType<FluoritePickaxe>())
             .Register();
 
             //Hammer
-            Recipe.Create(ModContent.ItemType<XieiteHammer>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 8)
+            Recipe.Create(ModContent.ItemType<FluoriteHammer>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 8)
                 .AddRecipeGroup(RecipeGroupID.Wood, 3)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteAxe>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteAxe>())
                 .Register();
             //Hoe
-            Recipe.Create(ModContent.ItemType<XieiteHoe>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 5)
+            Recipe.Create(ModContent.ItemType<FluoriteHoe>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 5)
                 .AddRecipeGroup(RecipeGroupID.Wood, 3)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteHammer>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteHammer>())
                 .Register();
 
             //Broadsword
-            Recipe.Create(ModContent.ItemType<XieiteBroadsword>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 8)
+            Recipe.Create(ModContent.ItemType<FluoriteBroadsword>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 8)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteHoe>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteHoe>())
                 .Register();
 
             //Shortsword
-            Recipe.Create(ModContent.ItemType<XieiteShortsword>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 6)
+            Recipe.Create(ModContent.ItemType<FluoriteShortsword>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 6)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBroadsword>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteBroadsword>())
                 .Register();
 
             //Battleaxe
-            Recipe.Create(ModContent.ItemType<XieiteBattleaxe>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 9)
+            Recipe.Create(ModContent.ItemType<FluoriteBattleaxe>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 9)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteShortsword>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteShortsword>())
                 .Register();
 
             //Bow
-            Recipe.Create(ModContent.ItemType<XieiteBow>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 7)
+            Recipe.Create(ModContent.ItemType<FluoriteBow>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 7)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBattleaxe>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteBattleaxe>())
                 .Register();
 
             //Lapis Staff
             Recipe.Create(ModContent.ItemType<LapisStaff>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 10)
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 10)
                 .AddIngredient(ModContent.ItemType<Lapis>(), 8)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteBow>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteBow>())
                 .Register();
 
             //Helmet
-            Recipe.Create(ModContent.ItemType<XieiteHelmet>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 20)
+            Recipe.Create(ModContent.ItemType<FluoriteHelmet>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 20)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<LapisStaff>())
                 .Register();
 
             //Chainmail
-            Recipe.Create(ModContent.ItemType<XieiteChainmail>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 30)
+            Recipe.Create(ModContent.ItemType<FluoriteChainmail>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 30)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteHelmet>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteHelmet>())
                 .Register();
 
             //Greaves
-            Recipe.Create(ModContent.ItemType<XieiteGreaves>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 25)
+            Recipe.Create(ModContent.ItemType<FluoriteGreaves>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 25)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteChainmail>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteChainmail>())
                 .Register();
 
             //Watch
-            Recipe.Create(ModContent.ItemType<XieiteWatch>())
-                .AddIngredient(ModContent.ItemType<XieiteBar>(), 10)
+            Recipe.Create(ModContent.ItemType<FluoriteWatch>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 10)
                 .AddIngredient(ItemID.Chain)
                 .AddTile(TileID.Tables)
                 .AddTile(TileID.Chairs)
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
-                .SortAfterFirstRecipesOf(ModContent.ItemType<XieiteGreaves>()) //change to greaves later
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteGreaves>()) //change to greaves later
                 .Register();
             #endregion
 

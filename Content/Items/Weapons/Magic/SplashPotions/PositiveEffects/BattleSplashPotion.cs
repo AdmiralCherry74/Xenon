@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Projectiles.Magic.SplashPotionProj.PositiveEffectsProj;
 
 namespace Xenon.Content.Items.Weapons.Magic.SplashPotions.PositiveEffects;

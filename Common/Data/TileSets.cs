@@ -70,7 +70,22 @@ internal class TileSets
         TileID.Crimtane,
         ModContent.TileType<IngestaneOre>()
     );
-
+    public static bool[] Tier1Ore = TileID.Sets.Factory.CreateBoolSet(
+    TileID.Copper,
+    TileID.Tin
+);
+    public static bool[] Tier2Ore = TileID.Sets.Factory.CreateBoolSet(
+    TileID.Iron,
+    TileID.Lead
+);
+    public static bool[] Tier3Ore = TileID.Sets.Factory.CreateBoolSet(
+    TileID.Silver,
+    TileID.Tungsten
+);
+    public static bool[] Tier4Ore = TileID.Sets.Factory.CreateBoolSet(
+    TileID.Gold,
+    TileID.Platinum
+);
     public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<RedCatacombBrick>(),
         ModContent.TileType<CharcoalCatacombBrick>(),

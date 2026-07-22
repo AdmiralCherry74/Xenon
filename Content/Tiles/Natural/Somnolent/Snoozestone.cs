@@ -20,6 +20,7 @@ public class Snoozestone : ModTile
         Main.tileBrick[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBlockLight[Type] = true;
+        Main.tileShine[Type] = 2000;
         TileID.Sets.Conversion.Stone[Type] = true;
         TileID.Sets.GeneralPlacementTiles[Type] = false;
         TileID.Sets.Stone[Type] = true;

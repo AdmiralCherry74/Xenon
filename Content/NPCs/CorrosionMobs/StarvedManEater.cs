@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.CorrosionMobs

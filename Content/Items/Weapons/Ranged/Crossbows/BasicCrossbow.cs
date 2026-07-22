@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Projectiles.Ranged.Ammo.Bolts;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Crossbows;

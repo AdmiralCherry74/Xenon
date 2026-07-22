@@ -9,6 +9,9 @@ using Xenon.ModSupport.Confection.Content.Tiles;
 using Avalon.Tiles.Ores;
 using Xenon.Content.Tiles.Natural.Ores;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
+using Avalon.Tiles.Contagion;
+using Xenon.Content.Tiles.Natural.Somnolent;
+using TheConfectionRebirth.Tiles;
 
 namespace Xenon.ModSupport;
 
@@ -147,7 +150,11 @@ internal class CompatSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<BacciliteOre>();
 			}
-		}
+            if (type == ModContent.TileType<Snoozestone>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<Chunkstone>();
+            }
+        }
 		// convert to confection
 		if (convert == ConversionType.Confection)
 		{
@@ -169,7 +176,11 @@ internal class CompatSystem : ModSystem
 			{
 				tile.TileType = (ushort)ModContent.TileType<MossyHestiaStone>();
 			}
-		}
+            if (type == ModContent.TileType<Snoozestone>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<Creamstone>();
+            }
+        }
 		// convert to jungle/mud
 		if (convert == ConversionType.Mud)
 		{

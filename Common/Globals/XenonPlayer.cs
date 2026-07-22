@@ -23,7 +23,9 @@ public class XenonPlayer : ModPlayer
     public bool GroundPoundActivated;
     public bool HotDamageResistShield;
     public bool HotDamageResistPotion;
-    public bool KnockbackBoost;
+    public bool KnockbackBoostCaustic;
+    public bool KnockbackBoostBattleaxe;
+    public bool Boomed;
     public bool BiomePlatform;
 
     public override void ResetEffects()
@@ -31,7 +33,9 @@ public class XenonPlayer : ModPlayer
         FossilBlessing = false;
         HotDamageResistShield = false;
         HotDamageResistPotion = false;
-        KnockbackBoost = false;
+        KnockbackBoostCaustic = false;
+        KnockbackBoostBattleaxe = false;
+        Boomed = false;
         BiomePlatform = false;
     }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
@@ -124,19 +128,27 @@ public class XenonPlayer : ModPlayer
 	public override void ModifyHitNPCWithItem(Item item, NPC target, ref NPC.HitModifiers modifiers)
 	{
         // caustic armor setbonus
-		if (KnockbackBoost)
+		if (KnockbackBoostCaustic)
         {
             modifiers.Knockback += 1f;
         }
-	}
+        if (KnockbackBoostBattleaxe)
+        {
+            modifiers.Knockback += 0.5f;
+        }
+    }
 	public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
 	{
         // caustic armor setbonus
-		if (KnockbackBoost)
+		if (KnockbackBoostCaustic)
 		{
 			modifiers.Knockback += 1f;
 		}
-	}
+        if (KnockbackBoostBattleaxe)
+        {
+            modifiers.Knockback += 0.5f;
+        }
+    }
 	public override void PreUpdate()
     {
         playerOldVelocity[2] = playerOldVelocity[1];

@@ -26,7 +26,7 @@ public class CinnabarOre : ModTile
         Main.tileMerge[TileID.Mud][Type] = true;
         AddMapEntry(new Color(72, 0, 0));
         HitSound = SoundID.Tink;
-        DustType = ModContent.DustType<IndiumDust>();
+        DustType = ModContent.DustType<CinnabarDust>();
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)

@@ -2,8 +2,6 @@
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Materials.EvilMaterials;
 using Xenon.Content.Projectiles.Melee.Spear;
 
 namespace Xenon.Content.Items.Weapons.Melee.Polearms

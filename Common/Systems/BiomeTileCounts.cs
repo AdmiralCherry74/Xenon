@@ -68,7 +68,9 @@ internal class BiomeTileCounts : ModSystem
                                tileCounts[ModContent.TileType<Gutsandstone>()] +
                                tileCounts[ModContent.TileType<Gutquicksand>()];
 
-        SomnolentTiles = tileCounts[ModContent.TileType<Snoozestone>()];
+        SomnolentTiles = tileCounts[ModContent.TileType<Snoozestone>()] +
+                         tileCounts[ModContent.TileType<SleepingGrass>()] +
+                         tileCounts[ModContent.TileType<IndigoIce>()];
 
         CorruptionJungleTiles = tileCounts[TileID.CorruptJungleGrass];
 

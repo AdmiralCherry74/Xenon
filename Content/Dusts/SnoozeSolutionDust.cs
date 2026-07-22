@@ -14,6 +14,6 @@ public class SnoozeSolutionDust : ModDust
     }
     public override Color? GetAlpha(Dust dust, Color lightColor)
     {
-        return new Color(255, 255, 255, 100);
+        return new Color(100, 100, 200, 100);
     }
 }

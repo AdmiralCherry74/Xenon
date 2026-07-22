@@ -21,7 +21,7 @@ internal class PickPower : ModHook
 		{
 			num = 0;
 		}
-		if (tileTarget.TileType == TileID.Gold || tileTarget.TileType == TileID.Platinum || tileTarget.TileType == ModContent.TileType<XieiteOre>() && pickPower < 45)
+		if (tileTarget.TileType == TileID.Gold || tileTarget.TileType == TileID.Platinum || tileTarget.TileType == ModContent.TileType<FluoriteOre>() && pickPower < 45)
 		{
 			num = 0;
 		}

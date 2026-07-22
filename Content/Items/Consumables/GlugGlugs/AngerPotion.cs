@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Epibuffs;
 using Xenon.Content.Items.Fish;
-using Xenon.Content.Items.Materials.EvilMaterials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 
 namespace Xenon.Content.Items.Consumables.GlugGlugs;
 public class AngerPotion : ModItem
