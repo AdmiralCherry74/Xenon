@@ -18,11 +18,10 @@ public class JadeGemstoneBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
-        TileID.Sets.IceSkateSlippery[Type] = true;
         TileID.Sets.Ore[Type] = true;
         AddMapEntry(new Color(69, 69, 69)); //Nice
         RegisterItemDrop(ModContent.ItemType<Jade>());
-        HitSound = SoundID.Item50;
+        HitSound = SoundID.Tink;
         DustType = ModContent.DustType<JadeGemDust>();
     }
 

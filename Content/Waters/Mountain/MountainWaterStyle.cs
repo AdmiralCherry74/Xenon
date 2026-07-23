@@ -1,9 +1,9 @@
-using Xenon.Content.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts.WaterSplashes;
 
 namespace Xenon.Content.Waters.Mountain;
 

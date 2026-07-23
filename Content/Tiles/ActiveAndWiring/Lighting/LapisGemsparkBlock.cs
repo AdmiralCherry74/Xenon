@@ -40,10 +40,8 @@ public class LapisGemsparkBlock : ModTile
             NetMessage.SendTileSquare(-1, i, j, 1);
         }
     }
+    public override void ChangeWaterfallStyle(ref int style)
+    {
+        style = Mod.Find<ModWaterfallStyle>("LapisWaterfallStyle").Slot;
+    }
 }
-
-
-    //public override void ChangeWaterfallStyle(ref int style)
-    //{
-    //    style = Mod.Find<ModWaterfallStyle>("PeridotWaterfallStyle").Slot;
-    //}

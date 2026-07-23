@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Dusts;
+namespace Xenon.Content.Dusts.WaterSplashes;
 
 public class MountainWaterSplash : ModDust
 {
