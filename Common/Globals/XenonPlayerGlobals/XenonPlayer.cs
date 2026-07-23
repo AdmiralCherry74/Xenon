@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon.Items.Other;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,15 +9,18 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Buffs.Other;
+using Xenon.Content.Items;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Fish.Quest;
 using Xenon.Content.Items.Fish.Valuable;
 
-namespace Xenon.Common.Globals;
+namespace Xenon.Common.Globals.XenonPlayerGlobals;
 
 public class XenonPlayer : ModPlayer
 {
+    private int gemCount;
+
     public bool FossilBlessing;
     public bool FossilBlessingActive;
     public Vector2[] playerOldVelocity = new Vector2[3];
@@ -27,6 +31,7 @@ public class XenonPlayer : ModPlayer
     public bool KnockbackBoostBattleaxe;
     public bool Boomed;
     public bool BiomePlatform;
+    public bool[] OwnedLargeGems = new bool[10];
 
     public override void ResetEffects()
     {
@@ -170,31 +175,41 @@ public class XenonPlayer : ModPlayer
             }
             if (Main.rand.NextBool(20))
             {
-                int D = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, Player.velocity.X * 0.2f + Player.direction * 3, Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D].noGravity = true;
                 Main.dust[D].velocity.X *= 1.2f;
                 Main.dust[D].velocity.X *= 1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D2 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D2 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, Player.velocity.X * 0.2f + Player.direction * 3, Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D2].noGravity = true;
                 Main.dust[D2].velocity.X *= -1.2f;
                 Main.dust[D2].velocity.X *= 1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D3 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D3 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, Player.velocity.X * 0.2f + Player.direction * 3, Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D3].noGravity = true;
                 Main.dust[D3].velocity.X *= 1.2f;
                 Main.dust[D3].velocity.X *= -1.2f;
             }
             if (Main.rand.NextBool(20))
             {
-                int D4 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, (Player.velocity.X * 0.2f) + (Player.direction * 3), Player.velocity.Y * 1.2f, 60, new Color(), 1f);
+                int D4 = Dust.NewDust(Player.position, Player.width, Player.height, DustID.Copper, Player.velocity.X * 0.2f + Player.direction * 3, Player.velocity.Y * 1.2f, 60, new Color(), 1f);
                 Main.dust[D4].noGravity = true;
                 Main.dust[D4].velocity.X *= -1.2f;
                 Main.dust[D4].velocity.X *= -1.2f;
+            }
+        }
+        //Large Gems
+        if (Player.whoAmI == Main.myPlayer)
+        {
+            if (Player.trashItem.type == ModContent.ItemType<LargeJade>() ||
+                Player.trashItem.type == ModContent.ItemType<LargeLapis>() ||
+                Player.trashItem.type == ModContent.ItemType<LargeGarnet>())
+            {
+                Player.trashItem.SetDefaults();
             }
         }
     }
@@ -243,6 +258,51 @@ public class XenonPlayer : ModPlayer
 		if (SpecialUtilities.SubmergedInQuicksandTiles(Player.position))
 		{
 			Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
+        }
+
+        //Large Gems
+        Player.gemCount = 0;
+        gemCount++;
+        if (gemCount >= 10)
+        {
+            Player.gem = -1;
+            OwnedLargeGems = new bool[10];
+            gemCount = 0;
+            for (int num27 = 0; num27 <= 58; num27++)
+            {
+                if (Player.inventory[num27].type == ItemID.None || Player.inventory[num27].stack == 0)
+                {
+                    Player.inventory[num27].TurnToAir();
+                }
+
+                // Vanilla gems
+                if (Player.inventory[num27].type == ItemID.LargeAmethyst)
+                {
+                    Player.gem = Player.inventory[num27].type - 1522;
+                    OwnedLargeGems[Player.gem] = true;
+                }
+                else if (Player.inventory[num27].type == ItemID.LargeAmber)
+                {
+                    Player.gem = 6;
+                    OwnedLargeGems[Player.gem] = true;
+                }
+                // Modded gems
+                if (Player.inventory[num27].type == ModContent.ItemType<LargeJade>())
+                {
+                    Player.gem = 7;
+                    OwnedLargeGems[Player.gem] = true;
+                }
+                else if (Player.inventory[num27].type == ModContent.ItemType<LargeLapis>())
+                {
+                    Player.gem = 8;
+                    OwnedLargeGems[Player.gem] = true;
+                }
+                else if (Player.inventory[num27].type == ModContent.ItemType<LargeGarnet>())
+                {
+                    Player.gem = 9;
+                    OwnedLargeGems[Player.gem] = true;
+                }
+            }
         }
     }
     public void QuicksandMovement()
@@ -312,7 +372,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistPotion) //Fridge Potion
         {
             int dmgPlaceholder = npc.damage;
-            if (Common.Data.NPCSets.NPCFireDamage[npc.type])
+            if (Data.NPCSets.NPCFireDamage[npc.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.7f;
             }
@@ -320,7 +380,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistShield)  //Bone Serpent Coccyx
         {
             int dmgPlaceholder = npc.damage;
-            if (Common.Data.NPCSets.NPCFireDamage[npc.type])
+            if (Data.NPCSets.NPCFireDamage[npc.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.8f;
             }
@@ -331,7 +391,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistPotion) //Fridge potion
         {
             int dmgPlaceholder = proj.damage;
-            if (Common.Data.ProjectileSets.ProjFireDamage[proj.type])
+            if (Data.ProjectileSets.ProjFireDamage[proj.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.7f;
             }
@@ -339,7 +399,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistShield) //Bone Serpent Coccyx
         {
             int dmgPlaceholder = proj.damage;
-            if (Common.Data.ProjectileSets.ProjFireDamage[proj.type])
+            if (Data.ProjectileSets.ProjFireDamage[proj.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.8f;
             }

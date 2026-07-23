@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Content.Items.Accessories;
 

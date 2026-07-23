@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Content.Buffs.Other;
 

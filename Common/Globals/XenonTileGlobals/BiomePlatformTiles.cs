@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Common.Globals.XenonTileGlobals
 {

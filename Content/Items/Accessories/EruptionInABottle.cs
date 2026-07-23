@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Content.Items.Accessories;
 

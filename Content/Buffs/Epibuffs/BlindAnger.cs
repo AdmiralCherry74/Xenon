@@ -1,6 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Content.Buffs.Epibuffs;
     public class BlindAnger : ModBuff

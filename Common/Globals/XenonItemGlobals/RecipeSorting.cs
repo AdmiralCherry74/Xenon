@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
@@ -18,6 +19,7 @@ using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.DriverHammers;
 using Xenon.Content.Items.Tools.FishingRods;
 using Xenon.Content.Items.Tools.GardeningHoes;
+using Xenon.Content.Items.Tools.GrapplingHooks;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Magic.Staves;
 using Xenon.Content.Items.Weapons.Melee.Battleaxes;
@@ -899,6 +901,20 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumGreaves>())
                 .Register();
+
+            //Jade Hook
+            Recipe.Create(ModContent.ItemType<JadeHook>())
+                .AddIngredient(ModContent.ItemType<Jade>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .Register();
+
+            //Large Jade
+            Recipe.Create(ModContent.ItemType<LargeJade>())
+                .AddIngredient(ModContent.ItemType<Jade>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.LargeAmethyst)
+                .Register();
             #endregion
 
             #region Cinnabar Recipes
@@ -1106,9 +1122,23 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumGreaves>())
                 .Register();
+
+            //Garnet Hook
+            Recipe.Create(ModContent.ItemType<GarnetHook>())
+                .AddIngredient(ModContent.ItemType<Garnet>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .Register();
+
+            //Large Garnet
+            Recipe.Create(ModContent.ItemType<LargeGarnet>())
+                .AddIngredient(ModContent.ItemType<Garnet>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.LargeSapphire)
+                .Register();
             #endregion
 
-            #region Xieite Recipes
+            #region Fluortie Recipes
             //Bar
             Recipe.Create(ModContent.ItemType<FluoriteBar>())
                 .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 3)
@@ -1211,7 +1241,21 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Tables)
                 .AddTile(TileID.Chairs)
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
-                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteGreaves>()) //change to greaves later
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteGreaves>())
+                .Register();
+
+            //Lapis Hook
+            Recipe.Create(ModContent.ItemType<LapisHook>())
+                .AddIngredient(ModContent.ItemType<Lapis>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .Register();
+
+            //Large Lapis
+            Recipe.Create(ModContent.ItemType<LargeLapis>())
+                .AddIngredient(ModContent.ItemType<Lapis>(), 15)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.LargeRuby)
                 .Register();
             #endregion
 

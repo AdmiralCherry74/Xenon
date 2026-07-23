@@ -9,6 +9,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonItemGlobals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Materials;

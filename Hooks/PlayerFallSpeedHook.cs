@@ -1,6 +1,6 @@
 ﻿using Terraria;
 using Xenon.Common;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Hooks;
 

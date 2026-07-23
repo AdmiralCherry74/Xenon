@@ -3187,6 +3187,36 @@ Mods: {
 				DisplayName: Cloth Block
 				Tooltip: ""
 			}
+
+			JadeHook: {
+				DisplayName: Jade Hook
+				Tooltip: ""
+			}
+
+			GarnetHook: {
+				DisplayName: Garnet Hook
+				Tooltip: ""
+			}
+
+			LapisHook: {
+				DisplayName: Lapis Hook
+				Tooltip: ""
+			}
+
+			LargeJade: {
+				DisplayName: Large Jade
+				Tooltip: "For Capture the Gem. It drops when you die"
+			}
+
+			LargeGarnet: {
+				DisplayName: Large Garnet
+				Tooltip: "For Capture the Gem. It drops when you die"
+			}
+
+			LargeLapis: {
+				DisplayName: Large Lapis
+				Tooltip: "For Capture the Gem. It drops when you die"
+			}
 		}
 
 		NPCs: {
@@ -3603,6 +3633,9 @@ Mods: {
 			SnoozeSpray.DisplayName: Snooze Spray
 			FluoriteShortswordProj.DisplayName: Fluorite Shortsword
 			SelenetionProj.DisplayName: Selenetion Proj
+			JadeHookProj.DisplayName: Jade Hook Proj
+			GarnetHookProj.DisplayName: Garnet Hook Proj
+			LapisHookProj.DisplayName: Lapis Hook Proj
 		}
 
 		Buffs: {
