@@ -483,6 +483,30 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .AddTile(TileID.WorkBenches)
             .SortAfterFirstRecipesOf(ItemID.GrayBrickWall)
             .Register();
+
+            Recipe.Create(ModContent.ItemType<JadeStoneBlock>())
+            .AddIngredient(ModContent.ItemType<Jade>())
+            .AddIngredient(ItemID.StoneBlock)
+            .AddTile(TileID.HeavyWorkBench)
+            .AddCondition(Condition.InGraveyard)
+            .SortAfterFirstRecipesOf(ItemID.AmethystStoneBlock)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<GarnetStoneBlock>())
+            .AddIngredient(ModContent.ItemType<Garnet>())
+            .AddIngredient(ItemID.StoneBlock)
+            .AddTile(TileID.HeavyWorkBench)
+            .AddCondition(Condition.InGraveyard)
+            .SortAfterFirstRecipesOf(ItemID.SapphireStoneBlock)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisStoneBlock>())
+            .AddIngredient(ModContent.ItemType<Lapis>())
+            .AddIngredient(ItemID.StoneBlock)
+            .AddTile(TileID.HeavyWorkBench)
+            .AddCondition(Condition.InGraveyard)
+            .SortAfterFirstRecipesOf(ItemID.RubyStoneBlock)
+            .Register();
             #endregion
 
             #region Catacombs
