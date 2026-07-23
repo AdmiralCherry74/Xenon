@@ -23,7 +23,7 @@ public class ExoticTerraBlade : ModItem
         Item.autoReuse = true;
 
         Item.DamageType = DamageClass.Melee;
-        Item.damage = 999999999;
+        Item.damage = 1000000;
         Item.knockBack = 0f;
         Item.crit = 100;
         Item.shoot = ModContent.ProjectileType<ExoticTerraBeam>();

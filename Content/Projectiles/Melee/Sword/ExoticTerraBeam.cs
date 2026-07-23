@@ -16,7 +16,7 @@ namespace Xenon.Content.Projectiles.Melee.Sword
 
             Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Melee;
-			Projectile.damage = 1000000000;
+			Projectile.damage = 1000000;
 			Projectile.timeLeft = 1000000000;
             Projectile.tileCollide = true;
             Projectile.penetrate = -1;
