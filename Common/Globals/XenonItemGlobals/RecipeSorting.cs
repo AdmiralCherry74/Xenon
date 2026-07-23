@@ -1127,7 +1127,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<GarnetHook>())
                 .AddIngredient(ModContent.ItemType<Garnet>(), 15)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .SortAfterFirstRecipesOf(ItemID.SapphireHook)
                 .Register();
 
             //Large Garnet
@@ -1248,7 +1248,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<LapisHook>())
                 .AddIngredient(ModContent.ItemType<Lapis>(), 15)
                 .AddTile(TileID.Anvils)
-                .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .SortAfterFirstRecipesOf(ItemID.RubyHook)
                 .Register();
 
             //Large Lapis

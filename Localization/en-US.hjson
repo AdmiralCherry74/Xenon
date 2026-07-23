@@ -3205,17 +3205,17 @@ Mods: {
 
 			LargeJade: {
 				DisplayName: Large Jade
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 
 			LargeGarnet: {
 				DisplayName: Large Garnet
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 
 			LargeLapis: {
 				DisplayName: Large Lapis
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 		}
 
@@ -3397,6 +3397,9 @@ Mods: {
 			}
 
 			Arigrowth.MapEntry: Arigrowth
+			PlacedLapis.MapEntry: Lapis
+			PlacedGarnet.MapEntry: Garnet
+			PlacedJade.MapEntry: Jade
 		}
 
 		Bestiary: {

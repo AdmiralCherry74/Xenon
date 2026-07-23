@@ -7,13 +7,13 @@ using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Tiles.Natural.Other;
 
-public class PlacedLapis : ModTile
+public class PlacedGarnet : ModTile
 {
     const int TileHeight = 18;
     const int RandomStyleCount = 3;
     const int StyleHeight = TileHeight * RandomStyleCount;
 
-    Color gemColor = new Color(32, 35, 127);
+    Color gemColor = new Color(208, 74, 154);
 
     public override void SetStaticDefaults()
     {
@@ -22,7 +22,7 @@ public class PlacedLapis : ModTile
         Main.tileObsidianKill[Type] = true;
         Main.tileSpelunker[Type] = true;
 
-        DustType = ModContent.DustType<LapisGemDust>();
+        DustType = ModContent.DustType<GarnetGemDust>();
 
         AddMapEntry(gemColor, CreateMapEntryName());
     }
