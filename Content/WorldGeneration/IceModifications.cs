@@ -94,9 +94,10 @@ public class IceModGenPass : GenPass
 						case TileID.Sand:
 							Main.tile[xpos, ypos].TileType = TileID.SnowBlock;
 							break;
-						case TileID.Stone:
-							Main.tile[xpos, ypos].TileType = TileID.IceBlock;
-							break;
+					}
+					if (TileID.Sets.Stone[Main.tile[xpos, ypos].TileType])
+					{
+						Main.tile[xpos, ypos].TileType = TileID.IceBlock;
 					}
 					if (WorldGen.genRand.NextBool(60))
 					{
