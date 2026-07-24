@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Content.Items.Materials.BarsGems;
 
@@ -15,6 +16,6 @@ public class Lapis : ModItem
         Item.height = 20;
         Item.value = Item.sellPrice(0, 17, 50);
         Item.maxStack = 9999;
-        //Item.DefaultToPlaceableTile(ModContent.TileType<PlacedLapis>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedLapis>());
     }
 }

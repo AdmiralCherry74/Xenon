@@ -3398,6 +3398,9 @@ Mods: {
 			}
 
 			Arigrowth.MapEntry: Arigrowth
+			PlacedLapis.MapEntry: Lapis
+			PlacedGarnet.MapEntry: Garnet
+			PlacedJade.MapEntry: Jade
 		}
 
 		Bestiary: {
