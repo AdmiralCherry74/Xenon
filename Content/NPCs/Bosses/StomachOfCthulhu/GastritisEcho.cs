@@ -17,13 +17,18 @@ public class GastritisEcho : ModNPC
     public override void SetStaticDefaults()
     {
         Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.EaterofSouls];
+        var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
+        {
+            Hide = true
+        };
+        NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, drawModifier);
     }
 
     public override void SetDefaults()
     {
         NPC.width = 34;
         NPC.height = 72;
-        NPC.scale = 0.80f;
+        NPC.scale = 0.75f;
         NPC.damage = 17;
         NPC.defense = 6;
         NPC.lifeMax = 30;

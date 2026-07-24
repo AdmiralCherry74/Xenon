@@ -17,6 +17,11 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PirateDeckhand];
+            var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            {
+                Hide = true
+            };
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, drawModifier);
         }
 
         public override void SetDefaults()

@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Threading;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
@@ -8,7 +9,9 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.RGB;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Biomes;
 using Xenon.Content.Dusts.WaterSplashes;
+using Xenon.Content.Items.Consumables.TreasureBags;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.NPCs.CorrosionMobs;
@@ -26,7 +29,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         public ref float AI_State => ref NPC.ai[0];
         public ref float AI_Timer => ref NPC.ai[1];
-        public ref float AI_Timer2 => ref NPC.ai[2];
 
         public override void SetDefaults()
         {
@@ -97,8 +99,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
             npcLoot.Add(notExpertRule);
 
-            //Do Treasure Bag
-            //npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<CrescentBag>()));
+            npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<SOCTreasureBag>()));
 
             //Do Master Mode drops
             /*npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<CrescentRelicItem>()));
@@ -106,7 +107,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         public override void AI()
         {
-
 
             Player player = Main.player[NPC.target];
             if (NPC.target < 0 || NPC.target == 255 || player.dead || !player.active)
@@ -149,19 +149,15 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         {
 
             Vector2 positionToTeleport = Vector2.Zero;
-
-
-
-
             AI_Timer++;
-
-            if (AI_Timer <= 100)
+            #region Classic AI
+            if (AI_Timer <= 100 && !Main.expertMode)
             {
                 npc.damage = 0;
                 npc.dontTakeDamage = true;
                 npc.alpha += 2;
             }
-            else if (AI_Timer >= 100)
+            else if (AI_Timer >= 100 && !Main.expertMode)
             {
                 npc.alpha -= 2;
                 if (npc.alpha == 0)
@@ -171,34 +167,110 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 }
             }
 
-            if (AI_Timer == 100)
+            if (AI_Timer == 100 && !Main.expertMode)
                 npc.Center = player.Center;
 
-            if (AI_Timer >= 300)
+            if (AI_Timer >= 300 && !Main.expertMode)
             {
                 AI_Timer = 0;
                 AI_State = (float)StomachAIState.BubbleAllAround;
                 npc.netUpdate = true;
             }
+            #endregion
 
+            #region Expert AI
+            if (AI_Timer <= 100 && Main.expertMode)
+            {
+                npc.damage = 0;
+                npc.dontTakeDamage = true;
+                npc.alpha += 3;
+            }
+            else if (AI_Timer >= 100 && Main.expertMode)
+            {
+                npc.alpha -= 3;
+                if (npc.alpha == 0)
+                {
+                    npc.damage = 14;
+                    npc.dontTakeDamage = false;
+                }
+            }
+
+            if (AI_Timer == 100 && Main.expertMode)
+                npc.Center = player.Center;
+
+            if (AI_Timer >= 300 && Main.expertMode)
+            {
+                AI_Timer = 0;
+                AI_State = (float)StomachAIState.BubbleAllAround;
+                npc.netUpdate = true;
+            }
+            #endregion
         }
         private void Bubble(NPC npc, Player player)
         {
+            #region Classic AI
             AI_Timer++;
-
-            if (AI_Timer <= 1)
+            if (AI_Timer <= 1 && !Main.expertMode)
             {
                 SpewBurpGasBubbleShit(npc, player);
             }
-            if (AI_Timer == 100)
+            if (AI_Timer == 50 && !Main.expertMode && player.ZoneOverworldHeight)
             {
                 SpewBurpGasBubbleShit(npc, player);
             }
-            if (AI_Timer == 200)
+            if (AI_Timer == 100 && !Main.expertMode)
             {
                 SpewBurpGasBubbleShit(npc, player);
                 NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
                 NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+            }
+            if (AI_Timer == 150 && !Main.expertMode && player.ZoneOverworldHeight)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 200 && !Main.expertMode)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+            }
+            #endregion
+
+            #region Expert AI
+            if (AI_Timer <= 1 && Main.expertMode)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 75 && Main.expertMode)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+            }
+            if (AI_Timer == 100 && Main.expertMode && player.ZoneOverworldHeight)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 150 && Main.expertMode)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 200 && Main.expertMode && player.ZoneOverworldHeight)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 225 && Main.expertMode)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+                if (Main.rand.Next(1, 5) <= 2)
+                {
+                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+                }
+                else
+                {
+                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormEchoHead>());
+                }
             }
             if (AI_Timer >= 300)
             {
@@ -206,6 +278,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 AI_State = (float)StomachAIState.Teleport;
                 npc.netUpdate = true;
             }
+            #endregion
         }
         private void SpewBurpGasBubbleShit(NPC npc, Player player)
         {
@@ -241,7 +314,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                SOCBileLight.scale = 2f;
                SOCBile.scale = 2f;
            }
-        
         }
     }
 }

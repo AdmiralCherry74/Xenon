@@ -3217,6 +3217,14 @@ Mods: {
 				DisplayName: Large Lapis
 				Tooltip: For Capture the Gem. It drops when you die
 			}
+
+			SOCTreasureBag: {
+				DisplayName: Treasure Bag (Stomach of Cthulhu)
+				Tooltip:
+				'''
+				Right Click to open
+				'''
+			}
 		}
 
 		NPCs: {
@@ -3366,6 +3374,9 @@ Mods: {
 			StomachOfCthulhu.DisplayName: Stomach Of Cthulhu
 			GastritisEcho.DisplayName: Hungry Gastritis
 			HalfDigestedEcho.DisplayName: Very-Digested
+			TapeWormEchoHead.DisplayName: Burrowed Tape Worm
+			TapeWormEchoBody.DisplayName: Burrowed Tape Worm
+			TapeWormEchoTail.DisplayName: Burrowed Tape Worm
 		}
 
 		Tiles: {
