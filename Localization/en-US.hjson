@@ -3364,6 +3364,8 @@ Mods: {
 			VioletSlime.DisplayName: Violet Slime
 			CyanSlime.DisplayName: Cyan Slime
 			StomachOfCthulhu.DisplayName: Stomach Of Cthulhu
+			GastritisEcho.DisplayName: Hungry Gastritis
+			HalfDigestedEcho.DisplayName: Very-Digested
 		}
 
 		Tiles: {

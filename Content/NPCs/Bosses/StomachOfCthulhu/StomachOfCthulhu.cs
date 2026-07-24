@@ -8,6 +8,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.RGB;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts.WaterSplashes;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.NPCs.CorrosionMobs;
@@ -29,13 +30,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
         public override void SetDefaults()
         {
-            NPC.width = 190;
-            NPC.height = 190;
+            NPC.width = 150;
+            NPC.height = 150;
             NPC.damage = 28;
             NPC.defense = 14;
             NPC.lifeMax = 3500;
             NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.knockBackResist = 0f;
             NPC.noGravity = true;
             NPC.noTileCollide = true;
@@ -44,8 +45,31 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.boss = true;
             NPC.netAlways = true;
             NPC.npcSlots = 10f;
-            Music = MusicID.Boss3;
+            Music = MusicID.Boss2;
         }
+        #region Burp SFX
+        static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")
+        {
+            Volume = 10f,
+            Pitch = 0f,
+            PitchVariance = 0f,
+            MaxInstances = 5,
+        };
+        static SoundStyle Burp2 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp2")
+        {
+            Volume = 10f,
+            Pitch = 0f,
+            PitchVariance = 0f,
+            MaxInstances = 5,
+        };
+        static SoundStyle Burp3 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp3")
+        {
+            Volume = 10f,
+            Pitch = 0f,
+            PitchVariance = 0f,
+            MaxInstances = 5,
+        };
+        #endregion
         public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
             cooldownSlot = ImmunityCooldownID.Bosses;
@@ -82,7 +106,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         public override void AI()
         {
-            
+
 
             Player player = Main.player[NPC.target];
             if (NPC.target < 0 || NPC.target == 255 || player.dead || !player.active)
@@ -127,21 +151,24 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             Vector2 positionToTeleport = Vector2.Zero;
 
 
-            
+
 
             AI_Timer++;
 
             if (AI_Timer <= 100)
             {
                 npc.damage = 0;
-                npc.alpha += 10;
+                npc.dontTakeDamage = true;
+                npc.alpha += 2;
             }
             else if (AI_Timer >= 100)
             {
-                npc.alpha -= 10;
-
-                if (npc.alpha <= 25)
-                    npc.damage = 28;
+                npc.alpha -= 2;
+                if (npc.alpha == 0)
+                {
+                    npc.damage = 14;
+                    npc.dontTakeDamage = false;
+                }
             }
 
             if (AI_Timer == 100)
@@ -153,7 +180,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 AI_State = (float)StomachAIState.BubbleAllAround;
                 npc.netUpdate = true;
             }
-            
+
         }
         private void Bubble(NPC npc, Player player)
         {
@@ -161,36 +188,60 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
             if (AI_Timer <= 1)
             {
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<Gastritis>());
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormHead>());
-
-                for (int j = 0; j < 6; j++)
-                {
-                    
-                    Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-                    float speed = 5f;
-                    Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-                    Vector2 moveTo = normalized * -speed;
-
-                    Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
-                    SoundEngine.PlaySound(SoundID.NPCDeath13, npc.Center);
-                }
-
-                for (int i = 0; i < 50; i++)
-                {
-                    Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
-                    Dust d = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
-                    d.noGravity = true;
-                    d.scale = 2f;
-                }
+                SpewBurpGasBubbleShit(npc, player);
             }
-            
+            if (AI_Timer == 100)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer == 200)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+            }
             if (AI_Timer >= 300)
             {
                 AI_Timer = 0;
                 AI_State = (float)StomachAIState.Teleport;
                 npc.netUpdate = true;
             }
+        }
+        private void SpewBurpGasBubbleShit(NPC npc, Player player)
+        {
+           if (Main.rand.Next(1, 4) == 1)
+           {
+               SoundEngine.PlaySound(Burp1, npc.Center);
+           }
+           else if (Main.rand.Next(1, 4) == 2)
+           {
+               SoundEngine.PlaySound(Burp2, npc.Center);
+           }
+           else
+           {
+               SoundEngine.PlaySound(Burp3, npc.Center);
+           }
+           for (int j = 0; j < 6; j++)
+           {
+
+               Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+               float speed = 5f;
+               Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+               Vector2 moveTo = normalized * -speed;
+
+               Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
+           }
+
+           for (int i = 0; i < 50; i++)
+           {
+               Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
+               Dust SOCBileLight = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
+               Dust SOCBile = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
+               SOCBileLight.noGravity = true;
+               SOCBileLight.scale = 2f;
+               SOCBile.scale = 2f;
+           }
+        
         }
     }
 }
