@@ -3205,17 +3205,17 @@ Mods: {
 
 			LargeJade: {
 				DisplayName: Large Jade
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 
 			LargeGarnet: {
 				DisplayName: Large Garnet
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 
 			LargeLapis: {
 				DisplayName: Large Lapis
-				Tooltip: "For Capture the Gem. It drops when you die"
+				Tooltip: For Capture the Gem. It drops when you die
 			}
 		}
 
@@ -3363,6 +3363,7 @@ Mods: {
 			OrangeSlime.DisplayName: Orange Slime
 			VioletSlime.DisplayName: Violet Slime
 			CyanSlime.DisplayName: Cyan Slime
+			StomachOfCthulhu.DisplayName: Stomach Of Cthulhu
 		}
 
 		Tiles: {
@@ -3636,6 +3637,7 @@ Mods: {
 			JadeHookProj.DisplayName: Jade Hook Proj
 			GarnetHookProj.DisplayName: Garnet Hook Proj
 			LapisHookProj.DisplayName: Lapis Hook Proj
+			StomachBubble.DisplayName: Stomach Bubble
 		}
 
 		Buffs: {
