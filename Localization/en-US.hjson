@@ -3220,10 +3220,7 @@ Mods: {
 
 			SOCTreasureBag: {
 				DisplayName: Treasure Bag (Stomach of Cthulhu)
-				Tooltip:
-				'''
-				Right Click to open
-				'''
+				Tooltip: Right Click to open
 			}
 		}
 
@@ -3456,17 +3453,17 @@ Mods: {
 			SinfulManEater: This eats the man who sins...
 			NeuroticManEater: Brains are the most nutritious to them...
 			StarvedManEater: The feeling of hunger overwhelms them...
-			BigFallenSurvivor: These guys threw out some of the evil cultists, the cultists soon lead back a hoard of zombies
+			BigFallenSurvivor: These guys threw out some of the evil cultists, the cultists soon lead back a horde of zombies.
 			FallenSurvivor: When people inhabited the catacombs, they tried fighting off the swarm of zombies that invaded.
 			SmallFallenSurvivor: Little zombie, big trouble.
-			ConeheadZombie: This zombie like to party. It mistook the traffic cone for a party hat.
+			ConeheadZombie: This zombie likes to party. It mistook the traffic cone for a party hat.
 			BucketheadZombie: This zombie forgot it was wearing the bucket.
 			MoonWidow: Sticky webs lead to sticky situations.
 			Revenant: Abandoned in this grave of the dead, Revenants are a type of spirit that haunt the living if they dare to enter.
-			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. but was revived and now its angry you disturbed its forever slumber...
-			CrystalineGolem: For some odd reason, this bit of Crystal went rouge and became alive. resisting weapons and projectiles under most circumstances. youll need to be clever to rid of these mimicing distractions
-			Baker: This 'larger than life' Baker came too this land to find inspiration for her Baker's handbooks she is currently writing.
-			SlimeDefault: A strange breed of slime that seemd to form out of strange circumstances.
+			BoneSerpentGiant: In the underworld, prior to you arriving, this bone serpent remained dead. It was revived and now it is angry that you disturbed its forever slumber...
+			CrystalineGolem: For some odd reason, this bit of crystal went rogue and became alive. Resisting weapons and projectiles under most circumstances, you'll need to be clever be rid of these mimicking distractions.
+			Baker: This 'larger than life' Baker came to this land to find inspiration for her Baker's handbooks that she is currently writing.
+			SlimeDefault: A strange breed of slime that seemed to form out of strange circumstances.
 		}
 
 		Biomes: {

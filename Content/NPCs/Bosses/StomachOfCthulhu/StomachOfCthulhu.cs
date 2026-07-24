@@ -147,17 +147,15 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         private void Teleport(NPC npc, Player player)
         {
-
             Vector2 positionToTeleport = Vector2.Zero;
             AI_Timer++;
-            #region Classic AI
-            if (AI_Timer <= 100 && !Main.expertMode)
+            if (AI_Timer <= 100)
             {
                 npc.damage = 0;
                 npc.dontTakeDamage = true;
                 npc.alpha += 2;
             }
-            else if (AI_Timer >= 100 && !Main.expertMode)
+            else if (AI_Timer > 100)
             {
                 npc.alpha -= 2;
                 if (npc.alpha == 0)
@@ -167,153 +165,127 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 }
             }
 
-            if (AI_Timer == 100 && !Main.expertMode)
+            if (AI_Timer == 100)
                 npc.Center = player.Center;
 
-            if (AI_Timer >= 300 && !Main.expertMode)
-            {
-                AI_Timer = 0;
-                AI_State = (float)StomachAIState.BubbleAllAround;
-                npc.netUpdate = true;
-            }
-            #endregion
-
-            #region Expert AI
-            if (AI_Timer <= 100 && Main.expertMode)
-            {
-                npc.damage = 0;
-                npc.dontTakeDamage = true;
-                npc.alpha += 3;
-            }
-            else if (AI_Timer >= 100 && Main.expertMode)
-            {
-                npc.alpha -= 3;
-                if (npc.alpha == 0)
-                {
-                    npc.damage = 14;
-                    npc.dontTakeDamage = false;
-                }
-            }
-
-            if (AI_Timer == 100 && Main.expertMode)
-                npc.Center = player.Center;
-
-            if (AI_Timer >= 300 && Main.expertMode)
-            {
-                AI_Timer = 0;
-                AI_State = (float)StomachAIState.BubbleAllAround;
-                npc.netUpdate = true;
-            }
-            #endregion
-        }
-        private void Bubble(NPC npc, Player player)
-        {
-            #region Classic AI
-            AI_Timer++;
-            if (AI_Timer <= 1 && !Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 50 && !Main.expertMode && player.ZoneOverworldHeight)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 100 && !Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-            }
-            if (AI_Timer == 150 && !Main.expertMode && player.ZoneOverworldHeight)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 200 && !Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-            }
-            #endregion
-
-            #region Expert AI
-            if (AI_Timer <= 1 && Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 75 && Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-            }
-            if (AI_Timer == 100 && Main.expertMode && player.ZoneOverworldHeight)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 150 && Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 200 && Main.expertMode && player.ZoneOverworldHeight)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer == 225 && Main.expertMode)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                if (Main.rand.Next(1, 5) <= 2)
-                {
-                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-                }
-                else
-                {
-                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormEchoHead>());
-                }
-            }
             if (AI_Timer >= 300)
             {
                 AI_Timer = 0;
-                AI_State = (float)StomachAIState.Teleport;
+                AI_State = (float)StomachAIState.BubbleAllAround;
                 npc.netUpdate = true;
             }
-            #endregion
         }
+        private void Bubble(NPC npc, Player player)
+        {
+            AI_Timer++;
+            int time = 120;
+            if (Main.expertMode) time = 75;
+            if (AI_Timer <= 1)
+            {
+                SpewBurpGasBubbleShit(npc, player);
+            }
+            if (AI_Timer % time == 0 && player.ZoneOverworldHeight && AI_Timer != 0)
+            {
+				SpewBurpGasBubbleShit(npc, player);
+			}
+			if (AI_Timer % (time * 2) == 0 && AI_Timer != 0)
+			{
+				SpewBurpGasBubbleShit(npc, player);
+				NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+				NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+			}
+			if (AI_Timer == 225 && Main.expertMode)
+			{
+				SpewBurpGasBubbleShit(npc, player);
+				NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+				if (Main.rand.Next(1, 5) <= 2)
+				{
+					NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+				}
+				else
+				{
+					NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormEchoHead>());
+				}
+			}
+			if (AI_Timer >= 300)
+			{
+				AI_Timer = 0;
+				AI_State = (float)StomachAIState.Teleport;
+				npc.netUpdate = true;
+			}
+			/////////////////////
+			#region Expert AI
+			//if (AI_Timer <= 1 && Main.expertMode)
+			//         {
+			//             SpewBurpGasBubbleShit(npc, player);
+			//         }
+			//         if (AI_Timer == 75 && Main.expertMode)
+			//         {
+			//             SpewBurpGasBubbleShit(npc, player);
+			//             NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+			//             NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+			//         }
+			//         if (AI_Timer == 100 && Main.expertMode && player.ZoneOverworldHeight)
+			//         {
+			//             SpewBurpGasBubbleShit(npc, player);
+			//         }
+			//         if (AI_Timer == 150 && Main.expertMode)
+			//         {
+			//             SpewBurpGasBubbleShit(npc, player);
+			//         }
+			//         if (AI_Timer == 200 && Main.expertMode && player.ZoneOverworldHeight)
+			//         {
+			//             SpewBurpGasBubbleShit(npc, player);
+			//         }
+			//if (AI_Timer == 225 && Main.expertMode)
+			//{
+			//	SpewBurpGasBubbleShit(npc, player);
+			//	NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
+			//	if (Main.rand.Next(1, 5) <= 2)
+			//	{
+			//		NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
+			//	}
+			//	else
+			//	{
+			//		NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormEchoHead>());
+			//	}
+			//}
+
+			#endregion
+		}
         private void SpewBurpGasBubbleShit(NPC npc, Player player)
         {
-           if (Main.rand.Next(1, 4) == 1)
-           {
-               SoundEngine.PlaySound(Burp1, npc.Center);
-           }
-           else if (Main.rand.Next(1, 4) == 2)
-           {
-               SoundEngine.PlaySound(Burp2, npc.Center);
-           }
-           else
-           {
-               SoundEngine.PlaySound(Burp3, npc.Center);
-           }
-           for (int j = 0; j < 6; j++)
-           {
+            switch (Main.rand.Next(3))
+            {
+                case 0:
+					SoundEngine.PlaySound(Burp1, npc.Center);
+					break;
+				case 1:
+					SoundEngine.PlaySound(Burp2, npc.Center);
+					break;
+				case 2:
+					SoundEngine.PlaySound(Burp3, npc.Center);
+					break;
+			}
+            for (int j = 0; j < 4; j++)
+            {
+                Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+                float speed = 5f;
+                Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+                Vector2 moveTo = normalized * -speed;
 
-               Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-               float speed = 5f;
-               Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-               Vector2 moveTo = normalized * -speed;
+                Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
+            }
 
-               Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
-           }
-
-           for (int i = 0; i < 50; i++)
-           {
-               Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
-               Dust SOCBileLight = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
-               Dust SOCBile = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
-               SOCBileLight.noGravity = true;
-               SOCBileLight.scale = 2f;
-               SOCBile.scale = 2f;
-           }
+            for (int i = 0; i < 50; i++)
+            {
+                Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
+                Dust SOCBileLight = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
+                Dust SOCBile = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
+                SOCBileLight.noGravity = true;
+                SOCBileLight.scale = 2f;
+                SOCBile.scale = 2f;
+            }
         }
     }
 }
