@@ -486,7 +486,9 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .SortAfterFirstRecipesOf(ItemID.GrayBrickWall)
             .Register();
 
-            Recipe.Create(ModContent.ItemType<JadeStoneBlock>())
+            #region Gemstone Walls
+            #region Jade
+            Recipe.Create(ModContent.ItemType<JadeGemstoneItem>())
             .AddIngredient(ModContent.ItemType<Jade>())
             .AddIngredient(ItemID.StoneBlock)
             .AddTile(TileID.HeavyWorkBench)
@@ -494,7 +496,22 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .SortAfterFirstRecipesOf(ItemID.AmethystStoneBlock)
             .Register();
 
-            Recipe.Create(ModContent.ItemType<GarnetStoneBlock>())
+            Recipe.Create(ModContent.ItemType<JadeGemstoneWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<JadeGemstoneItem>())
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
+            .SortBeforeFirstRecipesOf(ItemID.TopazEcho)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<JadeGemstoneItem>())
+            .AddIngredient(ModContent.ItemType<JadeGemstoneWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<JadeGemstoneWallItem>())
+            .Register();
+            #endregion
+
+            #region Garnet
+            Recipe.Create(ModContent.ItemType<GarnetGemstoneItem>())
             .AddIngredient(ModContent.ItemType<Garnet>())
             .AddIngredient(ItemID.StoneBlock)
             .AddTile(TileID.HeavyWorkBench)
@@ -502,13 +519,43 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .SortAfterFirstRecipesOf(ItemID.SapphireStoneBlock)
             .Register();
 
-            Recipe.Create(ModContent.ItemType<LapisStoneBlock>())
+            Recipe.Create(ModContent.ItemType<GarnetGemstoneWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<GarnetGemstoneItem>())
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
+            .SortBeforeFirstRecipesOf(ItemID.EmeraldEcho)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<GarnetGemstoneItem>())
+            .AddIngredient(ModContent.ItemType<GarnetGemstoneWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<GarnetGemstoneWallItem>())
+            .Register();
+            #endregion
+
+            #region Lapis
+            Recipe.Create(ModContent.ItemType<LapisGemstoneItem>())
             .AddIngredient(ModContent.ItemType<Lapis>())
             .AddIngredient(ItemID.StoneBlock)
             .AddTile(TileID.HeavyWorkBench)
             .AddCondition(Condition.InGraveyard)
             .SortAfterFirstRecipesOf(ItemID.RubyStoneBlock)
             .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisGemstoneWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<LapisGemstoneItem>())
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
+            .SortBeforeFirstRecipesOf(ItemID.DiamondEcho)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisGemstoneItem>())
+            .AddIngredient(ModContent.ItemType<LapisGemstoneWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<LapisGemstoneWallItem>())
+            .Register();
+            #endregion
+            #endregion
             #endregion
 
             #region Catacombs

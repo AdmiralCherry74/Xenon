@@ -5,12 +5,12 @@ using Xenon.Content.Tiles.Natural.Ores;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems
 {
-    public class JadeStoneBlock : ModItem
+    public class LapisGemstoneItem : ModItem
     {
         public override void SetDefaults()
         {
             Item.ResearchUnlockCount = 100;
-            Item.DefaultToPlaceableTile(ModContent.TileType<JadeGemstoneBlock>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<LapisGemstoneBlock>());
         }
         public override void SetStaticDefaults()
         {
