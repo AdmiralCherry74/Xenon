@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts.WaterSplashes;
 
-namespace Xenon.Content.Projectiles.Boss
+namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
 {
     public class StomachBubble : ModProjectile
     {
@@ -33,7 +33,7 @@ namespace Xenon.Content.Projectiles.Boss
                 Dust StomachBubbleWater = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * 3, Scale: 1.25f);
                 StomachBubbleLight.noGravity = true;
             }
-            SoundEngine.PlaySound(in SoundID.Item14, Projectile.Center);
+            SoundEngine.PlaySound(in SoundID.Item54, Projectile.Center);
         }
     }
 }

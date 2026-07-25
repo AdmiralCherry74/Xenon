@@ -3222,6 +3222,51 @@ Mods: {
 				DisplayName: Treasure Bag (Stomach of Cthulhu)
 				Tooltip: Right Click to open
 			}
+
+			GarnetGemstoneItem: {
+				DisplayName: Garnet Stone Block
+				Tooltip: ""
+			}
+
+			JadeGemstoneItem: {
+				DisplayName: Jade Stone Block
+				Tooltip: ""
+			}
+
+			LapisGemstoneItem: {
+				DisplayName: Lapis Stone Block
+				Tooltip: ""
+			}
+
+			GarnetGemstoneWallItem: {
+				DisplayName: Garnet Stone Wall
+				Tooltip: ""
+			}
+
+			GarnetGemstoneWallUnsafeItem: {
+				DisplayName: Garnet Gemstone Wall Unsafe
+				Tooltip: ""
+			}
+
+			JadeGemstoneWallItem: {
+				DisplayName: Jade Stone Wall
+				Tooltip: ""
+			}
+
+			JadeGemstoneWallUnsafeItem: {
+				DisplayName: Jade Gemstone Wall Unsafe
+				Tooltip: ""
+			}
+
+			LapisGemstoneWallItem: {
+				DisplayName: Lapis Stone Wall
+				Tooltip: ""
+			}
+
+			LapisGemstoneWallUnsafeItem: {
+				DisplayName: Lapis Gemstone Wall Unsafe
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -3651,6 +3696,7 @@ Mods: {
 			GarnetHookProj.DisplayName: Garnet Hook Proj
 			LapisHookProj.DisplayName: Lapis Hook Proj
 			StomachBubble.DisplayName: Stomach Bubble
+			DimitriTreatmentProj.DisplayName: Dimitri Treatment Proj
 		}
 
 		Buffs: {

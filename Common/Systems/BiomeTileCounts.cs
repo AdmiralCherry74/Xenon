@@ -16,7 +16,7 @@ using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Systems;
 
-internal class BiomeTileCounts : ModSystem
+public class BiomeTileCounts : ModSystem
 {
     public int CorrosionTiles { get; private set; }
     public int CorrosionDesertTiles { get; private set; }
