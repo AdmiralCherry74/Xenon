@@ -1246,7 +1246,7 @@ Mods: {
 
 			FrozenLavaBrick: {
 				DisplayName: Frozen Lava Brick
-				Tooltip: '''"Its so cold!"'''
+				Tooltip: '''"It's so cold!"'''
 			}
 
 			OuranoStoneBlock: {
@@ -3661,7 +3661,7 @@ Mods: {
 
 			Iceburn: {
 				DisplayName: Iceburn
-				Description: Its so cold it burns!
+				Description: It's so cold it burns!
 			}
 
 			FossilBlessingCooldown: {
