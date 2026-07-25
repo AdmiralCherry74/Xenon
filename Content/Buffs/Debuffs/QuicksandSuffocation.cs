@@ -30,7 +30,7 @@ public class QuicksandSuffocation : ModBuff
 			if (player.statLife <= 0)
 			{
 				int type = Main.rand.Next(3) + 1;
-				player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey($"Mods.Xenon.DeathText.QS_Suffocated_{type}")), 10, 0);
+				player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey($"Mods.Xenon.DeathText.QS_Suffocated_{type}", $"{player.name}")), 10, 0);
 			}
 			timer = 0;
 		}

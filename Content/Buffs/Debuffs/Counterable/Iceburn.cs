@@ -30,7 +30,7 @@ public class Iceburn : ModBuff
 			if (player.statLife <= 0)
 			{
 				int type = Main.rand.Next(2) + 1;
-				player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey($"Mods.Xenon.DeathText.Iceburn_{type}")), 10, 0);
+				player.KillMe(PlayerDeathReason.ByCustomReason(NetworkText.FromKey($"Mods.Xenon.DeathText.Iceburn_{type}", $"{player.name}")), 10, 0);
 			}
 			timer = 0;
 		}
