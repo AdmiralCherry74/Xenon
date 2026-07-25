@@ -3696,6 +3696,7 @@ Mods: {
 			GarnetHookProj.DisplayName: Garnet Hook Proj
 			LapisHookProj.DisplayName: Lapis Hook Proj
 			StomachBubble.DisplayName: Stomach Bubble
+			DimitriTreatmentProj.DisplayName: Dimitri Treatment Proj
 		}
 
 		Buffs: {
