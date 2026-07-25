@@ -1,9 +1,4 @@
-﻿using rail;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -22,7 +17,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                 if (tooltipInsert != 1)
                 {
-                    tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "hoePower", Language.GetTextValue("Mods.Xenon.TooltipsHoePower.HoePowerTooltip", item.GetGlobalItem<HoePower>().hoePower)));
+                    tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "hoePower", Language.GetTextValue("Mods.Xenon.Items.HoePowerTooltip", item.GetGlobalItem<HoePower>().hoePower)));
                 }
             }
         }

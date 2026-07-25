@@ -1,0 +1,25 @@
+Mods: {
+	Xenon: {
+		AltOres: {
+			AluminumAltOre: {
+				DisplayName: Aluminum Alt Ore
+				Description: ""
+			}
+
+			CinnabarAltOre: {
+				DisplayName: Cinnabar Alt Ore
+				Description: ""
+			}
+
+			FluoriteAltOre: {
+				DisplayName: Fluorite Alt Ore
+				Description: ""
+			}
+
+			IndiumAltOre: {
+				DisplayName: Indium Alt Ore
+				Description: ""
+			}
+		}
+	}
+}

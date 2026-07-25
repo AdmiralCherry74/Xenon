@@ -21,7 +21,7 @@ public class FossilizedBlessing : ModItem
             if (tooltips[i].Mod.Equals("Terraria") && tooltips[i].Name.Equals("Tooltip0"))
             {
                 tooltips.RemoveAt(i);
-                tooltips.Add(new TooltipLine(Mod, "Tooltip0", Language.GetTextValue("Mods.Xenon.Tooltips.FossilizedBlessing",
+                tooltips.Add(new TooltipLine(Mod, "Tooltip0", Language.GetTextValue("Mods.Xenon.Items.FossilizedBlessing",
                     Language.GetTextValue(!Main.ReversedUpDownArmorSetBonuses ? "Key.UP" : "Key.DOWN"))));
                 break;
             }

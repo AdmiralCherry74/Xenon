@@ -1,0 +1,6 @@
+CorrosionAltBiome: {
+	DisplayName: Corrosion
+	Description: A Gastric hunger of the corrosion is guaranteed to be present in your world.
+	GenPassName: Making the world hungry
+	DryadTextDescriptor: corroded
+}

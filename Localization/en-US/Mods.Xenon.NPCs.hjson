@@ -1,0 +1,149 @@
+HauntedArmor.DisplayName: Haunted Armor
+SporeSlime.DisplayName: Spore Slime
+Bandit.DisplayName: Bandit
+BanditLooter.DisplayName: Bandit Looter
+CrimsonCultist.DisplayName: Crimson Cultist
+BloodBolt.DisplayName: Blood Bolt
+LavaWormHead.DisplayName: Lava Worm
+LavaWormBody.DisplayName: Lava Worm
+LavaWormTail.DisplayName: Lava Worm
+RhyoliteSlimer.DisplayName: Rhyolite Slimer
+NightmareWalker.DisplayName: Night Walker
+SnowLeopard.DisplayName: Snow Leopard
+Wartornmelon.DisplayName: Mahogster
+Mimicling.DisplayName: Mimicling
+TempleSentry.DisplayName: Temple Sentry
+NEWORIGINALFUNNY.DisplayName: Gerald
+StomachBug.DisplayName: Stomach Bug
+HalfDigested.DisplayName: Half-Digested
+TapeWormHead.DisplayName: Tape Worm
+TapeWormBody.DisplayName: Tape Worm
+TapeWormTail.DisplayName: Tape Worm
+Evphila.DisplayName: Evphila
+CorrodedCultist.DisplayName: Corroded Cultist
+CorruptCultist.DisplayName: Corrupt Cultist
+Gastritis.DisplayName: Gastritis
+CapillarieHead.DisplayName: Capillary
+CapillarieBody.DisplayName: Capillary
+CapillarieTail.DisplayName: Capillary
+MarbleElemental.DisplayName: Marble Elemental
+Tiger.DisplayName: Tiger
+OnyxPenguin.DisplayName: Onyx Penguin
+CorrodedHornet.DisplayName: Corroded Hornet
+SlimedSkeleton.DisplayName: Skeleton
+SulfirBunny.DisplayName: Sulfir Bunny
+HoneySlime.DisplayName: Honey Slime
+NavySlime.DisplayName: Navy Slime
+Sleye.DisplayName: Sleye
+SpikedWhiteSlime.DisplayName: Spiked White Slime
+WhiteSlime.DisplayName: White Slime
+Aclugic.DisplayName: Aclugic
+JebelSlime.DisplayName: Jebel Slime
+Chipmunk.DisplayName: Chipmunk
+Sparrow.DisplayName: Sparrow
+StomachBugWall.DisplayName: Stomach Bug
+Aslugic.DisplayName: Aslugic
+Clotter.DisplayName: Clotter
+Venial.DisplayName: Venial
+StarvedManEater.DisplayName: Starved Man Eater
+SulfurBunny.DisplayName: Sulfur Bunny
+CorruptHornet.DisplayName: Corrupt Hornet
+SinfulManEater.DisplayName: Sinful Man Eater
+CrimfiedHornet.DisplayName: Crimfied Hornet
+NeuroticManEater.DisplayName: Neurotic Man Eater
+SulfurGoldfish.DisplayName: Sulfur Goldfish
+SulfurPenguin.DisplayName: Sulfur Penguin
+ExampleEnemy.DisplayName: Bad Guy, urrrg >:3
+Sawblade.DisplayName: Sawblade
+LargeSawblade.DisplayName: Large Sawblade
+SmallSawblade.DisplayName: Small Sawblade
+BigFallenSurvivor.DisplayName: Big Fallen Survivor
+BigFallenSurvivorExpert.DisplayName: Big Fallen Survivor
+FallenSurvivor.DisplayName: Fallen Survivor
+FallenSurvivorExpert.DisplayName: Fallen Survivor
+SmallFallenSurvivor.DisplayName: Small Fallen Survivor
+SmallFallenSurvivorExpert.DisplayName: Small Fallen Survivor
+MoonWidowGround.DisplayName: Moon Widow
+MoonWidowWall.DisplayName: Moon Widow
+BucketheadZombie.DisplayName: Buckethead Zombie
+ConeheadZombie.DisplayName: Conehead Zombie
+Revenant.DisplayName: Revenant
+BoneSerpentGiantHead.DisplayName: Colossus
+BoneSerpentGiantBody.DisplayName: Colossus
+BoneSerpentGiantTail.DisplayName: Colossus
+CrystalineGolem.DisplayName: Crystaline Golem
+BigGastritis.DisplayName: Gastritis
+LittleGastritis.DisplayName: Gastritis
+
+Baker: {
+	DisplayName: Baker
+
+	Dialouge: {
+		PartyGirlDialouge1: Have you seen {0}? *sigh* Of course she is out partying again... That girl was supposed to be here helping me bake cake!
+		PartyGirlDialouge2: "{0} stopped by to ask if I wanted to bake a cake for another one of her parties. I swear she's always getting me to bake something, but it brings customers."
+		PartyGirlDialouge3: You know, {0} reminds me of myself when I was younger. An loud girl who enjoys the company of everyone around enjoying what life has to offer.
+		PartyGirlDialouge4: Next time you see {0}, can you tell her to keep it down? Last time she partied this hard, it nearly toppled over my latest confections!
+		ArmsDealerDialouge1: "{0} and I have met before... and he is extremely shady."
+		ArmsDealerDialouge2: I've heard plenty of rumors about {0} and alot of them are true. I'd know...
+		ArmsDealerDialouge3: "{0} is flirty torwards everyone except me. Thank goodness i put on some weight, keeps him away from me."
+		ArmsDealerDialouge4: I've heard rumores you did deals with {0} before. I know you can handle yourself, but be careful around him, ok?
+		NurseDialouge1: Yes, I understand that {0} is a nurse, but the snide comments torwards my weight that arnt warrented.
+		NurseDialouge2: "{0} is just horrible to be around! She spreads rumors, says stuff behind peoples backs, and is just plain rude, even to her patients!"
+		NurseDialouge3: How did {0} become a nurse with her attitude. Why are so many nurses just this... well i dont wanna say it. Lets just say she acts like a female dog.
+		StylistDialouge1: Thank you for saving {0}. I was worried about her since she dissapeared a while ago...
+		StylistDialouge2: "{0} and I met back in high school, and were still great friends today! She does my hair, you should go to her if you need yours done, tell her I sent you."
+		StylistDialouge3: Tell {0} that im nearly finished with a batch of cupcakes. Im gifting it to her!
+		AnglerDialouge: Tell {0} to stop stealing my deserts, its costs too much for me to replace it!
+		PrincessDialouge: Oh dearie, can you ask {0} to stop by? I have a delightful gift for her
+		DryadDialouge: You know. I have tried getting slim. I asked {0} for advice. She said to just sit in the woods and not eat anything and let nature take its course.
+		PartyGirlArmsDealerDialouge1: Tell {0} to stay away from {1}. That man aint nothing but trouble!
+		PartyGirlArmsDealerDialouge2: I always worry for {0} whenever shes around {1}... He is very shady and I dont want {0} to end up in trouble.
+		ArmsDealerNurseDialouge1: I dont know how {1} puts up with {0}. Seriously, most of her patients come from gunshot wounds! He just creates extra work for her.
+		ArmsDealerNurseDialouge2: "{1} and {0} are perfect for each other... annoying sociopaths who dont care about anything."
+		ArmsDealerDemolitionistDialouge1: "{1} is dangerous, but at least he doesnt sell his goods to criminals knowingly... while {0}..."
+		ArmsDealerDemolitionistDialouge2: I hear both {0} and {1} argue over whats better at killing things. my question is... why even argue about something violent?
+		StandardDialouge1: Despite being called a baker, my position is actually a Confectionist
+		StandardDialouge2: What can I do for you dearie? an applepie? chocolate chip cookies? taffy? cheese cake?
+		StandardDialouge3: You just go around shakeing trees with your axe for fruit? Just seems destructive and reckless of you, Your gonna get hurt someday!
+		StandardDialouge4: The monsters tend to drop food when they die, I question if they need to eat aswell.
+		StandardDialouge5: You know I was the one who discovered how tasty the gel from slime were. I made a slime pie with it and it tasted really good!
+		CommonDialouge: Hey, how you doing dearie? Want me to make you something, just let me know and ill order it in and it'll be fresh and warm!
+		UncommonDialouge1: I think some of my bakers handbooks are lost out in the world... if you find them, i bet you can use it yourself and learn how to bake goods like i do!
+		UncommonDialouge2: Oh boy, all these deserts are not helping my waistline. Oh! Hi Dearie, what can i bake you today?
+		BloodMoonDialouge1: *chewing loudly* What? Im stressed, and im eating!
+		BloodMoonDialouge2: Please tell me that I didnt leave the door open. I dont want my night to be worse.
+		BloodMoonDialouge3: Sometimes... I just use the Blood Moon as an excuse to be mean.
+		BloodMoonDialouge4: Oh what did {0} do now!?
+		NightDialouge: I'll be honest, the creatures outside scare me a lot.
+	}
+
+	TownNPCMood: {
+		Content: Im doing fine, Dearie. Baking and Cooking like no tommorrow! Would you like to try a cookie?
+		NoHome: Oh dear... I dont have a house... How am I going to even bake goods if I have no house with no oven!
+		FarFromHome: Look, dear, its obvious I ain't athletic, and I didnt sign up for a marathon just to go home to my oven.
+		LoveSpace: So much space to bake! I think i might try some new recipes!
+		DislikeCrowded: Uh dearie, do you think theres maybe one too many people here?
+		HateCrowded: Not enough space for me to bake anything, let alone breath! you outta seperate us dear.
+		LoveBiome: I love the {BiomeName}! Sure the seagulls are annoying and all, picking at my food, but... I like the serene calmness.
+		LikeBiome: I like the {BiomeName} enough, Its happy and go lucky. I just wish the creatures werent as... much.
+		DislikeBiome: "{BiomeName} and desserts do not mix!"
+		HateBiome: "{BiomeName} is horrible! I never seen it but I heard rumors and... my word."
+		LoveNPC: Of course I love {NPCName}, Why would I not love my sweet little sugar.
+		LikeNPC: "{NPCName} and I met back in high school, we talk and she does my hair. You should go to her if you need your hair done!"
+		DislikeNPC: "{NPCName} and I met back in high school. She always made fun of my weight, well im sorry im fat. You cant trust a thin baker!"
+		HateNPC: I see {NPCName} dealing with Bandits during the night and I fear for my safety, no all of our safety!
+		LikeNPC_Princess: "{NPCName} often asks me to make her all sorts of cakes and cookies aswell as ice cream and... im getting hungry again."
+		Princess_LovesNPC: "{NPCName} often asks me to make her all sorts of cakes and cookies asweel as ice cream and... im getting hungry again."
+	}
+}
+
+ChartreuseSlime.DisplayName: Chartreuse Slime
+OrangeSlime.DisplayName: Orange Slime
+VioletSlime.DisplayName: Violet Slime
+CyanSlime.DisplayName: Cyan Slime
+StomachOfCthulhu.DisplayName: Stomach Of Cthulhu
+GastritisEcho.DisplayName: Hungry Gastritis
+HalfDigestedEcho.DisplayName: Very-Digested
+TapeWormEchoHead.DisplayName: Burrowed Tape Worm
+TapeWormEchoBody.DisplayName: Burrowed Tape Worm
+TapeWormEchoTail.DisplayName: Burrowed Tape Worm

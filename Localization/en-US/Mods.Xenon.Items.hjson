@@ -1,0 +1,3208 @@
+HoePowerTooltip: "{0}% hoe power"
+
+FossilizedBlessing: {
+	DisplayName: Fossilized Blessing
+	Tooltip: ""
+}
+
+Scarlet: {
+	DisplayName: Scarlet
+	Tooltip:
+		'''
+		'A Dented, Chipped and Dirty blade that served a hero well...'
+		Armor Pierces
+		'''
+}
+
+VeinPiercer: {
+	DisplayName: Vein Piercer
+	Tooltip: This macabre, ichor-covered bow seems to convert Wooden Arrows into Ichor Arrows
+}
+
+RhyoliteBlock: {
+	DisplayName: Rhyolite Block
+	Tooltip: Rhyolite is an igneous stone formed from the lava of the lower Caverns!
+}
+
+RhyoliteWall: {
+	DisplayName: Rhyolite Wall
+	Tooltip: ""
+}
+
+WoolBlock: {
+	DisplayName: Wool
+	Tooltip: A softer tile weaved from cobwebs
+}
+
+Pouch: {
+	DisplayName: Pouch
+	Tooltip: A pouch made to store small trinkets or other such things. Although it looks nice, it's near useless on its own
+}
+
+GemPouch: {
+	DisplayName: Gem Pouch
+	Tooltip:
+		'''
+		'A pouch with Many common gems inside. Could be sold at a high price!'
+		Valuable
+		'''
+}
+
+MusicalAlbum1: {
+	DisplayName: Reject False Icons
+	Tooltip:
+		'''
+		'People often collect these Album's to either listen too or re-sell later. This one seems to be from a British Virtual Band.'
+		Valuable
+		'''
+}
+
+Perfume: {
+	DisplayName: Perfume
+	Tooltip:
+		'''
+		'A nice-smelling substance that can make you smell nice, but its of little use to you. Best to sell it.'
+		Valuable
+		'''
+}
+
+RareBook: {
+	DisplayName: Rare Book
+	Tooltip:
+		'''
+		'A rare book seemingly from long before you got here... Could net you some profit.'
+		Valuable
+		'''
+}
+
+UnstablePowder: {
+	DisplayName: Unstable Powder
+	Tooltip:
+		'''
+		A powder too unstable to do anything with sadly, too full of the world's forces to actually have equilibrium
+		Valuable
+		'''
+}
+
+XenonWaraxe: {
+	DisplayName: Xenon Waraxe
+	Tooltip: A waraxe made of many other axes and some xenon gas... How the hell does this work?
+}
+
+SmoothRhyoliteBlock: {
+	DisplayName: Smooth Rhyolite Block
+	Tooltip: ""
+}
+
+RhyoliteWallSafe: {
+	DisplayName: Rhyolite Wall
+	Tooltip: ""
+}
+
+RhyolitePlatform: {
+	DisplayName: Rhyolite Platform
+	Tooltip: ""
+}
+
+RhyoliteWorkBench: {
+	DisplayName: Rhyolite Work Bench
+	Tooltip: ""
+}
+
+RhyoliteChair: {
+	DisplayName: Rhyolite Chair
+	Tooltip: ""
+}
+
+RhyoliteDoor: {
+	DisplayName: Rhyolite Door
+	Tooltip: ""
+}
+
+RhyoliteChest: {
+	DisplayName: Rhyolite Chest
+	Tooltip: ""
+}
+
+RhyoliteBathtub: {
+	DisplayName: Rhyolite Bathtub
+	Tooltip: ""
+}
+
+LavaWormBanner: {
+	DisplayName: Lava Worm Banner
+	Tooltip: Nearby players get a bonus against: Lava Worm
+}
+
+RhyoliteSlimerBanner: {
+	DisplayName: Rhyolite Slimer Banner
+	Tooltip: Nearby players get a bonus against: Rhyolite Slimer
+}
+
+RhyoliteBed: {
+	DisplayName: Rhyolite Bed
+	Tooltip: ""
+}
+
+RhyoliteBookcase: {
+	DisplayName: Rhyolite Bookcase
+	Tooltip: ""
+}
+
+RhyoliteCandelabra: {
+	DisplayName: Rhyolite Candelabra
+	Tooltip: ""
+}
+
+RhyoliteCandle: {
+	DisplayName: Rhyolite Candle
+	Tooltip: ""
+}
+
+RhyoliteChandelier: {
+	DisplayName: Rhyolite Chandelier
+	Tooltip: ""
+}
+
+RhyoliteClock: {
+	DisplayName: Rhyolite Clock
+	Tooltip: ""
+}
+
+RhyoliteDresser: {
+	DisplayName: Rhyolite Dresser
+	Tooltip: ""
+}
+
+RhyoliteLamp: {
+	DisplayName: Rhyolite Lamp
+	Tooltip: ""
+}
+
+RhyoliteLantern: {
+	DisplayName: Rhyolite Lantern
+	Tooltip: ""
+}
+
+RhyolitePiano: {
+	DisplayName: Rhyolite Piano
+	Tooltip: ""
+}
+
+RhyoliteSink: {
+	DisplayName: Rhyolite Sink
+	Tooltip: ""
+}
+
+RhyoliteSofa: {
+	DisplayName: Rhyolite Sofa
+	Tooltip: ""
+}
+
+RhyoliteTable: {
+	DisplayName: Rhyolite Table
+	Tooltip: ""
+}
+
+RhyoliteToilet: {
+	DisplayName: Rhyolite Toilet
+	Tooltip: ""
+}
+
+RhyoliteColumn: {
+	DisplayName: Rhyolite Column
+	Tooltip: ""
+}
+
+SmoothRhyoliteWall: {
+	DisplayName: Smooth Rhyolite Wall
+	Tooltip: ""
+}
+
+TheEbonStabber: {
+	DisplayName: The Ebon Stabber
+	Tooltip: ""
+}
+
+FrozenLava: {
+	DisplayName: Frozen Lava Block
+	Tooltip:
+		'''
+		Inflicts Iceburn on contact
+		'Hmm this ice looks like it likes Cheese :3'
+		'''
+}
+
+QuicksandBlock: {
+	DisplayName: Quicksand Block
+	Tooltip: Sand that makes you fall through it
+}
+
+CrimquicksandBlock: {
+	DisplayName: Crimquicksand Block
+	Tooltip: Crimfied sand that makes you fall through it
+}
+
+EbonquicksandBlock: {
+	DisplayName: Ebonquicksand Block
+	Tooltip: Corrupted sand that makes you fall through it
+}
+
+PearlquicksandBlock: {
+	DisplayName: Pearlquicksand Block
+	Tooltip: Hallowed sand that makes you fall through it
+}
+
+GutquicksandBlock: {
+	DisplayName: Gutquicksand Block
+	Tooltip: Digested sand that makes you fall through it
+}
+
+PowderedSnowBlock: {
+	DisplayName: Powdered Snow Block
+	Tooltip: Snow that makes you fall through it
+}
+
+QuickmudBlock: {
+	DisplayName: Quickmud Block
+	Tooltip: Mud that makes you fall through it
+}
+
+CarrotHeadBand: {
+	DisplayName: Carrot Head Band
+	Tooltip: "'Get the carrot! C'mon, get it!'"
+}
+
+GooberPainting: {
+	DisplayName: Goober Painting
+	Tooltip: Goober :3
+}
+
+MP5: {
+	DisplayName: Maschinenpistole 5
+	Tooltip:
+		'''
+		Fast firing gun with high critical strike chance
+		'Oh man, this is just like Counter-Strike!'
+		'''
+}
+
+Raycannon: {
+	DisplayName: Raycannon
+	Tooltip:
+		'''
+		Increased damage, armor penetration and critical strike chance against boss and miniboss enemies
+		'Please revive me, I have the Ray Cannon!'
+		'''
+}
+
+LaserSight: {
+	DisplayName: Laser Sight
+	Tooltip: 10% increased gun critical strike chance
+}
+
+EruptionInABottle: {
+	DisplayName: Eruption in a Bottle
+	Tooltip:
+		'''
+		Double tap DOWN to ground pound
+		Radius increases the more you fall
+		'''
+}
+
+TunaMelt: {
+	DisplayName: Tuna Melt
+	Tooltip: "{$CommonItemTooltip.MediumStats}"
+}
+
+Phlegmarang: {
+	DisplayName: Phlegmarang
+	Tooltip: ""
+}
+
+VitriolicMushroom: {
+	DisplayName: Vitreolic Mushroom
+	Tooltip: ""
+}
+
+Bilewood: {
+	DisplayName: Bilewood
+	Tooltip: ""
+}
+
+OutragePotion: {
+	DisplayName: Anger Potion
+	Tooltip: Increases armor penetration by 5
+}
+
+GutsandBlock: {
+	DisplayName: Gutsand Block
+	Tooltip: ""
+}
+
+GutsandstoneBlock: {
+	DisplayName: Gutsandstone Block
+	Tooltip: ""
+}
+
+GutstoneBlock: {
+	DisplayName: Gutstone Block
+	Tooltip: ""
+}
+
+HardenedGutsandBlock: {
+	DisplayName: Hardened Gutsand Block
+	Tooltip: ""
+}
+
+TanIceBlock: {
+	DisplayName: Tan Ice Block
+	Tooltip: ""
+}
+
+WorldgenHelper: {
+	DisplayName: Worldgen Helper
+	Tooltip: Generation tool used by the devs
+}
+
+UlceriteBar: {
+	DisplayName: Ingestane Bar
+	Tooltip: "'Pulsing with gastric energy'"
+}
+
+CorrosionSeeds: {
+	DisplayName: Corrosion Seeds
+	Tooltip: ""
+}
+
+UlceriteOre: {
+	DisplayName: Ingestane Ore
+	Tooltip: "'Pulsing with gastric energy'"
+}
+
+CorrosionSolution: {
+	DisplayName: Corrosion Solution
+	Tooltip:
+		'''
+		Used by the Clentaminator
+		Spreads the Corrosion
+		'''
+}
+
+PainPills: {
+	RestoreLifeText: Temporary Health Up!
+	DisplayName: Pain Pills
+	Tooltip:
+		'''
+		Increases maximum life by 50 for a short time. During this time you lose that life slowly
+		'Ah, a little pick me up'
+		'''
+}
+
+RubberHandleSword: {
+	DisplayName: Rubber Handle Sword
+	Tooltip: ""
+}
+
+AUG: {
+	DisplayName: Ulceraug
+	Tooltip:
+		'''
+		Three-round burst
+		Only the first shot consumes ammo
+		'''
+}
+
+XM8: {
+	DisplayName: M8A1
+	Tooltip:
+		'''
+		Four-round burst rifle. Bursts can be fired in quick succession.
+		Only the first shot consumes ammo
+		'Too bad you can't find a grenade launcher attachment...'
+		'''
+}
+
+BiliaryShield: {
+	DisplayName: Biliary Shield
+	Tooltip: Increases maximum life by 25
+}
+
+RottingLeftovers: {
+	DisplayName: Rotting Leftovers
+	Tooltip: Summons a chunk of leftovers that provides light
+}
+
+Hunglock: {
+	DisplayName: Hunglock
+	Tooltip:
+		'''
+		Fires a three-round burst
+		Only the first shot consumes ammo
+		'''
+}
+
+CorrosionCampfire: {
+	DisplayName: Corrosion Campfire
+	Tooltip: ""
+}
+
+CorrosionTorch: {
+	DisplayName: Corrosion Torch
+	Tooltip: ""
+}
+
+SewerFury: {
+	DisplayName: Gastroburst
+	Tooltip: Summons a controllable ball of gastric gunk
+}
+
+DirtySwamp: {
+	DisplayName: Dirty Swamp
+	Tooltip: ""
+}
+
+IngestedPickaxe: {
+	DisplayName: Ingested Pickaxe
+	Tooltip: Able to mine Hellstone
+}
+
+Squasher: {
+	DisplayName: Squasher
+	Tooltip: ""
+}
+
+TheIndigestion: {
+	DisplayName: The Indigestion
+	Tooltip: ""
+}
+
+Bolus: {
+	DisplayName: Bolus
+	Tooltip: ""
+}
+
+FreshChyme: {
+	DisplayName: Fresh Chyme
+	Tooltip: ""
+}
+
+TheDamp: {
+	DisplayName: The Damp
+	Tooltip: ""
+}
+
+TheToothpick: {
+	DisplayName: The Toothpick
+	Tooltip: ""
+}
+
+DigestionBow: {
+	DisplayName: Digestion Bow
+	Tooltip: ""
+}
+
+SulfirBow: {
+	DisplayName: Sulfir Bow
+	Tooltip: ""
+}
+
+Depraverang: {
+	DisplayName: Depraverang
+	Tooltip: ""
+}
+
+NauseaCudgel: {
+	DisplayName: Nausea Cudgel
+	Tooltip: ""
+}
+
+Zygomatarang: {
+	DisplayName: Zygomatarang
+	Tooltip: ""
+}
+
+Corrodoras: {
+	DisplayName: Corrodoras
+	Tooltip: ""
+}
+
+Giardia: {
+	DisplayName: Giardia
+	Tooltip: ""
+}
+
+MAC10: {
+	DisplayName: MAC-10
+	Tooltip: Fires a powerful, high-velocity bullet
+}
+
+TheYeti: {
+	DisplayName: The Yeti
+	Tooltip: ""
+}
+
+WishingStar: {
+	DisplayName: Wishing Star
+	Tooltip: "'If wishes were fishes and soup bowls were dishes, I'd make something delicious for you'"
+}
+
+CopperBattleaxe: {
+	DisplayName: Copper Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+GoldBattleaxe: {
+	DisplayName: Gold Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+IronBattleaxe: {
+	DisplayName: Iron Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+LeadBattleaxe: {
+	DisplayName: Lead Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+PlatinumBattleaxe: {
+	DisplayName: Platinum Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+SilverBattleaxe: {
+	DisplayName: Silver Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+TinBattleaxe: {
+	DisplayName: Tin Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+TungstenBattleaxe: {
+	DisplayName: Tungsten Battle Axe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+Liverwort: {
+	DisplayName: Liverwort
+	Tooltip: ""
+}
+
+LiverwortSeeds: {
+	DisplayName: Liverwort Seeds
+	Tooltip: ""
+}
+
+BanditBanner: {
+	DisplayName: Bandit Banner
+	Tooltip: ""
+}
+
+BanditLooterBanner: {
+	DisplayName: Bandit Looter Banner
+	Tooltip: ""
+}
+
+CapillaryBanner: {
+	DisplayName: Capillary Banner
+	Tooltip: ""
+}
+
+CorrodedCultistBanner: {
+	DisplayName: Corroded Cultist Banner
+	Tooltip: ""
+}
+
+CorruptCultistBanner: {
+	DisplayName: Corrupt Cultist Banner
+	Tooltip: ""
+}
+
+CrimsonCultistBanner: {
+	DisplayName: Crimson Cultist Banner
+	Tooltip: ""
+}
+
+EvphilaBanner: {
+	DisplayName: Evphila Banner
+	Tooltip: ""
+}
+
+GastritisBanner: {
+	DisplayName: Gastritis Banner
+	Tooltip: ""
+}
+
+HalfDigestedBanner: {
+	DisplayName: Half Digested Banner
+	Tooltip: ""
+}
+
+HauntedArmorBanner: {
+	DisplayName: Haunted Armor Banner
+	Tooltip: ""
+}
+
+MarbleElementalBanner: {
+	DisplayName: Marble Elemental Banner
+	Tooltip: ""
+}
+
+MimiclingBanner: {
+	DisplayName: Mimicling Banner
+	Tooltip: ""
+}
+
+NightWalkerBanner: {
+	DisplayName: Night Walker Banner
+	Tooltip: ""
+}
+
+SnowLeopardBanner: {
+	DisplayName: Snow Leopard Banner
+	Tooltip: ""
+}
+
+SporeSlimeBanner: {
+	DisplayName: Spore Slime Banner
+	Tooltip: ""
+}
+
+StomachBugBanner: {
+	DisplayName: Stomach Bug Banner
+	Tooltip: ""
+}
+
+TapeWormBanner: {
+	DisplayName: Tape Worm Banner
+	Tooltip: ""
+}
+
+BilewoodBathtub: {
+	DisplayName: Bilewood Bathtub
+	Tooltip: ""
+}
+
+BilewoodBed: {
+	DisplayName: Bilewood Bed
+	Tooltip: ""
+}
+
+BilewoodBookcase: {
+	DisplayName: Bilewood Bookcase
+	Tooltip: ""
+}
+
+BilewoodCandelabra: {
+	DisplayName: Bilewood Candelabra
+	Tooltip: ""
+}
+
+BilewoodCandle: {
+	DisplayName: Bilewood Candle
+	Tooltip: ""
+}
+
+BilewoodChair: {
+	DisplayName: Bilewood Chair
+	Tooltip: ""
+}
+
+BilewoodChandelier: {
+	DisplayName: Bilewood Chandelier
+	Tooltip: ""
+}
+
+BilewoodChest: {
+	DisplayName: Bilewood Chest
+	Tooltip: ""
+}
+
+BilewoodClock: {
+	DisplayName: Bilewood Clock
+	Tooltip: ""
+}
+
+BilewoodDoor: {
+	DisplayName: Bilewood Door
+	Tooltip: ""
+}
+
+BilewoodDresser: {
+	DisplayName: Bilewood Dresser
+	Tooltip: ""
+}
+
+BilewoodLamp: {
+	DisplayName: Bilewood Lamp
+	Tooltip: ""
+}
+
+BilewoodLantern: {
+	DisplayName: Bilewood Lantern
+	Tooltip: ""
+}
+
+BilewoodPiano: {
+	DisplayName: Bilewood Piano
+	Tooltip: ""
+}
+
+BilewoodPlatform: {
+	DisplayName: Bilewood Platform
+	Tooltip: ""
+}
+
+BilewoodSink: {
+	DisplayName: Bilewood Sink
+	Tooltip: ""
+}
+
+BilewoodSofa: {
+	DisplayName: Bilewood Sofa
+	Tooltip: ""
+}
+
+BilewoodTable: {
+	DisplayName: Bilewood Table
+	Tooltip: ""
+}
+
+BilewoodToilet: {
+	DisplayName: Bilewood Toilet
+	Tooltip: ""
+}
+
+BilewoodWorkBench: {
+	DisplayName: Bilewood Work Bench
+	Tooltip: ""
+}
+
+CoarseDirt: {
+	DisplayName: Coarse Dirt
+	Tooltip: Dirt that cant have grass grown on it
+}
+
+OvergrownTurf: {
+	DisplayName: Overgrown Turf
+	Tooltip: Increases spawn rates. Cannot have plants grown on them. Cannot be filled with the worlds forces of evil or light.
+}
+
+Maxe: {
+	DisplayName: Maxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+NightGnasher: {
+	DisplayName: Night Gnasher
+	Tooltip:
+		'''
+		Inflicts a cleaving effect on enemies
+		Consecutive hits grant a boost to your swing speed
+		'''
+}
+
+NightmareEyesPaintingItem: {
+	DisplayName: Nightmare Eyes
+	Tooltip: ""
+}
+
+DebugAxe: {
+	DisplayName: Debug Axe
+	Tooltip: ""
+}
+
+IronCaltrops: {
+	DisplayName: Iron Caltrops
+	Tooltip:
+		'''
+		5 summon tag damage
+		Throw 5 caltrops with them hitting an enemy once before becoming useless
+		An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
+		'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
+		'''
+}
+
+LeadCaltrops: {
+	DisplayName: Lead Caltrops
+	Tooltip:
+		'''
+		6 summon tag damage
+		Throw 5 caltrops with them hitting an enemy once before becoming useless
+		An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
+		'Historically, caltrops were part of defenses that served to slow the advance of troops'
+		'''
+}
+
+TintedGlass: {
+	DisplayName: Tinted Glass
+	Tooltip: See through glass made from flint that doesn't let light through
+}
+
+JawSplitter: {
+	DisplayName: Jaw Splitter
+	Tooltip:
+		'''
+		Inflicts a cleaving effect on enemies
+		Consecutive hits grant a boost to your regeneration speed
+		'''
+}
+
+MoissaniteTriAxe: {
+	DisplayName: Moissanite Trimagma
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+Ciggies: {
+	DisplayName: Cigarettes
+	Tooltip:
+		'''
+		'These are terrible for you. Seriously don't smoke. Instead sell these!'
+		Valuable
+		'''
+}
+
+ChimeraEye: {
+	DisplayName: Chimera Eye
+	Tooltip:
+		'''
+		'A Chimera's eye harvested by you. Not sure what you could do with it, but someone may buy it for a fair price.'
+		Valuable
+		'''
+}
+
+DilutedBile: {
+	DisplayName: Diluted Bile
+	Tooltip:
+		'''
+		'A Gastritis's bile harvested by you. It smells disgusting despite being diluted. Might as well sell it.'
+		Valuable
+		'''
+}
+
+EOSMandible: {
+	DisplayName: Eater Mandible
+	Tooltip:
+		'''
+		'An Eater of Soul's mandible harvested by you. It looks too decayed to properly use, but could sell.'
+		Valuable
+		'''
+}
+
+OldManual: {
+	DisplayName: Old Manual
+	Tooltip:
+		'''
+		'An old manual. Not much use to you, but it could benefit someone else well for a fair price.'
+		Valuable
+		'''
+}
+
+OldPoliceGunParts: {
+	DisplayName: Broken Police Gun Parts
+	Tooltip:
+		'''
+		'The Arms Dealer probably refurbishes these into those Illegal Gun parts. You should sell this before you get caught.'
+		Valuable
+		'''
+}
+
+InterestingBook: {
+	DisplayName: Interesting Book
+	Tooltip:
+		'''
+		'A rather... 'interesting' book. You should sell this, unless you are going to read it later?'
+		Valuable
+		'''
+}
+
+Garnet: {
+	DisplayName: Garnet
+	Tooltip: ""
+}
+
+Lazuli: {
+	DisplayName: Lapis
+	Tooltip: ""
+}
+
+Onyx: {
+	DisplayName: Onyx
+	Tooltip: ""
+}
+
+GarnetCoralstoneBlock: {
+	DisplayName: Garnet Coralstone Block
+	Tooltip: ""
+}
+
+LapisMudBlock: {
+	DisplayName: Lapis Mud Block
+	Tooltip: ""
+}
+
+Lapis: {
+	DisplayName: Lapis
+	Tooltip: ""
+}
+
+OnyxIceBlock: {
+	DisplayName: Onyx Ice Block
+	Tooltip: ""
+}
+
+ExoticGemPouch: {
+	DisplayName: Exotic Gem Pouch
+	Tooltip:
+		'''
+		'This pouch contains every single type of gem you can find. Someone may want to buy these.'
+		Valuable
+		'''
+}
+
+PremiumGemPouch: {
+	DisplayName: Premium Gem Pouch
+	Tooltip:
+		'''
+		'This pouch contains more obscure gems. You could sell these to line your pockets with coin.'
+		Valuable
+		'''
+}
+
+TintedGlassPane: {
+	DisplayName: Tinted Glass Pane
+	Tooltip: Transparent glass pane that doesn't let light through
+}
+
+GarnetGemsparkBlock: {
+	DisplayName: Garnet Gemspark Block
+	Tooltip: ""
+}
+
+PinkStainedGlassPane: {
+	DisplayName: Pink Stained Glass Pane
+	Tooltip: ""
+}
+
+GarnetGemsparkWall: {
+	DisplayName: Garnet Gemspark Wall
+	Tooltip: ""
+}
+
+GarnetGemsparkWallOff: {
+	DisplayName: Offline Garnet Gemspark Wall
+	Tooltip: ""
+}
+
+LapisGemsparkBlock: {
+	DisplayName: Lapis Gemspark Block
+	Tooltip: ""
+}
+
+IndigoStainedGlassPane: {
+	DisplayName: Indigo Stained Glass Pane
+	Tooltip: ""
+}
+
+LapisGemsparkWall: {
+	DisplayName: Lapis Gemspark Wall
+	Tooltip: ""
+}
+
+LapisGemsparkWallOff: {
+	DisplayName: Offline Lapis Gemspark Wall
+	Tooltip: ""
+}
+
+OnyxGemsparkBlock: {
+	DisplayName: Onyx Gemspark Block
+	Tooltip: ""
+}
+
+GrayStainedGlassPane: {
+	DisplayName: Gray Stained Glass Pane
+	Tooltip: ""
+}
+
+OnyxGemsparkWall: {
+	DisplayName: Onyx Gemspark Wall
+	Tooltip: ""
+}
+
+OnyxGemsparkWallOff: {
+	DisplayName: Offline Onyx Gemspark Wall
+	Tooltip: ""
+}
+
+IngestaneBar: {
+	DisplayName: Ingestane Bar
+	Tooltip: pulsing with gastric energy
+}
+
+GrayTorch: {
+	DisplayName: Gray Torch
+	Tooltip: A dim light source that could be used to create moody environments
+}
+
+IngestaneOre: {
+	DisplayName: Ingestane Ore
+	Tooltip: "'Pulsing with gastric energy'"
+}
+
+IndigoTorch: {
+	DisplayName: Indigo Torch
+	Tooltip: ""
+}
+
+RoseTorch: {
+	DisplayName: Rose Torch
+	Tooltip: ""
+}
+
+GloomingEbonwoodWand: {
+	DisplayName: Glooming Ebonwood Wand
+	Tooltip: Places glooming ebonwood
+}
+
+BleedingShadewoodWand: {
+	DisplayName: Bleeding Shadewood Wand
+	Tooltip: Places bleeding shadewood
+}
+
+DissolvingBilewoodWand: {
+	DisplayName: Dissolving Bilewood Wand
+	Tooltip: Places dissolving bilewood
+}
+
+GutstoneBrick: {
+	DisplayName: Gutstone Brick
+	Tooltip: ""
+}
+
+BleedingShadeleafWand: {
+	DisplayName: Bleeding Shadeleaf Wand
+	Tooltip: Places bleeding shadeleaves
+}
+
+DissolvingBileleafWand: {
+	DisplayName: Dissolving Bileleaf Wand
+	Tooltip: Places dissolving bileleaves
+}
+
+GloomingEbonleafWand: {
+	DisplayName: Glooming Ebonleaf Wand
+	Tooltip: Places glooming ebonleaves
+}
+
+Mauser: {
+	DisplayName: Light Handgun
+	Tooltip: ""
+}
+
+ExampleBolt: {
+	DisplayName: Example Bolt
+	Tooltip: Unused dev item / BasicBolt. You shouldn't have this
+}
+
+FireBolt: {
+	DisplayName: Fire Bolt
+	Tooltip: Used by Crossbows
+}
+
+MetalBolt: {
+	DisplayName: Metal Bolt
+	Tooltip:
+		'''
+		Materials
+		Used by Crossbows
+		'''
+}
+
+AngerPotion: {
+	DisplayName: Anger Potion
+	Tooltip: Increases armor penetration by 5
+}
+
+Lime: {
+	DisplayName: Lime
+	Tooltip: ""
+}
+
+TarotCard1: {
+	DisplayName: Tarot Card "Unpolished"
+	Tooltip:
+		'''
+		25% less defense, 20% increased coin yield until used again
+		'This cursed card makes your armor not as effective'
+		'''
+}
+
+TarotCard1Used: {
+	DisplayName: Burnt Tarot Card "Unpolished"
+	Tooltip:
+		'''
+		Will stop 25% less defense as well as the 20% increased coin yield if used
+		'To put out the fire on this card is to quell the curse'
+		'''
+}
+
+SpikedGel: {
+	DisplayName: Spiked Gel
+	Tooltip:
+		'''
+		Can be used to craft Bolts at an anvil
+		'Very pointy'
+		'''
+}
+
+VitriolicPowder: {
+	DisplayName: Vitreolic Powder
+	Tooltip: Spreads the Corrosion
+}
+
+TheDisembowelment: {
+	DisplayName: The Disembowelment
+	Tooltip:
+		'''
+		Inflicts a cleaving effect on enemies
+		Consecutive hits increase your knockback's velocity
+		'''
+}
+
+BasicCrossbow: {
+	DisplayName: Basic Crossbow
+	Tooltip: May or may not be removed later
+}
+
+UnholyBolt: {
+	DisplayName: Unholy Bolt
+	Tooltip: Used by Crossbows
+}
+
+FrozenLavaBrick: {
+	DisplayName: Frozen Lava Brick
+	Tooltip: '''"Its so cold!"'''
+}
+
+OuranoStoneBlock: {
+	DisplayName: Ouranostone Block
+	Tooltip: The god of the sky's essence contained in a Stone
+}
+
+CliffsideChest: {
+	DisplayName: Cliffside Chest
+	Tooltip: ""
+}
+
+AresStoneBlock: {
+	DisplayName: Arestone Block
+	Tooltip: The god of war's rage contained in Crimstone
+}
+
+HelioStoneBlock: {
+	DisplayName: Heliostone Block
+	Tooltip: The god of the sun's euphoria contained in Pearlstone
+}
+
+NyxStoneBlock: {
+	DisplayName: Nyxstone Block
+	Tooltip: The goddess of the night's wraith contained in Ebonstone
+}
+
+HephStoneBlock: {
+	DisplayName: Hephstone Block
+	Tooltip: The god of metallurgy's anger contained in Gutstone
+}
+
+TropicGrassSeeds: {
+	DisplayName: Tropic Grass Seeds
+	Tooltip: Used to plant Tropic Grass on sand
+}
+
+ZephyrBoots: {
+	DisplayName: Zephyr Boots
+	Tooltip:
+		'''
+		The wearer can run super fast in higher wind speeds
+		Grants immunity to fall damage
+		'Fit for a wind warrior'
+		'''
+}
+
+BunnyStaff: {
+	DisplayName: Forest Staff
+	Tooltip: Summons an armored bunny to fight for you
+}
+
+FrostNade: {
+	DisplayName: Frost Grenade
+	Tooltip: Inflicts Frostburn
+}
+
+JebelSlimeBanner: {
+	DisplayName: Jebel Slime Banner
+	Tooltip: ""
+}
+
+JacarandaWood: {
+	DisplayName: Jacaranda Wood
+	Tooltip: ""
+}
+
+CreamQuicksandBlock: {
+	DisplayName: Creamquicksand Block
+	Tooltip: Baked sand that makes you fall through it
+}
+
+HestiaStoneBlock: {
+	DisplayName: Hestiastone Block
+	Tooltip: The god of the hearth's zen contained in a Creamstone
+}
+
+LivingJacarandawoodDoor: {
+	DisplayName: Living Jacaranda Door
+	Tooltip: ""
+}
+
+LivingJacarandaleafWallUnsafe: {
+	DisplayName: Unsafe Living Jacaranda Leaf Wall
+	Tooltip: ""
+}
+
+LivingJacarandawoodWallUnsafe: {
+	DisplayName: Unsafe Living Jacaranda Wall
+	Tooltip: ""
+}
+
+LivingJacarandaleafWand: {
+	DisplayName: Living Jacaranda Leaf Wand
+	Tooltip: ""
+}
+
+LivingJacarandawoodWand: {
+	DisplayName: Living Jacaranda Wand
+	Tooltip: ""
+}
+
+TestingDoorBlock: {
+	DisplayName: Testing Door Block
+	Tooltip: Places the locked living jacaranda door
+}
+
+LivingWoodenSword: {
+	DisplayName: Living Wooden Sword
+	Tooltip: This sword looks like it may fit in somewhere
+}
+
+AridPowder: {
+	DisplayName: Arid Powder
+	Tooltip: ""
+}
+
+SilverDoor: {
+	DisplayName: Silver Door
+	Tooltip: A door that can only be opened via wires
+}
+
+TungstenDoor: {
+	DisplayName: Tungsten Door
+	Tooltip: A door that can only be opened via wires
+}
+
+GravelBlock: {
+	DisplayName: Gravel Block
+	Tooltip: ""
+}
+
+GraniteFish: {
+	DisplayName: Granite Fish
+	Tooltip: ""
+}
+
+CausticHelmet: {
+	DisplayName: Caustic Helmet
+	Tooltip: 4% increased knockback
+}
+
+CausticScalemail: {
+	DisplayName: Caustic Scalemail
+	Tooltip: 4% increased knockback
+}
+
+CausticGreaves: {
+	DisplayName: Caustic Greaves
+	Tooltip: 4% increased knockback
+}
+
+ExpiredLeftovers: {
+	DisplayName: Expired Leftovers
+	Tooltip: Summons the Insect of Hunger. well it summons the neworiginalfunny
+}
+
+PolloStoneBlock: {
+	DisplayName: Pollo Stone Block
+	Tooltip: The god of health's fury contained in a Chunkstone
+}
+
+SnotquicksandBlock: {
+	DisplayName: Snotquicksand Block
+	Tooltip: Snotsand that makes you fall through it
+}
+
+SeedPacket: {
+	DisplayName: Seed Packet
+	Tooltip: ""
+}
+
+Warflail: {
+	DisplayName: Warflail
+	Tooltip: ""
+}
+
+TheRange: {
+	DisplayName: The Range
+	Tooltip: ""
+}
+
+ImpWings: {
+	DisplayName: Imp Wings
+	Tooltip: ""
+}
+
+StarvedManEaterBanner: {
+	DisplayName: Starved Man Eater Banner
+	Tooltip: ""
+}
+
+AncientTerraBlade: {
+	DisplayName: Ancient Terra Blade
+	Tooltip: Old heros used this...
+}
+
+CorrosionCrate: {
+	DisplayName: Corrosion Crate
+	Tooltip: Press M2 or B to open
+}
+
+IngestaneBrick: {
+	DisplayName: Ingestane Brick
+	Tooltip: ""
+}
+
+IodineBar: {
+	DisplayName: Iodine Bar
+	Tooltip: Glowing dark violet with energy...
+}
+
+IodineOreBlock: {
+	DisplayName: Iodine Ore
+	Tooltip: Glowing dark violet with energy...
+}
+
+IodineGreatsword: {
+	DisplayName: Iodine Greatsword
+	Tooltip: ""
+}
+
+IodineGreatbow: {
+	DisplayName: Iodine Greatbow
+	Tooltip: ""
+}
+
+ExampleThumper: {
+	DisplayName: Example Thumper
+	Tooltip: ""
+}
+
+WoodenGrenadeLauncher: {
+	DisplayName: Light Grenade Launcher
+	Tooltip: Thats why they call me thumper
+}
+
+ThumperGrenadeI: {
+	DisplayName: Thumper Grenade I
+	Tooltip: works only with the Light Grenade Launcher
+}
+
+ExoticTerraBlade: {
+	DisplayName: Exotic Terra Blade
+	Tooltip: When developers are feeling rundown. theyll pick this debug sword up
+}
+
+BronzeBattleaxe: {
+	DisplayName: Bronze Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+BismuthBattleaxe: {
+	DisplayName: Bismuth Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+NickelBattleaxe: {
+	DisplayName: Nickel Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+ZincBattleaxe: {
+	DisplayName: Zinc Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+BlackPhaseblade: {
+	DisplayName: Charcoal Phaseblade
+	Tooltip: ""
+}
+
+IndigoPhaseblade: {
+	DisplayName: Indigo Phaseblade
+	Tooltip: ""
+}
+
+RosePhaseblade: {
+	DisplayName: Rose Phaseblade
+	Tooltip: ""
+}
+
+OnyxStaff: {
+	DisplayName: Onyx Staff
+	Tooltip: Sets enemies on fire
+}
+
+GarnetMudBlock: {
+	DisplayName: Garnet Mud Block
+	Tooltip: ""
+}
+
+LapisSandstoneBlock: {
+	DisplayName: Lapis Sandstone Block
+	Tooltip: ""
+}
+
+GarnetStaff: {
+	DisplayName: Garnet Staff
+	Tooltip: ""
+}
+
+LapisStaff: {
+	DisplayName: Lapis Staff
+	Tooltip: ""
+}
+
+PechaBerry: {
+	DisplayName: Pecha Berry
+	Tooltip: Eating this removes the Poison debuff
+}
+
+Piranha: {
+	DisplayName: Piranha
+	Tooltip:
+		'''
+		'Despite their reputation, they are actually omnivorous creatures, feeding on plant matter as well as other animals'
+		Can only be caught in the Jungle during the month of April
+		Valuable
+		'''
+}
+
+ExampleFish: {
+	DisplayName: Example Fish
+	Tooltip: This is an example feesh, it is the best feesh :3
+}
+
+AnglerFish: {
+	DisplayName: Angler Fish
+	Tooltip:
+		'''
+		'Using their bioluminesent dorsal fins, they lure prey torwards themselves'
+		Can only be caught in the Ocean during the month of May
+		Valuable
+		'''
+}
+
+Foxfish: {
+	DisplayName: Foxfish
+	Tooltip:
+		'''
+		'A fox-fish hybrid. Often comes out during this month in celebration of the Moon Fox's birth month'
+		Can only be caught at Night in the Forest during the month of November
+		Valuable
+		'''
+}
+
+ColburBerry: {
+	DisplayName: Colbur Berry
+	Tooltip: Eating this removes the Darkness debuff
+}
+
+Flint: {
+	DisplayName: Flint
+	Tooltip: Best used for splash potions
+}
+
+ChastityRing: {
+	DisplayName: Chastity Ring
+	Tooltip: Immunity to Charmed
+}
+
+Medkit: {
+	DisplayName: Medkit
+	Tooltip: Immunity to Gnashed
+}
+
+Countermeasures: {
+	DisplayName: Countermeasures
+	Tooltip: Immunity to Surprised
+}
+
+BuffTester: {
+	DisplayName: Buff Tester
+	Tooltip: helps developers test buffs for 193 days...
+}
+
+Monocle: {
+	DisplayName: Monocle
+	Tooltip: Immunity to Oblivious
+}
+
+DSR: {
+	DisplayName: Anti-Material Rifle
+	Tooltip:
+		'''
+		"Has a magazine stored, can also be used as a foregrip"
+		Fires a special, slow but powerful round.
+		Thank you Zerona for the sprite!
+		Thank you Guardiangames for the code!
+		Unobtainable
+		'''
+}
+
+AntiMaterialRound: {
+	DisplayName: Anti Material Round
+	Tooltip: Unobtainable
+}
+
+CopperFurnace: {
+	DisplayName: Copper Furnace
+	Tooltip: Used to smelt ores
+}
+
+SandballTrapItem: {
+	DisplayName: Sandball Trap
+	Tooltip: When powered it flings quicksand
+}
+
+XenonMossparkBlock: {
+	DisplayName: Xenon Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+NeonMossparkBlock: {
+	DisplayName: Neon Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+ArgonMossparkBlock: {
+	DisplayName: Argon Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+KryptonMossparkBlock: {
+	DisplayName: Krypton Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+LavaMossparkBlock: {
+	DisplayName: Lava Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+HeliumMossparkBlock: {
+	DisplayName: Helium Mosspark Block
+	Tooltip: Life could be a dream (sh-boom)
+}
+
+DungsparkBlock: {
+	DisplayName: Dungspark Block
+	Tooltip: Wow... what a stinky light source
+}
+
+DirtPickaxe: {
+	DisplayName: Dirt Pickaxe
+	Tooltip: poop lel
+}
+
+BrokenPickaxeHead: {
+	DisplayName: Broken Pickaxe Head
+	Tooltip: ""
+}
+
+AncientCopperOreItem: {
+	DisplayName: Ancient Copper Ore
+	Tooltip: ""
+}
+
+AncientGoldOreItem: {
+	DisplayName: Ancient Gold Ore
+	Tooltip: ""
+}
+
+AncientIronOreItem: {
+	DisplayName: Ancient Iron Ore
+	Tooltip: ""
+}
+
+AncientSilverOreItem: {
+	DisplayName: Ancient Silver Ore
+	Tooltip: ""
+}
+
+EnchantedPickaxe: {
+	DisplayName: Enchanted Pickaxe
+	Tooltip: Enchanted with speed in mind
+}
+
+BoneSerpentCoccyx: {
+	DisplayName: Bone Serpent Coccyx
+	Tooltip: Reduces damage from hot sources
+}
+
+ReinforcedCoccyx: {
+	DisplayName: Reinforced Coccyx
+	Tooltip: Reduces damage from hot sources
+}
+
+FrigerationPotion: {
+	DisplayName: Refrigeration Potion
+	Tooltip: Reduces damage from hot sources
+}
+
+DeathforcePotion: {
+	DisplayName: Wither Potion
+	Tooltip:
+		'''
+		Decreases life by 20%
+		'Best used for splash potions'
+		'''
+}
+
+DeathforceSplashPotion: {
+	DisplayName: Wither Splash Potion
+	Tooltip: Decreases life by 20%
+}
+
+LifeforceSplashPotion: {
+	DisplayName: Lifeforce Splash Potion
+	Tooltip: Increases life by 20%
+}
+
+AmmoReservationSplashPotion: {
+	DisplayName: Ammo Reservation Splash Potion
+	Tooltip: 20% chance to save ammo
+}
+
+ArcherySplashPotion: {
+	DisplayName: Archery Splash Potion
+	Tooltip: 10% increased bow damage and 20% increased arrow speed
+}
+
+BattleSplashPotion: {
+	DisplayName: Battle Splash Potion
+	Tooltip: Increases enemy spawn rate
+}
+
+BiomeSightSplashPotion: {
+	DisplayName: Biome Sight Splash Potion
+	Tooltip: Shows the location of infected blocks
+}
+
+BuilderSplashPotion: {
+	DisplayName: Builder Splash Potion
+	Tooltip: Increases placement speed and range
+}
+
+CalmingSplashPotion: {
+	DisplayName: Calming Splash Potion
+	Tooltip: Decreases enemy spawn rate
+}
+
+CrateSplashPotion: {
+	DisplayName: Crate Splash Potion
+	Tooltip: Increases chance to get a crate
+}
+
+DangersenseSplashPotion: {
+	DisplayName: Dangersense Splash Potion
+	Tooltip: Allows you to see nearby danger sources
+}
+
+EnduranceSplashPotion: {
+	DisplayName: Endurance Splash Potion
+	Tooltip: Reduces damage taken by 10%
+}
+
+FeatherfallSplashPotion: {
+	DisplayName: Featherfall Splash Potion
+	Tooltip: Slows falling speed
+}
+
+FishingSplashPotion: {
+	DisplayName: Fishing Splash Potion
+	Tooltip: Increases fishing power by 15
+}
+
+FlipperSplashPotion: {
+	DisplayName: Flipper Splash Potion
+	Tooltip: Lets you move swiftly in liquids
+}
+
+GillsSplashPotion: {
+	DisplayName: Gills Splash Potion
+	Tooltip: Allows you to breathe in liquids
+}
+
+GravitationSplashPotion: {
+	DisplayName: Gravitation Splash Potion
+	Tooltip: Allows the control of gravity
+}
+
+GreaterLuckSplashPotion: {
+	DisplayName: Greater Luck Splash Potion
+	Tooltip: Increases the Luck of the user
+}
+
+HeartreachSplashPotion: {
+	DisplayName: Heartreach Splash Potion
+	Tooltip: Increases pickup range for life hearts
+}
+
+HunterSplashPotion: {
+	DisplayName: Hunter Splash Potion
+	Tooltip: Shows the location of enemies
+}
+
+InfernoSplashPotion: {
+	DisplayName: Inferno Splash Potion
+	Tooltip: Ignites nearby enemies
+}
+
+InvisibilitySplashPotion: {
+	DisplayName: Invisibility Splash Potion
+	Tooltip: Grants invisibility and lowers the spawn rate of enemies
+}
+
+IronskinSplashPotion: {
+	DisplayName: Ironskin Splash Potion
+	Tooltip: Increase defense by 8
+}
+
+LesserLuckSplashPotion: {
+	DisplayName: Lesser Luck Splash Potion
+	Tooltip: Increases the Luck of the user
+}
+
+LuckSplashPotion: {
+	DisplayName: Luck Splash Potion
+	Tooltip: Increases the Luck of the user
+}
+
+MagicPowerSplashPotion: {
+	DisplayName: Magic Power Splash Potion
+	Tooltip: 20% increased magic damage
+}
+
+ManaRegenerationSplashPotion: {
+	DisplayName: Mana Regeneration Splash Potion
+	Tooltip: Increased mana regeneration
+}
+
+MiningSplashPotion: {
+	DisplayName: Mining Splash Potion
+	Tooltip: Increases mining speed by 25%
+}
+
+RedCatacombBrickBlock: {
+	DisplayName: Red Catacomb Brick
+	Tooltip: ""
+}
+
+MushroomBlock: {
+	DisplayName: Mushroom Block
+	Tooltip: ""
+}
+
+ForestMushroomGrassSeeds: {
+	DisplayName: Forest Mushroom Grass Seeds
+	Tooltip: ""
+}
+
+RedCatacombWallItem: {
+	DisplayName: Red Catacomb Wall
+	Tooltip: ""
+}
+
+CharcoalCatacombBrickBlock: {
+	DisplayName: Charcoal Catacomb Brick
+	Tooltip: ""
+}
+
+PeriwinkleCatacombBrickBlock: {
+	DisplayName: Periwinkle Catacomb Brick
+	Tooltip: ""
+}
+
+NightOwlSplashPotion: {
+	DisplayName: Night Owl Splash Potion
+	Tooltip: ""
+}
+
+CatacombSolution: {
+	DisplayName: Catacomb Solution
+	Tooltip:
+		'''
+		Used by the Clentaminator
+		Used as a developer tool
+		Spreads the Catacombs
+		'''
+}
+
+DungeonSolution: {
+	DisplayName: Dungeon Solution
+	Tooltip:
+		'''
+		Used by the Clentaminator
+		Used as a developer tool
+		Spreads the Dungeon
+		'''
+}
+
+HardenedWhiteGel: {
+	DisplayName: Hardened White Gel
+	Tooltip: Permantly hardened white gelation used for crossbows
+}
+
+WhiteGel: {
+	DisplayName: White Gel
+	Tooltip: Normally behaves like other gel, but extreme pressure makes it like a solid
+}
+
+WhiteSlimeBlockItem: {
+	DisplayName: White Slime Block
+	Tooltip: Resistant to explosives, weaker to pickaxes
+}
+
+LavenderCatacombBrickBlock: {
+	DisplayName: Lavender Catacomb Brick
+	Tooltip: ""
+}
+
+Denix: {
+	DisplayName: Denix
+	Tooltip: ""
+}
+
+PlatinumKey: {
+	DisplayName: Platinum Key
+	Tooltip: ""
+}
+
+PlatinumChest: {
+	DisplayName: Platinum Chest
+	Tooltip: ""
+}
+
+CharcoalCatacombWallItem: {
+	DisplayName: Charcoal Catacomb Wall
+	Tooltip: ""
+}
+
+CharcoalCatacombWallUnsafeItem: {
+	DisplayName: Cadaverous Charcoal Catacomb Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+LavenderCatacombWallItem: {
+	DisplayName: Lavender Catacomb Wall
+	Tooltip: ""
+}
+
+LavenderCatacombWallUnsafeItem: {
+	DisplayName: Cadaverous Lavender Catacomb Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+RedCatacombWallUnsafeItem: {
+	DisplayName: Cadaverous Red Catacomb Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+CharcoalCatacombTileWallItem: {
+	DisplayName: Charcoal Catacomb Tile Wall
+	Tooltip: ""
+}
+
+CharcoalCatacombTileWallUnsafeItem: {
+	DisplayName: Cadaverous Charcoal Catacomb Tile Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+LavenderCatacombTileWallItem: {
+	DisplayName: Lavender Catacomb Tile Wall
+	Tooltip: ""
+}
+
+LavenderCatacombTileWallUnsafeItem: {
+	DisplayName: Cadaverous Lavender Catacomb Tile Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+RedCatacombTileWallItem: {
+	DisplayName: Red Catacomb Tile Wall
+	Tooltip: ""
+}
+
+RedCatacombTileWallUnsafeItem: {
+	DisplayName: Cadaverous Red Catacomb Tile Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+CharcoalCatacombSlabWallItem: {
+	DisplayName: Charcoal Catacomb Slab Wall
+	Tooltip: ""
+}
+
+CharcoalCatacombSlabWallUnsafeItem: {
+	DisplayName: Cadaverous Charcoal Catacomb Slab Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+LavenderCatacombSlabWallItem: {
+	DisplayName: Lavender Catacomb Slab Wall
+	Tooltip: ""
+}
+
+LavenderCatacombSlabWallUnsafeItem: {
+	DisplayName: Cadaverous Lavender Catacomb Slab Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+RedCatacombSlabWallItem: {
+	DisplayName: Red Catacomb Slab Wall
+	Tooltip: ""
+}
+
+RedCatacombSlabWallUnsafeItem: {
+	DisplayName: Cadaverous Red Catacomb Slab Wall
+	Tooltip: An entombed segment of Catacomb wall that will spawn monsters infront of it
+}
+
+IndiumOreBlock: {
+	DisplayName: Indium Ore
+	Tooltip: ""
+}
+
+BlackLensBlockItem: {
+	DisplayName: Black Lens Block
+	Tooltip: ""
+}
+
+LensBlockItem: {
+	DisplayName: Lens Block
+	Tooltip: ""
+}
+
+IndiumBar: {
+	DisplayName: Indium Bar
+	Tooltip: ""
+}
+
+Stratono: {
+	DisplayName: Stratono
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+AlluminumOreBlock: {
+	DisplayName: Aluminum Ore
+	Tooltip: ""
+}
+
+CinnabarOreBlock: {
+	DisplayName: Cinnabar Ore
+	Tooltip: ""
+}
+
+XieiteOreBlock: {
+	DisplayName: Xieite Ore
+	Tooltip: ""
+}
+
+AluminumBar: {
+	DisplayName: Aluminum Bar
+	Tooltip: ""
+}
+
+CinnabarBar: {
+	DisplayName: Cinnabar Bar
+	Tooltip: ""
+}
+
+XieiteBar: {
+	DisplayName: Xieite Bar
+	Tooltip: ""
+}
+
+AluminumOreBlock: {
+	DisplayName: Aluminum Ore
+	Tooltip: ""
+}
+
+CinnabarAnvilItem: {
+	DisplayName: Cinnabar Anvil
+	Tooltip: ""
+}
+
+CorrodedThorns: {
+	DisplayName: Corroded Thorns
+	Tooltip: ""
+}
+
+AluminumAxe: {
+	DisplayName: Aluminum Axe
+	Tooltip: ""
+}
+
+CinnabarAxe: {
+	DisplayName: Cinnabar Axe
+	Tooltip: ""
+}
+
+IndiumAxe: {
+	DisplayName: Indium Axe
+	Tooltip: ""
+}
+
+XieiteAxe: {
+	DisplayName: Xieite Axe
+	Tooltip: ""
+}
+
+AluminumHammer: {
+	DisplayName: Aluminum Hammer
+	Tooltip: ""
+}
+
+CinnabarHammer: {
+	DisplayName: Cinnabar Hammer
+	Tooltip: ""
+}
+
+IndiumHammer: {
+	DisplayName: Indium Hammer
+	Tooltip: ""
+}
+
+XieiteHammer: {
+	DisplayName: Xieite Hammer
+	Tooltip: ""
+}
+
+AluminumHoe: {
+	DisplayName: Aluminum Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+CopperHoe: {
+	DisplayName: Copper Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+AluminumPickaxe: {
+	DisplayName: Aluminum Pickaxe
+	Tooltip: ""
+}
+
+CinnabarPickaxe: {
+	DisplayName: Cinnabar Pickaxe
+	Tooltip: ""
+}
+
+IndiumPickaxe: {
+	DisplayName: Indium Pickaxe
+	Tooltip: ""
+}
+
+XieitePickaxe: {
+	DisplayName: Xieite Pickaxe
+	Tooltip: ""
+}
+
+CinnabarHoe: {
+	DisplayName: Cinnabar Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+GoldHoe: {
+	DisplayName: Gold Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+IndiumHoe: {
+	DisplayName: Indium Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+IronHoe: {
+	DisplayName: Iron Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+LeadHoe: {
+	DisplayName: Lead Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+PlatinumHoe: {
+	DisplayName: Platinum Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+SilverHoe: {
+	DisplayName: Silver Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+TinHoe: {
+	DisplayName: Tin Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+TungstenHoe: {
+	DisplayName: Tungsten Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+XieiteHoe: {
+	DisplayName: Xieite Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+BismuthHoe: {
+	DisplayName: Bismuth Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+BronzeHoe: {
+	DisplayName: Bronze Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+NickelHoe: {
+	DisplayName: Nickel Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+ZincHoe: {
+	DisplayName: Zinc Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+Pukivator: {
+	DisplayName: Pukivator
+	Tooltip: ""
+}
+
+PukivatorMark2: {
+	DisplayName: Pukivator Mark2
+	Tooltip: ""
+}
+
+SweetTooth: {
+	DisplayName: Sweet Tooth
+	Tooltip: ""
+}
+
+AluminumBattleaxe: {
+	DisplayName: Aluminum Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+CinnabarBattleaxe: {
+	DisplayName: Cinnabar Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+IndiumBattleaxe: {
+	DisplayName: Indium Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+XieiteBattleaxe: {
+	DisplayName: Xieite Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+AluminumShortsword: {
+	DisplayName: Aluminum Shortsword
+	Tooltip: ""
+}
+
+CinnabarBroadsword: {
+	DisplayName: Cinnabar Broadsword
+	Tooltip: ""
+}
+
+CinnabarShortsword: {
+	DisplayName: Cinnabar Shortsword
+	Tooltip: ""
+}
+
+IndiumBroadsword: {
+	DisplayName: Indium Broadsword
+	Tooltip: ""
+}
+
+IndiumShortsword: {
+	DisplayName: Indium Shortsword
+	Tooltip: ""
+}
+
+XieiteBroadsword: {
+	DisplayName: Xieite Broadsword
+	Tooltip: ""
+}
+
+XieiteShortsword: {
+	DisplayName: Xieite Shortsword
+	Tooltip: ""
+}
+
+AluminumBow: {
+	DisplayName: Aluminum Bow
+	Tooltip: ""
+}
+
+CinnabarBow: {
+	DisplayName: Cinnabar Bow
+	Tooltip: ""
+}
+
+IndiumBow: {
+	DisplayName: Indium Bow
+	Tooltip: ""
+}
+
+XieiteBow: {
+	DisplayName: Xieite Bow
+	Tooltip: ""
+}
+
+AluminumBroadsword: {
+	DisplayName: Aluminum Broadsword
+	Tooltip: ""
+}
+
+AluminumWatch: {
+	DisplayName: Aluminum Watch
+	Tooltip: Tells the time
+}
+
+IndiumWatch: {
+	DisplayName: Indium Watch
+	Tooltip: Tells the time
+}
+
+XieiteWatch: {
+	DisplayName: Xieite Watch
+	Tooltip: Tells the time
+}
+
+AncientCrimsonHelmet: {
+	DisplayName: Ancient Crimson Helmet
+	Tooltip: ""
+}
+
+CrimsonHelmetNew: {
+	DisplayName: Crimson Helmet New
+	Tooltip: ""
+}
+
+AluminumChainmail: {
+	DisplayName: Aluminum Chainmail
+	Tooltip: ""
+}
+
+AluminumGreaves: {
+	DisplayName: Aluminum Greaves
+	Tooltip: ""
+}
+
+AluminumHelmet: {
+	DisplayName: Aluminum Helmet
+	Tooltip: ""
+}
+
+CinnabarChainmail: {
+	DisplayName: Cinnabar Chainmail
+	Tooltip: ""
+}
+
+CinnabarGreaves: {
+	DisplayName: Cinnabar Greaves
+	Tooltip: ""
+}
+
+CinnabarHelmet: {
+	DisplayName: Cinnabar Helmet
+	Tooltip: ""
+}
+
+IndiumChainmail: {
+	DisplayName: Indium Chainmail
+	Tooltip: ""
+}
+
+IndiumGreaves: {
+	DisplayName: Indium Greaves
+	Tooltip: ""
+}
+
+IndiumHelmet: {
+	DisplayName: Indium Helmet
+	Tooltip: ""
+}
+
+XieiteChainmail: {
+	DisplayName: Xieite Chainmail
+	Tooltip: ""
+}
+
+XieiteGreaves: {
+	DisplayName: Xieite Greaves
+	Tooltip: ""
+}
+
+XieiteHelmet: {
+	DisplayName: Xieite Helmet
+	Tooltip: ""
+}
+
+Jade: {
+	DisplayName: Jade
+	Tooltip: ""
+}
+
+JadeGemsparkBlock: {
+	DisplayName: Jade Gemspark Block
+	Tooltip: ""
+}
+
+JadeStoneBlock: {
+	DisplayName: Jade Stone Block
+	Tooltip: ""
+}
+
+JadeGemsparkWall: {
+	DisplayName: Jade Gemspark Wall
+	Tooltip: ""
+}
+
+JadeGemsparkWallOff: {
+	DisplayName: Jade Gemspark Wall Off
+	Tooltip: ""
+}
+
+OliveStainedGlassPane: {
+	DisplayName: Olive Stained Glass Pane
+	Tooltip: ""
+}
+
+OliveTorch: {
+	DisplayName: Olive Torch
+	Tooltip: ""
+}
+
+FlintFrozenLavaBlockItem: {
+	DisplayName: Flint Frozen Lava Block
+	Tooltip: ""
+}
+
+GarnetStoneBlock: {
+	DisplayName: Garnet Stone Block
+	Tooltip: ""
+}
+
+LapisStoneBlock: {
+	DisplayName: Lapis Stone Block
+	Tooltip: ""
+}
+
+FlintStaff: {
+	DisplayName: Flint Staff
+	Tooltip: ""
+}
+
+JadeStaff: {
+	DisplayName: Jade Staff
+	Tooltip: ""
+}
+
+OlivePhaseblade: {
+	DisplayName: Olive Phaseblade
+	Tooltip: ""
+}
+
+AmberBlockItem: {
+	DisplayName: Amber Block
+	Tooltip: ""
+}
+
+AmethystBlockItem: {
+	DisplayName: Amethyst Block
+	Tooltip: ""
+}
+
+DiamondBlockItem: {
+	DisplayName: Diamond Block
+	Tooltip: ""
+}
+
+EmeraldBlockItem: {
+	DisplayName: Emerald Block
+	Tooltip: ""
+}
+
+GarnetBlockItem: {
+	DisplayName: Garnet Block
+	Tooltip: ""
+}
+
+JadeBlockItem: {
+	DisplayName: Jade Block
+	Tooltip: ""
+}
+
+LapisBlockItem: {
+	DisplayName: Lapis Block
+	Tooltip: ""
+}
+
+RubyBlockItem: {
+	DisplayName: Ruby Block
+	Tooltip: ""
+}
+
+SapphireBlockItem: {
+	DisplayName: Sapphire Block
+	Tooltip: ""
+}
+
+TopazBlockItem: {
+	DisplayName: Topaz Block
+	Tooltip: ""
+}
+
+AmberBrickItem: {
+	DisplayName: Amber Brick
+	Tooltip: ""
+}
+
+AmethystBrickItem: {
+	DisplayName: Amethyst Brick
+	Tooltip: ""
+}
+
+DiamondBrickItem: {
+	DisplayName: Diamond Brick
+	Tooltip: ""
+}
+
+EmeraldBrickItem: {
+	DisplayName: Emerald Brick
+	Tooltip: ""
+}
+
+GarnetBrickItem: {
+	DisplayName: Garnet Brick
+	Tooltip: ""
+}
+
+JadeBrickItem: {
+	DisplayName: Jade Brick
+	Tooltip: ""
+}
+
+LapisBrickItem: {
+	DisplayName: Lapis Brick
+	Tooltip: ""
+}
+
+RubyBrickItem: {
+	DisplayName: Ruby Brick
+	Tooltip: ""
+}
+
+SapphireBrickItem: {
+	DisplayName: Sapphire Brick
+	Tooltip: ""
+}
+
+TopazBrickItem: {
+	DisplayName: Topaz Brick
+	Tooltip: ""
+}
+
+AmberWallItem: {
+	DisplayName: Amber Wall
+	Tooltip: ""
+}
+
+AmethystWallItem: {
+	DisplayName: Amethyst Wall
+	Tooltip: ""
+}
+
+DiamondWallItem: {
+	DisplayName: Diamond Wall
+	Tooltip: ""
+}
+
+EmeraldWallItem: {
+	DisplayName: Emerald Wall
+	Tooltip: ""
+}
+
+GarnetWallItem: {
+	DisplayName: Garnet Wall
+	Tooltip: ""
+}
+
+JadeWallItem: {
+	DisplayName: Jade Wall
+	Tooltip: ""
+}
+
+LapisWallItem: {
+	DisplayName: Lapis Wall
+	Tooltip: ""
+}
+
+RubyWallItem: {
+	DisplayName: Ruby Wall
+	Tooltip: ""
+}
+
+SapphireWallItem: {
+	DisplayName: Sapphire Wall
+	Tooltip: ""
+}
+
+TopazWallItem: {
+	DisplayName: Topaz Wall
+	Tooltip: ""
+}
+
+AmberBrickWallItem: {
+	DisplayName: Amber Brick Wall
+	Tooltip: ""
+}
+
+AmethystBrickWallItem: {
+	DisplayName: Amethyst Brick Wall
+	Tooltip: ""
+}
+
+DiamondBrickWallItem: {
+	DisplayName: Diamond Brick Wall
+	Tooltip: ""
+}
+
+EmeraldBrickWallItem: {
+	DisplayName: Emerald Brick Wall
+	Tooltip: ""
+}
+
+GarnetBrickWallItem: {
+	DisplayName: Garnet Brick Wall
+	Tooltip: ""
+}
+
+JadeBrickWallItem: {
+	DisplayName: Jade Brick Wall
+	Tooltip: ""
+}
+
+LapisBrickWallItem: {
+	DisplayName: Lapis Brick Wall
+	Tooltip: ""
+}
+
+RubyBrickWallItem: {
+	DisplayName: Ruby Brick Wall
+	Tooltip: ""
+}
+
+SapphireBrickWallItem: {
+	DisplayName: Sapphire Brick Wall
+	Tooltip: ""
+}
+
+TopazBrickWallItem: {
+	DisplayName: Topaz Brick Wall
+	Tooltip: ""
+}
+
+CloudChestplate: {
+	DisplayName: Cloud Chestplate
+	Tooltip: 1% increased magic and summon damage
+}
+
+CloudHeadgear: {
+	DisplayName: Cloud Headgear
+	Tooltip: 1% increased magic and summon damage
+}
+
+CloudLeggings: {
+	DisplayName: Cloud Leggings
+	Tooltip: 1% increased magic and summon damage
+}
+
+PlankedPearlWallItem: {
+	DisplayName: Planked Pearl Wall
+	Tooltip: ""
+}
+
+AbandonedPlankedPearlWallItem: {
+	DisplayName: Abandoned Planked Pearl Wall
+	Tooltip: An abandoned bit of Planked Pearl wall that retains its properties prior to the souls being unleashed
+}
+
+Brain: {
+	DisplayName: Brain
+	Tooltip: Good source of cholesterol
+}
+
+Sludge: {
+	DisplayName: Sludge
+	Tooltip: horrible tasting substance that is hard when solidified
+}
+
+BoggedPearlwoodItem: {
+	DisplayName: Bogged Pearlwood
+	Tooltip: Pearlwood that is filled with Sludge, very hard to mine
+}
+
+OuranoStoneWallItem: {
+	DisplayName: Ourano Stone Wall
+	Tooltip: ""
+}
+
+OuranoStoneWallItemUnsafe: {
+	DisplayName: Natural Ourano Stone Wall
+	Tooltip: Abit of natural ourano stone wall that will spawn monsters infront of it
+}
+
+BilewoodItem: {
+	DisplayName: Bilewood
+	Tooltip: ""
+}
+
+PalladiumBuckler: {
+	DisplayName: Palladium Buckler
+	Tooltip:
+		'''
+		Grants immunity to knockback
+		Very slowly regenerates life
+		'''
+}
+
+SmoothStoneItem: {
+	DisplayName: Smooth Stone
+	Tooltip: ""
+}
+
+RedCatacombBookcaseItem: {
+	DisplayName: Red Catacomb Bookcase
+	Tooltip: ""
+}
+
+BisexualPrideBannerItem: {
+	DisplayName: Bisexual Pride Banner Item
+	Tooltip: ""
+}
+
+GayPrideBannerItem: {
+	DisplayName: Gay Pride Banner Item
+	Tooltip: ""
+}
+
+LesbianPrideBannerItem: {
+	DisplayName: Lesbian Pride Banner Item
+	Tooltip: ""
+}
+
+OmnisexualPrideBannerItem: {
+	DisplayName: Omnisexual Pride Banner Item
+	Tooltip: ""
+}
+
+PansexualPrideBannerItem: {
+	DisplayName: Pansexual Pride Banner Item
+	Tooltip: ""
+}
+
+TransgenderPrideBannerItem: {
+	DisplayName: Transgender Pride Banner Item
+	Tooltip: ""
+}
+
+BilewoodBroadsword: {
+	DisplayName: Bilewood Broadsword
+	Tooltip: ""
+}
+
+BrownIceBlock: {
+	DisplayName: Brown Ice Block
+	Tooltip: ""
+}
+
+BilewoodBreastplate: {
+	DisplayName: Bilewood Breastplate
+	Tooltip: ""
+}
+
+BilewoodGreaves: {
+	DisplayName: Bilewood Greaves
+	Tooltip: ""
+}
+
+BilewoodHelmet: {
+	DisplayName: Bilewood Helmet
+	Tooltip: ""
+}
+
+BilewoodHammer: {
+	DisplayName: Bilewood Hammer
+	Tooltip: ""
+}
+
+BilewoodBow: {
+	DisplayName: Bilewood Bow
+	Tooltip: ""
+}
+
+JacarandawoodBreastplate: {
+	DisplayName: Jacaranda Wood Breastplate
+	Tooltip: ""
+}
+
+JacarandawoodGreaves: {
+	DisplayName: Jacaranda Wood Greaves
+	Tooltip: ""
+}
+
+JacarandawoodHelmet: {
+	DisplayName: Jacaranda Wood Helmet
+	Tooltip: ""
+}
+
+JacarandawoodItem: {
+	DisplayName: Jacaranda Wood
+	Tooltip: ""
+}
+
+JacarandawoodHammer: {
+	DisplayName: Jacaranda Wood Hammer
+	Tooltip: ""
+}
+
+JacarandawoodBroadsword: {
+	DisplayName: Jacaranda Wood Broadsword
+	Tooltip: ""
+}
+
+JacarandawoodBow: {
+	DisplayName: Jacaranda Wood Bow
+	Tooltip: ""
+}
+
+Regurgitator: {
+	DisplayName: Regurgitator
+	Tooltip: ""
+}
+
+SoulOfRight: {
+	DisplayName: Soul Of Right
+	Tooltip: "'The essence of harmonic creatures'"
+}
+
+BakersHandbookBeach1: {
+	DisplayName: Bakers Handbook To Ocean cuisine v1
+	Tooltip: Allows for unique food recipes from the ocean
+}
+
+BakersHandbookCorrosion1: {
+	DisplayName: Bakers Handbook for safer Corroded cooking v1
+	Tooltip: Allows for safe cooking of corrosion based materials
+}
+
+BakersHandbookCorrupt1: {
+	DisplayName: Bakers Handbook for safer Corrupted cooking v1
+	Tooltip: Allows for safe cooking of corruption based materials
+}
+
+BakersHandbookCrimson1: {
+	DisplayName: Bakers Handbook for safer Crimfied cooking v1
+	Tooltip: Allows for safe cooking of crimson based materials
+}
+
+BakersHandbookJungle1: {
+	DisplayName: Bakers Handbook to Vegiation and Fruit meals v1
+	Tooltip: Allows for fruits and veggies to be used in new recipes
+}
+
+BakersHandbookPurity1: {
+	DisplayName: Bakers Handbook for beginners
+	Tooltip: Allows for certain ingrediants to be used in food
+}
+
+BakersHandbookSnow1: {
+	DisplayName: Bakers Handbook for frozen meals v1
+	Tooltip: Allows for colder recipes to be used
+}
+
+BakersHandbookUnderworld1: {
+	DisplayName: Bakers Handook for spicy meals v1
+	Tooltip: Allows food from the underworld to be used
+}
+
+Beetroot: {
+	DisplayName: Beetroot
+	Tooltip: ""
+}
+
+Broccoli: {
+	DisplayName: Broccoli
+	Tooltip: ""
+}
+
+Cabbage: {
+	DisplayName: Cabbage
+	Tooltip: ""
+}
+
+Corn: {
+	DisplayName: Corn
+	Tooltip: ""
+}
+
+Garlic: {
+	DisplayName: Garlic
+	Tooltip: ""
+}
+
+Kohlrabi: {
+	DisplayName: Kohlrabi
+	Tooltip: ""
+}
+
+Leek: {
+	DisplayName: Leek
+	Tooltip: ""
+}
+
+Potato: {
+	DisplayName: Potato
+	Tooltip: ""
+}
+
+Rhubarb: {
+	DisplayName: Rhubarb
+	Tooltip: ""
+}
+
+Spinach: {
+	DisplayName: Spinach
+	Tooltip: ""
+}
+
+ArigrowthItem: {
+	DisplayName: Arigrowth
+	Tooltip: ""
+}
+
+ArigrowthSeeds: {
+	DisplayName: Arigrowth Seeds
+	Tooltip: ""
+}
+
+MirageGrassSeeds: {
+	DisplayName: Mirage Grass Seeds
+	Tooltip: ""
+}
+
+CorrosionThornyBushItem: {
+	DisplayName: Corroded Thorny Bush
+	Tooltip: Used in poisons
+}
+
+CorrodedThornyBushItem: {
+	DisplayName: Corroded Thorny Bush
+	Tooltip: ""
+}
+
+CorruptedThornyBushItem: {
+	DisplayName: Corrupted Thorny Bush
+	Tooltip: ""
+}
+
+CrimfiedThornyBushItem: {
+	DisplayName: Crimfied Thorny Bush
+	Tooltip: ""
+}
+
+JungleThornyBushItem: {
+	DisplayName: Jungle Thorny Bush
+	Tooltip: ""
+}
+
+Poison: {
+	DisplayName: Poison
+	Tooltip: Inflicts Poisoned
+}
+
+ThornyBush: {
+	DisplayName: Thorny Bush
+	Tooltip: ""
+}
+
+PlatformArcitectsHandbook: {
+	DisplayName: Platform Arcitects Handbook
+	Tooltip: ""
+}
+
+SnoozeSolution: {
+	DisplayName: Snooze Solution
+	Tooltip:
+		'''
+		Used by the Clentaminator
+		Spreads the Somnolent
+		'''
+}
+
+UlcerBlockItem: {
+	DisplayName: Ulcer Block
+	Tooltip: ""
+}
+
+SleepingSeeds: {
+	DisplayName: Sleeping Seeds
+	Tooltip: ""
+}
+
+SnoozestoneBlock: {
+	DisplayName: Snoozestone Block
+	Tooltip: ""
+}
+
+CinnabarBrickItem: {
+	DisplayName: Cinnabar Brick
+	Tooltip: ""
+}
+
+IndigoIceBlock: {
+	DisplayName: Indigo Ice
+	Tooltip: ""
+}
+
+AluminumBrickItem: {
+	DisplayName: Aluminum Brick
+	Tooltip: ""
+}
+
+FluoriteWatch: {
+	DisplayName: Fluorite Watch
+	Tooltip: Tells the time
+}
+
+FluoriteChainmail: {
+	DisplayName: Fluorite Chainmail
+	Tooltip: ""
+}
+
+FluoriteGreaves: {
+	DisplayName: Fluorite Greaves
+	Tooltip: ""
+}
+
+FluoriteHelmet: {
+	DisplayName: Fluorite Helmet
+	Tooltip: ""
+}
+
+FluoriteBar: {
+	DisplayName: Fluorite Bar
+	Tooltip: ""
+}
+
+FluoriteOreBlock: {
+	DisplayName: Fluorite Ore
+	Tooltip: ""
+}
+
+FluoriteAxe: {
+	DisplayName: Fluorite Axe
+	Tooltip: ""
+}
+
+FluoriteHammer: {
+	DisplayName: Fluorite Hammer
+	Tooltip: ""
+}
+
+FluoriteHoe: {
+	DisplayName: Fluorite Hoe
+	Tooltip: '''"Hoes are used to harvest soft and fragile organic and inorganic matter"'''
+}
+
+FluoritePickaxe: {
+	DisplayName: Fluorite Pickaxe
+	Tooltip: ""
+}
+
+FluoriteBattleaxe: {
+	DisplayName: Fluorite Battleaxe
+	Tooltip: Inflicts a cleaving effect on enemies
+}
+
+FluoriteBroadsword: {
+	DisplayName: Fluorite Broadsword
+	Tooltip: ""
+}
+
+FluoriteShortsword: {
+	DisplayName: Fluorite Shortsword
+	Tooltip: ""
+}
+
+FluoriteBow: {
+	DisplayName: Fluorite Bow
+	Tooltip: ""
+}
+
+IndiumBrickItem: {
+	DisplayName: Indium Brick
+	Tooltip: ""
+}
+
+FluoriteBrickItem: {
+	DisplayName: Fluorite Brick
+	Tooltip: ""
+}
+
+SoulofSpite: {
+	DisplayName: Soul of Spite
+	Tooltip: "'The essence of meat creatures'"
+}
+
+Selention: {
+	DisplayName: Selention
+	Tooltip: This shit for Xenon ores -Selene
+}
+
+SoulofBlight: {
+	DisplayName: Soul of Blight
+	Tooltip: "'The essence of starved creatures'"
+}
+
+SoulofTwilight: {
+	DisplayName: Soul of Twilight
+	Tooltip: "'The essence of somber creatures'"
+}
+
+ClothBlockItem: {
+	DisplayName: Cloth Block
+	Tooltip: ""
+}
+
+JadeHook: {
+	DisplayName: Jade Hook
+	Tooltip: ""
+}
+
+GarnetHook: {
+	DisplayName: Garnet Hook
+	Tooltip: ""
+}
+
+LapisHook: {
+	DisplayName: Lapis Hook
+	Tooltip: ""
+}
+
+LargeJade: {
+	DisplayName: Large Jade
+	Tooltip: For Capture the Gem. It drops when you die
+}
+
+LargeGarnet: {
+	DisplayName: Large Garnet
+	Tooltip: For Capture the Gem. It drops when you die
+}
+
+LargeLapis: {
+	DisplayName: Large Lapis
+	Tooltip: For Capture the Gem. It drops when you die
+}
+
+SOCTreasureBag: {
+	DisplayName: Treasure Bag (Stomach of Cthulhu)
+	Tooltip: Right Click to open
+}
+
+GarnetGemstoneItem: {
+	DisplayName: Garnet Stone Block
+	Tooltip: ""
+}
+
+JadeGemstoneItem: {
+	DisplayName: Jade Stone Block
+	Tooltip: ""
+}
+
+LapisGemstoneItem: {
+	DisplayName: Lapis Stone Block
+	Tooltip: ""
+}
+
+GarnetGemstoneWallItem: {
+	DisplayName: Garnet Stone Wall
+	Tooltip: ""
+}
+
+GarnetGemstoneWallUnsafeItem: {
+	DisplayName: Garnet Gemstone Wall Unsafe
+	Tooltip: ""
+}
+
+JadeGemstoneWallItem: {
+	DisplayName: Jade Stone Wall
+	Tooltip: ""
+}
+
+JadeGemstoneWallUnsafeItem: {
+	DisplayName: Jade Gemstone Wall Unsafe
+	Tooltip: ""
+}
+
+LapisGemstoneWallItem: {
+	DisplayName: Lapis Stone Wall
+	Tooltip: ""
+}
+
+LapisGemstoneWallUnsafeItem: {
+	DisplayName: Lapis Gemstone Wall Unsafe
+	Tooltip: ""
+}

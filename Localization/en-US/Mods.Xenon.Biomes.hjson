@@ -1,0 +1,94 @@
+Rhyolite: {
+	DisplayName: Rhyolite Cave
+	TownNPCDialogueName: the Rhyolite Cave
+}
+
+Corrosion: {
+	DisplayName: Corrosion
+	TownNPCDialogueName: the Corrosion
+}
+
+CorrosionIce: {
+	DisplayName: Corrosion Ice
+	TownNPCDialogueName: the Corrosion Ice
+}
+
+CorrosionUnderground: {
+	DisplayName: Corrosion Underground
+	TownNPCDialogueName: the Corrosion Underground
+}
+
+CorrosionUndergroundIce: {
+	DisplayName: Corrosion Underground Ice
+	TownNPCDialogueName: the Corrosion Underground Ice
+}
+
+Mountain: {
+	DisplayName: Mountain
+	TownNPCDialogueName: the Mountains
+}
+
+CorrosionCaveDesert: {
+	DisplayName: Corrosion Cave Desert
+	TownNPCDialogueName: the Underground Corrosion Desert
+}
+
+CorrosionDesert: {
+	DisplayName: Corrosion Desert
+	TownNPCDialogueName: the Corrosion Desert
+}
+
+ScorchingIce: {
+	DisplayName: Scorching Ice
+	TownNPCDialogueName: the Scorching Ice
+}
+
+CorrosionJungle: {
+	DisplayName: Corrosion Jungle
+	TownNPCDialogueName: the Corrosion Jungle
+}
+
+CorrosionUndergroundJungle: {
+	DisplayName: Underground Corrosion Jungle
+	TownNPCDialogueName: the Underground Corrosion Jungle
+}
+
+CrimsonJungle: {
+	DisplayName: Crimson Jungle
+	TownNPCDialogueName: the Crimson Jungle
+}
+
+UndergroundCrimsonJungle: {
+	DisplayName: Underground Crimson Jungle
+	TownNPCDialogueName: the Underground Crimson Jungle
+}
+
+CorruptionJungle: {
+	DisplayName: Corruption Jungle
+	TownNPCDialogueName: the Corruption Jungle
+}
+
+UndergroundCorruptionJungle: {
+	DisplayName: Underground Corruption Jungle
+	TownNPCDialogueName: the Underground Corruption Jungle
+}
+
+ForestMushroom: {
+	DisplayName: Forest Mushroom
+	TownNPCDialogueName: the Forest Mushroom
+}
+
+Catacombs: {
+	DisplayName: Catacombs
+	TownNPCDialogueName: the Catacombs
+}
+
+TheMirage: {
+	DisplayName: The Mirage
+	TownNPCDialogueName: the Mirage
+}
+
+Somnolent: {
+	DisplayName: Somnolent
+	TownNPCDialogueName: the Somnolent
+}

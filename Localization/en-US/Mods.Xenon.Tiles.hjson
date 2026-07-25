@@ -1,0 +1,34 @@
+RhyoliteChest.MapEntry0: Rhyolite Chest
+RhyoliteDresser.MapEntry: Rhyolite Dresser
+CorrosionPot.MapEntry: Corrosion Pot
+Liverwort.MapEntry: Liverwort
+BilewoodChest.MapEntry0: Bilewood Chest
+BilewoodDresser.MapEntry: Bilewood Dresser
+IngestaneOre.MapEntry: Ingestane
+CliffsideChest.MapEntry0: Cliffside Chest
+
+PlacedGems: {
+	Garnet: Garnet
+	Onyx: Onyx
+	Lapis: Lapis
+}
+
+SwordLeverWild.MapEntry: Suspicious Looking Stone
+SilverDoorClosed.MapEntry: Silver Door
+SilverDoorOpened.MapEntry: Silver Door
+TungstenDoorClosed.MapEntry: Tungsten Door
+TungstenDoorOpened.MapEntry: Tungsten Door
+GastricAltar.MapEntry: Gastric Altar
+CorrosionCrateTile.MapEntry: Corrosion Crate
+CopperFurnaceTile.MapEntry: Copper Furnace
+SandballTrap.MapEntry: Sandball Trap
+
+PlatinumChest: {
+	MapEntry0: Platinum Chest
+	MapEntry1: Platinum Chest
+}
+
+Arigrowth.MapEntry: Arigrowth
+PlacedLapis.MapEntry: Lapis
+PlacedGarnet.MapEntry: Garnet
+PlacedJade.MapEntry: Jade

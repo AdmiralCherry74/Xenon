@@ -1,0 +1,114 @@
+QuicksandSuffocation: {
+	DisplayName: Quicksand Suffocation
+	Description: You are suffocating in quicksand
+}
+
+Iceburn: {
+	DisplayName: Iceburn
+	Description: Its so cold it burns!
+}
+
+FossilBlessingCooldown: {
+	DisplayName: Fossil Blessing Cooldown
+	Description: You cannot activate Fossil Blessing
+}
+
+FossilBlessing: {
+	DisplayName: Fossil Blessing
+	Description: Defense and life regeneration increased by 7
+}
+
+Anger: {
+	DisplayName: Angry
+	Description: Increases armor penetration by 5
+}
+
+TemporaryHealthPills: {
+	DisplayName: Temporary Health
+	Description: Losing your temporary life
+}
+
+RottingLeftovers: {
+	DisplayName: Rotting Leftovers
+	Description: The rotting leftovers provide light
+}
+
+Cleaved: {
+	DisplayName: Cleaved
+	Description: Severe blood loss inflicted by a Battleaxe
+}
+
+IronCaltropTagDamage: {
+	DisplayName: Iron Caltrop Tag Damage
+	Description: Get tagged bitch
+}
+
+LeadCaltropTagDamage: {
+	DisplayName: Lead Caltrop Tag Damage
+	Description: Get tagged bitch
+}
+
+FlashRage: {
+	DisplayName: Flash Rage
+	Description: You regenerate health faster, keep attacking to keep this up!
+}
+
+Gnashed: {
+	DisplayName: Gnashed
+	Description: Moving decreases your life!
+}
+
+Unpolished: {
+	DisplayName: Unpolished
+	Description: 25% less defense, 20% increased coin drops
+}
+
+WraithFlash: {
+	DisplayName: Irascible Wraith
+	Description: You move around faster, keep attacking to keep this up!
+}
+
+BunnyMinionBuff: {
+	DisplayName: Armored Bunny
+	Description: The armored bunny will fight for you
+}
+
+GraveBuster: {
+	DisplayName: Grave Buster
+	Description: He isnt as mean as he looks!
+}
+
+Charmed: {
+	DisplayName: Charmed
+	Description: Melee attacks are weaker
+}
+
+Surprised: {
+	DisplayName: Surprised
+	Description: You will have less minions
+}
+
+Oblivious: {
+	DisplayName: Oblivious
+	Description: You cannot get critical strikes
+}
+
+Frigeration: {
+	DisplayName: Refrigeration
+	Description: Reduces damage from hot sources
+}
+
+Deathforce: {
+	DisplayName: Withered
+	Description: Decreases life by 20%
+}
+
+BlindAnger: {
+	DisplayName: Blind Anger
+	Description: You knockback enemies faster, keep attacking to keep this up!
+}
+
+Boomed: {
+	DisplayName: Boomed
+	Description: Attack damage is lowered by 10. Enemies spawn more frequently and will target you no matter what
+}

@@ -1,0 +1,35 @@
+XenonConfig: {
+	DisplayName: Client Configuration
+
+	Headers: {
+		Gameplay: Gameplay
+		Miscellaneous: Miscellaneous
+	}
+
+	HellstoneRename: {
+		Tooltip:
+			'''
+			Renames Hellstone and all related gear to Vulcanite.
+			Leave this off if you prefer the original name.
+			'''
+		Label: Hellstone Renames
+	}
+
+	PickaxeRequiredForNextOreTier: {
+		Tooltip:
+			'''
+			Reworks pickaxe power to make it so that various pre-Hardmode ores cannot be mined yet.
+			It only affects iron, silver, and gold tiers.
+			'''
+		Label: Pickaxe Progression Rework
+	}
+
+	RequirePreviousOreTierForNext: {
+		Tooltip:
+			'''
+			Reworks the progression of pre-Hardmode ores, requiring other gear sets to be made with the previous.
+			Leave this off if you prefer vanilla's ore crafting progression.
+			'''
+		Label: Other Ores Require Previous Ores
+	}
+}
