@@ -32,3 +32,9 @@ Arigrowth.MapEntry: Arigrowth
 PlacedLapis.MapEntry: Lapis
 PlacedGarnet.MapEntry: Garnet
 PlacedJade.MapEntry: Jade
+
+GemStashes: {
+	Jade: Jade Stash
+	Garnet: Garnet Stash
+	Lapis: Lapis Stash
+}

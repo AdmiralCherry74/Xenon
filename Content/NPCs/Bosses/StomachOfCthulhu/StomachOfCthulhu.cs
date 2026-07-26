@@ -1,9 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon.Systems;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Systems;
 using Xenon.Content.Dusts.WaterSplashes;
 using Xenon.Content.Items.Consumables.TreasureBags;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
@@ -41,6 +43,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.netAlways = true;
             NPC.npcSlots = 10f;
             Music = MusicID.Boss2;
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
         }
         #region Burp SFX
         static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")
@@ -278,6 +281,21 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 SOCBileLight.noGravity = true;
                 SOCBileLight.scale = 2f;
                 SOCBile.scale = 2f;
+            }
+        }
+        public override void OnKill()
+        {
+            if (!NPC.downedBoss2 || Main.rand.NextBool(2))
+            {
+                WorldGen.spawnMeteor = true;
+            }
+            if (!NPC.downedBoss2)
+            {
+                NPC.SetEventFlagCleared(ref NPC.downedBoss2, -1);
+            }
+            if (!ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu)
+            {
+                NPC.SetEventFlagCleared(ref ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu, -1);
             }
         }
     }

@@ -9,7 +9,7 @@ using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Content.Tiles.Natural.NaturalStone;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;

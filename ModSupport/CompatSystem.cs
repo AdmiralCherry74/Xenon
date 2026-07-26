@@ -7,12 +7,12 @@ using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 using Avalon.Tiles.Ores;
-using Xenon.Content.Tiles.Natural.Ores;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Avalon.Tiles.Contagion;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using TheConfectionRebirth.Tiles;
 using System;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon.ModSupport;
 

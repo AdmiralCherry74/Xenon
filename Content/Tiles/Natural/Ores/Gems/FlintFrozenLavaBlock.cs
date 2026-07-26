@@ -7,7 +7,7 @@ using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Tiles.Natural.Other;
 
-namespace Xenon.Content.Tiles.Natural.Ores;
+namespace Xenon.Content.Tiles.Natural.Ores.Gems;
 
 public class FlintFrozenLavaBlock : ModTile
 {

@@ -1,19 +1,36 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
+using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
-using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
-using Xenon.Content.Items.Weapons.Melee.Swords;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
+using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
+using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Common.Globals.XenonItemGlobals;
 
-public class XenonGlobalItem : GlobalItem
+public class XenonShimmer : GlobalItem
 {
     public override void SetStaticDefaults()
     {
-        #region Shimmering
+        ItemID.Sets.ShimmerTransformToItem[ItemID.Diamond] = ModContent.ItemType<Lapis>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Lapis>()] = ItemID.Ruby;
+        ItemID.Sets.ShimmerTransformToItem[ItemID.Emerald] = ModContent.ItemType<Garnet>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Garnet>()] = ItemID.Sapphire;
+        ItemID.Sets.ShimmerTransformToItem[ItemID.Topaz] = ModContent.ItemType<Jade>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Jade>()] = ItemID.Amethyst;
+
+        ItemID.Sets.ShimmerTransformToItem[ItemID.PlatinumOre] = ModContent.ItemType<FluoriteOreBlock>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<FluoriteOreBlock>()] = ItemID.GoldOre;
+        ItemID.Sets.ShimmerTransformToItem[ItemID.TungstenOre] = ModContent.ItemType<IndiumOreBlock>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<IndiumOreBlock>()] = ItemID.SilverOre;
+        ItemID.Sets.ShimmerTransformToItem[ItemID.LeadOre] = ModContent.ItemType<CinnabarOreBlock>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CinnabarOreBlock>()] = ItemID.IronOre;
+        ItemID.Sets.ShimmerTransformToItem[ItemID.TinOre] = ModContent.ItemType<AluminumOreBlock>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AluminumOreBlock>()] = ItemID.CopperOre;
+
         ItemID.Sets.ShimmerTransformToItem[ItemID.Marble] = ItemID.Granite;
         ItemID.Sets.ShimmerTransformToItem[ItemID.Granite] = ModContent.ItemType<RhyoliteBlock>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RhyoliteBlock>()] = ItemID.Marble;
@@ -81,6 +98,5 @@ public class XenonGlobalItem : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ItemID.SlimeGun] = ItemID.WaterGun;
         ItemID.Sets.ShimmerTransformToItem[ItemID.WaterGun] = ItemID.SlimeGun; //change to shimmer gun when tmod is 1.4.5
                                                                                //ItemID.Sets.ShimmerTransformToItem[ItemID.ShimmerGun] = ItemID.SlimeGun; change this to shimmer gun
-        #endregion
     }
 }

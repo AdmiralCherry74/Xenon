@@ -10,6 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Common.Globals.XenonPlayerGlobals;
+using Xenon.Common.Systems;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Materials;
@@ -333,4 +334,9 @@ public class DamageOverTimeGlobalNPC : GlobalNPC
     {
         globalLoot.Add(ItemDropRule.ByCondition(new PuritySoulConditions(), ModContent.ItemType<SoulOfRight>(), 5, 1, 1));
     }
+}
+
+public class DownedEaterAndBrain
+{
+    
 }

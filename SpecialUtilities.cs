@@ -8,7 +8,7 @@ using Xenon.Content.Dusts;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon;
 

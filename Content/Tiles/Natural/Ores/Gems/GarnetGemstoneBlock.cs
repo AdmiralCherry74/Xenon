@@ -4,26 +4,25 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Tiles.Natural.Other;
 
-namespace Xenon.Content.Tiles.Natural.Ores;
+namespace Xenon.Content.Tiles.Natural.Ores.Gems;
 
-public class LapisGemstoneBlock : ModTile
+public class GarnetGemstoneBlock : ModTile
 {
     public override void SetStaticDefaults()
     {
         Main.tileSolid[Type] = true;
         Main.tileMergeDirt[Type] = true;
-        Main.tileMerge[Type][TileID.Stone] = true;
-        Main.tileMerge[TileID.Stone][Type] = true;
+        Main.tileMerge[Type][TileID.Mud] = true;
+        Main.tileMerge[TileID.Mud][Type] = true;
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
         TileID.Sets.Ore[Type] = true;
-        RegisterItemDrop(ModContent.ItemType<Lapis>());
-        AddMapEntry(new Color(50, 28, 110));
+        RegisterItemDrop(ModContent.ItemType<Garnet>());
+        AddMapEntry(new Color(206, 1, 135));
         HitSound = SoundID.Tink;
-        DustType = ModContent.DustType<LapisGemDust>();
+        DustType = ModContent.DustType<GarnetGemDust>();
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)

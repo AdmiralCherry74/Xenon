@@ -3206,3 +3206,8 @@ LapisGemstoneWallUnsafeItem: {
 	DisplayName: Lapis Gemstone Wall Unsafe
 	Tooltip: ""
 }
+
+JadeGemcorn: {
+	DisplayName: Jade Gemcorn
+	Tooltip: ""
+}

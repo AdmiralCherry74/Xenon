@@ -7,7 +7,7 @@ using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 

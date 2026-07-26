@@ -12,7 +12,7 @@ public class IngestaneOre : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.IngestaneOre>());
+		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.PreHardOres.IngestaneOre>());
         Item.value = Item.sellPrice(0, 0, 7);
     }
 }

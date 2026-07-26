@@ -92,3 +92,8 @@ Somnolent: {
 	DisplayName: Somnolent
 	TownNPCDialogueName: the Somnolent
 }
+
+UndergroundSomnolent: {
+	DisplayName: Underground Somnolent
+	TownNPCDialogueName: the Underground Somnolent
+}
