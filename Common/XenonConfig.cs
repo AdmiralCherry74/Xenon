@@ -17,7 +17,11 @@ internal class XenonConfig : ModConfig
 	[ReloadRequired]
 	public bool PickaxeRequiredForNextOreTier;
 
-	[Header("Miscellaneous")]
+    [DefaultValue(false)]
+    [ReloadRequired]
+    public bool MountainGenerationConfigEnabler;
+
+    [Header("Miscellaneous")]
 
     [DefaultValue(false)]
     [ReloadRequired]

@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Tiles.Building.SyntheticNatural;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Somnolent;
 
@@ -29,23 +30,24 @@ public class JadeTree : ModTree
     {
         GrowsOnTileId =
         [
-            TileID.Stone,
-            TileID.Ebonstone,
-            TileID.Crimstone,
-            ModContent.TileType<Gutstone>(),
-            TileID.Pearlstone,
-            ModContent.TileType<Snoozestone>(),
-            TileID.GreenMoss,
-            TileID.BrownMoss,
-            TileID.RedMoss,
-            TileID.BlueMoss,
-            TileID.PurpleMoss,
-            TileID.LavaMoss,
-            TileID.KryptonMoss,
-            TileID.XenonMoss,
-            TileID.ArgonMoss,
-            TileID.VioletMoss,
-            TileID.RainbowMoss
+            ModContent.TileType<OvergrownTurf>()
+            //TileID.Stone,
+            //TileID.Ebonstone,
+            //TileID.Crimstone,
+            //ModContent.TileType<Gutstone>(),
+            //TileID.Pearlstone,
+            //ModContent.TileType<Snoozestone>(),
+            //TileID.GreenMoss,
+            //TileID.BrownMoss,
+            //TileID.RedMoss,
+            //TileID.BlueMoss,
+            //TileID.PurpleMoss,
+            //TileID.LavaMoss,
+            //TileID.KryptonMoss,
+            //TileID.XenonMoss,
+            //TileID.ArgonMoss,
+            //TileID.VioletMoss,
+            //TileID.RainbowMoss
         ];
         texture = ModContent.Request<Texture2D>("Xenon/Content/Tiles/Natural/Ores/Gems/GemTrees/JadeTree");
         branchesTexture = ModContent.Request<Texture2D>("Xenon/Content/Tiles/Natural/Ores/Gems/GemTrees/JadeTreeBranches");

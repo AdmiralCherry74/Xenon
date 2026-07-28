@@ -6,6 +6,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Xenon.Content.Tiles.Building.SyntheticNatural;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.Somnolent;
 
@@ -30,23 +31,24 @@ public class JadeSapling : ModTile
         TileObjectData.newTile.CoordinatePadding = 2;
         TileObjectData.newTile.AnchorValidTiles =
         [
-            TileID.Stone,
-            TileID.Ebonstone,
-            TileID.Crimstone,
-            ModContent.TileType<Gutstone>(),
-            TileID.Pearlstone,
-            ModContent.TileType<Snoozestone>(),
-            TileID.GreenMoss,
-            TileID.BrownMoss,
-            TileID.RedMoss,
-            TileID.BlueMoss,
-            TileID.PurpleMoss,
-            TileID.LavaMoss,
-            TileID.KryptonMoss,
-            TileID.XenonMoss,
-            TileID.ArgonMoss,
-            TileID.VioletMoss,
-            TileID.RainbowMoss
+            ModContent.TileType<OvergrownTurf>()
+            //TileID.Stone,
+            //TileID.Ebonstone,
+            //TileID.Crimstone,
+            //ModContent.TileType<Gutstone>(),
+            //TileID.Pearlstone,
+            //ModContent.TileType<Snoozestone>(),
+            //TileID.GreenMoss,
+            //TileID.BrownMoss,
+            //TileID.RedMoss,
+            //TileID.BlueMoss,
+            //TileID.PurpleMoss,
+            //TileID.LavaMoss,
+            //TileID.KryptonMoss,
+            //TileID.XenonMoss,
+            //TileID.ArgonMoss,
+            //TileID.VioletMoss,
+            //TileID.RainbowMoss
         ];
         TileObjectData.newTile.StyleHorizontal = true;
         TileObjectData.newTile.DrawFlipHorizontal = true;

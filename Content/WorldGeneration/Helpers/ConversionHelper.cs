@@ -54,28 +54,6 @@ public static class ConversionHelper
         }
 
     }
-    public static void ConvertToXenonOres(int i, int j, int size = 4)
-    {
-        for (var x = i - size; x <= i + size; x++)
-        {
-            for (var y = j - size; y <= j + size; y++)
-            {
-                if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - i) + Math.Abs(y - j) >= Math.Sqrt(size * size + size * size))
-                    continue;
-
-                if (Main.tile[x, y].TileType > TileLoader.TileCount || Main.tile[x, y].WallType > WallLoader.WallCount)
-                    continue;
-
-
-                _ = ConvertTile<AluminumOre>(x, y, type => Common.Data.TileSets.Tier1Ore[type], false) ||
-                    ConvertTile<CinnabarOre>(x, y, type => Common.Data.TileSets.Tier2Ore[type], false) ||
-                    ConvertTile<IndiumOre>(x, y, type => Common.Data.TileSets.Tier3Ore[type], false) ||
-                    ConvertTile<FluoriteOre>(x, y, type => Common.Data.TileSets.Tier4Ore[type], false) ||
-                    ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
-            }
-        }
-
-    }
     public static void ConvertToSomnolent(int i, int j, int size = 4)
     {
         for (var x = i - size; x <= i + size; x++)

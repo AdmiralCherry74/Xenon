@@ -17,11 +17,11 @@ internal class PickPower : ModHook
 	{
 		if (!ModContent.GetInstance<XenonConfig>().PickaxeRequiredForNextOreTier) return orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
 		int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
-		if (tileTarget.TileType == TileID.Silver || tileTarget.TileType == TileID.Tungsten || tileTarget.TileType == ModContent.TileType<IndiumOre>() && pickPower < 40)
+		if ((tileTarget.TileType == TileID.Silver || tileTarget.TileType == TileID.Tungsten || tileTarget.TileType == ModContent.TileType<IndiumOre>()) && pickPower < 40)
 		{
 			num = 0;
 		}
-		if (tileTarget.TileType == TileID.Gold || tileTarget.TileType == TileID.Platinum || tileTarget.TileType == ModContent.TileType<FluoriteOre>() && pickPower < 45)
+		if ((tileTarget.TileType == TileID.Gold || tileTarget.TileType == TileID.Platinum || tileTarget.TileType == ModContent.TileType<FluoriteOre>()) && pickPower < 45)
 		{
 			num = 0;
 		}
