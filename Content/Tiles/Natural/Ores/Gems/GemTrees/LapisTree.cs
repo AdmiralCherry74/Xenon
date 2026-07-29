@@ -27,22 +27,22 @@ using Xenon.Common.Templates;
 using Xenon.Common.Systems;
 
 namespace Xenon.Content.Tiles.Natural.Ores.Gems.GemTrees;
-public class JadeTree : AvalonModTree
+public class LapisTree : AvalonModTree
 {
-	public override string TexturePath => "Xenon/Content/Tiles/Natural/Ores/Gems/GemTrees/JadeTree";
+	public override string TexturePath => "Xenon/Content/Tiles/Natural/Ores/Gems/GemTrees/LapisTree";
 
-	public static GrowTreeSettings GemTree_Jade = new GrowTreeSettings
+	public static GrowTreeSettings GemTree_Lapis = new GrowTreeSettings
 	{
 		GroundTest = GemTreeGroundTest,
 		WallTest = GemTreeWallTest,
 		TreeHeightMax = 12,
 		TreeHeightMin = 7,
-		TreeTileType = (ushort)ModContent.TileType<JadeTree>(),
+		TreeTileType = (ushort)ModContent.TileType<LapisTree>(),
 		TreeTopPaddingNeeded = 4,
-		SaplingTileType = (ushort)ModContent.TileType<JadeSapling>()
+		SaplingTileType = (ushort)ModContent.TileType<LapisSapling>()
 	};
 
-	public static TreePaintingSettings GemTreeJade = new TreePaintingSettings
+	public static TreePaintingSettings GemTreeLapis = new TreePaintingSettings
 	{
 		UseSpecialGroups = true,
 		SpecialGroupMinimalHueValue = 0f,
@@ -95,7 +95,7 @@ public class JadeTree : AvalonModTree
 
 	public override bool CreateDust(int i, int j, ref int type)
 	{
-		int dustType = ((!WorldGen.genRand.NextBool(10)) ? 1 : ModContent.DustType<JadeGemDust>());
+		int dustType = ((!WorldGen.genRand.NextBool(10)) ? 1 : ModContent.DustType<LapisGemDust>());
 		Dust.NewDust(new Vector2((float)(i * 16), (float)(j * 16)), 16, 16, dustType);
 		return false;
 	}
@@ -106,7 +106,7 @@ public class JadeTree : AvalonModTree
 		int dropItem = ItemID.None;
 		int secondaryItem = ItemID.None;
 		int dropItemStack = 1;
-		SetGemTreeDrops(ModContent.ItemType<Jade>(), ModContent.ItemType<JadeGemcorn>(), tileCache, ref dropItem, ref secondaryItem);
+		SetGemTreeDrops(ModContent.ItemType<Lapis>(), ModContent.ItemType<LapisGemcorn>(), tileCache, ref dropItem, ref secondaryItem);
 		if (dropItem == 3)
 		{
 			dropItemStack = Main.rand.Next(1, 3);
@@ -124,7 +124,7 @@ public class JadeTree : AvalonModTree
 		spriteBatch.Begin(); //No params as PostDraw doesn't use spritebatch with params
 	}
 
-	private static void EmitJadeLeaves(int tilePosX, int tilePosY, int grassPosX, int grassPosY)
+	private static void EmitLapisLeaves(int tilePosX, int tilePosY, int grassPosX, int grassPosY)
 	{
 		bool _isActiveAndNotPaused = (bool)typeof(TileDrawing).GetField("_isActiveAndNotPaused", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
 		int _leafFrequency = (int)typeof(TileDrawing).GetField("_leafFrequency", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public | BindingFlags.Instance).GetValue(Main.instance.TilesRenderer);
@@ -214,7 +214,7 @@ public class JadeTree : AvalonModTree
 		}
 		if (!WorldGen.SolidTile(vector.ToTileCoordinates()))
 		{
-			Gore.NewGoreDirect(new EntitySource_Misc(""), vector, Utils.RandomVector2(Main.rand, -num3, num3), ModContent.GoreType<JadeGemLeaves>(), 0.7f + Main.rand.NextFloat() * 0.6f).Frame.CurrentColumn = Main.tile[tilePosX, tilePosY].TileColor;
+			Gore.NewGoreDirect(new EntitySource_Misc(""), vector, Utils.RandomVector2(Main.rand, -num3, num3), ModContent.GoreType<LapisGemLeaves>(), 0.7f + Main.rand.NextFloat() * 0.6f).Frame.CurrentColumn = Main.tile[tilePosX, tilePosY].TileColor;
 		}
 	}
 
@@ -253,7 +253,7 @@ public class JadeTree : AvalonModTree
 						{
 							return;
 						}
-						EmitJadeLeaves(x, y, grassPosX, floorY3);
+						EmitLapisLeaves(x, y, grassPosX, floorY3);
 						byte tileColor3 = tile.TileColor;
 						Texture2D treeTopTexture = GetTreeTopTexture(Type, 0, tileColor3);
 						Vector2 vector = new Vector2((float)(x * 16 - (int)unscaledPosition.X + 8), (float)(y * 16 - (int)unscaledPosition.Y + 16)) + zero;
@@ -281,7 +281,7 @@ public class JadeTree : AvalonModTree
 						{
 							return;
 						}
-						EmitJadeLeaves(x, y, num21 + num2, floorY2);
+						EmitLapisLeaves(x, y, num21 + num2, floorY2);
 						byte tileColor2 = tile.TileColor;
 						Texture2D treeBranchTexture2 = GetTreeBranchTexture(Type, 0, tileColor2);
 						Vector2 position2 = new Vector2((float)(x * 16), (float)(y * 16)) - unscaledPosition.Floor() + zero + new Vector2(16f, 12f);
@@ -312,7 +312,7 @@ public class JadeTree : AvalonModTree
 						{
 							return;
 						}
-						EmitJadeLeaves(x, y, num17 + num18, floorY);
+						EmitLapisLeaves(x, y, num17 + num18, floorY);
 						byte tileColor = tile.TileColor;
 						Texture2D treeBranchTexture = GetTreeBranchTexture(Type, 0, tileColor);
 						Vector2 position = new Vector2((float)(x * 16), (float)(y * 16)) - unscaledPosition.Floor() + zero + new Vector2(0f, 18f);

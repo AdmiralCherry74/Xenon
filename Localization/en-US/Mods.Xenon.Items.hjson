@@ -3211,3 +3211,13 @@ JadeGemcorn: {
 	DisplayName: Jade Gemcorn
 	Tooltip: ""
 }
+
+GarnetGemcorn: {
+	DisplayName: Garnet Gemcorn
+	Tooltip: ""
+}
+
+LapisGemcorn: {
+	DisplayName: Lapis Gemcorn
+	Tooltip: ""
+}

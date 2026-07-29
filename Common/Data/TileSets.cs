@@ -18,7 +18,11 @@ namespace Xenon.Common.Data;
 
 internal class TileSets
 {
-    public static bool[] MountainStone = TileID.Sets.Factory.CreateBoolSet(
+	public static readonly bool[] OnlyPlaceGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
+		TileID.Stone, TileID.Sandstone
+	);
+
+	public static bool[] MountainStone = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<OuranoStone>(),
         ModContent.TileType<NyxStone>(),
         ModContent.TileType<HelioStone>(),
@@ -71,7 +75,7 @@ internal class TileSets
             TileID.Dirt
     );
     public static readonly bool[] PlaceTheGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
-    TileID.Stone, TileID.Sandstone
+        TileID.Stone, TileID.Sandstone
     );
     public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<RedCatacombBrick>(),

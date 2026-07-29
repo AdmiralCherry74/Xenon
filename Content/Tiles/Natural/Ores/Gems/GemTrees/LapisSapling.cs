@@ -11,18 +11,18 @@ using static Terraria.WorldGen;
 
 namespace Xenon.Content.Tiles.Natural.Ores.Gems.GemTrees;
 
-public class JadeSapling : ModTile
+public class LapisSapling : ModTile
 {
 
-	public static GrowTreeSettings GemTree_Jade = new GrowTreeSettings
+	public static GrowTreeSettings GemTree_Lapis = new GrowTreeSettings
 	{
 		GroundTest = GemTreeGroundTest,
 		WallTest = GemTreeWallTest,
 		TreeHeightMax = 12,
 		TreeHeightMin = 7,
-		TreeTileType = (ushort)ModContent.TileType<JadeTree>(),
+		TreeTileType = (ushort)ModContent.TileType<LapisTree>(),
 		TreeTopPaddingNeeded = 4,
-		SaplingTileType = (ushort)ModContent.TileType<JadeSapling>()
+		SaplingTileType = (ushort)ModContent.TileType<LapisSapling>()
 	};
 	public override void SetStaticDefaults()
 	{
@@ -50,7 +50,7 @@ public class JadeSapling : ModTile
 		TileObjectData.newTile.RandomStyleRange = 3;
 		TileObjectData.addTile(Type);
 		AddMapEntry(new Color(128, 128, 128));
-		DustType = ModContent.DustType<Dusts.JadeGemDust>();
+		DustType = ModContent.DustType<Dusts.LapisGemDust>();
 		AdjTiles = new int[1] { TileID.Saplings };
 	}
 
@@ -68,13 +68,13 @@ public class JadeSapling : ModTile
 			{
 				if (WorldGen.genRand.NextBool(5))
 				{
-					AttemptToGrowJadeFromSapling(i, j, underground: true);
+					AttemptToGrowLapisFromSapling(i, j, underground: true);
 				}
 			}
 		}
 	}
 
-	public static bool AttemptToGrowJadeFromSapling(int x, int y, bool underground)
+	public static bool AttemptToGrowLapisFromSapling(int x, int y, bool underground)
 	{
 		if (Main.netMode == NetmodeID.MultiplayerClient)
 		{
@@ -93,14 +93,14 @@ public class JadeSapling : ModTile
 		{
 			return false;
 		}
-		bool flag = AvalonModTree.GrowModdedTreeWithSettings(x, y, GemTree_Jade);
+		bool flag = AvalonModTree.GrowModdedTreeWithSettings(x, y, GemTree_Lapis);
 		if (flag && PlayerLOS(x, y))
 		{
-			GrowJadeTreeFXCheck(x, y);
+			GrowLapisTreeFXCheck(x, y);
 		}
 		return flag;
 	}
-	public static void GrowJadeTreeFXCheck(int x, int y)
+	public static void GrowLapisTreeFXCheck(int x, int y)
 	{
 		int treeHeight = 1;
 		for (int num = -1; num > -100; num--)
@@ -126,11 +126,11 @@ public class JadeSapling : ModTile
 		{
 			if (Main.netMode == NetmodeID.Server)
 			{
-				NetMessage.SendData(MessageID.SpecialFX, -1, -1, null, 1, x, y, treeHeight, ModContent.GoreType<JadeGemLeaves>());
+				NetMessage.SendData(MessageID.SpecialFX, -1, -1, null, 1, x, y, treeHeight, ModContent.GoreType<LapisGemLeaves>());
 			}
 			if (Main.netMode == NetmodeID.SinglePlayer)
 			{
-				WorldGen.TreeGrowFX(x, y, treeHeight, ModContent.GoreType<JadeGemLeaves>());
+				WorldGen.TreeGrowFX(x, y, treeHeight, ModContent.GoreType<LapisGemLeaves>());
 			}
 		}
 	}
