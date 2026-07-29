@@ -1,12 +1,13 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Rarities;
 
 namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
 {
-    public class PremiumGemPouch : ModItem
+    public class WeirdGemPouch : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -16,15 +17,14 @@ namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
         public override void SetDefaults()
         {
             Item.rare = ModContent.RarityType<Purity>();
-            Item.value = Item.buyPrice(gold: 10);
+            Item.value = Item.buyPrice(silver: 250);
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<Materials.Pouch>());
-            recipe.AddIngredient(ModContent.ItemType<Jade>(), 6);
-            recipe.AddIngredient(ModContent.ItemType<Garnet>(), 3);
-            recipe.AddIngredient(ModContent.ItemType<Lapis>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Flint>(), 4);
+            recipe.AddIngredient(ItemID.Amber, 4);
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);
             recipe.Register();

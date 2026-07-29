@@ -3283,3 +3283,61 @@ LapisRobe: {
 		14% reduced mana cost
 		'''
 }
+
+DiamondCandelabra: {
+	DisplayName: Diamond Candelabra
+	Tooltip: ""
+}
+
+EmeraldCandelabra: {
+	DisplayName: Emerald Candelabra
+	Tooltip: ""
+}
+
+FluoriteCandelabra: {
+	DisplayName: Fluorite Candelabra
+	Tooltip: ""
+}
+
+GarnetCandelabra: {
+	DisplayName: Garnet Candelabra
+	Tooltip: ""
+}
+
+IndiumCandelabra: {
+	DisplayName: Indium Candelabra
+	Tooltip: ""
+}
+
+LapisCandelabra: {
+	DisplayName: Lapis Candelabra
+	Tooltip: ""
+}
+
+RubyCandelabra: {
+	DisplayName: Ruby Candelabra
+	Tooltip: ""
+}
+
+SapphireCandelabra: {
+	DisplayName: Sapphire Candelabra
+	Tooltip: ""
+}
+
+SilverCandelabra: {
+	DisplayName: Silver Candelabra
+	Tooltip: ""
+}
+
+TungstenCandelabra: {
+	DisplayName: Tungsten Candelabra
+	Tooltip: ""
+}
+
+WeirdGemPouch: {
+	DisplayName: Weird Gem Pouch
+	Tooltip:
+		'''
+		'a gem pouch full of strange... well are they even gems?'
+		'''
+}
