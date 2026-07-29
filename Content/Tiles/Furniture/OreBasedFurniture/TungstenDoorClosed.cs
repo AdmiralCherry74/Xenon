@@ -7,19 +7,19 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace Xenon.Content.Tiles.Furniture;
+namespace Xenon.Content.Tiles.Furniture.OreBasedFurniture;
 
-public class TungstenDoorOpened : ModTile
+public class TungstenDoorClosed : ModTile
 {
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
         Main.tileBlockLight[Type] = true;
-        Main.tileSolid[Type] = false;
+        Main.tileSolid[Type] = true;
         Main.tileNoAttach[Type] = true;
         Main.tileLavaDeath[Type] = false;
         TileID.Sets.DrawsWalls[Type] = true;
-        TileObjectData.newTile.Width = 2;
+        TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.Height = 3;
         TileObjectData.newTile.Origin = new Point16(0, 0);
         TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile, TileObjectData.newTile.Width, 0);
@@ -45,7 +45,7 @@ public class TungstenDoorOpened : ModTile
 
     public override bool RightClick(int i, int j)
     {
-        return false;
+        return true;
     }
     public override void HitWire(int i, int j)
     {
@@ -65,7 +65,7 @@ public class TungstenDoorOpened : ModTile
             SoundEngine.PlaySound(SoundID.Unlock, new Vector2(i * 16, num * 16 + 16));
             for (int k = num; k <= num + 2; k++)
             {
-                Main.tile[i, k].TileType = (ushort)ModContent.TileType<TungstenDoorClosed>();
+                Main.tile[i, k].TileType = (ushort)ModContent.TileType<TungstenDoorOpened>();
             }
         }
     }

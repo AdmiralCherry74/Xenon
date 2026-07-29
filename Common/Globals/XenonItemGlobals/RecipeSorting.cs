@@ -4,7 +4,9 @@ using Terraria.ModLoader;
 using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Armor.PreHardmode;
+using Xenon.Content.Items.Armor.PreHardmode.GemRobes;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
+using Xenon.Content.Items.Armor.Vanity.OreCrowns;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
@@ -706,6 +708,22 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .Register();
             #endregion
 
+            #region Crowns
+            Recipe.Create(ModContent.ItemType<CopperCrown>())
+                .AddIngredient(ItemID.CopperBar, 5)
+                .AddIngredient(ItemID.Amethyst)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.CopperWatch)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TinCrown>())
+                .AddIngredient(ItemID.TinBar, 5)
+                .AddIngredient(ItemID.Topaz)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.TinWatch)
+                .Register();
+            #endregion
+
             #region Corrupt Special Weapons
             //Battleaxe
             Recipe.Create(ModContent.ItemType<NightGnasher>())
@@ -847,7 +865,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<AluminumBar>())
                 .AddIngredient(ModContent.ItemType<AluminumOreBlock>(), 3)
                 .AddTile(TileID.Furnaces)
-                .SortAfterFirstRecipesOf(ItemID.CopperWatch)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CopperCrown>())
                 .Register();
 
             //Pickaxe
@@ -949,11 +967,27 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumGreaves>())
                 .Register();
 
+            //Crown
+            Recipe.Create(ModContent.ItemType<AluminumCrown>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 5)
+                .AddIngredient(ModContent.ItemType<Jade>())
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumWatch>())
+                .Register();
+
             //Jade Hook
             Recipe.Create(ModContent.ItemType<JadeHook>())
                 .AddIngredient(ModContent.ItemType<Jade>(), 15)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ItemID.AmethystHook)
+                .Register();
+
+            //Jade Robe
+            Recipe.Create(ModContent.ItemType<JadeRobe>())
+                .AddIngredient(ItemID.Robe)
+                .AddIngredient(ModContent.ItemType<Jade>(), 10)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.AmethystRobe)
                 .Register();
 
             //Large Jade
@@ -1177,6 +1211,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ItemID.SapphireHook)
                 .Register();
 
+            //Garnet Robe
+            Recipe.Create(ModContent.ItemType<GarnetRobe>())
+                .AddIngredient(ItemID.Robe)
+                .AddIngredient(ModContent.ItemType<Garnet>(), 10)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.SapphireRobe)
+                .Register();
+
             //Large Garnet
             Recipe.Create(ModContent.ItemType<LargeGarnet>())
                 .AddIngredient(ModContent.ItemType<Garnet>(), 15)
@@ -1190,7 +1232,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<FluoriteBar>())
                 .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 3)
                 .AddTile(TileID.Furnaces)
-                .SortAfterFirstRecipesOf(ItemID.GoldWatch)
+                .SortAfterFirstRecipesOf(ItemID.GoldCrown)
                 .Register();
 
             //Pickaxe
@@ -1296,6 +1338,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddIngredient(ModContent.ItemType<Lapis>(), 15)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ItemID.RubyHook)
+                .Register();
+
+            //Lapis Robe
+            Recipe.Create(ModContent.ItemType<LapisRobe>())
+                .AddIngredient(ItemID.Robe)
+                .AddIngredient(ModContent.ItemType<Lapis>(), 10)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.RubyRobe)
                 .Register();
 
             //Large Lapis

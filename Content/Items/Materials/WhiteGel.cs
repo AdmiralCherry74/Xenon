@@ -6,11 +6,12 @@ namespace Xenon.Content.Items.Materials;
 
 public class WhiteGel : ModItem
 {
-    public override void SetStaticDefaults()
+    public override void SetDefaults()
     {
-        Item.ResearchUnlockCount = 100;
-        Item.value = Item.buyPrice(silver: 10);
-        Item.rare = ItemRarityID.Blue;
+        Item.width = 20;
+        Item.height = 20;
+        Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
+        Item.rare = ItemRarityID.Blue;
     }
 }

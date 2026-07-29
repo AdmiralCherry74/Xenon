@@ -3221,3 +3221,133 @@ LapisGemcorn: {
 	DisplayName: Lapis Gemcorn
 	Tooltip: ""
 }
+
+CopperCandelabra: {
+	DisplayName: Copper Candelabra
+	Tooltip: ""
+}
+
+AmethystCandelabra: {
+	DisplayName: Amethyst Candelabra
+	Tooltip: ""
+}
+
+AluminumCandelabra: {
+	DisplayName: Aluminum Candelabra
+	Tooltip: ""
+}
+
+JadeCandelabra: {
+	DisplayName: Jade Candelabra
+	Tooltip: ""
+}
+
+TinCandelabra: {
+	DisplayName: Tin Candelabra
+	Tooltip: ""
+}
+
+TopazCandelabra: {
+	DisplayName: Topaz Candelabra
+	Tooltip: ""
+}
+
+CopperCrown: {
+	DisplayName: Copper Crown
+	Tooltip: ""
+}
+
+AluminumCrown: {
+	DisplayName: Aluminum Crown
+	Tooltip: ""
+}
+
+TinCrown: {
+	DisplayName: Tin Crown
+	Tooltip: ""
+}
+
+GarnetRobe: {
+	DisplayName: Garnet Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 50
+		10% reduced mana cost
+		'''
+}
+
+JadeRobe: {
+	DisplayName: Jade Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 30
+		6% reduced mana cost
+		'''
+}
+
+LapisRobe: {
+	DisplayName: Lapis Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 70
+		14% reduced mana cost
+		'''
+}
+
+DiamondCandelabra: {
+	DisplayName: Diamond Candelabra
+	Tooltip: ""
+}
+
+EmeraldCandelabra: {
+	DisplayName: Emerald Candelabra
+	Tooltip: ""
+}
+
+FluoriteCandelabra: {
+	DisplayName: Fluorite Candelabra
+	Tooltip: ""
+}
+
+GarnetCandelabra: {
+	DisplayName: Garnet Candelabra
+	Tooltip: ""
+}
+
+IndiumCandelabra: {
+	DisplayName: Indium Candelabra
+	Tooltip: ""
+}
+
+LapisCandelabra: {
+	DisplayName: Lapis Candelabra
+	Tooltip: ""
+}
+
+RubyCandelabra: {
+	DisplayName: Ruby Candelabra
+	Tooltip: ""
+}
+
+SapphireCandelabra: {
+	DisplayName: Sapphire Candelabra
+	Tooltip: ""
+}
+
+SilverCandelabra: {
+	DisplayName: Silver Candelabra
+	Tooltip: ""
+}
+
+TungstenCandelabra: {
+	DisplayName: Tungsten Candelabra
+	Tooltip: ""
+}
+
+WeirdGemPouch: {
+	DisplayName: Weird Gem Pouch
+	Tooltip:
+		'''
+		'a gem pouch full of strange... well are they even gems?'
+		'''
+}

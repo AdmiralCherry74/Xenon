@@ -7,9 +7,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace Xenon.Content.Tiles.Furniture;
+namespace Xenon.Content.Tiles.Furniture.OreBasedFurniture;
 
-public class SilverDoorOpened : ModTile
+public class TungstenDoorOpened : ModTile
 {
     public override void SetStaticDefaults()
     {
@@ -40,7 +40,7 @@ public class SilverDoorOpened : ModTile
         TileObjectData.addTile(Type);
         AddMapEntry(new Color(119, 105, 79), this.GetLocalization("MapEntry"));
         AdjTiles = new int[] { TileID.ClosedDoor };
-        DustType = DustID.Silver;
+        DustType = DustID.Tungsten;
     }
 
     public override bool RightClick(int i, int j)
@@ -65,7 +65,7 @@ public class SilverDoorOpened : ModTile
             SoundEngine.PlaySound(SoundID.Unlock, new Vector2(i * 16, num * 16 + 16));
             for (int k = num; k <= num + 2; k++)
             {
-                Main.tile[i, k].TileType = (ushort)ModContent.TileType<SilverDoorClosed>();
+                Main.tile[i, k].TileType = (ushort)ModContent.TileType<TungstenDoorClosed>();
             }
         }
     }
