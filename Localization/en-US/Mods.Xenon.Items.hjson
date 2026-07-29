@@ -3346,8 +3346,5 @@ TungstenCandelabra: {
 
 WeirdGemPouch: {
 	DisplayName: Weird Gem Pouch
-	Tooltip:
-		'''
-		'a gem pouch full of strange... well are they even gems?'
-		'''
+	Tooltip: "'a gem pouch full of strange... well are they even gems?'"
 }

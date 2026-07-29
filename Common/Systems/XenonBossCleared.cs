@@ -1,16 +1,6 @@
-﻿using Avalon.Common;
-using Avalon.ModSupport;
-using Avalon.WorldGeneration.Enums;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using System.IO;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using Xenon.Common.Globals;
 
 namespace Xenon.Common.Systems
 {

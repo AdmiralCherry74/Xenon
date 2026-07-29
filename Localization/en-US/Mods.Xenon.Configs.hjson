@@ -39,7 +39,6 @@ XenonConfig: {
 			'''
 			Makes it so The Mountains can be generated
 			Its a work in progress biome. Sometimes can crash you or not generate.
-			Not an actual config rn
 			'''
 	}
 }

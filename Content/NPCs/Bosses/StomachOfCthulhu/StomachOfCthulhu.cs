@@ -67,6 +67,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             PitchVariance = 0f,
             MaxInstances = 5,
         };
+        static SoundStyle RareBurp = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurpRare")
+        {
+            Volume = 10f,
+            Pitch = 0f,
+            PitchVariance = 0f,
+            MaxInstances = 5,
+        };
         #endregion
         public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
@@ -180,7 +187,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             {
                 SpewBurpGasBubbleShit(npc, player);
             }
-            if (AI_Timer % time == 0 && player.ZoneOverworldHeight && AI_Timer != 0)
+            if (AI_Timer % time == 0 && (!player.ZoneDirtLayerHeight || !player.ZoneRockLayerHeight) && AI_Timer != 0)
             {
                 SpewBurpGasBubbleShit(npc, player);
             }
