@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace Xenon.Content.Tiles.Furniture;
+namespace Xenon.Content.Tiles.Furniture.OreBasedFurniture;
 
 public class SilverDoorClosed : ModTile
 {
@@ -45,7 +45,7 @@ public class SilverDoorClosed : ModTile
 
     public override bool RightClick(int i, int j)
     {
-        return false;
+        return true;
     }
     public override void HitWire(int i, int j)
     {

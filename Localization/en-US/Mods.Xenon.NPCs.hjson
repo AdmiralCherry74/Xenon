@@ -135,6 +135,8 @@ Baker: {
 		LikeNPC_Princess: "{NPCName} often asks me to make her all sorts of cakes and cookies aswell as ice cream and... im getting hungry again."
 		Princess_LovesNPC: "{NPCName} often asks me to make her all sorts of cakes and cookies asweel as ice cream and... im getting hungry again."
 	}
+
+	Census.SpawnCondition: Conditions unknown
 }
 
 ChartreuseSlime.DisplayName: Chartreuse Slime
