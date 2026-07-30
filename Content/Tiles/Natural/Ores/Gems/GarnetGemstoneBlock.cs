@@ -18,6 +18,8 @@ public class GarnetGemstoneBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
+        Main.tileShine2[Type] = true;
+        Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         RegisterItemDrop(ModContent.ItemType<Garnet>());
         AddMapEntry(new Color(206, 1, 135));

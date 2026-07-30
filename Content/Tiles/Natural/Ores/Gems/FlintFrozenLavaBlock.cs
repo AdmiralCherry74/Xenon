@@ -32,6 +32,8 @@ public class FlintFrozenLavaBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
+        Main.tileShine2[Type] = true;
+        Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         RegisterItemDrop(ModContent.ItemType<Flint>());
         AddMapEntry(new Color(108, 108, 108));

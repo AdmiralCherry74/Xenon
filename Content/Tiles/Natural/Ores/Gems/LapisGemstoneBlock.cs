@@ -19,6 +19,8 @@ public class LapisGemstoneBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
+        Main.tileShine2[Type] = true;
+        Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         RegisterItemDrop(ModContent.ItemType<Lapis>());
         AddMapEntry(new Color(50, 28, 110));

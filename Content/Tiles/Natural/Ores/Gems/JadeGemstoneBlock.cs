@@ -18,6 +18,8 @@ public class JadeGemstoneBlock : ModTile
         Main.tileStone[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileSpelunker[Type] = true;
+        Main.tileShine2[Type] = true;
+        Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         AddMapEntry(new Color(69, 69, 69)); //Nice
         RegisterItemDrop(ModContent.ItemType<Jade>());
