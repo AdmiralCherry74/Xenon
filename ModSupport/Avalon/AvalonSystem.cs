@@ -35,14 +35,6 @@ public class AvalonSystem : ModSystem
 				tileCounts[ModContent.TileType<MossyPolloStone>()] +
 				tileCounts[ModContent.TileType<Snotquicksand>()];
 
-			ModContent.GetInstance<Common.Systems.BiomeTileCounts>().MirageTiles +=
-				tileCounts[ModContent.TileType<HardenedSnotsand>()] +
-				tileCounts[ModContent.TileType<Snotsandstone>()];
-
-			ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SoftMirageTiles +=
-				tileCounts[ModContent.TileType<Snotsand>()] +
-				tileCounts[ModContent.TileType<Snotquicksand>()];
-
         }
 	}
 	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)

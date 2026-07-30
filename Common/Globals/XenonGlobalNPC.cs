@@ -83,7 +83,7 @@ internal class XenonGlobalNPC : GlobalNPC
         }
 
         #region The Mirage
-        if (spawnInfo.Player.InModBiome<TheMirage>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneRockLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
+        if (spawnInfo.Player.InModBiome<UndergroundOcean>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneRockLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
         {
             //If in the underground layer of The Mirage
             pool.Clear();
@@ -91,7 +91,7 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(NPCID.SandSlime, 0.75f);
             pool.Add(NPCID.Tumbleweed, 0.25f);
         }
-        if (spawnInfo.Player.InModBiome<TheMirage>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneDirtLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
+        if (spawnInfo.Player.InModBiome<UndergroundOcean>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneDirtLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
         {
             //If in the cavern layer of The Mirage
             pool.Clear();

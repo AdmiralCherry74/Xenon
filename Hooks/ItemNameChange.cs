@@ -36,6 +36,18 @@ internal class ItemNameChange : ModHook
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneCrateRename");
         }
+        if (id == ItemID.PlatinumCrown)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.AncientPlatinumCrown");
+        }
+        if (id == ItemID.Candelabra)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.GoldCandelabra");
+        }
+        if (id == ItemID.Candle)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.GoldCandle");
+        }
         return orig.Invoke(id);
     }
 }

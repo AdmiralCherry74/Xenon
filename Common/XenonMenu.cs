@@ -11,7 +11,7 @@ internal class XenonMenu : ModMenu
 	{
 		get
 		{
-			if (DateTime.Now.Hour <= 6 || DateTime.Now.Hour >= 9)
+			if (DateTime.Now.Hour > 21 || DateTime.Now.Hour < 6)
 			{
                 return Mod.Assets.Request<Texture2D>("Assets/Textures/UI/XenonNightTimeLogo");
             }

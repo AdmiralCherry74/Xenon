@@ -23,8 +23,7 @@ public class BiomeTileCounts : ModSystem
     public int SomnolentTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
     public int MountainTiles { get; set; }
-    public int MirageTiles { get; set; }
-    public int SoftMirageTiles { get; set; }
+    public int UndergroundOceanTile { get; set; }
     public int ForestMushroomTiles { get; set; }
     public int CorrosionJungleTiles { get; set; }
     public int CorruptionJungleTiles { get; set; }
@@ -51,6 +50,8 @@ public class BiomeTileCounts : ModSystem
         Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<MossyAresStone>()];
         Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<MossyHelioStone>()];
 
+
+        UndergroundOceanTile = tileCounts[TileID.Coralstone];
 
         CorrosionTiles = tileCounts[ModContent.TileType<Gutstone>()] +
                          tileCounts[ModContent.TileType<HardenedGutsand>()] +
@@ -90,28 +91,6 @@ public class BiomeTileCounts : ModSystem
                         tileCounts[ModContent.TileType<MossyAresStone>()] +
                         tileCounts[ModContent.TileType<MossyHelioStone>()] +
                         tileCounts[ModContent.TileType<MossyHephStone>()];
-
-        MirageTiles = tileCounts[TileID.HardenedSand] +
-                      tileCounts[TileID.CorruptHardenedSand] +
-                      tileCounts[TileID.CrimsonHardenedSand] +
-                      tileCounts[ModContent.TileType<HardenedGutsand>()] +
-                      tileCounts[TileID.HallowHardenedSand] +
-                      tileCounts[TileID.Sandstone] +
-                      tileCounts[TileID.CorruptSandstone] +
-                      tileCounts[TileID.CrimsonSandstone] +
-                      tileCounts[ModContent.TileType<Gutsandstone>()] +
-                      tileCounts[TileID.HallowSandstone];
-
-        SoftMirageTiles = tileCounts[TileID.Sand] +
-                          tileCounts[TileID.Ebonsand] +
-                          tileCounts[TileID.Crimsand] +
-                          tileCounts[ModContent.TileType<Gutsand>()] +
-                          tileCounts[TileID.Pearlsand] +
-                          tileCounts[ModContent.TileType<Quicksand>()] +
-                          tileCounts[ModContent.TileType<Ebonquicksand>()] +
-                          tileCounts[ModContent.TileType<Crimquicksand>()] +
-                          tileCounts[ModContent.TileType<Gutquicksand>()] +
-                          tileCounts[ModContent.TileType<Pearlquicksand>()];
 
         //Makes it so sand and quicksand is counted torwards The Mirage. this is seperate because of the underground sand patches out in worlds sometimes
 

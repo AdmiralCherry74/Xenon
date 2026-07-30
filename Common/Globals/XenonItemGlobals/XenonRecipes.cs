@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Armor.Vanity.OreCrowns;
 using Xenon.Content.Items.DeveloperItems.DeveloperItems;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Materials.BarsGems;
@@ -63,6 +64,22 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .AddTile(TileID.Anvils)
             .SortAfterFirstRecipesOf(ItemID.Chain)
             .Register();
+
+
+        }
+
+        public override void PostAddRecipes()
+        {
+            for (int i = 0; i < Recipe.numRecipes; i++)
+            {
+                Recipe PlatinumCrownChange = Main.recipe[i];
+                if (PlatinumCrownChange.HasIngredient(ItemID.PlatinumBar) && PlatinumCrownChange.HasIngredient(ItemID.Ruby) && PlatinumCrownChange.HasTile(TileID.Anvils) && PlatinumCrownChange.HasResult(ItemID.PlatinumCrown))
+                {
+                    PlatinumCrownChange.HasTile(TileID.DemonAltar);
+                    PlatinumCrownChange.RemoveTile(TileID.Anvils);
+                    PlatinumCrownChange.SortAfterFirstRecipesOf(ModContent.ItemType<PlatinumCrownModern>());
+                }
+            }
         }
     }
 }

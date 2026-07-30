@@ -34,14 +34,6 @@ internal class ConfectionSystem : ModSystem
                 tileCounts[ModContent.TileType<HestiaStone>()] +
                 tileCounts[ModContent.TileType<MossyHestiaStone>()] +
                 tileCounts[ModContent.TileType<Creamquicksand>()];
-
-            ModContent.GetInstance<Common.Systems.BiomeTileCounts>().MirageTiles +=
-                tileCounts[ModContent.TileType<HardenedCreamsand>()] +
-                tileCounts[ModContent.TileType<Creamsandstone>()];
-
-            ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SoftMirageTiles +=
-                tileCounts[ModContent.TileType<Creamsand>()] +
-                tileCounts[ModContent.TileType<Creamquicksand>()];
         }
     }
     public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)

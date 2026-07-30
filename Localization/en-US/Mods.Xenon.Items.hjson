@@ -3348,3 +3348,28 @@ WeirdGemPouch: {
 	DisplayName: Weird Gem Pouch
 	Tooltip: "'a gem pouch full of strange... well are they even gems?'"
 }
+
+FluoriteCrown: {
+	DisplayName: Fluorite Crown
+	Tooltip: ""
+}
+
+IndiumCrown: {
+	DisplayName: Indium Crown
+	Tooltip: ""
+}
+
+PlatinumCrownModern: {
+	DisplayName: Platinum Crown
+	Tooltip: ""
+}
+
+SilverCrown: {
+	DisplayName: Silver Crown
+	Tooltip: ""
+}
+
+TungstenCrown: {
+	DisplayName: Tungsten Crown
+	Tooltip: ""
+}
