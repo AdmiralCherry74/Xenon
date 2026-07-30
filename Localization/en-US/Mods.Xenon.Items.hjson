@@ -3373,3 +3373,28 @@ TungstenCrown: {
 	DisplayName: Tungsten Crown
 	Tooltip: ""
 }
+
+MarineQuicksandBlock: {
+	DisplayName: Marine Quicksand Block
+	Tooltip: ""
+}
+
+QuickgravelBlock: {
+	DisplayName: Quickgravel Block
+	Tooltip: ""
+}
+
+HardenedMarineSandBlock: {
+	DisplayName: Hardened Marine Sand Block
+	Tooltip: ""
+}
+
+MarineSandBlock: {
+	DisplayName: Marine Sand Block
+	Tooltip: ""
+}
+
+MarineSandstoneBlock: {
+	DisplayName: Marine Sandstone Block
+	Tooltip: ""
+}

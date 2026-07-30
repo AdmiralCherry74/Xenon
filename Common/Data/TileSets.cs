@@ -6,8 +6,8 @@ using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.NaturalStone;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Other;
@@ -30,25 +30,13 @@ internal class TileSets
         ModContent.TileType<HephStone>()
     );
 
-    public static bool[] MirageTileSet = TileID.Sets.Factory.CreateBoolSet(
-        TileID.HardenedSand,
-        TileID.CorruptHardenedSand,
-        TileID.CrimsonHardenedSand,
-        ModContent.TileType<HardenedGutsand>(),
-        TileID.HallowHardenedSand,
-        TileID.Sandstone,
-        TileID.CorruptSandstone,
-        TileID.CrimsonSandstone,
-        ModContent.TileType<Gutsandstone>(),
-        TileID.HallowSandstone
-    );
-
     public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<Quicksand>(),
         ModContent.TileType<Ebonquicksand>(),
         ModContent.TileType<Crimquicksand>(),
         ModContent.TileType<Pearlquicksand>(),
-        ModContent.TileType<Gutquicksand>()
+        ModContent.TileType<Gutquicksand>(),
+        ModContent.TileType<MarineQuicksand>()
     );
 
     public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(

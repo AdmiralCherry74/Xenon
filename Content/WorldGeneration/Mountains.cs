@@ -8,9 +8,9 @@ using System;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Reflection;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Common;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 
 namespace Xenon.Content.WorldGeneration;
 

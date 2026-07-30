@@ -1,5 +1,5 @@
-displayName = Xenon Alpha April Build
+displayName = Xenon Alpha July Build
 author = Moonfox Studios
-version = 0.1.4.13
+version = 0.1.7.30
 modReferences = AltLibrary@2.1.0.7
 weakReferences = Avalon, TheConfectionRebirth

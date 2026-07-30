@@ -48,7 +48,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
         public static int[] SeaOatslootTable1 =
     [
-      ModContent.ItemType<MirageGrassSeeds>(),
+      ModContent.ItemType<TropicGrassSeeds>(),
       ItemID.LesserHealingPotion,
       ItemID.LesserManaPotion,
       ItemID.Glowstick,

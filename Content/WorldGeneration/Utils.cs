@@ -4,12 +4,12 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
 using System.Collections.Generic;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Pets;
 using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 
 namespace Xenon.Content.WorldGeneration;
 

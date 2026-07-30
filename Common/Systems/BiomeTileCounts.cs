@@ -7,8 +7,9 @@ using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
+using Xenon.Content.Tiles.Natural.OceanAndTheMarine;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using Xenon.ModSupport.Avalon.Content.Tiles;
@@ -51,7 +52,10 @@ public class BiomeTileCounts : ModSystem
         Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<MossyHelioStone>()];
 
 
-        UndergroundOceanTile = tileCounts[TileID.Coralstone];
+        UndergroundOceanTile = tileCounts[ModContent.TileType<MarineSand>()] +
+                               tileCounts[ModContent.TileType<HardenedMarineSand>()] +
+                               tileCounts[ModContent.TileType<MarineSandstone>()] +
+                               tileCounts[ModContent.TileType<MarineQuicksand>()];
 
         CorrosionTiles = tileCounts[ModContent.TileType<Gutstone>()] +
                          tileCounts[ModContent.TileType<HardenedGutsand>()] +

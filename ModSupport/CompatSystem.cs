@@ -2,8 +2,6 @@
 using Terraria;
 using Terraria.ModLoader;
 using static Xenon.SpecialUtilities;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Mountains;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 using Avalon.Tiles.Ores;
@@ -13,6 +11,8 @@ using Xenon.Content.Tiles.Natural.Somnolent;
 using TheConfectionRebirth.Tiles;
 using System;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 
 namespace Xenon.ModSupport;
 

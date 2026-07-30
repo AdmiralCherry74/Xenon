@@ -6,8 +6,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon;
@@ -227,8 +227,8 @@ public static class SpecialUtilities
 				if (Main.tile[i, j].TileType == ModContent.TileType<Quicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Crimquicksand>() ||
 					Main.tile[i, j].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Pearlquicksand>() ||
                     Main.tile[i, j].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[i, j].TileType == ModContent.TileType<Quickmud>() ||
-                    Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>())
-
+                    Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>() || Main.tile[i, j].TileType == ModContent.TileType<Quickgravel>() ||
+                    Main.tile[i, j].TileType == ModContent.TileType<MarineQuicksand>())
                 {
 					int num5 = 0;
 					vector2.X = i * 16;
@@ -249,7 +249,11 @@ public static class SpecialUtilities
 							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Mud);
 						if (Main.tile[i, j].TileType == ModContent.TileType<PowderedSnow>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
 							Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.SnowBlock);
-						return new Vector2(i, j);
+                        if (Main.tile[i, j].TileType == ModContent.TileType<Quickgravel>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+                            Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, DustID.Silt);
+                        if (Main.tile[i, j].TileType == ModContent.TileType<MarineQuicksand>() && (double)(Math.Abs(Velocity.X) + Math.Abs(Velocity.Y)) > 0.7 && Main.rand.NextBool(30))
+                            Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, ModContent.DustType<MarineSandDust>());
+                        return new Vector2(i, j);
 					}
 				}
 			}
@@ -266,7 +270,8 @@ public static class SpecialUtilities
 			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Ebonquicksand>() ||
             Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Gutquicksand>() ||
             Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<Quickmud>() ||
-			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>())
+			Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<PowderedSnow>() ||
+            Main.tile[tileCoord.X, tileCoord.Y].TileType == ModContent.TileType<Quickgravel>() || Main.tile[tileCoord.X + 1, tileCoord.Y].TileType == ModContent.TileType<MarineQuicksand>())
 		{
 			return true;
 		}
