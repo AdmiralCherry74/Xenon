@@ -24,7 +24,7 @@ public class BiomeTileCounts : ModSystem
     public int SomnolentTiles { get; private set; }
     public int FrozenLavaTiles { get; private set; }
     public int MountainTiles { get; set; }
-    public int UndergroundOceanTile { get; set; }
+    public int UndergroundOceanTiles { get; set; }
     public int ForestMushroomTiles { get; set; }
     public int CorrosionJungleTiles { get; set; }
     public int CorruptionJungleTiles { get; set; }
@@ -52,7 +52,7 @@ public class BiomeTileCounts : ModSystem
         Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<MossyHelioStone>()];
 
 
-        UndergroundOceanTile = tileCounts[ModContent.TileType<MarineSand>()] +
+        UndergroundOceanTiles = tileCounts[ModContent.TileType<MarineSand>()] +
                                tileCounts[ModContent.TileType<HardenedMarineSand>()] +
                                tileCounts[ModContent.TileType<MarineSandstone>()] +
                                tileCounts[ModContent.TileType<MarineQuicksand>()];

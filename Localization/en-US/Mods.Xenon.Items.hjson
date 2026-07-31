@@ -1881,7 +1881,7 @@ DungeonSolution: {
 
 HardenedWhiteGel: {
 	DisplayName: Hardened White Gel
-	Tooltip: Permantly hardened white gelation used for crossbows
+	Tooltip: Permantly hardened white gelatin used for crossbows
 }
 
 WhiteGel: {

@@ -23,7 +23,7 @@ public class LapisGemstoneBlock : ModTile
         Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         RegisterItemDrop(ModContent.ItemType<Lapis>());
-        AddMapEntry(new Color(50, 28, 110));
+        AddMapEntry(new Color(50, 28, 110), this.GetLocalization("MapEntry"));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<LapisGemDust>();
     }

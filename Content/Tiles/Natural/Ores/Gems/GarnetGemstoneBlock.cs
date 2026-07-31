@@ -22,7 +22,7 @@ public class GarnetGemstoneBlock : ModTile
         Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
         RegisterItemDrop(ModContent.ItemType<Garnet>());
-        AddMapEntry(new Color(206, 1, 135));
+        AddMapEntry(new Color(206, 1, 135), this.GetLocalization("MapEntry"));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<GarnetGemDust>();
     }

@@ -48,10 +48,11 @@ public class IndiumOre : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileMerge[Type][TileID.Mud] = true;
         Main.tileMerge[TileID.Mud][Type] = true;
-        AddMapEntry(new Color(31, 35, 84));
+        AddMapEntry(new Color(31, 35, 84), this.GetLocalization("MapEntry"));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<IndiumDust>();
-    }
+		TileID.Sets.Ore[Type] = true;
+	}
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

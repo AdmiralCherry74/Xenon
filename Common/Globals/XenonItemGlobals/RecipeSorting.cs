@@ -38,7 +38,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 {
     public class RecipeSorting : ModSystem
     {
-        //cleverly using the fact that these recipes will load in the order to put them in, too properly sort them into the crafting ui
+        //cleverly using the fact that these recipes will load in the order to put them in, to properly sort them into the crafting ui
         public override void AddRecipes()
         {
             #region Building Block
@@ -1274,7 +1274,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #region Fluortie Recipes
             //Bar
             Recipe.Create(ModContent.ItemType<FluoriteBar>())
-                .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 3)
+                .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 4)
                 .AddTile(TileID.Furnaces)
                 .SortAfterFirstRecipesOf(ItemID.GoldCrown)
                 .Register();

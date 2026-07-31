@@ -49,10 +49,11 @@ public class FluoriteOre : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileMerge[Type][TileID.Mud] = true;
         Main.tileMerge[TileID.Mud][Type] = true;
-        AddMapEntry(new Color(255, 48, 148));
+        AddMapEntry(new Color(255, 48, 148), this.GetLocalization("MapEntry"));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<FluoriteDust>();
-    }
+		TileID.Sets.Ore[Type] = true;
+	}
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

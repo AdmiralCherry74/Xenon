@@ -1,8 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon.Biomes;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.GameContent.Biomes;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.WorldBuilding;
 using Xenon.Common.Systems;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
@@ -10,9 +14,35 @@ using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 
 namespace Xenon.Common.Globals;
 
+internal class LavaLineSaving : ModHook
+{
+	protected override void Apply()
+	{
+		On_TerrainPass.ApplyPass += On_TerrainPass_ApplyPass;
+
+	}
+	private void On_TerrainPass_ApplyPass(On_TerrainPass.orig_ApplyPass orig, TerrainPass self, GenerationProgress progress, Terraria.IO.GameConfiguration configuration)
+	{
+        orig.Invoke(self, progress, configuration);
+        ModContent.GetInstance<XenonWorld>().LavaLine = GenVars.lavaLine;
+	}
+}
 internal class XenonWorld : ModSystem
 {
-    public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
+    public int LavaLine = 0;
+	public override void SaveWorldData(TagCompound tag)
+	{
+        tag["Xenon:LavaLine"] = LavaLine;
+	}
+	public override void LoadWorldData(TagCompound tag)
+	{
+        if (tag.ContainsKey("Xenon:LavaLine"))
+        {
+            LavaLine = tag.GetAsInt("Xenon:LavaLine");
+        }
+        else LavaLine = (int)(Main.rockLayer + (double)Main.maxTilesY) / 2;
+	}
+	public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
     {
         float CorrosionStrength = ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles / 350f;
         //if (CaptureManager.Instance.Active && CaptureManager.Instance.IsCapturing && CaptureInterface.Settings.BiomeChoiceIndex == AddModdedCaptureBiomes.biomeCapturesIndexs[0])

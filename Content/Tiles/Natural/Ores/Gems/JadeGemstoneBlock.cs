@@ -21,7 +21,7 @@ public class JadeGemstoneBlock : ModTile
         Main.tileShine2[Type] = true;
         Main.tileShine[Type] = 900;
         TileID.Sets.Ore[Type] = true;
-        AddMapEntry(new Color(69, 69, 69)); //Nice
+        AddMapEntry(new Color(69, 120, 69), this.GetLocalization("MapEntry")); //Nice
         RegisterItemDrop(ModContent.ItemType<Jade>());
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<JadeGemDust>();

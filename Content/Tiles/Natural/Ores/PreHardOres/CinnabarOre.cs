@@ -50,10 +50,11 @@ public class CinnabarOre : ModTile
         Main.tileBlockLight[Type] = true;
         Main.tileMerge[Type][TileID.Mud] = true;
         Main.tileMerge[TileID.Mud][Type] = true;
-        AddMapEntry(new Color(155, 1, 29));
+        AddMapEntry(new Color(155, 1, 29), this.GetLocalization("MapEntry"));
         HitSound = SoundID.Tink;
         DustType = ModContent.DustType<CinnabarDust>();
-    }
+		TileID.Sets.Ore[Type] = true;
+	}
 
     public override void NumDust(int i, int j, bool fail, ref int num)
     {

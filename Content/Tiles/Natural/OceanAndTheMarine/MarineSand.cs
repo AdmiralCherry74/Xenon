@@ -30,7 +30,7 @@ public class MarineSand : ModTile
 
 		MineResist = 0.5f;
 		DustType = ModContent.DustType<MarineSandDust>();
-		AddMapEntry(new Color(205, 203, 156));
+		AddMapEntry(new Color(148, 158, 229));
 	}
 	public override void ModifyFrameMerge(int i, int j, ref int up, ref int down, ref int left, ref int right, ref int upLeft, ref int upRight, ref int downLeft, ref int downRight)
 	{
