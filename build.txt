@@ -2,4 +2,4 @@ displayName = Xenon Alpha July Build
 author = Moonfox Studios
 version = 0.1.7.30
 modReferences = AltLibrary@2.1.0.7
-weakReferences = Avalon, TheConfectionRebirth
+weakReferences = Avalon, TheConfectionRebirth, Fargowiltas, FargowiltasSouls

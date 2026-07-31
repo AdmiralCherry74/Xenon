@@ -1,5 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+<!-- some stuff to make vscode happy to compile on linux	-->
+	<PropertyGroup>
+		<TargetFramework Condition="'$(TargetFramework)' == ''">net8.0</TargetFramework>
+	</PropertyGroup>
+
 	<!-- Import tModLoader mod properties -->
 	<Import Project="..\tModLoader.targets" />
 
