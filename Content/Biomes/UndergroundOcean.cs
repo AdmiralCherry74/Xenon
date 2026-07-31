@@ -17,7 +17,7 @@ public class UndergroundOcean : ModBiome
 
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().UndergroundOceanTiles >= 50 && (player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight) && player.position.X < WorldGen.beachDistance && player.position.X > Main.maxTilesX - WorldGen.beachDistance;
+        return ModContent.GetInstance<BiomeTileCounts>().UndergroundOceanTiles >= 50 && (player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight) && (player.position.X / 16 < 300 || player.position.X / 16 > Main.maxTilesX - 300);
     }
     public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle
     {
