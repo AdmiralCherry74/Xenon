@@ -1,5 +1,7 @@
 ﻿using Avalon.Tiles.Ores;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -14,6 +16,14 @@ namespace Xenon;
 
 public static class SpecialUtilities
 {
+	public static Asset<Texture2D> GetTexture(this ModTexturedType texturedType) =>
+		ModContent.Request<Texture2D>(texturedType.Texture);
+
+	public static Asset<Texture2D> GetTexture(this ModItem modItem) =>
+		ModContent.Request<Texture2D>(modItem.Texture);
+
+	public static Asset<Texture2D> GetTexture(this ModProjectile modProjectile) =>
+		ModContent.Request<Texture2D>(modProjectile.Texture);
 	public static int GetPickaxePower(int tileType, int yPos)
 	{
 		if (!TileID.Sets.Ore[tileType]) return -1;
