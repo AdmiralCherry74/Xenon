@@ -1,0 +1,54 @@
+mutant mod summon for stomach of cthulhu
+eternity stomach of cthulhu ai
+eternity mode drops for various xenon enemies
+champions of honor
+deviant summons for xenon enemies
+ore/evil alt crafting for xenon alts
+xenon-inspired mutant attacks
+eternity mode ai for xenon enemies
+xenon accessories for souls
+temple sentry eternity AI
+temple sentry eternity drop
+mahogster eternity AI
+mahogster eternity drop
+bandit looter eternity AI
+bandit looter eternity drop
+lava worm eternity AI
+lava worm eternity drop
+king grubby
+
+enchant ideas (including some moving around of existing enchants):
+enchant  |force |effect                                                                                                  |wizard bonus
+---------+------+--------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------
+bilewood |honor |you are surrounded by an aura of lifestealing                                                           |aura size increased and lifesteal rate increased
+         |      |                                                                                                        |
+fluorite |honor |you are surrounded by an aura of corrosion (not the biome). enemies in this aura have their armor melted|aura size increased and defense melting rate increased
+         |      |away and lose defense over time while inside the aura, regaining it over time after leaving the aura.   |
+         |      |                                                                                                        |
+caustic  |nature|touch enemy gores to eat their gores; eating gores reduces healing potion cooldown                      |potion cooldown is reduced by a larger amount
+         |      |                                                                                                        |
+cloud    |spirit|summons a cloud whip to apply a tag damage bonus passively                                              |whip is bigger and adds more tag damage
+         |      |                                                                                                        |
+jacaranda|timber|grappling hooking something makes you not consume wing flight time/bundle of balloon jumps for a second |3 seconds instead of just 1 second
+         |      |                                                                                                        |
+aluminum |will  |your damage and defense increase with remaining jumps/wing time                                         |damage and defense bonus increased
+         |      |                                                                                                        |
+cinnabar |will  |using a healing potion releases a damaging wave of poison with lifesteal                                |wave size increased, poison damage increased, lifesteal increased
+         |      |                                                                                                        |
+indium   |will  |indium crystals will grow on struck enemies. these crystals do no damage to the enemy they are attached |crystal growth cooldown reduced, crystals deal more damage
+         |      |to, but can damage nearby enemies                                                                       |
+---------+------+--------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------
+ebonwood |honor |unchanged from base fargo's                                                                             |unchanged from base fargo's
+shadewood|honor |unchanged from base fargo's                                                                             |unchanged from base fargo's
+molten   |honor |unchanged from base fargo's                                                                             |unchanged from base fargo's
+gladiator|honor |unchanged from base fargo's                                                                             |unchanged from base fargo's
+---------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+force    |honor |the player gains a massive aura around them. having enemies in this aura builds up charge (seperately from force of earth). getting hit or violating CEG rules sets charge
+         |      |back to 0. once charge fills up, damage dealt is doubled, enemy defense is ignored, and you will take only 1 damage the next time you get hit or dodge something.
+         |      |teammates in your aura while you are at full charge get 25% more damage and 20 defense
+
+list of CEG rules that force of honor wants you to follow: no mounts, no getting hit, no teleports, no pattern disruption, no using dodges, gutted heart creepers must be off, no gold enchant shell, no computation orb, no patreon names, no bonk dash, no parries, no invincible dashes, and no taking debuff damage
+
+digested heart (eternity mode SoC drop idea): grants immunity to digesting. 10% increased damage. you leave behind a trail of homing breadcrumbs while moving which inflict boomed upon contacting an enemy. ingredient in pure heart
+
+eternity mode SoC AI ideas:
