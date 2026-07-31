@@ -381,7 +381,7 @@ UlceriteOre: {
 }
 
 CorrosionSolution: {
-	DisplayName: Corrosion Solution
+	DisplayName: Expired Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -2764,7 +2764,7 @@ BilewoodBroadsword: {
 }
 
 BrownIceBlock: {
-	DisplayName: Brown Ice Block
+	DisplayName: Expired Ice Block
 	Tooltip: ""
 }
 
@@ -2984,7 +2984,7 @@ PlatformArcitectsHandbook: {
 }
 
 SnoozeSolution: {
-	DisplayName: Snooze Solution
+	DisplayName: Doze Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -3013,7 +3013,7 @@ CinnabarBrickItem: {
 }
 
 IndigoIceBlock: {
-	DisplayName: Indigo Ice
+	DisplayName: Doze Ice Block
 	Tooltip: ""
 }
 
@@ -3396,5 +3396,95 @@ MarineSandBlock: {
 
 MarineSandstoneBlock: {
 	DisplayName: Marine Sandstone Block
+	Tooltip: ""
+}
+
+AluminumCandle: {
+	DisplayName: Aluminum Candle
+	Tooltip: ""
+}
+
+AmethystCandle: {
+	DisplayName: Amethyst Candle
+	Tooltip: ""
+}
+
+CopperCandle: {
+	DisplayName: Copper Candle
+	Tooltip: ""
+}
+
+DiamondCandle: {
+	DisplayName: Diamond Candle
+	Tooltip: ""
+}
+
+EmeraldCandle: {
+	DisplayName: Emerald Candle
+	Tooltip: ""
+}
+
+FluoriteCandle: {
+	DisplayName: Fluorite Candle
+	Tooltip: ""
+}
+
+GarnetCandle: {
+	DisplayName: Garnet Candle
+	Tooltip: ""
+}
+
+IndiumCandle: {
+	DisplayName: Indium Candle
+	Tooltip: ""
+}
+
+JadeCandle: {
+	DisplayName: Jade Candle
+	Tooltip: ""
+}
+
+LapisCandle: {
+	DisplayName: Lapis Candle
+	Tooltip: ""
+}
+
+RubyCandle: {
+	DisplayName: Ruby Candle
+	Tooltip: ""
+}
+
+SapphireCandle: {
+	DisplayName: Sapphire Candle
+	Tooltip: ""
+}
+
+SilverCandle: {
+	DisplayName: Silver Candle
+	Tooltip: ""
+}
+
+TinCandle: {
+	DisplayName: Tin Candle
+	Tooltip: ""
+}
+
+TopazCandle: {
+	DisplayName: Topaz Candle
+	Tooltip: ""
+}
+
+TungstenCandle: {
+	DisplayName: Tungsten Candle
+	Tooltip: ""
+}
+
+FrozenLavaWallItem: {
+	DisplayName: Frozen Lava Wall Item
+	Tooltip: ""
+}
+
+FrozenLavaWallUnsafeItem: {
+	DisplayName: Frozen Lava Wall Unsafe Item
 	Tooltip: ""
 }

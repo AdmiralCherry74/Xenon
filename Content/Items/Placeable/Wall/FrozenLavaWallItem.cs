@@ -5,7 +5,7 @@ using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Walls.NaturalWalls.Snow;
 
-namespace Xenon.Content.Items.Placeable.Wall.Natural;
+namespace Xenon.Content.Items.Placeable.Wall;
 
 public class FrozenLavaWallItem : ModItem
 {
