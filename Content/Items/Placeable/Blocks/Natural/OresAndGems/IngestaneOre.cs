@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
@@ -14,5 +15,6 @@ public class IngestaneOre : ModItem
 	{
 		Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Ores.PreHardOres.IngestaneOre>());
         Item.value = Item.sellPrice(0, 0, 7);
+		Item.rare = ItemRarityID.Blue;
     }
 }

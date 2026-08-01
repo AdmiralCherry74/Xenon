@@ -7,6 +7,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.RGB;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Accessories.Expert;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
@@ -37,6 +38,7 @@ namespace Xenon.Content.Items.Consumables.TreasureBags
         {
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<IngestaneOre>(), 1, 50, 110));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<FreshChyme>(), 1, 50, 110));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<GastricCloak>(), 1, 1, 1));
             itemLoot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 3, 3));
         }
     }

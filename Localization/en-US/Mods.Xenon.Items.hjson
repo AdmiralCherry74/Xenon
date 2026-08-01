@@ -3488,3 +3488,34 @@ FrozenLavaWallUnsafeItem: {
 	DisplayName: Frozen Lava Wall Unsafe Item
 	Tooltip: ""
 }
+
+Bowquet: {
+	DisplayName: Bow-quet
+	Tooltip: A bow made of grass?
+}
+
+WindSneakers: {
+	DisplayName: Wind Sneakers
+	Tooltip: The wearer can run super fast, and even faster in windy conditions
+}
+
+ZephyrSneakers: {
+	DisplayName: Zephyr Sneakers
+	Tooltip:
+		'''
+		The wearer can run super fast, and even faster in windy conditions 
+		Go extremely fast in sandstorms
+		Grants immunity to Mighty Wind
+		Negates fall damage
+		'''
+}
+
+GastricCloak: {
+	DisplayName: Gastric Cloak
+	Tooltip: ""
+}
+
+GrubCrown: {
+	DisplayName: Grub Crown
+	Tooltip: ""
+}

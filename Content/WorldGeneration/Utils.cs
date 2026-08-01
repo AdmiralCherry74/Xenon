@@ -34,7 +34,7 @@ public class Utils
 		//return result;
 		List<int> items = new()
 		{
-			ModContent.ItemType<ZephyrBoots>(),
+			ModContent.ItemType<WindSneakers>(),
 			ModContent.ItemType<TheRange>(),
 			ModContent.ItemType<SeedPacket>()
 		};
