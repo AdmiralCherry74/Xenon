@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
 {
-    public class FrostNadeProj : ModProjectile
+    public class FireBombProj : ModProjectile
     {
         private const int DefaultWidthHeight = 10;
         private const int ExplosionWidthHeight = 200;
@@ -30,7 +30,7 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             Projectile.penetrate = -1;
 
             // 5 second fuse.
-            Projectile.timeLeft = 150;
+            Projectile.timeLeft = 60;
             Projectile.aiStyle = ProjAIStyleID.Explosive;
 
             AIType = ProjectileID.Grenade; // Act exactly like Soulscourge pirate
@@ -102,19 +102,19 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             // Change the hitbox size, centered about the original projectile center. This makes the projectile damage enemies during the explosion.
             Projectile.Resize(ExplosionWidthHeight, ExplosionWidthHeight);
 
-            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
-            Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
+            Projectile.damage = 100; // Bomb: 100, Dynamite: 250
+            Projectile.knockBack = 0f; // Bomb: 8f, Dynamite: 10f
             Projectile.penetrate = -1;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             for (int i = 0; i < 10; i++)
             {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, default, 1);
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, default, 1);
                 d.noGravity = true;
                 d.fadeIn = 1.3f;
             }
-            target.AddBuff(BuffID.Frostburn, 600);
+            target.AddBuff(BuffID.OnFire3, 2000000000);
         }
 
         public override void OnKill(int timeLeft)
@@ -124,7 +124,7 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             // Smoke Dust spawn
             for (int i = 0; i < 50; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Smoke, 0f, 0f, 100, default, 2f);
+                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 100, default, 2f);
                 dust.velocity *= 1.4f;
                 
             }
@@ -132,10 +132,10 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             // Fire Dust spawn
             for (int i = 0; i < 80; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 100, default, 3f);
+                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.RedTorch, 0f, 0f, 100, default, 3f);
                 dust.noGravity = true;
                 dust.velocity *= 5f;
-                dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 100, default, 2f);
+                dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.YellowTorch, 0f, 0f, 100, default, 2f);
                 dust.velocity *= 3f;
             }
 
@@ -162,8 +162,8 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             }
             // reset size to normal width and height.
             Projectile.Resize(DefaultWidthHeight, DefaultWidthHeight);
-            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
-            Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
+            Projectile.damage = 100; // Bomb: 100, Dynamite: 250
+            Projectile.knockBack = 0f; // Bomb: 8f, Dynamite: 10f
             Projectile.penetrate = -1;
         }
     }

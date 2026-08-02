@@ -16,9 +16,16 @@ public class HardenedWhiteGel : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe recipe = CreateRecipe();
-        recipe.AddIngredient(ModContent.ItemType<WhiteGel>());
-        recipe.AddTile(TileID.Furnaces);
-        recipe.Register();
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<WhiteGel>(), 1)
+            .AddIngredient(ItemID.SnowBlock)
+            .Register();
+
+        CreateRecipe(2)
+            .AddIngredient(ModContent.ItemType<WhiteGel>(), 1)
+            .AddTile(TileID.Solidifier)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<HardenedWhiteGel>())
+            .Register();
+
     }
 }

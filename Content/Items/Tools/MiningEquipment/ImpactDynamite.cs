@@ -1,11 +1,11 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
-using Xenon.Content.Projectiles.Ranged.Equipment.Lethal;
+using Xenon.Content.Items.Materials;
+using Xenon.Content.Projectiles.Tools.MiningEquipment;
 
-namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
+namespace Xenon.Content.Items.Tools.MiningEquipment
 {
-    public class FrostNade : ModItem
+    public class ImpactDynamite : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -16,12 +16,10 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.shootSpeed = 5f;
-            Item.shoot = ModContent.ProjectileType<FrostNadeProj>();
+            Item.shootSpeed = 4f;
+            Item.shoot = ModContent.ProjectileType<ImpactDynamiteProj>(); //The Tooltip is a reference to the beggining of 'Left Hand Suzuki Method' by The Gorillaz
             Item.width = 10;
-            Item.height = 26;
-            Item.damage = 25;
-            Item.DamageType = DamageClass.Ranged;
+            Item.height = 24;
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.UseSound = SoundID.Item1;
@@ -29,16 +27,14 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
             Item.useTime = 40;
             Item.noUseGraphic = true;
             Item.noMelee = true;
-            Item.rare = ItemRarityID.Blue;
         }
 
         public override void AddRecipes()
         {
-            CreateRecipe(5)
-                .AddIngredient(ItemID.Snowball, 1)
-                .AddIngredient(ModContent.ItemType<FrozenLava>(), 1)
-                .AddIngredient(ItemID.Grenade, 5)
-                .AddTile(TileID.WorkBenches)
+            CreateRecipe()
+                .AddIngredient(ItemID.Dynamite)
+                .AddIngredient(ModContent.ItemType<WhiteGel>())
+                .SortAfterFirstRecipesOf(ItemID.BouncyDynamite)
                 .Register();
         }
     }

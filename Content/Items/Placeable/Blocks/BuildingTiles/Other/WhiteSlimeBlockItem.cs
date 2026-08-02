@@ -34,5 +34,10 @@ public class WhiteSlimeBlockItem : ModItem
             .AddIngredient(ModContent.ItemType<HardenedWhiteGel>(), 1)
             .AddTile(TileID.Solidifier)
             .Register();
+
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<WhiteGel>(), 2)
+            .AddTile(TileID.Solidifier)
+            .Register();
     }
 }

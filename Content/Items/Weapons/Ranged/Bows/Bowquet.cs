@@ -21,13 +21,13 @@ class Bowquet : ModItem
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.noMelee = true;
 
-        Item.damage = 17;
+        Item.damage = 21;
         Item.DamageType = DamageClass.Ranged;
         Item.knockBack = 1f;
         Item.shoot = ProjectileID.WoodenArrowFriendly;
-        Item.shootSpeed = 6.7f;
+        Item.shootSpeed = 6.9f;
         Item.useAmmo = AmmoID.Arrow;
 
-        Item.value = 360;
+        Item.value = 5000;
     }
 }

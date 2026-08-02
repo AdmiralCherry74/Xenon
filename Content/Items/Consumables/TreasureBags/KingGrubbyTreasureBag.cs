@@ -12,10 +12,12 @@ using Xenon.Content.Items.Accessories.Expert;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Items.Weapons.Ranged.Bows;
+using Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals;
 
 namespace Xenon.Content.Items.Consumables.TreasureBags
 {
-    public class SOCTreasureBag : ModItem
+    public class KingGrubbyTreasureBag : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -37,22 +39,10 @@ namespace Xenon.Content.Items.Consumables.TreasureBags
         public override bool CanRightClick() => true;
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
-            if (Main.masterMode)
-            {
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<GastricCloak>(), 1, 1, 1));
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<IngestaneOre>(), 1, 110, 135));
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<FreshChyme>(), 1, 30, 50));
-                itemLoot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 7, 7));
-                itemLoot.Add(ItemDropRule.Common(ItemID.SilverCoin, 1, 50, 50));
-            }
-            else
-            {
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<GastricCloak>(), 1, 1, 1));
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<IngestaneOre>(), 1, 80, 110));
-                itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<FreshChyme>(), 1, 20, 40));
-                itemLoot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 7, 7));
-                itemLoot.Add(ItemDropRule.Common(ItemID.SilverCoin, 1, 50, 50));
-            }
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bowquet>(), 5, 1, 1));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Grubnade>(), 3, 5, 20));
+            itemLoot.Add(ItemDropRule.Common(ItemID.GoldCoin, 1, 6, 6));
+            itemLoot.Add(ItemDropRule.Common(ItemID.SilverCoin, 1, 25, 25));
         }
     }
 }

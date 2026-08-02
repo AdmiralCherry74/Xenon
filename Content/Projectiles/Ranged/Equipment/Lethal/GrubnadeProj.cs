@@ -1,5 +1,4 @@
-﻿using Avalon.Items.Weapons.Ranged.PreHardmode.EggCannon;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -7,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
 {
-    public class FrostNadeProj : ModProjectile
+    public class GrubnadeProj : ModProjectile
     {
         private const int DefaultWidthHeight = 10;
         private const int ExplosionWidthHeight = 200;
@@ -67,7 +66,7 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
                     dust.noGravity = true;
                     dust.position = Projectile.Center + new Vector2(1, 0).RotatedBy(Projectile.rotation - 2.1f, default) * 10f;
 
-                    dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 100, default, 1f);
+                    dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.PoisonStaff, 0f, 0f, 100, default, 1f);
                     dust.noGravity = true;
                     dust.position = Projectile.Center + new Vector2(1, 0).RotatedBy(Projectile.rotation - 2.1f, default) * 10f;
                 }
@@ -102,40 +101,39 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             // Change the hitbox size, centered about the original projectile center. This makes the projectile damage enemies during the explosion.
             Projectile.Resize(ExplosionWidthHeight, ExplosionWidthHeight);
 
-            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
-            Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
-            Projectile.penetrate = -1;
+            Projectile.damage = 18; // Bomb: 100, Dynamite: 250
+            Projectile.knockBack = 4f; // Bomb: 8f, Dynamite: 10f
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             for (int i = 0; i < 10; i++)
             {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, default, 1);
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.PoisonStaff, default, 1);
                 d.noGravity = true;
                 d.fadeIn = 1.3f;
             }
-            target.AddBuff(BuffID.Frostburn, 600);
+            target.AddBuff(BuffID.Poisoned, 600);
         }
 
         public override void OnKill(int timeLeft)
         {
             // Play explosion sound
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
+            SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.position);
             // Smoke Dust spawn
             for (int i = 0; i < 50; i++)
             {
                 Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Smoke, 0f, 0f, 100, default, 2f);
                 dust.velocity *= 1.4f;
-                
             }
 
             // Fire Dust spawn
             for (int i = 0; i < 80; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 100, default, 3f);
+                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.PoisonStaff, 0f, 0f, 100, default, 3f);
                 dust.noGravity = true;
                 dust.velocity *= 5f;
-                dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 100, default, 2f);
+                dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.PoisonStaff, 0f, 0f, 100, default, 2f);
                 dust.velocity *= 3f;
             }
 
@@ -162,8 +160,8 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             }
             // reset size to normal width and height.
             Projectile.Resize(DefaultWidthHeight, DefaultWidthHeight);
-            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
-            Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
+            Projectile.damage = 18; // Bomb: 100, Dynamite: 250
+            Projectile.knockBack = 4f; // Bomb: 8f, Dynamite: 10f
             Projectile.penetrate = -1;
         }
     }

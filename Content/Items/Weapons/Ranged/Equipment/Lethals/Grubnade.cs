@@ -5,7 +5,7 @@ using Xenon.Content.Projectiles.Ranged.Equipment.Lethal;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
 {
-    public class FrostNade : ModItem
+    public class Grubnade : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -17,10 +17,10 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
         {
             Item.useStyle = ItemUseStyleID.Swing;
             Item.shootSpeed = 5f;
-            Item.shoot = ModContent.ProjectileType<FrostNadeProj>();
+            Item.shoot = ModContent.ProjectileType<GrubnadeProj>();
             Item.width = 10;
             Item.height = 26;
-            Item.damage = 25;
+            Item.damage = 18;
             Item.DamageType = DamageClass.Ranged;
             Item.maxStack = 9999;
             Item.consumable = true;
@@ -30,16 +30,6 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
             Item.noUseGraphic = true;
             Item.noMelee = true;
             Item.rare = ItemRarityID.Blue;
-        }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe(5)
-                .AddIngredient(ItemID.Snowball, 1)
-                .AddIngredient(ModContent.ItemType<FrozenLava>(), 1)
-                .AddIngredient(ItemID.Grenade, 5)
-                .AddTile(TileID.WorkBenches)
-                .Register();
         }
     }
 }

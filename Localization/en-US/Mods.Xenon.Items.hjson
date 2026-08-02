@@ -1340,7 +1340,7 @@ CausticGreaves: {
 
 ExpiredLeftovers: {
 	DisplayName: Expired Leftovers
-	Tooltip: Summons the Insect of Hunger. well it summons the neworiginalfunny
+	Tooltip: Summons the Stomach of Cthulhu
 }
 
 PolloStoneBlock: {
@@ -1886,7 +1886,7 @@ HardenedWhiteGel: {
 
 WhiteGel: {
 	DisplayName: White Gel
-	Tooltip: Normally behaves like other gel, but extreme pressure makes it like a solid
+	Tooltip: "'Oddly bitter and non-Newtonian'"
 }
 
 WhiteSlimeBlockItem: {
@@ -3517,5 +3517,50 @@ GastricCloak: {
 
 GrubCrown: {
 	DisplayName: Grub Crown
+	Tooltip: Summons King Grubby
+}
+
+KingGrubbyTreasureBag: {
+	DisplayName: King Grubby Treasure Bag
 	Tooltip: ""
+}
+
+Grubnade: {
+	DisplayName: Grubnade
+	Tooltip: ""
+}
+
+FireBomb: {
+	DisplayName: Fire Bomb
+	Tooltip: ""
+}
+
+ImpactBomb: {
+	DisplayName: Impact Bomb
+	Tooltip:
+		'''
+		An immeditate small explosion that will destroy most tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
+}
+
+ImpactDynamite: {
+	DisplayName: Impact Dynamite
+	Tooltip:
+		'''
+		An immeditate large explosion that will destroy most tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
+}
+
+ImpactGrenade: {
+	DisplayName: Impact Grenade
+	Tooltip:
+		'''
+		An immeditate small explosion that will not destroy tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
 }
