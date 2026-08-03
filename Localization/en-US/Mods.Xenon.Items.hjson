@@ -3521,8 +3521,8 @@ GrubCrown: {
 }
 
 KingGrubbyTreasureBag: {
-	DisplayName: King Grubby Treasure Bag
-	Tooltip: ""
+	DisplayName: Treasure Bag (King Grubby)
+	Tooltip: Right click to open
 }
 
 Grubnade: {
@@ -3563,4 +3563,14 @@ ImpactGrenade: {
 		Slower speeds won't make it detonate, however avoid tiles right next to you
 		'Feel the impact!'
 		'''
+}
+
+EvilSouls: {
+	DisplayName: Evil Souls
+	Tooltip: ""
+}
+
+HolySouls: {
+	DisplayName: Holy Souls
+	Tooltip: ""
 }

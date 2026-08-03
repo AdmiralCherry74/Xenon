@@ -1,4 +1,5 @@
-﻿using Avalon.Systems;
+﻿using Avalon.Items.Tools.Hardmode;
+using Avalon.Systems;
 using Avalon.Tiles.Contagion;
 using Avalon.Tiles.Ores;
 using Microsoft.Xna.Framework;
@@ -199,6 +200,17 @@ public class AvalonSystem : ModSystem
 			}
 		}
 	}
+    public override void PostAddRecipes()
+    {
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<DurataniumDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<DurataniumChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<NaquadahDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<NaquadahChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<TroxiniumDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<TroxiniumChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<XanthophyteDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<XanthophyteChainsaw>()] = true;
+    }
 	public override void PostSetupContent()
 	{
 		if (!ModLoader.TryGetMod("Avalon", out Mod avalon))

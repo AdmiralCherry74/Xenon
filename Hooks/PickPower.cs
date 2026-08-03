@@ -1,7 +1,9 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
+using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon.Hooks;
@@ -55,4 +57,22 @@ internal class PickPower2 : ModHook
 		}	
 		return num;
 	}
+}
+
+internal class MechanicalToolRework : ModHook
+{
+    protected override void Apply()
+    {
+        On_Player.GetPickaxeDamage += On_Player_GetPickaxeDamage;
+    }
+
+    private int On_Player_GetPickaxeDamage(On_Player.orig_GetPickaxeDamage orig, Player self, int x, int y, int pickPower, int hitBufferIndex, Tile tileTarget)
+    {
+        int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
+        if (Common.Data.ItemSets.MechanicalToolReworkItemSet[self.inventory[self.selectedItem].type])
+        {
+			num *= 2;
+        }
+        return num;
+    }
 }

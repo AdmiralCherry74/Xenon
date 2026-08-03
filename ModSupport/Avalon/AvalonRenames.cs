@@ -37,6 +37,10 @@ internal class AvalonRenames : ModHook
         {
             return Language.GetText("Mods.Xenon.ModdedItemRenames.PlagueSolution");
         }
+        if (id == ModContent.ItemType<JungleSolution>() && XenonMod.AvalonContentEnabled)
+        {
+            return Language.GetText("Mods.Xenon.ModdedItemRenames.FloraSolution");
+        }
         return orig.Invoke(id);
     }
 }

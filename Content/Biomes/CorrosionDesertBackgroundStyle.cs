@@ -31,14 +31,14 @@ public class CorrosionDesertBackgroundStyle : ModSurfaceBackgroundStyle
 
     public override int ChooseFarTexture()
     {
-        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionDesertFar");
+        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionDesertFar");
     }
     public override int ChooseMiddleTexture()
     {
-        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionDesertMid");
+        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionDesertMid");
     }
     public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
     {
-        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionDesertClose");
+        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionDesertClose");
     }
 }
