@@ -3,3 +3,4 @@ author = Moonfox Studios
 version = 0.1.4.13
 modReferences = AltLibrary@2.1.0.7
 weakReferences = Avalon, TheConfectionRebirth
+buildIgnore = .vs\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\*, *.config, .git\*, .github\*, *.md, .editorconfig, .gitignore, .gitattributes
