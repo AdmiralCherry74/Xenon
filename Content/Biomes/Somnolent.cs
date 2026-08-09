@@ -16,7 +16,7 @@ public class Somnolent : ModBiome
 
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().SomnolentTiles > 300;
+        return ModContent.GetInstance<BiomeTileCounts>().SomnolentTiles >= 300 && !player.ZoneRockLayerHeight;
     }
     //public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle
     //{
@@ -25,4 +25,17 @@ public class Somnolent : ModBiome
     //        return ModContent.GetInstance<TheMirageBackgroundStyle>();
     //    }
     //}
+}
+public class UndergroundSomnolent : ModBiome
+{
+    //public override string BackgroundPath => base.BackgroundPath;
+    //public override string MapBackground => BackgroundPath;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/StarshineUndergroundSomnolentPlaceholder");
+    //public override string BestiaryIcon => base.BestiaryIcon;
+    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeLow; //not sure what the best priority for it would be so
+
+    public override bool IsBiomeActive(Player player)
+    {
+        return ModContent.GetInstance<BiomeTileCounts>().SomnolentTiles >= 300 && player.ZoneRockLayerHeight;
+    }
 }

@@ -7,11 +7,12 @@ namespace Xenon.Content.Items.Materials;
 public class Sludge : ModItem
 {
     //dropped from Toxic Sludges. not sure what else to do with it right now other than make Bogged Pearlwood
-    public override void SetStaticDefaults()
+    public override void SetDefaults()
     {
-        Item.ResearchUnlockCount = 100;
-        Item.value = Item.buyPrice(copper: 5);
-        Item.rare = ItemRarityID.Green;
+        Item.width = 20;
+        Item.height = 20;
+        Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
+        Item.rare = ItemRarityID.Orange;
     }
 }

@@ -6,6 +6,7 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Tools.ConversionTools.Powders;
 using Xenon.Content.NPCs.Bosses;
+using Xenon.Content.NPCs.Bosses.StomachOfCthulhu;
 
 namespace Xenon.Content.Items.Consumables.BossSummons;
 
@@ -26,7 +27,7 @@ public class ExpiredLeftovers : ModItem
 
     public override bool CanUseItem(Player player)
     {
-        return !NPC.AnyNPCs(ModContent.NPCType<NEWORIGINALFUNNY>()) &&
+        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) &&
         (player.InModBiome<Corrosion>() || player.InModBiome<CorrosionUnderground>());
     }
 
@@ -41,7 +42,7 @@ public class ExpiredLeftovers : ModItem
             // (explicitely excluded serverside here)
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
-            int type = ModContent.NPCType<NEWORIGINALFUNNY>();
+            int type = ModContent.NPCType<StomachOfCthulhu>();
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {

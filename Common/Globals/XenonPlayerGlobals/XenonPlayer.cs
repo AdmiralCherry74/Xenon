@@ -42,6 +42,7 @@ public class XenonPlayer : ModPlayer
         KnockbackBoostBattleaxe = false;
         Boomed = false;
         BiomePlatform = false;
+
     }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
     {

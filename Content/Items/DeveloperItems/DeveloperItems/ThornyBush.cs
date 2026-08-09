@@ -6,6 +6,7 @@ namespace Xenon.Content.Items.DeveloperItems.DeveloperItems;
 
 public class ThornyBush : ModItem
 {
+    //For recipe group
     public override void SetStaticDefaults()
     {
         Item.ResearchUnlockCount = 100;

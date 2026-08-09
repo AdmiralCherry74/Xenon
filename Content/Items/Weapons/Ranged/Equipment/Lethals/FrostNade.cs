@@ -1,5 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Projectiles.Ranged.Equipment.Lethal;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
@@ -19,7 +20,7 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
             Item.shoot = ModContent.ProjectileType<FrostNadeProj>();
             Item.width = 10;
             Item.height = 26;
-            Item.damage = 40;
+            Item.damage = 25;
             Item.DamageType = DamageClass.Ranged;
             Item.maxStack = 9999;
             Item.consumable = true;
@@ -33,9 +34,9 @@ namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals
 
         public override void AddRecipes()
         {
-            CreateRecipe()
+            CreateRecipe(5)
                 .AddIngredient(ItemID.Snowball, 1)
-                .AddIngredient(ItemID.IceBlock, 1)
+                .AddIngredient(ModContent.ItemType<FrozenLava>(), 1)
                 .AddIngredient(ItemID.Grenade, 5)
                 .AddTile(TileID.WorkBenches)
                 .Register();

@@ -5,9 +5,9 @@ using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
@@ -49,28 +49,6 @@ public static class ConversionHelper
                     ConvertTile<HephStone>(x, y, type => Common.Data.TileSets.MountainStone[type], false) ||
                     ConvertTile<MossyHephStone>(x, y, type => Common.Data.TileSets.MossyMountainStone[type], false) ||
                     ConvertTile<Gutquicksand>(x, y, type => Common.Data.TileSets.Quicksand[type], false) ||
-                    ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
-            }
-        }
-
-    }
-    public static void ConvertToXenonOres(int i, int j, int size = 4)
-    {
-        for (var x = i - size; x <= i + size; x++)
-        {
-            for (var y = j - size; y <= j + size; y++)
-            {
-                if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - i) + Math.Abs(y - j) >= Math.Sqrt(size * size + size * size))
-                    continue;
-
-                if (Main.tile[x, y].TileType > TileLoader.TileCount || Main.tile[x, y].WallType > WallLoader.WallCount)
-                    continue;
-
-
-                _ = ConvertTile<AluminumOre>(x, y, type => Common.Data.TileSets.Tier1Ore[type], false) ||
-                    ConvertTile<CinnabarOre>(x, y, type => Common.Data.TileSets.Tier2Ore[type], false) ||
-                    ConvertTile<IndiumOre>(x, y, type => Common.Data.TileSets.Tier3Ore[type], false) ||
-                    ConvertTile<FluoriteOre>(x, y, type => Common.Data.TileSets.Tier4Ore[type], false) ||
                     ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
             }
         }

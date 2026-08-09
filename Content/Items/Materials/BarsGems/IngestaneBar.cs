@@ -17,7 +17,7 @@ public class IngestaneBar : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ItemRarityID.Green;
+        Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }

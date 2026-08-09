@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems
 {

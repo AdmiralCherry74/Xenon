@@ -22,6 +22,13 @@ GastricAltar.MapEntry: Gastric Altar
 CorrosionCrateTile.MapEntry: Corrosion Crate
 CopperFurnaceTile.MapEntry: Copper Furnace
 SandballTrap.MapEntry: Sandball Trap
+AluminumOre.MapEntry: Aluminum
+CinnabarOre.MapEntry: Cinnabar
+FluoriteOre.MapEntry: Fluorite
+IndiumOre.MapEntry: Indium
+JadeGemstoneBlock.MapEntry: Jade
+LapisGemstoneBlock.MapEntry: Lapis
+GarnetGemstoneBlock.MapEntry: Garnet
 
 PlatinumChest: {
 	MapEntry0: Platinum Chest
@@ -32,3 +39,13 @@ Arigrowth.MapEntry: Arigrowth
 PlacedLapis.MapEntry: Lapis
 PlacedGarnet.MapEntry: Garnet
 PlacedJade.MapEntry: Jade
+
+GemStashes: {
+	Jade: Jade Stash
+	Garnet: Garnet Stash
+	Lapis: Lapis Stash
+}
+
+GarnetTree.MapEntry: Garnet Tree
+JadeTree.MapEntry: Jade Tree
+LapisTree.MapEntry: Lapis Tree

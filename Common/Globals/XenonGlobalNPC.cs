@@ -10,9 +10,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Common.Globals.XenonPlayerGlobals;
+using Xenon.Common.Systems;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.NPCs.CatacombMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
@@ -82,7 +84,7 @@ internal class XenonGlobalNPC : GlobalNPC
         }
 
         #region The Mirage
-        if (spawnInfo.Player.InModBiome<TheMirage>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneRockLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
+        if (spawnInfo.Player.InModBiome<UndergroundOcean>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneRockLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
         {
             //If in the underground layer of The Mirage
             pool.Clear();
@@ -90,7 +92,7 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(NPCID.SandSlime, 0.75f);
             pool.Add(NPCID.Tumbleweed, 0.25f);
         }
-        if (spawnInfo.Player.InModBiome<TheMirage>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneDirtLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
+        if (spawnInfo.Player.InModBiome<UndergroundOcean>() && !spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.Player.ZoneDirtLayerHeight && !spawnInfo.Player.ZoneUndergroundDesert)
         {
             //If in the cavern layer of The Mirage
             pool.Clear();
@@ -209,6 +211,14 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(ModContent.NPCType<StomachBug>(), 0.50f);
                 pool.Add(ModContent.NPCType<HalfDigested>(), 0.75f);
             }
+            if (Main.hardMode)
+            {
+                pool.Add(ModContent.NPCType<FilthyMummy>(), 0.50f);
+            }
+        }
+        if (Main.hardMode && spawnInfo.Player.InModBiome<CorrosionUnderground>() && spawnInfo.Player.ZoneSnow)
+        {
+            pool.Add(ModContent.NPCType<BrownPigron>(), 1f);
         }
         if (spawnInfo.Player.InModBiome<CorrosionJungle>())
         {
@@ -329,8 +339,24 @@ public class DamageOverTimeGlobalNPC : GlobalNPC
             npc.lifeRegen -= 4;
         }
     }
+}
+public class SoulConditionsAndShit : GlobalNPC
+{
     public override void ModifyGlobalLoot(GlobalLoot globalLoot)
     {
+        globalLoot.Remove(new ItemDropWithConditionRule(520, 5, 1, 1, new Conditions.SoulOfLight()));
+        globalLoot.Remove(new ItemDropWithConditionRule(521, 5, 1, 1, new Conditions.SoulOfNight()));
+
         globalLoot.Add(ItemDropRule.ByCondition(new PuritySoulConditions(), ModContent.ItemType<SoulOfRight>(), 5, 1, 1));
+        globalLoot.Add(ItemDropRule.ByCondition(new NewCorruptionSoulConditions(), ItemID.SoulofNight, 5, 1, 1));
+        globalLoot.Add(ItemDropRule.ByCondition(new CrimsonSoulConditions(), ModContent.ItemType<SoulofSpite>(), 5, 1, 1));
+        globalLoot.Add(ItemDropRule.ByCondition(new CorrosionSoulConditions(), ModContent.ItemType<SoulofBlight>(), 5, 1, 1));
+        globalLoot.Add(ItemDropRule.ByCondition(new NewHallowSoulConditions(), ItemID.SoulofLight, 5, 1, 1));
+        globalLoot.Add(ItemDropRule.ByCondition(new SomnolentSoulConditions(), ModContent.ItemType<SoulofTwilight>(), 5, 1, 1));
     }
+}
+
+    public class DownedEaterAndBrain
+{
+    
 }

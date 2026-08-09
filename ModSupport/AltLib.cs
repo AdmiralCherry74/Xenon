@@ -8,12 +8,12 @@ using Xenon.Content.Walls.NaturalWalls.Corrosion;
 using Xenon.Content.NPCs.Other;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using AltLibrary.Common.AltBiomes;
-using Xenon.Content.Tiles.Natural.Ores;
 using AltLibrary.Common.AltOres;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Building.Decorational;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon.ModSupport;
 

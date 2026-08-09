@@ -1,4 +1,5 @@
-﻿using Avalon.Systems;
+﻿using Avalon.Items.Tools.Hardmode;
+using Avalon.Systems;
 using Avalon.Tiles.Contagion;
 using Avalon.Tiles.Ores;
 using Microsoft.Xna.Framework;
@@ -7,9 +8,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using static Xenon.SpecialUtilities;
 
@@ -33,14 +34,6 @@ public class AvalonSystem : ModSystem
 			ModContent.GetInstance<BiomeTileCounts>().ContagionTiles +=
 				tileCounts[ModContent.TileType<PolloStone>()] +
 				tileCounts[ModContent.TileType<MossyPolloStone>()] +
-				tileCounts[ModContent.TileType<Snotquicksand>()];
-
-			ModContent.GetInstance<Common.Systems.BiomeTileCounts>().MirageTiles +=
-				tileCounts[ModContent.TileType<HardenedSnotsand>()] +
-				tileCounts[ModContent.TileType<Snotsandstone>()];
-
-			ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SoftMirageTiles +=
-				tileCounts[ModContent.TileType<Snotsand>()] +
 				tileCounts[ModContent.TileType<Snotquicksand>()];
 
         }
@@ -207,6 +200,17 @@ public class AvalonSystem : ModSystem
 			}
 		}
 	}
+    public override void PostAddRecipes()
+    {
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<DurataniumDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<DurataniumChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<NaquadahDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<NaquadahChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<TroxiniumDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<TroxiniumChainsaw>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<XanthophyteDrill>()] = true;
+        Common.Data.ItemSets.MechanicalToolReworkItemSet[ModContent.ItemType<XanthophyteChainsaw>()] = true;
+    }
 	public override void PostSetupContent()
 	{
 		if (!ModLoader.TryGetMod("Avalon", out Mod avalon))

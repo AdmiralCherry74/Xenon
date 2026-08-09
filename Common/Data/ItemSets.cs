@@ -57,5 +57,32 @@ namespace Xenon.Common.Data
         #endregion
         );
         #endregion
+
+        public static readonly bool[] MechanicalToolReworkItemSet = ItemID.Sets.Factory.CreateBoolSet(
+        ItemID.CobaltDrill,
+        ItemID.PalladiumDrill,
+        ItemID.MythrilDrill,
+        ItemID.OrichalcumDrill,
+        ItemID.AdamantiteDrill,
+        ItemID.TitaniumDrill,
+        ItemID.Drax,
+        ItemID.ChlorophyteDrill,
+        ItemID.LaserDrill,
+        ItemID.VortexDrill,
+        ItemID.SolarFlareDrill,
+        ItemID.NebulaDrill,
+        ItemID.StardustDrill,
+
+        ItemID.CobaltChainsaw,
+        ItemID.PalladiumChainsaw,
+        ItemID.MythrilChainsaw,
+        ItemID.OrichalcumChainsaw,
+        ItemID.AdamantiteChainsaw,
+        ItemID.TitaniumChainsaw,
+        ItemID.ChlorophyteChainsaw,
+        ItemID.ButchersChainsaw,
+
+        ItemID.ChlorophyteJackhammer
+        );
     }
 }

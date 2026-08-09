@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon.Items.Weapons.Ranged.PreHardmode.EggCannon;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -8,8 +9,8 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
 {
     public class FrostNadeProj : ModProjectile
     {
-        private const int DefaultWidthHeight = 15;
-        private const int ExplosionWidthHeight = 250;
+        private const int DefaultWidthHeight = 10;
+        private const int ExplosionWidthHeight = 200;
 
 
         public override void SetStaticDefaults()
@@ -101,8 +102,9 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             // Change the hitbox size, centered about the original projectile center. This makes the projectile damage enemies during the explosion.
             Projectile.Resize(ExplosionWidthHeight, ExplosionWidthHeight);
 
-            Projectile.damage = 40; // Bomb: 100, Dynamite: 250
+            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
             Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
+            Projectile.penetrate = -1;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
@@ -124,6 +126,7 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             {
                 Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Smoke, 0f, 0f, 100, default, 2f);
                 dust.velocity *= 1.4f;
+                
             }
 
             // Fire Dust spawn
@@ -159,6 +162,9 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             }
             // reset size to normal width and height.
             Projectile.Resize(DefaultWidthHeight, DefaultWidthHeight);
+            Projectile.damage = 25; // Bomb: 100, Dynamite: 250
+            Projectile.knockBack = 8f; // Bomb: 8f, Dynamite: 10f
+            Projectile.penetrate = -1;
         }
     }
 }

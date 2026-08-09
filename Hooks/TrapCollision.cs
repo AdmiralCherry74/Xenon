@@ -1,7 +1,9 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Buffs.Debuffs.Counterable;
+using Xenon.Content.Tiles.Natural.Ores.Gems;
 using Xenon.Content.Tiles.Natural.Other;
 
 namespace Xenon.Hooks
@@ -16,7 +18,7 @@ namespace Xenon.Hooks
 
         private void On_Player_ApplyTouchDamage(On_Player.orig_ApplyTouchDamage orig, Player self, int tileId, int x, int y)
         {
-            if (tileId == ModContent.TileType<FrozenLava>())
+            if (tileId == ModContent.TileType<FrozenLava>() || tileId == ModContent.TileType<FlintFrozenLavaBlock>())
             {
                 self.AddBuff(ModContent.BuffType<Iceburn>(), 1);
             }
@@ -26,7 +28,7 @@ namespace Xenon.Hooks
         {
             if (player != null)
             {
-                if (type == ModContent.TileType<FrozenLava>())
+                if (type == ModContent.TileType<FrozenLava>() || type == ModContent.TileType<FlintFrozenLavaBlock>())
                 {
                     return true;
                 }

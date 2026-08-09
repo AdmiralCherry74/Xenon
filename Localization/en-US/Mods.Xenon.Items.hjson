@@ -381,7 +381,7 @@ UlceriteOre: {
 }
 
 CorrosionSolution: {
-	DisplayName: Corrosion Solution
+	DisplayName: Expired Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -1340,7 +1340,7 @@ CausticGreaves: {
 
 ExpiredLeftovers: {
 	DisplayName: Expired Leftovers
-	Tooltip: Summons the Insect of Hunger. well it summons the neworiginalfunny
+	Tooltip: Summons the Stomach of Cthulhu
 }
 
 PolloStoneBlock: {
@@ -1881,12 +1881,12 @@ DungeonSolution: {
 
 HardenedWhiteGel: {
 	DisplayName: Hardened White Gel
-	Tooltip: Permantly hardened white gelation used for crossbows
+	Tooltip: Permantly hardened white gelatin used for crossbows
 }
 
 WhiteGel: {
 	DisplayName: White Gel
-	Tooltip: Normally behaves like other gel, but extreme pressure makes it like a solid
+	Tooltip: "'Oddly bitter and non-Newtonian'"
 }
 
 WhiteSlimeBlockItem: {
@@ -2764,7 +2764,7 @@ BilewoodBroadsword: {
 }
 
 BrownIceBlock: {
-	DisplayName: Brown Ice Block
+	DisplayName: Expired Ice Block
 	Tooltip: ""
 }
 
@@ -2984,7 +2984,7 @@ PlatformArcitectsHandbook: {
 }
 
 SnoozeSolution: {
-	DisplayName: Snooze Solution
+	DisplayName: Doze Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -3013,7 +3013,7 @@ CinnabarBrickItem: {
 }
 
 IndigoIceBlock: {
-	DisplayName: Indigo Ice
+	DisplayName: Doze Ice Block
 	Tooltip: ""
 }
 
@@ -3204,5 +3204,373 @@ LapisGemstoneWallItem: {
 
 LapisGemstoneWallUnsafeItem: {
 	DisplayName: Lapis Gemstone Wall Unsafe
+	Tooltip: ""
+}
+
+JadeGemcorn: {
+	DisplayName: Jade Gemcorn
+	Tooltip: ""
+}
+
+GarnetGemcorn: {
+	DisplayName: Garnet Gemcorn
+	Tooltip: ""
+}
+
+LapisGemcorn: {
+	DisplayName: Lapis Gemcorn
+	Tooltip: ""
+}
+
+CopperCandelabra: {
+	DisplayName: Copper Candelabra
+	Tooltip: ""
+}
+
+AmethystCandelabra: {
+	DisplayName: Amethyst Candelabra
+	Tooltip: ""
+}
+
+AluminumCandelabra: {
+	DisplayName: Aluminum Candelabra
+	Tooltip: ""
+}
+
+JadeCandelabra: {
+	DisplayName: Jade Candelabra
+	Tooltip: ""
+}
+
+TinCandelabra: {
+	DisplayName: Tin Candelabra
+	Tooltip: ""
+}
+
+TopazCandelabra: {
+	DisplayName: Topaz Candelabra
+	Tooltip: ""
+}
+
+CopperCrown: {
+	DisplayName: Copper Crown
+	Tooltip: ""
+}
+
+AluminumCrown: {
+	DisplayName: Aluminum Crown
+	Tooltip: ""
+}
+
+TinCrown: {
+	DisplayName: Tin Crown
+	Tooltip: ""
+}
+
+GarnetRobe: {
+	DisplayName: Garnet Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 50
+		10% reduced mana cost
+		'''
+}
+
+JadeRobe: {
+	DisplayName: Jade Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 30
+		6% reduced mana cost
+		'''
+}
+
+LapisRobe: {
+	DisplayName: Lapis Robe
+	Tooltip:
+		'''
+		Increases maximum mana by 70
+		14% reduced mana cost
+		'''
+}
+
+DiamondCandelabra: {
+	DisplayName: Diamond Candelabra
+	Tooltip: ""
+}
+
+EmeraldCandelabra: {
+	DisplayName: Emerald Candelabra
+	Tooltip: ""
+}
+
+FluoriteCandelabra: {
+	DisplayName: Fluorite Candelabra
+	Tooltip: ""
+}
+
+GarnetCandelabra: {
+	DisplayName: Garnet Candelabra
+	Tooltip: ""
+}
+
+IndiumCandelabra: {
+	DisplayName: Indium Candelabra
+	Tooltip: ""
+}
+
+LapisCandelabra: {
+	DisplayName: Lapis Candelabra
+	Tooltip: ""
+}
+
+RubyCandelabra: {
+	DisplayName: Ruby Candelabra
+	Tooltip: ""
+}
+
+SapphireCandelabra: {
+	DisplayName: Sapphire Candelabra
+	Tooltip: ""
+}
+
+SilverCandelabra: {
+	DisplayName: Silver Candelabra
+	Tooltip: ""
+}
+
+TungstenCandelabra: {
+	DisplayName: Tungsten Candelabra
+	Tooltip: ""
+}
+
+WeirdGemPouch: {
+	DisplayName: Weird Gem Pouch
+	Tooltip: "'a gem pouch full of strange... well are they even gems?'"
+}
+
+FluoriteCrown: {
+	DisplayName: Fluorite Crown
+	Tooltip: ""
+}
+
+IndiumCrown: {
+	DisplayName: Indium Crown
+	Tooltip: ""
+}
+
+PlatinumCrownModern: {
+	DisplayName: Platinum Crown
+	Tooltip: ""
+}
+
+SilverCrown: {
+	DisplayName: Silver Crown
+	Tooltip: ""
+}
+
+TungstenCrown: {
+	DisplayName: Tungsten Crown
+	Tooltip: ""
+}
+
+MarineQuicksandBlock: {
+	DisplayName: Marine Quicksand Block
+	Tooltip: ""
+}
+
+QuickgravelBlock: {
+	DisplayName: Quickgravel Block
+	Tooltip: ""
+}
+
+HardenedMarineSandBlock: {
+	DisplayName: Hardened Marine Sand Block
+	Tooltip: ""
+}
+
+MarineSandBlock: {
+	DisplayName: Marine Sand Block
+	Tooltip: ""
+}
+
+MarineSandstoneBlock: {
+	DisplayName: Marine Sandstone Block
+	Tooltip: ""
+}
+
+AluminumCandle: {
+	DisplayName: Aluminum Candle
+	Tooltip: ""
+}
+
+AmethystCandle: {
+	DisplayName: Amethyst Candle
+	Tooltip: ""
+}
+
+CopperCandle: {
+	DisplayName: Copper Candle
+	Tooltip: ""
+}
+
+DiamondCandle: {
+	DisplayName: Diamond Candle
+	Tooltip: ""
+}
+
+EmeraldCandle: {
+	DisplayName: Emerald Candle
+	Tooltip: ""
+}
+
+FluoriteCandle: {
+	DisplayName: Fluorite Candle
+	Tooltip: ""
+}
+
+GarnetCandle: {
+	DisplayName: Garnet Candle
+	Tooltip: ""
+}
+
+IndiumCandle: {
+	DisplayName: Indium Candle
+	Tooltip: ""
+}
+
+JadeCandle: {
+	DisplayName: Jade Candle
+	Tooltip: ""
+}
+
+LapisCandle: {
+	DisplayName: Lapis Candle
+	Tooltip: ""
+}
+
+RubyCandle: {
+	DisplayName: Ruby Candle
+	Tooltip: ""
+}
+
+SapphireCandle: {
+	DisplayName: Sapphire Candle
+	Tooltip: ""
+}
+
+SilverCandle: {
+	DisplayName: Silver Candle
+	Tooltip: ""
+}
+
+TinCandle: {
+	DisplayName: Tin Candle
+	Tooltip: ""
+}
+
+TopazCandle: {
+	DisplayName: Topaz Candle
+	Tooltip: ""
+}
+
+TungstenCandle: {
+	DisplayName: Tungsten Candle
+	Tooltip: ""
+}
+
+FrozenLavaWallItem: {
+	DisplayName: Frozen Lava Wall Item
+	Tooltip: ""
+}
+
+FrozenLavaWallUnsafeItem: {
+	DisplayName: Frozen Lava Wall Unsafe Item
+	Tooltip: ""
+}
+
+Bowquet: {
+	DisplayName: Bow-quet
+	Tooltip: A bow made of grass?
+}
+
+WindSneakers: {
+	DisplayName: Wind Sneakers
+	Tooltip: The wearer can run super fast, and even faster in windy conditions
+}
+
+ZephyrSneakers: {
+	DisplayName: Zephyr Sneakers
+	Tooltip:
+		'''
+		The wearer can run super fast, and even faster in windy conditions 
+		Go extremely fast in sandstorms
+		Grants immunity to Mighty Wind
+		Negates fall damage
+		'''
+}
+
+GastricCloak: {
+	DisplayName: Gastric Cloak
+	Tooltip: ""
+}
+
+GrubCrown: {
+	DisplayName: Grub Crown
+	Tooltip: Summons King Grubby
+}
+
+KingGrubbyTreasureBag: {
+	DisplayName: Treasure Bag (King Grubby)
+	Tooltip: Right click to open
+}
+
+Grubnade: {
+	DisplayName: Grubnade
+	Tooltip: ""
+}
+
+FireBomb: {
+	DisplayName: Fire Bomb
+	Tooltip: ""
+}
+
+ImpactBomb: {
+	DisplayName: Impact Bomb
+	Tooltip:
+		'''
+		An immeditate small explosion that will destroy most tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
+}
+
+ImpactDynamite: {
+	DisplayName: Impact Dynamite
+	Tooltip:
+		'''
+		An immeditate large explosion that will destroy most tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
+}
+
+ImpactGrenade: {
+	DisplayName: Impact Grenade
+	Tooltip:
+		'''
+		An immeditate small explosion that will not destroy tiles upon impact
+		Slower speeds won't make it detonate, however avoid tiles right next to you
+		'Feel the impact!'
+		'''
+}
+
+EvilSouls: {
+	DisplayName: Evil Souls
+	Tooltip: ""
+}
+
+HolySouls: {
+	DisplayName: Holy Souls
 	Tooltip: ""
 }

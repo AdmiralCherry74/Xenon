@@ -15,12 +15,13 @@ namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
         public override void SetDefaults()
         {
             Item.rare = ModContent.RarityType<Evil>();
-            Item.value = Item.buyPrice(gold: 35);
+            Item.value = Item.buyPrice(gold: 38);
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<GemPouch>());
+            recipe.AddIngredient(ModContent.ItemType<WeirdGemPouch>());
             recipe.AddIngredient(ModContent.ItemType<PremiumGemPouch>());
             recipe.AddIngredient(ModContent.ItemType<Materials.Pouch>());
             recipe.AddTile(TileID.Tables);

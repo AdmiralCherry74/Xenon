@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Other;
 

@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.Map;
@@ -35,6 +36,62 @@ internal class ItemNameChange : ModHook
         if (id == ItemID.LavaCrateHard && ModContent.GetInstance<XenonConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneCrateRename");
+        }
+        if (id == ItemID.PlatinumCrown)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.AncientPlatinumCrown");
+        }
+        if (id == ItemID.Candelabra)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.GoldCandelabra");
+        }
+        if (id == ItemID.Candle)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.GoldCandle");
+        }
+        if (id == ItemID.PurpleIceBlock)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.EvilIce");
+        }
+        if (id == ItemID.RedIceBlock)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.FleshIce");
+        }
+        if (id == ItemID.PinkIceBlock)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.HolyIce");
+        }
+        if (id == ItemID.GreenSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.PuritySolution");
+        }
+        if (id == ItemID.SandSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.DesertSolution");
+        }
+        if (id == ItemID.SnowSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.SnowSolution");
+        }
+        if (id == ItemID.DirtSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.ForestSolution");
+        }
+        if (id == ItemID.BlueSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.HallowSolution");
+        }
+        if (id == ItemID.PurpleSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.CorruptSolution");
+        }
+        if (id == ItemID.RedSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.CrimfiedSolution");
+        }
+        if (id == ItemID.DarkBlueSolution)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.MushroomSolution");
         }
         return orig.Invoke(id);
     }

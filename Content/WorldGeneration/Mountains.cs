@@ -8,9 +8,9 @@ using System;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Reflection;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
 using Xenon.Common;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 
 namespace Xenon.Content.WorldGeneration;
 
@@ -18,37 +18,40 @@ public class MountainGen : ModSystem
 {
 	public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)
 	{
-		GenPass currentPass;
-		int index = tasks.FindIndex(genPass => genPass.Name == "Beaches");
-		if (index != -1)
+		if (ModContent.GetInstance<XenonConfig>().MountainGenerationConfigEnabler)
 		{
-			tasks.RemoveAt(index);
-			currentPass = new OtherSideOceanPass_Beaches();
-			tasks.Insert(index, currentPass);
-			totalWeight += currentPass.Weight;
-		}
-		index = tasks.FindIndex(genPass => genPass.Name == "Gems");
-		if (index != -1)
-		{
-			tasks.Insert(index + 1, new MountainsGenPass());
-		}
-		index = tasks.FindIndex(genPass => genPass.Name == "Ocean Sand");
-		if (index != -1)
-		{
-			tasks[index] = new OtherSideOceanPass_OceanSand();
-		}
-		index = tasks.FindIndex(genPass => genPass.Name == "Remove Broken Traps");
-		if (index != -1)
-		{
-			currentPass = new MountainStalac();
-			tasks.Insert(index + 1, currentPass);
-			totalWeight += currentPass.Weight;
+			GenPass currentPass;
+			int index = tasks.FindIndex(genPass => genPass.Name == "Beaches");
+			if (index != -1)
+			{
+				tasks.RemoveAt(index);
+				currentPass = new OtherSideOceanPass_Beaches();
+				tasks.Insert(index, currentPass);
+				totalWeight += currentPass.Weight;
+			}
+			index = tasks.FindIndex(genPass => genPass.Name == "Gems");
+			if (index != -1)
+			{
+				tasks.Insert(index + 1, new MountainsGenPass());
+			}
+			index = tasks.FindIndex(genPass => genPass.Name == "Ocean Sand");
+			if (index != -1)
+			{
+				tasks[index] = new OtherSideOceanPass_OceanSand();
+			}
+			index = tasks.FindIndex(genPass => genPass.Name == "Remove Broken Traps");
+			if (index != -1)
+			{
+				currentPass = new MountainStalac();
+				tasks.Insert(index + 1, currentPass);
+				totalWeight += currentPass.Weight;
 
-			currentPass = new MountainChests();
-			tasks.Insert(index + 2, currentPass);
-			totalWeight += currentPass.Weight;
+				currentPass = new MountainChests();
+				tasks.Insert(index + 2, currentPass);
+				totalWeight += currentPass.Weight;
+			}
+			//1.1.CorruptBiome.2035325171
 		}
-		//1.1.CorruptBiome.2035325171
 	}
 }
 public class MountainChests : GenPass

@@ -6,10 +6,10 @@ using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.NaturalStone;
-using Xenon.Content.Tiles.Natural.Ores;
+using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
@@ -18,7 +18,11 @@ namespace Xenon.Common.Data;
 
 internal class TileSets
 {
-    public static bool[] MountainStone = TileID.Sets.Factory.CreateBoolSet(
+	public static readonly bool[] OnlyPlaceGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
+		TileID.Stone, TileID.Sandstone
+	);
+
+	public static bool[] MountainStone = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<OuranoStone>(),
         ModContent.TileType<NyxStone>(),
         ModContent.TileType<HelioStone>(),
@@ -26,25 +30,13 @@ internal class TileSets
         ModContent.TileType<HephStone>()
     );
 
-    public static bool[] MirageTileSet = TileID.Sets.Factory.CreateBoolSet(
-        TileID.HardenedSand,
-        TileID.CorruptHardenedSand,
-        TileID.CrimsonHardenedSand,
-        ModContent.TileType<HardenedGutsand>(),
-        TileID.HallowHardenedSand,
-        TileID.Sandstone,
-        TileID.CorruptSandstone,
-        TileID.CrimsonSandstone,
-        ModContent.TileType<Gutsandstone>(),
-        TileID.HallowSandstone
-    );
-
     public static bool[] Quicksand = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<Quicksand>(),
         ModContent.TileType<Ebonquicksand>(),
         ModContent.TileType<Crimquicksand>(),
         ModContent.TileType<Pearlquicksand>(),
-        ModContent.TileType<Gutquicksand>()
+        ModContent.TileType<Gutquicksand>(),
+        ModContent.TileType<MarineQuicksand>()
     );
 
     public static bool[] MossyMountainStone = TileID.Sets.Factory.CreateBoolSet(
@@ -60,21 +52,18 @@ internal class TileSets
         TileID.Crimtane,
         ModContent.TileType<IngestaneOre>()
     );
-    public static bool[] Tier1Ore = TileID.Sets.Factory.CreateBoolSet(
-        TileID.Copper,
-        TileID.Tin
+    public static bool[] DontPlaceTheGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
+            TileID.RollingCactus,
+            TileID.BreakableIce,
+            TileID.IceBlock,
+            TileID.Sand,
+            TileID.SnowBlock,
+            TileID.Ebonstone,
+            TileID.Crimstone,
+            TileID.Dirt
     );
-    public static bool[] Tier2Ore = TileID.Sets.Factory.CreateBoolSet(
-        TileID.Iron,
-        TileID.Lead
-    );
-    public static bool[] Tier3Ore = TileID.Sets.Factory.CreateBoolSet(
-        TileID.Silver,
-        TileID.Tungsten
-    );
-    public static bool[] Tier4Ore = TileID.Sets.Factory.CreateBoolSet(
-        TileID.Gold,
-        TileID.Platinum
+    public static readonly bool[] PlaceTheGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
+        TileID.Stone, TileID.Sandstone
     );
     public static bool[] Catacombs = TileID.Sets.Factory.CreateBoolSet(
         ModContent.TileType<RedCatacombBrick>(),

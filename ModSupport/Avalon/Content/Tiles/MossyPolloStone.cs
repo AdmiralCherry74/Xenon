@@ -3,8 +3,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Corrosion;
-using Xenon.Content.Tiles.Natural.Mountains;
-using Xenon.Content.Tiles.Natural.Mountains.Mossy;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.ModSupport.Avalon.Content.Items;
 
 namespace Xenon.ModSupport.Avalon.Content.Tiles;

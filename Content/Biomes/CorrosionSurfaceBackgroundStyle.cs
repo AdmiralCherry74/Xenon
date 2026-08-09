@@ -36,16 +36,16 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
 
     public override int ChooseFarTexture()
     {
-        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1Far");
+        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1Far");
     }
     public override int ChooseMiddleTexture()
     {
-        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1Mid");
+        return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1Mid");
     }
 
     public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
     {
-            return BackgroundTextureLoader.GetBackgroundSlot("Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1Close1FAR");   
+            return BackgroundTextureLoader.GetBackgroundSlot("Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1Close1FAR");   
     }
 
     public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
@@ -60,9 +60,9 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
         int bgLoops = Main.instance.GetBGLoops();
         Color ColorOfSurfaceBackgroundsModified = Main.instance.GetColorOFSurfaceBackgroundsModified();
 
-        string TexturePath = "Xenon/Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseCLOSE";
-        string TexturePath2 = "Xenon/Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseMID";
-        string TexturePath3 = "Xenon/Assets/Textures/Backgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseFAR";
+        string TexturePath = "Xenon/Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseCLOSE";
+        string TexturePath2 = "Xenon/Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseMID";
+        string TexturePath3 = "Xenon/Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1CloseFAR";
 
         bool flag = false;
         if ((!Main.remixWorld || (Main.gameMenu && !WorldGen.remixWorldGen)) && (!WorldGen.remixWorldGen || !WorldGen.drunkWorldGen))

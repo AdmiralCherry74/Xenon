@@ -1,0 +1,49 @@
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Xenon.Content.Dusts;
+using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Sinking;
+
+namespace Xenon.Content.Tiles.ActiveAndWiring.Traps;
+public class Quickgravel : ModTile
+{
+	public override void SetStaticDefaults()
+	{
+		AddMapEntry(new Color(122, 122, 122));
+		Main.tileSolid[Type] = false;
+		Main.tileBrick[Type] = true;
+		Main.tileBlockLight[Type] = true;
+		Main.tileMergeDirt[Type] = true;
+		Main.tileMerge[TileID.CrimsonSandstone][Type] = true;
+		Main.tileMerge[Type][TileID.CrimsonSandstone] = true;
+		Main.tileMerge[TileID.CrimsonHardenedSand][Type] = true;
+		Main.tileMerge[Type][TileID.CrimsonHardenedSand] = true;
+        Main.tileMerge[Type][ModContent.TileType<Quicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Ebonquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Pearlquicksand>()] = true;
+        Main.tileMerge[Type][ModContent.TileType<Gutquicksand>()] = true;
+        MineResist = 0.5f;
+		DustType = DustID.Silt;
+
+		TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
+		TileID.Sets.CanBeDugByShovel[Type] = true;
+		TileID.Sets.Suffocate[Type] = true;
+
+		TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
+		TileID.Sets.GeneralPlacementTiles[Type] = false;
+		TileID.Sets.ChecksForMerge[Type] = true;
+
+		RegisterItemDrop(ModContent.ItemType<QuickgravelBlock>());
+	}
+	public override bool HasWalkDust() => Main.rand.NextBool(3);
+
+	public override void WalkDust(ref int dustType, ref bool makeDust, ref Color color)
+	{
+		dustType = DustType;
+	}
+	public override bool IsTileDangerous(int i, int j, Player player)
+	{
+		return true;
+	}
+}

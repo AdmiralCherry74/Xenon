@@ -20,7 +20,7 @@ internal class MountainBiomeMusicHook : ModHook
 		{
 			Main.newMusic = MusicID.OtherworldlyUnderground;
 		}
-        if (!Main.gameMenu && Main.player[Main.myPlayer].InModBiome<Mountain>() && Main.player[Main.myPlayer].ZoneCorrupt)
+		if (!Main.gameMenu && Main.player[Main.myPlayer].InModBiome<Mountain>() && Main.player[Main.myPlayer].ZoneCorrupt)
         {
             Main.newMusic = MusicID.UndergroundCorruption;
         }

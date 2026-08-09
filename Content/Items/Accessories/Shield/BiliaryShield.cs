@@ -15,6 +15,6 @@ public class BiliaryShield : ModItem
     }
     public override void UpdateAccessory(Player player, bool hideVisual)
     {
-        player.statLifeMax2 += 25;
+        player.statLifeMax2 += 20;
     }
 }

@@ -32,4 +32,13 @@ XenonConfig: {
 			'''
 		Label: Other Ores Require Previous Ores
 	}
+
+	MountainGenerationConfigEnabler: {
+		Label: Mountain Generation
+		Tooltip:
+			'''
+			Makes it so The Mountains can be generated
+			Its a work in progress biome. Sometimes can crash you or not generate.
+			'''
+	}
 }

@@ -92,3 +92,18 @@ Somnolent: {
 	DisplayName: Somnolent
 	TownNPCDialogueName: the Somnolent
 }
+
+UndergroundSomnolent: {
+	DisplayName: Underground Somnolent
+	TownNPCDialogueName: the Underground Somnolent
+}
+
+UndergroundOcean: {
+	DisplayName: the Marine
+	TownNPCDialogueName: the Marine
+}
+
+UndergroundMountain: {
+	DisplayName: the Karst
+	TownNPCDialogueName: the Karst
+}

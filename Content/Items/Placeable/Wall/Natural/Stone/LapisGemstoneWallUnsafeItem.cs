@@ -11,6 +11,7 @@ public class LapisGemstoneWallUnsafeItem : ModItem
     public override void SetStaticDefaults()
     {
         Item.ResearchUnlockCount = 400;
+        ItemID.Sets.DrawUnsafeIndicator[Type] = true;
     }
 
     public override void SetDefaults()
