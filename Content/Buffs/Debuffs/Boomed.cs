@@ -17,8 +17,8 @@ namespace Xenon.Content.Buffs.Debuffs
         // Allows you to make this buff give certain effects to the given player
         public override void Update(Player player, ref int buffIndex)
         {
-            player.GetDamage(DamageClass.Generic) -= 10;
-            player.aggro += 100;
+            player.GetDamage(DamageClass.Generic) -= 0.10f;
+            player.aggro += 999999999;
             player.GetModPlayer<XenonPlayer>().Boomed = true;
         }
     }

@@ -11,7 +11,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Accessories.Expert;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
-using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 
 namespace Xenon.Content.Items.Consumables.TreasureBags
 {

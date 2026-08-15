@@ -33,6 +33,7 @@ namespace Xenon.Content.NPCs.SurfacePurity
             NPC.damage = 11;
             NPC.defense = 4;
             NPC.lifeMax = 21;
+            NPC.alpha = 100;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 30;

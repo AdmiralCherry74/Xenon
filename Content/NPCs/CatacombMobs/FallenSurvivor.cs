@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Weapons.Melee.Broadswords;
 
 namespace Xenon.Content.NPCs.CatacombMobs
 {

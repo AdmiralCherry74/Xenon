@@ -16,6 +16,7 @@ using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Tools.GardeningHoes;
+using Xenon.Content.Tiles.Building.Bricks;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {
@@ -30,6 +31,18 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar, ModContent.ItemType<AluminumBar>());
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
             //Copper Bar recipe group
+
+            //Iron recipe group
+            RecipeGroup groupiron = RecipeGroup.recipeGroups[RecipeGroupID.IronBar];
+            groupiron.ValidItems.Add(ModContent.ItemType<CinnabarBar>());
+
+            RecipeGroup SilverBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar, ModContent.ItemType<IndiumBar>());
+            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), SilverBar);
+            //Silver Bar recipe group
+
+            RecipeGroup GoldBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar, ModContent.ItemType<FluoriteBar>());
+            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), GoldBar);
+            //Silver Bar recipe group
 
             RecipeGroup Thorns = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<ThornyBush>())}", ModContent.ItemType<JungleThornyBushItem>(), ModContent.ItemType<CorruptedThornyBushItem>(), ModContent.ItemType<CrimfiedThornyBushItem>(), ModContent.ItemType<CorrodedThornyBushItem>());
             RecipeGroup.RegisterGroup("Xenon:Thorns", Thorns);
@@ -48,9 +61,6 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             groupwood.ValidItems.Add(ModContent.ItemType<BilewoodItem>());
             groupwood.ValidItems.Add(ModContent.ItemType<JacarandawoodItem>());
 
-            //Iron recipe group
-            RecipeGroup groupiron = RecipeGroup.recipeGroups[RecipeGroupID.IronBar];
-            groupiron.ValidItems.Add(ModContent.ItemType<CinnabarBar>());
         }
         public override void AddRecipes()
         {
@@ -189,121 +199,127 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 }
                 #endregion
 
-                #region Hardmode Ores
-                #region Cobalt Recipes
-                Recipe CobaltHelmetChange = Main.recipe[i];
-                if (CobaltHelmetChange.HasIngredient(ItemID.CobaltBar) && CobaltHelmetChange.HasTile(TileID.Anvils) && CobaltHelmetChange.HasResult(ItemID.CobaltHelmet))
+                if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
                 {
-                    CobaltHelmetChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
+                    return;
                 }
-                Recipe CobaltMaskChange = Main.recipe[i];
-                if (CobaltMaskChange.HasIngredient(ItemID.CobaltBar) && CobaltMaskChange.HasTile(TileID.Anvils) && CobaltMaskChange.HasResult(ItemID.CobaltMask))
+                else
                 {
-                    CobaltMaskChange.AddRecipeGroup("Xenon:EvilSouls", 3);
-                }
-                Recipe CobaltHatChange = Main.recipe[i];
-                if (CobaltHatChange.HasIngredient(ItemID.CobaltBar) && CobaltHatChange.HasTile(TileID.Anvils) && CobaltHatChange.HasResult(ItemID.CobaltHat))
-                {
-                    CobaltMaskChange.AddRecipeGroup("Xenon:HolySouls", 3);
-                }
+                    #region Hardmode Ores
+                    #region Cobalt Recipes
+                    Recipe CobaltHelmetChange = Main.recipe[i];
+                    if (CobaltHelmetChange.HasIngredient(ItemID.CobaltBar) && CobaltHelmetChange.HasTile(TileID.Anvils) && CobaltHelmetChange.HasResult(ItemID.CobaltHelmet))
+                    {
+                        CobaltHelmetChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
+                    }
+                    Recipe CobaltMaskChange = Main.recipe[i];
+                    if (CobaltMaskChange.HasIngredient(ItemID.CobaltBar) && CobaltMaskChange.HasTile(TileID.Anvils) && CobaltMaskChange.HasResult(ItemID.CobaltMask))
+                    {
+                        CobaltMaskChange.AddRecipeGroup("Xenon:EvilSouls", 3);
+                    }
+                    Recipe CobaltHatChange = Main.recipe[i];
+                    if (CobaltHatChange.HasIngredient(ItemID.CobaltBar) && CobaltHatChange.HasTile(TileID.Anvils) && CobaltHatChange.HasResult(ItemID.CobaltHat))
+                    {
+                        CobaltMaskChange.AddRecipeGroup("Xenon:HolySouls", 3);
+                    }
 
-                Recipe CobaltBreastplateChange = Main.recipe[i];
-                if (CobaltBreastplateChange.HasIngredient(ItemID.CobaltBar) && CobaltBreastplateChange.HasTile(TileID.Anvils) && CobaltBreastplateChange.HasResult(ItemID.CobaltBreastplate))
-                {
-                    CobaltBreastplateChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    CobaltBreastplateChange.AddRecipeGroup("Xenon:HolySouls");
-                    CobaltBreastplateChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
+                    Recipe CobaltBreastplateChange = Main.recipe[i];
+                    if (CobaltBreastplateChange.HasIngredient(ItemID.CobaltBar) && CobaltBreastplateChange.HasTile(TileID.Anvils) && CobaltBreastplateChange.HasResult(ItemID.CobaltBreastplate))
+                    {
+                        CobaltBreastplateChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        CobaltBreastplateChange.AddRecipeGroup("Xenon:HolySouls");
+                        CobaltBreastplateChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
 
-                Recipe CobaltLeggingsChange = Main.recipe[i];
-                if (CobaltLeggingsChange.HasIngredient(ItemID.CobaltBar) && CobaltLeggingsChange.HasTile(TileID.Anvils) && CobaltLeggingsChange.HasResult(ItemID.CobaltLeggings))
-                {
-                    CobaltLeggingsChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    CobaltLeggingsChange.AddRecipeGroup("Xenon:HolySouls");
-                    CobaltLeggingsChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
+                    Recipe CobaltLeggingsChange = Main.recipe[i];
+                    if (CobaltLeggingsChange.HasIngredient(ItemID.CobaltBar) && CobaltLeggingsChange.HasTile(TileID.Anvils) && CobaltLeggingsChange.HasResult(ItemID.CobaltLeggings))
+                    {
+                        CobaltLeggingsChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        CobaltLeggingsChange.AddRecipeGroup("Xenon:HolySouls");
+                        CobaltLeggingsChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
 
-                Recipe CobaltDrillChange = Main.recipe[i];
-                if (CobaltDrillChange.HasIngredient(ItemID.CobaltBar) && CobaltDrillChange.HasTile(TileID.Anvils) && CobaltDrillChange.HasResult(ItemID.CobaltDrill))
-                {
-                    CobaltDrillChange.AddIngredient(ItemID.Wire, 3);
-                    CobaltDrillChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    CobaltDrillChange.AddRecipeGroup("Xenon:HolySouls");
-                    CobaltDrillChange.AddRecipeGroup("Xenon:EvilSouls");
-                    CobaltDrillChange.AddIngredient(ItemID.Switch);
-                }
-                Recipe CobaltPickaxeChange = Main.recipe[i];
-                if (CobaltPickaxeChange.HasIngredient(ItemID.CobaltBar) && CobaltPickaxeChange.HasTile(TileID.Anvils) && CobaltPickaxeChange.HasResult(ItemID.CobaltPickaxe))
-                {
-                    CobaltPickaxeChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    CobaltPickaxeChange.AddRecipeGroup("Xenon:HolySouls");
-                    CobaltPickaxeChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
-                Recipe CobaltChainsawChange = Main.recipe[i];
-                if (CobaltChainsawChange.HasIngredient(ItemID.CobaltBar) && CobaltChainsawChange.HasTile(TileID.Anvils) && CobaltChainsawChange.HasResult(ItemID.CobaltChainsaw))
-                {
-                    CobaltChainsawChange.AddIngredient(ItemID.Wire, 3);
-                    CobaltChainsawChange.AddIngredient(ItemID.Switch);
-                }
-                #endregion
+                    Recipe CobaltDrillChange = Main.recipe[i];
+                    if (CobaltDrillChange.HasIngredient(ItemID.CobaltBar) && CobaltDrillChange.HasTile(TileID.Anvils) && CobaltDrillChange.HasResult(ItemID.CobaltDrill))
+                    {
+                        CobaltDrillChange.AddIngredient(ItemID.Wire, 3);
+                        CobaltDrillChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        CobaltDrillChange.AddRecipeGroup("Xenon:HolySouls");
+                        CobaltDrillChange.AddRecipeGroup("Xenon:EvilSouls");
+                        CobaltDrillChange.AddIngredient(ItemID.Switch);
+                    }
+                    Recipe CobaltPickaxeChange = Main.recipe[i];
+                    if (CobaltPickaxeChange.HasIngredient(ItemID.CobaltBar) && CobaltPickaxeChange.HasTile(TileID.Anvils) && CobaltPickaxeChange.HasResult(ItemID.CobaltPickaxe))
+                    {
+                        CobaltPickaxeChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        CobaltPickaxeChange.AddRecipeGroup("Xenon:HolySouls");
+                        CobaltPickaxeChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
+                    Recipe CobaltChainsawChange = Main.recipe[i];
+                    if (CobaltChainsawChange.HasIngredient(ItemID.CobaltBar) && CobaltChainsawChange.HasTile(TileID.Anvils) && CobaltChainsawChange.HasResult(ItemID.CobaltChainsaw))
+                    {
+                        CobaltChainsawChange.AddIngredient(ItemID.Wire, 3);
+                        CobaltChainsawChange.AddIngredient(ItemID.Switch);
+                    }
+                    #endregion
 
-                #region Palladium Recipes             
-                Recipe PalladiumMaskChange = Main.recipe[i];
-                if (PalladiumMaskChange.HasIngredient(ItemID.PalladiumBar) && PalladiumMaskChange.HasTile(TileID.Anvils) && PalladiumMaskChange.HasResult(ItemID.PalladiumMask))
-                {
-                    PalladiumMaskChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
-                }
-                Recipe PalladiumHelmetChange = Main.recipe[i];
-                if (PalladiumHelmetChange.HasIngredient(ItemID.PalladiumBar) && PalladiumHelmetChange.HasTile(TileID.Anvils) && PalladiumHelmetChange.HasResult(ItemID.PalladiumHelmet))
-                {
-                    PalladiumHelmetChange.AddRecipeGroup("Xenon:EvilSouls", 3);
-                }
-                Recipe PalladiumHeadgearChange = Main.recipe[i];
-                if (PalladiumHeadgearChange.HasIngredient(ItemID.PalladiumBar) && PalladiumHeadgearChange.HasTile(TileID.Anvils) && PalladiumHeadgearChange.HasResult(ItemID.PalladiumHeadgear))
-                {
-                    PalladiumHeadgearChange.AddRecipeGroup("Xenon:HolySouls", 3);
-                }
-                Recipe PalladiumBreastplateChange = Main.recipe[i];
-                if (PalladiumBreastplateChange.HasIngredient(ItemID.PalladiumBar) && PalladiumBreastplateChange.HasTile(TileID.Anvils) && PalladiumBreastplateChange.HasResult(ItemID.PalladiumBreastplate))
-                {
-                    PalladiumBreastplateChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    PalladiumBreastplateChange.AddRecipeGroup("Xenon:HolySouls");
-                    PalladiumBreastplateChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
+                    #region Palladium Recipes             
+                    Recipe PalladiumMaskChange = Main.recipe[i];
+                    if (PalladiumMaskChange.HasIngredient(ItemID.PalladiumBar) && PalladiumMaskChange.HasTile(TileID.Anvils) && PalladiumMaskChange.HasResult(ItemID.PalladiumMask))
+                    {
+                        PalladiumMaskChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
+                    }
+                    Recipe PalladiumHelmetChange = Main.recipe[i];
+                    if (PalladiumHelmetChange.HasIngredient(ItemID.PalladiumBar) && PalladiumHelmetChange.HasTile(TileID.Anvils) && PalladiumHelmetChange.HasResult(ItemID.PalladiumHelmet))
+                    {
+                        PalladiumHelmetChange.AddRecipeGroup("Xenon:EvilSouls", 3);
+                    }
+                    Recipe PalladiumHeadgearChange = Main.recipe[i];
+                    if (PalladiumHeadgearChange.HasIngredient(ItemID.PalladiumBar) && PalladiumHeadgearChange.HasTile(TileID.Anvils) && PalladiumHeadgearChange.HasResult(ItemID.PalladiumHeadgear))
+                    {
+                        PalladiumHeadgearChange.AddRecipeGroup("Xenon:HolySouls", 3);
+                    }
+                    Recipe PalladiumBreastplateChange = Main.recipe[i];
+                    if (PalladiumBreastplateChange.HasIngredient(ItemID.PalladiumBar) && PalladiumBreastplateChange.HasTile(TileID.Anvils) && PalladiumBreastplateChange.HasResult(ItemID.PalladiumBreastplate))
+                    {
+                        PalladiumBreastplateChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        PalladiumBreastplateChange.AddRecipeGroup("Xenon:HolySouls");
+                        PalladiumBreastplateChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
 
-                Recipe PalladiumLeggingsChange = Main.recipe[i];
-                if (PalladiumLeggingsChange.HasIngredient(ItemID.PalladiumBar) && PalladiumLeggingsChange.HasTile(TileID.Anvils) && PalladiumLeggingsChange.HasResult(ItemID.PalladiumLeggings))
-                {
-                    PalladiumLeggingsChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    PalladiumLeggingsChange.AddRecipeGroup("Xenon:HolySouls");
-                    PalladiumLeggingsChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
+                    Recipe PalladiumLeggingsChange = Main.recipe[i];
+                    if (PalladiumLeggingsChange.HasIngredient(ItemID.PalladiumBar) && PalladiumLeggingsChange.HasTile(TileID.Anvils) && PalladiumLeggingsChange.HasResult(ItemID.PalladiumLeggings))
+                    {
+                        PalladiumLeggingsChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        PalladiumLeggingsChange.AddRecipeGroup("Xenon:HolySouls");
+                        PalladiumLeggingsChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
 
-                Recipe PalladiumDrillChange = Main.recipe[i];
-                if (PalladiumDrillChange.HasIngredient(ItemID.PalladiumBar) && PalladiumDrillChange.HasTile(TileID.Anvils) && PalladiumDrillChange.HasResult(ItemID.PalladiumDrill))
-                {
-                    PalladiumDrillChange.AddIngredient(ItemID.Wire, 4);
-                    PalladiumDrillChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    PalladiumDrillChange.AddRecipeGroup("Xenon:HolySouls");
-                    PalladiumDrillChange.AddRecipeGroup("Xenon:EvilSouls");
-                    PalladiumDrillChange.AddIngredient(ItemID.Switch, 2);
-                }
-                Recipe PalladiumPickaxeChange = Main.recipe[i];
-                if (PalladiumPickaxeChange.HasIngredient(ItemID.PalladiumBar) && PalladiumPickaxeChange.HasTile(TileID.Anvils) && PalladiumPickaxeChange.HasResult(ItemID.PalladiumPickaxe))
-                {
-                    PalladiumPickaxeChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
-                    PalladiumPickaxeChange.AddRecipeGroup("Xenon:HolySouls");
-                    PalladiumPickaxeChange.AddRecipeGroup("Xenon:EvilSouls");
-                }
-                Recipe PalladiumChainsawChange = Main.recipe[i];
-                if (PalladiumChainsawChange.HasIngredient(ItemID.PalladiumBar) && PalladiumChainsawChange.HasTile(TileID.Anvils) && PalladiumChainsawChange.HasResult(ItemID.PalladiumChainsaw))
-                {
-                    PalladiumChainsawChange.AddIngredient(ItemID.Wire, 4);
-                    PalladiumChainsawChange.AddIngredient(ItemID.Switch, 2);
-                }
-                #endregion
+                    Recipe PalladiumDrillChange = Main.recipe[i];
+                    if (PalladiumDrillChange.HasIngredient(ItemID.PalladiumBar) && PalladiumDrillChange.HasTile(TileID.Anvils) && PalladiumDrillChange.HasResult(ItemID.PalladiumDrill))
+                    {
+                        PalladiumDrillChange.AddIngredient(ItemID.Wire, 4);
+                        PalladiumDrillChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        PalladiumDrillChange.AddRecipeGroup("Xenon:HolySouls");
+                        PalladiumDrillChange.AddRecipeGroup("Xenon:EvilSouls");
+                        PalladiumDrillChange.AddIngredient(ItemID.Switch, 2);
+                    }
+                    Recipe PalladiumPickaxeChange = Main.recipe[i];
+                    if (PalladiumPickaxeChange.HasIngredient(ItemID.PalladiumBar) && PalladiumPickaxeChange.HasTile(TileID.Anvils) && PalladiumPickaxeChange.HasResult(ItemID.PalladiumPickaxe))
+                    {
+                        PalladiumPickaxeChange.AddIngredient(ModContent.ItemType<SoulOfRight>());
+                        PalladiumPickaxeChange.AddRecipeGroup("Xenon:HolySouls");
+                        PalladiumPickaxeChange.AddRecipeGroup("Xenon:EvilSouls");
+                    }
+                    Recipe PalladiumChainsawChange = Main.recipe[i];
+                    if (PalladiumChainsawChange.HasIngredient(ItemID.PalladiumBar) && PalladiumChainsawChange.HasTile(TileID.Anvils) && PalladiumChainsawChange.HasResult(ItemID.PalladiumChainsaw))
+                    {
+                        PalladiumChainsawChange.AddIngredient(ItemID.Wire, 4);
+                        PalladiumChainsawChange.AddIngredient(ItemID.Switch, 2);
+                    }
+                    #endregion
 
-                #region Mythril Recipes
+                    #region Mythril Recipes
                     Recipe MythrilHelmetChange = Main.recipe[i];
                     if (MythrilHelmetChange.HasIngredient(ItemID.MythrilBar) && MythrilHelmetChange.HasTile(TileID.MythrilAnvil) && MythrilHelmetChange.HasResult(ItemID.MythrilHelmet))
                     {
@@ -360,7 +376,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     }
                     #endregion
 
-                #region Orichalcum Recipes
+                    #region Orichalcum Recipes
                     Recipe OrichalcumMaskChange = Main.recipe[i];
                     if (OrichalcumMaskChange.HasIngredient(ItemID.OrichalcumBar) && OrichalcumMaskChange.HasTile(TileID.MythrilAnvil) && OrichalcumMaskChange.HasResult(ItemID.OrichalcumMask))
                     {
@@ -417,7 +433,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     }
                     #endregion
 
-                #region Adamantite Recipes
+                    #region Adamantite Recipes
                     Recipe AdamantiteHelmetChange = Main.recipe[i];
                     if (AdamantiteHelmetChange.HasIngredient(ItemID.AdamantiteBar) && AdamantiteHelmetChange.HasTile(TileID.MythrilAnvil) && AdamantiteHelmetChange.HasResult(ItemID.AdamantiteHelmet))
                     {
@@ -474,7 +490,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     }
                     #endregion
 
-                #region Titanium Recipes
+                    #region Titanium Recipes
                     Recipe TitaniumMaskChange = Main.recipe[i];
                     if (TitaniumMaskChange.HasIngredient(ItemID.TitaniumBar) && TitaniumMaskChange.HasTile(TileID.MythrilAnvil) && TitaniumMaskChange.HasResult(ItemID.TitaniumMask))
                     {
@@ -529,8 +545,101 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                         TitaniumChainsawChange.AddIngredient(ItemID.Wire, 8);
                         TitaniumChainsawChange.AddIngredient(ItemID.Switch, 2);
                     }
-                #endregion
-                #endregion
+                    #endregion
+
+                    #region Hallowed Ore Recipes
+                    Recipe HallowedMaskChange = Main.recipe[i];
+                    if (HallowedMaskChange.HasIngredient(ItemID.HallowedBar) && HallowedMaskChange.HasTile(TileID.MythrilAnvil) && HallowedMaskChange.HasResult(ItemID.HallowedMask))
+                    {
+                        HallowedMaskChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 11);
+                        HallowedMaskChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedMaskChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedMaskChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+                    Recipe HallowedHelmetChange = Main.recipe[i];
+                    if (HallowedHelmetChange.HasIngredient(ItemID.HallowedBar) && HallowedHelmetChange.HasTile(TileID.MythrilAnvil) && HallowedHelmetChange.HasResult(ItemID.HallowedHelmet))
+                    {
+                        HallowedHelmetChange.AddRecipeGroup("Xenon:EvilSouls", 11);
+                        HallowedHelmetChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedHelmetChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedHelmetChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+                    Recipe HallowedHeadgearChange = Main.recipe[i];
+                    if (HallowedHeadgearChange.HasIngredient(ItemID.HallowedBar) && HallowedHeadgearChange.HasTile(TileID.MythrilAnvil) && HallowedHeadgearChange.HasResult(ItemID.HallowedHeadgear))
+                    {
+                        HallowedHeadgearChange.AddIngredient(ItemID.SoulofLight, 11);
+                        HallowedHeadgearChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedHeadgearChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedHeadgearChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+                    Recipe HallowedHoodChange = Main.recipe[i];
+                    if (HallowedHoodChange.HasIngredient(ItemID.HallowedBar) && HallowedHoodChange.HasTile(TileID.MythrilAnvil) && HallowedHoodChange.HasResult(ItemID.HallowedHood))
+                    {
+                        HallowedHoodChange.AddIngredient(ItemID.SoulofFlight, 11);
+                        HallowedHoodChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedHoodChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedHoodChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+
+                    Recipe HallowedPlateMailChange = Main.recipe[i];
+                    if (HallowedPlateMailChange.HasIngredient(ItemID.HallowedBar) && HallowedPlateMailChange.HasTile(TileID.MythrilAnvil) && HallowedPlateMailChange.HasResult(ItemID.HallowedPlateMail))
+                    {
+                        HallowedPlateMailChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 5);
+                        HallowedPlateMailChange.AddIngredient(ItemID.SoulofLight, 5);
+                        HallowedPlateMailChange.AddRecipeGroup("Xenon:EvilSouls", 5);
+                        HallowedPlateMailChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedPlateMailChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedPlateMailChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+
+                    Recipe HallowedGreavesChange = Main.recipe[i];
+                    if (HallowedGreavesChange.HasIngredient(ItemID.HallowedBar) && HallowedGreavesChange.HasTile(TileID.MythrilAnvil) && HallowedGreavesChange.HasResult(ItemID.HallowedGreaves))
+                    {
+                        HallowedGreavesChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 5);
+                        HallowedGreavesChange.AddIngredient(ItemID.SoulofLight, 5);
+                        HallowedGreavesChange.AddRecipeGroup("Xenon:EvilSouls", 5);
+                        HallowedGreavesChange.AddIngredient(ItemID.SoulofSight, 3);
+                        HallowedGreavesChange.AddIngredient(ItemID.SoulofMight, 3);
+                        HallowedGreavesChange.AddIngredient(ItemID.SoulofFright, 3);
+                    }
+
+                    Recipe HallowedChainDrillSawChange = Main.recipe[i];
+                    if (HallowedChainDrillSawChange.HasIngredient(ItemID.HallowedBar) && HallowedChainDrillSawChange.HasIngredient(ItemID.SoulofFright) && HallowedChainDrillSawChange.HasIngredient(ItemID.SoulofMight) && HallowedChainDrillSawChange.HasIngredient(ItemID.SoulofSight) && HallowedChainDrillSawChange.HasTile(TileID.MythrilAnvil) && HallowedChainDrillSawChange.HasResult(ItemID.Drax))
+                    {
+                        HallowedChainDrillSawChange.AddIngredient(ItemID.Wire, 10);
+                        HallowedChainDrillSawChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
+                        HallowedChainDrillSawChange.AddIngredient(ItemID.SoulofLight, 3);
+                        HallowedChainDrillSawChange.AddRecipeGroup("Xenon:EvilSouls", 3);
+                        HallowedChainDrillSawChange.AddIngredient(ItemID.Switch, 3);
+                    }
+                    Recipe HallowedMultiToolChange = Main.recipe[i];
+                    if (HallowedMultiToolChange.HasIngredient(ItemID.HallowedBar) && HallowedMultiToolChange.HasIngredient(ItemID.SoulofFright) && HallowedMultiToolChange.HasIngredient(ItemID.SoulofMight) && HallowedMultiToolChange.HasIngredient(ItemID.SoulofSight) && HallowedMultiToolChange.HasTile(TileID.MythrilAnvil) && HallowedMultiToolChange.HasResult(ItemID.PickaxeAxe))
+                    {
+                        HallowedMultiToolChange.AddIngredient(ModContent.ItemType<SoulOfRight>(), 3);
+                        HallowedMultiToolChange.AddRecipeGroup("Xenon:HolySouls", 3);
+                        HallowedMultiToolChange.AddRecipeGroup("Xenon:EvilSouls", 3);
+                    }
+                    #endregion
+                    #endregion
+
+                    #region Recipe Changes
+                    Recipe PumpkinMoonMedalionChange = Main.recipe[i];
+                    if (PumpkinMoonMedalionChange.HasIngredient(ItemID.HallowedBar) && PumpkinMoonMedalionChange.HasIngredient(ItemID.Ectoplasm) && PumpkinMoonMedalionChange.HasIngredient(ItemID.Pumpkin) && PumpkinMoonMedalionChange.HasTile(TileID.MythrilAnvil) && PumpkinMoonMedalionChange.HasResult(ItemID.PumpkinMoonMedallion))
+                    {
+                        PumpkinMoonMedalionChange.RemoveIngredient(ItemID.HallowedBar);
+                        //PumpkinMoonMedalionChange.RemoveTile(ItemID.MythrilAnvil); Uncomment when fully implemented
+
+                        PumpkinMoonMedalionChange.AddIngredient(ItemID.SoulofMight);
+                        //PumpkinMoonMedalionChange.AddTile(ModContent.TileType<CrystalEye>()); Uncomment when fully implemented
+                    }
+
+                    Recipe SuperStarShooterChange = Main.recipe[i];
+                    if (SuperStarShooterChange.HasIngredient(ItemID.HallowedBar) && PumpkinMoonMedalionChange.HasIngredient(ItemID.StarCannon) && SuperStarShooterChange.HasTile(TileID.MythrilAnvil) && SuperStarShooterChange.HasResult(ItemID.SuperStarCannon))
+                    {
+                        SuperStarShooterChange.AddIngredient(ItemID.SoulofSight, 20);
+                    }
+                    #endregion
+                }
 
             }
         }

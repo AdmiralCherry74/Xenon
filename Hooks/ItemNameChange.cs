@@ -17,23 +17,23 @@ internal class ItemNameChange : ModHook
 
     private LocalizedText On_Lang_GetItemName(On_Lang.orig_GetItemName orig, int id)
     {
-        if (id == ItemID.Hellstone && ModContent.GetInstance<XenonConfig>().HellstoneRename)
+        if (id == ItemID.Hellstone && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneRename");
         }
-        if (id == ItemID.HellstoneBar && ModContent.GetInstance<XenonConfig>().HellstoneRename)
+        if (id == ItemID.HellstoneBar && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBarRename");
         }
-        if (id == ItemID.HellstoneBrick && ModContent.GetInstance<XenonConfig>().HellstoneRename)
+        if (id == ItemID.HellstoneBrick && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickRename");
         }
-        if (id == ItemID.HellstoneBrickWall && ModContent.GetInstance<XenonConfig>().HellstoneRename)
+        if (id == ItemID.HellstoneBrickWall && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickWallRename");
         }
-        if (id == ItemID.LavaCrateHard && ModContent.GetInstance<XenonConfig>().HellstoneRename)
+        if (id == ItemID.LavaCrateHard && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneCrateRename");
         }
@@ -92,6 +92,10 @@ internal class ItemNameChange : ModHook
         if (id == ItemID.DarkBlueSolution)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.MushroomSolution");
+        }
+        if (id == ItemID.Prismite)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.PrismiteFish");
         }
         return orig.Invoke(id);
     }

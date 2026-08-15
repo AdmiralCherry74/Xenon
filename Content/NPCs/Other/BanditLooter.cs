@@ -569,19 +569,6 @@ namespace Xenon.Content.NPCs.Other
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneNormalCaverns && !NPC.AnyNPCs(Type))
-
-            {
-                {
-                    return SpawnCondition.Cavern.Chance * 0.005f;
-
-                }
-            }
-            return 0f;
-        }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {

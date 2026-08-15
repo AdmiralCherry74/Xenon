@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using Xenon.Common.Globals;
+using Xenon.Common.Globals.XenonWorldGlobals;
 using Xenon.Common.Systems;
 
 namespace Xenon.Content.Biomes;

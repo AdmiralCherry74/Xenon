@@ -1,5 +1,4 @@
 ﻿using Avalon.Items.Material.Bars;
-using Avalon.Items.Weapons.Melee.PreHardmode.OreSwords;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

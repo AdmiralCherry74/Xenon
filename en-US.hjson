@@ -2,24 +2,50 @@ Mods: {
 	Xenon: {
 		AltOres: {
 			AluminumAltOre: {
-				DisplayName: Aluminum Alt Ore
+				DisplayName: Aluminum
 				Description: ""
 			}
 
 			CinnabarAltOre: {
-				DisplayName: Cinnabar Alt Ore
+				DisplayName: Cinnabar
 				Description: ""
 			}
 
 			FluoriteAltOre: {
-				DisplayName: Fluorite Alt Ore
+				DisplayName: Fluorite
 				Description: ""
 			}
 
 			IndiumAltOre: {
-				DisplayName: Indium Alt Ore
+				DisplayName: Indium
 				Description: ""
 			}
 		}
+
+		Prefixes: {
+			PowerTooltip: ""
+
+			MehFishingPrefix: {
+				AdditionalTooltip: +1 fishing power
+				DisplayName: Jigging
+			}
+
+			GoodFishingPrefix: {
+				AdditionalTooltip: +3 fishing power
+				DisplayName: Netting
+			}
+
+			GreatFishingPrefix: {
+				AdditionalTooltip: +4 fishing power
+				DisplayName: Angling
+			}
+
+			OkFishingPrefix: {
+				AdditionalTooltip: +2 fishing power
+				DisplayName: Enticing
+			}
+		}
+
+		World.BlessedWithHallowedOreMessage: Stones around the world have been blessed with Hallowed Ores!
 	}
 }

@@ -12,7 +12,8 @@ using Xenon.Content.Items.Tools.DriverHammers;
 using Xenon.Content.Items.Tools.GardeningHoes;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Melee.Battleaxes;
-using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Weapons.Melee.Broadswords;
+using Xenon.Content.Items.Weapons.Melee.Shortswords;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
@@ -281,11 +282,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #endregion
 
             #region evil tier recipe group
-            RecipeGroup LightsBane = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.LightsBane)}", ItemID.LightsBane, ItemID.BloodButcherer, ModContent.ItemType<TheIndigestion>());
+            RecipeGroup LightsBane = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.LightsBane)}", ItemID.LightsBane, ItemID.BloodButcherer, ModContent.ItemType<BowelBlade>());
             RecipeGroup.RegisterGroup(nameof(ItemID.LightsBane), LightsBane);
             //Tier Evil Broadsword recipe group
 
-            RecipeGroup NightGnasher = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<NightGnasher>())}", ModContent.ItemType<NightGnasher>(), ModContent.ItemType<JawSplitter>(), ModContent.ItemType<TheDisembowelment>());
+            RecipeGroup NightGnasher = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<NightGnasher>())}", ModContent.ItemType<NightGnasher>(), ModContent.ItemType<JawSplitter>(), ModContent.ItemType<LiverSplitter>());
             RecipeGroup.RegisterGroup("Xenon:NightGnasher", NightGnasher);
             //Tier Evil Battleaxe recipe group
 
@@ -1528,7 +1529,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Blood Butcherer Recipe
 
                 Recipe IndegestionCraft = Main.recipe[i];
-                if (IndegestionCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && IndegestionCraft.HasTile(TileID.Anvils) && IndegestionCraft.HasResult(ModContent.ItemType<TheIndigestion>()))
+                if (IndegestionCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && IndegestionCraft.HasTile(TileID.Anvils) && IndegestionCraft.HasResult(ModContent.ItemType<BowelBlade>()))
                 {
                     IndegestionCraft.AddRecipeGroup("GoldBroadsword");
                     if (IndegestionCraft.TryGetIngredient(ModContent.ItemType<IngestaneBar>(), out Item ingredient))
@@ -1780,7 +1781,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Jaw Splitter Recipe
 
                 Recipe DisembowelmentCraft = Main.recipe[i];
-                if (DisembowelmentCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && DisembowelmentCraft.HasTile(TileID.Anvils) && DisembowelmentCraft.HasResult(ModContent.ItemType<TheDisembowelment>()))
+                if (DisembowelmentCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && DisembowelmentCraft.HasTile(TileID.Anvils) && DisembowelmentCraft.HasResult(ModContent.ItemType<LiverSplitter>()))
                 {
                     DisembowelmentCraft.AddRecipeGroup("Xenon:GoldBattleaxe");
                     if (DisembowelmentCraft.TryGetIngredient(ModContent.ItemType<IngestaneBar>(), out Item ingredient))

@@ -16,8 +16,10 @@ using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Data;
 
-internal class TileSets
+[ReinitializeDuringResizeArrays]
+public class TileSets
 {
+
 	public static readonly bool[] OnlyPlaceGemStashesOnThese = TileID.Sets.Factory.CreateBoolSet(
 		TileID.Stone, TileID.Sandstone
 	);

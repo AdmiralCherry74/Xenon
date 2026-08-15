@@ -1,0 +1,34 @@
+Hello everyone, Cherry here. 
+
+If your here, your most likely wondering about the basic gameplay changes that Xenon implements!
+
+This file contains a detailed list of every basic changes that Xenon implements (so far) that can be changed with the flip of a config of the same names switch.
+Anyway, here is everything!
+
+
+
+Iron and Silver and Gold pick power requirements:
+This change basically makes it so you need to make Iron-tiered pickaxes to mine Silver-tiered ores, and Silver-tiered pickaxes to mine Gold-tier ores.
+Bombs still affect them all the same, so you could in theory just use bombs to skip the earlier ores.
+However i'm ok with this because Evil-tiered ores can be blown up normally in vanilla, plus it would be strange to make the normal ores resistant to bombs.
+
+Hardmode Ore pickaxes, drills and armors require souls:
+This change makes it so the Cobalt, Mythril, Adamantite and Hallow tiered ores require Evil souls (Souls of Night, Spite and Blight), Holy souls (Souls of Light and Twilight), and Purity souls (Soul of Right).
+FYI, whilst the Chestplates, Leggings, Drills and Pickaxes require all three types of souls. The helmets require only one soul type. Melee helmets require Purity souls, Ranger require Evil souls, and Mage require Holy souls.
+Another note is the Hallowed Hood will use Souls Of Flight. Hallowed Armor will require the mech souls. see "Pre-Mech Hallowed gear" for more info.
+
+Mechanical tool changes:
+This makes it so mechanical tools (Drills, Chainsaws and the Chlorophyte Jackhammer, not including the Sawtooth Shark) are extremely fast. they can mine on par with a pickaxe with a mining potion, ancient chisel and full mining set (reaching the mining speed cap without increasing the actual melee speed).
+FYI, Drills will require Wires and Switches to craft to balence it out, but this shouldnt be much of a problem considering you most likely have the mechanic at that point.
+
+Pre-Mech Hallowed gear:
+This makes it so Hallow tiered ores are now treated similair to how the Evil-Tiered ores are treated in prehardmode. like the Excaliber and the Hallowed repeater.
+Upon the Wall of Flesh's defeat. Hallowed ore will spawn around the world for you to mine when you have an Adamantite-tiered pickaxe.
+Hallowed Armor, Pumpkin Moon Medallion, Drax, Pickaxe Axe, Ligth Disc, Optic Staff and the Super Star Shooter (the only pre-mech item among this list) will be post mechs.
+
+Pumpkin Moon Medallion and Naughty Present Changes:
+This smaller change makes it so they are required to craft at a new furniture thats crafted from the hardmode dungeon. well its not a actual change yet but yeah.
+
+
+
+These are all of the Changes introduced so far into Xenon. thank you for reading!

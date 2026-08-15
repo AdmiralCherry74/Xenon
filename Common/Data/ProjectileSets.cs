@@ -1,10 +1,15 @@
 ﻿using Terraria.ID;
+using Terraria.ModLoader;
+using Xenon.Content.Projectiles.Magic.SpellBookProj;
 
 namespace Xenon.Common.Data
 {
+    [ReinitializeDuringResizeArrays]
     public static class ProjectileSets
     {
-        public static readonly bool[] ProjFireDamage = NPCID.Sets.Factory.CreateBoolSet(
+        //Just so everyone knows. these will be catagorized like how they are in skylanders
+        #region Elements
+        public static readonly bool[] FireElementProjectile = ProjectileID.Sets.Factory.CreateBoolSet(
         #region Vanila Projectiles
             ProjectileID.FlamingArrow,
             ProjectileID.FlamethrowerTrap,
@@ -21,7 +26,6 @@ namespace Xenon.Common.Data
             ProjectileID.DD2BetsyFlameBreath,
             ProjectileID.TorchGod);
         #endregion
-
-        //theres no modded fire projectiles so we skip these :)
+        #endregion
     }
 }

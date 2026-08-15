@@ -1,4 +1,5 @@
-﻿using Avalon.Items.Other;
+﻿using Avalon.Common.Players;
+using Avalon.Items.Other;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -29,6 +30,7 @@ public class XenonPlayer : ModPlayer
     public bool HotDamageResistPotion;
     public bool KnockbackBoostCaustic;
     public bool KnockbackBoostBattleaxe;
+    public bool AmIStickingToBlock;
     public bool Boomed;
     public bool BiomePlatform;
     public bool[] OwnedLargeGems = new bool[10];
@@ -40,6 +42,7 @@ public class XenonPlayer : ModPlayer
         HotDamageResistPotion = false;
         KnockbackBoostCaustic = false;
         KnockbackBoostBattleaxe = false;
+        AmIStickingToBlock = false;
         Boomed = false;
         BiomePlatform = false;
 
@@ -75,8 +78,8 @@ public class XenonPlayer : ModPlayer
             }
             else if (r == 1)
             {
-            	itemDrop = ModContent.ItemType<CorrosionCrate>();
-            	return;
+                itemDrop = ModContent.ItemType<CorrosionCrate>();
+                return;
             }
         }
         bool isGraniteFishingAttempt = Player.ZoneGranite;
@@ -131,10 +134,10 @@ public class XenonPlayer : ModPlayer
             }
         }
     }
-	public override void ModifyHitNPCWithItem(Item item, NPC target, ref NPC.HitModifiers modifiers)
-	{
+    public override void ModifyHitNPCWithItem(Item item, NPC target, ref NPC.HitModifiers modifiers)
+    {
         // caustic armor setbonus
-		if (KnockbackBoostCaustic)
+        if (KnockbackBoostCaustic)
         {
             modifiers.Knockback += 1f;
         }
@@ -143,19 +146,19 @@ public class XenonPlayer : ModPlayer
             modifiers.Knockback += 0.5f;
         }
     }
-	public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
-	{
+    public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
+    {
         // caustic armor setbonus
-		if (KnockbackBoostCaustic)
-		{
-			modifiers.Knockback += 1f;
-		}
+        if (KnockbackBoostCaustic)
+        {
+            modifiers.Knockback += 1f;
+        }
         if (KnockbackBoostBattleaxe)
         {
             modifiers.Knockback += 0.5f;
         }
     }
-	public override void PreUpdate()
+    public override void PreUpdate()
     {
         playerOldVelocity[2] = playerOldVelocity[1];
         playerOldVelocity[1] = playerOldVelocity[0];
@@ -215,11 +218,11 @@ public class XenonPlayer : ModPlayer
         }
     }
     public override void PostUpdateEquips()
-	{
-		if (Player.lavaImmune || Player.resistCold)
-		{
-			Player.buffImmune[ModContent.BuffType<Iceburn>()] = true;
-		}
+    {
+        if (Player.lavaImmune || Player.resistCold)
+        {
+            Player.buffImmune[ModContent.BuffType<Iceburn>()] = true;
+        }
 
         if (!FossilBlessing)
         {
@@ -244,8 +247,8 @@ public class XenonPlayer : ModPlayer
             Player.ClearBuff(ModContent.BuffType<FossilBlessing>());
         }
     }
-	public override void PostUpdate()
-	{
+    public override void PostUpdate()
+    {
         if (GroundPoundActivated)
         {
             if (!Player.IsOnGroundPrecise())
@@ -256,9 +259,9 @@ public class XenonPlayer : ModPlayer
 
         QuicksandMovement();
 
-		if (SpecialUtilities.SubmergedInQuicksandTiles(Player.position))
-		{
-			Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
+        if (SpecialUtilities.SubmergedInQuicksandTiles(Player.position))
+        {
+            Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
         }
 
         //Large Gems
@@ -373,7 +376,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistPotion) //Fridge Potion
         {
             int dmgPlaceholder = npc.damage;
-            if (Data.NPCSets.NPCFireDamage[npc.type])
+            if (Data.NPCSets.FireElementNPC[npc.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.7f;
             }
@@ -381,7 +384,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistShield)  //Bone Serpent Coccyx
         {
             int dmgPlaceholder = npc.damage;
-            if (Data.NPCSets.NPCFireDamage[npc.type])
+            if (Data.NPCSets.FireElementNPC[npc.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.8f;
             }
@@ -392,7 +395,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistPotion) //Fridge potion
         {
             int dmgPlaceholder = proj.damage;
-            if (Data.ProjectileSets.ProjFireDamage[proj.type])
+            if (Data.ProjectileSets.FireElementProjectile[proj.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.7f;
             }
@@ -400,7 +403,7 @@ public class XenonPlayer : ModPlayer
         if (HotDamageResistShield) //Bone Serpent Coccyx
         {
             int dmgPlaceholder = proj.damage;
-            if (Data.ProjectileSets.ProjFireDamage[proj.type])
+            if (Data.ProjectileSets.FireElementProjectile[proj.type])
             {
                 modifiers.IncomingDamageMultiplier *= 0.8f;
             }

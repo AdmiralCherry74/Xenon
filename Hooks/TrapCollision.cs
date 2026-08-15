@@ -1,8 +1,8 @@
 ﻿using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Buffs.Debuffs.Counterable;
+using Xenon.Content.Tiles.Natural.Autumn;
 using Xenon.Content.Tiles.Natural.Ores.Gems;
 using Xenon.Content.Tiles.Natural.Other;
 
@@ -21,6 +21,10 @@ namespace Xenon.Hooks
             if (tileId == ModContent.TileType<FrozenLava>() || tileId == ModContent.TileType<FlintFrozenLavaBlock>())
             {
                 self.AddBuff(ModContent.BuffType<Iceburn>(), 1);
+            }
+            if (tileId == ModContent.TileType<SyrupTile>())
+            {
+                self.sticky = true;
             }
         }
 

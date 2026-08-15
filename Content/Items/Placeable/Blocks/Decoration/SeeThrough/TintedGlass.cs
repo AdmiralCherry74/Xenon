@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Materials.BarsGems;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Decoration.SeeThrough
 {

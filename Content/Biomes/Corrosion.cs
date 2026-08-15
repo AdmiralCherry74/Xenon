@@ -44,25 +44,7 @@ public class CorrosionDesert : ModBiome
         }
     }
 }
-public class CorrosionJungle : ModBiome
-{
-    public override string BackgroundPath => base.BackgroundPath;
-    public override string MapBackground => BackgroundPath;
-    public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
-    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
-    public override bool IsBiomeActive(Player player)
-    {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneOverworldHeight && !player.ZoneDesert || player.ZoneDirtLayerHeight && !player.ZoneDesert);
-    }
-    public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
-    {
-        get
-        {
-            return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
-        }
-    }
-}
+
 public class CorrosionIce : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
@@ -121,19 +103,6 @@ public class CorrosionCaveDesert : ModBiome
         {
             return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
         }
-    }
-}
-public class CorrosionUndergroundJungle : ModBiome
-{
-    public override string BackgroundPath => base.BackgroundPath;
-    public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
-    public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
-    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
-    public override bool IsBiomeActive(Player player)
-    {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneDirtLayerHeight && !player.ZoneDesert) || ModContent.GetInstance<BiomeTileCounts>().CorrosionJungleTiles >= 300 && (player.ZoneRockLayerHeight && !player.ZoneDesert);
     }
 }
 public class CorrosionUndergroundIce : ModBiome

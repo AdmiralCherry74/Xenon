@@ -40,7 +40,6 @@ namespace Xenon.Content.NPCs.CrimsonMobs
             AnimationType = NPCID.HornetLeafy;
 			Banner = NPC.type;
             BannerItem = ModContent.ItemType<GastritisBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CrimsonJungle>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

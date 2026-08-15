@@ -51,7 +51,6 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 			AnimationType = NPCID.ManEater;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<StarvedManEaterBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorrosionUndergroundJungle>().Type };
         }
 		public override bool PreDraw(SpriteBatch spriteBatch, Vector2 v, Color drawColor)
 		{

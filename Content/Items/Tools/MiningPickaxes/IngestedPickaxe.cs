@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
+using Xenon.Content.Dusts.WaterSplashes;
 
 namespace Xenon.Content.Items.Tools.MiningPickaxes;
 
@@ -34,7 +35,7 @@ public class IngestedPickaxe : ModItem
             Vector2 vector2 = outwardDirection2.RotatedBy((float)Math.PI / 2f * player.direction * player.gravDir);
             int DustType = ModContent.DustType<CorrosionDust>();
             if (Main.rand.NextBool(3))
-                DustType = DustID.CorruptGibs;
+                DustType = ModContent.DustType<CorrosionWaterSplash>();
 
             int num15 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustType, player.velocity.X * 0.2f + player.direction * 3, player.velocity.Y * 0.2f, 140, default, 0.7f);
             Main.dust[num15].position = location2;

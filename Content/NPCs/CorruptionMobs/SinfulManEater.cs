@@ -49,7 +49,6 @@ namespace Xenon.Content.NPCs.CorruptionMobs
 			AnimationType = NPCID.ManEater;
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<StarvedManEaterBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorruptionJungle>().Type };
         }
 		public override bool PreDraw(SpriteBatch spriteBatch, Vector2 v, Color drawColor)
 		{

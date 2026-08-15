@@ -7,10 +7,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Consumables.NomNoms.Veggies;
+using Xenon.Content.Items.Weapons.Melee.Broadswords;
 using Xenon.Content.NPCs.RhyoliteMobs;
 
 namespace Xenon.Common.Data
 {
+    [ReinitializeDuringResizeArrays]
     public static class ItemSets
     {
         public static readonly bool[] BakersFood = ItemID.Sets.Factory.CreateBoolSet(
@@ -84,5 +86,11 @@ namespace Xenon.Common.Data
 
         ItemID.ChlorophyteJackhammer
         );
+
+        public static readonly bool[] ItemsThatDefenseDecreaseWithoutSpecialBuffsFromXenonThatShouldGetLocalized = ItemID.Sets.Factory.CreateBoolSet(
+            ItemID.Rally,
+            ModContent.ItemType<Scarlet>(),
+            ModContent.ItemType<Greatsword>()
+            );
     }
 }

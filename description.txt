@@ -12,7 +12,7 @@ Adds 4 new biomes:
 Adds 6 new item types:
 - Unique trinkets found through out the world that are called Valuables. They sell at great prices and even have their own rarity!
 - Battleaxes are a new type of melee weapon that are slower, but have higher critical strike chance and inflict various new buffs to enemies and yourself!
-- Crossbows, a new powerful but slow and costly style of ranged weapon that requires a new bolt type of ammunition to be crafted and use!
+- Crossbows, a new powerful but slow version of the bows!
 - Splash potions, a way for mages to fight without mana! These potions are a new consumable throwing-styled weapon in which you use magical potions and buffs to take down enemies or heal allies!
 - Caltrops are a new gadget for summons to play with to expand their arsenal against groups of enemies, inflicting normal and tag damage per one caltrop!
 - Hoes are new tool used to collect from the soft and fragile tiles around you. being able to harvest unique materials, building blocks and more from grass, vines, thorns, and even Webs (plus way more)

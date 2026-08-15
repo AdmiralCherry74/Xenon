@@ -4,7 +4,8 @@ using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
 namespace Xenon.Common.Data;
 
-internal class WallSets
+[ReinitializeDuringResizeArrays]
+public class WallSets
 {
 
     public static bool[] CatacombWalls = WallID.Sets.Factory.CreateBoolSet(

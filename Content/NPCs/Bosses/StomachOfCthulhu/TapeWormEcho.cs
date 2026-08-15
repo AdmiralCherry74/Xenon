@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.NPCs.Template;
 using static Xenon.Content.NPCs.Bosses.StomachOfCthulhu.TapeWormEchoHead.TapeWormEchoBody;
 

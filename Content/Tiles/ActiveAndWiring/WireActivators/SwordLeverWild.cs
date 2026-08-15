@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Weapons.Melee.Shortswords;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.WireActivators
 {

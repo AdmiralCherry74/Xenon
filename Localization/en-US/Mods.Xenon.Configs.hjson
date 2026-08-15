@@ -1,5 +1,5 @@
 XenonConfig: {
-	DisplayName: Client Configuration
+	DisplayName: Xenon Config
 
 	Headers: {
 		Gameplay: Gameplay
@@ -39,6 +39,30 @@ XenonConfig: {
 			'''
 			Makes it so The Mountains can be generated
 			Its a work in progress biome. Sometimes can crash you or not generate.
+			'''
+	}
+
+	BasicProgressionChanges: {
+		Label: Basic Progression Changes
+		Tooltip:
+			'''
+			Houses all of Xenon's basic gameplay changes. Like drills being reworked to be extremely fast, recipes being changed up and small progression changes
+			If you would like to see every change made, check Xenon's github and find the "BasicProgressionChangesList.txt" file
+			Disable this if you want a more vanilla playthrough
+			'''
+	}
+}
+
+XenonClientConfig: {
+	DisplayName: Xenon Client Config
+	Headers.Miscellaneous: Miscellaneous
+
+	HellstoneRename: {
+		Label: Hellstone Renamed To Vulcanite
+		Tooltip:
+			'''
+			Renames Hellstone and all related gear to Vulcanite.
+			Leave this off if you prefer the original name.
 			'''
 	}
 }

@@ -17,7 +17,7 @@ internal class PickPower : ModHook
 
 	private int On_Player_GetPickaxeDamage(On_Player.orig_GetPickaxeDamage orig, Player self, int x, int y, int pickPower, int hitBufferIndex, Tile tileTarget)
 	{
-		if (!ModContent.GetInstance<XenonConfig>().PickaxeRequiredForNextOreTier) return orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
+		if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges) return orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
 		int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
 		if ((tileTarget.TileType == TileID.Silver || tileTarget.TileType == TileID.Tungsten || tileTarget.TileType == ModContent.TileType<IndiumOre>()) && pickPower < 40)
 		{
@@ -68,10 +68,11 @@ internal class MechanicalToolRework : ModHook
 
     private int On_Player_GetPickaxeDamage(On_Player.orig_GetPickaxeDamage orig, Player self, int x, int y, int pickPower, int hitBufferIndex, Tile tileTarget)
     {
+        if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges) return orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
         int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
         if (Common.Data.ItemSets.MechanicalToolReworkItemSet[self.inventory[self.selectedItem].type])
         {
-			num *= 2;
+			num *= 5;
         }
         return num;
     }

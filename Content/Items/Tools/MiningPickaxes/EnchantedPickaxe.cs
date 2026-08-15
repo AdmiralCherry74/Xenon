@@ -48,6 +48,7 @@ public class EnchantedPickaxe : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
+            .AddRecipeGroup("GoldPickaxe")
             .AddIngredient(ModContent.ItemType<BrokenPickaxeHead>())
             .AddIngredient(ItemID.Wood, 2)
             .AddIngredient(ItemID.SpellTome)

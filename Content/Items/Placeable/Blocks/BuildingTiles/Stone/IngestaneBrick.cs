@@ -1,6 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 
 namespace Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;

@@ -64,14 +64,6 @@ namespace Xenon.Content.NPCs.OceanMobs
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneBeach && Main.dayTime)
-            {
-                return 0.75f;
-            }
-            return 0;
-        }
 
         public override void HitEffect(NPC.HitInfo hit)
         {

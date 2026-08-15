@@ -6,7 +6,7 @@ namespace Xenon.Content.Buffs.Debuffs
 {
     public class LeadCaltropTagDamage : ModBuff
     {
-        public static readonly int TagDamage = 6;
+        public static readonly int TagDamage = 7;
 
         public override void SetStaticDefaults()
         {

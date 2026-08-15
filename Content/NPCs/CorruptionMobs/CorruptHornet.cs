@@ -40,7 +40,6 @@ namespace Xenon.Content.NPCs.CorruptionMobs
             AnimationType = NPCID.HornetLeafy;
 			Banner = NPC.type;
             BannerItem = ModContent.ItemType<GastritisBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorruptionJungle>().Type };
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

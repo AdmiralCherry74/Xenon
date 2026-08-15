@@ -70,19 +70,6 @@ namespace Xenon.Content.NPCs.Other
                 return;
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneMarble && !NPC.AnyNPCs(Type))
-
-                {
-                    {
-                    return SpawnCondition.Underground.Chance * 0.75f;
-
-                    }
-            }
-            return 0f;
-        }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {

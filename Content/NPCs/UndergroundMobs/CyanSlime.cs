@@ -32,6 +32,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             NPC.damage = 14;
             NPC.defense = 4;
             NPC.lifeMax = 53;
+            NPC.alpha = 100;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 10;

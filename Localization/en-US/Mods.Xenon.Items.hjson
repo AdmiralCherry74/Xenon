@@ -1,4 +1,5 @@
 HoePowerTooltip: "{0}% hoe power"
+WeaponDefenseDebuff: On hit, reduces enemies defense
 
 FossilizedBlessing: {
 	DisplayName: Fossilized Blessing
@@ -7,11 +8,7 @@ FossilizedBlessing: {
 
 Scarlet: {
 	DisplayName: Scarlet
-	Tooltip:
-		'''
-		'A Dented, Chipped and Dirty blade that served a hero well...'
-		Armor Pierces
-		'''
+	Tooltip: "'A Dented, Chipped and Dirty blade that served a hero well...'"
 }
 
 VeinPiercer: {
@@ -473,7 +470,7 @@ Squasher: {
 }
 
 TheIndigestion: {
-	DisplayName: The Indigestion
+	DisplayName: Bowel Blade
 	Tooltip: ""
 }
 
@@ -823,7 +820,6 @@ IronCaltrops: {
 		5 summon tag damage
 		Throw 5 caltrops with them hitting an enemy once before becoming useless
 		An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
-		'The modern name "caltrop" is derived from the Old English calcatrippe (heel-trap)'
 		'''
 }
 
@@ -831,10 +827,9 @@ LeadCaltrops: {
 	DisplayName: Lead Caltrops
 	Tooltip:
 		'''
-		6 summon tag damage
+		7 summon tag damage
 		Throw 5 caltrops with them hitting an enemy once before becoming useless
 		An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
-		'Historically, caltrops were part of defenses that served to slow the advance of troops'
 		'''
 }
 
@@ -1164,14 +1159,7 @@ VitriolicPowder: {
 	Tooltip: Spreads the Corrosion
 }
 
-TheDisembowelment: {
-	DisplayName: The Disembowelment
-	Tooltip:
-		'''
-		Inflicts a cleaving effect on enemies
-		Consecutive hits increase your knockback's velocity
-		'''
-}
+TheDisembowelment.DisplayName: Tooltip:
 
 BasicCrossbow: {
 	DisplayName: Basic Crossbow
@@ -3123,8 +3111,8 @@ SoulofTwilight: {
 }
 
 ClothBlockItem: {
-	DisplayName: Cloth Block
-	Tooltip: ""
+	DisplayName: Wool Block
+	Tooltip: Colourless, but can be painted for differing colours
 }
 
 JadeHook: {
@@ -3572,5 +3560,169 @@ EvilSouls: {
 
 HolySouls: {
 	DisplayName: Holy Souls
+	Tooltip: ""
+}
+
+VitalPrismite: {
+	DisplayName: Vital Prismite
+	Tooltip: Permanently increases maximum life by 10
+}
+
+DirtBrickItem: {
+	DisplayName: Dirt Brick
+	Tooltip: ""
+}
+
+HallowedOreXenonItem: {
+	DisplayName: Hallowed Ore
+	Tooltip: ""
+}
+
+Flames: {
+	DisplayName: Gout of Flames
+	Tooltip: Spews out a short ranged gout of fire
+}
+
+DirtShield: {
+	DisplayName: Dirt Shield
+	Tooltip: ""
+}
+
+BasicBattleaxe: {
+	DisplayName: Basic Battleaxe
+	Tooltip: ""
+}
+
+AluminumCrossbow: {
+	DisplayName: Aluminum Crossbow
+	Tooltip: ""
+}
+
+CinnabarCrossbow: {
+	DisplayName: Cinnabar Crossbow
+	Tooltip: ""
+}
+
+CopperCrossbow: {
+	DisplayName: Copper Crossbow
+	Tooltip: ""
+}
+
+FluoriteCrossbow: {
+	DisplayName: Fluorite Crossbow
+	Tooltip: ""
+}
+
+GoldCrossbow: {
+	DisplayName: Gold Crossbow
+	Tooltip: ""
+}
+
+IndiumCrossbow: {
+	DisplayName: Indium Crossbow
+	Tooltip: ""
+}
+
+IronCrossbow: {
+	DisplayName: Iron Crossbow
+	Tooltip: ""
+}
+
+LeadCrossbow: {
+	DisplayName: Lead Crossbow
+	Tooltip: ""
+}
+
+PlatinumCrossbow: {
+	DisplayName: Platinum Crossbow
+	Tooltip: ""
+}
+
+SilverCrossbow: {
+	DisplayName: Silver Crossbow
+	Tooltip: ""
+}
+
+TinCrossbow: {
+	DisplayName: Tin Crossbow
+	Tooltip: ""
+}
+
+TungstenCrossbow: {
+	DisplayName: Tungsten Crossbow
+	Tooltip: ""
+}
+
+SpitBolt: {
+	DisplayName: Spit Bolt
+	Tooltip: Summons a poisoned bolt
+}
+
+LiverSplitter: {
+	DisplayName: Liver Splitter
+	Tooltip:
+		'''
+		Inflicts a cleaving effect on enemies
+		Consecutive hits grant a boost to your knockbacks velocity
+		'''
+}
+
+BowelBlade: {
+	DisplayName: Bowel Blade
+	Tooltip: ""
+}
+
+Greatsword: {
+	DisplayName: Greatsword
+	Tooltip: "'Such a great sword!'"
+}
+
+FlintHook: {
+	DisplayName: Flint Hook
+	Tooltip: ""
+}
+
+CinnabarCaltrops: {
+	DisplayName: Cinnabar Caltrops
+	Tooltip:
+		'''
+		6 summon tag damage
+		Throw 5 caltrops with them hitting an enemy once before becoming useless
+		An area denial weapon designed to confuse and make enemies vulnerable to summoning attacks
+		'''
+}
+
+ThorniteBar: {
+	DisplayName: Thornite Bar
+	Tooltip: ""
+}
+
+SapGlob: {
+	DisplayName: Sap Glob
+	Tooltip: ""
+}
+
+MulchBlock: {
+	DisplayName: Mulch Block
+	Tooltip: ""
+}
+
+SyrupBlock: {
+	DisplayName: Syrup Block
+	Tooltip: ""
+}
+
+AutumnGrassSeeds: {
+	DisplayName: Autumn Grass Seeds
+	Tooltip: ""
+}
+
+SyrupGreatsword: {
+	DisplayName: Syrup Greatsword
+	Tooltip: ""
+}
+
+M1Garand: {
+	DisplayName: M1 Garand
 	Tooltip: ""
 }

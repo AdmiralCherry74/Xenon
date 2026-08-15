@@ -66,7 +66,7 @@ public class ExpiredLeftovers : ModItem
             .AddIngredient(ModContent.ItemType<VitriolicPowder>(), 30)
             .AddIngredient(ModContent.ItemType<Bolus>(), 15)
             .AddTile(TileID.DemonAltar)
-            .SortAfterFirstRecipesOf(ItemID.BloodySpine)
+            .SortAfterFirstRecipesOf(ItemID.WormFood)
             .Register();
     }
 }

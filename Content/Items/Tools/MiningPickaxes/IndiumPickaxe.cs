@@ -15,7 +15,7 @@ public class IndiumPickaxe : ModItem
         Item.pick = 48;
         Item.knockBack = 2f;
         Item.damage = 6;
-        Item.useTime = 20;
+        Item.useTime = 15;
         Item.useAnimation = 15;
         Item.width = 32;
         Item.height = 32;

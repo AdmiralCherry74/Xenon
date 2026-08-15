@@ -107,3 +107,13 @@ UndergroundMountain: {
 	DisplayName: the Karst
 	TownNPCDialogueName: the Karst
 }
+
+Autumn: {
+	DisplayName: Autumn
+	TownNPCDialogueName: the Autumn
+}
+
+UndergroundAutumn: {
+	DisplayName: Underground Autumn
+	TownNPCDialogueName: the Underground Autumn
+}

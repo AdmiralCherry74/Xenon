@@ -19,7 +19,7 @@ public class IngestaneOre : ModTile
 		Main.tileShine[Type] = 1150;
 		Main.tileSpelunker[Type] = true;
 		Main.tileBlockLight[Type] = true;
-		Main.tileOreFinderPriority[Type] = 320;
+		Main.tileOreFinderPriority[Type] = 305;
 		Main.tileLighted[Type] = true;
 		Main.tileMerge[Type][TileID.Mud] = true;
 		Main.tileMerge[TileID.Mud][Type] = true;

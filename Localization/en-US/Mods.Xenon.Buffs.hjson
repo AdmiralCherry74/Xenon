@@ -112,3 +112,23 @@ Boomed: {
 	DisplayName: Boomed
 	Description: Attack damage is lowered by 10. Enemies spawn more frequently and will target you no matter what
 }
+
+WeakWeaponDefensivePierce: {
+	DisplayName: Lightly Pierced
+	Description: Reduces defense by 2
+}
+
+CinnabarCaltropTagDamage: {
+	DisplayName: Cinnabar Caltrop Tag Damage
+	Description: Mods.Xenon.Buffs.CinnabarCaltropTagDamage.Description
+}
+
+WeakerWeaponDefensivePierce: {
+	DisplayName: Weaker Weapon Defensive Pierce
+	Description: Mods.Xenon.Buffs.WeakerWeaponDefensivePierce.Description
+}
+
+WeakestWeaponDefensivePierce: {
+	DisplayName: Weakest Weapon Defensive Pierce
+	Description: Mods.Xenon.Buffs.WeakestWeaponDefensivePierce.Description
+}

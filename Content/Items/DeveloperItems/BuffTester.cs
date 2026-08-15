@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Debuffs.Counterable;
+using Xenon.Content.Buffs.Debuffs.WeaponSpecificDebuff;
 
 namespace Xenon.Content.Items.DeveloperItems;
     public class BuffTester : ModItem
@@ -31,7 +32,7 @@ namespace Xenon.Content.Items.DeveloperItems;
             Item.consumable = false;
             Item.rare = ItemRarityID.Red;
             Item.value = Item.sellPrice(silver: 2);
-            Item.buffType = ModContent.BuffType<Boomed>(); // Specify an existing buff to be applied when used.
+            Item.buffType = ModContent.BuffType<WeakestWeaponDefensivePierce>(); // Specify an existing buff to be applied when used.
             Item.buffTime = 999999999; // The amount of time the buff declared in Item.buffType will last in ticks. 14400 / 60 is 240, so this buff will last 240 seconds.
         }
     }

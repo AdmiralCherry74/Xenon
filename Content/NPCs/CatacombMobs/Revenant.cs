@@ -5,10 +5,8 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Weapons.Melee.Swords;
 
 namespace Xenon.Content.NPCs.CatacombMobs
 {

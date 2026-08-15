@@ -8,5 +8,8 @@
 		<!-- Include all DLLs in lib/ -->
 		<Reference Include="lib/*.dll" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Content\Projectiles\Prefixes\FishingPrefixes\" />
+	</ItemGroup>
 
 </Project>

@@ -17,7 +17,7 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
             Projectile.alpha = 75;
             Projectile.aiStyle = 1;
             Projectile.hostile = true;
-            Projectile.penetrate = 1;
+            Projectile.penetrate = -1;
             Projectile.timeLeft = 300;
             Projectile.ignoreWater = true;
             Projectile.extraUpdates = 1;

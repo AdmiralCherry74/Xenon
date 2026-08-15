@@ -2,12 +2,12 @@
 using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
-using Xenon.Content.Items.Weapons.Melee.Swords;
+using Xenon.Content.Items.Weapons.Melee.Broadswords;
 
 namespace Xenon.Common.Globals.XenonItemGlobals;
 

@@ -1,19 +1,15 @@
-﻿using Avalon.Tiles.Contagion;
-using System;
+﻿using System;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
+using Xenon.Content.Tiles.Natural.Autumn;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.OceanAndTheMarine;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Tiles.Natural.Somnolent;
-using Xenon.ModSupport.Avalon.Content.Tiles;
-using Xenon.ModSupport.Confection.Content.Tiles;
 
 namespace Xenon.Common.Systems;
 
@@ -30,6 +26,7 @@ public class BiomeTileCounts : ModSystem
     public int CorruptionJungleTiles { get; set; }
     public int CrimsonJungleTiles { get; set; }
     public int CatacombTiles { get; set; }
+    public int AutumnTiles { get; set; }
     public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
     {
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsand>()];
@@ -77,11 +74,7 @@ public class BiomeTileCounts : ModSystem
                          tileCounts[ModContent.TileType<SleepingGrass>()] +
                          tileCounts[ModContent.TileType<IndigoIce>()];
 
-        CorruptionJungleTiles = tileCounts[TileID.CorruptJungleGrass];
-
-        CrimsonJungleTiles = tileCounts[TileID.CrimsonJungleGrass];
-
-        CorrosionJungleTiles = tileCounts[ModContent.TileType<CorrosionJungleGrass>()];
+        AutumnTiles = tileCounts[ModContent.TileType<AutumnGrass>()];
 
         FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
 
@@ -95,8 +88,6 @@ public class BiomeTileCounts : ModSystem
                         tileCounts[ModContent.TileType<MossyAresStone>()] +
                         tileCounts[ModContent.TileType<MossyHelioStone>()] +
                         tileCounts[ModContent.TileType<MossyHephStone>()];
-
-        //Makes it so sand and quicksand is counted torwards The Mirage. this is seperate because of the underground sand patches out in worlds sometimes
 
         CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
                         tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +
