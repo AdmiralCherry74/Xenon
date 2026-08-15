@@ -5,7 +5,6 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
-using TheConfectionRebirth;
 
 namespace Xenon.Content.Biomes;
 
@@ -45,7 +44,7 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
 
     public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
     {
-            return BackgroundTextureLoader.GetBackgroundSlot("Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1Close1FAR");   
+        return BackgroundTextureLoader.GetBackgroundSlot("Assets/Textures/Backgrounds/CorrosionBackgrounds/CorrosionSurfaceForest/CorrosionSurface1Close1FAR");
     }
 
     public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
@@ -164,7 +163,7 @@ public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
                 bgTopY = (int)(backgroundTopMagicNumber * 2100.0 + 2000.0) + (int)scAdj + pushBGTopHack;
                 //Main.instance.SetBackgroundOffsets(textureSlot3, backgroundTopMagicNumber, pushBGTopHack);
                 bgScale *= bgGlobalScaleMultiplier;
-                    bgParallax = 0.4;
+                bgParallax = 0.4;
                 //Main.instance.LoadBackground(textureSlot3);
                 bgWidthScaled = (int)((float)ModContent.Request<Texture2D>(TexturePath).Width() * bgScale);
                 SkyManager.Instance.DrawToDepth(Main.spriteBatch, 1f / (float)bgParallax);

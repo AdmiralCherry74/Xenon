@@ -17,7 +17,7 @@ namespace Xenon.Common.Globals.XenonWorldGlobals;
 
 internal class LavaLineSaving : ModHook
 {
-	protected override void Apply()
+    protected override void Apply()
 	{
 		On_TerrainPass.ApplyPass += On_TerrainPass_ApplyPass;
 
@@ -31,10 +31,15 @@ internal class LavaLineSaving : ModHook
 internal class XenonWorld : ModSystem
 {
     public int LavaLine = 0;
-	public override void SaveWorldData(TagCompound tag)
+    public const int AutumnBGCount = 2;
+    public static int AutumnBG { get; set; } = 0;
+    public static float AutumnBGFlash;
+    public override void SaveWorldData(TagCompound tag)
 	{
         tag["Xenon:LavaLine"] = LavaLine;
-	}
+
+        tag["Xenon:AutumnBG"] = AutumnBG;
+    }
 	public override void LoadWorldData(TagCompound tag)
 	{
         if (tag.ContainsKey("Xenon:LavaLine"))
@@ -42,8 +47,26 @@ internal class XenonWorld : ModSystem
             LavaLine = tag.GetAsInt("Xenon:LavaLine");
         }
         else LavaLine = (int)(Main.rockLayer + Main.maxTilesY) / 2;
-	}
-	public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
+
+        if (tag.ContainsKey("Xenon:AutumnBG"))
+        {
+            AutumnBG = tag.GetAsInt("Xenon:AutumnBG");
+        }
+    }
+    public override void OnWorldUnload() //Here we reset the numbers for the calculations to make sure they dont carry over to other worlds
+    {
+        //Im not too fimiliar how contagion world tags work but imo it would be best if it was reset in an OnWorldUnload and OnWorldLoad somewhere
+        AutumnBG = 0;
+    }
+    public override void PostUpdateEverything()
+    {
+        AutumnBGFlash = MathHelper.Clamp(AutumnBGFlash - 0.05f, 0f, 1f);
+    }
+    public override void PreWorldGen()
+    {
+        AutumnBG = WorldGen.genRand.Next(AutumnBGCount);
+    }
+    public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
     {
         float CorrosionStrength = ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles / 350f;
         //if (CaptureManager.Instance.Active && CaptureManager.Instance.IsCapturing && CaptureInterface.Settings.BiomeChoiceIndex == AddModdedCaptureBiomes.biomeCapturesIndexs[0])
