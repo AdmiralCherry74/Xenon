@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Projectiles.Melee.Flail;
 

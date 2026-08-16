@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Materials.BarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems.HardBars;
 
 public class ThorniteBar : ModItem
 {

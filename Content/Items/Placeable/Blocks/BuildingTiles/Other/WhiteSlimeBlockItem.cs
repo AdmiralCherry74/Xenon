@@ -31,12 +31,8 @@ public class WhiteSlimeBlockItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HardenedWhiteGel>(), 1)
-            .AddTile(TileID.Solidifier)
-            .Register();
-
-        CreateRecipe()
             .AddIngredient(ModContent.ItemType<WhiteGel>(), 2)
+            .SortAfterFirstRecipesOf(ItemID.PinkSlimeBlock)
             .AddTile(TileID.Solidifier)
             .Register();
     }

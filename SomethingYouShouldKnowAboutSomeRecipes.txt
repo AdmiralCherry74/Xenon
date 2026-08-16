@@ -1,0 +1,7 @@
+Something you should know about some of Xenon's recipes is
+
+They are stored in a different place than their items. Its mostly the Ore based recipes but also can be some different items
+
+The Reason I did this is because at the time, i didnt know how to sort recipes other than manually registering them all in a single file in order of how i wanted to sort them
+
+if you need to find them. they are at "Common/Globals/XenonItemGlobals/RecipeSorting"

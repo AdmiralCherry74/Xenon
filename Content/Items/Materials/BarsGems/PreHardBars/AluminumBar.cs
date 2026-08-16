@@ -3,9 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 
-namespace Xenon.Content.Items.Materials.BarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
-public class IodineBar : ModItem
+public class AluminumBar : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -15,16 +15,8 @@ public class IodineBar : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ItemRarityID.Master;
+        Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
-    }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<IodineOreBlock>(), 10)
-            .AddTile(TileID.AdamantiteForge)
-            .Register();
     }
 }

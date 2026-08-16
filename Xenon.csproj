@@ -9,6 +9,11 @@
 		<Reference Include="lib/*.dll" />
 	</ItemGroup>
 	<ItemGroup>
+	  <AdditionalFiles Remove="Common\SomethingYouShouldKnowAboutSomeRecipes.txt" />
+	  <AdditionalFiles Remove="Content\Items\SomethingYouShouldKnowAboutSomeRecipes.txt" />
+	  <AdditionalFiles Remove="SomethingYouShouldKnowAboutSomeRecipes.txt" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Folder Include="Content\Projectiles\Prefixes\FishingPrefixes\" />
 	</ItemGroup>
 

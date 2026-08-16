@@ -485,7 +485,7 @@ FreshChyme: {
 }
 
 TheDamp: {
-	DisplayName: The Damp
+	DisplayName: "The Stomach-Line"
 	Tooltip: ""
 }
 

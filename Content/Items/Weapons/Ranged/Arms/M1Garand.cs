@@ -51,17 +51,14 @@ public class M1Garand : ModItem
         {
             shots = 0;
 
-            SoundEngine.PlaySound(new SoundStyle("TheAutumn/Assets/Sounds/Items/M1GarandClipEjection"));
+            SoundEngine.PlaySound(new SoundStyle("Xenon/Assets/SFX/M1GarandClipEjection"));
 
             for (int i = 0; i < 5; i++)
             {
-                // New velocity for new bullets
                 Vector2 NewVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(10));
 
-                // Some random to bullet speed
                 NewVelocity *= 1f - Main.rand.NextFloat(0.2f);
 
-                // Creating new projectile
                 Projectile.NewProjectileDirect(
                     source,
                     position,

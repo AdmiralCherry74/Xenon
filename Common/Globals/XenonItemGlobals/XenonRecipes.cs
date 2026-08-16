@@ -11,7 +11,7 @@ using Xenon.Content.Items.Armor.Vanity.OreCrowns;
 using Xenon.Content.Items.DeveloperItems.DeveloperItems;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;

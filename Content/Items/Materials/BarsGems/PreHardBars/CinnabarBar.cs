@@ -3,9 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 
-namespace Xenon.Content.Items.Materials.BarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
-public class AluminumBar : ModItem
+public class CinnabarBar : ModItem
 {
     public override void SetStaticDefaults()
     {

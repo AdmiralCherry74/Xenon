@@ -9,6 +9,7 @@ using Xenon.Content.Items.Armor.PreHardmode.GemRobes;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Armor.Vanity.OreCrowns;
 using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;

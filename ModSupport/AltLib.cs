@@ -9,12 +9,12 @@ using Xenon.Content.NPCs.Other;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using AltLibrary.Common.AltBiomes;
 using AltLibrary.Common.AltOres;
-using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Building.Decorational;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
 namespace Xenon.ModSupport;
 

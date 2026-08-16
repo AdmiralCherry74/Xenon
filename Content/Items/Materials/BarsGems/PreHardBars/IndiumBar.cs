@@ -3,9 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 
-namespace Xenon.Content.Items.Materials.BarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
-public class FluoriteBar : ModItem
+public class IndiumBar : ModItem
 {
     public override void SetStaticDefaults()
     {

@@ -2,11 +2,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
-using Xenon.Content.Tiles.Building.Decorational;
 
-namespace Xenon.Content.Items.Materials.BarsGems;
+namespace Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
-public class IngestaneBar : ModItem
+public class FluoriteBar : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -14,10 +13,9 @@ public class IngestaneBar : ModItem
     }
     public override void SetDefaults()
     {
-        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
         Item.width = 20;
         Item.height = 20;
-        Item.rare = ItemRarityID.Blue;
+        Item.rare = ItemRarityID.White;
         Item.value = Item.sellPrice(0, 0, 21);
         Item.maxStack = 9999;
     }

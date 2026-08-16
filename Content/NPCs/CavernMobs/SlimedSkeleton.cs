@@ -106,8 +106,7 @@ namespace Xenon.Content.NPCs.CavernMobs
             npcLoot.Add(ItemDropRule.Common(ItemID.BoneSword, 500, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Skull, 200, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Hook, 25, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 3));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<HardenedWhiteGel>(), 3, 1, 3));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteGel>(), 3, 1, 3));
         }
     }
 }

@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
@@ -65,6 +66,8 @@ public class XenonShimmer : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ItemID.Stopwatch] = ItemID.MetalDetector;
         ItemID.Sets.ShimmerTransformToItem[ItemID.MetalDetector] = ItemID.DPSMeter;
 
+        ItemID.Sets.ShimmerTransformToItem[ItemID.CorruptSeeds] = ModContent.ItemType<CorrosionSeeds>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CorrosionSeeds>()] = ItemID.CrimsonSeeds;
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.Radar] = ItemID.LifeformAnalyzer;
         ItemID.Sets.ShimmerTransformToItem[ItemID.LifeformAnalyzer] = ItemID.TallyCounter;

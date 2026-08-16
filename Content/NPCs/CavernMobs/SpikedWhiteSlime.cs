@@ -97,7 +97,6 @@ namespace Xenon.Content.NPCs.CavernMobs
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WhiteGel>(), 1, 2, 4));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<HardenedWhiteGel>(), 10, 1, 3));
         }
     }
 }

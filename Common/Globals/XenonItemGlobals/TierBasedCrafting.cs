@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Fish;
-using Xenon.Content.Items.Materials.BarsGems;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.DriverHammers;

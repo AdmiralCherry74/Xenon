@@ -12,7 +12,7 @@ public class CinnabarCaltropsProj : ModProjectile
     {
         Projectile.width = 18; // The width of projectile hitbox
         Projectile.height = 15; // The height of projectile hitbox
-        Projectile.scale = 0.20f;
+        Projectile.scale = 1f;
         Projectile.friendly = true;
         Projectile.hostile = false;
         Projectile.penetrate = -1;

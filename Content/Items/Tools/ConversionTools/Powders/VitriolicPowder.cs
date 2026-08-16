@@ -24,7 +24,11 @@ namespace Xenon.Content.Items.Tools.ConversionTools.Powders
 
         public override void AddRecipes()
         {
-            CreateRecipe(5).AddIngredient(ModContent.ItemType<VitriolicMushroom>()).AddTile(TileID.Bottles).Register();
+            CreateRecipe(5)
+                .AddIngredient(ModContent.ItemType<VitriolicMushroom>())
+                .AddTile(TileID.Bottles)
+                .SortAfterFirstRecipesOf(ItemID.VilePowder)
+                .Register();
         }
     }
 }
