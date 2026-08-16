@@ -6,6 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Common;
+using Xenon.Content.Tiles.Natural.Ores.Gems;
 using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Hooks;
 
@@ -103,7 +104,11 @@ public class IceModGenPass : GenPass
 					{
 						WorldGen.OreRunner(xpos, ypos, 7, 7, (ushort)ModContent.TileType<FrozenLava>());
 					}
-				}
+                    if (WorldGen.genRand.NextBool(180))
+                    {
+                        WorldGen.TileRunner(xpos, ypos, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), ModContent.TileType<FlintFrozenLavaBlock>());
+                    }
+                }
 				else
 				{
 					num979 += WorldGen.genRand.Next(-3, 4);
@@ -142,7 +147,11 @@ public class IceModGenPass : GenPass
 						{
 							WorldGen.OreRunner(xpos, ypos, 7, 7, (ushort)ModContent.TileType<FrozenLava>());
 						}
-					}
+                        if (WorldGen.genRand.NextBool(180))
+                        {
+                            WorldGen.TileRunner(xpos, ypos, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), ModContent.TileType<FlintFrozenLavaBlock>());
+                        }
+                    }
 				}
 			}
 

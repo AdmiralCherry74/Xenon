@@ -14,7 +14,6 @@ namespace Xenon.Content.Projectiles.Tools.GrapplingHookProj
         private static Asset<Texture2D> chainTexture;
         public override void SetStaticDefaults()
         {
-            ProjectileID.Sets.SingleGrappleHook[Type] = true;
             chainTexture = ModContent.Request<Texture2D>("Xenon/Content/Projectiles/Tools/GrapplingHookProj/LapisHookProj_Chain");
         }
         public override void SetDefaults()

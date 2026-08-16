@@ -19,7 +19,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 {
                     tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "hoePower", Language.GetTextValue("Mods.Xenon.Items.HoePowerTooltip", item.GetGlobalItem<HoePower>().hoePower)));
                 }
-            }
+           }
         }
     }
 }
