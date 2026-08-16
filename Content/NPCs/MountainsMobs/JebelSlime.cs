@@ -65,14 +65,6 @@ public class JebelSlime : ModNPC
             return;
         }
     }
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
-    {
-        if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime && Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].HasTile)
-        {
-            return 0.75f;
-        }
-        return 0;
-    }
 
     public override void HitEffect(NPC.HitInfo hit)
     {

@@ -1,18 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.GameContent.Bestiary;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
 
-namespace Xenon.Content.NPCs.MountainsMobs;
+namespace Xenon.Content.NPCs.CutNPCs;
 
-public class Sparrow : ModNPC
+public class BloodBolt : ModNPC
 {
     public override void SetStaticDefaults()
     {
-        Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Bird];
+        Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.ChaosBallTim];
 
         NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
         {
@@ -25,26 +22,17 @@ public class Sparrow : ModNPC
     {
         NPC.width = 32;
         NPC.height = 44;
-        NPC.damage = 0;
+        NPC.damage = 17;
         NPC.defense = 0;
-        NPC.lifeMax = 5;
-        NPC.HitSound = SoundID.NPCHit1;
-        NPC.DeathSound = SoundID.NPCDeath1;
-        NPC.value = 0;
-        NPC.knockBackResist = 0.80f;
-        NPC.aiStyle = NPCAIStyleID.Bird;
+        NPC.lifeMax = 1;
+        NPC.HitSound = SoundID.NPCHit3;
+        NPC.DeathSound = SoundID.NPCDeath3;
+        NPC.value = 250;
+        NPC.knockBackResist = 1f;
+        NPC.aiStyle = NPCAIStyleID.Spell;
 
-        AIType = NPCID.Bird;
-        AnimationType = NPCID.Bird;
-    }
-
-    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
-    {
-
-        bestiaryEntry.Info.AddRange([
-            BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
-            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Sparrow")),
-        ]);
+        AIType = NPCID.ChaosBallTim;
+        AnimationType = NPCID.ChaosBallTim;
     }
 
     public override void AI()
@@ -61,13 +49,14 @@ public class Sparrow : ModNPC
             return;
         }
     }
+
     public override void HitEffect(NPC.HitInfo hit)
     {
         if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
         {
             for (int l = 0; l < 20; l++)
             {
-                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, 0f, 0f, 50, default, 1.5f);
+                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
                 Main.dust[dust].velocity *= 2f;
                 Main.dust[dust].noGravity = true;
             }

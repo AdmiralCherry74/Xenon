@@ -5,15 +5,15 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
+using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.CutNPCs
 {
-    public class Wartornmelon : ModNPC
+    public class CorruptHornet : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.MourningWood];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.HornetLeafy];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -24,26 +24,29 @@ namespace Xenon.Content.NPCs.CutNPCs
 
         public override void SetDefaults()
         {
-            NPC.width = 32;
-            NPC.height = 44;
-            NPC.damage = 40;
-            NPC.defense = 14;
-            NPC.lifeMax = 1500;
+            NPC.width = 42;
+            NPC.height = 78;
+            NPC.damage = 10;
+            NPC.defense = 3;
+            NPC.lifeMax = 150;
+            NPC.noGravity = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 1000;
-            NPC.knockBackResist = 0f;
-            NPC.aiStyle = NPCAIStyleID.Fighter; 
-            AIType = NPCID.FaceMonster;
-            AnimationType = NPCID.MourningWood;
+            NPC.value = 250;
+            NPC.knockBackResist = 1f;
+            NPC.aiStyle = NPCAIStyleID.Flying; 
+            
+            AIType = NPCID.HornetLeafy;
+            AnimationType = NPCID.HornetLeafy;
+			Banner = NPC.type;
+            BannerItem = ModContent.ItemType<GastritisBanner>();
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Wartornmelon")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorruptHornet")),
             ]);
         }
 
@@ -61,7 +64,6 @@ namespace Xenon.Content.NPCs.CutNPCs
                 return;
             }
         }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
@@ -82,7 +84,8 @@ namespace Xenon.Content.NPCs.CutNPCs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.RichMahogany, 1, 10, 40));
+            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.Stinger, 3, 0, 1));
         }
     }
 }

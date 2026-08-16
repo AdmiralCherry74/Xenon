@@ -37,7 +37,7 @@ public class FlintFrozenLavaBlock : ModTile
         RegisterItemDrop(ModContent.ItemType<Flint>());
         AddMapEntry(new Color(108, 108, 108));
         HitSound = SoundID.Item50;
-        DustType = DustID.Asphalt;
+        DustType = ModContent.DustType<FlintDust>();
     }
 
     public override void NumDust(int i, int j, bool fail, ref int num)

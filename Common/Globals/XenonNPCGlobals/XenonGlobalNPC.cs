@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
 using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Common.Systems;
 using Xenon.Content.Biomes;
@@ -11,6 +10,7 @@ using Xenon.Content.NPCs.CatacombMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
+using Xenon.Content.NPCs.CutNPCs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;
 using Xenon.Content.NPCs.OceanMobs;
@@ -170,7 +170,6 @@ internal class XenonGlobalNPC : GlobalNPC
             if (spawnInfo.Player.ZoneCorrupt)
             {
                 pool.Add(ModContent.NPCType<NightmareWalker>(), 0.50f);
-                pool.Add(ModContent.NPCType<Venial>(), 0.50f);
                 pool.Add(ModContent.NPCType<Evphila>(), 0.50f);
             }
         }
@@ -179,7 +178,6 @@ internal class XenonGlobalNPC : GlobalNPC
             if (spawnInfo.Player.ZoneCrimson)
             {
                 pool.Add(ModContent.NPCType<CapillarieHead>(), 0.50f);
-                pool.Add(ModContent.NPCType<Clotter>(), 0.50f);
             }
         }
         if (ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu)
@@ -249,7 +247,6 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(ModContent.NPCType<LittleGastritis>(), 1.25f);
             pool.Add(ModContent.NPCType<Gastritis>(), 1);
             pool.Add(ModContent.NPCType<BigGastritis>(), 0.75f);
-            pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
         }
         if (spawnInfo.Player.InModBiome<CorrosionDesert>())
         {
@@ -257,7 +254,6 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(ModContent.NPCType<LittleGastritis>(), 1.25f);
             pool.Add(ModContent.NPCType<Gastritis>(), 1);
             pool.Add(ModContent.NPCType<BigGastritis>(), 0.75f);
-            pool.Add(ModContent.NPCType<Aslugic>(), 0.75f);
             if (Main.hardMode)
             {
                 pool.Add(ModContent.NPCType<FilthyMummy>(), 0.50f);

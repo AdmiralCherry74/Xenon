@@ -485,7 +485,7 @@ FreshChyme: {
 }
 
 TheDamp: {
-	DisplayName: "The Stomach-Line"
+	DisplayName: The Stomach-Line
 	Tooltip: ""
 }
 
@@ -3724,5 +3724,49 @@ SyrupGreatsword: {
 
 M1Garand: {
 	DisplayName: M1 Garand
+	Tooltip:
+		'''
+		Converts normal bullets to explosive bullets
+		Every sevength shot fires out a spread of bullets
+		'''
+}
+
+GarnetSquirrelItem: {
+	DisplayName: Garnet Squirrel
+	Tooltip: ""
+}
+
+JadeSquirrelItem: {
+	DisplayName: Jade Squirrel
+	Tooltip: ""
+}
+
+LapisSquirrelItem: {
+	DisplayName: Lapis Squirrel
+	Tooltip: ""
+}
+
+GarnetBunnyItem: {
+	DisplayName: Garnet Bunny
+	Tooltip: ""
+}
+
+JadeBunnyItem: {
+	DisplayName: Jade Bunny
+	Tooltip: ""
+}
+
+LapisBunnyItem: {
+	DisplayName: Lapis Bunny
+	Tooltip: ""
+}
+
+FlintBunnyItem: {
+	DisplayName: Flint Bunny
+	Tooltip: ""
+}
+
+FlintSquirrelItem: {
+	DisplayName: Flint Squirrel
 	Tooltip: ""
 }

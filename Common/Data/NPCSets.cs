@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Xenon.Content.NPCs.CatacombMobs;
 using Xenon.Content.NPCs.CavernMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
+using Xenon.Content.NPCs.CutNPCs;
 using Xenon.Content.NPCs.RhyoliteMobs;
 
 namespace Xenon.Common.Data

@@ -61,23 +61,13 @@ public class Chipmunk : ModNPC
             return;
         }
     }
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
-    {
-        if (spawnInfo.Player.InModBiome<Mountain>() && Main.dayTime && Main.tile[spawnInfo.SpawnTileX, spawnInfo.SpawnTileY].HasTile)
-        {
-            return 1f;
-        }
-        return 0;
-    }
-
-
     public override void HitEffect(NPC.HitInfo hit)
     {
         if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
         {
             for (int l = 0; l < 20; l++)
             {
-                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Wraith, 0f, 0f, 50, default, 1.5f);
+                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, 0f, 0f, 50, default, 1.5f);
                 Main.dust[dust].velocity *= 2f;
                 Main.dust[dust].noGravity = true;
             }
