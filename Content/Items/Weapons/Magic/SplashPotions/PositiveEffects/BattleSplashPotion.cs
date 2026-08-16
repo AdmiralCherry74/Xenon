@@ -36,7 +36,7 @@ public class BattleSplashPotion : ModItem
 
         Item.value = 1000;
         Item.rare = ItemRarityID.Green;
-        Item.stack = 9999;
+        Item.maxStack = 9999;
     }
     public override void AddRecipes()
     {

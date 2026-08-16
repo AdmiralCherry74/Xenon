@@ -41,7 +41,7 @@ GarnetGemball.DisplayName: Garnet Gemball
 LapisGemball.DisplayName: Lapis Gemball
 AntiMaterialRound.DisplayName: Anti Material Round
 AntiMaterialRoundProj.DisplayName: Anti Material Round
-DeathforceSplashPotionProj.DisplayName: Deathforce Splash Potion
+DeathforceSplashPotionProj.DisplayName: Wither Splash Poison
 LifeforceSplashPotionProj.DisplayName: Lifeforce Splash Potion
 AmmoReserveSplashPotionProj.DisplayName: Ammo Reservation Splash Potion
 ArcherySplashPotionProj.DisplayName: Archery Splash Potion
@@ -95,5 +95,20 @@ ImpactGrenadeProj.DisplayName: Impact Grenade
 ImpactDynamiteProj.DisplayName: Impact Dynamite
 FlamesProj.DisplayName: Gout of Flames
 SpitBoltProj.DisplayName: Spit Bolt
-FlintHookProj.DisplayName: Flint Hook Proj
-CinnabarCaltropsProj.DisplayName: Cinnabar Caltrops Proj
+FlintHookProj.DisplayName: Flint Hook
+CinnabarCaltropsProj.DisplayName: Cinnabar Caltrops
+SplashPotionProjs.DisplayName: Splash Potion
+ObsidianskinSplashPotionProj.DisplayName: Obsidian Skin Splash Potion
+RageSplashPotionProj.DisplayName: Rage Splash Potion
+RegenerationSplashPotionProj.DisplayName: Regeneration Splash Potion
+ShineSplashPotionProj.DisplayName: Shine Splash Potion
+SonarSplashPotionProj.DisplayName: Sonar Splash Potion
+SpelunkerSplashPotionProj.DisplayName: Spelunker Splash Potion
+SummoningSplashPotionProj.DisplayName: Summoning Splash Potion
+SwiftnessSplashPotionProj.DisplayName: Swiftness Splash Potion
+ThornsSplashPotionProj.DisplayName: Thorns Splash Potion
+TitanSplashPotionProj.DisplayName: Titan Splash Potion
+WarmthSplashPotionProj.DisplayName: Warmth Splash Potion
+WaterwalkingSplashPotionProj.DisplayName: Water Walking Splash Potion
+WraithSplashPotionProj.DisplayName: Wraith Splash Potion
+PoisonSplashPotionProj.DisplayName: Splash Poison

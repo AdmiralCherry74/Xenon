@@ -3,41 +3,13 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonProjectileGlobals;
 using Xenon.Content.Buffs.Debuffs;
 
 namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
 {
-    public class DeathforceSplashPotionProj : ModProjectile
+    public class DeathforceSplashPotionProj : SplashPotionProjs
     {
-
-        public override void SetDefaults()
-        {
-            Projectile.width = 24;
-            Projectile.height = 24;
-
-            Projectile.friendly = true;
-            Projectile.DamageType = DamageClass.Magic;
-            Projectile.timeLeft = 1200;
-        }
-
-        public override void AI()
-        {
-
-            Projectile.ai[0] += 1f;
-            if (Projectile.ai[0] >= 15f)
-            {
-                Projectile.ai[0] = 15f;
-                Projectile.velocity.Y += 0.3f;
-            }
-
-            //Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
-
-
-            if (Projectile.velocity.Y > 32f)
-            {
-                Projectile.velocity.Y = 32f;
-            }
-        }
         public override void PostAI()
         {
             Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Adamantite, default, 1);

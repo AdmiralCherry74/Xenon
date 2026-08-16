@@ -1,0 +1,54 @@
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Audio;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonProjectileGlobals;
+using Xenon.Content.Buffs.Debuffs;
+
+namespace Xenon.Content.Projectiles.Magic.SplashPotionProj.NegativeEffectsProj
+{
+    public class PoisonSplashPotionProj : SplashPotionProjs
+    {
+        public override void PostAI()
+        {
+            Dust d = Dust.NewDustDirect(Projectile.Center + new Vector2(0, -3), 0, 0, DustID.Poisoned, default, 1);
+            d.noGravity = true;
+            d.fadeIn = 1f;
+            d.velocity *= 0.25f;
+            d.velocity += Projectile.velocity * 0.25f;
+        }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Poisoned, default, 1);
+                d.noGravity = true;
+                d.fadeIn = 1.3f;
+            }
+            target.AddBuff(BuffID.Poisoned, 6750);
+        }
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Poisoned, default, 1);
+                d.noGravity = true;
+                d.fadeIn = 1.3f;
+            }
+            target.AddBuff(BuffID.Poisoned, 6750);
+        }
+
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Shatter, Projectile.position);
+            for (int i = 0; i < 5; i++)
+            {
+                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Poisoned);
+                dust.noGravity = true;
+                dust.velocity *= 1.5f;
+                dust.scale *= 0.9f;
+            }
+        }
+    }
+}

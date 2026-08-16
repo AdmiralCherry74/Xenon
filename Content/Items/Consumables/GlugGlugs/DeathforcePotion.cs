@@ -38,7 +38,7 @@ public class DeathforcePotion : ModItem
         CreateRecipe()
         .AddRecipeGroup("Ebonkoi", 1)
         .AddIngredient(ItemID.Moonglow)
-        .AddIngredient(ItemID.Shiverthorn)
+        .AddRecipeGroup("Xenon:Thorns")
         .AddIngredient(ItemID.Waterleaf)
         .AddIngredient(ItemID.BottledWater)
         .AddTile(TileID.Bottles)

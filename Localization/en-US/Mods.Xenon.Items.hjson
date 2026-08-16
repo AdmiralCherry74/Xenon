@@ -1,5 +1,6 @@
 HoePowerTooltip: "{0}% hoe power"
 WeaponDefenseDebuff: On hit, reduces enemies defense
+SplashPotionLocalization: Throw this to give someone the following effect
 
 FossilizedBlessing: {
 	DisplayName: Fossilized Blessing
@@ -1368,7 +1369,7 @@ StarvedManEaterBanner: {
 
 AncientTerraBlade: {
 	DisplayName: Ancient Terra Blade
-	Tooltip: Old heros used this...
+	Tooltip: Old heroes used this...
 }
 
 CorrosionCrate: {
@@ -1669,7 +1670,7 @@ FrigerationPotion: {
 }
 
 DeathforcePotion: {
-	DisplayName: Wither Potion
+	DisplayName: Wither Poison
 	Tooltip:
 		'''
 		Decreases life by 20%
@@ -1678,7 +1679,7 @@ DeathforcePotion: {
 }
 
 DeathforceSplashPotion: {
-	DisplayName: Wither Splash Potion
+	DisplayName: Wither Splash Poison
 	Tooltip: Decreases life by 20%
 }
 
@@ -1844,7 +1845,7 @@ PeriwinkleCatacombBrickBlock: {
 
 NightOwlSplashPotion: {
 	DisplayName: Night Owl Splash Potion
-	Tooltip: ""
+	Tooltip: Increases night vision
 }
 
 CatacombSolution: {
@@ -2958,7 +2959,11 @@ JungleThornyBushItem: {
 
 Poison: {
 	DisplayName: Poison
-	Tooltip: Inflicts Poisoned
+	Tooltip:
+		'''
+		Inflicts Poisoned
+		'Best used for splash potions'
+		'''
 }
 
 ThornyBush: {
@@ -3769,4 +3774,74 @@ FlintBunnyItem: {
 FlintSquirrelItem: {
 	DisplayName: Flint Squirrel
 	Tooltip: ""
+}
+
+ObsidianskinSplashPotion: {
+	DisplayName: Obsidianskin Splash Potion
+	Tooltip: Provides immunity to lava
+}
+
+RageSplashPotion: {
+	DisplayName: Rage Splash Potion
+	Tooltip: Increases critical chance by 10%
+}
+
+RegenerationSplashPotion: {
+	DisplayName: Regeneration Splash Potion
+	Tooltip: Provides life regeneration
+}
+
+ShineSplashPotion: {
+	DisplayName: Shine Splash Potion
+	Tooltip: Emits an aura of light
+}
+
+SonarSplashPotion: {
+	DisplayName: Sonar Splash Potion
+	Tooltip: Detects hooked fish
+}
+
+SpelunkerSplashPotion: {
+	DisplayName: Spelunker Splash Potion
+	Tooltip: Shows the location of treasure and ore
+}
+
+SummoningSplashPotion: {
+	DisplayName: Summoning Splash Potion
+	Tooltip: Increases your max number of minions by 1
+}
+
+SwiftnessSplashPotion: {
+	DisplayName: Swiftness Splash Potion
+	Tooltip: 25% increased movement speed
+}
+
+ThornsSplashPotion: {
+	DisplayName: Thorns Splash Potion
+	Tooltip: Attackers also take damage
+}
+
+TitanSplashPotion: {
+	DisplayName: Titan Splash Potion
+	Tooltip: Increases knockback
+}
+
+WarmthSplashPotion: {
+	DisplayName: Warmth Splash Potion
+	Tooltip: Reduces damage from cold sources
+}
+
+WaterwalkingSplashPotion: {
+	DisplayName: Waterwalking Splash Potion
+	Tooltip: Allows the ability to walk on water
+}
+
+WraithSplashPotion: {
+	DisplayName: Wraith Splash Potion
+	Tooltip: Increases damage by 10%
+}
+
+PoisonSplashPotion: {
+	DisplayName: Splash Poison
+	Tooltip: "Inflicts poisoned"
 }

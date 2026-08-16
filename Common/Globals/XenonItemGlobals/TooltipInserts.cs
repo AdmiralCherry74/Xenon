@@ -25,6 +25,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "WeaponDefenseDebuff", Language.GetTextValue("Mods.Xenon.Items.WeaponDefenseDebuff")));
                 }
             }
+            if (Data.ItemSets.SplashPotions[item.type])
+            {
+                int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
+                if (tooltipInsert != 1)
+                {
+                    tooltips.Insert(tooltipInsert + 6, new TooltipLine(Mod, "SplashPotionLocalization", Language.GetTextValue("Mods.Xenon.Items.SplashPotionLocalization")));
+                }
+            }
         }
     }
 }

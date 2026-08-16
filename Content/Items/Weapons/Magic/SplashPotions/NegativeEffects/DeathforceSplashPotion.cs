@@ -30,13 +30,13 @@ public class DeathforceSplashPotion : ModItem
         Item.DamageType = DamageClass.Magic;
         Item.shootSpeed = 6f;
         Item.knockBack = 0.35f;
-        Item.crit = -2147483646; //Splash potions wont crit, thats intended
+        Item.crit = -2147483646; //Splash poisons wont crit, thats intended
         Item.shoot = ModContent.ProjectileType<DeathforceSplashPotionProj>();
         Item.consumable = true;
 
         Item.value = 1000;
         Item.rare = ItemRarityID.Green;
-        Item.stack = 9999;
+        Item.maxStack = 9999;
     }
     public override void AddRecipes()
     {
@@ -49,7 +49,7 @@ public class DeathforceSplashPotion : ModItem
         CreateRecipe(3)
         .AddRecipeGroup("Ebonkoi", 1)
         .AddIngredient(ItemID.Moonglow)
-        .AddIngredient(ItemID.Shiverthorn)
+        .AddRecipeGroup("Xenon:Thorns")
         .AddIngredient(ItemID.Waterleaf)
         .AddIngredient(ItemID.BottledWater)
         .AddIngredient(ModContent.ItemType<Flint>())
