@@ -3843,5 +3843,5 @@ WraithSplashPotion: {
 
 PoisonSplashPotion: {
 	DisplayName: Splash Poison
-	Tooltip: "Inflicts poisoned"
+	Tooltip: Inflicts poisoned
 }

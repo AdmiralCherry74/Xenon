@@ -29,6 +29,7 @@ public class CorrosionDesert : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SurfaceCorrosionPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
@@ -49,6 +50,7 @@ public class CorrosionIce : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
+    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");

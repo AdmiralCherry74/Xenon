@@ -156,8 +156,8 @@ internal class XenonWorld : ModSystem
             int sunG = backgroundColor.G;
             int sunB = backgroundColor.B;
             byte readableSunR = 190;
-            byte readableSunG = 127;
-            byte readableSunB = 0;
+            byte readableSunG = 137;
+            byte readableSunB = 90;
             sunR -= (int)((byte.MaxValue - readableSunR) * AutumnStrength / 1.6f * (backgroundColor.R / 255f));
             sunG -= (int)((byte.MaxValue - readableSunG) * AutumnStrength / 1.6f * (backgroundColor.G / 255f));
             sunB -= (int)((byte.MaxValue - readableSunB) * AutumnStrength / 1.6f * (backgroundColor.B / 255f));
@@ -171,8 +171,8 @@ internal class XenonWorld : ModSystem
 
             int backgroundColorAverage = (int)((backgroundColor.R + backgroundColor.G + backgroundColor.B) / 2.70f);
             byte readableTint_R = 190;
-            byte readableTint_G = 127;
-            byte readableTint_B = 0;
+            byte readableTint_G = 137;
+            byte readableTint_B = 90;
             int tileTint_R = (byte)((byte.MaxValue - readableTint_R) * AutumnStrength * (backgroundColorAverage / 255f));
             int tileTint_G = (byte)((byte.MaxValue - readableTint_G) * AutumnStrength * (backgroundColorAverage / 255f));
             int tileTint_B = (byte)((byte.MaxValue - readableTint_B) * AutumnStrength * (backgroundColorAverage / 255f));
