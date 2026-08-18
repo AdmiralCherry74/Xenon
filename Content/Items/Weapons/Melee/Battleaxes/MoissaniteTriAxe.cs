@@ -34,11 +34,15 @@ public class MoissaniteTriAxe : ModItem
         target.AddBuff(ModContent.BuffType<Cleaved>(), 400);
         target.AddBuff(BuffID.OnFire, 180);
     }
-    public override void MeleeEffects(Player player, Rectangle hitbox) => Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Torch);
+    public override void MeleeEffects(Player player, Rectangle hitbox)
+    {
+        int d = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Torch);
+        Main.dust[d].noGravity = true;
+    }
     public override void PostUpdate() => Lighting.AddLight(Item.Center, Color.OrangeRed.ToVector3() * 0.55f);
     public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
     {
         Texture2D tex = ModContent.Request<Texture2D>("Xenon/Content/Items/Weapons/Melee/Battleaxes/MoissaniteTriAxe_Glow", AssetRequestMode.ImmediateLoad).Value;
-        spriteBatch.Draw(tex, new Vector2(Item.position.X - Main.screenPosition.X + Item.width * 0.6f, Item.position.Y - Main.screenPosition.Y + Item.height - tex.Height * 0.5f + 2f), new Rectangle(0, 0, tex.Width, tex.Height), Color.White, rotation, tex.Size() * 0.5f, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(tex, new Vector2(Item.position.X - Main.screenPosition.X + Item.width * 0.5f, Item.position.Y - Main.screenPosition.Y + Item.height - tex.Height * 0.5f), new Rectangle(0, 0, tex.Width, tex.Height), Color.White, rotation, tex.Size() * 0.5f, scale, SpriteEffects.None, 0f);
     }
 }

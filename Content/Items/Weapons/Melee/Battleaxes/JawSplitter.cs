@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
@@ -10,8 +11,8 @@ public class JawSplitter : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 32;
-        Item.height = 32;
+        Item.width = 64;
+        Item.height = 56;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 30;
@@ -26,6 +27,11 @@ public class JawSplitter : ModItem
         Item.value = Item.sellPrice(copper: 90);
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
+    }
+    public override void MeleeEffects(Player player, Rectangle hitbox)
+    {
+        int d = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Blood);
+        Main.dust[d].noGravity = true;
     }
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {

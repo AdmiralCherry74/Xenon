@@ -840,7 +840,7 @@ TintedGlass: {
 }
 
 JawSplitter: {
-	DisplayName: Jaw Splitter
+	DisplayName: Meat Slicer
 	Tooltip:
 		'''
 		Inflicts a cleaving effect on enemies
@@ -849,7 +849,7 @@ JawSplitter: {
 }
 
 MoissaniteTriAxe: {
-	DisplayName: Moissanite Trimagma
+	DisplayName: Infernax
 	Tooltip: Inflicts a cleaving effect on enemies
 }
 

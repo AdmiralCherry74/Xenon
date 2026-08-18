@@ -10,8 +10,8 @@ public class NightGnasher : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 40;
-        Item.height = 32;
+        Item.width = 64;
+        Item.height = 54;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 25;
@@ -27,7 +27,6 @@ public class NightGnasher : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
-
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
         target.AddBuff(ModContent.BuffType<Cleaved>(), 360);

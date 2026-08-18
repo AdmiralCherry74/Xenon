@@ -14,8 +14,8 @@ public class LiverSplitter : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 40;
-        Item.height = 32;
+        Item.width = 70;
+        Item.height = 70;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 25;
