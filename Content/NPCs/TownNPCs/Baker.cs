@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
@@ -160,6 +161,7 @@ namespace Xenon.Content.NPCs.TownNPCs
             if (TownNPCRespawnSystem.unlockedBakerSpawn)
             {
                 // If the Baker has spawned in this world before this will return true;
+                return true;
             }
 
             foreach (var player in Main.ActivePlayers)
@@ -344,32 +346,72 @@ namespace Xenon.Content.NPCs.TownNPCs
         //}
 
         // Not completely finished, but below is what the NPC will sell
-        //public override void AddShops()
-        //{
-        //    var npcShop = new NPCShop(Type, ShopName)
-        //    npcShop.Register(); // Name of this shop tab
-        //}
+        public override void AddShops()
+        {
+            var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ItemID.PumpkinPie) { shopCustomPrice = Item.buyPrice(silver: 10) });
 
-        //public override void ModifyActiveShop(string shopName, Item[] items)
-        //{
-        //    foreach (Item item in items)
-        //    {
-        //        // Skip 'air' items and null items.
-        //        if (item == null || item.type == ItemID.None)
-        //        {
-        //            continue;
-        //        }
+            if (Main.hardMode)
+            {
+                npcShop.Add(new Item(ItemID.PumpkinPie) { shopCustomPrice = Item.buyPrice(gold: 1) });
+            }
+            if (DateTime.Now.Month == 12)
+            {
+                npcShop.Add(new Item(ItemID.ChristmasPudding) { shopCustomPrice = Item.buyPrice(silver: 10) });
+                npcShop.Add(new Item(ItemID.GingerbreadCookie) { shopCustomPrice = Item.buyPrice(silver: 15) });
+                npcShop.Add(new Item(ItemID.SugarCookie) { shopCustomPrice = Item.buyPrice(silver: 15) });
+            }
+            npcShop.Register(); // Name of this shop tab
+        }
 
-        //        // If NPC is shimmered then reduce all prices by 50%.
-        //        if (NPC.IsShimmerVariant)
-        //        {
-        //            int value = item.shopCustomPrice ?? item.value;
-        //            item.shopCustomPrice = value / 2;
-        //        }
-        //    }
-        //}
 
-        // Make this Town NPC teleport to the King and/or Queen statue when triggered. Return toKingStatue for only King Statues. Return !toKingStatue for only Queen Statues. Return true for both.
+        public override void ModifyActiveShop(string shopName, Item[] items)
+        {
+            foreach (Item item in items)
+            {
+                // Skip 'air' items and null items.
+                if (item == null || item.type == ItemID.None)
+                {
+                    continue;
+                }
+            }
+        }
+
+        public override bool CanGoToStatue(bool toKingStatue) => false;
+
+        // Make something happen when the npc teleports to a statue. Since this method only runs server side, any visual effects like dusts or gores have to be synced across all clients manually.
+        public override void OnGoToStatue(bool toKingStatue)
+        {
+            if (Main.netMode == NetmodeID.Server)
+            {
+                ModPacket packet = Mod.GetPacket();
+                packet.Write((byte)NPC.whoAmI);
+                packet.Send();
+            }
+            else
+            {
+                StatueTeleport();
+            }
+        }
+
+        // Create a square of pixels around the NPC on teleport.
+        public void StatueTeleport()
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                Vector2 position = Main.rand.NextVector2Square(-20, 21);
+                if (Math.Abs(position.X) > Math.Abs(position.Y))
+                {
+                    position.X = Math.Sign(position.X) * 20;
+                }
+                else
+                {
+                    position.Y = Math.Sign(position.Y) * 20;
+                }
+
+                Dust.NewDustPerfect(NPC.Center + position, DustID.Enchanted_Gold, Vector2.Zero).noGravity = true;
+            }
+        }
 
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

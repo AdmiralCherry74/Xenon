@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Accessories.Shield;
 using Xenon.Content.Items.Armor.PreHardmode;
@@ -11,6 +10,7 @@ using Xenon.Content.Items.Armor.Vanity.OreCrowns;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
+using Xenon.Content.Items.Other;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;

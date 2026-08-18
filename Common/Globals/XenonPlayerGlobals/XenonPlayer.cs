@@ -10,11 +10,11 @@ using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Buffs.Other;
-using Xenon.Content.Items;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Fish.Quest;
 using Xenon.Content.Items.Fish.Valuable;
+using Xenon.Content.Items.Other;
 
 namespace Xenon.Common.Globals.XenonPlayerGlobals;
 
