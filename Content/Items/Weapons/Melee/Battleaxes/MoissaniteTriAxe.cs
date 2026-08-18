@@ -1,4 +1,7 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
@@ -9,8 +12,8 @@ public class MoissaniteTriAxe : ModItem
 {
     public override void SetDefaults()
     {
-        Item.width = 32;
-        Item.height = 32;
+        Item.width = 58;
+        Item.height = 58;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 48;
@@ -31,12 +34,11 @@ public class MoissaniteTriAxe : ModItem
         target.AddBuff(ModContent.BuffType<Cleaved>(), 400);
         target.AddBuff(BuffID.OnFire, 180);
     }
-    public override void AddRecipes()
+    public override void MeleeEffects(Player player, Rectangle hitbox) => Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustID.Torch);
+    public override void PostUpdate() => Lighting.AddLight(Item.Center, Color.OrangeRed.ToVector3() * 0.55f);
+    public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
     {
-        CreateRecipe()
-            .AddIngredient(ItemID.HellstoneBar, 18)
-            .AddIngredient(ItemID.TissueSample, 6)
-            .AddTile(TileID.Anvils)
-            .Register();
+        Texture2D tex = ModContent.Request<Texture2D>("Xenon/Content/Items/Weapons/Melee/Battleaxes/MoissaniteTriAxe_Glow", AssetRequestMode.ImmediateLoad).Value;
+        spriteBatch.Draw(tex, new Vector2(Item.position.X - Main.screenPosition.X + Item.width * 0.6f, Item.position.Y - Main.screenPosition.Y + Item.height - tex.Height * 0.5f + 2f), new Rectangle(0, 0, tex.Width, tex.Height), Color.White, rotation, tex.Size() * 0.5f, scale, SpriteEffects.None, 0f);
     }
 }

@@ -697,6 +697,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ItemID.PlatinumShortsword)
                 .AddTile(TileID.Anvils)
                 .Register();
+
+            //Moissanite TriAxe
+            Recipe.Create(ModContent.ItemType<MoissaniteTriAxe>())
+                .AddIngredient(ItemID.HellstoneBar, 18)
+                .AddIngredient(ItemID.TissueSample, 6)
+                .SortAfterFirstRecipesOf(ItemID.FieryGreatsword)
+                .AddTile(TileID.Anvils)
+                .Register();
             #endregion
 
             #region Crossbows
