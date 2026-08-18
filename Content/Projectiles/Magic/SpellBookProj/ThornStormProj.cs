@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,7 +11,10 @@ namespace Xenon.Content.Projectiles.Magic.SpellBookProj
 	// Thorn Projectiles, sampled off of the example arrow.
 	public class ThornStormProj : ModProjectile
 	{
-		public override void SetStaticDefaults() {
+		public override void SetStaticDefaults()
+		{
+			ProjectileID.Sets.TrailCacheLength[Type] = 5; // The length of old position to be recorded
+			ProjectileID.Sets.TrailingMode[Type] = 0; // The recording mode
 		}
 
 		public override void SetDefaults() {
@@ -20,6 +25,9 @@ namespace Xenon.Content.Projectiles.Magic.SpellBookProj
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
 			Projectile.timeLeft = 1800;
+			Projectile.aiStyle = ProjAIStyleID.Arrow;
+
+			AIType = ProjectileID.WoodenArrowFriendly;
 		}
 
 		public override void AI() {
@@ -50,5 +58,31 @@ namespace Xenon.Content.Projectiles.Magic.SpellBookProj
 				dust.scale *= 0.9f;
 			}
 		}
-	}
+
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			for (int i = 0; i < 2; i++) // Creates a splash of dust around the position the projectile dies.
+			{
+				Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Dirt);
+				dust.noGravity = true;
+				dust.velocity *= 1.5f;
+				dust.scale *= 0.9f;
+			}
+		}
+
+		public override bool PreDraw(ref Color lightColor) {
+			// Draws an afterimage trail. See https://github.com/tModLoader/tModLoader/wiki/Basic-Projectile#afterimage-trail for more information.
+
+			Texture2D texture = TextureAssets.Projectile[Type].Value;
+
+			Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
+			for (int k = Projectile.oldPos.Length - 1; k > 0; k--) {
+				Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+				Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
+			}
+
+			return true;
+		}
+	}	
 }

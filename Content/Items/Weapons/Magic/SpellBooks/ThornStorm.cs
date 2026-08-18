@@ -29,9 +29,9 @@ namespace Xenon.Content.Items.Weapons.Magic.SpellBooks
             Item.damage = 9;
             Item.knockBack = 3f;
             Item.crit = 0;
-            Item.mana = 6;
+            Item.mana = 10;
             Item.shoot = ModContent.ProjectileType<ThornStormProj>();
-            Item.shootSpeed = 10;
+            Item.shootSpeed = 20;
 
             Item.value = Item.sellPrice(gold: 1);
             Item.UseSound = SoundID.Item17;
@@ -39,15 +39,21 @@ namespace Xenon.Content.Items.Weapons.Magic.SpellBooks
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            float numberProjectiles = 3; // 3, 4, or 5 shots
-            float rotation = MathHelper.ToRadians(10);
-
-            position += Vector2.Normalize(velocity) * 3f;
-
-            for (int i = 0; i < numberProjectiles; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))); // Watch out for dividing by 0 if there is only 1 projectile.
-                Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
+                Vector2 NewVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+
+                NewVelocity *= 1f - Main.rand.NextFloat(0.2f);
+
+                Projectile.NewProjectileDirect(
+                    source,
+                    position,
+                    NewVelocity,
+                    type,
+                    damage,
+                    knockback,
+                    player.whoAmI
+                    );
             }
 
             return false; // return false to stop vanilla from calling Projectile.NewProjectile.

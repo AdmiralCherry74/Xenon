@@ -3848,7 +3848,7 @@ PoisonSplashPotion: {
 
 UrinalWater: {
 	DisplayName: Urinal Water
-	Tooltip: "Spreads the Corrosion to some blocks"
+	Tooltip: Spreads the Corrosion to some blocks
 }
 
 AutumnSolution: {
@@ -3858,4 +3858,14 @@ AutumnSolution: {
 		Used by the Clentaminator
 		Spreads the Autumn
 		'''
+}
+
+ThornStorm: {
+	Tooltip: ""
+	DisplayName: Thorn Storm
+}
+
+SturdyThorn: {
+	Tooltip: ""
+	DisplayName: Sturdy Thorn
 }
