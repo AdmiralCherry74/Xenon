@@ -36,6 +36,12 @@ public class AvalonSystem : ModSystem
 				tileCounts[ModContent.TileType<MossyPolloStone>()] +
 				tileCounts[ModContent.TileType<Snotquicksand>()];
 
+
+            //int avalonSomnolentTiles = ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SomnolentTiles;
+            //int ogContagionTiles = ModContent.GetInstance<BiomeTileCounts>().ContagionTiles;
+			//
+            //ModContent.GetInstance<BiomeTileCounts>().ContagionTiles -= avalonSomnolentTiles;
+            //ModContent.GetInstance<Common.Systems.BiomeTileCounts>().SomnolentTiles -= ogContagionTiles;
         }
 	}
 	public static void Convert(int x, int y, ConversionType convert, bool tileframe = true)

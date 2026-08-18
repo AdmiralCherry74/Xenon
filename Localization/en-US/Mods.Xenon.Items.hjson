@@ -3845,3 +3845,17 @@ PoisonSplashPotion: {
 	DisplayName: Splash Poison
 	Tooltip: Inflicts poisoned
 }
+
+UrinalWater: {
+	DisplayName: Urinal Water
+	Tooltip: "Spreads the Corrosion to some blocks"
+}
+
+AutumnSolution: {
+	DisplayName: Frith Solution
+	Tooltip:
+		'''
+		Used by the Clentaminator
+		Spreads the Autumn
+		'''
+}

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Tiles.Natural.Autumn;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {

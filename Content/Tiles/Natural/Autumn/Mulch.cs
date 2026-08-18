@@ -15,6 +15,7 @@ namespace Xenon.Content.Tiles.Natural.Autumn
 			Main.tileBlendAll[Type] = true;
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
+			TileID.Sets.Conversion.Dirt[Type] = true;
 
 			DustType = ModContent.DustType<MulchDust>();
 			AddMapEntry(new Color(97, 58, 53));

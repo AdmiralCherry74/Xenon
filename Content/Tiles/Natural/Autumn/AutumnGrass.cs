@@ -24,10 +24,10 @@ public class AutumnGrass : ModTile
 		Main.tileBlockLight[Type] = true;
 
 		TileID.Sets.Grass[Type] = true;
-		TileID.Sets.ChecksForMerge[Type] = true;
+        TileID.Sets.ChecksForMerge[Type] = true;
 		TileID.Sets.ForcedDirtMerging[Type] = true;
 		TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
-		TileID.Sets.Conversion.Grass[Type] = true;
+		TileID.Sets.Conversion.Dirt[Type] = true;
 
         DustType = ModContent.DustType<MulchDust>();
         AddMapEntry(new Color(235, 207, 150));

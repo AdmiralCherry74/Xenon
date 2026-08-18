@@ -15,10 +15,10 @@ namespace Xenon.Common.Systems;
 
 public class BiomeTileCounts : ModSystem
 {
-    public int CorrosionTiles { get; private set; }
-    public int CorrosionDesertTiles { get; private set; }
-    public int SomnolentTiles { get; private set; }
-    public int FrozenLavaTiles { get; private set; }
+    public int CorrosionTiles { get; set; }
+    public int CorrosionDesertTiles { get; set; }
+    public int SomnolentTiles { get; set; }
+    public int FrozenLavaTiles { get; set; }
     public int MountainTiles { get; set; }
     public int UndergroundOceanTiles { get; set; }
     public int ForestMushroomTiles { get; set; }
@@ -92,5 +92,36 @@ public class BiomeTileCounts : ModSystem
         CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
                         tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +
                         tileCounts[ModContent.TileType<LavenderCatacombBrick>()];
+
+        #region World Force Balence
+        int ogHallowTiles = Main.SceneMetrics.HolyTileCount;
+        int ogSomnolentTiles = SomnolentTiles;
+        
+        int ogCorruptionTiles = Main.SceneMetrics.EvilTileCount;
+        int ogCorrosionTiles = CorrosionTiles;
+        int ogCrimsonTiles = Main.SceneMetrics.BloodTileCount;
+        
+        Main.SceneMetrics.HolyTileCount -= ogCorrosionTiles;
+        CorrosionTiles -= ogHallowTiles;
+        
+        Main.SceneMetrics.EvilTileCount -= ogSomnolentTiles;
+        SomnolentTiles -= ogCorruptionTiles;
+        
+        CorrosionTiles -= ogSomnolentTiles;
+        SomnolentTiles -= ogCorrosionTiles;
+        
+        Main.SceneMetrics.BloodTileCount -= ogSomnolentTiles;
+        SomnolentTiles -= ogCrimsonTiles;
+
+        //so lighting doesnt bug out
+        if (SomnolentTiles < 0)
+        {
+            SomnolentTiles = 0;
+        }
+        if (CorrosionTiles < 0)
+        {
+            CorrosionTiles = 0;
+        }
+        #endregion
     }
 }

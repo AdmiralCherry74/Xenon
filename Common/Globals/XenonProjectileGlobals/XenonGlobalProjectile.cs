@@ -73,6 +73,5 @@ internal class XenonGlobalProjectile : GlobalProjectile
                 NetMessage.SendData(MessageID.WorldData);
             }
         }
-        base.OnKill(projectile, timeLeft);
     }
 }

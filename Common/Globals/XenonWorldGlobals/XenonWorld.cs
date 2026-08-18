@@ -34,11 +34,16 @@ internal class XenonWorld : ModSystem
     public const int AutumnBGCount = 2;
     public static int AutumnBG { get; set; } = 0;
     public static float AutumnBGFlash;
+
+    public const int CorrosionUndergroundBGCount = 2;
+    public static int CorrosionUndergroundBG { get; set; } = 0;
     public override void SaveWorldData(TagCompound tag)
 	{
         tag["Xenon:LavaLine"] = LavaLine;
 
         tag["Xenon:AutumnBG"] = AutumnBG;
+
+        tag["Xenon:CorrosionUndergroundBG"] = CorrosionUndergroundBG;
     }
 	public override void LoadWorldData(TagCompound tag)
 	{
@@ -52,11 +57,16 @@ internal class XenonWorld : ModSystem
         {
             AutumnBG = tag.GetAsInt("Xenon:AutumnBG");
         }
+
+        if (tag.ContainsKey("Xenon:CorrosionUndergroundBG"))
+        {
+            CorrosionUndergroundBG = tag.GetAsInt("Xenon:CorrosionUndergroundBG");
+        }
     }
-    public override void OnWorldUnload() //Here we reset the numbers for the calculations to make sure they dont carry over to other worlds
+    public override void OnWorldUnload()
     {
-        //Im not too fimiliar how contagion world tags work but imo it would be best if it was reset in an OnWorldUnload and OnWorldLoad somewhere
         AutumnBG = 0;
+        CorrosionUndergroundBG = 0;
     }
     public override void PostUpdateEverything()
     {
@@ -65,6 +75,8 @@ internal class XenonWorld : ModSystem
     public override void PreWorldGen()
     {
         AutumnBG = WorldGen.genRand.Next(AutumnBGCount);
+
+        CorrosionUndergroundBG = WorldGen.genRand.Next(CorrosionUndergroundBGCount);
     }
     public override void ModifySunLightColor(ref Color tileColor, ref Color backgroundColor)
     {

@@ -117,3 +117,8 @@ UndergroundAutumn: {
 	DisplayName: Underground Autumn
 	TownNPCDialogueName: the Underground Autumn
 }
+
+SomnolentUndergroundIce: {
+	DisplayName: Somnolent Underground Ice
+	TownNPCDialogueName: the Somnolent Underground Ice
+}

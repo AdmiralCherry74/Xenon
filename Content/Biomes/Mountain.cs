@@ -32,7 +32,7 @@ public class UndergroundMountain : ModBiome
     //public override string MapBackground => BackgroundPath;
     public override int Music => MusicID.OtherworldlyUnderground; //might change this in the future. who knows
     //public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.Environment; //not sure what the best priority for it would be so
+    public override SceneEffectPriority Priority => SceneEffectPriority.None; //not sure what the best priority for it would be so
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/MountainWaterStyle");
 
     public override bool IsBiomeActive(Player player)
