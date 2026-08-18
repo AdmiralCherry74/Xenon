@@ -73,16 +73,16 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 130, 5, 59, default, Main.rand.NextFloat(1, 1.2f));
-                    Main.dust[d].color = new Color(16, 94, 135);
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 16, 94, 135, default, Main.rand.NextFloat(1, 1.2f));
+                    Main.dust[d].color = new Color(130, 5, 59);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.5f, 5) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -5));
                 }
             }
             else
                 for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 130, 5, 59, default, Main.rand.NextFloat(1, 1.2f));
-                    Main.dust[d].color = new Color(16, 94, 135);
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.t_Slime, 16, 94, 135, default, Main.rand.NextFloat(1, 1.2f));
+                    Main.dust[d].color = new Color(130, 5, 59);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
         }
