@@ -22,9 +22,9 @@ namespace Xenon.Common.Globals.XenonPlayerGlobals.PlayerDrawLayers
         private static Asset<Texture2D> textureLapis;
         public override void SetStaticDefaults()
         {
-            textureJade = ModContent.Request<Texture2D>("Xenon/Content/Items/LargeJade_Extra");
-            textureGarnet = ModContent.Request<Texture2D>("Xenon/Content/Items/LargeGarnet_Extra");
-            textureLapis = ModContent.Request<Texture2D>("Xenon/Content/Items/LargeLapis_Extra");
+            textureJade = ModContent.Request<Texture2D>("Xenon/Content/Items/Other/LargeJade_Extra");
+            textureGarnet = ModContent.Request<Texture2D>("Xenon/Content/Items/Other/LargeGarnet_Extra");
+            textureLapis = ModContent.Request<Texture2D>("Xenon/Content/Items/Other/LargeLapis_Extra");
         }
         public override Position GetDefaultPosition()
         {

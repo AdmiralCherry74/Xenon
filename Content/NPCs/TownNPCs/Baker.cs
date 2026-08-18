@@ -10,11 +10,13 @@ using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Xenon.Common.Data;
 using Xenon.Common.Systems;
 using Xenon.Content.Biomes;
 using Xenon.Content.Emoticons;
+using Xenon.Content.Items.Consumables.BakersHandbooks;
 
 namespace Xenon.Content.NPCs.TownNPCs
 {
@@ -22,7 +24,7 @@ namespace Xenon.Content.NPCs.TownNPCs
     public class Baker : ModNPC
     {
         public const string ShopName = "Shop";
-
+        public int NumberOfTimesTalkedTo = 0;
         //private static int ShimmerHeadIndex;
         private static Profiles.StackedNPCProfile NPCProfile;
 
@@ -146,7 +148,6 @@ namespace Xenon.Content.NPCs.TownNPCs
                 Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(0, 34), NPC.velocity, legGore);
             }
         }
-
         public override void OnSpawn(IEntitySource source)
         {
             if (source is EntitySource_SpawnNPC)
@@ -217,6 +218,7 @@ namespace Xenon.Content.NPCs.TownNPCs
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
 
+            NumberOfTimesTalkedTo++;
             #region OtherNPC's
             int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
             int armsDealer = NPC.FindFirstNPC(NPCID.ArmsDealer);
@@ -293,8 +295,8 @@ namespace Xenon.Content.NPCs.TownNPCs
             {
                 chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NightDialouge"), 1.25);
             }
-            #endregion
-            // These are things that the NPC has a chance of telling you when you talk to it.
+                #endregion
+                // These are things that the NPC has a chance of telling you when you talk to it.
             chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge1"));
             chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge2"));
             chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge3"));
@@ -310,42 +312,19 @@ namespace Xenon.Content.NPCs.TownNPCs
             return chosenChat;
         }
 
-        //public override void SetChatButtons(ref string button, ref string button2)
-        //{ // What the chat buttons are when you open up the chat UI
-        //    button = Language.GetTextValue("LegacyInterface.28"); // This is the key to the word "Shop"
-        //    button2 = "Awesomeify";
-        //    if (Main.LocalPlayer.HasItem(ItemID.HiveBackpack))
-        //    {
-        //        button = "Upgrade " + Lang.GetItemNameValue(ItemID.HiveBackpack);
-        //    }
-        //}
+        public override void SetChatButtons(ref string button, ref string button2)
+        { // What the chat buttons are when you open up the chat UI
+            button = Language.GetTextValue("LegacyInterface.28"); // This is the key to the word "Shop"
+        }
 
-        //public override void OnChatButtonClicked(bool firstButton, ref string shop)
-        //{
-        //    if (firstButton)
-        //    {
-        //        // We want 3 different functionalities for chat buttons, so we use HasItem to change button 1 between a shop and upgrade action.
+        public override void OnChatButtonClicked(bool firstButton, ref string shop)
+        {
+            if (firstButton)
+            {
+                shop = ShopName; // Name of the shop tab we want to open.
+            }
+        }
 
-        //        if (Main.LocalPlayer.HasItem(ItemID.HiveBackpack))
-        //        {
-        //            SoundEngine.PlaySound(SoundID.Item37); // Reforge/Anvil sound
-
-        //            Main.npcChatText = UpgradedText.Value;
-
-        //            int hiveBackpackItemIndex = Main.LocalPlayer.FindItem(ItemID.HiveBackpack);
-        //            var entitySource = NPC.GetSource_GiftOrReward();
-
-        //            Main.LocalPlayer.inventory[hiveBackpackItemIndex].TurnToAir();
-        //            Main.LocalPlayer.QuickSpawnItem(entitySource, ModContent.ItemType<WaspNest>());
-
-        //            return;
-        //        }
-
-        //        shop = ShopName; // Name of the shop tab we want to open.
-        //    }
-        //}
-
-        // Not completely finished, but below is what the NPC will sell
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
@@ -436,5 +415,28 @@ namespace Xenon.Content.NPCs.TownNPCs
             multiplier = 12f;
             randomOffset = 2f;
         }
+        public override void LoadData(TagCompound tag)
+        {
+            NumberOfTimesTalkedTo = tag.GetInt("numberOfTimesTalkedTo");
+        }
+
+        public override void SaveData(TagCompound tag)
+        {
+            tag["numberOfTimesTalkedTo"] = NumberOfTimesTalkedTo;
+        }
+        //public override void AI()
+        //{
+        //    if (Main.netMode != NetmodeID.MultiplayerClient)
+        //    {
+        //        foreach (Player player in Main.ActivePlayers)
+        //        {
+        //            if (player.active && player.talkNPC == NPC.whoAmI && NumberOfTimesTalkedTo < 0)
+        //            {
+        //                player.QuickSpawnItem((IEntitySource)NPC, ModContent.ItemType<BakersHandbookPurity1>(), 1);
+        //            }
+        //        }
+        //    }
+        //    base.AI();
+        //}
     }
 }

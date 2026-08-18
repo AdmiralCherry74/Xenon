@@ -22,12 +22,15 @@ namespace Xenon.Content.Projectiles.Magic.SpellBookProj
             Projectile.aiStyle = ProjAIStyleID.Flamethrower;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Magic;
-            Projectile.damage = 10;
+            Projectile.damage = 5;
             Projectile.penetrate = -1; 
             Projectile.timeLeft = 150; 
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
             Projectile.alpha = 0;
+
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {

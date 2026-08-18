@@ -115,6 +115,7 @@ Baker: {
 		BloodMoonDialouge3: Sometimes... I just use the Blood Moon as an excuse to be mean.
 		BloodMoonDialouge4: Oh what did {0} do now!?
 		NightDialouge: I'll be honest, the creatures outside scare me a lot.
+		FirstTimeTalking: Hey, how you doing dearie? I've been writing these cook books. here check out this one! Listen, I lost all of my cookbooks, and if you bring them back to me ill teach you each recipe!
 	}
 
 	TownNPCMood: {

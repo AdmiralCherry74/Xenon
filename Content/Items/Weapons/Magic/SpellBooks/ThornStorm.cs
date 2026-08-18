@@ -36,24 +36,18 @@ namespace Xenon.Content.Items.Weapons.Magic.SpellBooks
             Item.value = Item.sellPrice(gold: 1);
             Item.UseSound = SoundID.Item17;
             Item.rare = ItemRarityID.Orange;
+            
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            for (int i = 0; i < 3; i++)
+            float numberProjectiles = 3; // 3, 4, or 5 shots
+
+            position += Vector2.Normalize(velocity) * 10f;
+
+            for (int i = 0; i < numberProjectiles; i++)
             {
-                Vector2 NewVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
-
-                NewVelocity *= 1f - Main.rand.NextFloat(0.2f);
-
-                Projectile.NewProjectileDirect(
-                    source,
-                    position,
-                    NewVelocity,
-                    type,
-                    damage,
-                    knockback,
-                    player.whoAmI
-                    );
+                Vector2 perturbedRotation = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+                Projectile.NewProjectile(source, position, perturbedRotation, type, damage, knockback, player.whoAmI);
             }
 
             return false; // return false to stop vanilla from calling Projectile.NewProjectile.

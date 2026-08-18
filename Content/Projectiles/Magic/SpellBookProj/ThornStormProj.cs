@@ -24,8 +24,11 @@ namespace Xenon.Content.Projectiles.Magic.SpellBookProj
             Projectile.penetrate = 4;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Magic;
+			Projectile.damage = 9;
 			Projectile.timeLeft = 1800;
 			Projectile.aiStyle = ProjAIStyleID.Arrow;
+			Projectile.usesLocalNPCImmunity = true;
+			Projectile.localNPCHitCooldown = 10;
 
 			AIType = ProjectileID.WoodenArrowFriendly;
 		}
