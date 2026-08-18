@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using TheConfectionRebirth.Tiles;
 using Xenon.Content.Tiles.ActiveAndWiring.Traps;
 using Xenon.Content.Tiles.Building.Bricks;
+using Xenon.Content.Tiles.Natural.Autumn;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
@@ -129,5 +130,17 @@ public class TileSets
         ModContent.TileType<AresStalac>(),
         ModContent.TileType<HelioStalac>()
     };
+
+    public static bool[] ExoticGrass = TileID.Sets.Factory.CreateBoolSet(
+        //made for use with Confection compatibility. this will not be used in most other cases
+        TileID.JungleGrass,
+        ModContent.TileType<AutumnGrass>()
+    );
+
+    public static bool[] ExoticGround = TileID.Sets.Factory.CreateBoolSet(
+        //made for use with Confection compatibility. this will not be used in most other cases
+        TileID.Mud,
+        ModContent.TileType<Mulch>()
+    );
     public static readonly HashSet<int> Ice = new() { ModContent.TileType<FrozenLava>() };
 }

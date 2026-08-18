@@ -117,16 +117,9 @@ public static class ConversionHelper
                 //    ConvertWall<ContagionBoilWall>(x, y, type => WallID.Sets.Conversion.NewWall4[type]);
 
                 // Tiles
-                _ = ConvertTile<AutumnGrass>(x, y, type => TileID.Sets.Conversion.Grass[type]) ||
-                    ConvertTile<Mulch>(x, y, type => TileID.Sets.Conversion.Dirt[type]);
-                //ConvertTile<Gutsand>(x, y, type => TileID.Sets.Conversion.Sand[type]) ||
-                //ConvertTile<HardenedGutsand>(x, y, type => TileID.Sets.Conversion.HardenedSand[type], false) ||
-                //ConvertTile<Gutsandstone>(x, y, type => TileID.Sets.Conversion.Sandstone[type], false) ||
-                //ConvertTile<CorrosionThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false) ||
-                //ConvertTile<HephStone>(x, y, type => Common.Data.TileSets.MountainStone[type], false) ||
-                //ConvertTile<MossyHephStone>(x, y, type => Common.Data.TileSets.MossyMountainStone[type], false) ||
-                //ConvertTile<Gutquicksand>(x, y, type => Common.Data.TileSets.Quicksand[type], false) ||
-                //ConvertTile<IngestaneOre>(x, y, type => Common.Data.TileSets.EvilOre[type], false);
+                _ = ConvertTile<AutumnGrass>(x, y, type => Common.Data.TileSets.ExoticGrass[type]) ||
+                    ConvertTile<Mulch>(x, y, type => Common.Data.TileSets.ExoticGround[type]) ||
+                    ConvertTile<AutumnThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false);
             }
         }
 

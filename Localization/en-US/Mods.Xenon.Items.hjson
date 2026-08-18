@@ -3859,3 +3859,13 @@ AutumnSolution: {
 		Spreads the Autumn
 		'''
 }
+
+ThornStorm: {
+	Tooltip: ""
+	DisplayName: Thorn Storm
+}
+
+SturdyThorn: {
+	Tooltip: ""
+	DisplayName: Sturdy Thorn
+}
