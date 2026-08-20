@@ -47,5 +47,6 @@ Mods: {
 		}
 
 		World.BlessedWithHallowedOreMessage: Stones around the world have been blessed with Hallowed Ores!
+		Conditions.BakersHandbookPurityUsed: Bakers Handbook for beginners has been read
 	}
 }

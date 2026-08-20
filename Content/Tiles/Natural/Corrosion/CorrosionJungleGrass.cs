@@ -39,4 +39,22 @@ public class CorrosionJungleGrass : ModTile
             WorldGen.SquareTileFrame(i, j);
         }
     }
+    public override void RandomUpdate(int i, int j)
+    {
+        Tile tile = ((Tilemap)(Main.tile))[i, j];
+        Tile up = ((Tilemap)(Main.tile))[i, j - 1];
+        Tile up2 = ((Tilemap)(Main.tile))[i, j - 2];
+        if (Utils.NextBool(WorldGen.genRand, 10) && !((Tile)(up)).HasTile && !((Tile)(up2)).HasTile && (((Tile)(up)).LiquidAmount <= 0 || ((Tile)(up2)).LiquidAmount <= 0) && !((Tile)(tile)).LeftSlope && !((Tile)(tile)).RightSlope && !((Tile)(tile)).IsHalfBlock)
+        {
+            ((Tile)(up)).TileType = (ushort)ModContent.TileType<CorrosionShortGrass>();
+            ((Tile)(up)).HasTile = true;
+            ((Tile)(up)).TileFrameY = 0;
+            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(20) * 18);
+            WorldGen.SquareTileFrame(i, j - 1, true);
+            if (Main.dedServ)
+            {
+                NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+            }
+        }
+    }
 }

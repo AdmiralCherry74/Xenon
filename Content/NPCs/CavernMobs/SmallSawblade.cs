@@ -35,7 +35,6 @@ namespace Xenon.Content.NPCs.CavernMobs
             NPC.value = 0;
             NPC.knockBackResist = 0f;
             NPC.aiStyle = NPCAIStyleID.FaceClosestPlayer;
-            NPC.noGravity = true;
 
             AIType = NPCID.BoundGoblin;
             AnimationType = NPCID.BlazingWheel;
@@ -86,15 +85,6 @@ namespace Xenon.Content.NPCs.CavernMobs
                 SoundEngine.PlaySound(SoundID.Item23);
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.ZoneRockLayerHeight)
-            {
-                return SpawnCondition.Cavern.Chance * 0.75f;
-            }
-            return 0f;
-        }
-
 
         public override void HitEffect(NPC.HitInfo hit)
         {

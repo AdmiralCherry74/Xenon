@@ -3869,3 +3869,8 @@ SturdyThorn: {
 	Tooltip: ""
 	DisplayName: Sturdy Thorn
 }
+
+TreeStar: {
+	DisplayName: Tree Star
+	Tooltip: ""
+}

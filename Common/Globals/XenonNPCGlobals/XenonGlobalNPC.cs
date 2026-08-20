@@ -7,6 +7,7 @@ using Xenon.Common.Systems;
 using Xenon.Content.Biomes;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.NPCs.CatacombMobs;
+using Xenon.Content.NPCs.CavernMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
 using Xenon.Content.NPCs.CorruptionMobs;
 using Xenon.Content.NPCs.CrimsonMobs;
@@ -131,18 +132,11 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(NPCID.Crawdad, 0.50f);
                 pool.Add(NPCID.Crawdad2, 0.50f);
             }
-
-            if (spawnInfo.Player.InModBiome<Corrosion>())
+            if (spawnInfo.Player.ZoneRockLayerHeight)
             {
-                pool.Add(ModContent.NPCType<CorrodedCultist>(), 0.25f);
-            }
-            if (spawnInfo.Player.ZoneCrimson)
-            {
-                pool.Add(ModContent.NPCType<CrimsonCultist>(), 0.25f);
-            }
-            if (spawnInfo.Player.ZoneCorrupt)
-            {
-                pool.Add(ModContent.NPCType<CorruptCultist>(), 0.25f);
+                pool.Add(ModContent.NPCType<SmallSawblade>(), 0.20f);
+                pool.Add(ModContent.NPCType<Sawblade>(), 0.10f);
+                pool.Add(ModContent.NPCType<LargeSawblade>(), 0.5f);
             }
         }
         #region Evil Bosses

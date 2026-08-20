@@ -332,14 +332,28 @@ namespace Xenon.Content.NPCs.TownNPCs
 
             if (Main.hardMode)
             {
-                npcShop.Add(new Item(ItemID.PumpkinPie) { shopCustomPrice = Item.buyPrice(gold: 1) });
+                npcShop.Add(new Item(ItemID.ApplePie) { shopCustomPrice = Item.buyPrice(gold: 1) });
             }
-            if (DateTime.Now.Month == 12)
+
+            #region Depending On The Month, sell these
+            if (DateTime.Now.Month == 6 || DateTime.Now.Month == 7)
             {
+                npcShop.Add(new Item(ItemID.Marshmallow) { shopCustomPrice = Item.buyPrice(silver: 10) });
+            }
+            else if (DateTime.Now.Month == 12)
+            {
+                if (Main.bloodMoon)
+                {
+                    npcShop.Add(new Item(ItemID.FruitcakeChakram) { shopCustomPrice = Item.buyPrice(gold: 5) });
+                }
                 npcShop.Add(new Item(ItemID.ChristmasPudding) { shopCustomPrice = Item.buyPrice(silver: 10) });
                 npcShop.Add(new Item(ItemID.GingerbreadCookie) { shopCustomPrice = Item.buyPrice(silver: 15) });
                 npcShop.Add(new Item(ItemID.SugarCookie) { shopCustomPrice = Item.buyPrice(silver: 15) });
+                npcShop.Add(new Item(ItemID.MrsClauseHat) { shopCustomPrice = Item.buyPrice(gold: 1) });
+                npcShop.Add(new Item(ItemID.MrsClauseShirt) { shopCustomPrice = Item.buyPrice(gold: 1) });
+                npcShop.Add(new Item(ItemID.MrsClauseHeels) { shopCustomPrice = Item.buyPrice(gold: 1) });
             }
+            #endregion
             npcShop.Register(); // Name of this shop tab
         }
 
