@@ -12,7 +12,6 @@ namespace Xenon.Content.Tiles.Natural.Autumn
 		{
 			Main.tileSolid[Type] = true;
 
-			Main.tileBlendAll[Type] = true;
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			TileID.Sets.Conversion.Dirt[Type] = true;

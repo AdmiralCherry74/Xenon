@@ -17,6 +17,7 @@ using Xenon.Content.NPCs.OceanMobs;
 using Xenon.Content.NPCs.Other;
 using Xenon.Content.NPCs.SurfacePurity;
 using Xenon.Content.NPCs.UndergroundMobs;
+using Xenon.Content.NPCs.AutumnMobs;
 
 namespace Xenon.Common.Globals.XenonNPCGlobals;
 
@@ -292,6 +293,7 @@ internal class XenonGlobalNPC : GlobalNPC
         if (spawnInfo.Player.InModBiome<Autumn>())
         {
             pool.Clear();
+            pool.Add(ModContent.NPCType<SyrupSlime>(), 1);
         }
         if (spawnInfo.Player.InModBiome<UndergroundAutumn>())
         {
