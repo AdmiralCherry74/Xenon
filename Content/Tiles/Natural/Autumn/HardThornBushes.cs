@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Content.Dusts;
+using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.Organic;
 
 namespace Xenon.Content.Tiles.Natural.Autumn;
@@ -13,6 +14,14 @@ public class HardThornBushes : ModTile
 {
     public override void SetStaticDefaults()
     {
+        //Currently Unnused
+
+        bool[] ThornyBushMerge = TileID.Sets.Factory.CreateBoolSet(
+            //made for use with Confection compatibility. this will not be used in most other cases
+            TileID.Mud,
+            ModContent.TileType<Mulch>()
+        );
+        
         Main.tileNoFail[Type] = true;
         Main.tileCut[Type] = true;
         Main.tileLavaDeath[Type] = true;
@@ -21,7 +30,7 @@ public class HardThornBushes : ModTile
         TileID.Sets.TileCutIgnore.IgnoreDontHurtNature[Type] = true;
         TileID.Sets.GetsDestroyedForMeteors[Type] = true;
         TileID.Sets.TouchDamageDestroyTile[Type] = true;
-        TileID.Sets.TouchDamageImmediate[Type] = 12;
+        TileID.Sets.TouchDamageImmediate[Type] = 17;
         TileID.Sets.SpreadOverground[Type] = true;
         //TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
         //TileObjectData.newTile.CoordinateHeights = new int[] { 16 };
@@ -34,6 +43,5 @@ public class HardThornBushes : ModTile
         AddMapEntry(new Color(140, 53, 74));
         DustType = ModContent.DustType<MulchDust>();
 
-        RegisterItemDrop(ItemID.Pearlwood);
     }
 }

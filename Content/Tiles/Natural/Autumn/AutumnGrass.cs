@@ -30,6 +30,8 @@ public class AutumnGrass : ModTile
         TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
         TileID.Sets.Conversion.Dirt[Type] = true;
 
+        TileID.Sets.SpreadOverground[Type] = true;
+
         DustType = ModContent.DustType<MulchDust>();
         AddMapEntry(new Color(175, 64, 42));
         RegisterItemDrop(ModContent.ItemType<MulchBlock>());
@@ -62,7 +64,7 @@ public class AutumnGrass : ModTile
             ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
             ((Tile)(up)).HasTile = true;
             ((Tile)(up)).TileFrameY = 0;
-            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(20) * 9);
+            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(6) * 18);
             WorldGen.SquareTileFrame(i, j - 1, true);
             if (Main.dedServ)
             {

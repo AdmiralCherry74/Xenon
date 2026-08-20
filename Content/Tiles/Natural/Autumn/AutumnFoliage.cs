@@ -31,8 +31,11 @@ public class AutumnFoliage : ModTile
         AddMapEntry(new Color(175, 64, 42));
     }
 
+    //Todo, make these their own tiles for Conversion.
+
     public const int TreeStarFrameX = 18 * 8;
     public const int BeautifulLeafFrameX = 18 * 6;
+    public const int JungleSporeFrameX = 18 * 7;
 
     public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
     {
@@ -40,9 +43,13 @@ public class AutumnFoliage : ModTile
         {
             Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<TreeStar>());
         }
-        if (Main.tile[i, j].TileFrameX == BeautifulLeafFrameX)
+        if (Main.tile[i, j].TileFrameX == BeautifulLeafFrameX && Main.rand.NextBool(30))
         {
             Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.JungleRose); //Change to proper item later
+        }
+        if (Main.tile[i, j].TileFrameX == JungleSporeFrameX)
+        {
+            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.JungleSpores, Main.rand.Next(2, 4)); //2-4 Spores
         }
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)

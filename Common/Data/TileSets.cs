@@ -134,6 +134,7 @@ public class TileSets
     public static bool[] ExoticGrass = TileID.Sets.Factory.CreateBoolSet(
         //made for use with Confection compatibility. this will not be used in most other cases
         TileID.JungleGrass,
+        TileID.MushroomGrass,
         ModContent.TileType<AutumnGrass>()
     );
 
@@ -142,5 +143,6 @@ public class TileSets
         TileID.Mud,
         ModContent.TileType<Mulch>()
     );
+
     public static readonly HashSet<int> Ice = new() { ModContent.TileType<FrozenLava>() };
 }

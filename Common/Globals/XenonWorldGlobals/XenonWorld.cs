@@ -393,7 +393,7 @@ internal class XenonWorld : ModSystem
                     WorldGen.genRand.NextBool(5))
                 {
                     Main.tile[xCoord, yCoord - 1].TileType = (ushort)ModContent.TileType<AutumnFoliage>();
-                    Main.tile[xCoord, yCoord - 1].TileFrameX = (short)(WorldGen.genRand.Next(0, 11) * 18);
+                    Main.tile[xCoord, yCoord - 1].TileFrameX = (short)(WorldGen.genRand.Next(0, 6) * 18);
                     if (Main.tile[xCoord, yCoord - 1].HasTile)
                     {
                         Tile t = Main.tile[xCoord, yCoord - 1];
@@ -488,6 +488,25 @@ internal class XenonWorld : ModSystem
                     {
                         NetMessage.SendTileSquare(-1, num48, num49, 3);
                     }
+                }
+            }
+
+            #endregion
+
+            #region autumn thorny bushes
+            if (TileID.Sets.SpreadOverground[Main.tile[xCoord, yCoord].TileType])
+            {
+                int type = Main.tile[xCoord, yCoord].TileType;
+                if ((type == ModContent.TileType<AutumnThornyBushes>()) && WorldGen.genRand.NextBool(3))
+                {
+                    WorldGen.GrowSpike(xCoord, yCoord, (ushort)ModContent.TileType<AutumnThornyBushes>(), (ushort)ModContent.TileType<AutumnGrass>());
+                }
+                else if (!Main.tile[xCoord, num9].HasTile && Main.tile[xCoord, num9].LiquidAmount == 0 &&
+                    !Main.tile[xCoord, yCoord].IsHalfBlock && Main.tile[xCoord, yCoord].Slope == SlopeType.Solid &&
+                    yCoord > Main.worldSurface &&
+                    WorldGen.genRand.NextBool(13) && (type == ModContent.TileType<AutumnGrass>()))
+                {
+                    WorldGen.PlaceTile(xCoord, num9, ModContent.TileType<AutumnThornyBushes>(), mute: true);
                 }
             }
 
