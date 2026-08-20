@@ -14,6 +14,7 @@ public class MoissaniteTriAxe : ModItem
     {
         Item.width = 58;
         Item.height = 58;
+        Item.scale = 1.50f;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 48;

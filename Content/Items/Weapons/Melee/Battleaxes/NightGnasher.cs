@@ -12,6 +12,7 @@ public class NightGnasher : ModItem
     {
         Item.width = 64;
         Item.height = 54;
+        Item.scale = 1.25f;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 25;

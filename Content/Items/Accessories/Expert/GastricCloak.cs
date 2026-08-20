@@ -25,7 +25,7 @@ namespace Xenon.Content.Items.Accessories.Expert
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.lifeRegen += 2;
-            player.manaRegen += 3;
+            player.manaRegenBonus += 3;
         }
     }
 }

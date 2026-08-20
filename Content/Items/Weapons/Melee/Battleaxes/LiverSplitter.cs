@@ -16,6 +16,7 @@ public class LiverSplitter : ModItem
     {
         Item.width = 70;
         Item.height = 70;
+        Item.scale = 1.25f;
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 25;

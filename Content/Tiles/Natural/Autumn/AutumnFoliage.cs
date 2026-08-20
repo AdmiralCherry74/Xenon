@@ -5,18 +5,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Xenon.Content.Dusts;
+using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
-namespace Xenon.Content.Tiles.Natural.Corrosion;
+namespace Xenon.Content.Tiles.Natural.Autumn;
 
-public class CorrosionShortGrass : ModTile
+public class AutumnFoliage : ModTile
 {
-    public override bool IsTileBiomeSightable(int i, int j, ref Color sightColor)
-    {
-        sightColor = XenonMod.CorrosionBiomeSightColor;
-        return true;
-    }
-    
     public override void SetStaticDefaults()
     {
         TileID.Sets.ReplaceTileBreakUp[Type] = true;
@@ -29,19 +25,24 @@ public class CorrosionShortGrass : ModTile
         Main.tileCut[Type] = true;
         Main.tileLavaDeath[Type] = true;
         Main.tileNoFail[Type] = true;
-        DustType = ModContent.DustType<CorrosionDust>();
+        DustType = ModContent.DustType<AutumnDust>();
         HitSound = SoundID.Grass;
         //TileSets.Conversion.ShortGrass[Type] = true;
-        AddMapEntry(new Color(160, 133, 0)); // change color later
+        AddMapEntry(new Color(175, 64, 42));
     }
 
-    public const int MushroomFrameX = 18 * 8;
-        
+    public const int TreeStarFrameX = 18 * 8;
+    public const int BeautifulLeafFrameX = 18 * 6;
+
     public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
     {
-        if (Main.tile[i, j].TileFrameX == MushroomFrameX)
+        if (Main.tile[i, j].TileFrameX == TreeStarFrameX)
         {
-            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<VitriolicMushroom>());
+            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<TreeStar>());
+        }
+        if (Main.tile[i, j].TileFrameX == BeautifulLeafFrameX)
+        {
+            Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.JungleRose); //Change to proper item later
         }
     }
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
