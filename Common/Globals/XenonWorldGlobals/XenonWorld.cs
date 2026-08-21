@@ -238,7 +238,7 @@ internal class XenonWorld : ModSystem
             if (TileID.Sets.SpreadOverground[Main.tile[xCoord, yCoord].TileType])
             {
                 int type = Main.tile[xCoord, yCoord].TileType;
-                if (type == ModContent.TileType<CorrosionThornyBushes>() && WorldGen.genRand.NextBool(3))
+                if (type == ModContent.TileType<CorrosionThornyBushes>()/* && WorldGen.genRand.NextBool(2)*/)
                 {
                     WorldGen.GrowSpike(xCoord, yCoord, (ushort)ModContent.TileType<CorrosionThornyBushes>(), (ushort)ModContent.TileType<CorrosionGrass>());
                 }
@@ -497,7 +497,7 @@ internal class XenonWorld : ModSystem
             if (TileID.Sets.SpreadOverground[Main.tile[xCoord, yCoord].TileType])
             {
                 int type = Main.tile[xCoord, yCoord].TileType;
-                if ((type == ModContent.TileType<AutumnThornyBushes>()) && WorldGen.genRand.NextBool(3))
+                if ((type == ModContent.TileType<AutumnThornyBushes>())/* && WorldGen.genRand.NextBool(3)*/)
                 {
                     WorldGen.GrowSpike(xCoord, yCoord, (ushort)ModContent.TileType<AutumnThornyBushes>(), (ushort)ModContent.TileType<AutumnGrass>());
                 }

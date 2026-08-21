@@ -3,11 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
-using Xenon.Content.Walls.NaturalWalls.Snow;
+using Xenon.Content.Walls.NaturalWalls.Autumn;
 
-namespace Xenon.Content.Items.Placeable.Wall;
+namespace Xenon.Content.Items.Placeable.Wall.Natural.Autumn;
 
-public class FrozenLavaWallUnsafeItem : ModItem
+public class AutumnWallUnsafeItem : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -22,7 +22,7 @@ public class FrozenLavaWallUnsafeItem : ModItem
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 5;
-        Item.createWall = ModContent.WallType<FrozenLavaWallUnsafe>();
+        Item.createWall = ModContent.WallType<AutumnWallUnsafe>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 10;

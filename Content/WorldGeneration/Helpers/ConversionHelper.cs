@@ -11,6 +11,7 @@ using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 using Xenon.Content.Tiles.Natural.Somnolent;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
+using Xenon.Content.Walls.NaturalWalls.Autumn;
 
 namespace Xenon.Content.WorldGeneration.Helpers;
 
@@ -107,8 +108,8 @@ public static class ConversionHelper
                     continue;
 
                 // Walls
-                //_ = ConvertWall<ContagionGrassWall>(x, y, type => WallID.Sets.Conversion.Grass[type]) ||
-                //    ConvertWall<ChunkstoneWall>(x, y, type => WallID.Sets.Conversion.Stone[type]) ||
+                _ = ConvertWall<AutumnWall>(x, y, type => Common.Data.WallSets.ExoticWallConvert[type], false) ||
+                    ConvertWall<AutumnWallUnsafe>(x, y, type => Common.Data.WallSets.ExoticUnsafeWallConvert[type], false); //||
                 //    ConvertWall<HardenedSnotsandWallUnsafe>(x, y, type => WallID.Sets.Conversion.HardenedSand[type]) ||
                 //    ConvertWall<SnotsandstoneWallUnsafe>(x, y, type => WallID.Sets.Conversion.Sandstone[type]) ||
                 //    ConvertWall<ContagionLumpWall>(x, y, type => WallID.Sets.Conversion.NewWall1[type]) ||

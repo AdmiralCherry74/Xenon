@@ -3874,3 +3874,18 @@ TreeStar: {
 	DisplayName: Tree Star
 	Tooltip: ""
 }
+
+MoissaniteTriAxeSwingTest: {
+	DisplayName: Moissanite Tri Axe Swing Test
+	Tooltip: ""
+}
+
+AutumnWallUnsafeItem: {
+	Tooltip: ""
+	DisplayName: Autumn Wall Unsafe Item
+}
+
+AutumnWallItem: {
+	Tooltip: ""
+	DisplayName: Autumn Wall Item
+}

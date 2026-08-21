@@ -1,6 +1,8 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
+using Xenon.Content.Walls.NaturalWalls.Corrosion;
+using Xenon.Content.Walls.NaturalWalls.Autumn;
 
 namespace Xenon.Common.Data;
 
@@ -15,6 +17,8 @@ public class WallSets
     );
 
     #region Conversion
+
+    #region Catacombs Walls
     public static bool[] DungeonConvertWallBlue = WallID.Sets.Factory.CreateBoolSet(
         //Just using this for conversions
         WallID.BlueDungeonUnsafe
@@ -87,5 +91,20 @@ public class WallSets
     public static bool[] CatacombConvertWallSlabCharcoal = WallID.Sets.Factory.CreateBoolSet(
     ModContent.WallType<CharcoalCatacombSlabWallUnsafe>()
     );
+    #endregion
+
+    #region Autumn
+    public static bool[] ExoticWallConvert = WallID.Sets.Factory.CreateBoolSet(
+        WallID.Jungle,
+        ModContent.WallType<AutumnWall>()
+    );
+
+    public static bool[] ExoticUnsafeWallConvert = WallID.Sets.Factory.CreateBoolSet(
+        WallID.JungleUnsafe,
+        ModContent.WallType<AutumnWallUnsafe>()
+    );
+
+    #endregion
+
     #endregion
 }
