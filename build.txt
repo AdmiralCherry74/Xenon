@@ -1,6 +1,6 @@
 displayName = Xenon Alpha August Build
 author = Moonfox Studios
 version = 0.8.17
-modReferences = AltLibrary@2.1.0.7
+modReferences = AltLibrary@2.1.0.7, ModLiquidLib_v2025.12.202601
 weakReferences = Avalon, TheConfectionRebirth
 buildIgnore = .vs\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\*, *.config, .git\*, .github\*, *.md, .editorconfig, .gitignore, .gitattributes

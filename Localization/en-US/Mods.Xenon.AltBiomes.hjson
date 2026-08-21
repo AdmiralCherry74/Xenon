@@ -4,3 +4,10 @@ CorrosionAltBiome: {
 	GenPassName: Making the world hungry
 	DryadTextDescriptor: corroded
 }
+
+AutumnAltBiome: {
+	DisplayName: Autumn
+	Description: The fall seasoned Autumn is guaranteed to be present in your world.
+	GenPassName: Making the world seasonal
+	DryadTextDescriptor: fallen
+}
