@@ -461,7 +461,7 @@ DirtySwamp: {
 }
 
 IngestedPickaxe: {
-	DisplayName: Ingested Pickaxe
+	DisplayName: Windbreaker Pickaxe
 	Tooltip: Able to mine Hellstone
 }
 
@@ -3882,10 +3882,15 @@ MoissaniteTriAxeSwingTest: {
 
 AutumnWallUnsafeItem: {
 	Tooltip: ""
-	DisplayName: Autumn Wall Unsafe Item
+	DisplayName: Unsafe Autumn Wall
 }
 
 AutumnWallItem: {
 	Tooltip: ""
-	DisplayName: Autumn Wall Item
+	DisplayName: Autumn Wall
+}
+
+BoomerBile: {
+	DisplayName: Boomer Bile
+	Tooltip: "It stinks, but don't let that stop it from smearing it all over yourself"
 }
