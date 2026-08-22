@@ -340,3 +340,22 @@ public class DamageOverTimeGlobalNPC : GlobalNPC
         }
     }
 }
+public class VanillaDebuffsAffectNPCS : GlobalNPC
+{
+    //thanks avalon :)
+    public override void PostAI(NPC npc)
+    {
+        if (npc.HasBuff(BuffID.BrokenArmor))
+        {
+            npc.defense /= 2;
+        }
+        if (npc.HasBuff(BuffID.Slow))
+        {
+            npc.position += npc.velocity * -0.3f;
+        }
+        if (npc.HasBuff(BuffID.Chilled))
+        {
+            npc.position += npc.velocity * -0.35f;
+        }
+    }
+}
