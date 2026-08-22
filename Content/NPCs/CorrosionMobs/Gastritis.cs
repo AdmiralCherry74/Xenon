@@ -42,7 +42,7 @@ public class Gastritis : ModNPC
         AnimationType = NPCID.EaterofSouls;
 			Banner = NPC.type;
         BannerItem = ModContent.ItemType<GastritisBanner>();
-        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
     }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

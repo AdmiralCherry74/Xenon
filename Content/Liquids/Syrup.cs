@@ -1,8 +1,5 @@
-﻿/*
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using ModLiquidExampleMod.Content.Dusts;
-using ModLiquidExampleMod.Content.Waterfalls;
 using ModLiquidLib.ID;
 using ModLiquidLib.ModLoader;
 using ModLiquidLib.Utils;
@@ -14,12 +11,20 @@ using Terraria.GameContent.Liquid;
 using Terraria.Graphics.Light;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Autumn;
+using Xenon.Content.Tiles.Natural.Autumn;
 
-namespace ModLiquidExampleMod.Content.Liquids
+
+
+namespace Xenon.Content.Liquids
 {
+
+	[ExtendsFromMod(nameof(ModLiquidLib))]
+
 	//ExampleLiquid is a whole new liquid. Added similarly to any other Modded piece of content.
 	//By inherienting 'ModLiquid' we are able to add a new liquid to the list of liquids to the game.
-	public class ExampleLiquid : ModLiquid
+	public class Syrup : ModLiquid
 	{
 		//SetStaticDefaults are the defaults added when the game initially loads.
 		//Here we set a few settings that this liquid will have.
@@ -28,7 +33,7 @@ namespace ModLiquidExampleMod.Content.Liquids
 		{
 			//This is the viscosity of the liquid, only used visually.
 			//Lava usually has this set to 200, while honey has this set to 240. All other liquids set this to 0 by default.
-			LiquidRenderer.VISCOSITY_MASK[Type] = 200;
+			LiquidRenderer.VISCOSITY_MASK[Type] = 240;
 
 			//This is the length the liquid will visually have when flowing/falling downwards or if there is a slope underneath.
 			LiquidRenderer.WATERFALL_LENGTH[Type] = 20;
@@ -49,14 +54,14 @@ namespace ModLiquidExampleMod.Content.Liquids
 			//Normally, when returning false in each OnSplash hook/method, this property is used in the mod liquid's default splash code
 			//It returns -1 normally, which prevents the liquid from doing any splash dust
 			//Here we set it, as we use the property in our OnSplash hooks to have one central variable that controls which dust ID is used in our custom splash
-			SplashDustType = ModContent.DustType<ExampleLiquidSplash>();
+			SplashDustType = ModContent.DustType<AutumnDust>();
 
 			//This is used to specify what sound is played when an entity enters a liquid
 			//Normally this property is used in the mod liquid's default splash code and returns null as no sound is played normally.
 			//Similarly to SplashDustType, we use this to have 1 central place for the splash sound used accross each OnSplash hooks.
 			SplashSound = SoundID.SplashWeak;
-
-			FallDelay = 2; //The delay when liquids are falling. Liquids will wait this extra amount of frames before falling again.
+ 
+			FallDelay = 30; //The delay when liquids are falling. Liquids will wait this extra amount of frames before falling again.
 
 			ChecksForDrowning = true; //If the player can drown in this liquid
 			AllowEmitBreathBubbles = false; //Bubbles will come out of the player's mouth normally when drowning, here we can stop that by setting it to false.
@@ -68,20 +73,20 @@ namespace ModLiquidExampleMod.Content.Liquids
 			//Water/Lava/Regular modded liquid = 0.5f
 			//Honey = 0.25f
 			//Shimmer = 0.375f
-			PlayerMovementMultiplier = 0.125f;
+			PlayerMovementMultiplier = 0.25f;
 			StopWatchMPHMultiplier = PlayerMovementMultiplier; //We set stopwatch to the same multiplier as we don't want a different between whats felt and what the player can read their movement as.
 			NPCMovementMultiplierDefault = PlayerMovementMultiplier; //NPCs have a similar modifier but as a field, here we set the default value as some other NPCs set this multiplier to 0. We set this to PlayerMovementMultiplier as we need them to all be the same.
 			ProjectileMovementMultiplier = PlayerMovementMultiplier; //Simiarly to Players, Projectiles have this property for easy editing of a projectile velocity multiplier without needing to reimplement all of the projectile liquid movement code.
 
-			FishingPoolSizeMultiplier = 2f; //The multiplier used for calculating the size of a fishing pool of this liquid. Here, each liquid tile counts as 2 for every tile in a fished pool.
+			FishingPoolSizeMultiplier = 1f; //The multiplier used for calculating the size of a fishing pool of this liquid. Here, each liquid tile counts as 2 for every tile in a fished pool.
 
 			//For more dangerous liquids, we may want to have our liquid call On(Player/NPC/Projectile)Collision whenever an entity touches the liquid, rather than when an entity splashes in a liquid
 			//For this we use similar collision calculations as lava using this boolean.
 			//By default, this is disabled
-			UsesLavaCollisionForWet = true;
+			UsesLavaCollisionForWet = false;
 
 			//Here we allow the extinguishing of the OnFire debuffs for both players and NPCs using this property
-			ExtinguishesOnFireDebuffs = false;
+			ExtinguishesOnFireDebuffs = true;
 
 			//This ID set controls what items classify as a sponge when trying to suck up this liquid
 			//Here we remove the Ultra Absorbant sponge, Allow the Lava Absorbant sponge and the staff of regrowth to suck up this liquid
@@ -104,7 +109,7 @@ namespace ModLiquidExampleMod.Content.Liquids
 		{
 			if (otherLiquid == LiquidID.Water)
 			{
-				return TileID.TeamBlockBlue; //When the liquid collides with water. Blue team block is created
+				return ModContent.TileType<SyrupTile>(); //When the liquid collides with water. Blue team block is created
 			}
 			else if (otherLiquid == LiquidID.Lava)
 			{
@@ -116,7 +121,7 @@ namespace ModLiquidExampleMod.Content.Liquids
 			}
 			else if (otherLiquid == LiquidID.Shimmer)
 			{
-				return TileID.TeamBlockPink; //When the liquid collides with shimmer. Pink team block is created
+				return TileID.ShimmerBlock; //When the liquid collides with shimmer. Pink team block is created
 			}
 			//The base return is what the liquid generates by default. This is useful for when this liquid collides with another modded liquids that this liquid has no support for.
 			//usually by default, this method return TIleID.Stone, and generates a stone tile if it cannot recognise any predetermined tile type to generate with
@@ -141,41 +146,6 @@ namespace ModLiquidExampleMod.Content.Liquids
 			}
 		}
 
-		//ChooseWaterfallStyle allows for the selection of what waterfall style this liquid chooses when next to a slope.
-		public override int ChooseWaterfallStyle(int i, int j)
-		{
-			return ModContent.GetInstance<ExampleLiquidFall>().Slot;
-		}
-
-		//LiquidLightMaskMode is how the game decides what lightMaskMode to use when this liquid is over a tile
-		//We set this to none, this is due to the liquid emitting light, needing no special lightMaskMode for its interaction with light.
-		public override LightMaskMode LiquidLightMaskMode(int i, int j)
-		{
-			return LightMaskMode.None;
-		}
-
-		//ModifyLight allows the liquid to emit light similarly to any tile or wall.
-		//You can use this to emit light similarly to lava or shimmer.
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-		{
-			//Here we make the liquid just emit a bright white light by setting R, G, and B to 1.
-			r = 1f;
-			g = 1f;
-			b = 1f;
-		}
-
-		//Using EvaporatesInHell, we are able to choose whether this liquid evaporates in hell, based on a condition.
-		//For custom evaporation, use UpdateLiquid override.
-		public override bool EvaporatesInHell(int i, int j)
-		{
-			//Here, our liquid in the bottom half of the underworld evaporates, while in the upper half does not evaporate
-			if (j > Main.maxTilesY - 100)
-			{
-				return true;
-			}
-			return false;
-		}
-
 		//Using RetroDrawEffects, we can do stuff only during the rendering of liquids in the retro lighting style.
 		//Here we set the opacity we want during retro lighting so that its consistant with the opacity of the liquid when not in the retro lighting style
 		//NOTE: Despite being having RETRO in the name, this also applies to the "Trippy" Lighting style as well.
@@ -188,72 +158,6 @@ namespace ModLiquidExampleMod.Content.Liquids
 			}
 		}
 
-		//Here using ModifyNearbyTiles we do something similar to lava
-		//by changing nearby tiles from one to another, not only transformaing grasses into their dirts, but also dirt into ash
-		public override void ModifyNearbyTiles(int i, int j, int liquidX, int liquidY)
-		{
-			Tile tile = Main.tile[i, j];
-			//Grass and mud into dirt
-			if (tile.TileType == TileID.Grass || tile.TileType == TileID.CorruptGrass || tile.TileType == TileID.HallowedGrass || tile.TileType == TileID.CrimsonGrass || tile.TileType == TileID.GolfGrass || tile.TileType == TileID.GolfGrassHallowed || tile.TileType == TileID.Mud)
-			{
-				tile.TileType = TileID.Dirt;
-				WorldGen.SquareTileFrame(i, j);
-				if (Main.netMode == NetmodeID.Server)
-				{
-					NetMessage.SendTileSquare(-1, i, j, 3);
-				}
-			}
-			//jungle grass into mud
-			else if (tile.TileType == TileID.JungleGrass || tile.TileType == TileID.MushroomGrass || tile.TileType == TileID.CorruptJungleGrass || tile.TileType == TileID.CrimsonJungleGrass)
-			{
-				tile.TileType = TileID.Mud;
-				WorldGen.SquareTileFrame(i, j);
-				if (Main.netMode == NetmodeID.Server)
-				{
-					NetMessage.SendTileSquare(-1, i, j, 3);
-				}
-			}
-			//dirt and ash grass into ash
-			else if (tile.TileType == TileID.Dirt || tile.TileType == TileID.AshGrass)
-			{
-				tile.TileType = TileID.Ash;
-				WorldGen.SquareTileFrame(i, j);
-				if (Main.netMode == NetmodeID.Server)
-				{
-					NetMessage.SendTileSquare(-1, i, j, 3);
-				}
-			}
-		}
-
-		//Using the OnPump hook we are able to do extra effects and such when our liquid is being transported
-		//Here we play an explosion sound by creating a custom packet and playing a sound inside of the executable method
-		//pump logic (along with all other wiring logic is only executed on servers, which is why a custom packet is required
-		public override bool OnPump(int inX, int inY, int outX, int outY)
-		{
-			if (Main.netMode == NetmodeID.SinglePlayer)
-			{
-				PlayCustomPumpSound(inX, inY, outX, outY); //On singleplayer, we just play the sound as normal
-			}
-			if (Main.netMode == NetmodeID.Server)
-			{
-				ModPacket packet = ModContent.GetInstance<ModLiquidExampleMod>().GetPacket(); //Here we use the custom made packet in ModLiquidExampleMod to send data and reciveve the following data
-				packet.Write((byte)ModLiquidExampleMod.MessageType.PumpPlaySound);
-				packet.Write(inX);
-				packet.Write(inY);
-				packet.Write(outX);
-				packet.Write(outY);
-				packet.Send();
-			}
-			return true;
-		}
-
-		//Rather than just playing this outright, we prevent repeated code by putting the clientside effects all into 1 method to be called in multiple areas
-		public static void PlayCustomPumpSound(int inX, int inY, int outX, int outY)
-		{
-			SoundEngine.PlaySound(SoundID.Item14, new Vector2(inX * 16, inY * 16));
-			SoundEngine.PlaySound(SoundID.Item14, new Vector2(outX * 16, outY * 16));
-		}
-
 		//Here we use the OnNPCCollision and OnPlayerCollision hooks to apply effects to both entities
 		//Firstly, we apply the dryad's ward debuff to NPCs
 		public override void OnNPCCollision(NPC npc)
@@ -262,7 +166,7 @@ namespace ModLiquidExampleMod.Content.Liquids
 			if (!npc.dontTakeDamage && Main.netMode != NetmodeID.MultiplayerClient)
 			{
 				//we apply the debuff for 4 seconds
-				npc.AddBuff(BuffID.DryadsWardDebuff, 60 * 4);
+				npc.AddBuff(BuffID.Honey, 60 * 4);
 			}
 		}
 		//Secondly, we apply the 2nd tier of Well Fed for 30 seconds
@@ -270,54 +174,9 @@ namespace ModLiquidExampleMod.Content.Liquids
 		{
 			//No conditions needed for our liquid
 			//Shimmer and honey also don't have any other conditions outside of already not shimmering
-			player.AddBuff(BuffID.WellFed2, 60 * 30, false, false);
+			player.AddBuff(BuffID.Honey, 60 * 30, false);
 		}
 
-		//Here we animate our liquid seperately from other liquids in the game.
-		//Instead of having our liquid animate normally, we animate it simiarly, except the liquid is animated almost half as slow
-		public override void AnimateLiquid(GameTime gameTime, ref int frame, ref float frameState)
-		{
-			float frameSpeed = Main.windSpeedCurrent * 25f;
-
-			frameSpeed = Main.windSpeedCurrent * 15f;
-			frameSpeed = ((!(frameSpeed < 0f)) ? (frameSpeed + 5f) : (frameSpeed - 5f));
-			frameSpeed = MathF.Abs(frameSpeed);
-			frameState += frameSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-			if (frameState < 0f)
-				frameState += 16f;
-
-			frameState %= 16f;
-
-			frame = (int)frameState;
-		}
-
-		//These methods provide a way to edit the waves produced by a liquid
-		//both modify the waves to be slightly larger and offset slightly less when moving through
-		public override void NPCRippleModifier(NPC npc, ref float rippleStrength, ref float rippleOffset)
-		{
-			if (!npc.wet)
-				rippleOffset = -1f;
-
-			float factor = ((float)(int)npc.wetCount / 9f);
-
-			factor = ((float)(int)npc.wetCount / 9f);
-			rippleStrength += 0.25f * factor;
-
-			rippleStrength *= 0.5f;
-		}
-
-		public override void PlayerRippleModifier(Player player, ref float rippleStrength, ref float rippleOffset)
-		{
-			if (!player.wet)
-				rippleOffset = -1f;
-
-			float factor = ((float)(int)player.wetCount / 9f);
-
-			factor = ((float)(int)player.wetCount / 9f);
-			rippleStrength += 0.5f * factor;
-
-			rippleStrength *= 0.75f;
-		}
 
 		//The following region contains all logic related to modifying the movement of entities in this liquid, making Players, Items, NPCs and Projectiles move slower in this liquid
 		#region Entity Movement Hooks/Methods
@@ -360,21 +219,6 @@ namespace ModLiquidExampleMod.Content.Liquids
 			maxFallSpeed = 1f;
 			wetVelocity = item.velocity * 0.125f;
 
-			//The following has this liquid delete items of the Blue rarity similar to how lava deletes items of the white rarity
-			//We put this here as liquid movement is called just before lava deletion (Item.CheckLavaDeath)
-			if (!item.beingGrabbed)
-			{
-				if (item.playerIndexTheItemIsReservedFor == Main.myPlayer && item.rare == ItemRarityID.Blue && item.type >= ItemID.None && !ItemID.Sets.IsLavaImmuneRegardlessOfRarity[item.type])
-				{
-					item.active = false;
-					item.type = ItemID.None;
-					item.stack = 0;
-					if (Main.netMode != NetmodeID.SinglePlayer)
-					{
-						NetMessage.SendData(MessageID.SyncItem, -1, -1, null, item.whoAmI);
-					}
-				}
-			}
 		}
 
 		//Like above, we set the refs to the values we want to control the gravity and maxfallspeed
@@ -490,4 +334,3 @@ namespace ModLiquidExampleMod.Content.Liquids
 		#endregion
 	}
 }
-*/

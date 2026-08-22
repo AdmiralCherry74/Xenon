@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.Corrosion;
 
 public class CorrosionSurfaceBackgroundStyle : ModSurfaceBackgroundStyle
 {

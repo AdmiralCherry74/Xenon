@@ -43,7 +43,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.netAlways = true;
             NPC.npcSlots = 10f;
             Music = MusicID.Boss2;
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
         }
         #region Burp SFX
         static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")

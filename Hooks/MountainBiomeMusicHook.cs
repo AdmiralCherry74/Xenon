@@ -2,7 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Mountian;
+using Xenon.Content.Biomes.Corrosion;
 
 namespace Xenon.Hooks;
 

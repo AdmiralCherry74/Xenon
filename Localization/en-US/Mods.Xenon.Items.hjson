@@ -3892,5 +3892,10 @@ AutumnWallItem: {
 
 BoomerBile: {
 	DisplayName: Boomer Bile
-	Tooltip: "It stinks, but don't let that stop it from smearing it all over yourself"
+	Tooltip: It stinks, but don't let that stop it from smearing it all over yourself
+}
+
+SyrupBucket: {
+	DisplayName: Syrup Bucket
+	Tooltip: ""
 }

@@ -5,7 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Rhyolite;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Items.Placeable.Banner;

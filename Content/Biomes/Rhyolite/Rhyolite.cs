@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Walls.BuildingWalls.Stones;
 using Xenon.Content.Walls.NaturalWalls.Stone;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.Rhyolite;
 
 public class Rhyolite : ModBiome
 {

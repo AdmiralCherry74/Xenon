@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Common.Systems;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.UndergroundOcean;
 
 public class UndergroundOcean : ModBiome
 {

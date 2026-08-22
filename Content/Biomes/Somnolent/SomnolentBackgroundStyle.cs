@@ -7,7 +7,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonWorldGlobals;
 
-namespace Xenon.Content.Biomes
+namespace Xenon.Content.Biomes.Somnolent
 {
     public class SomnolentBackgroundStyle : ModSurfaceBackgroundStyle
     {

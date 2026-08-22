@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonWorldGlobals;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Autumn;
 
 namespace Xenon.Common.Globals.XenonProjectileGlobals;
 

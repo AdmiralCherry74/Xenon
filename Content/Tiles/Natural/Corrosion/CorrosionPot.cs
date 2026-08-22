@@ -175,7 +175,7 @@ public class CorrosionPot : ModTile
                     {
                         Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.HallowedTorch, torchStack); //Hallow Torches
                     }
-                    else if (Main.LocalPlayer.InModBiome<Biomes.Corrosion>() && Main.tile[i, j].LiquidAmount < 0)
+                    else if (Main.LocalPlayer.InModBiome<Biomes.Corrosion.Corrosion>() && Main.tile[i, j].LiquidAmount < 0)
                     {
                         Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Placeable.Blocks.Decoration.Torches.CorrosionTorch>(), torchStack); //Corrosion Torch
                     }

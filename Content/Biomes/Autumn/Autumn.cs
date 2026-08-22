@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.Autumn;
 
 public class Autumn : ModBiome
 {

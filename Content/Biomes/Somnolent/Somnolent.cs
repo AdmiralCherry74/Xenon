@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Xenon.Common.Systems;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.Somnolent;
 
 public class Somnolent : ModBiome
 {

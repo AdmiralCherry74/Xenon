@@ -5,7 +5,7 @@ using Terraria.WorldBuilding;
 using Xenon.Common.Globals.XenonWorldGlobals;
 using Xenon.Common.Systems;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.ScorchingIce;
 
 public class ScorchingIce : ModBiome
 {

@@ -5,7 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.NPCs.Template;
@@ -49,7 +49,7 @@ public class TapeWormHead : WormHead
         NPC.DeathSound = SoundID.NPCDeath1;
 		Banner = NPC.type;
         BannerItem = ModContent.ItemType<TapeWormBanner>();
-        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
     }
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {

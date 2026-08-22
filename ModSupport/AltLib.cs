@@ -69,7 +69,7 @@ internal class CorrosionAltBiome : AltBiome
     public override string OuterTexture => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/LoadingOuterCorrosion";
     public override string IconSmall => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconCorrosion";
     public override Color OuterColor => new(167, 158, 29);
-    public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Corrosion>();
+    public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Corrosion.Corrosion>();
     public override Color NameColor => new Color(232, 221, 102);
     public override void SetStaticDefaults()
     {
@@ -163,12 +163,13 @@ internal class CorrosionAltBiome : AltBiome
         EvilBiomeGenerationPass = new Corrosion();
     }
 
+    /*
     [ExtendsFromMod(nameof(AltLibrary))]
     public class AutumnAltBiome : AltBiome
     {
         public override string IconSmall => $"{nameof(Xenon)}/{XenonMod.TextureAssetsPath}/UI/IconAutumn";
         public override Color OuterColor => new(220, 148, 199);
-        public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Autumn>();
+        public override IShoppingBiome Biome => ModContent.GetInstance<Content.Biomes.Autumn.Autumn>();
         public override Color NameColor => new(220, 105, 63);
         //public override bool Selectable => ModContent.GetInstance<AvalonClientConfig>().BetaTropicsGen;
         public override void SetStaticDefaults()
@@ -347,6 +348,6 @@ internal class CorrosionAltBiome : AltBiome
                     break;
             }
         }
-        */
     }
+    */
 }

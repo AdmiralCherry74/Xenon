@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace Xenon.Content.Biomes
+namespace Xenon.Content.Biomes.Corrosion
 {
     public class CorrosionUndergroundIceBackgroundStyle : ModUndergroundBackgroundStyle
     {

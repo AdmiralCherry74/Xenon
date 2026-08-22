@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace Xenon.Content.Biomes
+namespace Xenon.Content.Biomes.ScorchingIce
 {
     public class ScorchingIceBackgroundStyle : ModUndergroundBackgroundStyle
     {

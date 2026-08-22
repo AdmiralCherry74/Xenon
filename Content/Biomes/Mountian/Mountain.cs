@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
 
-namespace Xenon.Content.Biomes;
+namespace Xenon.Content.Biomes.Mountian;
 
 public class Mountain : ModBiome
 {

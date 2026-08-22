@@ -27,7 +27,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             NPC.CloneDefaults(NPCID.DarkMummy);
             AIType = NPCID.DarkMummy;
             AnimationType = NPCID.DarkMummy;
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.CorrosionDesert>().Type };
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.CorrosionDesert>().Type };
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

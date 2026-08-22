@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Buffs.Other;

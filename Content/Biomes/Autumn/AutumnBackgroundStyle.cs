@@ -7,7 +7,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonWorldGlobals;
 
-namespace Xenon.Content.Biomes
+namespace Xenon.Content.Biomes.Autumn
 {
     public class AutumnBackgroundStyle : ModSurfaceBackgroundStyle
     {

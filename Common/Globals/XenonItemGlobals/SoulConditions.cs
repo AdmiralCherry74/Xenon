@@ -8,7 +8,8 @@ using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Corrosion;
+using Xenon.Content.Biomes.Somnolent;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {

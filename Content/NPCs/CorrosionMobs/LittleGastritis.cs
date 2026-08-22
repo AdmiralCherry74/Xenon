@@ -5,7 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
@@ -43,7 +43,7 @@ public class LittleGastritis : ModNPC
         AnimationType = NPCID.EaterofSouls;
 			Banner = NPC.type;
         BannerItem = ModContent.ItemType<GastritisBanner>();
-        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion>().Type, ModContent.GetInstance<Biomes.CorrosionUnderground>().Type };
+        SpawnModBiomes = new int[] { ModContent.GetInstance<Corrosion>().Type, ModContent.GetInstance<CorrosionUnderground>().Type };
     }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

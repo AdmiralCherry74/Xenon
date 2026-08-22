@@ -1,4 +1,9 @@
-﻿using Terraria.ID;
+﻿/*
+
+World Gen is a certified "Later" thing
+
+
+using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -25,7 +30,6 @@ public class AugumnGenSystem : ModSystem
 
 
     //Gen Steps
-    /*
         1. Jungle - Generates the Mud within the jungle, aswell as the walls.
         2. Mud Caves to Grass - Coats the Jungle in a Grass layer
         3. Mushroom Patches - Generates mushroom patches of mud
@@ -112,7 +116,6 @@ public class CorrosionStalac : GenPass
             }
         }
     }
-    */
 }
 public class Autumn : AltLibrary.Core.Generation.EvilBiomeGenerationPass
 {
@@ -699,3 +702,4 @@ public class Autumn : AltLibrary.Core.Generation.EvilBiomeGenerationPass
         }
     }
 }
+*/
