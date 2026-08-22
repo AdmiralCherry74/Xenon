@@ -33,6 +33,6 @@ namespace Xenon.Content.Items.DeveloperItems;
             Item.rare = ItemRarityID.Red;
             Item.value = Item.sellPrice(silver: 2);
             Item.buffType = ModContent.BuffType<WeakestWeaponDefensivePierce>(); // Specify an existing buff to be applied when used.
-            Item.buffTime = 999999999; // The amount of time the buff declared in Item.buffType will last in ticks. 14400 / 60 is 240, so this buff will last 240 seconds.
+            Item.buffTime = 3600; // The amount of time the buff declared in Item.buffType will last in ticks. 14400 / 60 is 240, so this buff will last 240 seconds.
         }
     }
