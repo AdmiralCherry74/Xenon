@@ -132,3 +132,8 @@ WeakestWeaponDefensivePierce: {
 	DisplayName: Weakest Weapon Defensive Pierce
 	Description: Mods.Xenon.Buffs.WeakestWeaponDefensivePierce.Description
 }
+
+Sapped: {
+	DisplayName: Sapped
+	Description: Syrup sucking away defense
+}

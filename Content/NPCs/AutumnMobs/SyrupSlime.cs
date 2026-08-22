@@ -6,7 +6,9 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Biomes.Autumn;
 
 namespace Xenon.Content.NPCs.AutumnMobs
 {
@@ -16,13 +18,15 @@ namespace Xenon.Content.NPCs.AutumnMobs
         {
             Main.npcFrameCount[Type] = 2;
 
-            /*NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                Velocity = 1f
             };
-            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value); */
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Bleeding] = true;
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
+            NPCID.Sets.SpecificDebuffImmunity[Type][ModContent.BuffType<Sapped>()] = true;
         }
 
         public override void SetDefaults()
@@ -41,18 +45,17 @@ namespace Xenon.Content.NPCs.AutumnMobs
             AnimationType = NPCID.BlueSlime;
 			//Banner = NPC.type;
 			//BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Autumn>().Type};
 		}
 
-        /*
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SlimeDefault")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SyrupSlime")),
             ]);
         }
-        */
 
         public override void AI()
         {
@@ -68,6 +71,16 @@ namespace Xenon.Content.NPCs.AutumnMobs
                 return;
             }
         }
+
+        
+		public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+    	{
+			if (Main.rand.NextBool(2))
+			{
+				target.AddBuff(ModContent.BuffType<Sapped>(), 1800);
+			}
+		}
+
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

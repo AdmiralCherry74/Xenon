@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -23,6 +24,7 @@ using Xenon.Content.NPCs.Other;
 using Xenon.Content.NPCs.SurfacePurity;
 using Xenon.Content.NPCs.UndergroundMobs;
 using Xenon.Content.NPCs.AutumnMobs;
+using Xenon.Content.Dusts;
 
 namespace Xenon.Common.Globals.XenonNPCGlobals;
 
@@ -291,7 +293,8 @@ internal class XenonGlobalNPC : GlobalNPC
         if (spawnInfo.Player.InModBiome<Autumn>())
         {
             pool.Clear();
-            pool.Add(ModContent.NPCType<SyrupSlime>(), 1);
+            
+            if (Main.dayTime) pool.Add(ModContent.NPCType<SyrupSlime>(), 1);
         }
         if (spawnInfo.Player.InModBiome<UndergroundAutumn>())
         {
@@ -322,14 +325,16 @@ internal class XenonGlobalNPC : GlobalNPC
         }
     }
 }
-public class DamageOverTimeGlobalNPC : GlobalNPC
+public class XenonDebuffs : GlobalNPC
 {
     public override bool InstancePerEntity => true;
     public bool Cleaved;
+    public bool Sapped;
 
     public override void ResetEffects(NPC npc)
     {
         Cleaved = false;
+        Sapped = false;
     }
 
     public override void UpdateLifeRegen(NPC npc, ref int damage)
@@ -337,6 +342,25 @@ public class DamageOverTimeGlobalNPC : GlobalNPC
         if (npc.HasBuff<Cleaved>())
         {
             npc.lifeRegen -= 4;
+        }
+    }
+
+    public override void ModifyIncomingHit(NPC npc, ref NPC.HitModifiers modifiers)
+    {
+        if (Sapped)
+        {
+            modifiers.Defense -= 5;
+        }
+    }
+
+    public override void DrawEffects(NPC npc, ref Color drawColor) {
+        if (Sapped) {
+            if (Main.rand.Next(4) < 3) {
+                int dust = Dust.NewDust(npc.position - new Vector2(2f, 4f), npc.width + 4, npc.height + 2, ModContent.DustType<AutumnDust>(), npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 140, default, 1.5f);
+                Main.dust[dust].noGravity = true;
+                Main.dust[dust].velocity *= 0.1f;
+                Main.dust[dust].velocity.Y += 0.5f;
+            }
         }
     }
 }

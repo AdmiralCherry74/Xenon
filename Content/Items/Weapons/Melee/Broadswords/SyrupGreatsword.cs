@@ -4,8 +4,8 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Dusts;
-using Xenon.Content.Dusts.WaterSplashes;
 
 namespace Xenon.Content.Items.Weapons.Melee.Broadswords;
 
@@ -18,16 +18,16 @@ public class SyrupGreatsword : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 62;
-        Item.height = 62;
+        Item.width = 105;
+        Item.height = 105;
         Item.rare = ItemRarityID.Orange;
 
-        Item.damage = 25;
+        Item.damage = 30;
         Item.DamageType = DamageClass.Melee;
-        Item.useTime = 30;
-        Item.useAnimation = 30;
+        Item.useTime = 25;
+        Item.useAnimation = 25;
         Item.useTurn = true;
-        Item.knockBack = 4f;
+        Item.knockBack = 6f;
         Item.autoReuse = true;
 
 
@@ -38,7 +38,7 @@ public class SyrupGreatsword : ModItem
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
-        target.AddBuff(BuffID.OgreSpit, 60);
+        target.AddBuff(ModContent.BuffType<Sapped>(), 300);
     }
 
 
@@ -48,11 +48,9 @@ public class SyrupGreatsword : ModItem
         {
             SpecialUtilities.GetPointOnSwungItemPath(60f, 60f, 0.4f + 0.4f * Main.rand.NextFloat(), Item.scale, out var location2, out var outwardDirection2, player);
             Vector2 vector2 = outwardDirection2.RotatedBy((float)Math.PI / 2f * player.direction * player.gravDir);
-            int DustType = DustID.GemAmber;
-            if (Main.rand.NextBool(3))
-                DustType = DustID.GemTopaz;
+            int DustType = ModContent.DustType<AutumnDust>();
 
-            int num15 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustType, player.velocity.X * 0.2f + player.direction * 3, player.velocity.Y * 0.2f, 140, default, 0.7f);
+            int num15 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, DustType, player.velocity.X * 0.2f + player.direction * 3, player.velocity.Y * 0.2f, 140, default, 0.9f);
             Main.dust[num15].position = location2;
             Main.dust[num15].fadeIn = 1.2f;
             Main.dust[num15].noGravity = true;

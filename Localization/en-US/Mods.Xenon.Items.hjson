@@ -3724,7 +3724,7 @@ AutumnGrassSeeds: {
 
 SyrupGreatsword: {
 	DisplayName: Syrup Greatsword
-	Tooltip: ""
+	Tooltip: Saps enemy defense on hit.
 }
 
 M1Garand: {
@@ -3857,12 +3857,17 @@ AutumnSolution: {
 		'''
 		Used by the Clentaminator
 		Spreads the Autumn
+		A Dev tool used by Emerald Specificly bc they for the life of themself can't figure out worldgen!
 		'''
 }
 
 ThornStorm: {
-	Tooltip: ""
 	DisplayName: Thorn Storm
+	Tooltip:
+		'''
+		Fires a burst of 3 thorns infront of it
+		"Always go 1-5-0"
+		'''
 }
 
 SturdyThorn: {
@@ -3872,7 +3877,7 @@ SturdyThorn: {
 
 TreeStar: {
 	DisplayName: Tree Star
-	Tooltip: ""
+	Tooltip: Increses mana regeneration rate
 }
 
 MoissaniteTriAxeSwingTest: {
@@ -3897,5 +3902,9 @@ BoomerBile: {
 
 SyrupBucket: {
 	DisplayName: Syrup Bucket
-	Tooltip: ""
+	Tooltip:
+		'''
+		Contains a small amount of syrup
+		Can be poured out
+		'''
 }

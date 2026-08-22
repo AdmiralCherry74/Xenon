@@ -7,7 +7,7 @@ namespace Xenon.Content.Biomes.Autumn;
 public class Autumn : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
-    //public override string MapBackground => BackgroundPath;
+    public override string MapBackground => BackgroundPath;
     public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/AutumnEveryPlanetWeReachIsDeadPhase1Music"); //"What If 'Every Planet We Reach Was Dead' was on the first album?" is the song
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeLow;
