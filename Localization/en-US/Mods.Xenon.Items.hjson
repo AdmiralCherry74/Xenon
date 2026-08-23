@@ -3908,3 +3908,13 @@ SyrupBucket: {
 		Can be poured out
 		'''
 }
+
+BottomlessSyrupBucket: {
+	DisplayName: Bottomless Syrup Bucket
+	Tooltip: ""
+}
+
+SyrupAbsorbantSponge: {
+	DisplayName: Syrup Absorbant Sponge
+	Tooltip: ""
+}

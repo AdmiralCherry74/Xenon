@@ -36,14 +36,14 @@ namespace Xenon.Content.Liquids
 			LiquidRenderer.VISCOSITY_MASK[Type] = 240;
 
 			//This is the length the liquid will visually have when flowing/falling downwards or if there is a slope underneath.
-			LiquidRenderer.WATERFALL_LENGTH[Type] = 20;
+			LiquidRenderer.WATERFALL_LENGTH[Type] = 2;
 
 			//This is the opacity of the liquid. How well you can see objects in the liquid.
 			//The SlopeOpacity property is different, as slopes do not render the same as a normal liquid tile
 			//DefaultOpacity is a vanilla array containing the definitions of each liquid type's default opacity for just white and color lighting modes
 			LiquidRenderer.DEFAULT_OPACITY[Type] = 0.95f;
 			SlopeOpacity = 1f;
-			LiquidfallOpacityMultiplier = 0.5f; //Here we make the liquidfalls of this liquid draw at a 0.5x multiplier, making them seem much thicker
+			LiquidfallOpacityMultiplier = 0.9f; //Here we make the liquidfalls of this liquid draw at a 0.5x multiplier, making them seem much thicker
 			//To change the old liquid rendering opacity, please see the RetroDrawEffects override.
 
 			//For the Waves Quality setting, when set to Medium, waves are set to be the same distance no matter the liquid type.
@@ -61,7 +61,7 @@ namespace Xenon.Content.Liquids
 			//Similarly to SplashDustType, we use this to have 1 central place for the splash sound used accross each OnSplash hooks.
 			SplashSound = SoundID.SplashWeak;
  
-			FallDelay = 30; //The delay when liquids are falling. Liquids will wait this extra amount of frames before falling again.
+			FallDelay = 15; //The delay when liquids are falling. Liquids will wait this extra amount of frames before falling again.
 
 			ChecksForDrowning = true; //If the player can drown in this liquid
 			AllowEmitBreathBubbles = false; //Bubbles will come out of the player's mouth normally when drowning, here we can stop that by setting it to false.
@@ -100,7 +100,7 @@ namespace Xenon.Content.Liquids
 
 			//We can add a map entry to our liquid, by doing so we can show where our liquid is on the map.
 			//Unlike vanilla, we can also add a map entry name, which will display a name if the liquid is being selected on the map.
-			AddMapEntry(new Color(200, 200, 200), CreateMapEntryName());
+			AddMapEntry(new Color(153, 49, 33), CreateMapEntryName());
 		}
 
 		//Here with LiquidMerge, we are able to decide when the liquid generates with a different tile.
@@ -135,14 +135,13 @@ namespace Xenon.Content.Liquids
 		//Here we set a few custom sounds to play when this liquid merges with other liquids.
 		public override void LiquidMergeSound(int i, int j, int otherLiquid, ref SoundStyle? collisionSound)
 		{
-			collisionSound = SoundID.Shatter; //by default, we set the sound to be the glass shattering sound when merging with a liquid.
 			if (otherLiquid == LiquidID.Water)
 			{
-				collisionSound = SoundID.Item2; //...but if the liquid being merged is water, then we play Item 2 (Eating sound)
+				collisionSound = SoundID.LiquidsHoneyWater; //...but if the liquid being merged is water, then we play Item 2 (Eating sound)
 			}
-			else if (otherLiquid == LiquidID.Shimmer)
+			else if (otherLiquid == LiquidID.Lava)
 			{
-				collisionSound = SoundID.MaxMana; //...but if the liquid being merged is shimmer, then we play the maximum mana sound
+				collisionSound = SoundID.LiquidsHoneyLava; //...but if the liquid being merged is water, then we play Item 2 (Eating sound)
 			}
 		}
 
@@ -176,80 +175,6 @@ namespace Xenon.Content.Liquids
 			//Shimmer and honey also don't have any other conditions outside of already not shimmering
 			player.AddBuff(BuffID.Honey, 60 * 30, false);
 		}
-
-
-		//The following region contains all logic related to modifying the movement of entities in this liquid, making Players, Items, NPCs and Projectiles move slower in this liquid
-		#region Entity Movement Hooks/Methods
-		//Here we replicate normal liquid movement behaviour using the PlayerLiquidMovement hook/method
-		public override bool PlayerLiquidMovement(Player player, bool fallThrough, bool ignorePlats)
-		{
-			int num = ((!player.onTrack) ? player.height : (player.height - 20));
-			Vector2 velocity = player.velocity;
-			player.velocity = Collision.TileCollision(player.position, player.velocity, player.width, num, fallThrough, ignorePlats, (int)player.gravDir);
-			Vector2 vector2 = player.velocity * PlayerMovementMultiplier; //We reuse the PlayerMovementMultiplier here for it to serve the same purpose
-			if (player.velocity.X != velocity.X)
-			{
-				vector2.X = player.velocity.X;
-			}
-			if (player.velocity.Y != velocity.Y)
-			{
-				vector2.Y = player.velocity.Y;
-			}
-			player.position += vector2;
-			player.TryFloatingInFluid();
-			return false; //We return false as we do not want the normal liquid movement to execute after this hook/method
-		}
-
-		//Unfortunately, liquid movement is effected in 2 parts (for players)
-		//Liquid velocity multipliers and gravity modifiers
-		//Here we change the gravity of the player when in this liquid
-		public override void PlayerGravityModifier(Player player, ref float gravity, ref float maxFallSpeed, ref int jumpHeight, ref float jumpSpeed)
-		{
-			//These values are half of what honey applies to the player
-			gravity = 0.05f;
-			maxFallSpeed = 1.5f;
-			//In other liquids, the jump speed and height is increased to simulate "swimming"
-			//We don't want that for our liquid so we don't modify the other hook/method parameters
-		}
-
-		//related above, we use this method/hook to make items move at half the speed that they would when in honey
-		public override void ItemLiquidCollision(Item item, ref Vector2 wetVelocity, ref float gravity, ref float maxFallSpeed)
-		{
-			gravity = 0.02f;
-			maxFallSpeed = 1f;
-			wetVelocity = item.velocity * 0.125f;
-
-		}
-
-		//Like above, we set the refs to the values we want to control the gravity and maxfallspeed
-		//This handles NPC movement in liquids, for example liquid specifically we make the gravity and maxFallSpeed half of what honey would be
-		public override void NPCGravityModifier(NPC npc, ref float gravity, ref float maxFallSpeed)
-		{
-			gravity = 0.05f;
-			maxFallSpeed = 1f;
-			//You may notice that NPCLiquidMovement doesn't have a wetVelocity param, set the NPCMovementMultiplierDefault property in SetStaticDefaults to change the wet velocity multiplier for NPCs
-			//The property is seperate because of NPCs indivdually setting the multiplier value based on type (DD2 npcs set it to 1f to ignore liquid movement)
-		}
-
-		//lastly, we reimplement the projectile movement in liquids using the ProjectileLiquidMovement
-		//This hook is very similar and different to PlayerLiquidMovement, returning a bool and only having wetVelocity as a referenced parameter
-		//Take a look at Projectile.HandleMovement to see how vanilla handles liquid movement for projectiles.
-		public override bool ProjectileLiquidMovement(Projectile projectile, ref Vector2 wetVelocity, Vector2 collisionPosition, int Width, int Height, bool fallThrough)
-		{
-			Vector2 vector = projectile.velocity;
-			projectile.velocity = Collision.TileCollision(collisionPosition, projectile.velocity, Width, Height, fallThrough, fallThrough);
-			wetVelocity = projectile.velocity * ProjectileMovementMultiplier; //We reuse the ProjectileMovementMultiplier here for it to serve the same purpose
-			if (projectile.velocity.X != vector.X)
-			{
-				wetVelocity.X = projectile.velocity.X;
-			}
-			if (projectile.velocity.Y != vector.Y)
-			{
-				wetVelocity.Y = projectile.velocity.Y;
-			}
-			return false; //We return false as we do not want the normal liquid movement to execute after this hook/method
-		}
-		#endregion
 
 		//The following region contains all the logic for what this liquid does when being entered and exited by different entities.
 		#region Splash Effects
