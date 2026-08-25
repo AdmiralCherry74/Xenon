@@ -20,6 +20,8 @@ public class CorrosionAutumnGrass : ModTile
         Main.tileSolid[Type] = true;
         Main.tileBrick[Type] = true;
         Main.tileBlockLight[Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<Mulch>()] = true;
+
         TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
         TileID.Sets.CanBeDugByShovel[Type] = true;
         //TileID.Sets.ResetsHalfBrickPlacementAttempt[Type] = false;

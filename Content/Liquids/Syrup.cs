@@ -90,9 +90,7 @@ namespace Xenon.Content.Liquids
 
 			//This ID set controls what items classify as a sponge when trying to suck up this liquid
 			//Here we remove the Ultra Absorbant sponge, Allow the Lava Absorbant sponge and the staff of regrowth to suck up this liquid
-			LiquidID_TLmod.Sets.CanBeAbsorbedBy[Type].Remove(ItemID.UltraAbsorbantSponge);
-			LiquidID_TLmod.Sets.CanBeAbsorbedBy[Type].Add(ItemID.LavaAbsorbantSponge);
-			LiquidID_TLmod.Sets.CanBeAbsorbedBy[Type].Add(ItemID.StaffofRegrowth); //Here is an example of turning a regular item into a sponge thats capable of sucking up our liquid
+			LiquidID_TLmod.Sets.CanBeAbsorbedBy[Type].Add(ItemID.UltraAbsorbantSponge);
 
 			//UsesWaterFishingLootPool is used to prevent being able to get the default fishing loot from fishing in this liquid
 			//By default this is false, but can be turned to true to allow for a modded liquids that want to replicate water

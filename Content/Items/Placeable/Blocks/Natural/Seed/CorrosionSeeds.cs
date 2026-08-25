@@ -4,6 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Tiles.Natural.Corrosion;
+using Xenon.Content.Tiles.Natural.Autumn;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Seed;
 
@@ -55,6 +56,13 @@ public class CorrosionSeeds : ModItem
             else if (tile.TileType == TileID.Mud)
             {
                 Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<CorrosionJungleGrass>();
+                WorldGen.SquareTileFrame(Player.tileTargetX, Player.tileTargetY, true);
+                SoundEngine.PlaySound(SoundID.Dig, player.Center);
+                return true;
+            }
+            else if (tile.TileType == ModContent.TileType<Mulch>())
+            {
+                Main.tile[Player.tileTargetX, Player.tileTargetY].TileType = (ushort)ModContent.TileType<CorrosionAutumnGrass>();
                 WorldGen.SquareTileFrame(Player.tileTargetX, Player.tileTargetY, true);
                 SoundEngine.PlaySound(SoundID.Dig, player.Center);
                 return true;

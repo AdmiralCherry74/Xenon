@@ -118,9 +118,46 @@ public static class ConversionHelper
                 //    ConvertWall<ContagionBoilWall>(x, y, type => WallID.Sets.Conversion.NewWall4[type]);
 
                 // Tiles
-                _ = ConvertTile<AutumnGrass>(x, y, type => Common.Data.TileSets.ExoticGrass[type]) ||
-                    ConvertTile<Mulch>(x, y, type => Common.Data.TileSets.ExoticGround[type]) ||
-                    ConvertTile<AutumnThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false);
+                _ = ConvertTile<AutumnGrass>(x, y, type => Common.Data.TileSets.ExoticConvertGrass[type]) ||
+                    ConvertTile<Mulch>(x, y, type => Common.Data.TileSets.ExoticConvertGround[type]) ||
+                    ConvertTile<MushroomGrassMulch>(x, y, type => Common.Data.TileSets.ConvertMushroomGrass[type]) ||
+                    ConvertTile<AutumnThornyBushes>(x, y, type => TileID.Sets.Conversion.Thorn[type], false) ||
+                    ConvertTile<ColonyBlock>(x, y, type => Common.Data.TileSets.ExoticConvertHive[type], false) ||
+                    ConvertTile<AvianPlating>(x, y, type => Common.Data.TileSets.ExoticConvertTemple[type], false);
+            }
+        }
+
+    }
+
+    public static void ConvertToJungle(int i, int j, int size = 4)
+    {
+        for (var x = i - size; x <= i + size; x++)
+        {
+            for (var y = j - size; y <= j + size; y++)
+            {
+                if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - i) + Math.Abs(y - j) >= Math.Sqrt(size * size + size * size))
+                    continue;
+
+                if (Main.tile[x, y].TileType > TileLoader.TileCount || Main.tile[x, y].WallType > WallLoader.WallCount)
+                    continue;
+
+                // Walls
+                _ = ConvertWall(x, y, type => Common.Data.WallSets.ExoticWallConvert[type], WallID.Jungle) ||
+                    ConvertWall(x, y, type => Common.Data.WallSets.ExoticUnsafeWallConvert[type], WallID.JungleUnsafe); //||
+                //    ConvertWall<HardenedSnotsandWallUnsafe>(x, y, type => WallID.Sets.Conversion.HardenedSand[type]) ||
+                //    ConvertWall<SnotsandstoneWallUnsafe>(x, y, type => WallID.Sets.Conversion.Sandstone[type]) ||
+                //    ConvertWall<ContagionLumpWall>(x, y, type => WallID.Sets.Conversion.NewWall1[type]) ||
+                //    ConvertWall<ContagionMouldWall>(x, y, type => WallID.Sets.Conversion.NewWall2[type]) ||
+                //    ConvertWall<ContagionCystWallUnsafe>(x, y, type => WallID.Sets.Conversion.NewWall3[type]) ||
+                //    ConvertWall<ContagionBoilWall>(x, y, type => WallID.Sets.Conversion.NewWall4[type]);
+
+                // Tiles
+                _ = ConvertTile(x, y, type => Common.Data.TileSets.ExoticConvertGrass[type], TileID.JungleGrass) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.ExoticConvertGround[type], TileID.Mud) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.ConvertMushroomGrass[type], TileID.MushroomGrass) ||
+                    ConvertTile(x, y, type => TileID.Sets.Conversion.Thorn[type], TileID.JungleThorns, false) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.ExoticConvertHive[type], TileID.Hive, false) ||
+                    ConvertTile(x, y, type => Common.Data.TileSets.ExoticConvertTemple[type], TileID.LihzahrdBrick, false);
             }
         }
 

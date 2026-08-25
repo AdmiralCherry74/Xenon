@@ -3918,3 +3918,8 @@ SyrupAbsorbantSponge: {
 	DisplayName: Syrup Absorbant Sponge
 	Tooltip: ""
 }
+
+AvianPlatingBlock: {
+	Tooltip: ""
+	DisplayName: Avian Plating Block
+}

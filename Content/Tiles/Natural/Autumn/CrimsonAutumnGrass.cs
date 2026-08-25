@@ -15,6 +15,8 @@ public class CrimsonAutumnGrass : ModTile
         Main.tileBrick[Type] = true;
         Main.tileBlockLight[Type] = true;
         TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<Mulch>()] = true;
+
         TileID.Sets.CanBeDugByShovel[Type] = true;
         TileID.Sets.CrimsonBiomeSight[Type] = true;
         //TileID.Sets.ResetsHalfBrickPlacementAttempt[Type] = false;

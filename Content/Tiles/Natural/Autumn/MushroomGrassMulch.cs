@@ -1,35 +1,33 @@
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Dusts;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Autumn;
-using Xenon.Content.Tiles.Natural.Autumn;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.Tiles.Natural.Autumn;
 
-public class AutumnGrass : ModTile
+public class MushroomGrassMulch : ModTile
 {
     public override void SetStaticDefaults()
     {
-        Main.tileSolid[Type] = true;
-        Main.tileMergeDirt[Type] = true;
+        AddMapEntry(new Color(141, 137, 223));
         Main.tileSolid[Type] = true;
         Main.tileBrick[Type] = true;
         Main.tileBlockLight[Type] = true;
-
         Main.tileMerge[Type][ModContent.TileType<Mulch>()] = true;
 
-        TileID.Sets.Grass[Type] = true;
-        TileID.Sets.ChecksForMerge[Type] = true;
-        TileID.Sets.ForcedDirtMerging[Type] = true;
+
         TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
-        TileID.Sets.Conversion.Dirt[Type] = true;
-
+        TileID.Sets.CanBeDugByShovel[Type] = true;
+        //TileID.Sets.ResetsHalfBrickPlacementAttempt[Type] = false;
+        TileID.Sets.CanBeDugByShovel[Type] = true;
+        //TileID.Sets.DoesntPlaceWithTileReplacement[Type] = true;
         TileID.Sets.SpreadOverground[Type] = true;
+        //TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
+        TileID.Sets.MushroomBiome.Append(Type);
 
-        DustType = ModContent.DustType<MulchDust>();
-        AddMapEntry(new Color(175, 64, 42));
         RegisterItemDrop(ModContent.ItemType<MulchBlock>());
     }
 
@@ -37,14 +35,6 @@ public class AutumnGrass : ModTile
     {
         if (fail && !effectOnly)
         {
-            if (Main.tile[i, j - 1].TileType == ModContent.TileType<AutumnFoliage>())
-            {
-                WorldGen.KillTile(i, j - 1);
-            }
-            if (Main.tile[i, j + 1].TileType == ModContent.TileType<AutumnVines>())
-            {
-                WorldGen.KillTile(i, j + 1);
-            }
             noItem = true;
             Main.tile[i, j].TileType = (ushort)ModContent.TileType<Mulch>();
             WorldGen.SquareTileFrame(i, j);
@@ -57,10 +47,10 @@ public class AutumnGrass : ModTile
         Tile up2 = ((Tilemap)(Main.tile))[i, j - 2];
         if (Utils.NextBool(WorldGen.genRand, 10) && !((Tile)(up)).HasTile && !((Tile)(up2)).HasTile && (((Tile)(up)).LiquidAmount <= 0 || ((Tile)(up2)).LiquidAmount <= 0) && !((Tile)(tile)).LeftSlope && !((Tile)(tile)).RightSlope && !((Tile)(tile)).IsHalfBlock)
         {
-            ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
+            ((Tile)(up)).TileType = TileID.MushroomPlants;
             ((Tile)(up)).HasTile = true;
             ((Tile)(up)).TileFrameY = 0;
-            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(6) * 18);
+            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(20) * 18);
             WorldGen.SquareTileFrame(i, j - 1, true);
             if (Main.dedServ)
             {

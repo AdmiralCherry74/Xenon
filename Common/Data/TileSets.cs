@@ -131,17 +131,34 @@ public class TileSets
         ModContent.TileType<HelioStalac>()
     };
 
-    public static bool[] ExoticGrass = TileID.Sets.Factory.CreateBoolSet(
-        //made for use with Confection compatibility. this will not be used in most other cases
+    public static bool[] ExoticConvertGrass = TileID.Sets.Factory.CreateBoolSet(
+        // Exotic Grasses
         TileID.JungleGrass,
-        TileID.MushroomGrass,
         ModContent.TileType<AutumnGrass>()
     );
 
-    public static bool[] ExoticGround = TileID.Sets.Factory.CreateBoolSet(
+    public static bool[] ConvertMushroomGrass = TileID.Sets.Factory.CreateBoolSet(
+        // Mushroom Grass hotswapping for the base.
+        TileID.MushroomGrass,
+        ModContent.TileType<MushroomGrassMulch>()
+    );
+
+    public static bool[] ExoticConvertGround = TileID.Sets.Factory.CreateBoolSet(
         //made for use with Confection compatibility. this will not be used in most other cases
         TileID.Mud,
         ModContent.TileType<Mulch>()
+    );
+
+    public static bool[] ExoticConvertTemple = TileID.Sets.Factory.CreateBoolSet(
+        //made for use with Confection compatibility. this will not be used in most other cases
+        TileID.LihzahrdBrick,
+        ModContent.TileType<AvianPlating>()
+    );
+
+    public static bool[] ExoticConvertHive = TileID.Sets.Factory.CreateBoolSet(
+        //made for use with Confection compatibility. this will not be used in most other cases
+        TileID.Hive,
+        ModContent.TileType<ColonyBlock>()
     );
 
     public static readonly HashSet<int> Ice = new() { ModContent.TileType<FrozenLava>() };

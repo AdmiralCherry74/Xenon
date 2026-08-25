@@ -10,7 +10,7 @@ using Xenon.Content.Tiles.Natural.Autumn;
 
 namespace Xenon.Content.Items.Placeable.Blocks.Natural.Autumn
 {
-    public class MulchBlock : ModItem
+    public class AvianPlatingBlock : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -26,19 +26,10 @@ namespace Xenon.Content.Items.Placeable.Blocks.Natural.Autumn
 			Item.autoReuse = true;
 			Item.maxStack = 9999;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Mulch>();
+			Item.createTile = ModContent.TileType<AvianPlating>();
 			Item.width = 12;
 			Item.height = 12;
 			Item.rare = ItemRarityID.White;
 		}
-        public override void AddRecipes()
-        {
-            Recipe.Create(ModContent.ItemType<MulchBlock>(), 5)
-            .AddIngredient(ItemID.DirtBlock, 5)
-            .AddRecipeGroup(RecipeGroupID.Wood)
-            .AddTile(TileID.WorkBenches)
-            .SortAfterFirstRecipesOf(ItemID.MudBlock)
-            .Register();
-        }
     }
 }
