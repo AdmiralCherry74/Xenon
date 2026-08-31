@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonPlayerGlobals;
+using Xenon.ModSupport.Avalon;
 
 namespace Xenon.Content.Items.Accessories.Expert
 {
@@ -26,6 +27,7 @@ namespace Xenon.Content.Items.Accessories.Expert
         {
             player.lifeRegen += 2;
             player.manaRegenBonus += 3;
+            player.GetModPlayer<XenonPlayer>().GastricCloakOn = true; //explicitly here for Avalon support. and maybe future stat regen increases aswell
         }
     }
 }

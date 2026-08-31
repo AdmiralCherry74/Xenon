@@ -35,6 +35,8 @@ public class XenonPlayer : ModPlayer
     public bool BiomePlatform;
     public bool[] OwnedLargeGems = new bool[10];
 
+    public bool GastricCloakOn; //explicitly here for Avalon support. and maybe future stat regen increases aswell
+
     public override void ResetEffects()
     {
         FossilBlessing = false;
@@ -46,6 +48,7 @@ public class XenonPlayer : ModPlayer
         Boomed = false;
         BiomePlatform = false;
 
+        GastricCloakOn = false; //explicitly here for Avalon support. and maybe future stat regen increases aswell
     }
     public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
     {

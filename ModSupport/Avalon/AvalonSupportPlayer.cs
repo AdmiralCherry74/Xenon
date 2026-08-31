@@ -4,8 +4,10 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Avalon.Common.Players;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.ModSupport.Avalon.Content.Tiles;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.ModSupport.Avalon;
 
@@ -16,7 +18,13 @@ internal class AvalonSupportPlayer : ModPlayer
 	{
 		return XenonMod.AvalonContentEnabled;
 	}
-
+	public void UpdateStaminaRegenForXenon(Player player)
+	{
+		if (player.GetModPlayer<XenonPlayer>().GastricCloakOn)
+		{
+            player.GetModPlayer<AvalonStaminaPlayer>().StaminaRegen += 3;
+		}
+	}
 	public override void PostUpdate()
 	{
 		QuicksandMovement();
@@ -26,7 +34,6 @@ internal class AvalonSupportPlayer : ModPlayer
 			Player.AddBuff(ModContent.BuffType<QuicksandSuffocation>(), 1);
 		}
 	}
-
 	public static bool SubmergedInSnotquicksand(Vector2 Position)
 	{
 		Point tileCoord = Position.ToTileCoordinates();
