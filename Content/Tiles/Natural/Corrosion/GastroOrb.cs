@@ -11,6 +11,7 @@ using Xenon.Content.Items.Weapons.Melee.Boomerangs;
 using Xenon.Content.Items.Weapons.Ranged.Arms;
 using Xenon.Content.Items.Weapons.Magic.Staves;
 using Xenon.Content.Items.Accessories.Shield;
+using Xenon.Content.NPCs.Bosses.StomachOfCthulhu;
 
 namespace Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -103,10 +104,10 @@ public class GastroOrb : ModTile
                         num7 = num8;
                     }
                 }
-                //if (!NPC.AnyNPCs(ModContent.NPCType<StomachofCthulhu>()))
-                //{
-                //    NPC.SpawnOnPlayer(plr, ModContent.NPCType<StomachofCthulhu>());
-                //}
+                if (!NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()))
+                {
+                    NPC.SpawnOnPlayer(plr, ModContent.NPCType<StomachOfCthulhu>());
+                }
             }
             else
             {
