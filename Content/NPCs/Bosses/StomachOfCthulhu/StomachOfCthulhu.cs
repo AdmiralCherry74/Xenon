@@ -6,17 +6,22 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
+using Xenon.Common.Globals.XenonNPCGlobals;
 using Xenon.Content.Dusts.WaterSplashes;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Consumables.TreasureBags;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Projectiles.Boss.StomachOfCthulhu;
+using Terraria.DataStructures;
 
 namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 {
     [AutoloadBossHead]
     public class StomachOfCthulhu : ModNPC
     {
+        public int NPCMax = 4;
+
         private enum StomachAIState
         {
             Teleport,
@@ -108,6 +113,14 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             /*npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<CrescentRelicItem>()));
             npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MoondustInABottle>(), 4));*/
         }
+        public override void OnSpawn(IEntitySource source)
+        {
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+            {
+                return;
+            }
+            XenonGlobalNPC.numberOfSOCsAlive++;
+        }
         public override void AI()
         {
 
@@ -115,7 +128,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             if (NPC.target < 0 || NPC.target == 255 || player.dead || !player.active)
                 NPC.TargetClosest();
 
-            if (player.dead || !player.active)
+            if (player.dead || !player.active || player.InModBiome<Corrosion>())
             {
 
                 //NPC.alpha++;
@@ -182,7 +195,8 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         {
             AI_Timer++;
             int time = 120;
-            if (Main.expertMode) time = 75;
+            if (Main.expertMode) {time = 75; NPCMax = 6;}
+            int finalNPCMax = NPCMax * XenonGlobalNPC.numberOfSOCsAlive;
             if (AI_Timer <= 1)
             {
                 SpewBurpGasBubbleShit(npc, player);
@@ -191,7 +205,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             {
                 SpewBurpGasBubbleShit(npc, player);
             }
-            if (AI_Timer % (time * 2) == 0 && AI_Timer != 0)
+            if (AI_Timer % (time * 2) == 0 && AI_Timer != 0 && XenonGlobalNPC.stomachEnemysSpawned <= finalNPCMax)
             {
                 switch (Main.rand.Next(3))
                 {
@@ -212,7 +226,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
                 NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
             }
-            if (AI_Timer == 225 && Main.expertMode)
+            if (AI_Timer == 225 && Main.expertMode && XenonGlobalNPC.stomachEnemysSpawned <= finalNPCMax)
             {
                 SpewBurpGasBubbleShit(npc, player);
                 NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
@@ -305,6 +319,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             {
                 NPC.SetEventFlagCleared(ref ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu, -1);
             }
+            XenonGlobalNPC.numberOfSOCsAlive--;
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonNPCGlobals;
 using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
@@ -48,12 +50,21 @@ public class GastritisEcho : ModNPC
             return;
         }
     }
+    public override void OnSpawn(IEntitySource source)
+    {
+        if (Main.netMode == NetmodeID.MultiplayerClient)
+        {
+            return;
+        }
+        XenonGlobalNPC.stomachEnemysSpawned++;
+    }
     public override void OnKill()
     {
         if (Main.netMode == NetmodeID.MultiplayerClient)
         {
             return;
         }
+        XenonGlobalNPC.stomachEnemysSpawned--;
     }
 
     public override void HitEffect(NPC.HitInfo hit)

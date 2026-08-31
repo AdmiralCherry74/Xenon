@@ -30,6 +30,8 @@ namespace Xenon.Common.Globals.XenonNPCGlobals;
 
 internal class XenonGlobalNPC : GlobalNPC
 {
+    public static int stomachEnemysSpawned = 0;
+    public static int numberOfSOCsAlive = 0;
     public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
     {
         //fuck harpy spawn rates. ts needed nerfed
