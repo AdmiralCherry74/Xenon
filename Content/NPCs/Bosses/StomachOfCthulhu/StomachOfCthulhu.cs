@@ -11,6 +11,7 @@ using Xenon.Content.Dusts.WaterSplashes;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Consumables.TreasureBags;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
+using Xenon.Content.Items.Other;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Projectiles.Boss.StomachOfCthulhu;
 using Terraria.DataStructures;
@@ -98,6 +99,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             //Material drops
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<IngestaneOre>(), 1, 40, 90));
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<FreshChyme>(), 1, 40, 90));
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<BurpGun>(), 3, 1, 1));
 
             //Weapon drops
             /*notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<CrescentStaff>(), 4));

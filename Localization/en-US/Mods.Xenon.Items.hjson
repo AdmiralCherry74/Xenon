@@ -3505,7 +3505,7 @@ ZephyrSneakers: {
 
 GastricCloak: {
 	DisplayName: Gastric Cloak
-	Tooltip: ""
+	Tooltip: Increases Health and Mana regeneration
 }
 
 GrubCrown: {
@@ -3922,4 +3922,19 @@ SyrupAbsorbantSponge: {
 AvianPlatingBlock: {
 	Tooltip: ""
 	DisplayName: Avian Plating Block
+}
+
+IndiumBullet: {
+	DisplayName: Indium Bullet
+	Tooltip: ""
+}
+
+NapalmBullet: {
+	DisplayName: Napalm Bullet
+	Tooltip: Inflicts On Fire!
+}
+
+BurpGun: {
+	DisplayName: Burp Gun
+	Tooltip: Makes Burp Noises
 }

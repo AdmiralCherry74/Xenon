@@ -45,6 +45,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     if (tile.TileType == ModContent.TileType<Mulch>())
                     {
                         //HA HA I'M EVIL AND AM USING A SWITCH CASE!!!!! - Emerald
+                        //NOOOOOOOOOO MY ARCH NEMESIS!!!! - Selene
                         switch (item.type)
                         {
                             case ItemID.CorruptSeeds:
