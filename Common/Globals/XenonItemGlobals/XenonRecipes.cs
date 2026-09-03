@@ -42,7 +42,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             RecipeGroup GoldBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar, ModContent.ItemType<FluoriteBar>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), GoldBar);
-            //Silver Bar recipe group
+            //Gold Bar recipe group
 
             RecipeGroup Thorns = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<ThornyBush>())}", ModContent.ItemType<JungleThornyBushItem>(), ModContent.ItemType<CorruptedThornyBushItem>(), ModContent.ItemType<CrimfiedThornyBushItem>(), ModContent.ItemType<CorrodedThornyBushItem>());
             RecipeGroup.RegisterGroup("Xenon:Thorns", Thorns);
@@ -119,7 +119,8 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     PlatinumCrownChange.SortAfterFirstRecipesOf(ModContent.ItemType<PlatinumCrownModern>());
                 }
 
-                #region Replacing certain Soul based recipes with their respective recipe groups
+                #region Replacing certain recipes with their respective recipe groups
+                #region souls
                 Recipe CoolWhipSwap = Main.recipe[i];
                 if (CoolWhipSwap.HasIngredient(ItemID.SoulofLight) && CoolWhipSwap.HasIngredient(ItemID.SoulofNight) && CoolWhipSwap.HasIngredient(ItemID.FrostCore) && CoolWhipSwap.HasTile(TileID.MythrilAnvil) && CoolWhipSwap.HasResult(ItemID.CoolWhip))
                 {
@@ -197,6 +198,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     SpiritFlameSwap.RemoveIngredient(ItemID.SoulofNight);
                     SpiritFlameSwap.AddRecipeGroup("Xenon:EvilSouls", 12);
                 }
+                #endregion
                 #endregion
 
                 if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)

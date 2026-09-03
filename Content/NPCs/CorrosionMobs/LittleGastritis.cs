@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.Items.Valuables.MonsterRemains;
 
 namespace Xenon.Content.NPCs.CorrosionMobs;
 
@@ -90,6 +91,7 @@ public class LittleGastritis : ModNPC
      public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DilutedBile>(), 150, 1, 1));
         npcLoot.Add(ItemDropRule.Common(ItemID.Burger, 100, 1, 1));
     }
 }

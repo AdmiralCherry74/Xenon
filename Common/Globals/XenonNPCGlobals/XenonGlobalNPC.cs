@@ -72,7 +72,7 @@ internal class XenonGlobalNPC : GlobalNPC
         #region Enemies spawn upon Boss Deaths
         #region Dynamic
         #region Bandit and Bandit Looters
-        if (Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !Main.hardMode && !(NPC.AnyNPCs(ModContent.NPCType<Bandit>()) || (NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))) //preboss
+        if (Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.PlayerInTown && !Main.hardMode && !(NPC.AnyNPCs(ModContent.NPCType<Bandit>()) || (NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))) //preboss
         {
             pool.Add(ModContent.NPCType<Bandit>(), 0.05f);
             if (NPC.downedBoss1)
@@ -91,7 +91,7 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(ModContent.NPCType<Bandit>(), 0.125f);
             }
         }
-        if (spawnInfo.Player.ZoneNormalCaverns && !Main.hardMode && !(NPC.AnyNPCs(ModContent.NPCType<Bandit>()) || (NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))) //preboss
+        if (spawnInfo.Player.ZoneNormalCaverns && !spawnInfo.PlayerInTown && !Main.hardMode && !(NPC.AnyNPCs(ModContent.NPCType<Bandit>()) || (NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))) //preboss
         {
             pool.Add(ModContent.NPCType<BanditLooter>(), 0.045f);
             if (NPC.downedBoss1)

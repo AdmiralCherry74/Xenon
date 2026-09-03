@@ -15,6 +15,7 @@ namespace Xenon.Content.Items.Valuables.Goods.Albums
         {
             Item.rare = ModContent.RarityType<Macabre>();
             Item.value = Item.buyPrice(gold: 40);
+            Item.maxStack = 9999;
         }
     }
 }

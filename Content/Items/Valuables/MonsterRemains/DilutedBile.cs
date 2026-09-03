@@ -15,6 +15,7 @@ namespace Xenon.Content.Items.Valuables.MonsterRemains
         {
             Item.rare = ModContent.RarityType<Purity>();
             Item.value = Item.buyPrice(gold: 7);
+            Item.maxStack = 9999;
         }
     }
 }

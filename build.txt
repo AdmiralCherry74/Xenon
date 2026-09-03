@@ -1,6 +1,6 @@
 displayName = Xenon Beta September Build
 author = Moonfox Studios
-version = 0.9.1
+version = 0.9.3
 modReferences = AltLibrary@2.1.0.7, ModLiquidLib
 weakReferences = Avalon, TheConfectionRebirth
 buildIgnore = .vs\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\*, *.config, .git\*, .github\*, *.md, .editorconfig, .gitignore, .gitattributes

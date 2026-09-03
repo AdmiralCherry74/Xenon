@@ -15,8 +15,8 @@ public class IndiumPickaxe : ModItem
         Item.pick = 48;
         Item.knockBack = 2f;
         Item.damage = 6;
-        Item.useTime = 15;
-        Item.useAnimation = 15;
+        Item.useTime = 10;
+        Item.useAnimation = 17;
         Item.width = 32;
         Item.height = 32;
         Item.DamageType = DamageClass.Melee;

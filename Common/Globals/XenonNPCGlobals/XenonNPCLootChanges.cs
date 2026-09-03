@@ -7,6 +7,7 @@ using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Accessories.Shield;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
+using Xenon.Content.Items.Valuables.MonsterRemains;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
 
 namespace Xenon.Common.Globals.XenonNPCGlobals
@@ -32,6 +33,30 @@ namespace Xenon.Common.Globals.XenonNPCGlobals
             if (npc.type == NPCID.FireImp)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ImpWings>(), 43, 1, 1));
+            }
+            if (npc.type == NPCID.EaterofSouls)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EOSMandible>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.LittleEater)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EOSMandible>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.BigEater)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EOSMandible>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.Crimera)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ChimeraEye>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.LittleCrimera)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ChimeraEye>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.BigCrimera)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ChimeraEye>(), 150, 1, 1));
             }
         }
     }
