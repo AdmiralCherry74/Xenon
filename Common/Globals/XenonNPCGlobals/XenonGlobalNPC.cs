@@ -30,8 +30,19 @@ namespace Xenon.Common.Globals.XenonNPCGlobals;
 
 internal class XenonGlobalNPC : GlobalNPC
 {
-    public static int stomachEnemysSpawned = 0;
-    public static int numberOfSOCsAlive = 0;
+    // Implimented
+    public static int corrosionBoss = -1;           // Stomach of Cthulhu
+
+    // To be implemented
+    public static int antBossCharger = -1;          // Colony Squires Charger
+    public static int antBossRanger = -1;           // Colony Squires Ranger
+    public static int antBossSinger = -1;           // Colony Squires Singer
+    public static int centepedeBoss = -1;           // Thornapede
+    public static int furnaceBoss = -1;             // Infurnace
+
+
+
+
     public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
     {
         //fuck harpy spawn rates. ts needed nerfed

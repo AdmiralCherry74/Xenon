@@ -21,6 +21,7 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
             Projectile.timeLeft = 300;
             Projectile.ignoreWater = true;
             Projectile.extraUpdates = 1;
+            Projectile.tileCollide = false;
         }
         public override void AI() => Lighting.AddLight(Projectile.Center, Color.YellowGreen.ToVector3() * 0.78f);
 

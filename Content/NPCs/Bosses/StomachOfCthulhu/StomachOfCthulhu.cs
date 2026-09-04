@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
 using Xenon.Common.Globals.XenonNPCGlobals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Dusts.WaterSplashes;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Consumables.TreasureBags;
@@ -15,13 +16,15 @@ using Xenon.Content.Items.Other;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Projectiles.Boss.StomachOfCthulhu;
 using Terraria.DataStructures;
+using System;
 
 namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 {
     [AutoloadBossHead]
     public class StomachOfCthulhu : ModNPC
     {
-        public int NPCMax = 4;
+        public int[] Adds;
+        public int[] Hooks = [-1, -1, -1, -1, -1, -1];
 
         private enum StomachAIState
         {
@@ -30,27 +33,14 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         public ref float AI_State => ref NPC.ai[0];
         public ref float AI_Timer => ref NPC.ai[1];
+        
+        private int despawnTimer = 1000;
+        private float hoverDistance = 280f;
+        private bool pauseMovement = true;
 
-        public override void SetDefaults()
-        {
-            NPC.width = 150;
-            NPC.height = 150;
-            NPC.damage = 28;
-            NPC.defense = 14;
-            NPC.lifeMax = 3500;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
-            NPC.knockBackResist = 0f;
-            NPC.noGravity = true;
-            NPC.noTileCollide = true;
-            NPC.value = Item.buyPrice(gold: 5);
-            NPC.SpawnWithHigherTime(30);
-            NPC.boss = true;
-            NPC.netAlways = true;
-            NPC.npcSlots = 10f;
-            Music = MusicID.Boss2;
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
-        }
+        private bool acidChargeDir = false; //false = left, true = right
+
+
         #region Burp SFX
         static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")
         {
@@ -81,11 +71,380 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             MaxInstances = 5,
         };
         #endregion
+
+        public override void SetDefaults()
+        {
+            NPC.width = 146;
+            NPC.height = 164;
+            NPC.damage = 28;
+            NPC.defense = 14;
+            NPC.lifeMax = 3500;
+            NPC.HitSound = SoundID.NPCHit1;
+            NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
+            NPC.knockBackResist = 0f;
+            NPC.noGravity = true;
+            NPC.noTileCollide = true;
+            NPC.value = Item.buyPrice(gold: 5);
+            NPC.SpawnWithHigherTime(30);
+            NPC.boss = true;
+            NPC.netAlways = true;
+            NPC.npcSlots = 6f;
+            Music = MusicID.Boss2;
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
+        }
+        
         public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
             cooldownSlot = ImmunityCooldownID.Bosses;
             return true;
         }
+        public override void AI()
+        {
+            // Variables
+            Vector2 vector = NPC.Center;
+
+            XenonGlobalNPC.corrosionBoss = NPC.whoAmI;
+
+            // Spawn hooks
+            if (AI_State == 0f && Main.netMode != NetmodeID.MultiplayerClient)
+            {
+                AI_State = 1f;
+                Hooks[0] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                Hooks[1] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                Hooks[2] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                Hooks[3] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                Hooks[4] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                Hooks[5] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+            }
+
+            Player target = Main.player[NPC.target];
+            if (NPC.target < 0 || NPC.target == 255 || target.dead || !target.active)
+                NPC.TargetClosest();
+
+            SpawnAnimation(target);
+            Movement(target);
+            DoAttack(target);
+        }
+
+        public void Movement(Player target)
+        {
+
+            if (pauseMovement) return;
+
+            float xTopSpeed = 5f;
+            float climbTopSpeed = 3f;
+            float fallTopSpeed = 7f;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            float velocityChange = 0.2f;
+            float fallingVelocityChange = 0.3f;
+            float velocityDecay = 0.1f;
+
+            bool maxXSpeed = Math.Abs(NPC.velocity.X) < xTopSpeed;
+            bool maxClimbSpeed = Math.Abs(NPC.velocity.Y) < climbTopSpeed;
+            bool maxFallSpeed = NPC.velocity.Y < fallTopSpeed;
+
+            float targetX = target.Center.X;
+            float targetY = target.Bottom.Y - hoverDistance;
+
+            float compareX = NPC.Center.X;
+            float compareY = NPC.Center.Y;
+
+            // Velocity Decay
+            if (NPC.velocity.X > 0)
+            {
+                NPC.velocity.X -= velocityDecay;
+                if (!(NPC.velocity.X > 0)) NPC.velocity.X = 0;
+            }
+            else if (NPC.velocity.X < 0)
+            {
+                NPC.velocity.X += velocityDecay;
+                if (!(NPC.velocity.X < 0)) NPC.velocity.X = 0;
+            }
+
+            if (NPC.velocity.Y > 0)
+            {
+                NPC.velocity.Y -= velocityDecay;
+                if (!(NPC.velocity.Y > 0)) NPC.velocity.Y = 0;
+            }
+            else if (NPC.velocity.Y < 0)
+            {
+                NPC.velocity.Y += velocityDecay;
+                if (!(NPC.velocity.Y < 0)) NPC.velocity.Y = 0;
+            }
+
+            // Despawn Check
+            if (target.dead || !target.active || !XenonPlayer.ZoneCorrosion(target))
+            {
+                if(maxFallSpeed) NPC.velocity.Y += fallingVelocityChange;
+                NPC.EncourageDespawn(10);
+                XenonGlobalNPC.corrosionBoss = -1;
+                return;
+            }
+            
+            // Movement
+
+            if (targetX > compareX && maxXSpeed) NPC.velocity.X += velocityChange;
+            if (targetX < compareX && maxXSpeed) NPC.velocity.X -= velocityChange;
+            
+            if (targetY > NPC.position.Y && maxClimbSpeed) NPC.velocity.Y += velocityChange;
+            if (targetY < NPC.position.Y && maxClimbSpeed) NPC.velocity.Y -= velocityChange;
+        
+        }
+
+        // Hook Max Check. Currently not used for now.
+        /*
+        public bool checkGround(float moveX, float moveY, float maxReachDistance)
+        {
+            for (int idx = 0; idx < Hooks.Length; idx++)
+            {
+                NPC targetHook = Main.npc[Hooks[idx]];
+                float hookX = targetHook.position.X;
+                float hookY = targetHook.position.Y;
+
+                float changeX = moveX + 
+
+                float hookDistance = (float)Math.Sqrt(hookX * hookX + hookY * hookY);
+                if (hookDistance > maxReachDistance)
+                {
+                    targetHook.ai[3] = 1;
+                    return false; 
+                }
+            }
+
+            return true;
+        }
+        */
+
+        public void DoAttack(Player target)
+        {
+            /* AI 0 phases
+                0 Spawn Start
+                1 Fables Spawn Animation (Skip if fables isn't on)
+                2 Waiting
+                3 Gass Bubble
+                4 Spawn Adds
+                5 Bug Bombs
+                6 Acid Charge
+            */
+            int timeBetweenAttacks = 180;
+
+            if (AI_State < 2f)
+            {
+                return;
+            }
+
+            if (AI_State == 2f)
+            {
+                AI_Timer++;
+
+                if (AI_Timer > timeBetweenAttacks)
+                {
+                    AI_State = Main.rand.Next(3, 7);
+                    AI_Timer = 0f;
+                }
+
+                return;
+            }
+
+            #region Gas Bubbles
+            if (AI_State == 3f)
+            {
+                switch (Main.rand.Next(3))
+                {
+                    case 0:
+                        SoundEngine.PlaySound(Burp1, NPC.Center);
+                        break;
+                    case 1:
+                        SoundEngine.PlaySound(Burp2, NPC.Center);
+                        break;
+                    case 2:
+                        SoundEngine.PlaySound(Burp3, NPC.Center);
+                        break;
+                }
+                for (int j = 0; j < 4; j++)
+                {
+                    Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+                    float speed = 5f;
+                    Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+                    Vector2 moveTo = normalized * -speed;
+
+                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
+                }
+
+                for (int i = 0; i < 50; i++)
+                {
+                    Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
+                    Dust SOCBileLight = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
+                    Dust SOCBile = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
+                    SOCBileLight.noGravity = true;
+                    SOCBileLight.scale = 2f;
+                    SOCBile.scale = 2f;
+                }
+
+                AI_State = 2f;
+                AI_Timer = 0f;
+
+                return;
+            }
+            #endregion
+
+            if (AI_State == 4f)
+            {
+                AI_State = 3f;
+                AI_Timer = 0f;
+
+                return;
+            }
+
+            if (AI_State == 5f)
+            {
+                AI_State = 3f;
+                AI_Timer = 0f;
+
+                return;
+            }
+
+            #region Acid Charge
+            if (AI_State == 6f)
+            {
+                pauseMovement = true;
+
+                AI_Timer++;
+
+                if (AI_Timer == 1f)
+                {
+                    if (target.position.X > NPC.Center.X) { NPC.velocity.X = -9; acidChargeDir = false; } 
+                    if (target.position.X < NPC.Center.X) { NPC.velocity.X = 9; acidChargeDir = true; }
+                }
+
+                if (AI_Timer > 1f)
+                {
+                    float chargeTopSpeed = 10f;
+                    bool maxChargeSpeed = Math.Abs(NPC.velocity.X) < chargeTopSpeed;
+
+                    if (acidChargeDir && maxChargeSpeed) NPC.velocity.X -= 0.15f; 
+                    else if (maxChargeSpeed) NPC.velocity.X += 0.15f;
+                    
+                    if (
+                        (acidChargeDir && NPC.velocity.X < 0)
+                        || (!acidChargeDir && NPC.velocity.X > 0)
+                    )
+                    if (AI_Timer % 5 == 0)
+                    {
+                        Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+                        float speed = 2f;
+                        Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+                        Vector2 moveTo = normalized * -speed;
+
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<DimitriTreatmentProj>(), 13, 8f);
+                    }
+                }
+
+                if (AI_Timer >= 140f)
+                {
+                    pauseMovement = false;
+                    AI_State = 2f;
+                    AI_Timer = 0f;
+                }
+            }
+            #endregion
+
+            
+        }
+
+        public void SpawnAnimation(Player target)
+        {
+            //Skip for now as Fables check isn't implemented
+
+            if (NPC.ai[0] == 1)
+            {
+                if (true)
+                {
+                    NPC.ai[0] = 2;
+                    pauseMovement = false;
+                }
+                else { /*Cutscene Logic*/ }
+            }
+        }
+
+        public override void OnKill()
+        {
+            if (!NPC.downedBoss2 || Main.rand.NextBool(2))
+            {
+                WorldGen.spawnMeteor = true;
+            }
+            if (!NPC.downedBoss2)
+            {
+                NPC.SetEventFlagCleared(ref NPC.downedBoss2, -1);
+            }
+            if (!ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu)
+            {
+                NPC.SetEventFlagCleared(ref ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu, -1);
+            }
+            XenonGlobalNPC.corrosionBoss = -1;
+        }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             // Trophies are spawned with 1/10 chance
@@ -114,214 +473,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             //Do Master Mode drops
             /*npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<CrescentRelicItem>()));
             npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<MoondustInABottle>(), 4));*/
-        }
-        public override void OnSpawn(IEntitySource source)
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-            XenonGlobalNPC.numberOfSOCsAlive++;
-        }
-        public override void AI()
-        {
-
-            Player player = Main.player[NPC.target];
-            if (NPC.target < 0 || NPC.target == 255 || player.dead || !player.active)
-                NPC.TargetClosest();
-
-            if (player.dead || !player.active || player.InModBiome<Corrosion>())
-            {
-
-                //NPC.alpha++;
-                //.velocity.Y += 1;
-
-                if (NPC.alpha == 255)
-                {
-                    NPC.EncourageDespawn(10);
-                }
-                return;
-            }
-
-            switch (AI_State)
-            {
-                case (float)StomachAIState.Teleport:
-                    Teleport(NPC, player);
-                    break;
-                case (float)StomachAIState.BubbleAllAround:
-                    Bubble(NPC, player);
-                    break;
-            }
-
-
-            if (NPC.alpha >= 255)
-            {
-                NPC.alpha = 255;
-            }
-            else if (NPC.alpha < 0)
-            {
-                NPC.alpha = 0;
-            }
-        }
-        private void Teleport(NPC npc, Player player)
-        {
-            Vector2 positionToTeleport = Vector2.Zero;
-            AI_Timer++;
-            if (AI_Timer <= 100)
-            {
-                npc.damage = 0;
-                npc.dontTakeDamage = true;
-                npc.alpha += 2;
-            }
-            else if (AI_Timer > 100)
-            {
-                npc.alpha -= 2;
-                if (npc.alpha == 0)
-                {
-                    npc.damage = 14;
-                    npc.dontTakeDamage = false;
-                }
-            }
-
-            if (AI_Timer == 100)
-                npc.Center = player.Center;
-
-            if (AI_Timer >= 300)
-            {
-                AI_Timer = 0;
-                AI_State = (float)StomachAIState.BubbleAllAround;
-                npc.netUpdate = true;
-            }
-        }
-        private void Bubble(NPC npc, Player player)
-        {
-            AI_Timer++;
-            int time = 120;
-            if (Main.expertMode) {time = 75; NPCMax = 6;}
-            int finalNPCMax = NPCMax * XenonGlobalNPC.numberOfSOCsAlive;
-            if (AI_Timer <= 1)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer % time == 0 && (!player.ZoneDirtLayerHeight || !player.ZoneRockLayerHeight) && AI_Timer != 0)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-            }
-            if (AI_Timer % (time * 2) == 0 && AI_Timer != 0 && XenonGlobalNPC.stomachEnemysSpawned <= finalNPCMax)
-            {
-                switch (Main.rand.Next(3))
-                {
-                    case 0:
-                        SoundEngine.PlaySound(Burp1, npc.Center);
-                        break;
-                    case 1:
-                        SoundEngine.PlaySound(Burp2, npc.Center);
-                        break;
-                    case 2:
-                        SoundEngine.PlaySound(Burp3, npc.Center);
-                        break;
-                }
-                if (npc.life < npc.lifeMax / 3)
-                {
-                    FeelingAbitGassy(npc, player);
-                }
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-            }
-            if (AI_Timer == 225 && Main.expertMode && XenonGlobalNPC.stomachEnemysSpawned <= finalNPCMax)
-            {
-                SpewBurpGasBubbleShit(npc, player);
-                NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<GastritisEcho>());
-                if (Main.rand.Next(1, 5) <= 2)
-                {
-                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<HalfDigestedEcho>());
-                }
-                else
-                {
-                    NPC.NewNPC(npc.GetSource_FromAI(), (int)npc.Center.X + Main.rand.Next(-28, -23), (int)npc.Center.Y - 100, ModContent.NPCType<TapeWormEchoHead>());
-                }
-            }
-            if (AI_Timer >= 300)
-            {
-                AI_Timer = 0;
-                AI_State = (float)StomachAIState.Teleport;
-                npc.netUpdate = true;
-            }
-        }
-        private void SpewBurpGasBubbleShit(NPC npc, Player player)
-        {
-            switch (Main.rand.Next(3))
-            {
-                case 0:
-                    SoundEngine.PlaySound(Burp1, npc.Center);
-                    break;
-                case 1:
-                    SoundEngine.PlaySound(Burp2, npc.Center);
-                    break;
-                case 2:
-                    SoundEngine.PlaySound(Burp3, npc.Center);
-                    break;
-            }
-            for (int j = 0; j < 4; j++)
-            {
-                Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-                float speed = 5f;
-                Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-                Vector2 moveTo = normalized * -speed;
-
-                Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
-            }
-
-            for (int i = 0; i < 50; i++)
-            {
-                Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
-                Dust SOCBileLight = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
-                Dust SOCBile = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
-                SOCBileLight.noGravity = true;
-                SOCBileLight.scale = 2f;
-                SOCBile.scale = 2f;
-            }
-        }
-        private void FeelingAbitGassy(NPC npc, Player player)
-        {
-            for (int k = 0; k < 4; k++)
-            {
-                for (k = 0; k < 4; k++)
-                {
-                    Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-                    float speed = 2f;
-                    Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-                    Vector2 moveTo = normalized * -speed;
-
-                    Projectile.NewProjectile(npc.GetSource_FromAI(), npc.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<DimitriTreatmentProj>(), 13, 8f);
-                }
-
-                for (int i = 0; i < 50; i++)
-                {
-                    Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
-                    Dust SOCBileLight = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
-                    Dust SOCBile = Dust.NewDustPerfect(npc.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
-                    SOCBileLight.noGravity = true;
-                    SOCBileLight.scale = 2f;
-                    SOCBile.scale = 2f;
-                }
-            }
-        }
-        public override void OnKill()
-        {
-            if (!NPC.downedBoss2 || Main.rand.NextBool(2))
-            {
-                WorldGen.spawnMeteor = true;
-            }
-            if (!NPC.downedBoss2)
-            {
-                NPC.SetEventFlagCleared(ref NPC.downedBoss2, -1);
-            }
-            if (!ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu)
-            {
-                NPC.SetEventFlagCleared(ref ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu, -1);
-            }
-            XenonGlobalNPC.numberOfSOCsAlive--;
         }
     }
 }

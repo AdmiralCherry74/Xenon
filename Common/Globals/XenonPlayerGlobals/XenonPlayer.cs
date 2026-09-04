@@ -136,6 +136,7 @@ public class XenonPlayer : ModPlayer
                 return;
             }
         }
+        
     }
     public override void ModifyHitNPCWithItem(Item item, NPC target, ref NPC.HitModifiers modifiers)
     {
@@ -415,5 +416,18 @@ public class XenonPlayer : ModPlayer
     public override void PostItemCheck()
     {
         base.PostItemCheck();
+    }
+
+    public static bool ZoneCorrosion(Player player)
+    {
+        if (
+            player.InModBiome<Corrosion>() ||
+            player.InModBiome<CorrosionUnderground>() ||
+            player.InModBiome<CorrosionIce>() ||
+            player.InModBiome<CorrosionUndergroundIce>() ||
+            player.InModBiome<CorrosionDesert>() ||
+            player.InModBiome<CorrosionCaveDesert>()
+        ) return true;
+        return false;
     }
 }
