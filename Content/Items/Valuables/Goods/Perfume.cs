@@ -15,6 +15,7 @@ namespace Xenon.Content.Items.Valuables.Goods
         {
             Item.rare = ModContent.RarityType<Purity>();
             Item.value = Item.buyPrice(gold: 2);
+            Item.maxStack = 9999;
         }
     }
 }

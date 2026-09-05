@@ -19,7 +19,7 @@ public class GastroOrb : ModTile
 {
     public override void SetStaticDefaults()
     {
-        AddMapEntry(new Color(214, 172, 93), LanguageManager.Instance.GetText("Gastro Orb"));
+        AddMapEntry(new Color(214, 172, 93), this.GetLocalization("MapEntry"));
         Main.tileFrameImportant[Type] = true;
         AnimationFrameHeight = 36;
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);

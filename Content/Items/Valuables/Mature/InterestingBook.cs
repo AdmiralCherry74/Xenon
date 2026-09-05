@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Rarities;
 
@@ -15,6 +16,7 @@ namespace Xenon.Content.Items.Valuables.Mature
         {
             Item.rare = ModContent.RarityType<Purity>();
             Item.value = Item.buyPrice(gold: 5);
+            Item.maxStack = 9999;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Xenon.Content.Items.Valuables.Goods.PouchedGoods
         {
             Item.rare = ModContent.RarityType<Purity>();
             Item.value = Item.buyPrice(gold: 15);
+            Item.maxStack = 9999;
         }
         public override void AddRecipes()
         {

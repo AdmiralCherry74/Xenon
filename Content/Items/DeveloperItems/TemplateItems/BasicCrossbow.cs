@@ -38,28 +38,4 @@ class BasicCrossbow : ModItem
     {
         return new Vector2(-0.25f, 1f);
     }
-
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddIngredient(ItemID.ShadowScale)
-            .AddTile(TileID.Anvils)
-            .Register();
-
-        CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddIngredient(ItemID.TissueSample)
-            .AddTile(TileID.Anvils)
-            .Register();
-
-        CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddIngredient(ModContent.ItemType<FreshChyme>())
-            .AddTile(TileID.Anvils)
-            .Register();
-    }
 }

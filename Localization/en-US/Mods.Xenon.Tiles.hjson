@@ -49,4 +49,5 @@ GemStashes: {
 GarnetTree.MapEntry: Garnet Tree
 JadeTree.MapEntry: Jade Tree
 LapisTree.MapEntry: Lapis Tree
-HallowedOreXenon.MapEntry: Mods.Xenon.Tiles.HallowedOreXenon.MapEntry
+HallowedOreXenon.MapEntry: Hallowed Ore
+GastroOrb.MapEntry: Kidney Stone

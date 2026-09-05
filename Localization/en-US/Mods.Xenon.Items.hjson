@@ -3938,3 +3938,8 @@ BurpGun: {
 	DisplayName: Burp Gun
 	Tooltip: Makes Burp Noises
 }
+
+DirtBrickWallItem: {
+	DisplayName: Dirt Brick Wall
+	Tooltip: ""
+}

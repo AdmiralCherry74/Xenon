@@ -1,6 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
+using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Soft;
 using Xenon.Content.Tiles.Building.Bricks;
 using Xenon.Content.Tiles.Building.Wood;
 
@@ -32,9 +33,15 @@ public class DirtBrickItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.DirtBlock , 2)
+            .AddIngredient(ItemID.DirtBlock, 2)
             .AddTile(TileID.WorkBenches)
             .SortBeforeFirstRecipesOf(ItemID.GrayBrick)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<DirtBrickWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<DirtBrickWallItem>())
             .Register();
     }
 }

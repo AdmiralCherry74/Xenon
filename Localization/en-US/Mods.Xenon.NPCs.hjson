@@ -137,7 +137,7 @@ Baker: {
 		Princess_LovesNPC: "{NPCName} often asks me to make her all sorts of cakes and cookies asweel as ice cream and... im getting hungry again."
 	}
 
-	Census.SpawnCondition: Conditions unknown
+	Census.SpawnCondition: Have Fruit in your inventory
 }
 
 ChartreuseSlime.DisplayName: Chartreuse Slime

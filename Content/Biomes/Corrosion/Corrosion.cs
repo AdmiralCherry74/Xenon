@@ -21,6 +21,10 @@ public class Corrosion : ModBiome
     {
         get
         {
+            if (Main.LocalPlayer.ZoneDesert)
+            {
+                return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
+            }
             return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
         }
     }

@@ -33,6 +33,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             {
                 entity.damage = 18;
             }
+            if (entity.type == ItemID.TungstenPickaxe)
+            {
+                entity.useTime = 10;
+                entity.useAnimation = 16;
+            }
         }
 
     public override bool? UseItem(Item item, Player player)

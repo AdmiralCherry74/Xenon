@@ -52,13 +52,6 @@ namespace Xenon.Common.Globals.XenonTileGlobals
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.forestPlantlootTable1[Main.rand.Next(HoeLootTables.forestPlantlootTable1.Length)]);
                     }
                 }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.Vines)
-                {
-                    if (Main.rand.Next(1, 100) > 90)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.forestPlantlootTable1[Main.rand.Next(HoeLootTables.forestPlantlootTable1.Length)]);
-                    }
-                }
                 #endregion
                 #region Jungle
                 if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.JunglePlants)
@@ -75,25 +68,11 @@ namespace Xenon.Common.Globals.XenonTileGlobals
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.junglePlantlootTable1[Main.rand.Next(HoeLootTables.junglePlantlootTable1.Length)]);
                     }
                 }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == ModContent.TileType<CorrosionVines>())
-                {
-                    if (Main.rand.Next(1, 100) > 85)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.junglePlantlootTable1[Main.rand.Next(HoeLootTables.junglePlantlootTable1.Length)]);
-                    }
-                }
                 #endregion
                 #region Mushroom
                 if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.MushroomPlants)
                 {
                     if (Main.rand.Next(1, 100) > 80)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.mushroomPlantlootTable1[Main.rand.Next(HoeLootTables.mushroomPlantlootTable1.Length)]);
-                    }
-                }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.MushroomVines)
-                {
-                    if (Main.rand.Next(1, 100) > 90)
                     {
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.mushroomPlantlootTable1[Main.rand.Next(HoeLootTables.mushroomPlantlootTable1.Length)]);
                     }
@@ -107,13 +86,6 @@ namespace Xenon.Common.Globals.XenonTileGlobals
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.corruptPlantlootTable1[Main.rand.Next(HoeLootTables.corruptPlantlootTable1.Length)]);
                     }
                 }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.CorruptVines)
-                {
-                    if (Main.rand.Next(1, 100) > 90)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.corruptPlantlootTable1[Main.rand.Next(HoeLootTables.corruptPlantlootTable1.Length)]);
-                    }
-                }
                 #endregion
                 #region Crimson
                 if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.CrimsonPlants)
@@ -123,25 +95,11 @@ namespace Xenon.Common.Globals.XenonTileGlobals
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.crimsonPlantlootTable1[Main.rand.Next(HoeLootTables.crimsonPlantlootTable1.Length)]);
                     }
                 }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == TileID.CrimsonVines)
-                {
-                    if (Main.rand.Next(1, 100) > 90)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.crimsonPlantlootTable1[Main.rand.Next(HoeLootTables.crimsonPlantlootTable1.Length)]);
-                    }
-                }
                 #endregion
                 #region Corrosion
                 if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == ModContent.TileType<CorrosionShortGrass>())
                 {
                     if (Main.rand.Next(1, 100) > 80)
-                    {
-                        Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.corrodedPlantlootTable1[Main.rand.Next(HoeLootTables.corrodedPlantlootTable1.Length)]);
-                    }
-                }
-                if (nearestPlayer.HeldItem.GetGlobalItem<HoePower>().hoePower >= 35 && Main.tile[i, j].TileType == ModContent.TileType<CorrosionVines>())
-                {
-                    if (Main.rand.Next(1, 100) > 90)
                     {
                         Item.NewItem(new EntitySource_TileBreak(i, j), new Vector2(i, j) * 16, HoeLootTables.corrodedPlantlootTable1[Main.rand.Next(HoeLootTables.corrodedPlantlootTable1.Length)]);
                     }

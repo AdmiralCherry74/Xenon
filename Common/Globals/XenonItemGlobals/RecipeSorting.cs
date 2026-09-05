@@ -1510,6 +1510,25 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .SortAfterFirstRecipesOf(ModContent.ItemType<Depraverang>())
             .Register();
 
+            #region Ingestane Bars for vanilla evil bar recipes
+            //Magiluminescence
+            Recipe.Create(ItemID.Magiluminescence)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 12)
+            .AddIngredient(ItemID.Topaz, 5)
+            .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ItemID.Magiluminescence)
+            .Register();
+
+            //Shadow Candle
+            Recipe.Create(ItemID.ShadowCandle)
+            .AddIngredient(ModContent.ItemType<IngestaneBar>(), 3)
+            .AddIngredient(ItemID.Torch)
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
+            .SortAfterFirstRecipesOf(ItemID.ShadowCandle)
+            .Register();
+            #endregion
+
             //Fishing Rod
             Recipe.Create(ModContent.ItemType<Regurgitator>())
             .AddIngredient(ModContent.ItemType<IngestaneBar>(), 8)
