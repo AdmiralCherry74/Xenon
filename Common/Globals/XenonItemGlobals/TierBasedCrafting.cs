@@ -15,6 +15,7 @@ using Xenon.Content.Items.Weapons.Melee.Battleaxes;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
 using Xenon.Content.Items.Weapons.Melee.Shortswords;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
+using Xenon.Content.Items.Weapons.Ranged.Crossbows;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {
@@ -225,6 +226,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup CopperBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBow)}", ItemID.CopperBow, ItemID.TinBow, ModContent.ItemType<AluminumBow>());
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBow), CopperBow);
             //Tier 1 Bow recipe group
+
+            RecipeGroup CopperCrossbow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<CopperCrossbow>())}", ModContent.ItemType<CopperCrossbow>(), ModContent.ItemType<TinCrossbow>(), ModContent.ItemType<AluminumCrossbow>());
+            RecipeGroup.RegisterGroup("Xenon:CopperCrossbow", CopperCrossbow);
+            //Tier 1 Crossbow recipe group
             #endregion
 
             #region iron tier recipe group
@@ -243,6 +248,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup IronBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.IronBow)}", ItemID.IronBow, ItemID.LeadBow, ModContent.ItemType<CinnabarBow>());
             RecipeGroup.RegisterGroup(nameof(ItemID.IronBow), IronBow);
             //Tier 2 Bow recipe group
+
+            RecipeGroup IronCrossbow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<IronCrossbow>())}", ModContent.ItemType<LeadCrossbow>(), ModContent.ItemType<TinCrossbow>(), ModContent.ItemType<CinnabarCrossbow>());
+            RecipeGroup.RegisterGroup("Xenon:IronCrossbow", IronCrossbow);
+            //Tier 2 Crossbow recipe group
             #endregion
 
             #region silver tier recipe group
@@ -261,6 +270,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup SilverBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBow)}", ItemID.SilverBow, ItemID.TungstenBow, ModContent.ItemType<IndiumBow>());
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverBow), SilverBow);
             //Tier 3 Bow recipe group
+
+            RecipeGroup SilverCrossbow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<SilverCrossbow>())}", ModContent.ItemType<SilverCrossbow>(), ModContent.ItemType<TungstenCrossbow>(), ModContent.ItemType<IndiumCrossbow>());
+            RecipeGroup.RegisterGroup("Xenon:SilverCrossbow", SilverCrossbow);
+            //Tier 3 Crossbow recipe group
             #endregion
 
             #region gold tier recipe group
@@ -279,6 +292,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup GoldBow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBow)}", ItemID.GoldBow, ItemID.PlatinumBow, ModContent.ItemType<FluoriteBow>());
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBow), GoldBow);
             //Tier 4 Bow recipe group
+
+            RecipeGroup GoldCrossbow = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ModContent.ItemType<GoldCrossbow>())}", ModContent.ItemType<GoldCrossbow>(), ModContent.ItemType<PlatinumCrossbow>(), ModContent.ItemType<FluoriteCrossbow>());
+            RecipeGroup.RegisterGroup("Xenon:GoldCrossbow", GoldCrossbow);
+            //Tier 4 Crossbow recipe group
             #endregion
 
             #region evil tier recipe group
@@ -1966,6 +1983,114 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     }
                 }
                 //End of Bow Recipe changes
+                #endregion
+                #endregion
+
+                #region crossbows
+                #region iron tier crossbow
+                Recipe IronCrossbowCraft = Main.recipe[i];
+                if (IronCrossbowCraft.HasIngredient(ItemID.IronBar) && IronCrossbowCraft.HasTile(TileID.Anvils) && IronCrossbowCraft.HasResult(ModContent.ItemType<IronCrossbow>()))
+                {
+                    IronCrossbowCraft.AddRecipeGroup("Xenon:CopperCrossbow");
+                    if (IronCrossbowCraft.TryGetIngredient(ItemID.IronBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Iron Crossbow Recipe
+
+                Recipe LeadCrossbowCraft = Main.recipe[i];
+                if (LeadCrossbowCraft.HasIngredient(ItemID.LeadBar) && LeadCrossbowCraft.HasTile(TileID.Anvils) && LeadCrossbowCraft.HasResult(ModContent.ItemType<LeadCrossbow>()))
+                {
+                    LeadCrossbowCraft.AddRecipeGroup("Xenon:CopperCrossbow");
+                    if (LeadCrossbowCraft.TryGetIngredient(ItemID.LeadBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Lead Crossbow Recipe
+
+                Recipe CinnabarCrossbowCraft = Main.recipe[i];
+                if (CinnabarCrossbowCraft.HasIngredient(ModContent.ItemType<CinnabarBar>()) && CinnabarCrossbowCraft.HasTile(TileID.Anvils) && CinnabarCrossbowCraft.HasResult(ModContent.ItemType<CinnabarCrossbow>()))
+                {
+                    CinnabarCrossbowCraft.AddRecipeGroup("Xenon:CopperCrossbow");
+                    if (CinnabarCrossbowCraft.TryGetIngredient(ModContent.ItemType<CinnabarBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Cinnabar Crossbow Recipe
+                #endregion
+
+                #region silver tier crossbow
+                Recipe SilverCrossbowCraft = Main.recipe[i];
+                if (SilverCrossbowCraft.HasIngredient(ItemID.SilverBar) && SilverCrossbowCraft.HasTile(TileID.Anvils) && SilverCrossbowCraft.HasResult(ModContent.ItemType<SilverCrossbow>()))
+                {
+                    SilverCrossbowCraft.AddRecipeGroup("Xenon:IronCrossbow");
+                    if (SilverCrossbowCraft.TryGetIngredient(ItemID.SilverBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Silver Crossbow Recipe
+
+                Recipe TungstenCrossbowCraft = Main.recipe[i];
+                if (TungstenCrossbowCraft.HasIngredient(ItemID.TungstenBar) && TungstenCrossbowCraft.HasTile(TileID.Anvils) && TungstenCrossbowCraft.HasResult(ModContent.ItemType<TungstenCrossbow>()))
+                {
+                    TungstenCrossbowCraft.AddRecipeGroup("Xenon:IronCrossbow");
+                    if (TungstenCrossbowCraft.TryGetIngredient(ItemID.TungstenBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Tungsten Crossbow Recipe
+
+                Recipe IndiumCrossbowCraft = Main.recipe[i];
+                if (IndiumCrossbowCraft.HasIngredient(ModContent.ItemType<IndiumBar>()) && IndiumCrossbowCraft.HasTile(TileID.Anvils) && IndiumCrossbowCraft.HasResult(ModContent.ItemType<IndiumCrossbow>()))
+                {
+                    IndiumCrossbowCraft.AddRecipeGroup("Xenon:IronCrossbow");
+                    if (IndiumCrossbowCraft.TryGetIngredient(ModContent.ItemType<IndiumBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Indium Crossbow Recipe
+                #endregion
+
+                #region gold tier crossbow
+                Recipe GoldCrossbowCraft = Main.recipe[i];
+                if (GoldCrossbowCraft.HasIngredient(ItemID.GoldBar) && GoldCrossbowCraft.HasTile(TileID.Anvils) && GoldCrossbowCraft.HasResult(ModContent.ItemType<GoldCrossbow>()))
+                {
+                    GoldCrossbowCraft.AddRecipeGroup("Xenon:SilverCrossbow");
+                    if (GoldCrossbowCraft.TryGetIngredient(ItemID.GoldBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Gold Crossbow Recipe
+
+                Recipe PlatinumCrossbowCraft = Main.recipe[i];
+                if (PlatinumCrossbowCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumCrossbowCraft.HasTile(TileID.Anvils) && PlatinumCrossbowCraft.HasResult(ModContent.ItemType<PlatinumCrossbow>()))
+                {
+                    PlatinumCrossbowCraft.AddRecipeGroup("Xenon:SilverCrossbow");
+                    if (PlatinumCrossbowCraft.TryGetIngredient(ItemID.PlatinumBar, out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Platinum Crossbow Recipe
+
+                Recipe XieiteCrossbowCraft = Main.recipe[i];
+                if (XieiteCrossbowCraft.HasIngredient(ModContent.ItemType<FluoriteBar>()) && XieiteCrossbowCraft.HasTile(TileID.Anvils) && XieiteCrossbowCraft.HasResult(ModContent.ItemType<FluoriteCrossbow>()))
+                {
+                    XieiteCrossbowCraft.AddRecipeGroup("Xenon:SilverCrossbow");
+                    if (XieiteCrossbowCraft.TryGetIngredient(ModContent.ItemType<FluoriteBar>(), out Item ingredient))
+                    {
+                        ingredient.stack /= 2;
+                    }
+                }
+                //Xieite Crossbow Recipe
+                //End of Crossbow Recipe changes
                 #endregion
                 #endregion
                 #endregion

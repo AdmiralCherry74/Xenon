@@ -3943,3 +3943,13 @@ DirtBrickWallItem: {
 	DisplayName: Dirt Brick Wall
 	Tooltip: ""
 }
+
+BnnuyItem: {
+	DisplayName: Bnnuy
+	Tooltip: ""
+}
+
+BnnuyStatueItem: {
+	DisplayName: Bnnuy Statue
+	Tooltip: ""
+}

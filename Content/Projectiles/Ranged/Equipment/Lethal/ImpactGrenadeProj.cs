@@ -101,6 +101,7 @@ namespace Xenon.Content.Projectiles.Ranged.Equipment.Lethal
             Projectile.alpha = 255;
 
             Projectile.Resize(ExplosionWidthHeight, ExplosionWidthHeight);
+            Projectile.timeLeft = 0;
 
             Projectile.damage = 60;
             Projectile.knockBack = 8f;

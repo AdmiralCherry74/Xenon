@@ -229,6 +229,11 @@ internal class XenonGlobalNPC : GlobalNPC
             pool.Add(ModContent.NPCType<NavySlime>(), 0.4f);
         }
 
+        if (Main.dayTime && spawnInfo.Player.ZonePurity)
+        {
+            pool.Add(ModContent.NPCType<Bnnuy>(), 0.0001f);
+        }
+
         if (spawnInfo.Player.InModBiome<UndergroundMountain>())
         {
             pool.Add(ModContent.NPCType<JebelSlime>(), 0.6f);

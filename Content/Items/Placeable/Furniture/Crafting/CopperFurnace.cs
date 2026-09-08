@@ -16,17 +16,5 @@ namespace Xenon.Content.Items.Placeable.Furniture.Crafting
             Item.rare = ItemRarityID.White;
             Item.value = Item.sellPrice(0, 0, 4, 50);
         }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient(ItemID.CopperBar, 20)
-                .AddIngredient(ItemID.Furnace, 1)
-                .AddTile(TileID.WorkBenches).Register();
-
-            CreateRecipe() //This Will be removed later, just too lazy to make a Tin Furnace
-                .AddIngredient(ItemID.TinBar, 20)
-                .AddIngredient(ItemID.Furnace, 1)
-                .AddTile(TileID.WorkBenches).Register();
-        }
     }
 }

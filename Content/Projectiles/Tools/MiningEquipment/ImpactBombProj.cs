@@ -103,6 +103,7 @@ namespace Xenon.Content.Projectiles.Tools.MiningEquipment
 
             Projectile.damage = 100;
             Projectile.knockBack = 8f;
+            Projectile.timeLeft = 0;
         }
 
         public override void OnKill(int timeLeft)
