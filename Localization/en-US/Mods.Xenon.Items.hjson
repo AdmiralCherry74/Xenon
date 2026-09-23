@@ -3575,7 +3575,7 @@ VitalPrismite: {
 
 DirtBrickItem: {
 	DisplayName: Dirt Brick
-	Tooltip: ""
+	Tooltip: Hey, this tile tastes like dirt!
 }
 
 HallowedOreXenonItem: {
@@ -3941,7 +3941,7 @@ BurpGun: {
 
 DirtBrickWallItem: {
 	DisplayName: Dirt Brick Wall
-	Tooltip: ""
+	Tooltip: Hey, this wall tastes like dirt!
 }
 
 BnnuyItem: {

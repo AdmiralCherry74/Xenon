@@ -19,7 +19,7 @@ namespace Xenon.Content.Items.Tools.ConversionTools.Powders
             Item.consumable = true;
             Item.stack = 9999;
             Item.shoot = ModContent.ProjectileType<VitriolicPowderProj>();
-            Item.value = Item.sellPrice(copper: 20);
+            Item.value = Item.sellPrice(copper: 10);
         }
 
         public override void AddRecipes()

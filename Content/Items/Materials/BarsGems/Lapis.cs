@@ -14,7 +14,7 @@ public class Lapis : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.value = Item.sellPrice(0, 17, 50);
+        Item.value = Item.sellPrice(0, 0, 17, 50);
         Item.maxStack = 9999;
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedLapis>());
     }

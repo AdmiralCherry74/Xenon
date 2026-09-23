@@ -13,7 +13,7 @@ public class Bolus : ModItem
     {
         Item.width = 20;
         Item.height = 20;
-        Item.value = Item.sellPrice(0, 0, 21);
+        Item.value = Item.sellPrice(0, 0, 0, 2);
         Item.maxStack = 9999;
     }
 }

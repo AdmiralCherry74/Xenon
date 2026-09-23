@@ -15,7 +15,7 @@ public class Garnet : ModItem
         Item.width = 20;
         Item.height = 20;
         Item.alpha = 50;
-        Item.value = Item.sellPrice(0, 4, 25);
+        Item.value = Item.sellPrice(0, 0, 4, 25);
         Item.maxStack = 9999;
         Item.DefaultToPlaceableTile(ModContent.TileType<PlacedGarnet>());
     }

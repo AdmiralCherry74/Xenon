@@ -8,6 +8,7 @@ using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
+using Xenon.Content.Items.Tools.ConversionTools.Powders;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
 
 namespace Xenon.Common.Globals.XenonItemGlobals;
@@ -31,6 +32,8 @@ public class XenonShimmer : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CinnabarOreBlock>()] = ItemID.IronOre;
         ItemID.Sets.ShimmerTransformToItem[ItemID.TinOre] = ModContent.ItemType<AluminumOreBlock>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AluminumOreBlock>()] = ItemID.CopperOre;
+
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<VitriolicPowder>()] = ItemID.PurificationPowder;
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.Marble] = ItemID.Granite;
         ItemID.Sets.ShimmerTransformToItem[ItemID.Granite] = ModContent.ItemType<RhyoliteBlock>();

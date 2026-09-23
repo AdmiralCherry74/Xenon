@@ -19,7 +19,7 @@ public class Quickmud : ModTile
 		Main.tileMerge[TileID.HallowHardenedSand][Type] = true;
 		Main.tileMerge[Type][TileID.HallowHardenedSand] = true;
 		MineResist = 0.5f;
-		DustType = DustID.Pearlsand;
+		DustType = DustID.Mud;
 
 		TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
 		TileID.Sets.CanBeDugByShovel[Type] = true;

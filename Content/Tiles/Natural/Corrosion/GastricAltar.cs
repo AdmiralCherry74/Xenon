@@ -21,6 +21,7 @@ namespace Xenon.Content.Tiles.Natural.Corrosion
             Main.tileFrameImportant[Type] = true;
             AdjTiles = new int[] { TileID.DemonAltar };
             TileID.Sets.PreventsTileRemovalIfOnTopOfIt[Type] = true;
+            TileID.Sets.PreventsTileHammeringIfOnTopOfIt[Type] = true;
             TileID.Sets.PreventsSandfall[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
             HitSound = SoundID.NPCHit1;
@@ -28,10 +29,10 @@ namespace Xenon.Content.Tiles.Natural.Corrosion
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            float brightness = Main.rand.Next(-5, 6) * 0.0025f;
-            r = 0.5f + brightness;
-            g = 0.9f + brightness * 2;
-            b = 0f;
+            var brightness = Main.rand.Next(-5, 6) * 0.0025f;
+            r = (214f / 255f + brightness) * 0.65f;
+            g = (172f / 255f + brightness) * 0.65f;
+            b = (93f / 255f + brightness) * 0.65f;
         }
 
         public override bool CanExplode(int i, int j)

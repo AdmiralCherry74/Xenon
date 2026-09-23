@@ -1677,6 +1677,53 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddCondition(Condition.InGraveyard)
                 .SortBeforeFirstRecipesOf(ItemID.PanicNecklace)
                 .Register();
+
+            #region Fresh Chyme for vanilla recipes
+            //Obsidian Outlaw Hat
+            Recipe.Create(ItemID.ObsidianHelm)
+            .AddIngredient(ItemID.Silk, 10)
+            .AddIngredient(ItemID.Obsidian, 20)
+            .AddIngredient(ModContent.ItemType<FreshChyme>(), 5)
+            .AddTile(TileID.Hellforge)
+            .SortAfterFirstRecipesOf(ItemID.ObsidianHelm)
+            .Register();
+
+            //Obsidian Longcoat
+            Recipe.Create(ItemID.ObsidianShirt)
+            .AddIngredient(ItemID.Silk, 10)
+            .AddIngredient(ItemID.Obsidian, 20)
+            .AddIngredient(ModContent.ItemType<FreshChyme>(), 10)
+            .AddTile(TileID.Hellforge)
+            .SortAfterFirstRecipesOf(ItemID.ObsidianShirt)
+            .Register();
+
+            //Obsidian Pants
+            Recipe.Create(ItemID.ObsidianPants)
+            .AddIngredient(ItemID.Silk, 10)
+            .AddIngredient(ItemID.Obsidian, 20)
+            .AddIngredient(ModContent.ItemType<FreshChyme>(), 5)
+            .AddTile(TileID.Hellforge)
+            .SortAfterFirstRecipesOf(ItemID.ObsidianPants)
+            .Register();
+
+            //Open Void Bag
+            Recipe.Create(ItemID.VoidLens)
+            .AddIngredient(ItemID.Bone, 30)
+            .AddIngredient(ItemID.JungleSpores, 15)
+            .AddIngredient(ModContent.ItemType<FreshChyme>(), 30)
+            .AddTile(TileID.DemonAltar)
+            .SortAfterFirstRecipesOf(ItemID.VoidLens)
+            .Register();
+
+            //Void Vault
+            Recipe.Create(ItemID.VoidVault)
+            .AddIngredient(ItemID.Bone, 15)
+            .AddIngredient(ItemID.JungleSpores, 8)
+            .AddIngredient(ModContent.ItemType<FreshChyme>(), 15)
+            .AddTile(TileID.DemonAltar)
+            .SortAfterFirstRecipesOf(ItemID.VoidVault)
+            .Register();
+            #endregion
             #endregion
             #endregion
         }
