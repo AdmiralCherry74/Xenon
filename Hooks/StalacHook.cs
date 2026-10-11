@@ -6,7 +6,7 @@ using Xenon.Common;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 using Xenon.Content.Tiles.Natural.NaturalStone;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 
 namespace Xenon.Hooks;
 

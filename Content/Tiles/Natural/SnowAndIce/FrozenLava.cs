@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Tiles.Natural.Other;
+namespace Xenon.Content.Tiles.Natural.SnowAndIce;
 public class FrozenLava : ModTile
 {
     public override void SetStaticDefaults()
@@ -16,6 +16,12 @@ public class FrozenLava : ModTile
         HitSound = SoundID.Item50;
         TileID.Sets.GeneralPlacementTiles[Type] = false;
         TileID.Sets.IceSkateSlippery[Type] = true;
+        Main.tileMerge[ModContent.TileType<FrostyGrass>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<FrostyGrass>()] = true;
+        Main.tileMerge[ModContent.TileType<PermafrostDirt>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<PermafrostDirt>()] = true;
+        Main.tileMerge[ModContent.TileType<PermafrostDirtIce>()][Type] = true;
+        Main.tileMerge[Type][ModContent.TileType<PermafrostDirtIce>()] = true;
         Main.tileMerge[TileID.IceBlock][Type] = true;
 		Main.tileMerge[Type][TileID.IceBlock] = true;
 		Main.tileMerge[TileID.CorruptIce][Type] = true;

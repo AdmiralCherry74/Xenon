@@ -14,10 +14,14 @@ using Xenon.Content.Items.Other;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.Items.Placeable.Blocks.Decoration.Torches;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Furniture.Crafting;
+using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Candelabra;
+using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Candle;
+using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Chandelier;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone;
 using Xenon.Content.Items.Placeable.Wall.Natural.Stone;
 using Xenon.Content.Items.Tools.CuttingAxes;
@@ -639,6 +643,22 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ItemID.PlatinumHammer)
                 .Register();
+
+            //Deathweed Wacker
+            Recipe.Create(ModContent.ItemType<DeathweedWacker>())
+                .AddIngredient(ItemID.DemoniteBar, 5)
+                .AddIngredient(ItemID.ShadowScale, 3)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.TheBreaker)
+                .Register();
+
+            //Clot Harvester
+            Recipe.Create(ModContent.ItemType<ClotHarvester>())
+                .AddIngredient(ItemID.CrimtaneBar, 5)
+                .AddIngredient(ItemID.TissueSample, 3)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.FleshGrinder)
+                .Register();
             #endregion
 
             #region Battleaxes
@@ -808,6 +828,202 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .Register();
             #endregion
 
+            #region Chandeliers, Candles and Candelabras
+            //Copper
+            Recipe.Create(ModContent.ItemType<AmethystChandelier>())
+                .AddIngredient(ItemID.CopperBar, 4)
+                .AddIngredient(ItemID.PurpleTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.CopperChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<CopperCandle>())
+                .AddIngredient(ItemID.CopperBar, 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AmethystChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<AmethystCandle>())
+                .AddIngredient(ItemID.CopperBar, 1)
+                .AddIngredient(ItemID.PurpleTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CopperCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<CopperCandelabra>())
+                .AddIngredient(ItemID.CopperBar, 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AmethystCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<AmethystCandelabra>())
+                .AddIngredient(ItemID.CopperBar, 5)
+                .AddIngredient(ItemID.PurpleTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CopperCandelabra>())
+                .Register();
+
+            //Tin
+            Recipe.Create(ModContent.ItemType<TopazChandelier>())
+                .AddIngredient(ItemID.TinBar, 4)
+                .AddIngredient(ItemID.YellowTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.TinChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TinCandle>())
+                .AddIngredient(ItemID.TinBar, 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TopazChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TopazCandle>())
+                .AddIngredient(ItemID.TinBar, 1)
+                .AddIngredient(ItemID.YellowTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TinCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TinCandelabra>())
+                .AddIngredient(ItemID.TinBar, 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TopazCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TopazCandelabra>())
+                .AddIngredient(ItemID.TinBar, 5)
+                .AddIngredient(ItemID.YellowTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TinCandelabra>())
+                .Register();
+
+            //Sapphire
+            Recipe.Create(ModContent.ItemType<SapphireChandelier>())
+                .AddIngredient(ItemID.SilverBar, 4)
+                .AddIngredient(ItemID.BlueTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.SilverChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<SilverCandle>())
+                .AddIngredient(ItemID.SilverBar, 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<SapphireChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<SapphireCandle>())
+                .AddIngredient(ItemID.SilverBar, 1)
+                .AddIngredient(ItemID.BlueTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<SilverCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<SilverCandelabra>())
+                .AddIngredient(ItemID.SilverBar, 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<SapphireCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<SapphireCandelabra>())
+                .AddIngredient(ItemID.SilverBar, 5)
+                .AddIngredient(ItemID.BlueTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<SilverCandelabra>())
+                .Register();
+
+            //Emerald
+            Recipe.Create(ModContent.ItemType<EmeraldChandelier>())
+                .AddIngredient(ItemID.TungstenBar, 4)
+                .AddIngredient(ItemID.GreenTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.TungstenChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TungstenCandle>())
+                .AddIngredient(ItemID.TungstenBar, 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<EmeraldChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<EmeraldCandle>())
+                .AddIngredient(ItemID.TungstenBar, 1)
+                .AddIngredient(ItemID.GreenTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TungstenCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TungstenCandelabra>())
+                .AddIngredient(ItemID.TungstenBar, 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<EmeraldCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<EmeraldCandelabra>())
+                .AddIngredient(ItemID.TungstenBar, 5)
+                .AddIngredient(ItemID.GreenTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<TungstenCandelabra>())
+                .Register();
+
+            //Ruby
+            Recipe.Create(ModContent.ItemType<RubyChandelier>())
+                .AddIngredient(ItemID.GoldBar, 4)
+                .AddIngredient(ItemID.RedTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.GoldChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<RubyCandle>())
+                .AddIngredient(ItemID.GoldBar, 1)
+                .AddIngredient(ItemID.RedTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.Candle)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<RubyCandelabra>())
+                .AddIngredient(ItemID.GoldBar, 5)
+                .AddIngredient(ItemID.RedTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.Candelabra)
+                .Register();
+
+            //Diamond
+            Recipe.Create(ModContent.ItemType<DiamondChandelier>())
+                .AddIngredient(ItemID.PlatinumBar, 4)
+                .AddIngredient(ItemID.WhiteTorch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.PlatinumChandelier)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<DiamondCandle>())
+                .AddIngredient(ItemID.PlatinumBar, 1)
+                .AddIngredient(ItemID.WhiteTorch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.PlatinumCandle)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<DiamondCandelabra>())
+                .AddIngredient(ItemID.PlatinumBar, 5)
+                .AddIngredient(ItemID.WhiteTorch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.PlatinumCandelabra)
+                .Register();
+            #endregion
+
             #region Corrupt Special Weapons
             //Battleaxe
             Recipe.Create(ModContent.ItemType<NightGnasher>())
@@ -963,7 +1179,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<AluminumBar>())
                 .AddIngredient(ModContent.ItemType<AluminumOreBlock>(), 3)
                 .AddTile(TileID.Furnaces)
-                .SortAfterFirstRecipesOf(ModContent.ItemType<CopperCrown>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AmethystCandelabra>())
                 .Register();
 
             //Pickaxe
@@ -1078,6 +1294,53 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddIngredient(ModContent.ItemType<Jade>())
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumWatch>())
+                .Register();
+
+            //Chandeliers
+            Recipe.Create(ModContent.ItemType<AluminumChandelier>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 4)
+                .AddIngredient(ItemID.Torch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumCrown>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<JadeChandelier>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 4)
+                .AddIngredient(ModContent.ItemType<OliveTorch>(), 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumChandelier>())
+                .Register();
+
+            //Candles
+            Recipe.Create(ModContent.ItemType<AluminumCandle>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JadeChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<JadeCandle>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 1)
+                .AddIngredient(ModContent.ItemType<OliveTorch>())
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumCandle>())
+                .Register();
+
+            //Candelabras
+            Recipe.Create(ModContent.ItemType<AluminumCandelabra>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<JadeCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<JadeCandelabra>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 5)
+                .AddIngredient(ModContent.ItemType<OliveTorch>(), 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumCandelabra>())
                 .Register();
 
             //Jade Hook
@@ -1218,7 +1481,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<IndiumBar>())
                 .AddIngredient(ModContent.ItemType<IndiumOreBlock>(), 4)
                 .AddTile(TileID.Furnaces)
-                .SortAfterFirstRecipesOf(ItemID.SilverWatch)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<SapphireCandelabra>())
                 .Register();
 
             //Pickaxe
@@ -1335,6 +1598,53 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumWatch>())
                 .Register();
 
+            //Chandeliers
+            Recipe.Create(ModContent.ItemType<IndiumChandelier>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 4)
+                .AddIngredient(ItemID.Torch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumCrown>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<GarnetChandelier>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 4)
+                .AddIngredient(ModContent.ItemType<RoseTorch>(), 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumChandelier>())
+                .Register();
+
+            //Candles
+            Recipe.Create(ModContent.ItemType<IndiumCandle>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<GarnetChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<GarnetCandle>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 1)
+                .AddIngredient(ModContent.ItemType<RoseTorch>())
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumCandle>())
+                .Register();
+
+            //Candelabras
+            Recipe.Create(ModContent.ItemType<IndiumCandelabra>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<GarnetCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<GarnetCandelabra>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 5)
+                .AddIngredient(ModContent.ItemType<RoseTorch>(), 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumCandelabra>())
+                .Register();
+
             //Garnet Hook
             Recipe.Create(ModContent.ItemType<GarnetHook>())
                 .AddIngredient(ModContent.ItemType<Garnet>(), 15)
@@ -1363,7 +1673,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             Recipe.Create(ModContent.ItemType<FluoriteBar>())
                 .AddIngredient(ModContent.ItemType<FluoriteOreBlock>(), 4)
                 .AddTile(TileID.Furnaces)
-                .SortAfterFirstRecipesOf(ItemID.GoldCrown)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<RubyCandelabra>())
                 .Register();
 
             //Pickaxe
@@ -1477,6 +1787,53 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddIngredient(ModContent.ItemType<Lapis>())
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteWatch>())
+                .Register();
+
+            //Chandeliers
+            Recipe.Create(ModContent.ItemType<FluoriteChandelier>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 4)
+                .AddIngredient(ItemID.Torch, 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteCrown>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisChandelier>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 4)
+                .AddIngredient(ModContent.ItemType<IndigoTorch>(), 4)
+                .AddIngredient(ItemID.Chain)
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteChandelier>())
+                .Register();
+
+            //Candles
+            Recipe.Create(ModContent.ItemType<FluoriteCandle>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 1)
+                .AddIngredient(ItemID.Torch)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<LapisChandelier>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisCandle>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 1)
+                .AddIngredient(ModContent.ItemType<IndigoTorch>())
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteCandle>())
+                .Register();
+
+            //Candelabras
+            Recipe.Create(ModContent.ItemType<FluoriteCandelabra>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 5)
+                .AddIngredient(ItemID.Torch, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<LapisCandle>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<LapisCandelabra>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 5)
+                .AddIngredient(ModContent.ItemType<IndigoTorch>(), 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteCandelabra>())
                 .Register();
 
             //Lapis Hook

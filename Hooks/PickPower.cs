@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Common.Globals.XenonItemGlobals;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
 
 namespace Xenon.Hooks;

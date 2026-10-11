@@ -12,6 +12,7 @@ public class FluoriteHoe : ModItem
     {
         Item.width = 32;
         Item.height = 32;
+        Item.scale = 1.10f;
 
         Item.GetGlobalItem<HoePower>().hoePower = 57;
         Item.knockBack = 2f;

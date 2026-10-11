@@ -11,7 +11,7 @@ using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 using Xenon.Content.Tiles.Natural.NaturalStone;
 using Xenon.Content.Tiles.Natural.Ores.PreHardOres;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 using Xenon.ModSupport.Avalon.Content.Tiles;
 using Xenon.ModSupport.Confection.Content.Tiles;
 

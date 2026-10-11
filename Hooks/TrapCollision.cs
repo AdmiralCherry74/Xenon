@@ -4,7 +4,7 @@ using Xenon.Common;
 using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Tiles.Natural.Autumn;
 using Xenon.Content.Tiles.Natural.Ores.Gems;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 
 namespace Xenon.Hooks
 {

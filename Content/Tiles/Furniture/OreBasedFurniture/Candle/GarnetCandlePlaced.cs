@@ -22,9 +22,9 @@ namespace Xenon.Content.Tiles.Furniture.OreBasedFurniture.Candle
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                r = 0.9f;
-                g = 0.9f;
-                b = 0f;
+                r = 1.3f;
+                g = 0.43f;
+                b = 0.93f;
             }
         }
 

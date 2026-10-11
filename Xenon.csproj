@@ -14,6 +14,8 @@
 	  <AdditionalFiles Remove="SomethingYouShouldKnowAboutSomeRecipes.txt" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Assets\VFX\Dyes\" />
+	  <Folder Include="Content\Items\Placeable\Blocks\ActiveAndWiring\Traps\Contact\" />
 	  <Folder Include="Content\NPCs\SnowMobs\" />
 	  <Folder Include="Content\Projectiles\Prefixes\FishingPrefixes\" />
 	</ItemGroup>

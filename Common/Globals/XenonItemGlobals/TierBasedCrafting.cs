@@ -6,6 +6,7 @@ using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Fish;
 using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.DriverHammers;
@@ -1367,27 +1368,27 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 //Xieite Hoe Recipe
                 #endregion
 
-                #region evil tier hoe
-                //Recipe GoldHoeCraft = Main.recipe[i];
-                //if (GoldHoeCraft.HasIngredient(ItemID.GoldBar) && GoldHoeCraft.HasTile(TileID.Anvils) && GoldHoeCraft.HasResult(ModContent.ItemType<GoldHoe>()))
-                //{
-                //    GoldHoeCraft.AddRecipeGroup("Xenon:SilverHoe");
-                //}
-                //Gold Hoe Recipe
+                #region evil tier hoes
+                Recipe DeathweedWackerCraft = Main.recipe[i];
+                if (DeathweedWackerCraft.HasIngredient(ItemID.DemoniteBar) && DeathweedWackerCraft.HasIngredient(ItemID.ShadowScale) && DeathweedWackerCraft.HasTile(TileID.Anvils) && DeathweedWackerCraft.HasResult(ModContent.ItemType<DeathweedWacker>()))
+                {
+                    DeathweedWackerCraft.AddRecipeGroup("Xenon:GoldHoe");
+                }
+                //Deathweed Wacker Recipe
 
-                //Recipe PlatinumHoeCraft = Main.recipe[i];
-                //if (PlatinumHoeCraft.HasIngredient(ItemID.PlatinumBar) && PlatinumHoeCraft.HasTile(TileID.Anvils) && PlatinumHoeCraft.HasResult(ModContent.ItemType<PlatinumHoe>()))
-                //{
-                //    PlatinumHoeCraft.AddRecipeGroup("Xenon:SilverHoe");
-                //}
-                //Platinum Hoe Recipe
+                Recipe ClotHarvestorCraft = Main.recipe[i];
+                if (ClotHarvestorCraft.HasIngredient(ItemID.CrimtaneBar) && ClotHarvestorCraft.HasIngredient(ItemID.TissueSample) && ClotHarvestorCraft.HasTile(TileID.Anvils) && ClotHarvestorCraft.HasResult(ModContent.ItemType<ClotHarvester>()))
+                {
+                    ClotHarvestorCraft.AddRecipeGroup("Xenon:GoldHoe");
+                }
+                //Clot Harvester Recipe
 
                 Recipe PukivatorCraft = Main.recipe[i];
-                if (PukivatorCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && PukivatorCraft.HasTile(TileID.Anvils) && PukivatorCraft.HasResult(ModContent.ItemType<Pukivator>()))
+                if (PukivatorCraft.HasIngredient(ModContent.ItemType<IngestaneBar>()) && PukivatorCraft.HasIngredient(ModContent.ItemType<FreshChyme>()) && PukivatorCraft.HasTile(TileID.Anvils) && PukivatorCraft.HasResult(ModContent.ItemType<Pukivator>()))
                 {
                     PukivatorCraft.AddRecipeGroup("Xenon:GoldHoe");
                 }
-                //Xieite Hoe Recipe
+                //Pukivator Hoe Recipe
                 #endregion
                 #endregion
                 #endregion

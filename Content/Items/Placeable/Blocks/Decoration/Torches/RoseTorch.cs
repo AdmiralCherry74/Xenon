@@ -28,6 +28,7 @@ public class RoseTorch : ModItem
 
         recipe.AddIngredient(ItemID.Torch, 10);
         recipe.AddIngredient(ModContent.ItemType<Garnet>(), 1);
+        recipe.SortAfterFirstRecipesOf(ItemID.BlueTorch);
         recipe.Register();
     }
     public override void HoldItem(Player player)

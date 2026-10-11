@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact
+namespace Xenon.Content.Items.Placeable.Blocks.Natural.Snow
 {
     public class FrozenLava : ModItem
     {
@@ -13,7 +13,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact
 
         public override void SetDefaults()
         {
-            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.Other.FrozenLava>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Natural.SnowAndIce.FrozenLava>());
         }
 
         public override void AddRecipes()

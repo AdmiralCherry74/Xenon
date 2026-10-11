@@ -15,6 +15,7 @@ using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.GardeningHoes;
 using Xenon.Content.Tiles.Building.Bricks;
 
@@ -28,13 +29,18 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup.RegisterGroup(nameof(ItemID.Ebonkoi), EvilFish);
             //Evil Fish recipe group
 
+            RecipeGroup groupwood = RecipeGroup.recipeGroups[RecipeGroupID.Wood];
+            groupwood.ValidItems.Add(ModContent.ItemType<BilewoodItem>());
+            groupwood.ValidItems.Add(ModContent.ItemType<JacarandawoodItem>());
+            //Wood recipe group
+
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar, ModContent.ItemType<AluminumBar>());
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
             //Copper Bar recipe group
 
-            //Iron recipe group
             RecipeGroup groupiron = RecipeGroup.recipeGroups[RecipeGroupID.IronBar];
             groupiron.ValidItems.Add(ModContent.ItemType<CinnabarBar>());
+            //Iron recipe group
 
             RecipeGroup SilverBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar, ModContent.ItemType<IndiumBar>());
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), SilverBar);
@@ -56,14 +62,18 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             RecipeGroup.RegisterGroup("Xenon:HolySouls", HolySouls);
             //Holy Souls recipe group
 
-            //Wood recipe group
-            RecipeGroup groupwood = RecipeGroup.recipeGroups[RecipeGroupID.Wood];
-            groupwood.ValidItems.Add(ModContent.ItemType<BilewoodItem>());
-            groupwood.ValidItems.Add(ModContent.ItemType<JacarandawoodItem>());
-
         }
         public override void AddRecipes()
         {
+            Recipe.Create(ItemID.AcornAxe) //Axe Of Regrowth
+                .AddIngredient(ItemID.StaffofRegrowth)
+                .AddIngredient(ModContent.ItemType<AluminumAxe>())
+                .AddIngredient(ItemID.JungleSpores, 12)
+                .AddIngredient(ItemID.Vine, 3)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.AcornAxe)
+                .Register();
+
             Recipe.Create(ItemID.SpellTome)
                 .AddIngredient(ItemID.Book)
                 .AddIngredient(ItemID.ManaCrystal, 3)

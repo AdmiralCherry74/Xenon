@@ -8,8 +8,8 @@ using System.Collections.Generic;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Pets;
-using Xenon.Content.Tiles.Natural.Other;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 
 namespace Xenon.Content.WorldGeneration;
 

@@ -1,6 +1,5 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Projectiles.Ranged.Equipment.Lethal;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Equipment.Lethals

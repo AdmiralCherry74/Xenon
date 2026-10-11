@@ -1313,17 +1313,17 @@ GraniteFish: {
 }
 
 CausticHelmet: {
-	DisplayName: Caustic Helmet
+	DisplayName: Hydrochloric Helmet
 	Tooltip: 4% increased knockback
 }
 
 CausticScalemail: {
-	DisplayName: Caustic Scalemail
+	DisplayName: Hydrochloric Scalemail
 	Tooltip: 4% increased knockback
 }
 
 CausticGreaves: {
-	DisplayName: Caustic Greaves
+	DisplayName: Hydrochloric Greaves
 	Tooltip: 4% increased knockback
 }
 
@@ -3951,5 +3951,125 @@ BnnuyItem: {
 
 BnnuyStatueItem: {
 	DisplayName: Bnnuy Statue
+	Tooltip: ""
+}
+
+FrostedGrassBlock: {
+	DisplayName: Frosted Grass
+	Tooltip: ""
+}
+
+PermafrostDirtBlock: {
+	DisplayName: Frost Dirt Block
+	Tooltip: A version of the Permafrost Dirt Block that allows for different merging than usual
+}
+
+PermafrostDirtIceBlock: {
+	DisplayName: Permafrost Dirt Block
+	Tooltip: ""
+}
+
+ImpactGlowstick: {
+	DisplayName: Impact Glowstick
+	Tooltip:
+		'''
+		Works when wet
+		Works better when thrown into something at high enough speeds
+		'''
+}
+
+YellowAcidDye: {
+	DisplayName: Yellow Acid Dye
+	Tooltip:
+		'''
+		- Dev note: First ever time i worked with a dye. was interesting.
+		just gave it this recipe for now cause 
+		idk how to make it so the dye trader can have this in the loot pool
+		ciao!
+		'''
+}
+
+PurpleAcidDye: {
+	DisplayName: Purple Acid Dye
+	Tooltip: ""
+}
+
+OrangeAcidDye: {
+	DisplayName: Orange Acid Dye
+	Tooltip: ""
+}
+
+ClotHarvester: {
+	DisplayName: Clot Harvester
+	Tooltip: ""
+}
+
+DeathweedWacker: {
+	DisplayName: Deathweed Wacker
+	Tooltip: ""
+}
+
+WhiteGelDye: {
+	DisplayName: White Gel Dye
+	Tooltip: ""
+}
+
+AluminumChandelier: {
+	DisplayName: Aluminum Chandelier
+	Tooltip: ""
+}
+
+FluoriteChandelier: {
+	DisplayName: Fluorite Chandelier
+	Tooltip: ""
+}
+
+IndiumChandelier: {
+	DisplayName: Indium Chandelier
+	Tooltip: ""
+}
+
+AmethystChandelier: {
+	DisplayName: Amethyst Chandelier
+	Tooltip: ""
+}
+
+DiamondChandelier: {
+	DisplayName: Diamond Chandelier
+	Tooltip: ""
+}
+
+EmeraldChandelier: {
+	DisplayName: Emerald Chandelier
+	Tooltip: ""
+}
+
+GarnetChandelier: {
+	DisplayName: Garnet Chandelier
+	Tooltip: ""
+}
+
+JadeChandelier: {
+	DisplayName: Jade Chandelier
+	Tooltip: ""
+}
+
+LapisChandelier: {
+	DisplayName: Lapis Chandelier
+	Tooltip: ""
+}
+
+RubyChandelier: {
+	DisplayName: Ruby Chandelier
+	Tooltip: ""
+}
+
+SapphireChandelier: {
+	DisplayName: Sapphire Chandelier
+	Tooltip: ""
+}
+
+TopazChandelier: {
+	DisplayName: Topaz Chandelier
 	Tooltip: ""
 }

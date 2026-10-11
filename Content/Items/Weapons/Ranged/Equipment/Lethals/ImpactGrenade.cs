@@ -1,7 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Materials;
-using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Contact;
 using Xenon.Content.Projectiles.Ranged.Equipment.Lethal;
 using Xenon.Content.Projectiles.Tools.MiningEquipment;
 

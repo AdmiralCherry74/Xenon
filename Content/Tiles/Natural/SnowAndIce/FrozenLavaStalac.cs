@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Tiles.Natural.Other;
+namespace Xenon.Content.Tiles.Natural.SnowAndIce;
 
 public class FrozenLavaStalac : ModTile
 {

@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts;
 using Xenon.Content.Items.Materials.BarsGems;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 
 namespace Xenon.Content.Tiles.Natural.Ores.Gems;
 

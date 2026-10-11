@@ -38,6 +38,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 entity.useTime = 10;
                 entity.useAnimation = 16;
             }
+            if (entity.type == ItemID.StaffofRegrowth)
+            {
+                entity.GetGlobalItem<HoePower>().hoePower = 50;
+            }
+            if (entity.type == ItemID.AcornAxe)
+            {
+                entity.GetGlobalItem<HoePower>().hoePower = 125;
+            }
         }
 
     public override bool? UseItem(Item item, Player player)

@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Common;
 using Xenon.Content.Tiles.Natural.Ores.Gems;
-using Xenon.Content.Tiles.Natural.Other;
+using Xenon.Content.Tiles.Natural.SnowAndIce;
 using Xenon.Hooks;
 
 namespace Xenon.Content.WorldGeneration;

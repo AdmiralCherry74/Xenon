@@ -24,10 +24,11 @@ public class IndigoTorch : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe recipe = CreateRecipe(3);
+        Recipe recipe = CreateRecipe(10);
 
-        recipe.AddIngredient(ItemID.Torch, 3);
+        recipe.AddIngredient(ItemID.Torch, 10);
         recipe.AddIngredient(ModContent.ItemType<Lapis>(), 1);
+        recipe.SortAfterFirstRecipesOf(ItemID.RedTorch);
         recipe.Register();
     }
     public override void HoldItem(Player player)

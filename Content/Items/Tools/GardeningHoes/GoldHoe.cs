@@ -11,6 +11,7 @@ public class GoldHoe : ModItem
     {
         Item.width = 24;
         Item.height = 24;
+        Item.scale = 1.10f;
 
         Item.GetGlobalItem<HoePower>().hoePower = 55;
         Item.knockBack = 1f;

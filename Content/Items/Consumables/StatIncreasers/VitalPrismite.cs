@@ -53,5 +53,15 @@ namespace Xenon.Content.Items.Consumables.StatIncreasers
 
             return true;
         }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.LifeCrystal)
+            .AddIngredient(ItemID.CrystalShard, 25)
+            .AddRecipeGroup("Xenon:EvilSouls", 5)
+            .AddRecipeGroup("Xenon:HolySouls", 5)
+            .AddTile(TileID.MythrilAnvil)
+            .Register();
+        }
     }
 }
