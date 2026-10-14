@@ -38,6 +38,11 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
                 Projectile.velocity.Y = 4f;
             }
 
+            if (landed)
+            {
+                Projectile.velocity.X /= 1.01f;
+            }
+
             if (Main.rand.Next(4) < 3) {
                 int dust = Dust.NewDust(Projectile.position - new Vector2(2f, 2f), Projectile.width + 4, Projectile.height + 4, DustID.CursedTorch, Projectile.velocity.X * 0.4f, Projectile.velocity.Y * 0.4f, 100, default(Color), 3.5f);
                 Main.dust[dust].noGravity = true;

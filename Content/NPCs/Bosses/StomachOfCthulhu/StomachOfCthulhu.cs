@@ -17,13 +17,18 @@ using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Projectiles.Boss.StomachOfCthulhu;
 using Terraria.DataStructures;
 using System;
+using Xenon.Content.NPCs.CorrosionMobs;
+using System.Linq;
+using System.Collections.Generic;
+using Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions;
 
 namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 {
     [AutoloadBossHead]
     public class StomachOfCthulhu : ModNPC
     {
-        public int[] Adds;
+        public static int Minions = 0;
+        
         public int[] Hooks = [-1, -1, -1, -1, -1, -1];
 
         private enum StomachAIState
@@ -36,6 +41,8 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         
         private int despawnTimer = 1000;
         private float hoverDistance = 280f;
+        private int bubbleCooldown = 900;
+        private int spawnAttackWait = 300;
         private bool pauseMovement = true;
 
         private bool acidChargeDir = false; //false = left, true = right
@@ -76,7 +83,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         {
             NPC.width = 146;
             NPC.height = 164;
-            NPC.damage = 28;
+            NPC.damage = 0;
             NPC.defense = 14;
             NPC.lifeMax = 3500;
             NPC.HitSound = SoundID.NPCHit1;
@@ -134,67 +141,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             float xTopSpeed = 5f;
             float climbTopSpeed = 3f;
             float fallTopSpeed = 7f;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             float velocityChange = 0.2f;
             float fallingVelocityChange = 0.3f;
@@ -287,6 +233,10 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 5 Bug Bombs
                 6 Acid Charge
             */
+            if (bubbleCooldown >= 0) bubbleCooldown--;
+
+            if (spawnAttackWait >= 0) spawnAttackWait--;
+
             int timeBetweenAttacks = 180;
 
             if (AI_State < 2f)
@@ -296,6 +246,8 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
             if (AI_State == 2f)
             {
+                if (spawnAttackWait >= 0) return;
+
                 AI_Timer++;
 
                 if (AI_Timer > timeBetweenAttacks)
@@ -310,6 +262,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             #region Gas Bubbles
             if (AI_State == 3f)
             {
+
                 switch (Main.rand.Next(3))
                 {
                     case 0:
@@ -351,23 +304,113 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
             if (AI_State == 4f)
             {
-                AI_State = 3f;
-                AI_Timer = 0f;
+                AI_State = 2f;
+                AI_Timer = timeBetweenAttacks;
 
                 return;
             }
-
+            
+            #region Spawn Goons >:3
             if (AI_State == 5f)
             {
-                AI_State = 3f;
-                AI_Timer = 0f;
+                AI_Timer++;
 
-                return;
+                if (AI_Timer == 0)
+                {
+                    if (Minions >= 4)
+                    {
+                        AI_State = 2f;
+                        AI_Timer = timeBetweenAttacks;
+
+                        return;
+                    }
+                }
+
+                if (AI_Timer % 2 == 0)
+                {
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
+                        Dust SOCBileLight = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
+                        Dust SOCBile = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
+                        SOCBileLight.noGravity = true;
+                        SOCBileLight.scale = 2f;
+                        SOCBile.scale = 2f;
+                    }
+                }
+
+                if (AI_Timer == 60f || AI_Timer == 90f || AI_Timer == 120f)
+                {
+                    for (int i = 0; i < 50; i++)
+                    {
+                        Vector2 speed = Main.rand.NextVector2Unit((float)MathHelper.Pi / 4, (float)MathHelper.Pi / 2) * Main.rand.NextFloat();
+                        Dust SOCBileLight = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), DustID.CursedTorch, speed * -5);
+                        Dust SOCBile = Dust.NewDustPerfect(NPC.Center + new Vector2(-25, -98), ModContent.DustType<StomachOfCthulhusWaterSplash>(), speed * -5);
+                        SOCBileLight.noGravity = true;
+                        SOCBileLight.scale = 2f;
+                        SOCBile.scale = 2f;
+                    }
+
+                    switch (Main.rand.Next(3))
+                    {
+                        case 0:
+                            SoundEngine.PlaySound(Burp1, NPC.Center);
+                            break;
+                        case 1:
+                            SoundEngine.PlaySound(Burp2, NPC.Center);
+                            break;
+                        case 2:
+                            SoundEngine.PlaySound(Burp3, NPC.Center);
+                            break;
+                    }
+
+                    Vector2 spawnPos = NPC.Center + new Vector2(-25, -98);
+                    int spawnType = -1;
+
+                    switch (Main.rand.Next(3))
+                    {
+                        case 0:
+                            spawnType = ModContent.NPCType<TapeWormHeadEcho>();
+                            break;
+                        case 1:
+                            spawnType = ModContent.NPCType<GastritisEcho>();
+                            break;
+                        case 2:
+                            spawnType = ModContent.NPCType<HalfDigestedEcho>();
+                            break;
+                    }
+
+                    if(spawnType != -1)
+                    {
+                        int colonthree = NPC.NewNPC(NPC.GetSource_FromAI(), (int) spawnPos.X, (int) spawnPos.Y, spawnType);
+                        if (Main.netMode == NetmodeID.MultiplayerClient)
+                            { NetMessage.SendData(MessageID.SyncNPC, number: colonthree); }
+                        Minions++;
+                    }
+                    
+                }
+
+                if (AI_Timer >= 120f)
+                {
+                    AI_State = 2f;
+                    AI_Timer = 0f;
+                }
+
+                
             }
+            #endregion
 
             #region Acid Charge
             if (AI_State == 6f)
             {
+                if (bubbleCooldown >= 0)
+                {
+                    AI_State = 2f;
+                    AI_Timer = timeBetweenAttacks;
+
+                    return;
+                }
+
                 pauseMovement = true;
 
                 AI_Timer++;
@@ -406,11 +449,12 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                     pauseMovement = false;
                     AI_State = 2f;
                     AI_Timer = 0f;
+
+                    bubbleCooldown = 900;
                 }
             }
             #endregion
 
-            
         }
 
         public void SpawnAnimation(Player target)

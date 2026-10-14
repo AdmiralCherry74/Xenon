@@ -38,9 +38,7 @@ internal class XenonGlobalNPC : GlobalNPC
     public static int antBossRanger = -1;           // Colony Squires Ranger
     public static int antBossSinger = -1;           // Colony Squires Singer
     public static int centepedeBoss = -1;           // Thornapede
-    public static int furnaceBoss = -1;             // Infurnace
-
-
+    public static int furnaceBoss = -1;             // Infurnace    
 
 
     public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)

@@ -5,6 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonNPCGlobals;
 using Xenon.Content.Biomes;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
@@ -87,7 +88,7 @@ public class Gastritis : ModNPC
             Main.gore[gore].velocity *= 0.3f;
         }
     }
-     public override void ModifyNPCLoot(NPCLoot npcLoot)
+    public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DilutedBile>(), 150, 1, 1));
