@@ -1,7 +1,10 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Dusts.WaterSplashes;
@@ -12,13 +15,14 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
     {
         //This is a reference to a Call Of Duty: Black Ops campaign mission where a character gets gassed by Nova 6
         int groundtimeleft = 600;
+        List<float> playerY = new List<float>();
         bool landed = false;
         public override void SetDefaults()
         {
             Projectile.width = 24;
             Projectile.height = 24;
             Projectile.alpha = 125;
-            Projectile.aiStyle = 1;
+            Projectile.aiStyle = ProjAIStyleID.Arrow;
             Projectile.hostile = true;
             Projectile.penetrate = -1;
             Projectile.timeLeft = 1800;
@@ -44,7 +48,7 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
             }
 
             if (Main.rand.Next(4) < 3) {
-                int dust = Dust.NewDust(Projectile.position - new Vector2(2f, 2f), Projectile.width + 4, Projectile.height + 4, DustID.CursedTorch, Projectile.velocity.X * 0.4f, Projectile.velocity.Y * 0.4f, 100, default(Color), 3.5f);
+                int dust = Dust.NewDust(Projectile.position - new Vector2(2f, 2f), Projectile.width + 4, Projectile.height + 4, DustID.CursedTorch, Projectile.velocity.X * 0.4f, Projectile.velocity.Y * 0.4f, 50, default(Color), 3.5f);
                 Main.dust[dust].noGravity = true;
                 Main.dust[dust].velocity *= 1.8f;
                 Main.dust[dust].velocity.Y -= 0.5f;
@@ -55,6 +59,18 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
 			}
         }
 
+        public override void OnSpawn(IEntitySource source)
+        {
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                Player player = Main.player[i];
+                if (player.active && !player.dead && !player.ghost && player.Distance(Projectile.Center) < 1500)
+                {
+                    playerY.Add(player.Top.Y);
+                }
+            }
+        }
+
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
         {
             if(landed)
@@ -63,10 +79,9 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
             }
             else
             {
-                for (int i = 0; i < Main.maxPlayers; i++)
+                foreach (int i in playerY)
                 {
-                    Player player = Main.player[i];
-                    if (player.active && !player.dead && !player.ghost && player.Top.Y <= Projectile.Center.Y && player.Distance(Projectile.Center) < 1500)
+                    if (i <= Projectile.Center.Y)
                     {
                         fallThrough = false;
                         landed = true;
@@ -76,6 +91,7 @@ namespace Xenon.Content.Projectiles.Boss.StomachOfCthulhu
             }
             return base.TileCollideStyle(ref width, ref height, ref fallThrough, ref hitboxCenterFrac);
         }
+
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {

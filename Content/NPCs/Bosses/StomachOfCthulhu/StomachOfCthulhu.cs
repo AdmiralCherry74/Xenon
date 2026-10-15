@@ -27,7 +27,8 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
     [AutoloadBossHead]
     public class StomachOfCthulhu : ModNPC
     {
-        public static int Minions = 0;
+        
+        public static int KidneyStones = 0;
         
         public int[] Hooks = [-1, -1, -1, -1, -1, -1];
 
@@ -38,14 +39,24 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         }
         public ref float AI_State => ref NPC.ai[0];
         public ref float AI_Timer => ref NPC.ai[1];
-        
-        private int despawnTimer = 1000;
         private float hoverDistance = 280f;
-        private int bubbleCooldown = 900;
-        private int spawnAttackWait = 300;
         private bool pauseMovement = true;
-
         private bool acidChargeDir = false; //false = left, true = right
+
+        // Refrence Values
+        private int bubbleCooldown = 900;
+        private int timeBetweenAttacks = 180;
+        private int MaxMinions = 4;
+        private int minionSpawnCooldown = 420;
+
+        // Changing
+        //private int despawnTimer = 1000;
+        private int bubbleCooldownClock = 900;
+        private int minionSpawnClock = 420;
+        private int spawnAttackWait = 300;
+        public static int Minions = 0;
+
+        
 
 
         #region Burp SFX
@@ -85,7 +96,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.height = 164;
             NPC.damage = 0;
             NPC.defense = 14;
-            NPC.lifeMax = 3500;
+            NPC.lifeMax = 3000;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.knockBackResist = 0f;
@@ -104,6 +115,18 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         {
             cooldownSlot = ImmunityCooldownID.Bosses;
             return true;
+        }
+        public override void OnSpawn(IEntitySource source)
+        {
+            Minions = 0;
+
+            if(Main.expertMode)
+                NPC.lifeMax = 5350;
+            if(Main.masterMode)
+                NPC.lifeMax = 6833;
+
+            NPC.life = NPC.lifeMax;
+            
         }
         public override void AI()
         {
@@ -131,6 +154,21 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             SpawnAnimation(target);
             Movement(target);
             DoAttack(target);
+
+            if (Main.expertMode && NPC.life <= (NPC.lifeMax / 2))
+            {
+                bubbleCooldown = 600;
+                minionSpawnCooldown = 300;
+                timeBetweenAttacks = 100;
+                MaxMinions = 6;
+            }
+            else
+            {
+                bubbleCooldown = 900;
+                minionSpawnCooldown = 420;
+                timeBetweenAttacks = 180;
+                MaxMinions = 4;
+            }
         }
 
         public void Movement(Player target)
@@ -229,15 +267,14 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 1 Fables Spawn Animation (Skip if fables isn't on)
                 2 Waiting
                 3 Gass Bubble
-                4 Spawn Adds
-                5 Bug Bombs
+                4 Gass Bubble
+                5 Spawn Goons
                 6 Acid Charge
             */
-            if (bubbleCooldown >= 0) bubbleCooldown--;
+            if (bubbleCooldownClock >= 0) bubbleCooldownClock--;
+            if (minionSpawnClock >= 0) minionSpawnClock--;
 
             if (spawnAttackWait >= 0) spawnAttackWait--;
-
-            int timeBetweenAttacks = 180;
 
             if (AI_State < 2f)
             {
@@ -256,12 +293,15 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                     AI_Timer = 0f;
                 }
 
+                hoverDistance = 280f;
+                
                 return;
             }
 
             #region Gas Bubbles
-            if (AI_State == 3f)
+            if (AI_State == 3f || AI_State == 4f)
             {
+                hoverDistance = 240f;
 
                 switch (Main.rand.Next(3))
                 {
@@ -301,23 +341,14 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 return;
             }
             #endregion
-
-            if (AI_State == 4f)
-            {
-                AI_State = 2f;
-                AI_Timer = timeBetweenAttacks;
-
-                return;
-            }
             
             #region Spawn Goons >:3
             if (AI_State == 5f)
             {
-                AI_Timer++;
-
+                
                 if (AI_Timer == 0)
                 {
-                    if (Minions >= 4)
+                    if (minionSpawnClock >= 0 || Minions >= MaxMinions)
                     {
                         AI_State = 2f;
                         AI_Timer = timeBetweenAttacks;
@@ -325,6 +356,10 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                         return;
                     }
                 }
+
+                hoverDistance = 300f;
+
+                AI_Timer++;
 
                 if (AI_Timer % 2 == 0)
                 {
@@ -394,6 +429,8 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 {
                     AI_State = 2f;
                     AI_Timer = 0f;
+
+                    minionSpawnClock = minionSpawnCooldown;
                 }
 
                 
@@ -403,7 +440,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             #region Acid Charge
             if (AI_State == 6f)
             {
-                if (bubbleCooldown >= 0)
+                if (bubbleCooldownClock >= 0)
                 {
                     AI_State = 2f;
                     AI_Timer = timeBetweenAttacks;
@@ -450,7 +487,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                     AI_State = 2f;
                     AI_Timer = 0f;
 
-                    bubbleCooldown = 900;
+                    bubbleCooldownClock = bubbleCooldown;
                 }
             }
             #endregion
