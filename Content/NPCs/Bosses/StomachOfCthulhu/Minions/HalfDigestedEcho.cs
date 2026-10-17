@@ -1,4 +1,6 @@
+using System;
 using Terraria;
+using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,12 +17,26 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions
     {
         private int FollowingBoss = XenonGlobalNPC.corrosionBoss;
 
+        public override void SetStaticDefaults()
+        {
+            NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, new NPCID.Sets.NPCBestiaryDrawModifiers
+            {
+                Hide = true
+            });
+        }
+
         public override void SetDefaults()
         {
             base.SetDefaults();
 
             NPC.damage = 15;
             NPC.lifeMax = 30;
+        
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[Type] = ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[ModContent.NPCType<HalfDigested>()];
         }
 
         public override void ModifyNPCLoot(NPCLoot npcLoot)

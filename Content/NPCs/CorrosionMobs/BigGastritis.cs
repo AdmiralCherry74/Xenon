@@ -14,6 +14,14 @@ namespace Xenon.Content.NPCs.CorrosionMobs;
 
 public class BigGastritis : Gastritis
 {
+    public override void SetStaticDefaults()
+    {
+        NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, new NPCID.Sets.NPCBestiaryDrawModifiers
+        {
+            Hide = true
+        });
+    }
+    
     public override void SetDefaults()
     {
         base.SetDefaults();
@@ -23,5 +31,11 @@ public class BigGastritis : Gastritis
         NPC.defense = 9;
         NPC.lifeMax = 46;
         NPC.knockBackResist = 0.42f;
+
+    }
+
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+    {
+        ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[Type] = ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[ModContent.NPCType<Gastritis>()];
     }
 }

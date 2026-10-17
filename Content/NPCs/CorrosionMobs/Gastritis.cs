@@ -22,6 +22,7 @@ public class Gastritis : ModNPC
         NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
         {
             Velocity = 1f
+            
         };
         NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
     }
@@ -49,7 +50,6 @@ public class Gastritis : ModNPC
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
-
         bestiaryEntry.Info.AddRange([
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Gastritis")),
         ]);

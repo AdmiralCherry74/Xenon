@@ -1,19 +1,20 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.ItemDropRules;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes.Corrosion;
-using Xenon.Content.Items.Materials.WorldInfectionMaterials;
-using Xenon.Content.Items.Placeable.Banner;
-using Xenon.Content.Items.Valuables.MonsterRemains;
+using Terraria.GameContent.Bestiary;
 
 namespace Xenon.Content.NPCs.CorrosionMobs;
 
 public class LittleGastritis : Gastritis
 {
+    public override void SetStaticDefaults()
+    {
+        NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, new NPCID.Sets.NPCBestiaryDrawModifiers
+        {
+            Hide = true
+        });
+    }
+    
     public override void SetDefaults()
     {
         base.SetDefaults();
@@ -25,4 +26,10 @@ public class LittleGastritis : Gastritis
         NPC.value = 76;
         NPC.knockBackResist = 0.57f;
     }
+
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+    {
+        ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[Type] = ContentSamples.NpcBestiaryCreditIdsByNpcNetIds[ModContent.NPCType<Gastritis>()];
+    }
+
 }

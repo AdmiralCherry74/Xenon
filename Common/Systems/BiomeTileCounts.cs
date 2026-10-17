@@ -47,6 +47,9 @@ public class BiomeTileCounts : ModSystem
         Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<MossyNyxStone>()];
         Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<MossyAresStone>()];
         Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<MossyHelioStone>()];
+        Main.SceneMetrics.MushroomTileCount += tileCounts[ModContent.TileType<MushroomGrassMulch>()];
+        Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<CrimsonAutumnGrass>()];
+        Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<CorruptionAutumnGrass>()];
 
 
         UndergroundOceanTiles = tileCounts[ModContent.TileType<MarineSand>()] +
@@ -74,7 +77,10 @@ public class BiomeTileCounts : ModSystem
                          tileCounts[ModContent.TileType<SleepingGrass>()] +
                          tileCounts[ModContent.TileType<IndigoIce>()];
 
-        AutumnTiles = tileCounts[ModContent.TileType<AutumnGrass>()];
+        AutumnTiles = tileCounts[ModContent.TileType<AutumnGrass>()] +
+                      tileCounts[ModContent.TileType<AvianPlating>()] +
+                      tileCounts[ModContent.TileType<ColonyBlock>()];
+
 
         FrozenLavaTiles = tileCounts[ModContent.TileType<FrozenLava>()];
 
@@ -92,6 +98,8 @@ public class BiomeTileCounts : ModSystem
         CatacombTiles = tileCounts[ModContent.TileType<RedCatacombBrick>()] +
                         tileCounts[ModContent.TileType<CharcoalCatacombBrick>()] +
                         tileCounts[ModContent.TileType<LavenderCatacombBrick>()];
+
+        
 
         #region World Force Balence
         int ogHallowTiles = Main.SceneMetrics.HolyTileCount;

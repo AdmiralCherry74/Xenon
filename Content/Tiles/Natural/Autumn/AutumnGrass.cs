@@ -1,3 +1,4 @@
+using System.Security.Policy;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -55,16 +56,60 @@ public class AutumnGrass : ModTile
         Tile tile = ((Tilemap)(Main.tile))[i, j];
         Tile up = ((Tilemap)(Main.tile))[i, j - 1];
         Tile up2 = ((Tilemap)(Main.tile))[i, j - 2];
-        if (Utils.NextBool(WorldGen.genRand, 10) && !((Tile)(up)).HasTile && !((Tile)(up2)).HasTile && (((Tile)(up)).LiquidAmount <= 0 || ((Tile)(up2)).LiquidAmount <= 0) && !((Tile)(tile)).LeftSlope && !((Tile)(tile)).RightSlope && !((Tile)(tile)).IsHalfBlock)
+        if (!((Tile)(up)).HasTile && !((Tile)(up2)).HasTile && (((Tile)(up)).LiquidAmount <= 0 || ((Tile)(up2)).LiquidAmount <= 0) && !((Tile)(tile)).LeftSlope && !((Tile)(tile)).RightSlope && !((Tile)(tile)).IsHalfBlock)
         {
-            ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
-            ((Tile)(up)).HasTile = true;
-            ((Tile)(up)).TileFrameY = 0;
-            ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(6) * 18);
-            WorldGen.SquareTileFrame(i, j - 1, true);
-            if (Main.dedServ)
+            if (Utils.NextBool(WorldGen.genRand, 10))
             {
-                NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+                ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
+                ((Tile)(up)).HasTile = true;
+                ((Tile)(up)).TileFrameY = 0;
+
+                if (Utils.NextBool(WorldGen.genRand))
+                {
+                    ((Tile)(up)).TileFrameX = (short)(WorldGen.genRand.Next(6) * 18);
+                    WorldGen.SquareTileFrame(i, j - 1, true);
+                    if (Main.dedServ)
+                    {
+                        NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+                    }
+                } else {
+                    ((Tile)(up)).TileFrameX = (short)((WorldGen.genRand.Next(13) + 10) * 18);
+                    
+                }
+                WorldGen.SquareTileFrame(i, j - 1, true);
+                if (Main.dedServ)
+                {
+                    NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+                }
+            } else if (j > Main.worldSurface && Utils.NextBool(WorldGen.genRand, 20))
+            {
+                ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
+                ((Tile)(up)).HasTile = true;
+                ((Tile)(up)).TileFrameY = 0;
+
+                if (Utils.NextBool(WorldGen.genRand))
+                    ((Tile)(up)).TileFrameX = (short)(6 * 18);
+                else
+                    ((Tile)(up)).TileFrameX = (short)(7 * 18);
+
+                WorldGen.SquareTileFrame(i, j - 1, true);
+                if (Main.dedServ)
+                {
+                    NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+                }
+            } else if (j > Main.worldSurface && Utils.NextBool(WorldGen.genRand, 40))
+            {
+                ((Tile)(up)).TileType = (ushort)ModContent.TileType<AutumnFoliage>();
+                ((Tile)(up)).HasTile = true;
+                ((Tile)(up)).TileFrameY = 0;
+
+                ((Tile)(up)).TileFrameX = (short)(9 * 18);
+
+                WorldGen.SquareTileFrame(i, j - 1, true);
+                if (Main.dedServ)
+                {
+                    NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
+                }
             }
         }
     }

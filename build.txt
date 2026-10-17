@@ -2,5 +2,5 @@ displayName = Xenon Beta October Build
 author = AdmiralCherry74, Emeraldmanjoe
 version = 0.10.10
 modReferences = AltLibrary@2.1.0.7, ModLiquidLib
-weakReferences = Avalon, TheConfectionRebirth
+weakReferences = Avalon, TheConfectionRebirth, CalamityFables
 buildIgnore = .vs\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\*, *.config, .git\*, .github\*, *.md, .editorconfig, .gitignore, .gitattributes

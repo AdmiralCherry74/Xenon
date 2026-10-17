@@ -16,7 +16,7 @@ using Xenon.Content.Tiles.Natural.MountainsAndTheKarst.Mossy;
 
 namespace Xenon.ModSupport;
 
-[ExtendsFromMod("Avalon", "TheConfectionRebirth")]
+[ExtendsFromMod("Avalon", "TheConfectionRebirth", "CalamityFables")]
 internal class CompatSystem : ModSystem
 {
     public override bool IsLoadingEnabled(Mod mod)

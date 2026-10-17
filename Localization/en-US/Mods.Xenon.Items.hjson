@@ -4073,3 +4073,18 @@ TopazChandelier: {
 	DisplayName: Topaz Chandelier
 	Tooltip: ""
 }
+
+Drizzlethrower: {
+	Tooltip: ""
+	DisplayName: Drizzlethrower
+}
+
+HookstaffOverride: {
+	DisplayName: Hookstaff
+	Tooltip:
+		'''
+		Used to poke and prod at the mycelium within the mushroom biome
+		Can only be used when standing on mushroom grass
+		Might provoke some subterranean creatures...
+		'''
+}
