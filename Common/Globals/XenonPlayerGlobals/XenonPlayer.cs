@@ -315,7 +315,7 @@ public class XenonPlayer : ModPlayer
     }
     public void QuicksandMovement()
     {
-        if (Player.shimmering)
+        if (Player.shimmering || Player.HasBuff(BuffID.Flipper))
             return;
 
         bool mounted = false;

@@ -26,6 +26,7 @@ namespace Xenon.Content.Liquids
 	//By inherienting 'ModLiquid' we are able to add a new liquid to the list of liquids to the game.
 	public class Syrup : ModLiquid
 	{
+		public bool FlipperBuffIsHere = false;
 		//SetStaticDefaults are the defaults added when the game initially loads.
 		//Here we set a few settings that this liquid will have.
 		//SetStaticDefaults is only ever ran once just after all the content from mods are added to the game.
@@ -73,12 +74,20 @@ namespace Xenon.Content.Liquids
 			//Water/Lava/Regular modded liquid = 0.5f
 			//Honey = 0.25f
 			//Shimmer = 0.375f
-			PlayerMovementMultiplier = 0.25f;
-			StopWatchMPHMultiplier = PlayerMovementMultiplier; //We set stopwatch to the same multiplier as we don't want a different between whats felt and what the player can read their movement as.
-			NPCMovementMultiplierDefault = PlayerMovementMultiplier; //NPCs have a similar modifier but as a field, here we set the default value as some other NPCs set this multiplier to 0. We set this to PlayerMovementMultiplier as we need them to all be the same.
-			ProjectileMovementMultiplier = PlayerMovementMultiplier; //Simiarly to Players, Projectiles have this property for easy editing of a projectile velocity multiplier without needing to reimplement all of the projectile liquid movement code.
+			if (FlipperBuffIsHere)
+			{
+				PlayerMovementMultiplier = 1;
+                StopWatchMPHMultiplier = PlayerMovementMultiplier;
+            }
+			else
+			{
+                PlayerMovementMultiplier = 0.25f;
+                StopWatchMPHMultiplier = PlayerMovementMultiplier; //We set stopwatch to the same multiplier as we don't want a different between whats felt and what the player can read their movement as.
+            }
+            NPCMovementMultiplierDefault = PlayerMovementMultiplier; //NPCs have a similar modifier but as a field, here we set the default value as some other NPCs set this multiplier to 0. We set this to PlayerMovementMultiplier as we need them to all be the same.
+            ProjectileMovementMultiplier = PlayerMovementMultiplier; //Simiarly to Players, Projectiles have this property for easy editing of a projectile velocity multiplier without needing to reimplement all of the projectile liquid movement code.
 
-			FishingPoolSizeMultiplier = 1f; //The multiplier used for calculating the size of a fishing pool of this liquid. Here, each liquid tile counts as 2 for every tile in a fished pool.
+            FishingPoolSizeMultiplier = 1f; //The multiplier used for calculating the size of a fishing pool of this liquid. Here, each liquid tile counts as 2 for every tile in a fished pool.
 
 			//For more dangerous liquids, we may want to have our liquid call On(Player/NPC/Projectile)Collision whenever an entity touches the liquid, rather than when an entity splashes in a liquid
 			//For this we use similar collision calculations as lava using this boolean.
@@ -172,6 +181,11 @@ namespace Xenon.Content.Liquids
 			//No conditions needed for our liquid
 			//Shimmer and honey also don't have any other conditions outside of already not shimmering
 			player.AddBuff(BuffID.Honey, 60 * 30, false);
+
+			if (player.HasBuff(BuffID.Flipper))
+			{
+				FlipperBuffIsHere = true;
+			}
 		}
 
 		//The following region contains all the logic for what this liquid does when being entered and exited by different entities.

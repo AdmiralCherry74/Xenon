@@ -27,7 +27,14 @@ public class BurpGun : ModItem
 
         if (Main.rand.NextBool(8))
         {
-            SoundEngine.PlaySound(LongBurp, player.Center);
+            if (Main.rand.NextBool(9))
+            {
+                SoundEngine.PlaySound(DashBurp, player.Center);
+            }
+            else
+            {
+                SoundEngine.PlaySound(DeathBurp, player.Center);
+            }
         }
         else if (Main.rand.NextBool(16))
         {
@@ -78,10 +85,17 @@ public class BurpGun : ModItem
         PitchVariance = 0f,
         MaxInstances = 10,
     };
-    static SoundStyle LongBurp = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp")
+    static SoundStyle DeathBurp = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp")
     {
         Volume = 2f,
         Pitch = -0.75f,
+        PitchVariance = 0f,
+        MaxInstances = 10,
+    };
+    static SoundStyle DashBurp = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp")
+    {
+        Volume = 2f,
+        Pitch = 0f,
         PitchVariance = 0f,
         MaxInstances = 10,
     };

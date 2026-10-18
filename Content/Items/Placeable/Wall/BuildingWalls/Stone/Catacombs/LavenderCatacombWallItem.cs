@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Bricks;
 using Xenon.Content.Walls.BuildingWalls.Stones.Catacombs;
 
 namespace Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;

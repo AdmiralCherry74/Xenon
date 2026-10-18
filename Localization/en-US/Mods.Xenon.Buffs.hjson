@@ -1,3 +1,5 @@
+FlipperBuffRelocalization: Move like normal in liquids and quicksand
+
 QuicksandSuffocation: {
 	DisplayName: Quicksand Suffocation
 	Description: You are suffocating in quicksand

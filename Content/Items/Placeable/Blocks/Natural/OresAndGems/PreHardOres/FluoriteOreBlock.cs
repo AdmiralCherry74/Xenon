@@ -16,6 +16,7 @@ namespace Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<FluoriteOre>());
             Item.rare = ItemRarityID.White;
+            Item.sellPrice(0, 0, 3, 75);
         }
     }
 }

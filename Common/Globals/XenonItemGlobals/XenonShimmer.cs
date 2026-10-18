@@ -8,6 +8,7 @@ using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Planked;
 using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
+using Xenon.Content.Items.Placeable.Wall.Natural.Ores;
 using Xenon.Content.Items.Tools.ConversionTools.Powders;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
 
@@ -82,6 +83,21 @@ public class XenonShimmer : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<PlankedPearlWallItem>()] = ModContent.ItemType<AbandonedPlankedPearlWallItem>();
 
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<OuranoStoneWallItem>()] = ModContent.ItemType<OuranoStoneWallItemUnsafe>();
+
+        #region Ore Walls
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CopperOreWallItem>()] = ModContent.ItemType<CopperOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<AluminumOreWallItem>()] = ModContent.ItemType<AluminumOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<TinOreWallItem>()] = ModContent.ItemType<TinOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<IronOreWallItem>()] = ModContent.ItemType<IronOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CinnabarOreWallItem>()] = ModContent.ItemType<CinnabarOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<LeadOreWallItem>()] = ModContent.ItemType<LeadOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<SilverOreWallItem>()] = ModContent.ItemType<SilverOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<IndiumOreWallItem>()] = ModContent.ItemType<IndiumOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<TungstenOreWallItem>()] = ModContent.ItemType<TungstenOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<GoldOreWallItem>()] = ModContent.ItemType<GoldOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<FluoriteOreWallItem>()] = ModContent.ItemType<FluoriteOreWallUnsafeItem>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<PlatinumOreWallItem>()] = ModContent.ItemType<PlatinumOreWallUnsafeItem>();
+        #endregion
 
         #region Normal Catacombs
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<RedCatacombWallItem>()] = ModContent.ItemType<RedCatacombWallUnsafeItem>();

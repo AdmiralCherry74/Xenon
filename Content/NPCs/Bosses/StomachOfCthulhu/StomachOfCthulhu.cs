@@ -29,6 +29,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
     {
         
         public static int KidneyStones = 0;
+        public int BurpCount = 0;
         
         public int[] Hooks = [-1, -1, -1, -1, -1, -1];
 
@@ -81,6 +82,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             PitchVariance = 0f,
             MaxInstances = 5,
         };
+        static SoundStyle BurpRoar = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp")
+        {
+            Volume = 10f,
+            Pitch = 0f,
+            PitchVariance = 0f,
+            MaxInstances = 1,
+        };
         static SoundStyle RareBurp = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurpRare")
         {
             Volume = 10f,
@@ -98,7 +106,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.defense = 14;
             NPC.lifeMax = 3000;
             NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuDeathBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
+            NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.knockBackResist = 0f;
             NPC.noGravity = true;
             NPC.noTileCollide = true;
@@ -454,29 +462,30 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
                 if (AI_Timer == 1f)
                 {
-                    if (target.position.X > NPC.Center.X) { NPC.velocity.X = -9; acidChargeDir = false; } 
+                    if (target.position.X > NPC.Center.X) { NPC.velocity.X = -9; acidChargeDir = false; }
                     if (target.position.X < NPC.Center.X) { NPC.velocity.X = 9; acidChargeDir = true; }
                 }
 
                 if (AI_Timer > 1f)
                 {
+                    if (AI_Timer == 55)
+                    {
+                        SoundEngine.PlaySound(BurpRoar, NPC.Center);
+                    }
                     float chargeTopSpeed = 10f;
                     bool maxChargeSpeed = Math.Abs(NPC.velocity.X) < chargeTopSpeed;
 
                     if (acidChargeDir && maxChargeSpeed) NPC.velocity.X -= 0.15f; 
                     else if (maxChargeSpeed) NPC.velocity.X += 0.15f;
                     
-                    if (
-                        (acidChargeDir && NPC.velocity.X < 0)
-                        || (!acidChargeDir && NPC.velocity.X > 0)
-                    )
+                    if ((acidChargeDir && NPC.velocity.X < 0) || (!acidChargeDir && NPC.velocity.X > 0))
+
                     if (AI_Timer % 5 == 0)
                     {
                         Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
                         float speed = 2f;
                         Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
                         Vector2 moveTo = normalized * -speed;
-
                         Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<DimitriTreatmentProj>(), 13, 8f);
                     }
                 }

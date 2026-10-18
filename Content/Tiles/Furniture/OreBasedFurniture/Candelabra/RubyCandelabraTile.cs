@@ -21,13 +21,13 @@ namespace Xenon.Content.Tiles.Furniture.OreBasedFurniture.Candelabra
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX <= 36)
+            if (Main.tile[i, j].TileFrameX / 36 != 0)
             {
+                return;
+            }
                 r = 1f;
                 g = 0.1f;
                 b = 0.1f;
-            }
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

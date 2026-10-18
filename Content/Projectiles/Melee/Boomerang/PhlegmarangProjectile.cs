@@ -16,7 +16,7 @@ public class PhlegmarangProjectile : PiercingBoomerangTemplate
 		Projectile.aiStyle = -1;
 		Projectile.friendly = true;
 		Projectile.penetrate = -1;
-		Projectile.DamageType = DamageClass.Ranged;
+		Projectile.DamageType = DamageClass.Melee;
 		AIType = ProjectileID.EnchantedBoomerang;
 		DrawOffsetX = -(int)(24 / 2 - Projectile.Size.X / 2);
 		DrawOriginOffsetY = -(int)(24 / 2 - Projectile.Size.Y / 2);

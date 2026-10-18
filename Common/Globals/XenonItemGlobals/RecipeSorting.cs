@@ -12,6 +12,7 @@ using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Other;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Lighting;
+using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Bricks;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 using Xenon.Content.Items.Placeable.Blocks.Decoration.Torches;
@@ -22,7 +23,8 @@ using Xenon.Content.Items.Placeable.Furniture.Crafting;
 using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Candelabra;
 using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Candle;
 using Xenon.Content.Items.Placeable.Furniture.OreBasedFurniture.Chandelier;
-using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone;
+using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Bricks;
+using Xenon.Content.Items.Placeable.Wall.Natural.Ores;
 using Xenon.Content.Items.Placeable.Wall.Natural.Stone;
 using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.DriverHammers;
@@ -496,6 +498,164 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             .AddTile(TileID.WorkBenches)
             .SortAfterFirstRecipesOf(ItemID.GrayBrickWall)
             .Register();
+
+            #region Ore Walls
+            //Copper
+            Recipe.Create(ModContent.ItemType<CopperOreWallItem>(), 4)
+            .AddIngredient(ItemID.CopperOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.StoneBlock)
+            .Register();
+
+            Recipe.Create(ItemID.CopperOre)
+            .AddIngredient(ModContent.ItemType<CopperOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<CopperOreWallItem>())
+            .Register();
+
+            //Aluminum
+            Recipe.Create(ModContent.ItemType<AluminumOreWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<AluminumOreBlock>())
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.CopperOre)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<AluminumOreBlock>())
+            .AddIngredient(ModContent.ItemType<AluminumOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumOreWallItem>())
+            .Register();
+
+            //Tin
+            Recipe.Create(ModContent.ItemType<TinOreWallItem>(), 4)
+            .AddIngredient(ItemID.TinOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumOreBlock>())
+            .Register();
+
+            Recipe.Create(ItemID.TinOre)
+            .AddIngredient(ModContent.ItemType<TinOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<TinOreWallItem>())
+            .Register();
+
+            //Iron
+            Recipe.Create(ModContent.ItemType<IronOreWallItem>(), 4)
+            .AddIngredient(ItemID.IronOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.TinOre)
+            .Register();
+
+            Recipe.Create(ItemID.IronOre)
+            .AddIngredient(ModContent.ItemType<IronOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<IronOreWallItem>())
+            .Register();
+
+            //Cinnabar
+            Recipe.Create(ModContent.ItemType<CinnabarOreWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<CinnabarOreBlock>())
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.IronOre)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<CinnabarOreBlock>())
+            .AddIngredient(ModContent.ItemType<CinnabarOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarOreWallItem>())
+            .Register();
+
+            //Lead
+            Recipe.Create(ModContent.ItemType<LeadOreWallItem>(), 4)
+            .AddIngredient(ItemID.LeadOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarOreBlock>())
+            .Register();
+
+            Recipe.Create(ItemID.LeadOre)
+            .AddIngredient(ModContent.ItemType<LeadOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<LeadOreWallItem>())
+            .Register();
+
+            //Silver
+            Recipe.Create(ModContent.ItemType<SilverOreWallItem>(), 4)
+            .AddIngredient(ItemID.SilverOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.LeadOre)
+            .Register();
+
+            Recipe.Create(ItemID.SilverOre)
+            .AddIngredient(ModContent.ItemType<SilverOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<SilverOreWallItem>())
+            .Register();
+
+            //Indium
+            Recipe.Create(ModContent.ItemType<IndiumOreWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<IndiumOreBlock>())
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.SilverOre)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<IndiumOreBlock>())
+            .AddIngredient(ModContent.ItemType<IndiumOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumOreWallItem>())
+            .Register();
+
+            //Tungsten
+            Recipe.Create(ModContent.ItemType<TungstenOreWallItem>(), 4)
+            .AddIngredient(ItemID.TungstenOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumOreBlock>())
+            .Register();
+
+            Recipe.Create(ItemID.TungstenOre)
+            .AddIngredient(ModContent.ItemType<TungstenOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<TungstenOreWallItem>())
+            .Register();
+
+            //Gold
+            Recipe.Create(ModContent.ItemType<GoldOreWallItem>(), 4)
+            .AddIngredient(ItemID.GoldOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.TungstenOre)
+            .Register();
+
+            Recipe.Create(ItemID.GoldOre)
+            .AddIngredient(ModContent.ItemType<GoldOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<GoldOreWallItem>())
+            .Register();
+
+            //Fluorite
+            Recipe.Create(ModContent.ItemType<FluoriteOreWallItem>(), 4)
+            .AddIngredient(ModContent.ItemType<FluoriteOreBlock>())
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ItemID.GoldOre)
+            .Register();
+
+            Recipe.Create(ModContent.ItemType<FluoriteOreBlock>())
+            .AddIngredient(ModContent.ItemType<FluoriteOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteOreWallItem>())
+            .Register();
+
+            //Platinum
+            Recipe.Create(ModContent.ItemType<PlatinumOreWallItem>(), 4)
+            .AddIngredient(ItemID.PlatinumOre)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteOreBlock>())
+            .Register();
+
+            Recipe.Create(ItemID.PlatinumOre)
+            .AddIngredient(ModContent.ItemType<PlatinumOreWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<PlatinumOreWallItem>())
+            .Register();
+            #endregion
 
             #region Gemstone Walls
             #region Jade

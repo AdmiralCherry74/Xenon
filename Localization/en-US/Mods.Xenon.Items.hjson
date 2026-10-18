@@ -1,6 +1,7 @@
 HoePowerTooltip: "{0}% hoe power"
 WeaponDefenseDebuff: On hit, reduces enemies defense
 SplashPotionLocalization: Throw this to give someone the following effect
+FlipperPotionRelocalization: Lets you move swiftly in liquids and quicksand
 
 FossilizedBlessing: {
 	DisplayName: Fossilized Blessing
@@ -1745,7 +1746,7 @@ FishingSplashPotion: {
 
 FlipperSplashPotion: {
 	DisplayName: Flipper Splash Potion
-	Tooltip: Lets you move swiftly in liquids
+	Tooltip: Lets you move swiftly in liquids and quicksand
 }
 
 GillsSplashPotion: {
@@ -4086,5 +4087,153 @@ HookstaffOverride: {
 		Used to poke and prod at the mycelium within the mushroom biome
 		Can only be used when standing on mushroom grass
 		Might provoke some subterranean creatures...
+		'''
+}
+
+AluminumBrickWallItem: {
+	DisplayName: Aluminum Brick Wall
+	Tooltip: ""
+}
+
+CinnabarBrickWallItem: {
+	DisplayName: Cinnabar Brick Wall
+	Tooltip: ""
+}
+
+FluoriteBrickWallItem: {
+	DisplayName: Fluorite Brick Wall
+	Tooltip: ""
+}
+
+IndiumBrickWallItem: {
+	DisplayName: Indium Brick Wall
+	Tooltip: ""
+}
+
+AluminumOreWallItem: {
+	DisplayName: Aluminum Ore Wall
+	Tooltip: ""
+}
+
+AluminumOreWallUnsafeItem: {
+	DisplayName: Natural Aluminum Ore Wall
+	Tooltip: ""
+}
+
+CinnabarOreWallItem: {
+	DisplayName: Cinnabar Ore Wall
+	Tooltip: ""
+}
+
+CinnabarOreWallUnsafeItem: {
+	DisplayName: Natural Cinnabar Ore Wall
+	Tooltip: ""
+}
+
+CopperOreWallItem: {
+	DisplayName: Copper Ore Wall
+	Tooltip: ""
+}
+
+CopperOreWallUnsafeItem: {
+	DisplayName: Natural Copper Ore Wall
+	Tooltip: ""
+}
+
+FluoriteOreWallItem: {
+	DisplayName: Fluorite Ore Wall
+	Tooltip: ""
+}
+
+FluoriteOreWallUnsafeItem: {
+	DisplayName: Natural Fluorite Ore Wall
+	Tooltip: ""
+}
+
+GoldOreWallItem: {
+	DisplayName: Gold Ore Wall
+	Tooltip: ""
+}
+
+GoldOreWallUnsafeItem: {
+	DisplayName: Natural Gold Ore Wall
+	Tooltip: ""
+}
+
+IndiumOreWallItem: {
+	DisplayName: Indium Ore Wall
+	Tooltip: ""
+}
+
+IndiumOreWallUnsafeItem: {
+	DisplayName: Natural Indium Ore Wall
+	Tooltip: ""
+}
+
+IronOreWallItem: {
+	DisplayName: Iron Ore Wall
+	Tooltip: ""
+}
+
+IronOreWallUnsafeItem: {
+	DisplayName: Natural Iron Ore Wall
+	Tooltip: ""
+}
+
+LeadOreWallItem: {
+	DisplayName: Lead Ore Wall
+	Tooltip: ""
+}
+
+LeadOreWallUnsafeItem: {
+	DisplayName: Natural Lead Ore Wall
+	Tooltip: ""
+}
+
+PlatinumOreWallItem: {
+	DisplayName: Platinum Ore Wall
+	Tooltip: ""
+}
+
+PlatinumOreWallUnsafeItem: {
+	DisplayName: Natural Platinum Ore Wall
+	Tooltip: ""
+}
+
+SilverOreWallItem: {
+	DisplayName: Silver Ore Wall
+	Tooltip: ""
+}
+
+SilverOreWallUnsafeItem: {
+	DisplayName: Natural Silver Ore Wall
+	Tooltip: ""
+}
+
+TinOreWallItem: {
+	DisplayName: Tin Ore Wall
+	Tooltip: ""
+}
+
+TinOreWallUnsafeItem: {
+	DisplayName: Natural Tin Ore Wall
+	Tooltip: ""
+}
+
+TungstenOreWallItem: {
+	DisplayName: Tungsten Ore Wall
+	Tooltip: ""
+}
+
+TungstenOreWallUnsafeItem: {
+	DisplayName: Natural Tungsten Ore Wall
+	Tooltip: ""
+}
+
+Gourdarang: {
+	DisplayName: Gourdarang
+	Tooltip:
+		'''
+		'Oh My Gourd...'
 		'''
 }

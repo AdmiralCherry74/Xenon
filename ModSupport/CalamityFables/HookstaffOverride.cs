@@ -169,7 +169,7 @@ public class HookstaffOverride : Hookstaff
         return false;
     }
 }
-
+[ExtendsFromMod("CalamityFables")]
 public class HookstaffDropOverride : GlobalTile
 {
     public override bool IsLoadingEnabled(Mod mod)
