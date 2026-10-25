@@ -14,9 +14,9 @@ public class Lime : ModItem
         Main.RegisterItemAnimation(Type, new DrawAnimationVertical(int.MaxValue, 3));
         ItemID.Sets.FoodParticleColors[Item.type] =
         [
-            new Color(230, 182, 101),
-            new Color(255, 173, 19),
-            new Color(245, 147, 117)
+            new Color(164, 209, 61),
+            new Color(61, 168, 25),
+            new Color(19, 82, 31)
         ];
         ItemID.Sets.IsFood[Type] = true;
     }

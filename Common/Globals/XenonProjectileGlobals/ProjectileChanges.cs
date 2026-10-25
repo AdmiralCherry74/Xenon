@@ -18,7 +18,6 @@ namespace Xenon.Common.Globals.XenonProjectileGlobals
             {
                 //got this idea from a Sorbet Cafe video "Sentries are better than you think"
                 //I like the snow, i want it to have more content / uses... this sort of falls in line
-                entity.damage = 95;
                 entity.usesLocalNPCImmunity = true;
             }
         }

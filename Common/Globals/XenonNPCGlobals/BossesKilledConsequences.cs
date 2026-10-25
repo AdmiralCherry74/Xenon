@@ -10,6 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonWorldGlobals;
 using Xenon.Common.Systems;
+using Xenon.Content.WorldGeneration;
 
 namespace Xenon.Common.Globals.XenonNPCGlobals
 {

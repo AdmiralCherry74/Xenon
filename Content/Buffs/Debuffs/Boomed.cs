@@ -18,7 +18,8 @@ namespace Xenon.Content.Buffs.Debuffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetDamage(DamageClass.Generic) -= 0.10f;
-            player.aggro += 999999999;
+            player.aggro += 1200000;
+            player.stealth += 1200000;
             player.GetModPlayer<XenonPlayer>().Boomed = true;
         }
     }

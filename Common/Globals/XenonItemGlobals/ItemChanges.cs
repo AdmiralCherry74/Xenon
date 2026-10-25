@@ -46,6 +46,10 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             {
                 entity.GetGlobalItem<HoePower>().hoePower = 125;
             }
+            if (entity.type == ItemID.StaffoftheFrostHydra)
+            {
+                entity.damage = 95;
+            }
         }
 
     public override bool? UseItem(Item item, Player player)

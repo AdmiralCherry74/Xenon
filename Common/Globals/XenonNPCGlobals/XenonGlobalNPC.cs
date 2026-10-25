@@ -340,6 +340,17 @@ internal class XenonGlobalNPC : GlobalNPC
             maxSpawns = (int)(maxSpawns * Boomed.SpawnMultiplier);
         }
     }
+    public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
+    {
+        if (NPCID.Sets.ShouldBeCountedAsBoss[npc.type] || npc.boss)
+        {
+            if (Data.ProjectileSets.BossWeaknessProjs[projectile.type])
+            {
+                projectile.ArmorPenetration = 5;
+                projectile.damage *= 2;
+            }
+        }
+    }
 }
 public class XenonDebuffs : GlobalNPC
 {

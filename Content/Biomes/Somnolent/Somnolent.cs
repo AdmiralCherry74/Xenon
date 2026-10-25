@@ -13,6 +13,7 @@ public class Somnolent : ModBiome
     public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SoundCheckGravitySomnolentPlaceholder");
     //public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeLow; //not sure what the best priority for it would be so
+    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/SomnolentWaterStyle");
 
     public override bool IsBiomeActive(Player player)
     {

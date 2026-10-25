@@ -2,6 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Systems;
+using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.BuffTile;
+using Xenon.Content.Items.Placeable.Blocks.Decoration.Torches;
 
 namespace Xenon.Content.Biomes.Corrosion;
 
@@ -12,6 +14,8 @@ public class Corrosion : ModBiome
     public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SurfaceCorrosionPlaceholder");
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
+    public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
+    public override int BiomeCampfireItemType => ModContent.ItemType<CorrosionCampfire>();
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {

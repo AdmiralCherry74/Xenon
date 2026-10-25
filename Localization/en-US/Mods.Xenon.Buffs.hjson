@@ -139,3 +139,68 @@ Sapped: {
 	DisplayName: Sapped
 	Description: Syrup sucking away defense
 }
+
+AluminumGrapefruitBuff: {
+	DisplayName: Aluminum fed
+	Description: +10 life
+}
+
+CopperGrapefruitBuff: {
+	DisplayName: Copper fed
+	Description: +1 defense
+}
+
+TinGrapefruitBuff: {
+	DisplayName: Tin fed
+	Description: +2% damage resistance
+}
+
+Nausea: {
+	DisplayName: Nausea
+	Description: Cant eat, drink, and have food buffs
+}
+
+CinnabarLemonBuff: {
+	DisplayName: Cinnabar fed
+	Description: +20 life
+}
+
+IronLemonBuff: {
+	DisplayName: Iron fed
+	Description: +2 defense
+}
+
+LeadLemonBuff: {
+	DisplayName: Lead fed
+	Description: +4% damage resistance
+}
+
+FluoriteAppleBuff: {
+	DisplayName: Fluorite fed
+	Description: +40 life, +4% Knockback velocity
+}
+
+GoldAppleBuff: {
+	DisplayName: Gold fed
+	Description: +4 defense, +4% movement speed
+}
+
+IndiumApricotBuff: {
+	DisplayName: Indium fed
+	Description: +30 life, +2% Knockback velocity
+}
+
+PlatinumAppleBuff: {
+	DisplayName: Platinum fed
+	Description: +8% damage resistance, increased life regeneration
+}
+
+SilverApricotBuff: {
+	DisplayName: Silver fed
+	Description: +3 defense, +2% movement speed
+}
+
+TungstenApricotBuff: {
+	DisplayName: Tungsten fed
+	Description: +6% damage resistance, increased life regeneration
+}
