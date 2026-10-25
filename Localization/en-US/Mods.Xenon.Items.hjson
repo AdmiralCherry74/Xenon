@@ -2,6 +2,11 @@ HoePowerTooltip: "{0}% hoe power"
 WeaponDefenseDebuff: On hit, reduces enemies defense
 SplashPotionLocalization: Throw this to give someone the following effect
 FlipperPotionRelocalization: Lets you move swiftly in liquids and quicksand
+WoodenMattockBGCConfigLocalization: Able to mine Copper, Aluminum or Tin ore
+CopperTierPickBGCConfigLocalization: Able to mine Iron, Cinnabar or Lead ore
+IronTierPickBGCConfigLocalization: Able to mine Silver, Indium or Tungsten ore
+SilverTierPickBGCConfigLocalization: Able to mine Gold, Fluorite or Platinum ore
+TungstenPickBGCConfigRelocalization: Able to mine Gold, Fluorite, Platinum or Meteorite ore
 
 FossilizedBlessing: {
 	DisplayName: Fossilized Blessing
@@ -4315,6 +4320,21 @@ Bilimbi: {
 }
 
 CorrosionWaterFountainItem: {
-	DisplayName: Corrosion Water Fountain Item
+	DisplayName: Corrosion Water Fountain
 	Tooltip: ""
+}
+
+WoodenHatchet: {
+	DisplayName: Wooden Hatchet
+	Tooltip: '''"A dinky wooden hatchet"'''
+}
+
+WoodenMattock: {
+	DisplayName: Wooden Mattock
+	Tooltip: '''"A dinky wooden mattock"'''
+}
+
+WoodenDagger: {
+	DisplayName: Wooden Dagger
+	Tooltip: '''"A dinky wooden dagger"'''
 }

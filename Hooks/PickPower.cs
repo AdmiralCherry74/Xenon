@@ -20,7 +20,11 @@ internal class PickPower : ModHook
 	{
 		if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges) return orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
 		int num = orig.Invoke(self, x, y, pickPower, hitBufferIndex, tileTarget);
-		if ((tileTarget.TileType == TileID.Silver || tileTarget.TileType == TileID.Tungsten || tileTarget.TileType == ModContent.TileType<IndiumOre>()) && pickPower < 40)
+        if ((tileTarget.TileType == TileID.Iron || tileTarget.TileType == TileID.Lead || tileTarget.TileType == ModContent.TileType<CinnabarOre>()) && pickPower < 35)
+        {
+            num = 0;
+        }
+        if ((tileTarget.TileType == TileID.Silver || tileTarget.TileType == TileID.Tungsten || tileTarget.TileType == ModContent.TileType<IndiumOre>()) && pickPower < 40)
 		{
 			num = 0;
 		}
@@ -30,7 +34,11 @@ internal class PickPower : ModHook
 		}
 		if (ModLoader.TryGetMod("Avalon", out Mod avalon))
 		{
-			if (tileTarget.TileType == avalon.Find<ModTile>("ZincOre").Type && pickPower < 40)
+            if (tileTarget.TileType == avalon.Find<ModTile>("NickelOre").Type && pickPower < 35)
+            {
+                num = 0;
+            }
+            if (tileTarget.TileType == avalon.Find<ModTile>("ZincOre").Type && pickPower < 40)
 			{
 				num = 0;
 			}
@@ -39,7 +47,7 @@ internal class PickPower : ModHook
 				num = 0;
 			}
 		}
-		return num;
+        return num;
 	}
 }
 internal class PickPower2 : ModHook

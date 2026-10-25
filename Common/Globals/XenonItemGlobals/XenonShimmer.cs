@@ -10,7 +10,9 @@ using Xenon.Content.Items.Placeable.Wall.BuildingWalls.Stone.Catacombs;
 using Xenon.Content.Items.Placeable.Wall.Natural.Mountain;
 using Xenon.Content.Items.Placeable.Wall.Natural.Ores;
 using Xenon.Content.Items.Tools.ConversionTools.Powders;
+using Xenon.Content.Items.Weapons.Magic.SpellBooks;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
+using Xenon.Content.Items.Weapons.Ranged.Flamethrowers;
 
 namespace Xenon.Common.Globals.XenonItemGlobals;
 
@@ -116,6 +118,12 @@ public class XenonShimmer : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CharcoalCatacombTileWallItem>()] = ModContent.ItemType<CharcoalCatacombTileWallUnsafeItem>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CharcoalCatacombTileWallUnsafeItem>()] = ModContent.ItemType<CharcoalCatacombTileWallItem>();
         #endregion
+
+        ItemID.Sets.ShimmerTransformToItem[ItemID.Boomstick] = ModContent.ItemType<Drizzlethrower>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Drizzlethrower>()] = ItemID.Boomstick;
+
+        ItemID.Sets.ShimmerTransformToItem[ItemID.ThornWhip] = ModContent.ItemType<ThornStorm>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<ThornStorm>()] = ItemID.ThornWhip;
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.SlimeGun] = ItemID.WaterGun;
         ItemID.Sets.ShimmerTransformToItem[ItemID.WaterGun] = ItemID.SlimeGun; //change to shimmer gun when tmod is 1.4.5

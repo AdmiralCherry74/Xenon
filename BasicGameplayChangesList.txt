@@ -5,10 +5,13 @@ If your here, your most likely wondering about the basic gameplay changes that X
 This file contains a detailed list of every basic changes that Xenon implements (so far) that can be changed with the flip of a config of the same names switch.
 Anyway, here is everything!
 
+Wooden Starting Tools:
+This change makes it so you start with Wooden tools instead of copper tools.
+this was mainly introduced as a way to make your copper tier of ore somewhat relevant to your progression.
+Wooden tools cannot mine iron tier or above, so youll need to make a copper tier pick
 
-
-Iron and Silver and Gold pick power requirements:
-This change basically makes it so you need to make Iron-tiered pickaxes to mine Silver-tiered ores, and Silver-tiered pickaxes to mine Gold-tier ores.
+Copper, Iron, Silver and Gold pick power requirements:
+Going in hand with the above, This change basically makes it so you need to make Iron-tiered pickaxes to mine Silver-tiered ores, and Silver-tiered pickaxes to mine Gold-tier ores.
 Bombs still affect them all the same, so you could in theory just use bombs to skip the earlier ores.
 However i'm ok with this because Evil-tiered ores can be blown up normally in vanilla, plus it would be strange to make the normal ores resistant to bombs.
 

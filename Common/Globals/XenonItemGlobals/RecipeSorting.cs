@@ -741,6 +741,21 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             #region Ore and Wood based gear, tools, weapons and armor recipes
 
+            Recipe.Create(ModContent.ItemType<WoodenMattock>())
+                .AddIngredient(ItemID.Wood, 3)
+                .SortBeforeFirstRecipesOf(ItemID.WoodenHammer)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<WoodenHatchet>())
+                .AddIngredient(ItemID.Wood, 3)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<WoodenMattock>())
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<WoodenDagger>())
+                .AddIngredient(ItemID.Wood, 4)
+                .SortAfterFirstRecipesOf(ItemID.WoodenSword)
+                .Register();
+
             #region Vanilla Ore based Recipes
 
             #region Hoes
@@ -2351,19 +2366,5 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #endregion
         }
 
-    }
-
-    public class ShimmerRecipes : GlobalItem
-    {   
-        public override void SetDefaults(Item entity)
-        {
-            ItemID.Sets.ShimmerTransformToItem[ItemID.Boomstick] = ModContent.ItemType<Drizzlethrower>();
-            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Drizzlethrower>()] = ItemID.Boomstick;
-
-            ItemID.Sets.ShimmerTransformToItem[ItemID.ThornWhip] = ModContent.ItemType<ThornStorm>();
-            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<ThornStorm>()] = ItemID.ThornWhip;
-        }
-
-        
     }
 }

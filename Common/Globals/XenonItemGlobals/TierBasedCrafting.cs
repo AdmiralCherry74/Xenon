@@ -848,6 +848,35 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
                 #region tools
                 #region pickaxes
+                #region copper tier pickaxes
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                {
+                    Recipe CopperPickaxeCraft = Main.recipe[i];
+                    if (CopperPickaxeCraft.HasIngredient(ItemID.CopperBar) && CopperPickaxeCraft.HasTile(TileID.Anvils) && CopperPickaxeCraft.HasResult(ItemID.CopperPickaxe))
+                    {
+                        CopperPickaxeCraft.AddIngredient(ModContent.ItemType<WoodenMattock>());
+                        CopperPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Copper Pickaxe Recipe
+
+                    Recipe TinPickaxeCraft = Main.recipe[i];
+                    if (TinPickaxeCraft.HasIngredient(ItemID.TinBar) && TinPickaxeCraft.HasTile(TileID.Anvils) && TinPickaxeCraft.HasResult(ItemID.TinPickaxe))
+                    {
+                        TinPickaxeCraft.AddIngredient(ModContent.ItemType<WoodenMattock>());
+                        TinPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Tin Pickaxe Recipe
+
+                    Recipe AluminumPickaxeCraft = Main.recipe[i];
+                    if (AluminumPickaxeCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumPickaxeCraft.HasTile(TileID.Anvils) && AluminumPickaxeCraft.HasResult(ModContent.ItemType<AluminumPickaxe>()))
+                    {
+                        AluminumPickaxeCraft.AddIngredient(ModContent.ItemType<WoodenMattock>());
+                        AluminumPickaxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Aluminum Pickaxe Recipe
+                }
+                #endregion
+
                 #region iron tier pickaxes
                 Recipe IronPickaxeCraft = Main.recipe[i];
                 if (IronPickaxeCraft.HasIngredient(ItemID.IronBar) && IronPickaxeCraft.HasTile(TileID.Anvils) && IronPickaxeCraft.HasResult(ItemID.IronPickaxe))
@@ -986,6 +1015,35 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 #endregion
 
                 #region axes
+                #region copper tier axes
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                {
+                    Recipe CopperAxeCraft = Main.recipe[i];
+                    if (CopperAxeCraft.HasIngredient(ItemID.CopperBar) && CopperAxeCraft.HasTile(TileID.Anvils) && CopperAxeCraft.HasResult(ItemID.CopperAxe))
+                    {
+                        CopperAxeCraft.AddIngredient(ModContent.ItemType<WoodenHatchet>());
+                        CopperAxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Copper Axe Recipe
+
+                    Recipe TinAxeCraft = Main.recipe[i];
+                    if (TinAxeCraft.HasIngredient(ItemID.LeadBar) && TinAxeCraft.HasTile(TileID.Anvils) && TinAxeCraft.HasResult(ItemID.TinAxe))
+                    {
+                        TinAxeCraft.AddIngredient(ModContent.ItemType<WoodenHatchet>());
+                        TinAxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Tin Axe Recipe
+
+                    Recipe AluminumAxeCraft = Main.recipe[i];
+                    if (AluminumAxeCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumAxeCraft.HasTile(TileID.Anvils) && AluminumAxeCraft.HasResult(ModContent.ItemType<AluminumAxe>()))
+                    {
+                        AluminumAxeCraft.AddIngredient(ModContent.ItemType<WoodenHatchet>());
+                        AluminumAxeCraft.RemoveIngredient(ItemID.Wood);
+                    }
+                    //Aluminum Axe Recipe
+                }
+                #endregion
+
                 #region iron tier axes
                 Recipe IronAxeCraft = Main.recipe[i];
                 if (IronAxeCraft.HasIngredient(ItemID.IronBar) && IronAxeCraft.HasTile(TileID.Anvils) && IronAxeCraft.HasResult(ItemID.IronAxe))
@@ -1563,6 +1621,32 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 #endregion
 
                 #region shortsword
+                #region copper tier shortsword
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                {
+                    Recipe CopperShortswordCraft = Main.recipe[i];
+                    if (CopperShortswordCraft.HasIngredient(ItemID.CopperBar) && CopperShortswordCraft.HasTile(TileID.Anvils) && CopperShortswordCraft.HasResult(ItemID.CopperShortsword))
+                    {
+                        CopperShortswordCraft.AddIngredient(ModContent.ItemType<WoodenDagger>());
+                    }
+                    //Copper Shortsword Recipe
+
+                    Recipe TinShortswordCraft = Main.recipe[i];
+                    if (TinShortswordCraft.HasIngredient(ItemID.TinBar) && TinShortswordCraft.HasTile(TileID.Anvils) && TinShortswordCraft.HasResult(ItemID.TinShortsword))
+                    {
+                        TinShortswordCraft.AddIngredient(ModContent.ItemType<WoodenDagger>());
+                    }
+                    //Tin Shortsword Recipe
+
+                    Recipe AluminumShortswordCraft = Main.recipe[i];
+                    if (AluminumShortswordCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumShortswordCraft.HasTile(TileID.Anvils) && AluminumShortswordCraft.HasResult(ModContent.ItemType<AluminumShortsword>()))
+                    {
+                        AluminumShortswordCraft.AddIngredient(ModContent.ItemType<WoodenDagger>());
+                    }
+                    //Aluminum Shortsword Recipe
+                }
+                #endregion
+
                 #region iron tier shortsword
                 Recipe IronShortswordCraft = Main.recipe[i];
                 if (IronShortswordCraft.HasIngredient(ItemID.IronBar) && IronShortswordCraft.HasTile(TileID.Anvils) && IronShortswordCraft.HasResult(ItemID.IronShortsword))

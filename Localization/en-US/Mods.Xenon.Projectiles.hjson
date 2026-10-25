@@ -86,8 +86,8 @@ GarnetHookProj.DisplayName: Garnet Hook
 LapisHookProj.DisplayName: Lapis Hook
 StomachBubble.DisplayName: Stomach Bubble
 DimitriTreatmentProj.DisplayName: Dimitri Treatment
-MarineSandBallFallingProjectile.DisplayName: Marine Sand Ball Falling Projectile
-MarineSandSandgunProjectile.DisplayName: Marine Sand Sandgun Projectile
+MarineSandBallFallingProjectile.DisplayName: Marine Sand Ball
+MarineSandSandgunProjectile.DisplayName: Marine Sand
 GrubnadeProj.DisplayName: Grubnade
 FireBombProj.DisplayName: Fire Bomb
 ImpactBombProj.DisplayName: Impact Bomb
@@ -120,5 +120,6 @@ SwingTest.DisplayName: Swing Test
 BileProjTest.DisplayName: Blade Barf
 IndiumBulletProj.DisplayName: Indium Bullet
 NapalmBulletProj.DisplayName: Napalm Bullet
-ImpactGlowstickProj.DisplayName: Impact Glowstick Proj
-GourdarangProjectile.DisplayName: Gourdarang Projectile
+ImpactGlowstickProj.DisplayName: Impact Glowstick
+GourdarangProjectile.DisplayName: Gourdarang
+WoodenDaggerProj.DisplayName: Wooden Dagger

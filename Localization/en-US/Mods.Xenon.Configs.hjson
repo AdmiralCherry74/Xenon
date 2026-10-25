@@ -46,7 +46,7 @@ XenonConfig: {
 		Label: Basic Progression Changes
 		Tooltip:
 			'''
-			Houses all of Xenon's basic gameplay changes. Like drills being reworked to be extremely fast, recipes being changed up and small progression changes
+			Houses all of Xenon's basic gameplay changes. Like Wooden Tools replacing the starting copper tools, Pre-Hardmode Ores following pickaxe progression, drills being reworked to be extremely fast, recipes being changed up and small progression changes
 			If you would like to see every change made, check Xenon's github and find the "BasicProgressionChangesList.txt" file
 			Disable this if you want a more vanilla playthrough
 			'''
