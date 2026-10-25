@@ -20,7 +20,7 @@ VeinPiercer: {
 
 RhyoliteBlock: {
 	DisplayName: Rhyolite Block
-	Tooltip: Rhyolite is an igneous stone formed from the lava of the lower Caverns!
+	Tooltip: ""
 }
 
 RhyoliteWall: {
@@ -30,7 +30,7 @@ RhyoliteWall: {
 
 WoolBlock: {
 	DisplayName: Wool
-	Tooltip: A softer tile weaved from cobwebs
+	Tooltip: Paint this different colours!
 }
 
 Pouch: {
@@ -2855,7 +2855,7 @@ BakersHandbookJungle1: {
 
 BakersHandbookPurity1: {
 	DisplayName: Bakers Handbook for beginners
-	Tooltip: Allows for certain ingrediants to be used in food
+	Tooltip: Allows crafting of various simple foods
 }
 
 BakersHandbookSnow1: {
@@ -2866,56 +2866,6 @@ BakersHandbookSnow1: {
 BakersHandbookUnderworld1: {
 	DisplayName: Bakers Handook for spicy meals v1
 	Tooltip: Allows food from the underworld to be used
-}
-
-Beetroot: {
-	DisplayName: Beetroot
-	Tooltip: ""
-}
-
-Broccoli: {
-	DisplayName: Broccoli
-	Tooltip: ""
-}
-
-Cabbage: {
-	DisplayName: Cabbage
-	Tooltip: ""
-}
-
-Corn: {
-	DisplayName: Corn
-	Tooltip: ""
-}
-
-Garlic: {
-	DisplayName: Garlic
-	Tooltip: ""
-}
-
-Kohlrabi: {
-	DisplayName: Kohlrabi
-	Tooltip: ""
-}
-
-Leek: {
-	DisplayName: Leek
-	Tooltip: ""
-}
-
-Potato: {
-	DisplayName: Potato
-	Tooltip: ""
-}
-
-Rhubarb: {
-	DisplayName: Rhubarb
-	Tooltip: ""
-}
-
-Spinach: {
-	DisplayName: Spinach
-	Tooltip: ""
 }
 
 ArigrowthItem: {
@@ -3118,7 +3068,7 @@ SoulofTwilight: {
 
 ClothBlockItem: {
 	DisplayName: Wool Block
-	Tooltip: Colourless, but can be painted for differing colours
+	Tooltip: Colourless wool that can be painted for differing colours
 }
 
 JadeHook: {
@@ -4234,4 +4184,137 @@ TungstenOreWallUnsafeItem: {
 Gourdarang: {
 	DisplayName: Gourdarang
 	Tooltip: "'Oh My Gourd...'"
+}
+
+AluminumGrapefruit: {
+	DisplayName: Aluminum Grapefruit
+	Tooltip:
+		'''
+		Eating this increases life extremely lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+CopperGrapefruit: {
+	DisplayName: Copper Grapefruit
+	Tooltip:
+		'''
+		Eating this increases defense extremely lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+TinGrapefruit: {
+	DisplayName: Tin Grapefruit
+	Tooltip:
+		'''
+		Eating this increases endurance extremely lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+CinnabarLemon: {
+	DisplayName: Cinnabar Lemon
+	Tooltip:
+		'''
+		Eating this increases life very lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+IronLemon: {
+	DisplayName: Iron Lemon
+	Tooltip:
+		'''
+		Eating this increases defense very lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+LeadLemon: {
+	DisplayName: Lead Lemon
+	Tooltip:
+		'''
+		Eating this increases endurance very lightly
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+FluoriteApple: {
+	DisplayName: Fluorite Apple
+	Tooltip:
+		'''
+		Eating this increases life and lightly increases knockback velocity
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+GoldApple: {
+	DisplayName: Gold Apple
+	Tooltip:
+		'''
+		Eating this increases defense and lightly increases movement speed
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+IndiumApricot: {
+	DisplayName: Indium Apricot
+	Tooltip:
+		'''
+		Eating this increases life lightly and very lightly increases knockback velocity
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+PlatinumApple: {
+	DisplayName: Platinum Apple
+	Tooltip:
+		'''
+		Eating this increases endurance and lightly increases life regeneration
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+SilverApricot: {
+	DisplayName: Silver Apricot
+	Tooltip:
+		'''
+		Eating this increases defense lightly and very lightly increases movement speed
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+TungstenApricot: {
+	DisplayName: Tungsten Apricot
+	Tooltip:
+		'''
+		Eating this increases endurance lightly and very lightly increases life regeneration
+		Eating this with other Ore fruits will make you nausous
+		'''
+}
+
+TachyliteBlock: {
+	DisplayName: Tachylite Block
+	Tooltip: ""
+}
+
+WorldgenHelperLargeGeode: {
+	DisplayName: Worldgen Helper Large Geode
+	Tooltip: ""
+}
+
+ChalkBlockItem: {
+	DisplayName: Chalk Block
+	Tooltip: Colourless stone that can be painted for differing colours
+}
+
+Bilimbi: {
+	DisplayName: Bilimbi
+	Tooltip: ""
+}
+
+CorrosionWaterFountainItem: {
+	DisplayName: Corrosion Water Fountain Item
+	Tooltip: ""
 }

@@ -8,13 +8,13 @@ using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
+using Terraria.IO;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Xenon.Common.Data;
 using Xenon.Common.Systems;
-using Xenon.Content.Biomes;
 using Xenon.Content.Emoticons;
 using Xenon.Content.Items.Consumables.BakersHandbooks;
 
@@ -24,7 +24,7 @@ namespace Xenon.Content.NPCs.TownNPCs
     public class Baker : ModNPC
     {
         public const string ShopName = "Shop";
-        public int NumberOfTimesTalkedTo = 0;
+        public bool HaveWeTalkedBefore = false;
         //private static int ShimmerHeadIndex;
         private static Profiles.StackedNPCProfile NPCProfile;
 
@@ -74,7 +74,7 @@ namespace Xenon.Content.NPCs.TownNPCs
                 .SetNPCAffection(NPCID.Princess, AffectionLevel.Like)
                 .SetNPCAffection(NPCID.Nurse, AffectionLevel.Dislike)
                 .SetNPCAffection(NPCID.ArmsDealer, AffectionLevel.Hate);
-                
+
 
             NPCProfile = new Profiles.StackedNPCProfile(
                 new Profiles.DefaultNPCProfile(Texture, NPCHeadLoader.GetHeadSlot(HeadTexture), Texture + "_Party")
@@ -112,7 +112,6 @@ namespace Xenon.Content.NPCs.TownNPCs
                     new FlavorTextBestiaryInfoElement("Mods.Xenon.Bestiary.Baker")
             ]);
         }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             int num = NPC.life > 0 ? 1 : 5;
@@ -217,97 +216,101 @@ namespace Xenon.Content.NPCs.TownNPCs
         public override string GetChat()
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
-
-            NumberOfTimesTalkedTo++;
-            #region OtherNPC's
-            int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
-            int armsDealer = NPC.FindFirstNPC(NPCID.ArmsDealer);
-            int nurse = NPC.FindFirstNPC(NPCID.Nurse);
-            int stylist = NPC.FindFirstNPC(NPCID.Stylist);
-            int angler = NPC.FindFirstNPC(NPCID.Angler);
-            int princess = NPC.FindFirstNPC(NPCID.Princess);
-            int dryad = NPC.FindFirstNPC(NPCID.Dryad);
-            int demolitionist = NPC.FindFirstNPC(NPCID.Demolitionist);
-            if (partyGirl >= 0 && Main.rand.NextBool(4))
+            if (!HaveWeTalkedBefore)
             {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge1", Main.npc[partyGirl].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge2", Main.npc[partyGirl].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge3", Main.npc[partyGirl].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge4", Main.npc[partyGirl].GivenName));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.FirstTimeTalking"));
+                Item.NewItem(NPC.GetSource_GiftOrReward(), NPC.Center, ModContent.ItemType<BakersHandbookPurity1>());
+                HaveWeTalkedBefore = true;
             }
-            if (armsDealer >= 0 && Main.rand.NextBool(5))
+            else
             {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge1", Main.npc[armsDealer].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge2", Main.npc[armsDealer].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge3", Main.npc[armsDealer].GivenName));
-            }
-            if (nurse >= 0 && Main.rand.NextBool(6))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge1", Main.npc[nurse].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge2", Main.npc[nurse].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge3", Main.npc[nurse].GivenName));
-            }
-            if (stylist >= 0 && Main.rand.NextBool(7))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StylistDialouge1", Main.npc[stylist].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StylistDialouge2", Main.npc[stylist].GivenName));
-            }
-            if (angler >= 0 && Main.rand.NextBool(8))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.AnglerDialouge", Main.npc[angler].GivenName));
-            }
-            if (princess >= 0 && Main.rand.NextBool(9))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PrincessDialouge", Main.npc[princess].GivenName));
-            }
-            if (dryad >= 0 && Main.rand.NextBool(10))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.DryadDialouge", Main.npc[dryad].GivenName));
-            }
-            if (armsDealer >= 0 && partyGirl >= 0 && Main.rand.NextBool(11))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlArmsDealerDialouge1", Main.npc[partyGirl].GivenName, Main.npc[armsDealer].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlArmsDealerDialouge2", Main.npc[partyGirl].GivenName, Main.npc[armsDealer].GivenName));
-            }
-            if (armsDealer >= 0 && nurse >= 0 && Main.rand.NextBool(12))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerNurseDialouge1", Main.npc[armsDealer].GivenName, Main.npc[nurse].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerNurseDialouge2", Main.npc[armsDealer].GivenName, Main.npc[nurse].GivenName));
-            }
-            if (armsDealer >= 0 && demolitionist >= 0 && Main.rand.NextBool(13))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDemolitionistDialouge1", Main.npc[armsDealer].GivenName, Main.npc[demolitionist].GivenName));
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDemolitionistDialouge2", Main.npc[armsDealer].GivenName, Main.npc[demolitionist].GivenName));
-            }
-            #endregion
-            #region Events
-            if (Main.bloodMoon)
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge1"), 10);
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge2"), 10);
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge3"), 10);
-            }
-            if (Main.bloodMoon && partyGirl >= 0 && Main.rand.NextBool(4))
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge4", Main.npc[partyGirl].GivenName));
-            }
-            if (!Main.dayTime)
-            {
-                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NightDialouge"), 1.25);
-            }
+                #region OtherNPC's
+                int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
+                int armsDealer = NPC.FindFirstNPC(NPCID.ArmsDealer);
+                int nurse = NPC.FindFirstNPC(NPCID.Nurse);
+                int stylist = NPC.FindFirstNPC(NPCID.Stylist);
+                int angler = NPC.FindFirstNPC(NPCID.Angler);
+                int princess = NPC.FindFirstNPC(NPCID.Princess);
+                int dryad = NPC.FindFirstNPC(NPCID.Dryad);
+                int demolitionist = NPC.FindFirstNPC(NPCID.Demolitionist);
+                if (partyGirl >= 0 && Main.rand.NextBool(4))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge1", Main.npc[partyGirl].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge2", Main.npc[partyGirl].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge3", Main.npc[partyGirl].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlDialouge4", Main.npc[partyGirl].GivenName));
+                }
+                if (armsDealer >= 0 && Main.rand.NextBool(5))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge1", Main.npc[armsDealer].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge2", Main.npc[armsDealer].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDialouge3", Main.npc[armsDealer].GivenName));
+                }
+                if (nurse >= 0 && Main.rand.NextBool(6))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge1", Main.npc[nurse].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge2", Main.npc[nurse].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NurseDialouge3", Main.npc[nurse].GivenName));
+                }
+                if (stylist >= 0 && Main.rand.NextBool(7))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StylistDialouge1", Main.npc[stylist].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StylistDialouge2", Main.npc[stylist].GivenName));
+                }
+                if (angler >= 0 && Main.rand.NextBool(8))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.AnglerDialouge", Main.npc[angler].GivenName));
+                }
+                if (princess >= 0 && Main.rand.NextBool(9))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PrincessDialouge", Main.npc[princess].GivenName));
+                }
+                if (dryad >= 0 && Main.rand.NextBool(10))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.DryadDialouge", Main.npc[dryad].GivenName));
+                }
+                if (armsDealer >= 0 && partyGirl >= 0 && Main.rand.NextBool(11))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlArmsDealerDialouge1", Main.npc[partyGirl].GivenName, Main.npc[armsDealer].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.PartyGirlArmsDealerDialouge2", Main.npc[partyGirl].GivenName, Main.npc[armsDealer].GivenName));
+                }
+                if (armsDealer >= 0 && nurse >= 0 && Main.rand.NextBool(12))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerNurseDialouge1", Main.npc[armsDealer].GivenName, Main.npc[nurse].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerNurseDialouge2", Main.npc[armsDealer].GivenName, Main.npc[nurse].GivenName));
+                }
+                if (armsDealer >= 0 && demolitionist >= 0 && Main.rand.NextBool(13))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDemolitionistDialouge1", Main.npc[armsDealer].GivenName, Main.npc[demolitionist].GivenName));
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.ArmsDealerDemolitionistDialouge2", Main.npc[armsDealer].GivenName, Main.npc[demolitionist].GivenName));
+                }
+                #endregion
+                #region Events
+                if (Main.bloodMoon)
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge1"), 10);
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge2"), 10);
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge3"), 10);
+                }
+                if (Main.bloodMoon && partyGirl >= 0 && Main.rand.NextBool(4))
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.BloodMoonDialouge4", Main.npc[partyGirl].GivenName));
+                }
+                if (!Main.dayTime)
+                {
+                    chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.NightDialouge"), 1.25);
+                }
                 #endregion
                 // These are things that the NPC has a chance of telling you when you talk to it.
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge1"));
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge2"));
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge3"));
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge4"));
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge5"));
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.CommonDialouge"), 5.0);
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.UncommonDialouge1"), 0.5);
-            chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.UncommonDialouge2"), 0.5);
-
-
-
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge1"));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge2"));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge3"));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge4"));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.StandardDialouge5"));
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.CommonDialouge"), 5.0);
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.UncommonDialouge1"), 0.5);
+                chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.UncommonDialouge2"), 0.5);
+            }
             string chosenChat = chat; // chat is implicitly cast to a string. This is where the random choice is made.
             return chosenChat;
         }
@@ -356,7 +359,6 @@ namespace Xenon.Content.NPCs.TownNPCs
             #endregion
             npcShop.Register(); // Name of this shop tab
         }
-
 
         public override void ModifyActiveShop(string shopName, Item[] items)
         {
@@ -431,26 +433,12 @@ namespace Xenon.Content.NPCs.TownNPCs
         }
         public override void LoadData(TagCompound tag)
         {
-            NumberOfTimesTalkedTo = tag.GetInt("numberOfTimesTalkedTo");
+            HaveWeTalkedBefore = tag.GetBool("HaveWeTalkedBeforeTagBaker");
         }
 
         public override void SaveData(TagCompound tag)
         {
-            tag["numberOfTimesTalkedTo"] = NumberOfTimesTalkedTo;
+            tag["HaveWeTalkedBeforeTag"] = HaveWeTalkedBefore;
         }
-        //public override void AI()
-        //{
-        //    if (Main.netMode != NetmodeID.MultiplayerClient)
-        //    {
-        //        foreach (Player player in Main.ActivePlayers)
-        //        {
-        //            if (player.active && player.talkNPC == NPC.whoAmI && NumberOfTimesTalkedTo < 0)
-        //            {
-        //                player.QuickSpawnItem((IEntitySource)NPC, ModContent.ItemType<BakersHandbookPurity1>(), 1);
-        //            }
-        //        }
-        //    }
-        //    base.AI();
-        //}
     }
 }

@@ -19,7 +19,7 @@ public class BakersHandbookPurity1 : ModItem
         Item.useStyle = ItemUseStyleID.HoldUp;
         Item.useTime = 15;
         Item.useAnimation = 15;
-        Item.UseSound = SoundID.Item1;
+        Item.UseSound = SoundID.ResearchComplete;
         Item.maxStack = 9999;
     }
     public override bool? UseItem(Player player)

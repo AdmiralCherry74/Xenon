@@ -21,7 +21,6 @@ namespace Xenon.Common.Globals.XenonPlayerGlobals;
 public class XenonPlayer : ModPlayer
 {
     private int gemCount;
-
     public bool FossilBlessing;
     public bool FossilBlessingActive;
     public Vector2[] playerOldVelocity = new Vector2[3];
@@ -30,6 +29,8 @@ public class XenonPlayer : ModPlayer
     public bool HotDamageResistPotion;
     public bool KnockbackBoostCaustic;
     public bool KnockbackBoostBattleaxe;
+    public bool KnockbackBoostIndiumApricot;
+    public bool KnockbackBoostFluoriteApple;
     public bool AmIStickingToBlock;
     public bool Boomed;
     public bool BiomePlatform;
@@ -44,6 +45,8 @@ public class XenonPlayer : ModPlayer
         HotDamageResistPotion = false;
         KnockbackBoostCaustic = false;
         KnockbackBoostBattleaxe = false;
+        KnockbackBoostIndiumApricot = false;
+        KnockbackBoostFluoriteApple = false;
         AmIStickingToBlock = false;
         Boomed = false;
         BiomePlatform = false;
@@ -145,9 +148,19 @@ public class XenonPlayer : ModPlayer
         {
             modifiers.Knockback += 1f;
         }
+
         if (KnockbackBoostBattleaxe)
         {
             modifiers.Knockback += 0.5f;
+        }
+
+        if (KnockbackBoostIndiumApricot)
+        {
+            modifiers.Knockback += 0.03f;
+        }
+        if (KnockbackBoostFluoriteApple)
+        {
+            modifiers.Knockback += 0.04f;
         }
     }
     public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
@@ -157,9 +170,19 @@ public class XenonPlayer : ModPlayer
         {
             modifiers.Knockback += 1f;
         }
+
         if (KnockbackBoostBattleaxe)
         {
             modifiers.Knockback += 0.5f;
+        }
+
+        if (KnockbackBoostIndiumApricot)
+        {
+            modifiers.Knockback += 0.03f;
+        }
+        if (KnockbackBoostFluoriteApple)
+        {
+            modifiers.Knockback += 0.04f;
         }
     }
     public override void PreUpdate()

@@ -27,5 +27,9 @@ namespace Xenon.Common.Data
             ProjectileID.TorchGod);
         #endregion
         #endregion
+
+        public static readonly bool[] BossWeaknessProjs = ProjectileID.Sets.Factory.CreateBoolSet(
+
+        );
     }
 }

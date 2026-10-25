@@ -1,12 +1,14 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Accessories.Shield;
 using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Armor.PreHardmode.GemRobes;
 using Xenon.Content.Items.Armor.PreHardmode.Metal;
 using Xenon.Content.Items.Armor.Vanity.OreCrowns;
+using Xenon.Content.Items.Consumables.NomNoms.OreFood;
 using Xenon.Content.Items.Materials.BarsGems;
 using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
@@ -990,6 +992,72 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .Register();
             #endregion
 
+            #region Fruits
+            Recipe.Create(ModContent.ItemType<CopperGrapefruit>())
+                .AddIngredient(ItemID.CopperBar, 5)
+                .AddIngredient(ItemID.Grapefruit)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.CopperGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TinGrapefruit>())
+                .AddIngredient(ItemID.TinBar, 5)
+                .AddIngredient(ItemID.Grapefruit)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.TinGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<IronLemon>())
+                .AddIngredient(ItemID.IronBar, 5)
+                .AddIngredient(ItemID.Lemon)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.IronGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<LeadLemon>())
+                .AddIngredient(ItemID.LeadBar, 5)
+                .AddIngredient(ItemID.Lemon)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.LeadGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<SilverApricot>())
+                .AddIngredient(ItemID.SilverBar, 5)
+                .AddIngredient(ItemID.Apricot)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.SilverGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<TungstenApricot>())
+                .AddIngredient(ItemID.TungstenBar, 5)
+                .AddIngredient(ItemID.Apricot)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.TungstenGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<GoldApple>())
+                .AddIngredient(ItemID.GoldBar, 5)
+                .AddIngredient(ItemID.Apple)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.GoldGreaves)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<PlatinumApple>())
+                .AddIngredient(ItemID.PlatinumBar, 5)
+                .AddIngredient(ItemID.Apple)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ItemID.PlatinumGreaves)
+                .Register();
+            #endregion
+
             #region Chandeliers, Candles and Candelabras
             //Copper
             Recipe.Create(ModContent.ItemType<AmethystChandelier>())
@@ -1440,6 +1508,15 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumChainmail>())
                 .Register();
 
+            //Grapefruit
+            Recipe.Create(ModContent.ItemType<AluminumGrapefruit>())
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 5)
+                .AddIngredient(ItemID.Grapefruit)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumGreaves>())
+                .Register();
+
             //Watch
             Recipe.Create(ModContent.ItemType<AluminumWatch>())
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 10)
@@ -1447,7 +1524,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Tables)
                 .AddTile(TileID.Chairs)
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
-                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumGreaves>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumGrapefruit>())
                 .Register();
 
             //Crown
@@ -1636,6 +1713,15 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarChainmail>())
                 .Register();
+
+            //Lemon
+            Recipe.Create(ModContent.ItemType<CinnabarLemon>())
+                .AddIngredient(ModContent.ItemType<CinnabarBar>(), 5)
+                .AddIngredient(ItemID.Lemon)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarGreaves>())
+                .Register();
             #endregion
 
             #region Indium Recipes
@@ -1742,6 +1828,15 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumChainmail>())
                 .Register();
 
+            //Apricot
+            Recipe.Create(ModContent.ItemType<IndiumApricot>())
+                .AddIngredient(ModContent.ItemType<IndiumBar>(), 5)
+                .AddIngredient(ItemID.Apricot)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumGreaves>())
+                .Register();
+
             //Watch
             Recipe.Create(ModContent.ItemType<IndiumWatch>())
                 .AddIngredient(ModContent.ItemType<IndiumBar>(), 10)
@@ -1749,7 +1844,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Tables)
                 .AddTile(TileID.Chairs)
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
-                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumGreaves>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumApricot>())
                 .Register();
 
             //Crown
@@ -1933,6 +2028,15 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteChainmail>())
                 .Register();
 
+            //Apple
+            Recipe.Create(ModContent.ItemType<FluoriteApple>())
+                .AddIngredient(ModContent.ItemType<FluoriteBar>(), 5)
+                .AddIngredient(ItemID.Apple)
+                .AddTile(TileID.CookingPots)
+                .AddCondition(new Condition("Mods.Xenon.Conditions.BakersHandbookPurityUsed", () => Main.LocalPlayer.GetModPlayer<BakersHandbooksBool>().BakersHandbookPurityUsed))
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteGreaves>())
+                .Register();
+
             //Watch
             Recipe.Create(ModContent.ItemType<FluoriteWatch>())
                 .AddIngredient(ModContent.ItemType<FluoriteBar>(), 10)
@@ -1940,7 +2044,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .AddTile(TileID.Tables)
                 .AddTile(TileID.Chairs)
                 //.AddTile(TileID.WorkBenches) for when Tmodloader updates to 1.4.5
-                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteGreaves>())
+                .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteApple>())
                 .Register();
 
             //Crown

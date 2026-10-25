@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Consumables.GlugGlugs;
 using Xenon.Content.Items.Consumables.NomNoms;
-using Xenon.Content.Items.Consumables.NomNoms.Veggies;
+using Xenon.Content.Items.Consumables.NomNoms.OreFood;
 using Xenon.Content.Items.Weapons.Magic.SplashPotions.NegativeEffects;
 using Xenon.Content.Items.Weapons.Magic.SplashPotions.PositiveEffects;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
@@ -46,21 +47,22 @@ namespace Xenon.Common.Data
         #region Modded Food
         #region Fruit
         ModContent.ItemType<Lime>(),
-        #endregion
+        ModContent.ItemType<Bilimbi>(),
 
-        #region Veggies
-        ModContent.ItemType<Beetroot>(),
-        ModContent.ItemType<Broccoli>(),
-        ModContent.ItemType<Cabbage>(),
-        ModContent.ItemType<Garlic>(),
-        ModContent.ItemType<Corn>(),
-        ModContent.ItemType<Kohlrabi>(),
-        ModContent.ItemType<Leek>(),
-        ModContent.ItemType<Potato>(),
-        ModContent.ItemType<Rhubarb>(),
-        ModContent.ItemType<Spinach>()
+        ModContent.ItemType<CopperGrapefruit>(),
+        ModContent.ItemType<AluminumGrapefruit>(),
+        ModContent.ItemType<TinGrapefruit>(),
+        ModContent.ItemType<IronLemon>(),
+        ModContent.ItemType<CinnabarLemon>(),
+        ModContent.ItemType<LeadLemon>(),
+        ModContent.ItemType<SilverApricot>(),
+        ModContent.ItemType<IndiumApricot>(),
+        ModContent.ItemType<TungstenApricot>(),
+        ModContent.ItemType<GoldApple>(),
+        ModContent.ItemType<FluoriteApple>(),
+        ModContent.ItemType<PlatinumApple>());
+
         #endregion
-        );
         #endregion
 
         public static readonly bool[] MechanicalToolReworkItemSet = ItemID.Sets.Factory.CreateBoolSet(
@@ -144,7 +146,137 @@ namespace Xenon.Common.Data
         #region Bad effects
         ModContent.ItemType<DeathforceSplashPotion>(),
         ModContent.ItemType<PoisonSplashPotion>()
+            );
         #endregion
-        );
+
+        //not sure if ill use this set later, but i made it just incase i end up doing so
+        public static readonly bool[] BuffPotions = ItemID.Sets.Factory.CreateBoolSet(
+            ItemID.AmmoReservationPotion,
+            ItemID.ArcheryPotion,
+            ItemID.BattlePotion,
+            ItemID.BiomeSightPotion,
+            ItemID.BuilderPotion,
+            ItemID.CalmingPotion,
+            ItemID.CratePotion,
+            ItemID.TrapsightPotion,
+            ItemID.EndurancePotion,
+            ItemID.FeatherfallPotion,
+            ItemID.FishingPotion,
+            ItemID.FlipperPotion,
+            ItemID.GillsPotion,
+            ItemID.GravitationPotion,
+            ItemID.HeartreachPotion,
+            ItemID.HunterPotion,
+            ItemID.InfernoPotion,
+            ItemID.InvisibilityPotion,
+            ItemID.IronskinPotion,
+            ItemID.LuckPotionLesser,
+            ItemID.LuckPotion,
+            ItemID.LuckPotionGreater,
+            ItemID.LifeforcePotion,
+            ItemID.MagicPowerPotion,
+            ItemID.ManaRegenerationPotion,
+            ItemID.MiningPotion,
+            ItemID.NightOwlPotion,
+            ItemID.ObsidianSkinPotion,
+            ItemID.RagePotion,
+            ItemID.RegenerationPotion,
+            ItemID.ShinePotion,
+            ItemID.SonarPotion,
+            ItemID.SpelunkerPotion,
+            ItemID.SummoningPotion,
+            ItemID.SwiftnessPotion,
+            ItemID.ThornsPotion,
+            ItemID.TitanPotion,
+            ItemID.WarmthPotion,
+            ItemID.WaterWalkingPotion,
+            ItemID.WrathPotion,
+            ModContent.ItemType<AngerPotion>(),
+            ModContent.ItemType<DeathforcePotion>(),
+            ModContent.ItemType<FrigerationPotion>(),
+            ModContent.ItemType<Poison>()
+            );
+
+        //for nausea
+        public static readonly bool[] FoodOrDrinkLikeConsumables = ItemID.Sets.Factory.CreateBoolSet(
+        #region Recovery
+            ItemID.Mushroom,
+            ItemID.BottledHoney,
+            ItemID.BottledWater,
+            ItemID.GreaterHealingPotion,
+            ItemID.HealingPotion,
+            ItemID.LesserHealingPotion,
+            ItemID.ManaPotion,
+            ItemID.RestorationPotion,
+            ItemID.SuperHealingPotion,
+            ItemID.SuperManaPotion,
+            ItemID.GreaterManaPotion,
+            ItemID.LesserManaPotion,
+            ItemID.Eggnog,
+            ItemID.Honeyfin,
+            ItemID.StrangeBrew,
+        #endregion
+
+        #region Food and Drinks
+            ItemID.Ale,
+            ItemID.Sake,
+        #endregion
+
+        #region Buff Potions
+            ItemID.AmmoReservationPotion,
+            ItemID.ArcheryPotion,
+            ItemID.BattlePotion,
+            ItemID.BiomeSightPotion,
+            ItemID.BuilderPotion,
+            ItemID.CalmingPotion,
+            ItemID.CratePotion,
+            ItemID.TrapsightPotion,
+            ItemID.EndurancePotion,
+            ItemID.FeatherfallPotion,
+            ItemID.FishingPotion,
+            ItemID.FlipperPotion,
+            ItemID.GillsPotion,
+            ItemID.GravitationPotion,
+            ItemID.HeartreachPotion,
+            ItemID.HunterPotion,
+            ItemID.InfernoPotion,
+            ItemID.InvisibilityPotion,
+            ItemID.IronskinPotion,
+            ItemID.LuckPotionLesser,
+            ItemID.LuckPotion,
+            ItemID.LuckPotionGreater,
+            ItemID.LifeforcePotion,
+            ItemID.MagicPowerPotion,
+            ItemID.ManaRegenerationPotion,
+            ItemID.MiningPotion,
+            ItemID.NightOwlPotion,
+            ItemID.ObsidianSkinPotion,
+            ItemID.RagePotion,
+            ItemID.RegenerationPotion,
+            ItemID.ShinePotion,
+            ItemID.SonarPotion,
+            ItemID.SpelunkerPotion,
+            ItemID.SummoningPotion,
+            ItemID.SwiftnessPotion,
+            ItemID.ThornsPotion,
+            ItemID.TitanPotion,
+            ItemID.WarmthPotion,
+            ItemID.WaterWalkingPotion,
+            ItemID.WrathPotion,
+            ModContent.ItemType<AngerPotion>(),
+            ModContent.ItemType<DeathforcePotion>(),
+            ModContent.ItemType<FrigerationPotion>(),
+            ModContent.ItemType<Poison>(),
+        #endregion
+
+        #region Other potions
+            ItemID.GenderChangePotion,
+            ItemID.PotionOfReturn,
+            ItemID.RecallPotion,
+            ItemID.TeleportationPotion,
+            ItemID.WormholePotion,
+            ItemID.RedPotion
+        #endregion
+            );
     }
 }
