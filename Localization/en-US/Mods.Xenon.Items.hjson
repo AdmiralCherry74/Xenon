@@ -4081,12 +4081,13 @@ Drizzlethrower: {
 }
 
 HookstaffOverride: {
-	DisplayName: Hookstaff
+	DisplayName: Mulch-Flavored Hookstaff
 	Tooltip:
 		'''
-		Used to poke and prod at the mycelium within the mushroom biome
-		Can only be used when standing on mushroom grass
-		Might provoke some subterranean creatures...
+		Can prod on both Mulch and Mud Mushroom Grass
+		This item only exists bc I (Emerald) couldn't
+		figure out how to properly overright the base
+		Hookstaff's function.
 		'''
 }
 
@@ -4232,8 +4233,5 @@ TungstenOreWallUnsafeItem: {
 
 Gourdarang: {
 	DisplayName: Gourdarang
-	Tooltip:
-		'''
-		'Oh My Gourd...'
-		'''
+	Tooltip: "'Oh My Gourd...'"
 }

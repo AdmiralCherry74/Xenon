@@ -33,6 +33,7 @@ using Xenon.Content.Items.Tools.GardeningHoes;
 using Xenon.Content.Items.Tools.GrapplingHooks;
 using Xenon.Content.Items.Tools.MiningPickaxes;
 using Xenon.Content.Items.Weapons.Magic.Staves;
+using Xenon.Content.Items.Weapons.Magic.SpellBooks;
 using Xenon.Content.Items.Weapons.Melee.Battleaxes;
 using Xenon.Content.Items.Weapons.Melee.Boomerangs;
 using Xenon.Content.Items.Weapons.Melee.Broadswords;
@@ -42,6 +43,7 @@ using Xenon.Content.Items.Weapons.Melee.Shortswords;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Weapons.Ranged.Bows;
 using Xenon.Content.Items.Weapons.Ranged.Crossbows;
+using Xenon.Content.Items.Weapons.Ranged.Flamethrowers;
 using Xenon.Content.Items.Weapons.Summon.Caltrops;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
@@ -2244,5 +2246,20 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             #endregion
             #endregion
         }
+
+    }
+
+    public class ShimmerRecipes : GlobalItem
+    {   
+        public override void SetDefaults(Item entity)
+        {
+            ItemID.Sets.ShimmerTransformToItem[ItemID.Boomstick] = ModContent.ItemType<Drizzlethrower>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Drizzlethrower>()] = ItemID.Boomstick;
+
+            ItemID.Sets.ShimmerTransformToItem[ItemID.ThornWhip] = ModContent.ItemType<ThornStorm>();
+            ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<ThornStorm>()] = ItemID.ThornWhip;
+        }
+
+        
     }
 }
