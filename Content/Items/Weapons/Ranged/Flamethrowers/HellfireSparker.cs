@@ -19,6 +19,7 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
             Item.useAnimation = 30;
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
+            
             Item.consumeAmmoOnFirstShotOnly = true;
 
             Item.DamageType = DamageClass.Ranged;

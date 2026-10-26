@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonItemGlobals;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Accessories.Shield;
+using Xenon.Content.Items.Ammo.Gel;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Valuables.MonsterRemains;
@@ -57,6 +58,12 @@ namespace Xenon.Common.Globals.XenonNPCGlobals
             if (npc.type == NPCID.BigCrimera)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ChimeraEye>(), 150, 1, 1));
+            }
+            if (npc.type == NPCID.KingSlime)
+            {
+                LeadingConditionRule notExpertRule = new(new Conditions.NotExpert());
+                notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<GelCanister>(), 1, 50, 100));
+                npcLoot.Add(notExpertRule);
             }
         }
     }

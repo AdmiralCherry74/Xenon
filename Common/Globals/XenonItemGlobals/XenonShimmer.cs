@@ -119,10 +119,9 @@ public class XenonShimmer : GlobalItem
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<CharcoalCatacombTileWallUnsafeItem>()] = ModContent.ItemType<CharcoalCatacombTileWallItem>();
         #endregion
 
-        /* Will be re-added once I add Scrapthrower
-        ItemID.Sets.ShimmerTransformToItem[ItemID.Boomstick] = ModContent.ItemType<Drizzlethrower>();
-        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Drizzlethrower>()] = ItemID.Boomstick;
-        */
+        ItemID.Sets.ShimmerTransformToItem[ItemID.Boomstick] = ModContent.ItemType<Scrapthrower>();
+        ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<Scrapthrower>()] = ItemID.Boomstick;
+        
 
         ItemID.Sets.ShimmerTransformToItem[ItemID.ThornWhip] = ModContent.ItemType<ThornStorm>();
         ItemID.Sets.ShimmerTransformToItem[ModContent.ItemType<ThornStorm>()] = ItemID.ThornWhip;

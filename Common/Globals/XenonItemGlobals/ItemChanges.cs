@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
@@ -104,6 +105,12 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 damage += ammo.shootSpeed;
                 damage += ammo.knockBack;
                 */            }
+        }
+
+        public override void ModifyItemLoot(Item item, ItemLoot loot)
+        {
+            if(item.type == ItemID.KingSlimeBossBag)
+            { loot.Add(ItemDropRule.Common(ModContent.ItemType<GelCanister>(), 1, 100, 200)); }
         }
     }
         

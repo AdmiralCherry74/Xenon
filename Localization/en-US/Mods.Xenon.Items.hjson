@@ -4035,6 +4035,7 @@ Drizzlethrower: {
 		'''
 		Uses gel for ammo
 		Ignores 5 points of enemy Defense
+		Fires a single flame at a time
 		'''
 	DisplayName: Firestarter
 }
@@ -4361,4 +4362,16 @@ GelCanister: {
 PinkGelCanister: {
 	Tooltip: Allows greater reach on flamethrowers
 	DisplayName: Pink Gel Canister
+}
+
+Scrapthrower: {
+	DisplayName: Scrapthrower
+	Tooltip:
+		'''
+		Uses gel for ammo
+		Ignores 7 points of enemy Defense
+		Stutters out bursts of flames
+		"Little do you know, this hunk of junk
+		sparked something among the Avians."
+		'''
 }
