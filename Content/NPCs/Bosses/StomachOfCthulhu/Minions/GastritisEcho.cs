@@ -15,9 +15,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions
     public class GastritisEcho : Gastritis
     {
         private int FollowingBoss = XenonGlobalNPC.corrosionBoss;
+
+        public override string Texture => "Xenon/Content/NPCs/CorrosionMobs/Gastritis";
         
         public override void SetStaticDefaults()
         {
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.EaterofSouls];
+            
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, new NPCID.Sets.NPCBestiaryDrawModifiers
             {
                 Hide = true

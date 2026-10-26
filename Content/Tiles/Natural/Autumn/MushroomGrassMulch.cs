@@ -17,6 +17,7 @@ public class MushroomGrassMulch : ModTile
         Main.tileBrick[Type] = true;
         Main.tileBlockLight[Type] = true;
         Main.tileMerge[Type][ModContent.TileType<Mulch>()] = true;
+        Main.tileLighted[Type] = true;
 
 
         TileID.Sets.Conversion.MergesWithDirtInASpecialWay[Type] = true;
@@ -27,6 +28,7 @@ public class MushroomGrassMulch : ModTile
         TileID.Sets.SpreadOverground[Type] = true;
         //TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
         TileID.Sets.MushroomBiome.Append(Type);
+        
 
         RegisterItemDrop(ModContent.ItemType<MulchBlock>());
     }
@@ -57,5 +59,12 @@ public class MushroomGrassMulch : ModTile
                 NetMessage.SendTileSquare(-1, i, j - 1, 3, (TileChangeType)0);
             }
         }
+    }
+
+    public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+    {
+        r = 1f - 0.7f;
+        g = 1f - 0.22f;
+        b = 1f + 0.2f;
     }
 }

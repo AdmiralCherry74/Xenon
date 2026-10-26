@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
+using Xenon.Content.Items.Ammo.Bullet;
+using Xenon.Content.Items.Ammo.Gel;
 using Xenon.Content.Tiles.Natural.Autumn;
 using Xenon.Content.Tiles.Natural.Corrosion;
 
@@ -52,7 +55,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
         }
 
-    public override bool? UseItem(Item item, Player player)
+        public override bool? UseItem(Item item, Player player)
         {
             if(seeds.Contains<int>(item.type))
             {
@@ -90,6 +93,17 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
             
             return null;
+        }
+
+        public override void PickAmmo(Item weapon, Item ammo, Player player, ref int type, ref float speed, ref StatModifier damage, ref float knockback)
+        {
+            if (weapon.useAmmo == AmmoID.Gel)
+            {
+                /*
+                damage += ammo.damage;
+                damage += ammo.shootSpeed;
+                damage += ammo.knockBack;
+                */            }
         }
     }
         

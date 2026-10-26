@@ -14,8 +14,13 @@ namespace Xenon.Content.NPCs.CorrosionMobs;
 
 public class BigGastritis : Gastritis
 {
+
+    public override string Texture => "Xenon/Content/NPCs/CorrosionMobs/Gastritis";
+
     public override void SetStaticDefaults()
     {
+        Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.EaterofSouls];
+
         NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, new NPCID.Sets.NPCBestiaryDrawModifiers
         {
             Hide = true

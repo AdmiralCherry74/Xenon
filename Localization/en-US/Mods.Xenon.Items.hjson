@@ -4031,8 +4031,12 @@ TopazChandelier: {
 }
 
 Drizzlethrower: {
-	Tooltip: ""
-	DisplayName: Drizzlethrower
+	Tooltip:
+		'''
+		Uses gel for ammo
+		Ignores 5 points of enemy Defense
+		'''
+	DisplayName: Firestarter
 }
 
 HookstaffOverride: {
@@ -4337,4 +4341,24 @@ WoodenMattock: {
 WoodenDagger: {
 	DisplayName: Wooden Dagger
 	Tooltip: '''"A dinky wooden dagger"'''
+}
+
+HellfireSparker: {
+	DisplayName: Hellfire Sparker
+	Tooltip:
+		'''
+		Uses gel for ammo
+		Ignores 7 points of enemy Defense
+		"Thats-a spicey meat-a-ball!"
+		'''
+}
+
+GelCanister: {
+	Tooltip: '''"More bang for your buck!"'''
+	DisplayName: Gel Canister
+}
+
+PinkGelCanister: {
+	Tooltip: Allows greater reach on flamethrowers
+	DisplayName: Pink Gel Canister
 }

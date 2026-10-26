@@ -1,32 +1,34 @@
 
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Items.Ammo.Gel;
 using Xenon.Content.Projectiles.Magic.SpellBookProj;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
 {
     public class Drizzlethrower : ModItem
     {
-        public int ammoConsumeTimer = 0;
         public override void SetDefaults()
         {
-            Item.width = 50;
-            Item.height = 16;
+            Item.width = 62;
+            Item.height = 20;
 
-            Item.useTime = 10;
-            Item.useAnimation = 10;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
+            
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 19;
-            Item.knockBack = 0.1f;
+            Item.damage = 20;
+            Item.ArmorPenetration = 5;
+            Item.knockBack = 0.5f;
             Item.crit = -2;
-            Item.shoot = ProjectileID.MolotovFire;
-            Item.shootSpeed = 13;
-
+            Item.shoot = ProjectileID.Flames;
+            Item.shootSpeed = 4.5f;
             Item.noMelee = true;
             Item.value = 20000;
             Item.UseSound = SoundID.Item34;
@@ -35,18 +37,27 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
     
         }
 
-        public override Vector2? HoldoutOffset() => new Vector2(-10f, 0f);
-
-        public override bool CanConsumeAmmo(Item ammo, Player player)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (ammoConsumeTimer < 5)
-            {
-                ammoConsumeTimer++;
-                return false;
-            } else { 
-                ammoConsumeTimer = 0;
-                return true; 
-            }
+            Vector2 muzzleOffset = Vector2.Normalize(velocity) * 25f;
+
+			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0)) {
+				position += muzzleOffset;
+			}
+        }
+
+        public override Vector2? HoldoutOffset() => new Vector2(5f, -2f);
+
+        // TODO: add these to global recipes
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.FlintlockPistol)
+            .AddIngredient(ModContent.ItemType<GelCanister>(), 50)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 12)
+            .AddTile(TileID.Anvils)
+            .SortAfterFirstRecipesOf(ModContent.ItemType<Drizzlethrower>())
+            .Register();
         }
     }
 }
