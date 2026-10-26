@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Biomes;
 using Xenon.Content.Items.Placeable.Banner;
 
@@ -50,22 +51,17 @@ public class JebelSlime : ModNPC
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.JebelSlime")),
         ]);
     }
-
-    public override void AI()
+    public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
+        if (SpawnHelper.Mountain(ref spawnInfo))
         {
-            return;
+            if (Main.dayTime && SpawnHelper.Surface(ref spawnInfo))
+                return 0.4f;
+            else if (SpawnHelper.Underground(ref spawnInfo))
+                return 0.6f;
         }
+        return 0;
     }
-    public override void OnKill()
-    {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
-        {
-            return;
-        }
-    }
-
     public override void HitEffect(NPC.HitInfo hit)
     {
         if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

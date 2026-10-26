@@ -1380,7 +1380,7 @@ AncientTerraBlade: {
 
 CorrosionCrate: {
 	DisplayName: Corrosion Crate
-	Tooltip: Press M2 or B to open
+	Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 }
 
 IngestaneBrick: {
@@ -4345,12 +4345,7 @@ WoodenDagger: {
 
 HellfireSparker: {
 	DisplayName: Hellfire Sparker
-	Tooltip:
-		'''
-		Uses gel for ammo
-		Ignores 7 points of enemy Defense
-		"Thats-a spicey meat-a-ball!"
-		'''
+	Tooltip: "'Oh My Gourd...'"
 }
 
 GelCanister: {

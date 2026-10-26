@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
 
@@ -16,12 +17,6 @@ namespace Xenon.Content.NPCs.CavernMobs
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = 2;
-
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
-            {
-                Velocity = 1f
-            };
-            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
 
         public override void SetDefaults()
@@ -38,9 +33,9 @@ namespace Xenon.Content.NPCs.CavernMobs
             NPC.aiStyle = NPCAIStyleID.Slime;
             AIType = NPCID.SlimeSpiked;
             AnimationType = NPCID.SlimeSpiked;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
-		}
+            Banner = NPC.type;
+            BannerItem = ModContent.ItemType<SporeSlimeBanner>();
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
@@ -51,30 +46,10 @@ namespace Xenon.Content.NPCs.CavernMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SpikedWhiteSlime")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneNormalCaverns)
-            {
-                return 0.2f;
-            }
-            return 0;
+            return spawnInfo.Player.ZonePurity && SpawnHelper.RockLayer(ref spawnInfo) ? 0.2f : 0;
         }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

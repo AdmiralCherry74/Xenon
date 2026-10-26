@@ -5,8 +5,9 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Content.Biomes.Corrosion;
+using Xenon.Common;
 using Xenon.Content.Biomes.Catacombs;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
 
@@ -51,7 +52,10 @@ namespace Xenon.Content.NPCs.CatacombMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.MoonWidow")),
             ]);
         }
-
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return SpawnHelper.Catacombs(ref spawnInfo) ? 0.1f : 0;
+        }
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

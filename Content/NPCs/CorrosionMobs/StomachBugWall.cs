@@ -50,16 +50,6 @@ namespace Xenon.Content.NPCs.CorrosionMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
             ]);
         }
-
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.InModBiome<Corrosion>() || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 && !spawnInfo.Player.InPillarZone())
-            {
-                return 0.15f;
-            }
-            return 0;
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

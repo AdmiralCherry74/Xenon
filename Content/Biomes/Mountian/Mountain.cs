@@ -16,7 +16,7 @@ public class Mountain : ModBiome
 
     public override bool IsBiomeActive(Player player)
 	{
-        return ModContent.GetInstance<BiomeTileCounts>().MountainTiles >= 1500 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().MountainTiles >= 1500;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {

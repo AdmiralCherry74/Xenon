@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.Other
@@ -16,11 +17,11 @@ namespace Xenon.Content.NPCs.Other
         {
             Main.npcFrameCount[Type] = 2;
 
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
-            {
-                Velocity = 1f
-            };
-            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
+            //NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            //{
+            //    Velocity = 1f
+            //};
+            //NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
 
         public override void SetDefaults()
@@ -49,30 +50,10 @@ namespace Xenon.Content.NPCs.Other
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SporeSlime")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneGlowshroom)
-            {
-                return 0.5f;
-            }
-            return 0;
+            return SpawnHelper.Mushroom(ref spawnInfo) ? 0.5f : 0;
         }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

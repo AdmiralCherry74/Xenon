@@ -440,17 +440,4 @@ public class XenonPlayer : ModPlayer
     {
         base.PostItemCheck();
     }
-
-    public static bool ZoneCorrosion(Player player)
-    {
-        if (
-            player.InModBiome<Corrosion>() ||
-            player.InModBiome<CorrosionUnderground>() ||
-            player.InModBiome<CorrosionIce>() ||
-            player.InModBiome<CorrosionUndergroundIce>() ||
-            player.InModBiome<CorrosionDesert>() ||
-            player.InModBiome<CorrosionCaveDesert>()
-        ) return true;
-        return false;
-    }
 }

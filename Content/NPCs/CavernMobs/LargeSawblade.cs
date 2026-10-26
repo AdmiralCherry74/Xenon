@@ -6,6 +6,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Common;
 
 namespace Xenon.Content.NPCs.CavernMobs
 {
@@ -47,13 +48,9 @@ namespace Xenon.Content.NPCs.CavernMobs
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns
             ]);
         }
-
-        public override void AI()
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
+            return NPC.downedBoss1 && SpawnHelper.RockLayer(ref spawnInfo) ? 0.05f : 0;
         }
         public override void OnSpawn(IEntitySource source)
         {
@@ -65,24 +62,12 @@ namespace Xenon.Content.NPCs.CavernMobs
                 NPC.active = false;
             }
         }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
             SoundEngine.PlaySound(SoundID.Item22);
             if (Main.rand.NextBool(3) && Main.expertMode)
             {
                 target.AddBuff(BuffID.Bleeding, 450);
-                SoundEngine.PlaySound(SoundID.Item23);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode)
-            {
-                target.AddBuff(BuffID.Bleeding, 1200);
                 SoundEngine.PlaySound(SoundID.Item23);
             }
         }

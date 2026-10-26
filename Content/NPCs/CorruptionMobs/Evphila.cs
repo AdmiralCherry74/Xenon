@@ -5,7 +5,8 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
+using Xenon.Common;
+using Xenon.Common.Systems;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.CorruptionMobs
@@ -51,32 +52,10 @@ namespace Xenon.Content.NPCs.CorruptionMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if ((spawnInfo.Player.ZoneCorrupt && spawnInfo.Player.ZoneRockLayerHeight || spawnInfo.Player.ZoneCorrupt && NPC.downedBoss2) && !spawnInfo.Player.InPillarZone())
-
-            {
-                return SpawnCondition.Corruption.Chance * 0.5f;
-            }
-            return 0f;
+            return ModContent.GetInstance<XenonBossCleared>().DownedEaterOfWorlds && SpawnHelper.Corruption(ref spawnInfo) ? 0.5f : 0;
         }
-
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

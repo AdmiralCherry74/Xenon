@@ -56,21 +56,10 @@ namespace Xenon.Content.NPCs.Other
             ]);
         }
 
-        public override void AI()
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
+            return spawnInfo.SpawnTileType == TileID.Marble ? 0.75f : 0;
         }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

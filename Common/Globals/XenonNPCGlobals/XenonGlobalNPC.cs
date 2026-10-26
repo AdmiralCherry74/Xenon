@@ -43,41 +43,35 @@ internal class XenonGlobalNPC : GlobalNPC
 
     public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
     {
-        //fuck harpy spawn rates. ts needed nerfed
-        if (!Main.hardMode && spawnInfo.Sky)
-        {
-            pool.Remove(NPCID.Harpy);
-            pool.Add(NPCID.Harpy, 0.33f);
-        }
-
-        // Removes certain monsters for now
-        pool.Remove(NPCID.GiantShelly);
-        pool.Remove(NPCID.GiantShelly2);
-
-        pool.Remove(NPCID.Salamander);
-        pool.Remove(NPCID.Salamander2);
-        pool.Remove(NPCID.Salamander3);
-        pool.Remove(NPCID.Salamander4);
-        pool.Remove(NPCID.Salamander5);
-        pool.Remove(NPCID.Salamander6);
-        pool.Remove(NPCID.Salamander7);
-        pool.Remove(NPCID.Salamander8);
-        pool.Remove(NPCID.Salamander9);
-
-        pool.Remove(NPCID.Crawdad);
-        pool.Remove(NPCID.Crawdad2);
-
-        pool.Remove(NPCID.FireImp);
-        pool.Remove(NPCID.Demon);
-        pool.Remove(NPCID.VoodooDemon);
-        pool.Remove(NPCID.BoneSerpentHead);
-
         if (spawnInfo.Player.ZoneLihzhardTemple && !NPC.downedPlantBoss)
         {
-            pool.Clear();
+            pool[0] = 0;
             pool.Add(ModContent.NPCType<TempleSentry>(), 1);
         }
+        if (Main.LocalPlayer.InPillarZone())
+            return;
+        if(SpawnHelper.Corrosion(ref spawnInfo) || SpawnHelper.Autumn(ref spawnInfo) ||(SpawnHelper.Mountain(ref spawnInfo) && Main.dayTime))
+        {
+            pool[0] = 0;
+        }
+        if(SpawnHelper.Catacombs(ref spawnInfo))
+        {
+            pool[0] = 0;
+            pool.Add(NPCID.Zombie, 1); //temporary
+            pool.Add(NPCID.PincushionZombie, 1); //temporary
+            pool.Add(NPCID.TorchZombie, 1); //temporary
+            if (Main.expertMode)
+            {
+                pool.Add(NPCID.ArmedZombie, 0.5f); //temporary
+                pool.Add(NPCID.ArmedZombiePincussion, 0.5f); //temporary
+                pool.Add(NPCID.ArmedTorchZombie, 0.5f); //temporary
+            }
+        }
+        // Vanilla spawns on the modded evil blocks will need to be added manually... eventually.
 
+
+        #region old spawn stuff just in case
+        /*
         #region Enemies spawn upon Boss Deaths
         #region Dynamic
         #region Bandit and Bandit Looters
@@ -316,21 +310,8 @@ internal class XenonGlobalNPC : GlobalNPC
         {
             pool.Clear();
         }
-        //if (Main.hardMode)
-        //{
-        //	pool.Add(ModContent.NPCType<PLACEHOLDER_1>(), 0.8f);
-        //	pool.Add(ModContent.NPCType<PLACEHOLDER_2>(), 0.7f);
-        //	if (spawnInfo.Player.ZoneRockLayerHeight)
-        //	{
-        //		pool.Add(ModContent.NPCType<PLACEHOLDER_3>(), 1f);
-        //	}
-
-        //	if (spawnInfo.Player.ZoneDesert)
-        //	{
-        //		pool.Add(ModContent.NPCType<PLACEHOLDER_4>(), 0.3f);
-        //		pool.Add(ModContent.NPCType<PLACEHOLDER_5>(), 1f);
-        //	}
-        //}
+        */
+        #endregion
     }
     public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
     {

@@ -15,7 +15,7 @@ public class Autumn : ModBiome
 
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().AutumnTiles > 140 && (player.ZoneOverworldHeight || player.ZoneDirtLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().AutumnTiles > 140;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {
@@ -42,7 +42,7 @@ public class UndergroundAutumn : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/AutumnWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().AutumnTiles >= 140 && (player.ZoneRockLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().AutumnTiles >= 140 && player.ZoneRockLayerHeight;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {

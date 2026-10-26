@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Biomes.Autumn;
+using Xenon.Common;
 
 namespace Xenon.Content.NPCs.AutumnMobs
 {
@@ -17,13 +18,6 @@ namespace Xenon.Content.NPCs.AutumnMobs
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = 2;
-
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
-            {
-               Velocity = 1f
-            };
-            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
-
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Bleeding] = true;
             NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
             NPCID.Sets.SpecificDebuffImmunity[Type][ModContent.BuffType<Sapped>()] = true;
@@ -56,23 +50,6 @@ namespace Xenon.Content.NPCs.AutumnMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SyrupSlime")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-
-        
 		public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
     	{
 			if (Main.rand.NextBool(2))
@@ -80,10 +57,9 @@ namespace Xenon.Content.NPCs.AutumnMobs
 				target.AddBuff(ModContent.BuffType<Sapped>(), 1800);
 			}
 		}
-
         public override void HitEffect(NPC.HitInfo hit)
         {
-            if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
+            if (NPC.life <= 0)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -104,6 +80,10 @@ namespace Xenon.Content.NPCs.AutumnMobs
         {
             npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 3, 6));
             npcLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 95, 1, 1));
+        }
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return SpawnHelper.Autumn(ref spawnInfo) ? 1 : 0;
         }
     }
 }

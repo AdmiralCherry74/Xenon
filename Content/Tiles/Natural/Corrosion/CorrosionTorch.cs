@@ -51,8 +51,7 @@ namespace Xenon.Content.Tiles.Natural.Corrosion
 
 		public override float GetTorchLuck(Player player)
         {
-            if (player.InModBiome<Biomes.Corrosion.Corrosion>() || player.InModBiome<Biomes.Corrosion.CorrosionIce>() ||
-				player.InModBiome<Biomes.Corrosion.CorrosionUnderground>() || player.InModBiome<Biomes.Corrosion.CorrosionUndergroundIce>())
+            if (player.InModBiome<Biomes.Corrosion.Corrosion>())
             {
                 return 1f;
             }

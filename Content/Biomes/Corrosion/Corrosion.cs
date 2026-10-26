@@ -19,7 +19,7 @@ public class Corrosion : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && (player.ZoneOverworldHeight && !player.ZoneDesert || player.ZoneDirtLayerHeight && !player.ZoneDesert);
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {
@@ -43,7 +43,7 @@ public class CorrosionDesert : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionDesertTiles >= 300 && (player.ZoneOverworldHeight && player.ZoneDesert || player.ZoneDirtLayerHeight && player.ZoneDesert);
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionDesertTiles >= 300 && player.ZoneDesert;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {
@@ -64,7 +64,7 @@ public class CorrosionIce : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && player.ZoneRockLayerHeight;
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500;
     }
 }
 public class CorrosionUnderground : ModBiome
@@ -113,18 +113,5 @@ public class CorrosionCaveDesert : ModBiome
         {
             return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
         }
-    }
-}
-public class CorrosionUndergroundIce : ModBiome
-{
-    public override string BackgroundPath => base.BackgroundPath;
-    public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
-    public override string BestiaryIcon => base.BestiaryIcon;
-    public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
-    public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
-    public override bool IsBiomeActive(Player player)
-    {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500 && player.ZoneRockLayerHeight;
     }
 }

@@ -8,6 +8,7 @@ using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Consumables.NomNoms;
 using Xenon.Content.Biomes.Rhyolite;
 using Xenon.Content.Items.Placeable.Blocks.Natural.Stone;
+using Xenon.Common;
 
 namespace Xenon.Content.NPCs.RhyoliteMobs;
 
@@ -55,11 +56,7 @@ public class RhyoliteSlimer : ModNPC
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.InModBiome<Rhyolite>() && !spawnInfo.Player.InPillarZone())
-        {
-            return 0.8f;
-        }
-        return 0f;
+        return SpawnHelper.Rhyolite(ref spawnInfo) ? 0.8f : 0;
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {

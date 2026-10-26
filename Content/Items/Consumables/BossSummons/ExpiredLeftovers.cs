@@ -29,7 +29,7 @@ public class ExpiredLeftovers : ModItem
 
     public override bool CanUseItem(Player player)
     {
-        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && XenonPlayer.ZoneCorrosion(player);
+        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && player.InModBiome<Corrosion>();
     }
 
     public override bool? UseItem(Player player)
