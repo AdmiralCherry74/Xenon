@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Avalon.Tiles.Contagion;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
@@ -6,6 +7,8 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Content.NPCs.CorrosionMobs
 {
@@ -82,38 +85,13 @@ namespace Xenon.Content.NPCs.CorrosionMobs
         }
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
-            if (!Main.expertMode && !Main.masterMode)
+            if (Main.rand.NextBool(5))
             {
-                if (Main.rand.NextBool(5))
-                {
-                    target.AddBuff(BuffID.Silenced, 420);
-                }
-                if (Main.rand.NextBool(4))
-                {
-                    target.AddBuff(BuffID.Darkness, 900);
-                }
+                target.AddBuff(BuffID.Silenced, 420);
             }
-            else if (Main.expertMode && !Main.masterMode)
+            if (Main.rand.NextBool(4))
             {
-                if (Main.rand.NextBool(5))
-                {
-                    target.AddBuff(BuffID.Silenced, 840);
-                }
-                if (Main.rand.NextBool(4))
-                {
-                    target.AddBuff(BuffID.Darkness, 1800);
-                }
-            }
-            else if (Main.masterMode)
-            {
-                if (Main.rand.NextBool(5))
-                {
-                    target.AddBuff(BuffID.Silenced, 1050);
-                }
-                if (Main.rand.NextBool(4))
-                {
-                    target.AddBuff(BuffID.Darkness, 2250);
-                }
+                target.AddBuff(BuffID.Darkness, 900);
             }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
@@ -124,6 +102,11 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             npcLoot.Add(ItemDropRule.Common(ItemID.MummyMask, 75));
             npcLoot.Add(ItemDropRule.Common(ItemID.MummyShirt, 75));
             npcLoot.Add(ItemDropRule.Common(ItemID.MummyPants, 75));
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return !spawnInfo.Player.InPillarZone() && Main.hardMode && spawnInfo.SpawnTileType == ModContent.TileType<Gutsand>() ? 0.5f : 0;
         }
     }
 }

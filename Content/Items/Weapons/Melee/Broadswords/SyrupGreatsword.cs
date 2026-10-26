@@ -46,7 +46,7 @@ public class SyrupGreatsword : ModItem
     {
         if (player.itemAnimation % 2 == 0)
         {
-            SpecialUtilities.GetPointOnSwungItemPath(60f, 60f, 0.4f + 0.4f * Main.rand.NextFloat(), Item.scale, out var location2, out var outwardDirection2, player);
+            SpecialUtilities.GetPointOnSwungItemPath(100, 100, Main.rand.NextFloat(0.2f,1f), Item.scale, out var location2, out var outwardDirection2, player);
             Vector2 vector2 = outwardDirection2.RotatedBy((float)Math.PI / 2f * player.direction * player.gravDir);
             int DustType = ModContent.DustType<AutumnDust>();
 

@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
 using Terraria.Audio;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -20,14 +22,16 @@ namespace Xenon.Content.Projectiles.Melee.Sword
             Projectile.tileCollide = true;
             Projectile.penetrate = 3;
             Projectile.aiStyle = -1;
+			Projectile.alpha = 255;
         }
 		public override void AI()
 		{
-			if (Projectile.localAI[1] > 7f)
+			if (Projectile.localAI[1] > 4f)
 			{
-				int num447 = Dust.NewDust(new Vector2(Projectile.position.X - Projectile.velocity.X * 4f + 2f, Projectile.position.Y + 2f - Projectile.velocity.Y * 4f), 8, 8, DustID.Terra, Projectile.oldVelocity.X, Projectile.oldVelocity.Y, 100, default, 1.25f);
+				Vector2 pos = Projectile.position + new Vector2(2);
+				int num447 = Dust.NewDust(pos, 8, 8, DustID.Terra, Projectile.oldVelocity.X, Projectile.oldVelocity.Y, 100, default, 1.25f);
 				Main.dust[num447].velocity *= -0.25f;
-				num447 = Dust.NewDust(new Vector2(Projectile.position.X - Projectile.velocity.X * 4f + 2f, Projectile.position.Y + 2f - Projectile.velocity.Y * 4f), 8, 8, DustID.Terra, Projectile.oldVelocity.X, Projectile.oldVelocity.Y, 100, default, 1.25f);
+				num447 = Dust.NewDust(pos, 8, 8, DustID.Terra, Projectile.oldVelocity.X, Projectile.oldVelocity.Y, 100, default, 1.25f);
 				Main.dust[num447].velocity *= -0.25f;
 				Main.dust[num447].position -= Projectile.velocity * 0.5f;
 			}
@@ -69,14 +73,25 @@ namespace Xenon.Content.Projectiles.Melee.Sword
 		}
 		public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(SoundID.Item10, Projectile.position); // Plays the basic sound most projectiles make when hitting blocks.
-            for (int i = 0; i < 5; i++) // Creates a splash of dust around the position the projectile dies.
+            SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+            for (int i = 0; i < 15; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Terra);
-                dust.noGravity = true;
-                dust.velocity *= 1;
-                dust.scale *= 1f;
+				Vector2 pos = Projectile.position + Vector2.Normalize(Projectile.oldVelocity) * Utils.Remap(i, 0, 15, -60, 30);
+                Dust d = Dust.NewDustDirect(pos, Projectile.width, Projectile.height, DustID.Terra);
+                d.noGravity = true;
+                d.scale += Main.rand.NextFloat();
+                d.velocity *= 0.3f;
+                d.velocity += Projectile.oldVelocity * Main.rand.NextFloat(0.3f);
+
+                Dust d2 = Dust.NewDustDirect(pos, Projectile.width, Projectile.height, DustID.Terra);
+				d2.velocity *= 0.2f;
             }
+        }
+        public override bool PreDraw(ref Color lightColor)
+        {
+			var tex = TextureAssets.Projectile[Type].Value;
+			Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, new Color(Projectile.Opacity, Projectile.Opacity, Projectile.Opacity,0), Projectile.rotation, new Vector2(10,30), Projectile.scale, SpriteEffects.None);
+			return false;
         }
     }
 }

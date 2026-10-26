@@ -4,6 +4,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.MountainsMobs;
@@ -20,7 +21,6 @@ public class Sparrow : ModNPC
         };
         NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
     }
-
     public override void SetDefaults()
     {
         NPC.width = 32;
@@ -37,29 +37,16 @@ public class Sparrow : ModNPC
         AIType = NPCID.Bird;
         AnimationType = NPCID.Bird;
     }
-
+    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    {
+        return Main.dayTime && SpawnHelper.Surface(ref spawnInfo) && SpawnHelper.Mountain(ref spawnInfo) ? 0.4f : 0;
+    }
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
-
         bestiaryEntry.Info.AddRange([
             BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Sparrow")),
         ]);
-    }
-
-    public override void AI()
-    {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
-        {
-            return;
-        }
-    }
-    public override void OnKill()
-    {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
-        {
-            return;
-        }
     }
     public override void HitEffect(NPC.HitInfo hit)
     {

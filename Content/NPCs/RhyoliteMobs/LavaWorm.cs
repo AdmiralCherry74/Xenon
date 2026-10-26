@@ -5,6 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Biomes.Rhyolite;
 using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Consumables.NomNoms;
@@ -62,11 +63,9 @@ public class LavaWormHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.InModBiome<Rhyolite>() && !spawnInfo.Player.InPillarZone())
-            return 0.1f;
-        return 0;
+        return SpawnHelper.Rhyolite(ref spawnInfo) && SpawnHelper.NotNoWorms(ref spawnInfo) ? 0.1f : 0;
     }
-	public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+    public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
 	{
 		if (Main.rand.NextBool(3))
 			target.AddBuff(BuffID.OnFire3, 60 * 4);

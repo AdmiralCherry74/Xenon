@@ -52,19 +52,23 @@ namespace Xenon.Content.NPCs.Other
             ]);
         }
 
-        public override void AI()
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
+            if (Main.hardMode || (!NPC.AnyNPCs(Type) && NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))
             {
-                return;
+                return 0;
             }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
+            else if (Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.PlayerInTown)
             {
-                return;
+                if (NPC.downedBoss3)
+                    return 0.125f;
+                else if (NPC.downedBoss2)
+                    return 0.1f;
+                else if (NPC.downedBoss1)
+                    return 0.075f;
+                return 0.05f;
             }
+            return 0;
         }
 
         public override void HitEffect(NPC.HitInfo hit)

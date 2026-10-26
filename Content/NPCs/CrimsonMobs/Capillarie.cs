@@ -6,6 +6,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Common;
+using Xenon.Common.Systems;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.NPCs.Template;
 using static Xenon.Content.NPCs.CrimsonMobs.CapillarieHead.CapillarieBody;
@@ -60,11 +62,7 @@ public class CapillarieHead : WormHead
     }
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (spawnInfo.Player.ZoneCrimson && spawnInfo.Player.ZoneRockLayerHeight && NPC.downedBoss2 || spawnInfo.Player.ZoneCrimson && NPC.downedBoss2)
-        {
-                return SpawnCondition.Crimson.Chance * 0.50f;
-        }
-        return 0f;
+        return ModContent.GetInstance<XenonBossCleared>().DownedBrainOfCthulhu && SpawnHelper.Crimson(ref spawnInfo) ? 0.5f : 0;
     }
     public override void HitEffect(NPC.HitInfo hit)
     {

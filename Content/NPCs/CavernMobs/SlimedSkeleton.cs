@@ -5,7 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
+using Xenon.Common;
 using Xenon.Content.Items.Materials;
 using Xenon.Content.Items.Placeable.Banner;
 
@@ -23,7 +23,6 @@ namespace Xenon.Content.NPCs.CavernMobs
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
-
         public override void SetDefaults()
         {
             NPC.width = 36;
@@ -40,8 +39,8 @@ namespace Xenon.Content.NPCs.CavernMobs
             AIType = NPCID.Skeleton;
             AnimationType = NPCID.Skeleton;
             Banner = NPC.type;
-			BannerItem = ModContent.ItemType<HauntedArmorBanner>();
-		}
+            BannerItem = ModContent.ItemType<HauntedArmorBanner>();
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
@@ -51,35 +50,10 @@ namespace Xenon.Content.NPCs.CavernMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HauntedArmor")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (spawnInfo.Player.ZoneNormalCaverns && !NPC.AnyNPCs(Type))
-            {
-                {
-                    return SpawnCondition.Cavern.Chance * 0.25f;
-
-
-                }
-            }
-            return 0f;
+            return spawnInfo.Player.ZonePurity && SpawnHelper.RockLayer(ref spawnInfo) ? 0.25f : 0;
         }
-
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

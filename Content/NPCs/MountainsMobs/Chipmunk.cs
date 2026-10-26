@@ -4,6 +4,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Biomes;
 
 namespace Xenon.Content.NPCs.MountainsMobs;
@@ -46,20 +47,9 @@ public class Chipmunk : ModNPC
             new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Chipmunk")),
         ]);
     }
-
-    public override void AI()
+    public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
-        {
-            return;
-        }
-    }
-    public override void OnKill()
-    {
-        if (Main.netMode == NetmodeID.MultiplayerClient)
-        {
-            return;
-        }
+        return Main.dayTime && SpawnHelper.Surface(ref spawnInfo) && SpawnHelper.Mountain(ref spawnInfo) ? 0.4f : 0;
     }
     public override void HitEffect(NPC.HitInfo hit)
     {

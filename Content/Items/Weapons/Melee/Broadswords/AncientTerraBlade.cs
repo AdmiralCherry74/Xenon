@@ -9,14 +9,13 @@ namespace Xenon.Content.Items.Weapons.Melee.Broadswords;
 
 public class AncientTerraBlade : ModItem
 {
-    private int fireDelay = 24;
     public override void SetDefaults()
     {
         Item.width = 46;
         Item.height = 54;
 
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTime = 16;
+        Item.useTime = 40;
         Item.useAnimation = 16;
         Item.autoReuse = true;
 
@@ -30,23 +29,5 @@ public class AncientTerraBlade : ModItem
         Item.value = Item.buyPrice(gold: 20);
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Yellow;
-    }
-    public override void HoldItem(Player player)
-    {
-        if (fireDelay > 0 && player.itemAnimation > 0) fireDelay--;
-        if (fireDelay == 0)
-        {
-            Vector2 mousePos = Main.MouseScreen;
-            float velX = mousePos.X + Main.screenPosition.X - player.Center.X;
-            float velY = mousePos.Y + Main.screenPosition.Y - player.Center.Y;
-            Vector2 v = new(velX, velY); v.Normalize(); v *= Item.shootSpeed;
-            int p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.Center, v, ModContent.ProjectileType<AncientTerraBeam>(), 87, 6f);
-            Main.projectile[p].owner = player.whoAmI;
-            fireDelay = 24;
-        }
-    }
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
-        return false;
     }
 }

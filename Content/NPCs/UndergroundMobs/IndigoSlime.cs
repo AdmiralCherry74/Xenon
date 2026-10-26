@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.UndergroundMobs
@@ -54,19 +55,9 @@ namespace Xenon.Content.NPCs.UndergroundMobs
             ]);
         }
 
-        public override void AI()
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
+            return !Main.hardMode && NPC.downedSlimeKing && SpawnHelper.Purity(ref spawnInfo) && SpawnHelper.RockLayer(ref spawnInfo) ? 0.7f : 0;
         }
         public override void HitEffect(NPC.HitInfo hit)
         {

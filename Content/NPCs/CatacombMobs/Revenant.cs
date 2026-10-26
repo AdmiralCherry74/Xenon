@@ -5,6 +5,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Consumables;
 using Xenon.Content.Items.Materials;
 
@@ -55,34 +56,16 @@ namespace Xenon.Content.NPCs.CatacombMobs
             ]);
         }
 
-        public override void AI()
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
+            return SpawnHelper.Catacombs(ref spawnInfo) ? 0.2f : 0;
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
         {
-            if (Main.rand.NextBool(3) && !Main.expertMode && !Main.masterMode)
+            if (Main.rand.NextBool(3))
             {
                 target.AddBuff(BuffID.Cursed, 300);
-            }
-            else if (Main.rand.NextBool(3) && Main.expertMode && !Main.masterMode)
-            {
-                target.AddBuff(BuffID.Cursed, 450);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode && !Main.expertMode)
-            {
-                target.AddBuff(BuffID.Cursed, 600);
             }
         }
 

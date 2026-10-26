@@ -226,7 +226,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             }
 
             // Despawn Check
-            if (target.dead || !target.active || !XenonPlayer.ZoneCorrosion(target))
+            if (target.dead || !target.active || !target.InModBiome<Corrosion>())
             {
                 if(maxFallSpeed) NPC.velocity.Y += fallingVelocityChange;
                 NPC.EncourageDespawn(10);

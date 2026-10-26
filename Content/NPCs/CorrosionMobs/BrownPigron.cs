@@ -5,6 +5,8 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
+using Xenon.Content.Biomes.Corrosion;
 
 namespace Xenon.Content.NPCs.CorrosionMobs
 {
@@ -76,5 +78,9 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             npcLoot.Add(ItemDropRule.Common(ItemID.PigronMinecart, 100));
             npcLoot.Add(ItemDropRule.ByCondition(new Conditions.WindyEnoughForKiteDrops(), ItemID.KitePigron, 25));
         }
+        public override float SpawnChance(NPCSpawnInfo spawnInfo) =>
+    spawnInfo.Player.InModBiome<Corrosion>() && SpawnHelper.NotNoWorms(ref spawnInfo) && SpawnHelper.RockLayer(ref spawnInfo) &&
+    (spawnInfo.SpawnTileType is TileID.SnowBlock or TileID.BreakableIce || TileID.Sets.Conversion.Ice[spawnInfo.SpawnTileType]) &&
+    Main.hardMode ? 0.033f : 0f;
     }
 }

@@ -6,6 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.OceanMobs
@@ -15,14 +16,7 @@ namespace Xenon.Content.NPCs.OceanMobs
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = 3;
-
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
-            {
-                Velocity = 1f
-            };
-            NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
         }
-
         public override void SetDefaults()
         {
             NPC.width = 34;
@@ -40,31 +34,21 @@ namespace Xenon.Content.NPCs.OceanMobs
 			Banner = NPC.type;
 			BannerItem = ModContent.ItemType<SporeSlimeBanner>();
 		}
-
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            if (Main.dayTime && SpawnHelper.Beach(ref spawnInfo))
+                return 0.4f;
+            else if (SpawnHelper.UndergroundOcean(ref spawnInfo))
+                return 0.6f;
+            return 0;
+        }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-
             bestiaryEntry.Info.AddRange([
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.NavySlime")),
             ]);
         }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
