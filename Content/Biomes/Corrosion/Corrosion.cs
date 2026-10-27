@@ -19,7 +19,7 @@ public class Corrosion : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300;
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.screenPosition.Y / 16 < Main.worldSurface + 1;
     }
     public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
     {
@@ -62,6 +62,17 @@ public class CorrosionIce : ModBiome
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
+    public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
+    {
+        get
+        {
+            if (Main.LocalPlayer.ZoneDesert)
+            {
+                return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
+            }
+            return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
+        }
+    }
     public override bool IsBiomeActive(Player player)
     {
         return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.SceneMetrics.SnowTileCount >= 1500;
@@ -77,7 +88,18 @@ public class CorrosionUnderground : ModBiome
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/CorrosionWaterStyle");
     public override bool IsBiomeActive(Player player)
     {
-        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && (player.ZoneRockLayerHeight);
+        return ModContent.GetInstance<BiomeTileCounts>().CorrosionTiles >= 300 && Main.screenPosition.Y / 16 > Main.worldSurface + 1;
+    }
+    public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle
+    {
+        get
+        {
+            if (Main.LocalPlayer.ZoneDesert)
+            {
+                return ModContent.GetInstance<CorrosionDesertBackgroundStyle>();
+            }
+            return ModContent.GetInstance<CorrosionSurfaceBackgroundStyle>();
+        }
     }
     public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle
     {

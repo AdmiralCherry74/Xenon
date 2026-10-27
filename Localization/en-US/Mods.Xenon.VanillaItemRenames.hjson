@@ -13,8 +13,15 @@ PuritySolution: Purity Solution
 DesertSolution: Desert Solution
 SnowSolution: Snow Solution
 ForestSolution: Forest Solution
-HallowSolution: Holy Solution
-CorruptSolution: Evil Solution
-CrimfiedSolution: Flesh Solution
+HallowSolution: Hallow Solution
+CorruptSolution: Corruption Solution
+CrimfiedSolution: Crimson Solution
 MushroomSolution: Mushroom Solution
 PrismiteFish: Prismite Fish
+StoneBrick: Stone Brick
+StoneBrickWall: Stone Brick Wall
+StoneBrickPlatform: Stone Brick Platform
+StoneBrickDoor: Stone Brick Door
+HallowSolutionFancy: Holy Solution
+CorruptSolutionFancy: Evil Solution
+CrimfiedSolutionFancy: Flesh Solution

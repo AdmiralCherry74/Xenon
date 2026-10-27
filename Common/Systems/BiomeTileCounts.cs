@@ -35,11 +35,15 @@ public class BiomeTileCounts : ModSystem
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
         Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutquicksand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<HardenedGutsand>()];
+        Main.SceneMetrics.SandTileCount += tileCounts[ModContent.TileType<Gutsandstone>()];
         Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<Ebonquicksand>()];
         Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<Crimquicksand>()];
         Main.SceneMetrics.HolyTileCount += tileCounts[ModContent.TileType<Pearlquicksand>()];
         Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<PowderedSnow>()];
         Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<FrozenLava>()];
+        Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<BrownIce>()];
+        Main.SceneMetrics.SnowTileCount += tileCounts[ModContent.TileType<IndigoIce>()];
         Main.SceneMetrics.JungleTileCount += tileCounts[ModContent.TileType<CorrosionJungleGrass>()];
         Main.SceneMetrics.EvilTileCount += tileCounts[ModContent.TileType<NyxStone>()];
         Main.SceneMetrics.BloodTileCount += tileCounts[ModContent.TileType<AresStone>()];

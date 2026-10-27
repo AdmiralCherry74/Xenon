@@ -16,10 +16,10 @@ public class Pouch : ModItem
     }
     public override void AddRecipes()
     {
-        Recipe recipe = CreateRecipe();
-        recipe.AddIngredient(ItemID.Silk, 5);
-        recipe.AddTile(TileID.Tables);
-        recipe.AddTile(TileID.Chairs);
-        recipe.Register();
+        CreateRecipe()
+        .AddIngredient(ItemID.Silk, 5)
+        .AddTile(TileID.Tables)
+        .AddTile(TileID.Chairs)
+        .Register();
     }
 }

@@ -385,7 +385,7 @@ UlceriteOre: {
 }
 
 CorrosionSolution: {
-	DisplayName: Expired Solution
+	DisplayName: Corrosion Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -2759,7 +2759,7 @@ BilewoodBroadsword: {
 }
 
 BrownIceBlock: {
-	DisplayName: Expired Ice Block
+	DisplayName: Bistre Ice Block
 	Tooltip: ""
 }
 
@@ -2927,13 +2927,8 @@ ThornyBush: {
 	Tooltip: ""
 }
 
-PlatformArcitectsHandbook: {
-	DisplayName: Platform Arcitects Handbook
-	Tooltip: ""
-}
-
 SnoozeSolution: {
-	DisplayName: Doze Solution
+	DisplayName: Somnolent Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -2962,7 +2957,7 @@ CinnabarBrickItem: {
 }
 
 IndigoIceBlock: {
-	DisplayName: Doze Ice Block
+	DisplayName: Indigo Ice Block
 	Tooltip: ""
 }
 
@@ -3808,7 +3803,7 @@ UrinalWater: {
 }
 
 AutumnSolution: {
-	DisplayName: Frith Solution
+	DisplayName: Autumn Solution
 	Tooltip:
 		'''
 		Used by the Clentaminator
@@ -4330,17 +4325,31 @@ CorrosionWaterFountainItem: {
 
 WoodenHatchet: {
 	DisplayName: Wooden Hatchet
-	Tooltip: '''"A dinky wooden hatchet"'''
+	Tooltip: ""
 }
 
 WoodenMattock: {
 	DisplayName: Wooden Mattock
-	Tooltip: '''"A dinky wooden mattock"'''
+	Tooltip: ""
 }
 
 WoodenDagger: {
 	DisplayName: Wooden Dagger
-	Tooltip: '''"A dinky wooden dagger"'''
+	Tooltip: ""
+}
+
+BookOfPlatforms: {
+	DisplayName: Spell Book of Placing Aesthetically Pleasing Platforms
+	Tooltip:
+		'''
+		An infinite supply of platforms that are non harvestable
+		Platforms placed change depending on the biome your in
+		'''
+}
+
+Paper: {
+	DisplayName: Paper
+	Tooltip: ""
 }
 
 HellfireSparker: {

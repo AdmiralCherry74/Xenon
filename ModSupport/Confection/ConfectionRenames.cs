@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using TheConfectionRebirth.Items;
 using TheConfectionRebirth.Items.Placeable;
 using Xenon.Common;
 
@@ -25,9 +26,19 @@ internal class ConfectionRenames : ModHook
     }
     private LocalizedText On_Lang_GetItemName(On_Lang.orig_GetItemName orig, int id)
     {
-        if (id == ModContent.ItemType<OrangeIce>() && XenonMod.TheConfectionRebirthContentEnabled)
+        if (ModContent.GetInstance<XenonClientConfig>().FancyRenames)
         {
-            return Language.GetText("Mods.Xenon.ModdedItemRenames.CreamIce");
+            if (id == ModContent.ItemType<OrangeIce>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.CreamIce");
+            }
+        }
+        else
+        {
+            if (id == ModContent.ItemType<CreamSolution>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.ConfectionSolution");
+            }
         }
         return orig.Invoke(id);
     }

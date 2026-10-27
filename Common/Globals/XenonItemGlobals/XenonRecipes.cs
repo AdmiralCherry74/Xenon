@@ -74,9 +74,28 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .SortAfterFirstRecipesOf(ItemID.AcornAxe)
                 .Register();
 
+            Recipe.Create(ItemID.Leather)
+                .AddIngredient(ItemID.Vertebrae, 5)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.Leather)
+                .Register();
+
+            Recipe.Create(ItemID.Leather)
+                .AddIngredient(ModContent.ItemType<Bolus>(), 5)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.Leather)
+                .Register();
+
+            Recipe.Create(ItemID.Book)
+                .AddIngredient(ItemID.Leather, 2)
+                .AddIngredient(ModContent.ItemType<Paper>(), 12)
+                .SortAfterFirstRecipesOf(ModContent.ItemType<Paper>())
+                .AddTile(TileID.WorkBenches);
+
             Recipe.Create(ItemID.SpellTome)
                 .AddIngredient(ItemID.Book)
                 .AddIngredient(ItemID.ManaCrystal, 3)
+                .SortAfterFirstRecipesOf(ItemID.Book)
                 .AddTile(TileID.Bookcases)
                 //.SortAfterFirstRecipesOf(ItemID.Titties)
                 .Register();

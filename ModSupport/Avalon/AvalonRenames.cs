@@ -25,21 +25,24 @@ internal class AvalonRenames : ModHook
     }
     private LocalizedText On_Lang_GetItemName(On_Lang.orig_GetItemName orig, int id)
     {
-        if (id == ModContent.ItemType<YellowIceBlock>() && XenonMod.AvalonContentEnabled)
+        if (ModContent.GetInstance<XenonClientConfig>().FancyRenames)
         {
-            return Language.GetText("Mods.Xenon.ModdedItemRenames.PlagueIce");
-        }
-        if (id == ModContent.ItemType<GreenIceBlock>() && XenonMod.AvalonContentEnabled)
-        {
-            return Language.GetText("Mods.Xenon.ModdedItemRenames.FloraIce");
-        }
-        if (id == ModContent.ItemType<ContagionSolution>() && XenonMod.AvalonContentEnabled)
-        {
-            return Language.GetText("Mods.Xenon.ModdedItemRenames.PlagueSolution");
-        }
-        if (id == ModContent.ItemType<JungleSolution>() && XenonMod.AvalonContentEnabled)
-        {
-            return Language.GetText("Mods.Xenon.ModdedItemRenames.FloraSolution");
+            if (id == ModContent.ItemType<YellowIceBlock>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.PlagueIce");
+            }
+            if (id == ModContent.ItemType<GreenIceBlock>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.FloraIce");
+            }
+            if (id == ModContent.ItemType<ContagionSolution>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.PlagueSolution");
+            }
+            if (id == ModContent.ItemType<JungleSolution>())
+            {
+                return Language.GetText("Mods.Xenon.ModdedItemRenames.FloraSolution");
+            }
         }
         return orig.Invoke(id);
     }

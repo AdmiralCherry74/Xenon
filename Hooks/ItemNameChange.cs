@@ -5,6 +5,9 @@ using Terraria.Localization;
 using Terraria.Map;
 using Terraria.ModLoader;
 using Xenon.Common;
+using Xenon.Content.Items.Ammo;
+using Xenon.Content.Items.Placeable.Blocks.Natural.Snow;
+using Xenon.Content.Tiles.Natural.Corrosion;
 
 namespace Xenon.Hooks;
 
@@ -17,26 +20,30 @@ internal class ItemNameChange : ModHook
 
     private LocalizedText On_Lang_GetItemName(On_Lang.orig_GetItemName orig, int id)
     {
-        if (id == ItemID.Hellstone && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
+        if (ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
         {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneRename");
+            if (id == ItemID.Hellstone)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneRename");
+            }
+            if (id == ItemID.HellstoneBar)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBarRename");
+            }
+            if (id == ItemID.HellstoneBrick)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickRename");
+            }
+            if (id == ItemID.HellstoneBrickWall)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickWallRename");
+            }
+            if (id == ItemID.LavaCrateHard)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneCrateRename");
+            }
         }
-        if (id == ItemID.HellstoneBar && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBarRename");
-        }
-        if (id == ItemID.HellstoneBrick && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickRename");
-        }
-        if (id == ItemID.HellstoneBrickWall && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneBrickWallRename");
-        }
-        if (id == ItemID.LavaCrateHard && ModContent.GetInstance<XenonClientConfig>().HellstoneRename)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HellstoneCrateRename");
-        }
+
         if (id == ItemID.PlatinumCrown)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.AncientPlatinumCrown");
@@ -49,18 +56,24 @@ internal class ItemNameChange : ModHook
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.GoldCandle");
         }
-        if (id == ItemID.PurpleIceBlock)
+
+        if (id == ItemID.GrayBrick)
         {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.EvilIce");
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.StoneBrick");
         }
-        if (id == ItemID.RedIceBlock)
+        if (id == ItemID.GrayBrickWall)
         {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.FleshIce");
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.StoneBrickWall");
         }
-        if (id == ItemID.PinkIceBlock)
+        if (id == ItemID.StonePlatform)
         {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HolyIce");
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.StoneBrickPlatform");
         }
+        if (id == ItemID.StoneDoor)
+        {
+            return Language.GetText("Mods.Xenon.VanillaItemRenames.StoneBrickDoor");
+        }
+
         if (id == ItemID.GreenSolution)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.PuritySolution");
@@ -77,22 +90,76 @@ internal class ItemNameChange : ModHook
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.ForestSolution");
         }
-        if (id == ItemID.BlueSolution)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.HallowSolution");
-        }
-        if (id == ItemID.PurpleSolution)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.CorruptSolution");
-        }
-        if (id == ItemID.RedSolution)
-        {
-            return Language.GetText("Mods.Xenon.VanillaItemRenames.CrimfiedSolution");
-        }
         if (id == ItemID.DarkBlueSolution)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.MushroomSolution");
         }
+
+        if (ModContent.GetInstance<XenonClientConfig>().FancyRenames)
+        {
+            if (id == ItemID.PurpleIceBlock)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.EvilIce");
+            }
+            if (id == ItemID.RedIceBlock)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.FleshIce");
+            }
+            if (id == ItemID.PinkIceBlock)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HolyIce");
+            }
+            if (id == ModContent.ItemType<BrownIceBlock>())
+            {
+                return Language.GetText("Mods.Xenon.XenonItemRenames.ExpiredIce");
+            }
+
+            
+            if (id == ItemID.BlueSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HallowSolutionFancy");
+            }
+            if (id == ItemID.PurpleSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.CorruptSolutionFancy");
+            }
+            if (id == ItemID.RedSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.CrimfiedSolutionFancy");
+            }
+            if (id == ModContent.ItemType<CorrosionSolution>())
+            {
+                return Language.GetText("Mods.Xenon.XenonItemRenames.CorrodedSolutionFancy");
+            }
+            if (id == ModContent.ItemType<AutumnSolution>())
+            {
+                return Language.GetText("Mods.Xenon.XenonItemRenames.AutumnSolutionFancy");
+            }
+            if (id == ModContent.ItemType<SnoozeSolution>())
+            {
+                return Language.GetText("Mods.Xenon.XenonItemRenames.SomnolentSolutionFancy");
+            }
+            if (id == ModContent.ItemType<IndigoIceBlock>())
+            {
+                return Language.GetText("Mods.Xenon.XenonItemRenames.IndigoIceFancy");
+            }
+        }
+        else
+        {
+            if (id == ItemID.BlueSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.HallowSolution");
+            }
+            if (id == ItemID.PurpleSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.CorruptSolution");
+            }
+            if (id == ItemID.RedSolution)
+            {
+                return Language.GetText("Mods.Xenon.VanillaItemRenames.CrimfiedSolution");
+            }
+        }
+
         if (id == ItemID.Prismite)
         {
             return Language.GetText("Mods.Xenon.VanillaItemRenames.PrismiteFish");

@@ -12,4 +12,8 @@ internal class XenonClientConfig : ModConfig
     [DefaultValue(false)]
     [ReloadRequired]
     public bool HellstoneRename;
+
+    [DefaultValue(false)]
+    [ReloadRequired]
+    public bool FancyRenames;
 }

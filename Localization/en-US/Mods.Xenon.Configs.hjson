@@ -15,19 +15,11 @@ XenonConfig: {
 		Label: Hellstone Renames
 	}
 
-	PickaxeRequiredForNextOreTier: {
-		Tooltip:
-			'''
-			Reworks pickaxe power to make it so that various pre-Hardmode ores cannot be mined yet.
-			It only affects iron, silver, and gold tiers.
-			'''
-		Label: Pickaxe Progression Rework
-	}
-
 	RequirePreviousOreTierForNext: {
 		Tooltip:
 			'''
 			Reworks the progression of pre-Hardmode ores, requiring other gear sets to be made with the previous.
+			Will be updated for hardmode when hardmode update comes out
 			Leave this off if you prefer vanilla's ore crafting progression.
 			'''
 		Label: Other Ores Require Previous Ores
@@ -63,6 +55,15 @@ XenonClientConfig: {
 			'''
 			Renames Hellstone and all related gear to Vulcanite.
 			Leave this off if you prefer the original name.
+			'''
+	}
+
+	FancyRenames: {
+		Label: Fancy Renames
+		Tooltip:
+			'''
+			Renames certain items to fancier renames. Like Purple Ice into Evil Ice
+			Some Items will always remain renamed but will be changed for another if enabled. Like Purple Solution being Corruption Solution if off, or Evil Solution if on
 			'''
 	}
 }

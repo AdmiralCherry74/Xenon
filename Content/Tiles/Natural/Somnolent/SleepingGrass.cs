@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Tiles.Natural.Somnolent;
 
@@ -34,6 +35,7 @@ public class SleepingGrass : ModTile
         TileID.Sets.Grass[Type] = true;
         //TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
         RegisterItemDrop(ItemID.DirtBlock);
+        DustType = ModContent.DustType<SleepingGrassDust>();
     }
 
     //public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
