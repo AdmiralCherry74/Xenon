@@ -16,7 +16,7 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
             Item.height = 16;
 
             Item.useTime = 8;
-            Item.useAnimation = 30;
+            Item.useAnimation = 32;
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
             
@@ -37,7 +37,7 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
         }
 
         public override Vector2? HoldoutOffset() => new Vector2(5f, 0f);
-
+        
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             Vector2 muzzleOffset = Vector2.Normalize(velocity) * 25f;

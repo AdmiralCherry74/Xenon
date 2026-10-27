@@ -4035,7 +4035,6 @@ Drizzlethrower: {
 		'''
 		Uses gel for ammo
 		Ignores 5 points of enemy Defense
-		Fires a single flame at a time
 		'''
 	DisplayName: Firestarter
 }
@@ -4346,7 +4345,12 @@ WoodenDagger: {
 
 HellfireSparker: {
 	DisplayName: Hellfire Sparker
-	Tooltip: "'Oh My Gourd...'"
+	Tooltip:
+		'''
+		Uses gel for ammo
+		Ignores 10 points of enemy Defense
+		"That's a spicy meat-a-ball!"
+		'''
 }
 
 GelCanister: {

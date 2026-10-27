@@ -16,14 +16,16 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
             Item.width = 62;
             Item.height = 20;
 
-            Item.useTime = 30;
-            Item.useAnimation = 30;
+            Item.useTime = 10;
+            Item.useAnimation = 45;
             
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
 
+            Item.consumeAmmoOnFirstShotOnly = true;
+
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 20;
+            Item.damage = 14;
             Item.ArmorPenetration = 5;
             Item.knockBack = 0.5f;
             Item.crit = -2;

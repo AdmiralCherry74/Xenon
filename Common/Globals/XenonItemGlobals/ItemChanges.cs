@@ -96,17 +96,6 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             return null;
         }
 
-        public override void PickAmmo(Item weapon, Item ammo, Player player, ref int type, ref float speed, ref StatModifier damage, ref float knockback)
-        {
-            if (weapon.useAmmo == AmmoID.Gel)
-            {
-                /*
-                damage += ammo.damage;
-                damage += ammo.shootSpeed;
-                damage += ammo.knockBack;
-                */            }
-        }
-
         public override void ModifyItemLoot(Item item, ItemLoot loot)
         {
             if(item.type == ItemID.KingSlimeBossBag)

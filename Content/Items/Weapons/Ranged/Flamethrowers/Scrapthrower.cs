@@ -17,14 +17,14 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
             Item.height = 16;
 
             Item.useTime = 8;
-            Item.useAnimation = 30;
-            Item.reuseDelay = 20;
+            Item.useAnimation = 24;
+            Item.reuseDelay = 12;
             Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.consumeAmmoOnFirstShotOnly = true;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 16;
+            Item.damage = 17;
             Item.ArmorPenetration = 5;
             Item.knockBack = 0.3f;
             Item.shoot = ProjectileID.Flames;
@@ -48,12 +48,5 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
 			}
 
         }
-        
-        /*
-        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-        {
-            return (!Main.rand.NextBool(3)) ;
-        }
-        */
     }
 }
