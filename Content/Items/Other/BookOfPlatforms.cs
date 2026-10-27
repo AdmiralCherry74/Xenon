@@ -1,12 +1,8 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Security.Policy;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Biomes.Somnolent;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Tiles.Furniture.BiomePlatforms;
 
 namespace Xenon.Content.Items.Other;

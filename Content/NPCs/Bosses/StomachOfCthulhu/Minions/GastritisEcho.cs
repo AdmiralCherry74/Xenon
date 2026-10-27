@@ -3,6 +3,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common;
 using Xenon.Common.Globals.XenonNPCGlobals;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
@@ -65,6 +66,10 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions
             {
                 StomachOfCthulhu.Minions -= 1;
             }
+        }
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return 0;
         }
     }
 }

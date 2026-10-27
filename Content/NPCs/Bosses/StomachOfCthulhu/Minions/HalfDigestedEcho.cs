@@ -61,6 +61,11 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions
             {
                 StomachOfCthulhu.Minions -= 1;
             }
+
+        }
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return 0;
         }
     }
 }
