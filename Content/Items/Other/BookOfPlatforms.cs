@@ -1,12 +1,8 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Security.Policy;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Biomes.Somnolent;
-using Xenon.Content.Items.Materials;
 using Xenon.Content.Tiles.Furniture.BiomePlatforms;
 
 namespace Xenon.Content.Items.Other;
@@ -31,8 +27,19 @@ public class BookOfPlatforms : ModItem
     }
     public override bool? UseItem(Player player)
     {
+        //Underworld and Space
+        if (Main.screenPosition.Y / 16 > Main.UnderworldLayer - 33)
+        {
+            Item.createTile = ModContent.TileType<AshGrassPlatformEcho>();
+        }
+
+        else if (player.ZoneSkyHeight && !(player.ZoneSnow || player.ZoneJungle || player.ZoneDesert))
+        {
+            Item.createTile = ModContent.TileType<SkywarePlatformEcho>();
+        }
+
         //Purity
-        if (!(player.ZoneSnow || player.ZoneDesert || player.ZoneUndergroundDesert || player.ZoneJungle || player.ZoneSkyHeight))
+        else if (!(player.ZoneSnow || player.ZoneDesert || player.ZoneUndergroundDesert || player.ZoneJungle || player.ZoneSkyHeight))
         {
             if ((Main.screenPosition.Y / 16 < Main.worldSurface + 1))
             {
@@ -184,12 +191,6 @@ public class BookOfPlatforms : ModItem
             {
                 Item.createTile = ModContent.TileType<FrozenPlatformEcho>();
             }
-        }
-
-        //Underworld. doesnt work!
-        else if (player.ZoneUnderworldHeight)
-        {
-            Item.createTile = ModContent.TileType<AshGrassPlatformEcho>();
         }
 
         //Fallback incase it cant detect a biome

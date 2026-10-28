@@ -17,6 +17,8 @@ public class Gourdarang : ModItem
         Item.useAnimation = 20;
         Item.reuseDelay = 20;
         Item.autoReuse = false;
+        Item.noUseGraphic = true;
+        Item.noMelee = true;
         Item.DamageType = DamageClass.Melee;
         Item.damage = 14;
         Item.knockBack = 5;

@@ -26,4 +26,8 @@ public class Depraverang : ModItem
         Item.UseSound = SoundID.Item1;
         Item.rare = ItemRarityID.Green;
     }
+    public override bool CanUseItem(Player player)
+    {
+        return player.ownedProjectileCounts[Item.shoot] < 1;
+    }
 }

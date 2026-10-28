@@ -28,7 +28,8 @@ public class Gastritis : ModNPC
 
     public override void SetDefaults()
     {
-        NPC.width = NPC.height = 34;
+        NPC.width = 34;
+        NPC.height = 34;
         NPC.damage = 22;
         NPC.defense = 8;
         NPC.lifeMax = 40;
