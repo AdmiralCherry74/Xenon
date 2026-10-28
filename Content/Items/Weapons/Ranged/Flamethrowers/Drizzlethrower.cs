@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Ammo.Gel;
 using Xenon.Content.Projectiles.Magic.SpellBookProj;
+using Xenon.Content.Projectiles.Ranged.Flames;
 
 namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
 {
