@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonNPCGlobals;
 using Xenon.Common.Globals.XenonPlayerGlobals;
+using Xenon.Common.Systems;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Tools.ConversionTools.Powders;
@@ -29,7 +30,7 @@ public class ExpiredLeftovers : ModItem
 
     public override bool CanUseItem(Player player)
     {
-        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && (player.InModBiome<Corrosion>() || player.InModBiome<CorrosionIce>() || player.InModBiome<CorrosionCaveDesert>() || player.InModBiome<CorrosionDesert>() || player.InModBiome<CorrosionUnderground>());
+        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && XenonHelper.PlayerInCorrosion(player);
     }
 
     public override bool? UseItem(Player player)

@@ -51,7 +51,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         private int minionSpawnCooldown = 420;
 
         // Changing
-        //private int despawnTimer = 1000;
+        private int despawnTimer = 300;
         private int bubbleCooldownClock = 900;
         private int minionSpawnClock = 420;
         private int spawnAttackWait = 300;
@@ -227,13 +227,18 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             }
 
             // Despawn Check
-            if (target.dead || !target.active || !target.InModBiome<Corrosion>() || !target.InModBiome<CorrosionCaveDesert>() || !target.InModBiome<CorrosionDesert>() || !target.InModBiome<CorrosionIce>() || !target.InModBiome<CorrosionUnderground>())
+            if (target.dead || !target.active || !XenonHelper.PlayerInCorrosion(target))
             {
                 if(maxFallSpeed) NPC.velocity.Y += fallingVelocityChange;
-                NPC.EncourageDespawn(10);
-                XenonGlobalNPC.corrosionBoss = -1;
-                return;
+                if (despawnTimer > 0) despawnTimer--;
+                else
+                {
+                    NPC.EncourageDespawn(150);
+                    XenonGlobalNPC.corrosionBoss = -1;
+                    return;
+                }
             }
+            else despawnTimer = 300;
             
             // Movement
 

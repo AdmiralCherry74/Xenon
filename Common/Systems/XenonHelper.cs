@@ -1,5 +1,7 @@
+using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Xenon.Common.Globals.XenonNPCGlobals;
+using Xenon.Content.Biomes.Corrosion;
 
 namespace Xenon.Common.Systems
 {
@@ -26,6 +28,11 @@ namespace Xenon.Common.Systems
             }
 
             return newIndicesArray;
+        }
+
+        public static bool PlayerInCorrosion(Player player)
+        {
+            return player.InModBiome<Corrosion>() || player.InModBiome<CorrosionIce>() || player.InModBiome<CorrosionCaveDesert>() || player.InModBiome<CorrosionDesert>() || player.InModBiome<CorrosionUnderground>();
         }
     }
 }
