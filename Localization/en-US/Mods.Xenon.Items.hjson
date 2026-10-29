@@ -3817,6 +3817,7 @@ ThornStorm: {
 	Tooltip:
 		'''
 		Fires a burst of 3 thorns infront of it
+		Ignores 5 points of enemy Defense
 		"Always go 1-5-0"
 		'''
 }

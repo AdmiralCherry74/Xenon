@@ -26,7 +26,8 @@ namespace Xenon.Content.Items.Weapons.Magic.SpellBooks
             Item.useStyle = ItemUseStyleID.Shoot;
 
             Item.DamageType = DamageClass.Magic;
-            Item.damage = 9;
+            Item.damage = 10;
+            Item.ArmorPenetration = 5;
             Item.knockBack = 3f;
             Item.crit = 0;
             Item.mana = 10;

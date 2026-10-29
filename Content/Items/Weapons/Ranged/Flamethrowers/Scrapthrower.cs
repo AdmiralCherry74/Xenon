@@ -24,8 +24,8 @@ namespace Xenon.Content.Items.Weapons.Ranged.Flamethrowers
             Item.consumeAmmoOnFirstShotOnly = true;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 17;
-            Item.ArmorPenetration = 5;
+            Item.damage = 15;
+            Item.ArmorPenetration = 7;
             Item.knockBack = 0.3f;
             Item.shoot = ProjectileID.Flames;
             Item.shootSpeed = 5f;
