@@ -26,8 +26,6 @@ namespace Xenon.Content.Tiles.Natural.Ores.HardOres
             Main.tileBlockLight[Type] = true;
             Main.tileOreFinderPriority[Type] = 660;
             Main.tileLighted[Type] = true;
-            Main.tileMerge[Type][TileID.Mud] = true;
-            Main.tileMerge[TileID.Mud][Type] = true;
             HitSound = SoundID.Tink;
             DustType = DustID.HallowSpray;
             MinPick = 180;

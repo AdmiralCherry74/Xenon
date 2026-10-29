@@ -47,7 +47,7 @@ public class AugumnGenSystem : ModSystem
         15. Jungle Trees - Grows trees in the ug jungle
         16. Pots - Self Explanitory
         17. Spread Grass - Adds some more pizzazz to the jungle grass
-        18. Quickmud - Xenon Quickmud generation (Will there be quickmulch???)
+        18. Quickmud - Xenon Quickmud generation (Will there be quickmulch???) [yes ;3 -Selene]
         19. Piles - Adds rock piles
         20. Plant Trees - Plants le trees
         21. Herbs - Generates Herbs

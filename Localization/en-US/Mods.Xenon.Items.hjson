@@ -268,7 +268,7 @@ PowderedSnowBlock: {
 }
 
 QuickmudBlock: {
-	DisplayName: Quickmud Block
+	DisplayName: Muck Block
 	Tooltip: Mud that makes you fall through it
 }
 
@@ -4383,4 +4383,9 @@ Scrapthrower: {
 		"Little do you know, this hunk of junk
 		sparked something among the Avians."
 		'''
+}
+
+SutekhWaders: {
+	DisplayName: Sutekh Waders
+	Tooltip: ""
 }

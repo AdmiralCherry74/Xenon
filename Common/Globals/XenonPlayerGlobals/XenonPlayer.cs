@@ -33,7 +33,7 @@ public class XenonPlayer : ModPlayer
     public bool KnockbackBoostFluoriteApple;
     public bool AmIStickingToBlock;
     public bool Boomed;
-    public bool BiomePlatform;
+    public bool StandOnSand;
     public bool[] OwnedLargeGems = new bool[10];
 
     public bool GastricCloakOn; //explicitly here for Avalon support. and maybe future stat regen increases aswell
@@ -49,7 +49,7 @@ public class XenonPlayer : ModPlayer
         KnockbackBoostFluoriteApple = false;
         AmIStickingToBlock = false;
         Boomed = false;
-        BiomePlatform = false;
+        StandOnSand = false;
 
         GastricCloakOn = false; //explicitly here for Avalon support. and maybe future stat regen increases aswell
     }
@@ -338,7 +338,7 @@ public class XenonPlayer : ModPlayer
     }
     public void QuicksandMovement()
     {
-        if (Player.shimmering || Player.HasBuff(BuffID.Flipper))
+        if (Player.shimmering || Player.HasBuff(BuffID.Flipper) || StandOnSand)
             return;
 
         bool mounted = false;

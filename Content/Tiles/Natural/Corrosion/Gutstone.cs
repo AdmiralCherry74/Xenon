@@ -17,7 +17,6 @@ public class Gutstone : ModTile
     {
         AddMapEntry(new Color(127, 115, 33));
         Main.tileSolid[Type] = true;
-        Main.tileBrick[Type] = true;
         Main.tileMergeDirt[Type] = true;
         Main.tileBlockLight[Type] = true;
         TileID.Sets.Conversion.Stone[Type] = true;
