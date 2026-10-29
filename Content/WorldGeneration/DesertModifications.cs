@@ -25,13 +25,6 @@ internal class DesertModifications : ModSystem
 			tasks.Insert(index + 1, currentPass);
 			totalWeight += currentPass.Weight;
 		}
-		index = tasks.FindIndex(genPass => genPass.Name == "Create Ocean Caves");
-		if (index != -1)
-		{
-			currentPass = new MirageThingOhLookItsTotallyAnOriginalBiomeIdeaLetsJustStealAVanillaBiomeAndReplaceItEntirelyAndGenerateTheBiomeOverTheUndergroundDesertOMQWhyIsThisAThingNowIDontLikeThisIdeaWhy();
-			tasks.Insert(index + 1, currentPass);
-			totalWeight += currentPass.Weight;
-		}
 		index = tasks.FindIndex(genPass => genPass.Name == "Spreading Grass");
 		if (index != -1)
 		{
@@ -42,7 +35,11 @@ internal class DesertModifications : ModSystem
 			currentPass = new PowderedSnowPass();
 			tasks.Insert(index + 1, currentPass);
 			totalWeight += currentPass.Weight;
-		}
+
+            currentPass = new MarineQuicksandPass();
+            tasks.Insert(index + 1, currentPass);
+            totalWeight += currentPass.Weight;
+        }
 	}
 }
 internal class QuicksandPass : GenPass
@@ -108,65 +105,24 @@ internal class PowderedSnowPass : GenPass
 		}
 	}
 }
-
-public class MirageThingOhLookItsTotallyAnOriginalBiomeIdeaLetsJustStealAVanillaBiomeAndReplaceItEntirelyAndGenerateTheBiomeOverTheUndergroundDesertOMQWhyIsThisAThingNowIDontLikeThisIdeaWhy : GenPass
+internal class MarineQuicksandPass : GenPass
 {
-	public MirageThingOhLookItsTotallyAnOriginalBiomeIdeaLetsJustStealAVanillaBiomeAndReplaceItEntirelyAndGenerateTheBiomeOverTheUndergroundDesertOMQWhyIsThisAThingNowIDontLikeThisIdeaWhy() : base("Mirage", 10f)
-	{
-	}
+    public MarineQuicksandPass() : base("Marine Quicksand", 10f)
+    {
+    }
 
-	protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
-	{
-		progress.Message = Language.GetTextValue("Mods.Xenon.Generation.UndergroundOcean");
-
-		int xStart = 0;
-		int xEnd = 0;
-		if (GenVars.dungeonSide == -1)
-		{
-			xStart = GenVars.rightBeachStart;
-			xEnd = Main.maxTilesX - 10;
-		}
-		else if (GenVars.dungeonSide == 1)
-		{
-			xStart = 10;
-			xEnd = GenVars.leftBeachEnd;
-		}
-
-		for (int x = xStart; x <= xEnd; x++)
-		{
-			for (int y = (int)Main.worldSurface - 40; y <= GenVars.lavaLine; y++)
-			{
-				if (Main.tile[x, y].LiquidAmount > 0 || !Main.tile[x, y].HasTile || !Main.tileSolid[Main.tile[x, y].TileType]) continue;
-				if ((TileID.Sets.Grass[Main.tile[x, y].TileType] || Main.tile[x, y].TileType == TileID.Dirt) && Main.tile[x, y].HasTile) continue;
-				if (!Main.tile[x, y + 1].HasTile && Main.tile[x, y].TileType != TileID.Granite && Main.tile[x, y].TileType != TileID.Marble)
-				{
-					Main.tile[x, y].TileType = (ushort)ModContent.TileType<MarineSandstone>();
-				}
-				else if (TileID.Sets.CanBeClearedDuringOreRunner[Main.tile[x, y].TileType])
-				{
-					Main.tile[x, y].TileType = (ushort)ModContent.TileType<MarineSand>();
-				}
-			}
-		}
-		for (int x = xStart; x <= xEnd; x++)
-		{
-			for (int y = (int)Main.worldSurface - 40; y <= GenVars.lavaLine; y++)
-			{
-				if (x == xStart || x == xEnd)
-				{
-					if (y % 5 == 0)
-					{
-						WorldGen.TileRunner(x, y, WorldGen.genRand.Next(10, 13), WorldGen.genRand.Next(11, 14), ModContent.TileType<HardenedMarineSand>(), ignoreTileType: TileID.Grass);
-					}
-				}
-				if (y == GenVars.lavaLine)
-				{
-					if (x % 5 == 0)
-					{
-						WorldGen.TileRunner(x, y, WorldGen.genRand.Next(10, 13), WorldGen.genRand.Next(11, 14), ModContent.TileType<HardenedMarineSand>(), ignoreTileType: TileID.Grass);
-					}
-				}
-			}
-		}
-	}
+    protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
+    {
+        progress.Message = Language.GetTextValue("Mods.Xenon.Generation.Quicksand");
+        for (int i = 150; i < Main.maxTilesX - 150; i++)
+        {
+            for (int j = (int)Main.worldSurface; j < Main.maxTilesY - 250; j++)
+            {
+                if ((Main.tile[i, j].TileType == ModContent.TileType<HardenedMarineSand>()) && WorldGen.genRand.NextBool(20) && !Main.tileSolid[Main.tile[i, j - 1].TileType])
+                {
+                    WorldGen.TileRunner(i, j, 9, 12, (ushort)ModContent.TileType<MarineQuicksand>());
+                }
+            }
+        }
+    }
 }

@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Xenon.Content.Tiles.Natural.Corrosion;
 using System.Collections.Generic;
-using Xenon.Content.Items.Accessories;
 using Xenon.Content.Items.Weapons.Melee.YoYos;
 using Xenon.Content.Items.Pets;
 using Xenon.Content.Tiles.Natural.MountainsAndTheKarst;
 using Xenon.Content.Tiles.Natural.SnowAndIce;
+using Xenon.Content.Items.Accessories.Shoes;
 
 namespace Xenon.Content.WorldGeneration;
 

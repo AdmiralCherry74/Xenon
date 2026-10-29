@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Armor.PreHardmode;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
 
-namespace Xenon.Content.Items.Accessories
+namespace Xenon.Content.Items.Accessories.Shoes
 {
     // This example attempts to showcase most of the common boot accessory effects.
     // Of particular note is a showcase of the correct approaches to various movement speed modifications.

@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.Items.Accessories
+namespace Xenon.Content.Items.Accessories.Shoes
 {
     // This example attempts to showcase most of the common boot accessory effects.
     // Of particular note is a showcase of the correct approaches to various movement speed modifications.
