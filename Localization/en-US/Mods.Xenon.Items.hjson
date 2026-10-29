@@ -4389,3 +4389,23 @@ SutekhWaders: {
 	DisplayName: Sutekh Waders
 	Tooltip: ""
 }
+
+IngestaneCore.DisplayName: Storage Core (Ingestane)
+
+IngestaneStorageUnitItem: {
+	DisplayName: Ingestane Storage Unit
+	Tooltip:
+		'''
+		A component for storing items in a Magic Storage storage system
+		Can store up to 80 items
+		'''
+}
+
+IngestaneUpgrade: {
+	DisplayName: Ingestane Storage Upgrade
+	Tooltip:
+		'''
+		Upgrades Storage Unit to 80 capacity
+		Right Click a Storage Unit to use
+		'''
+}

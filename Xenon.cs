@@ -16,6 +16,7 @@ public class XenonMod : Mod
     public static bool AvalonContentEnabled = ModLoader.HasMod("Avalon");
     public static bool TheConfectionRebirthContentEnabled = ModLoader.HasMod("TheConfectionRebirth");
     public static bool CalamityFablesContentEnabled = ModLoader.HasMod("CalamityFables");
+    public static bool MagicStorageContentEnabled = ModLoader.HasMod("MagicStorage");
     public override void Load()
     {
         while (ModHook.RegisteredHooks.TryDequeue(out ModHook? hook))
