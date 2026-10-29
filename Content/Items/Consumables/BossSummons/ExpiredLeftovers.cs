@@ -29,7 +29,7 @@ public class ExpiredLeftovers : ModItem
 
     public override bool CanUseItem(Player player)
     {
-        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && player.InModBiome<Corrosion>();
+        return !NPC.AnyNPCs(ModContent.NPCType<StomachOfCthulhu>()) && (player.InModBiome<Corrosion>() || player.InModBiome<CorrosionIce>() || player.InModBiome<CorrosionCaveDesert>() || player.InModBiome<CorrosionDesert>() || player.InModBiome<CorrosionUnderground>());
     }
 
     public override bool? UseItem(Player player)
@@ -41,7 +41,6 @@ public class ExpiredLeftovers : ModItem
         {
             // If the player using the item is the client
             // (explicitely excluded serverside here)
-            SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             int type = ModContent.NPCType<StomachOfCthulhu>();
 
@@ -70,4 +69,12 @@ public class ExpiredLeftovers : ModItem
             .SortAfterFirstRecipesOf(ItemID.WormFood)
             .Register();
     }
+
+    static SoundStyle BurpRoar = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp")
+    {
+        Volume = 10f,
+        Pitch = 0f,
+        PitchVariance = 0f,
+        MaxInstances = 1,
+    };
 }
