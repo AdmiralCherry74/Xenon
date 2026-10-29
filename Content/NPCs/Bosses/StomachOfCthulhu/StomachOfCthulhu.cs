@@ -100,6 +100,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
         public override void SetDefaults()
         {
+            NPCID.Sets.MPAllowedEnemies[Type] = true; 
             NPC.width = 146;
             NPC.height = 164;
             NPC.damage = 0;
