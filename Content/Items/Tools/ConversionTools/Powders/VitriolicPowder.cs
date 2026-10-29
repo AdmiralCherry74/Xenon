@@ -17,7 +17,7 @@ namespace Xenon.Content.Items.Tools.ConversionTools.Powders
             Item.useAnimation = 15;
             Item.shootSpeed = 4f;
             Item.consumable = true;
-            Item.stack = 9999;
+            Item.maxStack = 9999;
             Item.shoot = ModContent.ProjectileType<VitriolicPowderProj>();
             Item.value = Item.sellPrice(copper: 10);
         }

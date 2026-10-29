@@ -13,5 +13,7 @@ namespace Xenon.Content.Tiles.Furniture.BiomePlatforms
     public class AshGrassPlatformEcho : PlatformTemplate
     {
         public override int Dust => DustID.Ash;
+
+        public override bool LavaDeath => false;
     }
 }
