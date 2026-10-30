@@ -38,8 +38,6 @@ namespace Xenon.Content.NPCs.OceanMobs
         {
             if (Main.dayTime && SpawnHelper.Beach(ref spawnInfo))
                 return 0.4f;
-            if (Main.dayTime && SpawnHelper.Ocean(ref spawnInfo))
-                return 0.5f;
             else if (SpawnHelper.UndergroundOcean(ref spawnInfo))
                 return 0.6f;
             return 0;

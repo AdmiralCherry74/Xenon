@@ -17,7 +17,7 @@ namespace Xenon.Common.Globals.XenonPlayerGlobals
     {
         public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)
         {
-            if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+            if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
                 return
                 [
                     new Item(ModContent.ItemType<WoodenDagger>()),
@@ -28,7 +28,7 @@ namespace Xenon.Common.Globals.XenonPlayerGlobals
         }
         public override void ModifyStartingInventory(IReadOnlyDictionary<string, List<Item>> itemsByMod, bool mediumCoreDeath)
         {
-            if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+            if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
             {
                 itemsByMod["Terraria"].RemoveAll(item => item.type == ItemID.CopperShortsword);
                 itemsByMod["Terraria"].RemoveAll(item => item.type == ItemID.CopperPickaxe);

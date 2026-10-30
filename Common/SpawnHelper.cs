@@ -108,18 +108,7 @@ public class SpawnHelper
             spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineSandstone>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineQuicksand>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>() ||
-            spawnInfo.Water
-            );
-    }
-    public static bool UndergroundOceanWater(ref NPCSpawnInfo spawnInfo)
-    {
-        return Underground(ref spawnInfo) && (
-            spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<MarineSandstone>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<MarineQuicksand>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>() ||
-            spawnInfo.Water
+            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>()
             );
     }
     public static bool Mountain(ref NPCSpawnInfo spawnInfo)
@@ -136,12 +125,6 @@ public class SpawnHelper
             spawnInfo.SpawnTileType == ModContent.TileType<MossyAresStone>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MossyHelioStone>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MossyHephStone>());
-    }
-    public static bool Jungle(ref NPCSpawnInfo spawnInfo)
-    {
-        return
-            NotInDungeonsOrPillar(ref spawnInfo) && (
-            spawnInfo.SpawnTileType == TileID.JungleGrass);
     }
     public static bool Rhyolite(ref NPCSpawnInfo spawnInfo)
     {
@@ -168,16 +151,6 @@ public class SpawnHelper
             return false;
         if (TileLoader.TryGetConversionFallback(spawnInfo.SpawnTileType, BiomeConversionID.Purity, out int t))
             return t == spawnInfo.SpawnTileType;
-        return !Autumn(ref spawnInfo) &&
-               !Desert(ref spawnInfo) &&
-               !Snow(ref spawnInfo) &&
-               !Corrosion(ref spawnInfo) &&
-               !Corruption(ref spawnInfo) &&
-               !Crimson(ref spawnInfo) &&
-               !Ocean(ref spawnInfo) &&
-               !Mountain(ref spawnInfo) &&
-               !Mushroom(ref spawnInfo) &&
-               !Hallow(ref spawnInfo) && 
-               !Jungle(ref spawnInfo);
+        return !Autumn(ref spawnInfo) && !Desert(ref spawnInfo) && !Snow(ref spawnInfo);
     }
 }

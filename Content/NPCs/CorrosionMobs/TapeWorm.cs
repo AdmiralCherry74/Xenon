@@ -119,7 +119,6 @@ public class TapeWormHead : WormHead
             NPC.damage = 11;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
-            NPC.dontCountMe = true;
             NPC.lifeMax = 150;
             NPC.defense = 10;
             NPC.noGravity = true;
@@ -180,7 +179,6 @@ public class TapeWormHead : WormHead
                 NPC.lifeMax = 150;
                 NPC.defense = 14;
                 NPC.noGravity = true;
-                NPC.dontCountMe = true;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;

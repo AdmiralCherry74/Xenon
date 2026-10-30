@@ -30,8 +30,6 @@ namespace Xenon.Content.NPCs.CavernMobs
             NPC.damage = 65;
             NPC.defense = 100;
             NPC.lifeMax = 100;
-            NPC.activeTime = 375;
-            NPC.timeLeft = 187;
             NPC.dontTakeDamage = true;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;

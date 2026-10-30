@@ -8,13 +8,10 @@ Anyway, here is everything!
 Wooden Starting Tools:
 This change makes it so you start with Wooden tools instead of copper tools.
 this was mainly introduced as a way to make your copper tier of ore somewhat relevant to your progression.
-
-Copper-tiered Gear craftable at a workbench:
-This change makes it so you wont need an anvil to craft copper-tiered gear (Tools, Weapons, and Armour) and instead you'll need a workbench in order to craft them
-this should make obtaining copper-tiered gear faster and make players consider getting it a slight bit more
+Wooden tools cannot mine iron tier or above, so youll need to make a copper tier pick
 
 Copper, Iron, Silver and Gold pick power requirements:
-Going in hand with the above, This change basically makes it so you need to make a Copper-tiered pickaxe to mine iron-tiered ores, Iron-tiered pickaxes to mine Silver-tiered ores, and Silver-tiered pickaxes to mine Gold-tier ores.
+Going in hand with the above, This change basically makes it so you need to make Iron-tiered pickaxes to mine Silver-tiered ores, and Silver-tiered pickaxes to mine Gold-tier ores.
 Bombs still affect them all the same, so you could in theory just use bombs to skip the earlier ores.
 However i'm ok with this because Evil-tiered ores can be blown up normally in vanilla, plus it would be strange to make the normal ores resistant to bombs.
 

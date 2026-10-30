@@ -323,164 +323,73 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             {
                 #region Beginning of armor recipe changes
                 #region copper armor
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                Recipe CopperHelmetCraft = Main.recipe[i];
+                if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
                 {
-                    Recipe CopperHelmetCraft = Main.recipe[i];
-                    if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
-                    {
-                        CopperHelmetCraft.HasTile(TileID.WorkBenches);
-                        CopperHelmetCraft.RemoveTile(TileID.Anvils);
-                        CopperHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-                    //Copper Helmet recipe
-
-                    Recipe CopperChainmailCraft = Main.recipe[i];
-                    if (CopperChainmailCraft.HasIngredient(ItemID.CopperBar) && CopperChainmailCraft.HasTile(TileID.Anvils) && CopperChainmailCraft.HasResult(ItemID.CopperChainmail))
-                    {
-                        CopperChainmailCraft.HasTile(TileID.WorkBenches);
-                        CopperChainmailCraft.RemoveTile(TileID.Anvils);
-                        CopperChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-                    //Copper Chainmail recipe
-
-                    Recipe CopperGreavesCraft = Main.recipe[i];
-                    if (CopperGreavesCraft.HasIngredient(ItemID.CopperBar) && CopperGreavesCraft.HasTile(TileID.Anvils) && CopperGreavesCraft.HasResult(ItemID.CopperGreaves))
-                    {
-                        CopperGreavesCraft.HasTile(TileID.WorkBenches);
-                        CopperGreavesCraft.RemoveTile(TileID.Anvils);
-                        CopperGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
-                    //Copper Greaves recipe
-                    //End of Copper armor recipe changes
+                    CopperHelmetCraft.AddRecipeGroup("WoodHelmet");
                 }
-                else
+                //Copper Helmet recipe
+
+                Recipe CopperChainmailCraft = Main.recipe[i];
+                if (CopperChainmailCraft.HasIngredient(ItemID.CopperBar) && CopperChainmailCraft.HasTile(TileID.Anvils) && CopperChainmailCraft.HasResult(ItemID.CopperChainmail))
                 {
-                    Recipe CopperHelmetCraft = Main.recipe[i];
-                    if (CopperHelmetCraft.HasIngredient(ItemID.CopperBar) && CopperHelmetCraft.HasTile(TileID.Anvils) && CopperHelmetCraft.HasResult(ItemID.CopperHelmet))
-                    {
-                        CopperHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-                    //Copper Helmet recipe
-
-                    Recipe CopperChainmailCraft = Main.recipe[i];
-                    if (CopperChainmailCraft.HasIngredient(ItemID.CopperBar) && CopperChainmailCraft.HasTile(TileID.Anvils) && CopperChainmailCraft.HasResult(ItemID.CopperChainmail))
-                    {
-                        CopperChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-                    //Copper Chainmail recipe
-
-                    Recipe CopperGreavesCraft = Main.recipe[i];
-                    if (CopperGreavesCraft.HasIngredient(ItemID.CopperBar) && CopperGreavesCraft.HasTile(TileID.Anvils) && CopperGreavesCraft.HasResult(ItemID.CopperGreaves))
-                    {
-                        CopperGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
-                    //Copper Greaves recipe
-                    //End of Copper armor recipe changes
+                    CopperChainmailCraft.AddRecipeGroup("WoodBreastplate");
                 }
+                //Copper Chainmail recipe
+
+                Recipe CopperGreavesCraft = Main.recipe[i];
+                if (CopperGreavesCraft.HasIngredient(ItemID.CopperBar) && CopperGreavesCraft.HasTile(TileID.Anvils) && CopperGreavesCraft.HasResult(ItemID.CopperGreaves))
+                {
+                    CopperGreavesCraft.AddRecipeGroup("WoodGreaves");
+                }
+                //Copper Greaves recipe
+                //End of Copper armor recipe changes
                 #endregion
 
                 #region tin armor
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                Recipe TinHelmetCraft = Main.recipe[i];
+                if (TinHelmetCraft.HasIngredient(ItemID.TinBar) && TinHelmetCraft.HasTile(TileID.Anvils) && TinHelmetCraft.HasResult(ItemID.TinHelmet))
                 {
-                    Recipe TinHelmetCraft = Main.recipe[i];
-                    if (TinHelmetCraft.HasIngredient(ItemID.TinBar) && TinHelmetCraft.HasTile(TileID.Anvils) && TinHelmetCraft.HasResult(ItemID.TinHelmet))
-                    {
-                        TinHelmetCraft.HasTile(TileID.WorkBenches);
-                        TinHelmetCraft.RemoveTile(TileID.Anvils);
-                        TinHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-
-                    Recipe TinChainmailCraft = Main.recipe[i];
-                    if (TinChainmailCraft.HasIngredient(ItemID.TinBar) && TinChainmailCraft.HasTile(TileID.Anvils) && TinChainmailCraft.HasResult(ItemID.TinChainmail))
-                    {
-                        TinChainmailCraft.HasTile(TileID.WorkBenches);
-                        TinChainmailCraft.RemoveTile(TileID.Anvils);
-                        TinChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-
-                    Recipe TinGreavesCraft = Main.recipe[i];
-                    if (TinGreavesCraft.HasIngredient(ItemID.TinBar) && TinGreavesCraft.HasTile(TileID.Anvils) && TinGreavesCraft.HasResult(ItemID.TinGreaves))
-                    {
-                        TinGreavesCraft.HasTile(TileID.WorkBenches);
-                        TinGreavesCraft.RemoveTile(TileID.Anvils);
-                        TinGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
+                    TinHelmetCraft.AddRecipeGroup("WoodHelmet");
                 }
-                else
+                //Tin Helmet recipe
+
+                Recipe TinChainmailCraft = Main.recipe[i];
+                if (TinChainmailCraft.HasIngredient(ItemID.TinBar) && TinChainmailCraft.HasTile(TileID.Anvils) && TinChainmailCraft.HasResult(ItemID.TinChainmail))
                 {
-                    Recipe TinHelmetCraft = Main.recipe[i];
-                    if (TinHelmetCraft.HasIngredient(ItemID.TinBar) && TinHelmetCraft.HasTile(TileID.Anvils) && TinHelmetCraft.HasResult(ItemID.TinHelmet))
-                    {
-                        TinHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-                    //Tin Helmet recipe
-
-                    Recipe TinChainmailCraft = Main.recipe[i];
-                    if (TinChainmailCraft.HasIngredient(ItemID.TinBar) && TinChainmailCraft.HasTile(TileID.Anvils) && TinChainmailCraft.HasResult(ItemID.TinChainmail))
-                    {
-                        TinChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-                    //Tin Chainmail recipe
-
-                    Recipe TinGreavesCraft = Main.recipe[i];
-                    if (TinGreavesCraft.HasIngredient(ItemID.TinBar) && TinGreavesCraft.HasTile(TileID.Anvils) && TinGreavesCraft.HasResult(ItemID.TinGreaves))
-                    {
-                        TinGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
-                    //Tin Greaves recipe
+                    TinChainmailCraft.AddRecipeGroup("WoodBreastplate");
                 }
+                //Tin Chainmail recipe
+
+                Recipe TinGreavesCraft = Main.recipe[i];
+                if (TinGreavesCraft.HasIngredient(ItemID.TinBar) && TinGreavesCraft.HasTile(TileID.Anvils) && TinGreavesCraft.HasResult(ItemID.TinGreaves))
+                {
+                    TinGreavesCraft.AddRecipeGroup("WoodGreaves");
+                }
+                //Tin Greaves recipe
                 #endregion
 
                 #region aluminum armor
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                Recipe AluminumHelmetCraft = Main.recipe[i];
+                if (AluminumHelmetCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumHelmetCraft.HasTile(TileID.Anvils) && AluminumHelmetCraft.HasResult(ModContent.ItemType<AluminumHelmet>()))
                 {
-                    Recipe AluminumHelmetCraft = Main.recipe[i];
-                    if (AluminumHelmetCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumHelmetCraft.HasTile(TileID.Anvils) && AluminumHelmetCraft.HasResult(ModContent.ItemType<AluminumHelmet>()))
-                    {
-                        AluminumHelmetCraft.HasTile(TileID.WorkBenches);
-                        AluminumHelmetCraft.RemoveTile(TileID.Anvils);
-                        AluminumHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-
-                    Recipe AluminumChainmailCraft = Main.recipe[i];
-                    if (AluminumChainmailCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumChainmailCraft.HasTile(TileID.Anvils) && AluminumChainmailCraft.HasResult(ModContent.ItemType<AluminumChainmail>()))
-                    {
-                        AluminumChainmailCraft.HasTile(TileID.WorkBenches);
-                        AluminumChainmailCraft.RemoveTile(TileID.Anvils);
-                        AluminumChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-
-                    Recipe AluminumGreavesCraft = Main.recipe[i];
-                    if (AluminumGreavesCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumGreavesCraft.HasTile(TileID.Anvils) && AluminumGreavesCraft.HasResult(ModContent.ItemType<AluminumGreaves>()))
-                    {
-                        AluminumGreavesCraft.HasTile(TileID.WorkBenches);
-                        AluminumGreavesCraft.RemoveTile(TileID.Anvils);
-                        AluminumGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
+                    AluminumHelmetCraft.AddRecipeGroup("WoodHelmet");
                 }
-                else
+                //Aluminum Helmet recipe
+
+                Recipe AluminumChainmailCraft = Main.recipe[i];
+                if (AluminumChainmailCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumChainmailCraft.HasTile(TileID.Anvils) && AluminumChainmailCraft.HasResult(ModContent.ItemType<AluminumChainmail>()))
                 {
-                    Recipe AluminumHelmetCraft = Main.recipe[i];
-                    if (AluminumHelmetCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumHelmetCraft.HasTile(TileID.Anvils) && AluminumHelmetCraft.HasResult(ModContent.ItemType<AluminumHelmet>()))
-                    {
-                        AluminumHelmetCraft.AddRecipeGroup("WoodHelmet");
-                    }
-                    //Aluminum Helmet recipe
-
-                    Recipe AluminumChainmailCraft = Main.recipe[i];
-                    if (AluminumChainmailCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumChainmailCraft.HasTile(TileID.Anvils) && AluminumChainmailCraft.HasResult(ModContent.ItemType<AluminumChainmail>()))
-                    {
-                        AluminumChainmailCraft.AddRecipeGroup("WoodBreastplate");
-                    }
-                    //Aluminum Chainmail recipe
-
-                    Recipe AluminumGreavesCraft = Main.recipe[i];
-                    if (AluminumGreavesCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumGreavesCraft.HasTile(TileID.Anvils) && AluminumGreavesCraft.HasResult(ModContent.ItemType<AluminumGreaves>()))
-                    {
-                        AluminumGreavesCraft.AddRecipeGroup("WoodGreaves");
-                    }
-                    //Aluminum Greaves recipe
+                    AluminumChainmailCraft.AddRecipeGroup("WoodBreastplate");
                 }
+                //Aluminum Chainmail recipe
+
+                Recipe AluminumGreavesCraft = Main.recipe[i];
+                if (AluminumGreavesCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumGreavesCraft.HasTile(TileID.Anvils) && AluminumGreavesCraft.HasResult(ModContent.ItemType<AluminumGreaves>()))
+                {
+                    AluminumGreavesCraft.AddRecipeGroup("WoodGreaves");
+                }
+                //Aluminum Greaves recipe
                 #endregion
 
                 #region iron armor
@@ -940,7 +849,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 #region tools
                 #region pickaxes
                 #region copper tier pickaxes
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
                 {
                     Recipe CopperPickaxeCraft = Main.recipe[i];
                     if (CopperPickaxeCraft.HasIngredient(ItemID.CopperBar) && CopperPickaxeCraft.HasTile(TileID.Anvils) && CopperPickaxeCraft.HasResult(ItemID.CopperPickaxe))
@@ -1116,7 +1025,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
                 #region axes
                 #region copper tier axes
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
                 {
                     Recipe CopperAxeCraft = Main.recipe[i];
                     if (CopperAxeCraft.HasIngredient(ItemID.CopperBar) && CopperAxeCraft.HasTile(TileID.Anvils) && CopperAxeCraft.HasResult(ItemID.CopperAxe))
@@ -1572,58 +1481,26 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 #region weapons
                 #region broadsword
                 #region copper tier broadsword
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                Recipe CopperBroadswordCraft = Main.recipe[i];
+                if (CopperBroadswordCraft.HasIngredient(ItemID.CopperBar) && CopperBroadswordCraft.HasTile(TileID.Anvils) && CopperBroadswordCraft.HasResult(ItemID.CopperBroadsword))
                 {
-                    Recipe CopperBroadswordCraft = Main.recipe[i];
-                    if (CopperBroadswordCraft.HasIngredient(ItemID.CopperBar) && CopperBroadswordCraft.HasTile(TileID.Anvils) && CopperBroadswordCraft.HasResult(ItemID.CopperBroadsword))
-                    {
-                        CopperBroadswordCraft.AddRecipeGroup("WoodenSword");
-                        CopperBroadswordCraft.HasTile(TileID.WorkBenches);
-                        CopperBroadswordCraft.RemoveTile(TileID.Anvils);
-                    }
-                    //Copper Broadsword Recipe
-
-                    Recipe TinBroadswordCraft = Main.recipe[i];
-                    if (TinBroadswordCraft.HasIngredient(ItemID.TinBar) && TinBroadswordCraft.HasTile(TileID.Anvils) && TinBroadswordCraft.HasResult(ItemID.TinBroadsword))
-                    {
-                        TinBroadswordCraft.AddRecipeGroup("WoodenSword");
-                        TinBroadswordCraft.HasTile(TileID.WorkBenches);
-                        TinBroadswordCraft.RemoveTile(TileID.Anvils);
-                    }
-                    //Tin Broadsword Recipe
-
-                    Recipe AluminumBroadswordCraft = Main.recipe[i];
-                    if (AluminumBroadswordCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBroadswordCraft.HasTile(TileID.Anvils) && AluminumBroadswordCraft.HasResult(ModContent.ItemType<AluminumBroadsword>()))
-                    {
-                        AluminumBroadswordCraft.AddRecipeGroup("WoodenSword");
-                        AluminumBroadswordCraft.HasTile(TileID.WorkBenches);
-                        AluminumBroadswordCraft.RemoveTile(TileID.Anvils);
-                    }
-                    //Aluminum Broadsword Recipe
+                    CopperBroadswordCraft.AddRecipeGroup("WoodenSword");
                 }
-                else
+                //Copper Broadsword Recipe
+
+                Recipe TinBroadswordCraft = Main.recipe[i];
+                if (TinBroadswordCraft.HasIngredient(ItemID.TinBar) && TinBroadswordCraft.HasTile(TileID.Anvils) && TinBroadswordCraft.HasResult(ItemID.TinBroadsword))
                 {
-                    Recipe CopperBroadswordCraft = Main.recipe[i];
-                    if (CopperBroadswordCraft.HasIngredient(ItemID.CopperBar) && CopperBroadswordCraft.HasTile(TileID.Anvils) && CopperBroadswordCraft.HasResult(ItemID.CopperBroadsword))
-                    {
-                        CopperBroadswordCraft.AddRecipeGroup("WoodenSword");
-                    }
-                    //Copper Broadsword Recipe
-
-                    Recipe TinBroadswordCraft = Main.recipe[i];
-                    if (TinBroadswordCraft.HasIngredient(ItemID.TinBar) && TinBroadswordCraft.HasTile(TileID.Anvils) && TinBroadswordCraft.HasResult(ItemID.TinBroadsword))
-                    {
-                        TinBroadswordCraft.AddRecipeGroup("WoodenSword");
-                    }
-                    //Tin Broadsword Recipe
-
-                    Recipe AluminumBroadswordCraft = Main.recipe[i];
-                    if (AluminumBroadswordCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBroadswordCraft.HasTile(TileID.Anvils) && AluminumBroadswordCraft.HasResult(ModContent.ItemType<AluminumBroadsword>()))
-                    {
-                        AluminumBroadswordCraft.AddRecipeGroup("WoodenSword");
-                    }
-                    //Aluminum Broadsword Recipe
+                    TinBroadswordCraft.AddRecipeGroup("WoodenSword");
                 }
+                //Tin Broadsword Recipe
+
+                Recipe AluminumBroadswordCraft = Main.recipe[i];
+                if (AluminumBroadswordCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBroadswordCraft.HasTile(TileID.Anvils) && AluminumBroadswordCraft.HasResult(ModContent.ItemType<AluminumBroadsword>()))
+                {
+                    AluminumBroadswordCraft.AddRecipeGroup("WoodenSword");
+                }
+                //Aluminum Broadsword Recipe
                 #endregion
 
                 #region iron tier broadsword
@@ -1772,7 +1649,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
                 #region shortsword
                 #region copper tier shortsword
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
                 {
                     Recipe CopperShortswordCraft = Main.recipe[i];
                     if (CopperShortswordCraft.HasIngredient(ItemID.CopperBar) && CopperShortswordCraft.HasTile(TileID.Anvils) && CopperShortswordCraft.HasResult(ItemID.CopperShortsword))
@@ -2056,52 +1933,26 @@ namespace Xenon.Common.Globals.XenonItemGlobals
 
                 #region bows
                 #region copper tier bow
-                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                Recipe CopperBowCraft = Main.recipe[i];
+                if (CopperBowCraft.HasIngredient(ItemID.CopperBar) && CopperBowCraft.HasTile(TileID.Anvils) && CopperBowCraft.HasResult(ItemID.CopperBow))
                 {
-                    Recipe CopperBowCraft = Main.recipe[i];
-                    if (CopperBowCraft.HasIngredient(ItemID.CopperBar) && CopperBowCraft.HasTile(TileID.Anvils) && CopperBowCraft.HasResult(ItemID.CopperBow))
-                    {
-                        CopperBowCraft.AddRecipeGroup("WoodenBow");
-                        CopperBowCraft.HasTile(TileID.WorkBenches);
-                        CopperBowCraft.RemoveTile(TileID.Anvils);
-                    }
-
-                    Recipe TinBowCraft = Main.recipe[i];
-                    if (TinBowCraft.HasIngredient(ItemID.TinBar) && TinBowCraft.HasTile(TileID.Anvils) && TinBowCraft.HasResult(ItemID.TinBow))
-                    {
-                        TinBowCraft.AddRecipeGroup("WoodenBow");
-                        TinBowCraft.HasTile(TileID.WorkBenches);
-                        TinBowCraft.RemoveTile(TileID.Anvils);
-                    }
-
-                    Recipe AluminumBowCraft = Main.recipe[i];
-                    if (AluminumBowCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBowCraft.HasTile(TileID.Anvils) && AluminumBowCraft.HasResult(ModContent.ItemType<AluminumBow>()))
-                    {
-                        AluminumBowCraft.AddRecipeGroup("WoodenBow");
-                        AluminumBowCraft.HasTile(TileID.WorkBenches);
-                        AluminumBowCraft.RemoveTile(TileID.Anvils);
-                    }
+                    CopperBowCraft.AddRecipeGroup("WoodenBow");
                 }
-                else
+                //Copper Bow Recipe
+
+                Recipe TinBowCraft = Main.recipe[i];
+                if (TinBowCraft.HasIngredient(ItemID.TinBar) && TinBowCraft.HasTile(TileID.Anvils) && TinBowCraft.HasResult(ItemID.TinBow))
                 {
-                    Recipe CopperBowCraft = Main.recipe[i];
-                    if (CopperBowCraft.HasIngredient(ItemID.CopperBar) && CopperBowCraft.HasTile(TileID.Anvils) && CopperBowCraft.HasResult(ItemID.CopperBow))
-                    {
-                        CopperBowCraft.AddRecipeGroup("WoodenBow");
-                    }
-
-                    Recipe TinBowCraft = Main.recipe[i];
-                    if (TinBowCraft.HasIngredient(ItemID.TinBar) && TinBowCraft.HasTile(TileID.Anvils) && TinBowCraft.HasResult(ItemID.TinBow))
-                    {
-                        TinBowCraft.AddRecipeGroup("WoodenBow");
-                    }
-
-                    Recipe AluminumBowCraft = Main.recipe[i];
-                    if (AluminumBowCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBowCraft.HasTile(TileID.Anvils) && AluminumBowCraft.HasResult(ModContent.ItemType<AluminumBow>()))
-                    {
-                        AluminumBowCraft.AddRecipeGroup("WoodenBow");
-                    }
+                    TinBowCraft.AddRecipeGroup("WoodenBow");
                 }
+                //Tin Bow Recipe
+
+                Recipe AluminumBowCraft = Main.recipe[i];
+                if (AluminumBowCraft.HasIngredient(ModContent.ItemType<AluminumBar>()) && AluminumBowCraft.HasTile(TileID.Anvils) && AluminumBowCraft.HasResult(ModContent.ItemType<AluminumBow>()))
+                {
+                    AluminumBowCraft.AddRecipeGroup("WoodenBow");
+                }
+                //Aluminum Bow Recipe
                 #endregion
 
                 #region iron tier bow

@@ -18,7 +18,7 @@ namespace Xenon.Common.Globals.XenonNPCGlobals
     {
         public override void OnKill(NPC npc)
         {
-            if (!Main.hardMode && ModContent.GetInstance<XenonConfig>().BasicGameplayChanges && npc.type == NPCID.WallofFlesh)
+            if (!Main.hardMode && ModContent.GetInstance<XenonConfig>().BasicProgressionChanges && npc.type == NPCID.WallofFlesh)
             {
                 ModContent.GetInstance<HallowedOreGenerationCode>().BlessWorldWithHallowedOre();
             }
