@@ -2,12 +2,11 @@ HoePowerTooltip: "{0}% hoe power"
 WeaponDefenseDebuff: On hit, reduces enemies defense
 SplashPotionLocalization: Throw this to give someone the following effect
 FlipperPotionRelocalization: Lets you move swiftly in liquids and quicksand
-WoodenMattockBGCConfigLocalization: Able to mine Copper, Aluminum and Tin ore
-CopperTierPickBGCConfigLocalization: Able to mine Iron, Cinnabar and Lead ore
-IronTierPickBGCConfigLocalization: Able to mine Silver, Indium and Tungsten ore
-SilverTierPickBGCConfigLocalization: Able to mine Gold, Fluorite and Platinum ore
-TungstenPickBGCConfigRelocalization: Able to mine Gold, Fluorite, Platinum and Meteorite ore
-Tier4PickBGCConfigRelocalization: Able to mine, Demonite, Ingestane, Crimtane and Meteorite ore
+WoodenMattockBGCConfigLocalization: Able to mine Copper, Aluminum or Tin ore
+CopperTierPickBGCConfigLocalization: Able to mine Iron, Cinnabar or Lead ore
+IronTierPickBGCConfigLocalization: Able to mine Silver, Indium or Tungsten ore
+SilverTierPickBGCConfigLocalization: Able to mine Gold, Fluorite or Platinum ore
+TungstenPickBGCConfigRelocalization: Able to mine Gold, Fluorite, Platinum or Meteorite ore
 
 FossilizedBlessing: {
 	DisplayName: Fossilized Blessing
@@ -3014,7 +3013,7 @@ FluoriteHoe: {
 
 FluoritePickaxe: {
 	DisplayName: Fluorite Pickaxe
-	Tooltip: "Can mine Meteorite"
+	Tooltip: ""
 }
 
 FluoriteBattleaxe: {
