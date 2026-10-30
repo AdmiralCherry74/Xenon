@@ -1,13 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Terraria.Audio;
-using Terraria.Localization;
+using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
 
 namespace Xenon.Content.NPCs.Other
@@ -564,7 +565,7 @@ namespace Xenon.Content.NPCs.Other
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if(Main.hardMode || (!NPC.AnyNPCs(ModContent.NPCType<Bandit>()) && NPC.AnyNPCs(Type)))
+            if(Main.hardMode || (!NPC.AnyNPCs(ModContent.NPCType<Bandit>()) && NPC.AnyNPCs(Type)) || (SpawnHelper.Corrosion(ref spawnInfo) || SpawnHelper.Corruption(ref spawnInfo) || SpawnHelper.Crimson(ref spawnInfo)))
             {
                 return 0;
             }
@@ -603,7 +604,6 @@ namespace Xenon.Content.NPCs.Other
             npcLoot.Add(ItemDropRule.Common(ItemID.BandofRegeneration, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.ShoeSpikes, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Glowstick, 1, 40, 60));
-            npcLoot.Add(ItemDropRule.Common(ItemID.LeadOre, 2, 6, 18));
             npcLoot.Add(ItemDropRule.Common(ItemID.LifeCrystal, 100, 1, 2));
             npcLoot.Add(ItemDropRule.Common(ItemID.MiningPotion, 20, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.NightOwlPotion, 20, 1, 1));
@@ -611,9 +611,6 @@ namespace Xenon.Content.NPCs.Other
             npcLoot.Add(ItemDropRule.Common(ItemID.ShinePotion, 20, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.SpelunkerPotion, 40, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.ThrowingKnife, 2, 50, 250));
-            npcLoot.Add(ItemDropRule.Common(ItemID.TinOre, 1, 3, 15));
-            npcLoot.Add(ItemDropRule.Common(ItemID.TungstenOre, 2, 4, 20));
-            npcLoot.Add(ItemDropRule.Common(ItemID.PlatinumOre, 10, 4, 12));
             npcLoot.Add(ItemDropRule.Common(ItemID.Torch, 1, 20, 40));
         }
     }

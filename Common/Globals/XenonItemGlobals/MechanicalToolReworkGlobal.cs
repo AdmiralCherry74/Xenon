@@ -12,7 +12,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
     {
         public override void SetDefaults(Item item)
         {
-            if (Data.ItemSets.MechanicalToolReworkItemSet[item.type] && ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+            if (Data.ItemSets.MechanicalToolReworkItemSet[item.type] && ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
             {
                 item.useAnimation = item.useTime = 3;
             }

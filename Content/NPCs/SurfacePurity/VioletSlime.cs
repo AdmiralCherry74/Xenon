@@ -56,7 +56,13 @@ namespace Xenon.Content.NPCs.SurfacePurity
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return !Main.hardMode && NPC.downedSlimeKing && SpawnHelper.Purity(ref spawnInfo) && SpawnHelper.Surface(ref spawnInfo) ? 0.8f : 0;
+            return !Main.hardMode &&
+                   !Main.bloodMoon &&
+                    Main.invasionType == 0 &&
+                    Main.dayTime &&
+                    NPC.downedSlimeKing &&
+                    SpawnHelper.Purity(ref spawnInfo) &&
+                    SpawnHelper.Surface(ref spawnInfo) ? 0.8f : 0;
         }
         public override void HitEffect(NPC.HitInfo hit)
         {

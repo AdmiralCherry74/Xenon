@@ -41,6 +41,7 @@ public class LavaWormHead : WormHead
         NPC.noTileCollide = true;
         NPC.lifeMax = 200;
         NPC.defense = 10;
+        NPC.dontCountMe = true;
         NPC.noGravity = true;
         NPC.width = 26;
         NPC.aiStyle = -1;

@@ -67,6 +67,19 @@ internal class XenonGlobalNPC : GlobalNPC
                 pool.Add(NPCID.ArmedTorchZombie, 0.5f); //temporary
             }
         }
+        if (SpawnHelper.UndergroundOcean(ref spawnInfo))
+        {
+            pool[0] = 0;
+            pool.Add(NPCID.Crab, 0.5f);
+            pool.Add(NPCID.SeaSnail, 0.005f);
+        }
+        if (SpawnHelper.UndergroundOceanWater(ref spawnInfo))
+        {
+            pool.Add(NPCID.Goldfish, 1f);
+            pool.Add(NPCID.Shark, 0.4f);
+            pool.Add(NPCID.Squid, 0.0025f);
+            pool.Add(NPCID.PinkJellyfish, 0.3f);
+        }
         // Vanilla spawns on the modded evil blocks will need to be added manually... eventually.
 
 

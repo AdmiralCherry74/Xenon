@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Weapons.Melee.Flails;
 
@@ -54,11 +55,11 @@ namespace Xenon.Content.NPCs.Other
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            if (Main.hardMode || (!NPC.AnyNPCs(Type) && NPC.AnyNPCs(ModContent.NPCType<BanditLooter>())))
+            if (Main.hardMode || (!NPC.AnyNPCs(Type) && NPC.AnyNPCs(ModContent.NPCType<BanditLooter>()) || (SpawnHelper.Corrosion(ref spawnInfo) || SpawnHelper.Corruption(ref spawnInfo) || SpawnHelper.Crimson(ref spawnInfo))))
             {
                 return 0;
             }
-            else if (Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.PlayerInTown)
+            else if (Main.dayTime && spawnInfo.Player.ZoneOverworldHeight && !spawnInfo.PlayerInTown && Main.invasionType == 0)
             {
                 if (NPC.downedBoss3)
                     return 0.125f;
@@ -94,14 +95,12 @@ namespace Xenon.Content.NPCs.Other
             npcLoot.Add(ItemDropRule.Common(ItemID.Aglet, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.ClimbingClaws, 35, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.Glowstick,1, 20, 40));
-            npcLoot.Add(ItemDropRule.Common(ItemID.LeadOre, 10, 3, 9));
             npcLoot.Add(ItemDropRule.Common(ItemID.LifeCrystal, 200, 1, 2));
             npcLoot.Add(ItemDropRule.Common(ItemID.MiningPotion, 40, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.NightOwlPotion, 40, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.RopeCoil, 1, 1, 3));
             npcLoot.Add(ItemDropRule.Common(ItemID.ShinePotion, 40, 1, 1));
             npcLoot.Add(ItemDropRule.Common(ItemID.ThrowingKnife, 5, 50, 250));
-            npcLoot.Add(ItemDropRule.Common(ItemID.TinOre, 2, 3, 15));
             npcLoot.Add(ItemDropRule.Common(ItemID.Torch, 1, 10, 20));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Warflail>(), 10, 1, 1));
         }

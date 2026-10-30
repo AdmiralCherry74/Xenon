@@ -224,7 +224,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 #endregion
                 #endregion
 
-                if (!ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (!ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     return;
                 }
