@@ -8,7 +8,7 @@ using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems.PreHardOres;
 using Xenon.Content.Items.Valuables.MonsterRemains;
-using Xenon.Content.NPCs.CorrosionMobs;
+using Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack;
 
 namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions
 {

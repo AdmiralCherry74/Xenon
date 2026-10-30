@@ -6,16 +6,15 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using Xenon.Content.Buffs.Debuffs.Counterable;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CutNPCs
+namespace Xenon.Content.NPCs.CutNPCs.MaybeNextUpdate
 {
-    public class SnowLeopard : ModNPC
+    public class CrimsonCultist : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Wolf];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Tim];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -28,30 +27,31 @@ namespace Xenon.Content.NPCs.CutNPCs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 25;
-            NPC.defense = 7;
-            NPC.lifeMax = 150;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 2000;
-            NPC.knockBackResist = 0.3f;
-            NPC.aiStyle = NPCAIStyleID.Unicorn; 
+            NPC.damage = 3;
+            NPC.defense = 3;
+            NPC.lifeMax = 50;
+            NPC.HitSound = SoundID.NPCHit37;
+            NPC.DeathSound = SoundID.NPCDeath39;
+            NPC.value = 250;
+            NPC.knockBackResist = 0.05f;
+            NPC.aiStyle = NPCAIStyleID.Caster; 
             
-            AIType = NPCID.Wolf;
-            AnimationType = NPCID.Wolf;
+            AIType = NPCID.Tim;
+            AnimationType = NPCID.Tim;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<SnowLeopardBanner>();
+			BannerItem = ModContent.ItemType<CrimsonCultistBanner>();
 		}
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.SnowLeopard")),
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CrimsonCultist")),
             ]);
         }
+
+
 
         public override void AI()
         {
@@ -68,17 +68,6 @@ namespace Xenon.Content.NPCs.CutNPCs
             }
         }
 
-        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-        {
-            if (Main.rand.NextBool(3) && Main.expertMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 600);
-            }
-            else if (Main.rand.NextBool(3) && Main.masterMode)
-                {
-                    target.AddBuff(ModContent.BuffType<Gnashed>(), 900);
-                }
-        }
 
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -100,7 +89,8 @@ namespace Xenon.Content.NPCs.CutNPCs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.ThinIce, 5, 10, 20));
+            npcLoot.Add(ItemDropRule.Common(ItemID.ViciousPowder, 2, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(ItemID.BloodySpine, 1250, 1, 1));
         }
     }
 }

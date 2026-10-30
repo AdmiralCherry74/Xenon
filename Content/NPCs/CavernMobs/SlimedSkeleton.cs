@@ -52,7 +52,7 @@ namespace Xenon.Content.NPCs.CavernMobs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.Player.ZonePurity && SpawnHelper.RockLayer(ref spawnInfo) ? 0.25f : 0;
+            return spawnInfo.Player.ZonePurity && SpawnHelper.Cavern(ref spawnInfo) ? 0.25f : 0;
         }
         public override void HitEffect(NPC.HitInfo hit)
         {

@@ -109,12 +109,12 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
                     {
-                        tooltips.RemoveAt(tooltipInsert + 8);
+                        tooltips.RemoveAt(tooltipInsert + 7);
                         tooltips.Insert(tooltipInsert + 7, new TooltipLine(Mod, "TungstenPickBGCConfigRelocalization", Language.GetTextValue("Mods.Xenon.Items.TungstenPickBGCConfigRelocalization")));
                     }
                 }
             }
-            if (item.type == ItemID.GoldPickaxe || item.type == ItemID.PlatinumPickaxe || item.type == ModContent.ItemType<FluoritePickaxe>())
+            if (item.type == ItemID.GoldPickaxe)
             {
                 if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
@@ -122,6 +122,18 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     if (tooltipInsert != 1)
                     {
                         tooltips.RemoveAt(tooltipInsert + 8);
+                        tooltips.Insert(tooltipInsert + 7, new TooltipLine(Mod, "Tier3PickBGCConfigRelocalization", Language.GetTextValue("Mods.Xenon.Items.Tier4PickBGCConfigRelocalization")));
+                    }
+                }
+            }
+            if (item.type == ItemID.PlatinumPickaxe || item.type == ModContent.ItemType<FluoritePickaxe>())
+            {
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                {
+                    int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
+                    if (tooltipInsert != 1)
+                    {
+                        tooltips.RemoveAt(tooltipInsert + 7);
                         tooltips.Insert(tooltipInsert + 7, new TooltipLine(Mod, "Tier3PickBGCConfigRelocalization", Language.GetTextValue("Mods.Xenon.Items.Tier4PickBGCConfigRelocalization")));
                     }
                 }

@@ -5,16 +5,18 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Utilities;
-using Xenon.Content.Buffs.Debuffs.Counterable;
+using Xenon.Common;
+using Xenon.Content.Biomes.Corrosion;
+using Xenon.Content.Items.Materials.WorldInfectionMaterials;
+using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CutNPCs
+namespace Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack
 {
-    public class Tiger : ModNPC
+    public class HalfDigested : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Wolf];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PirateDeckhand];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -27,27 +29,27 @@ namespace Xenon.Content.NPCs.CutNPCs
         {
             NPC.width = 32;
             NPC.height = 44;
-            NPC.damage = 31;
-            NPC.defense = 4;
-            NPC.lifeMax = 125;
+            NPC.damage = 27;
+            NPC.defense = 8;
+            NPC.lifeMax = 60;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 2000;
-            NPC.knockBackResist = 0.3f;
-            NPC.aiStyle = NPCAIStyleID.Unicorn; 
-            AIType = NPCID.Wolf;
-            AnimationType = NPCID.Wolf;
-			//Banner = NPC.type;
-			//BannerItem = ModContent.ItemType<TigerBanner>();
-		}
+            NPC.value = 1000;
+            NPC.knockBackResist = 0.55f;
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
+            
+            AIType = NPCID.ZombieMushroomHat;
+            AnimationType = NPCID.PirateCorsair;
+			Banner = NPC.type;
+            BannerItem = ModContent.ItemType<HalfDigestedBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Corrosion>().Type, ModContent.GetInstance<CorrosionUnderground>().Type };
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Tiger")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HalfDigested")),
             ]);
         }
 
@@ -66,17 +68,10 @@ namespace Xenon.Content.NPCs.CutNPCs
             }
         }
 
-        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
-        {
-            if (Main.rand.NextBool(3) && Main.expertMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 600);
-            }
-            else if (Main.rand.NextBool(2) && Main.masterMode)
-            {
-                target.AddBuff(ModContent.BuffType<Gnashed>(), 900);
-            }
-        }
+        //public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        //{
+        //    return NPC.downedBoss2 && SpawnHelper.Corrosion(ref spawnInfo) ? 0.75f : 0;
+        //}
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
@@ -95,9 +90,9 @@ namespace Xenon.Content.NPCs.CutNPCs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.MudBlock, 5, 10, 20));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
         }
     }
 }

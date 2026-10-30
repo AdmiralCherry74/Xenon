@@ -31,7 +31,7 @@ namespace Xenon.Content.NPCs.Other
             NPC.height = 44;
             NPC.damage = 40;
             NPC.defense = 2;
-            NPC.lifeMax = 150;
+            NPC.lifeMax = 100;
             NPC.HitSound = SoundID.NPCHit48;
             NPC.DeathSound = SoundID.NPCDeath50;
             NPC.value = 1000;

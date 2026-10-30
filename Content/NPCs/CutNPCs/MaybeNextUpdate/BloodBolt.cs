@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Xenon.Content.NPCs.CutNPCs;
+namespace Xenon.Content.NPCs.CutNPCs.MaybeNextUpdate;
 
 public class BloodBolt : ModNPC
 {

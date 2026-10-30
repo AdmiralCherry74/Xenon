@@ -10,7 +10,7 @@ using Xenon.Common;
 using Xenon.Common.Systems;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorruptionMobs;
+namespace Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack.CorruptionMobs;
 
 public class NightmareWalker : ModNPC
 {
@@ -66,10 +66,10 @@ public class NightmareWalker : ModNPC
             return;
         }
     }
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
-    {
-        return ModContent.GetInstance<XenonBossCleared>().DownedEaterOfWorlds && SpawnHelper.Corruption(ref spawnInfo) ? 0.5f : 0;
-    }
+    //public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    //{
+    //    return ModContent.GetInstance<XenonBossCleared>().DownedEaterOfWorlds && SpawnHelper.Corruption(ref spawnInfo) ? 0.5f : 0;
+    //}
     public override void HitEffect(NPC.HitInfo hit)
     {
         if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

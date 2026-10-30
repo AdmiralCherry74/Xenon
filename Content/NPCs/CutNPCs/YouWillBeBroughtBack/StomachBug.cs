@@ -5,13 +5,15 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Xenon.Common;
+using Xenon.Common.Systems;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorrosionMobs
+namespace Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack
 {
-    public class StomachBugWall : ModNPC
+    public class StomachBug : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -26,8 +28,8 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 
         public override void SetDefaults()
         {
-            NPC.width = 52;
-            NPC.height = 56;
+            NPC.width = 55;
+            NPC.height = 28;
             NPC.damage = 10;
             NPC.defense = 12;
             NPC.lifeMax = 120;
@@ -35,8 +37,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
             NPC.knockBackResist = 0.20f;
-            NPC.aiStyle = NPCAIStyleID.Spider;
-            NPC.noGravity = true;
+            NPC.aiStyle = NPCAIStyleID.Fighter; 
             AIType = NPCID.WallCreeper;
             AnimationType = NPCID.WallCreeper;
 			Banner = NPC.type;
@@ -50,6 +51,11 @@ namespace Xenon.Content.NPCs.CorrosionMobs
                 new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
             ]);
         }
+
+        //public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        //{
+        //    return ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu && SpawnHelper.Corrosion(ref spawnInfo) ? 0.3f : 0;
+        //}
         public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)

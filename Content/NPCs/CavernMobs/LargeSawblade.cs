@@ -30,7 +30,7 @@ namespace Xenon.Content.NPCs.CavernMobs
             NPC.damage = 85;
             NPC.defense = 100;
             NPC.lifeMax = 100;
-            NPC.activeTime = 375;
+            NPC.activeTime = 187;
             NPC.timeLeft = 187;
             NPC.dontTakeDamage = true;
             NPC.HitSound = SoundID.NPCHit1;
@@ -52,7 +52,7 @@ namespace Xenon.Content.NPCs.CavernMobs
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return NPC.downedBoss1 && SpawnHelper.RockLayer(ref spawnInfo) ? 0.05f : 0;
+            return NPC.downedBoss1 && SpawnHelper.Cavern(ref spawnInfo) ? 0.025f : 0;
         }
         public override void OnSpawn(IEntitySource source)
         {

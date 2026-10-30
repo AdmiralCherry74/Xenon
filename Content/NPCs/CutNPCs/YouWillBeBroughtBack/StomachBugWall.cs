@@ -5,20 +5,19 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Common;
 using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorrosionMobs
+namespace Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack
 {
-    public class HalfDigested : ModNPC
+    public class StomachBugWall : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.PirateDeckhand];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
 
-            NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
+            NPCID.Sets.NPCBestiaryDrawModifiers value = new()
             {
                 Velocity = 1f
             };
@@ -27,50 +26,29 @@ namespace Xenon.Content.NPCs.CorrosionMobs
 
         public override void SetDefaults()
         {
-            NPC.width = 32;
-            NPC.height = 44;
-            NPC.damage = 27;
-            NPC.defense = 8;
-            NPC.lifeMax = 60;
+            NPC.width = 52;
+            NPC.height = 56;
+            NPC.damage = 10;
+            NPC.defense = 12;
+            NPC.lifeMax = 120;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 1000;
-            NPC.knockBackResist = 0.55f;
-            NPC.aiStyle = NPCAIStyleID.Fighter; 
-            
-            AIType = NPCID.ZombieMushroomHat;
-            AnimationType = NPCID.PirateCorsair;
+            NPC.knockBackResist = 0.20f;
+            NPC.aiStyle = NPCAIStyleID.Spider;
+            NPC.noGravity = true;
+            AIType = NPCID.WallCreeper;
+            AnimationType = NPCID.WallCreeper;
 			Banner = NPC.type;
-            BannerItem = ModContent.ItemType<HalfDigestedBanner>();
-            SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
+            BannerItem = ModContent.ItemType<StomachBugBanner>();
+            SpawnModBiomes = [ModContent.GetInstance<Corrosion>().Type, ModContent.GetInstance<CorrosionUnderground>().Type];
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
-
             bestiaryEntry.Info.AddRange([
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.HalfDigested")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.StomachBug")),
             ]);
-        }
-
-        public override void AI()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-        public override void OnKill()
-        {
-            if (Main.netMode == NetmodeID.MultiplayerClient)
-            {
-                return;
-            }
-        }
-
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            return NPC.downedBoss2 && SpawnHelper.Corrosion(ref spawnInfo) ? 0.75f : 0;
         }
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -90,9 +68,10 @@ namespace Xenon.Content.NPCs.CorrosionMobs
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3));
         }
     }
 }

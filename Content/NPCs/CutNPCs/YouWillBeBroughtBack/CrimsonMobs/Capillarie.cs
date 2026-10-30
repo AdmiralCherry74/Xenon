@@ -5,20 +5,19 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Utilities;
 using Xenon.Common;
 using Xenon.Common.Systems;
-using Xenon.Content.Biomes.Corrosion;
-using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Banner;
 using Xenon.Content.NPCs.Template;
-using static Xenon.Content.NPCs.CorrosionMobs.TapeWormHead.TapeWormBody;
+using static Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack.CrimsonMobs.CapillarieHead.CapillarieBody;
 
-namespace Xenon.Content.NPCs.CorrosionMobs;
+namespace Xenon.Content.NPCs.CutNPCs.YouWillBeBroughtBack.CrimsonMobs;
 
-public class TapeWormHead : WormHead
+public class CapillarieHead : WormHead
 {
-    public override int BodyType => ModContent.NPCType<TapeWormBody>();
-    public override int TailType => ModContent.NPCType<TapeWormTail>();
+    public override int BodyType => ModContent.NPCType<CapillarieBody>();
+    public override int TailType => ModContent.NPCType<CapillarieTail>();
     public override bool CanFly => true;
 
     public override void SetStaticDefaults()
@@ -35,11 +34,11 @@ public class TapeWormHead : WormHead
     }
     public override void SetDefaults()
     {
-        NPC.damage = 26;
+        NPC.damage = 36;
         NPC.netAlways = true;
         NPC.noTileCollide = true;
-        NPC.lifeMax = 150;
-        NPC.defense = 6;
+        NPC.lifeMax = 75;
+        NPC.defense = 0;
         NPC.noGravity = true;
         NPC.width = 26;
         NPC.aiStyle = -1;
@@ -50,20 +49,21 @@ public class TapeWormHead : WormHead
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
 		Banner = NPC.type;
-        BannerItem = ModContent.ItemType<TapeWormBanner>();
-        SpawnModBiomes = new int[] { ModContent.GetInstance<Biomes.Corrosion.Corrosion>().Type, ModContent.GetInstance<Biomes.Corrosion.CorrosionUnderground>().Type };
-    }
+		BannerItem = ModContent.ItemType<CapillaryBanner>();
+	}
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(
         [
-            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.TapeWorm"))
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCrimson,
+            new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Capillarie"))
         ]);
     }
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
-    {
-        return ModContent.GetInstance<XenonBossCleared>().DownedStomachOfCthulhu && SpawnHelper.Corrosion(ref spawnInfo) ? 0.5f : 0;
-    }
+    //public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    //{
+    //    return ModContent.GetInstance<XenonBossCleared>().DownedBrainOfCthulhu && SpawnHelper.Crimson(ref spawnInfo) ? 0.5f : 0;
+    //}
     public override void HitEffect(NPC.HitInfo hit)
     {
         if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
@@ -84,23 +84,23 @@ public class TapeWormHead : WormHead
     }
     public override void Init()
     {
-        MinSegmentLength = 12;
-        MaxSegmentLength = 15;
+        MinSegmentLength = 6;
+        MaxSegmentLength = 10;
 
         CommonWormInit(this);
     }
     internal static void CommonWormInit(Worm worm)
     {
         // These two properties handle the movement of the worm
-        worm.MoveSpeed = 6f;
-        worm.Acceleration = 0.05f;
+        worm.MoveSpeed = 9f;
+        worm.Acceleration = 0.15f;
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
-        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Bolus>(), 3, 1, 2));
+        npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 2));
         npcLoot.Add(ItemDropRule.Common(ItemID.WormTooth, 1, 3, 8));
     }
-    public class TapeWormBody : WormBody
+    public class CapillarieBody : WormBody
     {
         public override void SetStaticDefaults()
         {
@@ -116,12 +116,12 @@ public class TapeWormHead : WormHead
         }
         public override void SetDefaults()
         {
-            NPC.damage = 11;
+            NPC.damage = 20;
             NPC.netAlways = true;
             NPC.noTileCollide = true;
+            NPC.lifeMax = 75;
+            NPC.defense = 2;
             NPC.dontCountMe = true;
-            NPC.lifeMax = 150;
-            NPC.defense = 10;
             NPC.noGravity = true;
             NPC.width = 26;
             NPC.aiStyle = -1;
@@ -131,14 +131,6 @@ public class TapeWormHead : WormHead
             NPC.knockBackResist = 0f;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-        }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
-            {
-                return 0.50f;
-            }
-            return 0;
         }
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
         {
@@ -162,7 +154,7 @@ public class TapeWormHead : WormHead
                 Main.gore[gore].velocity *= 0.3f;
             }
         }
-        public class TapeWormTail : WormTail
+        public class CapillarieTail : WormTail
         {
             public override void SetStaticDefaults()
             {
@@ -174,13 +166,13 @@ public class TapeWormHead : WormHead
             }
             public override void SetDefaults()
             {
-                NPC.damage = 6;
+                NPC.damage = 17;
                 NPC.netAlways = true;
                 NPC.noTileCollide = true;
-                NPC.lifeMax = 150;
-                NPC.defense = 14;
-                NPC.noGravity = true;
+                NPC.lifeMax = 75;
+                NPC.defense = 6;
                 NPC.dontCountMe = true;
+                NPC.noGravity = true;
                 NPC.width = 26;
                 NPC.aiStyle = -1;
                 NPC.behindTiles = true;
@@ -189,14 +181,6 @@ public class TapeWormHead : WormHead
                 NPC.knockBackResist = 0f;
                 NPC.HitSound = SoundID.NPCHit1;
                 NPC.DeathSound = SoundID.NPCDeath1;
-            }
-            public override float SpawnChance(NPCSpawnInfo spawnInfo)
-            {
-                if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
-                {
-                    return 0.50f;
-                }
-                return 0;
             }
             public override void HitEffect(NPC.HitInfo hit)
             {

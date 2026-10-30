@@ -80,11 +80,15 @@ public class SpawnHelper
     }
     public static bool Underground(ref NPCSpawnInfo spawnInfo)
     {
-        return spawnInfo.SpawnTileY > Main.worldSurface && NotInDungeonsOrPillar(ref spawnInfo);
+        return spawnInfo.SpawnTileY > Main.worldSurface && spawnInfo.SpawnTileY < Main.rockLayer && spawnInfo.SpawnTileY < Main.UnderworldLayer && NotInDungeonsOrPillar(ref spawnInfo);
     }
-    public static bool RockLayer(ref NPCSpawnInfo spawnInfo)
+    public static bool Cavern(ref NPCSpawnInfo spawnInfo)
     {
-        return spawnInfo.SpawnTileY > Main.rockLayer && NotInDungeonsOrPillar(ref spawnInfo);
+        return spawnInfo.SpawnTileY > Main.rockLayer && spawnInfo.SpawnTileY < Main.worldSurface && spawnInfo.SpawnTileY < Main.UnderworldLayer  && NotInDungeonsOrPillar(ref spawnInfo);
+    }
+    public static bool ForUndergroundBiomes(ref NPCSpawnInfo spawnInfo)
+    {
+        return spawnInfo.SpawnTileY > Main.worldSurface && spawnInfo.SpawnTileY < Main.UnderworldLayer && NotInDungeonsOrPillar(ref spawnInfo);
     }
     public static bool NotNoWorms(ref NPCSpawnInfo spawnInfo)
     {
@@ -104,21 +108,22 @@ public class SpawnHelper
     }
     public static bool UndergroundOcean(ref NPCSpawnInfo spawnInfo)
     {
-        return Underground(ref spawnInfo) && (
-            spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
+        return ForUndergroundBiomes(ref spawnInfo) && (
+            (spawnInfo.SpawnTileX < 250 || spawnInfo.SpawnTileX > Main.maxTilesX - 250) &&
+            (spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineSandstone>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineQuicksand>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>() ||
-            spawnInfo.Water
+            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>())
             );
     }
     public static bool UndergroundOceanWater(ref NPCSpawnInfo spawnInfo)
     {
-        return Underground(ref spawnInfo) && (
-            spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
+        return ForUndergroundBiomes(ref spawnInfo) && ((
+            (spawnInfo.SpawnTileX < 250 || spawnInfo.SpawnTileX > Main.maxTilesX - 250) &&
+            (spawnInfo.SpawnTileType == ModContent.TileType<MarineSand>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineSandstone>() ||
             spawnInfo.SpawnTileType == ModContent.TileType<MarineQuicksand>() ||
-            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>() ||
+            spawnInfo.SpawnTileType == ModContent.TileType<HardenedMarineSand>())) &&
             spawnInfo.Water
             );
     }

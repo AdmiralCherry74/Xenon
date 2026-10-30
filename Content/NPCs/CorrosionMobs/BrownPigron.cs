@@ -79,7 +79,7 @@ namespace Xenon.Content.NPCs.CorrosionMobs
             npcLoot.Add(ItemDropRule.ByCondition(new Conditions.WindyEnoughForKiteDrops(), ItemID.KitePigron, 25));
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo) =>
-    spawnInfo.Player.InModBiome<Corrosion>() && SpawnHelper.NotNoWorms(ref spawnInfo) && SpawnHelper.RockLayer(ref spawnInfo) &&
+    spawnInfo.Player.InModBiome<Corrosion>() && SpawnHelper.NotNoWorms(ref spawnInfo) && SpawnHelper.Cavern(ref spawnInfo) &&
     (spawnInfo.SpawnTileType is TileID.SnowBlock or TileID.BreakableIce || TileID.Sets.Conversion.Ice[spawnInfo.SpawnTileType]) &&
     Main.hardMode ? 0.033f : 0f;
     }

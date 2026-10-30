@@ -5,17 +5,16 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Xenon.Common;
-using Xenon.Common.Systems;
+using Xenon.Content.Biomes.Corrosion;
 using Xenon.Content.Items.Placeable.Banner;
 
-namespace Xenon.Content.NPCs.CorruptionMobs
+namespace Xenon.Content.NPCs.CutNPCs.MaybeNextUpdate
 {
-    public class Evphila : ModNPC
+    public class CorrodedCultist : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.WallCreeper];
+            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Tim];
 
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -26,35 +25,47 @@ namespace Xenon.Content.NPCs.CorruptionMobs
 
         public override void SetDefaults()
         {
-            NPC.width = 55;
-            NPC.height = 28;
-            NPC.damage = 20;
-            NPC.defense = 10;
-            NPC.lifeMax = 90;
-            NPC.HitSound = SoundID.NPCHit1;
-            NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 1000;
-            NPC.knockBackResist = 0.75f;
-            NPC.aiStyle = NPCAIStyleID.Fighter; 
+            NPC.width = 32;
+            NPC.height = 44;
+            NPC.damage = 3;
+            NPC.defense = 3;
+            NPC.lifeMax = 50;
+            NPC.HitSound = SoundID.NPCHit37;
+            NPC.DeathSound = SoundID.NPCDeath39;
+            NPC.value = 250;
+            NPC.knockBackResist = 0.05f;
+            NPC.aiStyle = NPCAIStyleID.Caster; 
             
-            AIType = NPCID.WallCreeper;
-            AnimationType = NPCID.WallCreeper;
+            AIType = NPCID.Tim;
+            AnimationType = NPCID.Tim;
 			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<EvphilaBanner>();
-		}
+            BannerItem = ModContent.ItemType<CorrodedCultistBanner>();
+            SpawnModBiomes = new int[] { ModContent.GetInstance<Corrosion>().Type};
+        }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
 
             bestiaryEntry.Info.AddRange([
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCorruption,
-                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.Evphila")),
+                new FlavorTextBestiaryInfoElement(Language.GetTextValue("Mods.Xenon.Bestiary.CorrodedCultist")),
             ]);
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+
+
+
+        public override void AI()
         {
-            return ModContent.GetInstance<XenonBossCleared>().DownedEaterOfWorlds && SpawnHelper.Corruption(ref spawnInfo) ? 0.5f : 0;
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+            {
+                return;
+            }
+        }
+        public override void OnKill()
+        {
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+            {
+                return;
+            }
         }
         public override void HitEffect(NPC.HitInfo hit)
         {
@@ -76,8 +87,10 @@ namespace Xenon.Content.NPCs.CorruptionMobs
         }
          public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ItemID.RottenChunk, 3, 1, 1));
-            npcLoot.Add(ItemDropRule.Common(ItemID.Vertebrae, 3, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.ViciousPowder, 2, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(ItemID.VilePowder, 2, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(ItemID.BloodySpine, 1250, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(ItemID.WormFood, 1250, 1, 1));
         }
     }
 }

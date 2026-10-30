@@ -158,7 +158,7 @@ namespace Xenon.Content.NPCs.TownNPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         { // Requirements for the town NPC to spawn.
-            if (TownNPCRespawnSystem.unlockedBakerSpawn)
+            if (!TownNPCRespawnSystem.unlockedBakerSpawn)
             {
                 // If the Baker has spawned in this world before this will return true;
                 return true;
@@ -166,7 +166,7 @@ namespace Xenon.Content.NPCs.TownNPCs
 
             foreach (var player in Main.ActivePlayers)
             {
-                // Player has to have a specificed Fruit, Veggietable or other foods in order for the NPC to spawn
+                // Player has to have a specificed Fruit, in order for the NPC to spawn
                 if (player.inventory.Any(item => ItemSets.BakersFood[Type]))
                 {
                     return true;

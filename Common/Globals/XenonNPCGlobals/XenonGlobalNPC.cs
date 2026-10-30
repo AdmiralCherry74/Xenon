@@ -14,8 +14,6 @@ using Xenon.Content.Buffs.Debuffs;
 using Xenon.Content.NPCs.CatacombMobs;
 using Xenon.Content.NPCs.CavernMobs;
 using Xenon.Content.NPCs.CorrosionMobs;
-using Xenon.Content.NPCs.CorruptionMobs;
-using Xenon.Content.NPCs.CrimsonMobs;
 using Xenon.Content.NPCs.CutNPCs;
 using Xenon.Content.NPCs.JungleMobs;
 using Xenon.Content.NPCs.MountainsMobs;

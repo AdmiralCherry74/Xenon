@@ -6,17 +6,16 @@ namespace Xenon.Common.MasterModeGlobals.XenonMMNPCGlobals
 {
     public class DamageAndDefenseRebalenceNPC : GlobalNPC
     {
-        public override void SetDefaults(NPC entity)
+        public override void ApplyDifficultyAndPlayerScaling(NPC npc, int numPlayers, float balance, float bossAdjustment)
         {
             if (ModContent.GetInstance<XenonConfig>().MasterModeChanges && Main.masterMode)
             {
-                if (!entity.friendly)
+                if (!npc.friendly && !npc.boss)
                 {
                     //Makes enemies hit like a truck but in exchange they barely get stronger themselves
                     //Mainly inspired by nightmare difficulty from Dying Light 2
-                    entity.damage *= 4;
-                    entity.defense /= 2;
-                    entity.lifeMax /= 2;
+                    npc.damage *= 2;
+                    npc.lifeMax = (int)(npc.lifeMax * 0.87f);
                 }
             }
         }
