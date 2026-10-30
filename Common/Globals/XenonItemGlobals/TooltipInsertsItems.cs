@@ -45,9 +45,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 }
             }
             #region Basic Gameplay Changes Relocalization
+
+            #region Pickaxe tooltips
             if (item.type == ModContent.ItemType<WoodenMattock>())
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
@@ -58,7 +60,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
             if (item.type == ItemID.CopperPickaxe)
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
@@ -69,7 +71,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
             if (item.type == ItemID.TinPickaxe || item.type == ModContent.ItemType<AluminumPickaxe>())
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
@@ -80,7 +82,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
             if (item.type == ItemID.IronPickaxe || item.type == ItemID.LeadPickaxe || item.type == ModContent.ItemType<CinnabarPickaxe>())
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
@@ -91,7 +93,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
             if (item.type == ItemID.SilverPickaxe || item.type == ModContent.ItemType<IndiumPickaxe>())
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
@@ -102,16 +104,29 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             }
             if (item.type == ItemID.TungstenPickaxe)
             {
-                if (ModContent.GetInstance<XenonConfig>().BasicProgressionChanges)
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
                 {
                     int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
                     if (tooltipInsert != 1)
                     {
-                        tooltips.RemoveAt(tooltipInsert + 7);
+                        tooltips.RemoveAt(tooltipInsert + 8);
                         tooltips.Insert(tooltipInsert + 7, new TooltipLine(Mod, "TungstenPickBGCConfigRelocalization", Language.GetTextValue("Mods.Xenon.Items.TungstenPickBGCConfigRelocalization")));
                     }
                 }
             }
+            if (item.type == ItemID.GoldPickaxe || item.type == ItemID.PlatinumPickaxe || item.type == ModContent.ItemType<FluoritePickaxe>())
+            {
+                if (ModContent.GetInstance<XenonConfig>().BasicGameplayChanges)
+                {
+                    int tooltipInsert = tooltips.FindIndex((line) => line.Mod == "Terraria" && line.Name.StartsWith("axePower"));
+                    if (tooltipInsert != 1)
+                    {
+                        tooltips.RemoveAt(tooltipInsert + 8);
+                        tooltips.Insert(tooltipInsert + 7, new TooltipLine(Mod, "Tier3PickBGCConfigRelocalization", Language.GetTextValue("Mods.Xenon.Items.Tier4PickBGCConfigRelocalization")));
+                    }
+                }
+            }
+            #endregion
             #endregion
         }
     }

@@ -121,6 +121,7 @@ public class CapillarieHead : WormHead
             NPC.noTileCollide = true;
             NPC.lifeMax = 75;
             NPC.defense = 2;
+            NPC.dontCountMe = true;
             NPC.noGravity = true;
             NPC.width = 26;
             NPC.aiStyle = -1;
@@ -170,6 +171,7 @@ public class CapillarieHead : WormHead
                 NPC.noTileCollide = true;
                 NPC.lifeMax = 75;
                 NPC.defense = 6;
+                NPC.dontCountMe = true;
                 NPC.noGravity = true;
                 NPC.width = 26;
                 NPC.aiStyle = -1;

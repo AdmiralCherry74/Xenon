@@ -57,7 +57,7 @@ namespace Xenon.Content.NPCs.UndergroundMobs
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return !Main.hardMode && NPC.downedSlimeKing && SpawnHelper.Purity(ref spawnInfo) && SpawnHelper.RockLayer(ref spawnInfo) ? 0.7f : 0;
+            return !Main.hardMode && NPC.downedSlimeKing && SpawnHelper.Purity(ref spawnInfo) && SpawnHelper.Underground(ref spawnInfo) ? 0.7f : 0;
         }
         public override void HitEffect(NPC.HitInfo hit)
         {

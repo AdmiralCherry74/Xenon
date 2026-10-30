@@ -36,11 +36,27 @@ XenonConfig: {
 
 	BasicProgressionChanges: {
 		Label: Basic Progression Changes
+		Tooltip: ""
+	}
+
+	BasicGameplayChanges: {
+		Label: Basic Gameplay Changes
 		Tooltip:
 			'''
 			Houses all of Xenon's basic gameplay changes. Like Wooden Tools replacing the starting copper tools, Pre-Hardmode Ores following pickaxe progression, drills being reworked to be extremely fast, recipes being changed up and small progression changes
-			If you would like to see every change made, check Xenon's github and find the "BasicProgressionChangesList.txt" file
+			If you would like to see every change made, check Xenon's github and find the "BasicGameplayChangesList.txt" file
 			Disable this if you want a more vanilla playthrough
+			'''
+	}
+
+	MasterModeChanges: {
+		Label: Master Mode Changes
+		Tooltip:
+			'''
+			Houses all of Xenon's master mode changes. Like enemies scaling differently (Enemies are less tanky but more deadly)
+			If you would like to see every change made, check Xenon's github and find the "MasterModeChangesList.txt" file
+			Disable this if you want a normal vanilla master mode playthrough
+			Work In Progress!
 			'''
 	}
 }

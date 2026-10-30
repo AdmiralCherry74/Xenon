@@ -3014,7 +3014,7 @@ FluoriteHoe: {
 
 FluoritePickaxe: {
 	DisplayName: Fluorite Pickaxe
-	Tooltip: "Can mine Meteorite"
+	Tooltip: Can mine Meteorite
 }
 
 FluoriteBattleaxe: {
