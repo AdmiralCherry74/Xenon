@@ -4,6 +4,7 @@ XenonConfig: {
 	Headers: {
 		Gameplay: Gameplay
 		Miscellaneous: Miscellaneous
+		MasterModeGameplay: Master Mode Gameplay Header
 	}
 
 	HellstoneRename: {

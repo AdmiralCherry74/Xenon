@@ -54,8 +54,11 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             {
                 entity.damage = 95;
             }
+            if (entity.type == ItemID.AshBlock)
+            {
+                ItemID.Sets.IsLavaImmuneRegardlessOfRarity[entity.type] = true;
+            }
         }
-
         public override bool? UseItem(Item item, Player player)
         {
             if(seeds.Contains<int>(item.type))
@@ -95,7 +98,6 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             
             return null;
         }
-
         public override void ModifyItemLoot(Item item, ItemLoot loot)
         {
             if(item.type == ItemID.KingSlimeBossBag)

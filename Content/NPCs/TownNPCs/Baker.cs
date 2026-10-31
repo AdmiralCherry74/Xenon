@@ -14,6 +14,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Xenon.Common.Data;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Common.Systems;
 using Xenon.Content.Emoticons;
 using Xenon.Content.Items.Consumables.BakersHandbooks;
@@ -24,7 +25,6 @@ namespace Xenon.Content.NPCs.TownNPCs
     public class Baker : ModNPC
     {
         public const string ShopName = "Shop";
-        public bool HaveWeTalkedBefore = false;
         //private static int ShimmerHeadIndex;
         private static Profiles.StackedNPCProfile NPCProfile;
 
@@ -216,11 +216,11 @@ namespace Xenon.Content.NPCs.TownNPCs
         public override string GetChat()
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
-            if (!HaveWeTalkedBefore)
+            if (!ModContent.GetInstance<XenonPlayerTalkedToNPCBefore>().HaveWeTalkedToBakerBefore)
             {
                 chat.Add(Language.GetTextValue("Mods.Xenon.NPCs.Baker.Dialouge.FirstTimeTalking"));
                 Item.NewItem(NPC.GetSource_GiftOrReward(), NPC.Center, ModContent.ItemType<BakersHandbookPurity1>());
-                HaveWeTalkedBefore = true;
+                ModContent.GetInstance<XenonPlayerTalkedToNPCBefore>().HaveWeTalkedToBakerBefore = true;
             }
             else
             {
@@ -430,15 +430,6 @@ namespace Xenon.Content.NPCs.TownNPCs
         {
             multiplier = 12f;
             randomOffset = 2f;
-        }
-        public override void LoadData(TagCompound tag)
-        {
-            HaveWeTalkedBefore = tag.GetBool("HaveWeTalkedBeforeTagBaker");
-        }
-
-        public override void SaveData(TagCompound tag)
-        {
-            tag["HaveWeTalkedBeforeTag"] = HaveWeTalkedBefore;
         }
     }
 }

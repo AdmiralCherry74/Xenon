@@ -15,6 +15,7 @@ using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Items.Materials.Organic;
 using Xenon.Content.Items.Materials.WorldInfectionMaterials;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Wood;
+using Xenon.Content.Items.Placeable.Blocks.Decoration.General;
 using Xenon.Content.Items.Tools.CuttingAxes;
 using Xenon.Content.Items.Tools.GardeningHoes;
 using Xenon.Content.Tiles.Building.Bricks;
@@ -121,13 +122,32 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                 .Register();
 
             Recipe.Create(ItemID.Hook)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 4)
-            .AddRecipeGroup("CopperBar")
-            .AddTile(TileID.Anvils)
-            .SortAfterFirstRecipesOf(ItemID.Chain)
-            .Register();
+                .AddRecipeGroup(RecipeGroupID.IronBar, 4)
+                .AddRecipeGroup("CopperBar")
+                .AddTile(TileID.Anvils)
+                .SortAfterFirstRecipesOf(ItemID.Chain)
+                .Register();
 
+            Recipe.Create(ItemID.EskimoHood)
+                .AddIngredient(ModContent.ItemType<ClothBlockItem>(), 10)
+                .AddIngredient(ItemID.Silk, 5)
+                .AddTile(TileID.Loom)
+                .SortBeforeFirstRecipesOf(ItemID.PinkEskimoHood)
+                .Register();
 
+            Recipe.Create(ItemID.EskimoCoat)
+                .AddIngredient(ModContent.ItemType<ClothBlockItem>(), 15)
+                .AddIngredient(ItemID.Silk, 10)
+                .AddTile(TileID.Loom)
+                .SortAfterFirstRecipesOf(ItemID.EskimoHood)
+                .Register();
+
+            Recipe.Create(ItemID.EskimoPants)
+                .AddIngredient(ModContent.ItemType<ClothBlockItem>(), 10)
+                .AddIngredient(ItemID.Silk, 15)
+                .AddTile(TileID.Loom)
+                .SortAfterFirstRecipesOf(ItemID.EskimoCoat)
+                .Register();
         }
 
         public override void PostAddRecipes()
@@ -140,6 +160,27 @@ namespace Xenon.Common.Globals.XenonItemGlobals
                     PlatinumCrownChange.HasTile(TileID.DemonAltar);
                     PlatinumCrownChange.RemoveTile(TileID.Anvils);
                     PlatinumCrownChange.SortAfterFirstRecipesOf(ModContent.ItemType<PlatinumCrownModern>());
+                }
+
+                Recipe PinkEskimoHoodChange = Main.recipe[i];
+                if (PinkEskimoHoodChange.HasIngredient(ItemID.EskimoHood) && PinkEskimoHoodChange.HasIngredient(ItemID.PinkThread) && PinkEskimoHoodChange.HasTile(TileID.WorkBenches) && PinkEskimoHoodChange.HasResult(ItemID.PinkEskimoHood))
+                {
+                    PinkEskimoHoodChange.HasTile(TileID.Loom);
+                    PinkEskimoHoodChange.RemoveTile(TileID.WorkBenches);
+                }
+
+                Recipe PinkEskimoCoatChange = Main.recipe[i];
+                if (PinkEskimoCoatChange.HasIngredient(ItemID.EskimoCoat) && PinkEskimoCoatChange.HasIngredient(ItemID.PinkThread) && PinkEskimoCoatChange.HasTile(TileID.WorkBenches) && PinkEskimoCoatChange.HasResult(ItemID.PinkEskimoCoat))
+                {
+                    PinkEskimoCoatChange.HasTile(TileID.Loom);
+                    PinkEskimoCoatChange.RemoveTile(TileID.WorkBenches);
+                }
+
+                Recipe PinkEskimoPantsChange = Main.recipe[i];
+                if (PinkEskimoPantsChange.HasIngredient(ItemID.EskimoPants) && PinkEskimoPantsChange.HasIngredient(ItemID.PinkThread) && PinkEskimoPantsChange.HasTile(TileID.WorkBenches) && PinkEskimoPantsChange.HasResult(ItemID.PinkEskimoPants))
+                {
+                    PinkEskimoPantsChange.HasTile(TileID.Loom);
+                    PinkEskimoPantsChange.RemoveTile(TileID.WorkBenches);
                 }
 
                 #region Replacing certain recipes with their respective recipe groups

@@ -204,3 +204,8 @@ TungstenApricotBuff: {
 	DisplayName: Tungsten fed
 	Description: +6% damage resistance, increased life regeneration
 }
+
+Cold: {
+	Description: Mods.Xenon.Buffs.Cold.Description
+	DisplayName: Cold
+}

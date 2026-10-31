@@ -37,6 +37,8 @@ namespace Xenon.Content.Projectiles.Summoner.Minions
             Projectile.minionPos = 0;
             Projectile.tileCollide = true;
             Projectile.aiStyle = ProjAIStyleID.CommonFollow;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 30;
 
             AIType = ProjectileID.FlinxMinion; // Act exactly like Soulscourge pirate
         }
@@ -56,7 +58,7 @@ namespace Xenon.Content.Projectiles.Summoner.Minions
         public override void AI()
         {
 
-                Player owner = Main.player[Projectile.owner];
+            Player owner = Main.player[Projectile.owner];
 
             if (!CheckActive(owner))
             {
