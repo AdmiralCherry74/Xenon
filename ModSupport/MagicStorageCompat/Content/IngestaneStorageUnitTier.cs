@@ -29,6 +29,10 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
 
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneStorageUnitTier : StorageUnitTier {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
 		public override int UpgradeItemType => ModContent.ItemType<IngestaneUpgrade>();
 
 		public override int CoreItemType => ModContent.ItemType<IngestaneCore>();
@@ -87,16 +91,24 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
 	// Reminder from the note above: TEStorageUnit is broken in v0.7.0.11 and prior versions, so a custom tile entity that implemnts a band-aid fix is required
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneStorageUnitEntity : TEStorageUnit {
-		// This class isn't strictly necessary post-v0.7.0.11 since TEStorageUnit already handles all Storage Unit logic,
-		//   but you can use it to override methods in the base entity.
-		// If you want a non-standard Storage Unit like the Creative Storage Unit, inherit from TEAbstractStorageUnit instead.
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
+        // This class isn't strictly necessary post-v0.7.0.11 since TEStorageUnit already handles all Storage Unit logic,
+        //   but you can use it to override methods in the base entity.
+        // If you want a non-standard Storage Unit like the Creative Storage Unit, inherit from TEAbstractStorageUnit instead.
 
-		public override bool ValidTile(in Tile tile) => TileLoader.GetTile(tile.TileType) is IngestaneStorageUnitTile && tile.TileFrameX % 36 == 0 && tile.TileFrameY % 36 == 0;
+        public override bool ValidTile(in Tile tile) => TileLoader.GetTile(tile.TileType) is IngestaneStorageUnitTile && tile.TileFrameX % 36 == 0 && tile.TileFrameY % 36 == 0;
 	}
 
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneStorageUnitTile : MagicStorage.Components.StorageUnit  {
-		public override void ModifyObjectData() {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
+        public override void ModifyObjectData() {
 			// By default, StorageUnit expects spritesheets to have 6 style columns per row
 			// If you want to modify this behavior, update:
 			//   TileObjectData.newTile.StyleHorizontal
@@ -123,7 +135,11 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
 
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneStorageUnitItem : BaseStorageUnitItem {
-		public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
+        public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
 
 		public override void SetDefaults() {
 			base.SetDefaults();
@@ -133,12 +149,20 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
     
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneUpgrade : BaseStorageUpgradeItem {
-		public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
+        public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
 	}
 
     [ExtendsFromMod("MagicStorage")]
 	public class IngestaneCore : BaseStorageCore {
-		public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
+        public override StorageUnitTier Tier => ModContent.GetInstance<IngestaneStorageUnitTier>();
 
 		// The tooltip will default to the localization at:  Mods.MagicStorage.Items.StorageCore.CommonTooltip
 		// If you want to customize the tooltip, you can override it here

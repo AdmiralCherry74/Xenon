@@ -12,6 +12,10 @@ namespace Xenon.ModSupport.MagicStorageCompat
     [ExtendsFromMod("MagicStorage")]
     public class MagicStorageRecipes : GlobalItem
     {
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return ModLoader.HasMod("MagicStorage");
+        }
         public override void AddRecipes()
         {
             Recipe.Create(ModContent.ItemType<IngestaneUpgrade>())
