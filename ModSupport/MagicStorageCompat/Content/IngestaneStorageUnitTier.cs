@@ -33,7 +33,7 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
         {
             return ModLoader.HasMod("MagicStorage");
         }
-		public override int UpgradeItemType => ModContent.ItemType<IngestaneUpgrade>();
+        public override int UpgradeItemType => ModContent.ItemType<IngestaneUpgrade>();
 
 		public override int CoreItemType => ModContent.ItemType<IngestaneCore>();
 
@@ -118,6 +118,7 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
 		}
 
 		public override TEStorageUnit GetTileEntity() {
+
 			// By default, StorageUnit places a TEStorageUnit tile entity
 			// Use this method to place a custom tile entity if needed
 
@@ -168,4 +169,19 @@ namespace Xenon.ModSupport.MagicStorageCompat.Content {
 		// If you want to customize the tooltip, you can override it here
 		public override LocalizedText Tooltip => base.Tooltip;
 	}
+    [ExtendsFromMod("MagicStorage")]
+    public class MagicStorageValidityCheckerFixer : ILoadable
+    {
+
+        public void Load(Mod mod)
+        {
+            MonoModHooks.Add(typeof(TEStorageUnit).GetMethod(nameof(TEStorageUnit.ValidTile)), (orig_ValidTile orig, TEStorageUnit self, in Tile tile) => {
+                if (tile.TileFrameX % 36 == 0 && tile.TileFrameY % 36 == 0) return TileLoader.GetTile(tile.TileType) is MagicStorage.Components.StorageUnit || orig(self, tile);
+                return false;
+            });
+        }
+        delegate bool orig_ValidTile(TEStorageUnit self, in Tile tile);
+        delegate bool hook_ValidTile(orig_ValidTile orig, TEStorageUnit self, in Tile tile);
+        public void Unload() { }
+    }
 }
