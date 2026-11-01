@@ -4,6 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Buffs.Minions;
+using Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 using Xenon.Content.Projectiles.Summoner.Minions;
 
 namespace Xenon.Content.Items.Weapons.Summon.MinionWands
@@ -40,7 +41,6 @@ namespace Xenon.Content.Items.Weapons.Summon.MinionWands
             Item.DamageType = DamageClass.Summon;
             Item.buffType = ModContent.BuffType<BunnyMinionBuff>();
             // No buffTime because otherwise the item tooltip would say something like "1 minute duration"
-            Item.shoot = ModContent.ProjectileType<BunnyMinionProj>(); // This item creates the minion projectile
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -55,7 +55,21 @@ namespace Xenon.Content.Items.Weapons.Summon.MinionWands
             // This is needed so the buff that keeps your minion alive and allows you to despawn it properly applies
             player.AddBuff(Item.buffType, 2);
 
-            return true; // The minion projectile will be spawned by the game since we return true.
+            if (Main.rand.NextBool(3))
+            {
+                Item.shoot = ModContent.ProjectileType<BunnyMinionTinProj>();
+                return true;
+            }
+            else if (Main.rand.NextBool(2))
+            {
+                Item.shoot = ModContent.ProjectileType<BunnyMinionAluminumProj>();
+                return true;
+            }
+            else
+            {
+                Item.shoot = ModContent.ProjectileType<BunnyMinionCopperProj>();
+                return true; // The minion projectile will be spawned by the game since we return true.
+            }
         }
         public override void AddRecipes()
         {
@@ -70,6 +84,13 @@ namespace Xenon.Content.Items.Weapons.Summon.MinionWands
                 .AddIngredient(RecipeGroupID.Wood, 10)
                 .AddIngredient(ItemID.Mushroom, 4)
                 .AddIngredient(ItemID.TinBar, 2)
+                .AddTile(TileID.WorkBenches)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(RecipeGroupID.Wood, 10)
+                .AddIngredient(ItemID.Mushroom, 4)
+                .AddIngredient(ModContent.ItemType<AluminumBar>(), 2)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }

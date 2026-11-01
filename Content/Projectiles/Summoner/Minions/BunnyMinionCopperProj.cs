@@ -9,7 +9,7 @@ namespace Xenon.Content.Projectiles.Summoner.Minions
     // Its attack pattern is simple: If an enemy is in range of 43 tiles, it will fly to it and deal contact damage
     // If the player targets a certain NPC with right-click, it will fly through tiles to it
     // If it isn't attacking, it will float near the player with minimal movement
-    public class BunnyMinionProj : ModProjectile
+    public class BunnyMinionCopperProj : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -38,7 +38,7 @@ namespace Xenon.Content.Projectiles.Summoner.Minions
             Projectile.tileCollide = true;
             Projectile.aiStyle = ProjAIStyleID.CommonFollow;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 30;
+            Projectile.localNPCHitCooldown = 20;
 
             AIType = ProjectileID.FlinxMinion; // Act exactly like Soulscourge pirate
         }

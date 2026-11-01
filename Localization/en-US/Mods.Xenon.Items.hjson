@@ -4410,3 +4410,13 @@ IngestaneUpgrade: {
 		Right Click a Storage Unit to use
 		'''
 }
+
+ExoticDirtPickaxe: {
+	DisplayName: Exotic Dirt Pickaxe
+	Tooltip: ""
+}
+
+ExoticPwnhammer: {
+	DisplayName: Exotic Pwnhammer
+	Tooltip: ""
+}

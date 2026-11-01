@@ -132,14 +132,6 @@ public class TapeWormHead : WormHead
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
-            {
-                return 0.50f;
-            }
-            return 0;
-        }
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
         {
             return false;
@@ -189,14 +181,6 @@ public class TapeWormHead : WormHead
                 NPC.knockBackResist = 0f;
                 NPC.HitSound = SoundID.NPCHit1;
                 NPC.DeathSound = SoundID.NPCDeath1;
-            }
-            public override float SpawnChance(NPCSpawnInfo spawnInfo)
-            {
-                if (spawnInfo.Player.InModBiome<Corrosion>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionUnderground>() && NPC.downedBoss2 || spawnInfo.Player.InModBiome<CorrosionDesert>() && NPC.downedBoss2)
-                {
-                    return 0.50f;
-                }
-                return 0;
             }
             public override void HitEffect(NPC.HitInfo hit)
             {
