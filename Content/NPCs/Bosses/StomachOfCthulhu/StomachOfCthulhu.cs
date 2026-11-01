@@ -21,6 +21,7 @@ using Xenon.Content.NPCs.CorrosionMobs;
 using System.Linq;
 using System.Collections.Generic;
 using Xenon.Content.NPCs.Bosses.StomachOfCthulhu.Minions;
+using System.IO;
 
 namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 {
@@ -129,13 +130,23 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         {
             Minions = 0;
 
+            NPC.life = NPC.lifeMax;
+            NPC.TargetClosest();
+        }
+
+        public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
+        {
             if(Main.expertMode)
                 NPC.lifeMax = 5350;
             if(Main.masterMode)
                 NPC.lifeMax = 6833;
 
-            NPC.life = NPC.lifeMax;
-            
+            NPC.lifeMax = (int)(NPC.lifeMax * balance);
+        }
+
+        public override void SendExtraAI(BinaryWriter writer)
+        {
+            base.SendExtraAI(writer);
         }
         public override void AI()
         {
@@ -331,12 +342,15 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 }
                 for (int j = 0; j < 4; j++)
                 {
-                    Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-                    float speed = 5f;
-                    Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-                    Vector2 moveTo = normalized * -speed;
+                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                    {
+                        Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+                        float speed = 5f;
+                        Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+                        Vector2 moveTo = normalized * -speed;
 
-                    Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<StomachBubble>(), 10, 4f);
+                    }
                 }
 
                 for (int i = 0; i < 50; i++)
@@ -419,13 +433,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                     switch (Main.rand.Next(3))
                     {
                         case 0:
-                            spawnType = ModContent.NPCType<TapeWormHeadEcho>();
+                            spawnType = ModContent.NPCType<GastritisEcho>();
                             break;
                         case 1:
                             spawnType = ModContent.NPCType<GastritisEcho>();
                             break;
                         case 2:
-                            spawnType = ModContent.NPCType<HalfDigestedEcho>();
+                            spawnType = ModContent.NPCType<GastritisEcho>();
                             break;
                     }
 
@@ -488,11 +502,14 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
                     if (AI_Timer % 5 == 0)
                     {
-                        Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
-                        float speed = 2f;
-                        Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
-                        Vector2 moveTo = normalized * -speed;
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<DimitriTreatmentProj>(), 13, 8f);
+                        if (Main.netMode != NetmodeID.MultiplayerClient)
+                        {
+                            Vector2 upwardsVector = Main.rand.NextVector2Unit(MathHelper.Pi / 4, MathHelper.Pi / 2) * Main.rand.NextFloat();
+                            float speed = 2f;
+                            Vector2 normalized = upwardsVector.SafeNormalize(Vector2.UnitY);
+                            Vector2 moveTo = normalized * -speed;
+                            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-25, -100), moveTo, ModContent.ProjectileType<DimitriTreatmentProj>(), 13, 8f);
+                        }
                     }
                 }
 
