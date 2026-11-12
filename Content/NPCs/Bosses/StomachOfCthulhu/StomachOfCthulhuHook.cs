@@ -16,7 +16,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
     public class StomachOfCthulhuHook : ModNPC
     {
-        private int despawnTimer = 1000;
         private int parentID = XenonGlobalNPC.corrosionBoss;
         public static Asset<Texture2D> ChainTexture;
 
@@ -72,14 +71,11 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             }
 
             Player player = Main.player[Main.npc[parentID].target];
-
             Movement(player);
-            
         }
 
         private void Movement(Player player)
         {
-
             if (Main.netMode == NetmodeID.MultiplayerClient)
             {
                 if (NPC.ai[0] == 0f)
@@ -92,7 +88,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             {
                 if (NPC.ai[0] == 0f || NPC.ai[1] == 0f)
                     NPC.localAI[0] = 0f;
-
                 else
                 {
                     float shootBoost = 2f;

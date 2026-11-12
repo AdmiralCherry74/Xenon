@@ -28,7 +28,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
     [AutoloadBossHead]
     public class StomachOfCthulhu : ModNPC
     {
-        
         public static int KidneyStones = 0;
         public int BurpCount = 0;
         
@@ -57,9 +56,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         private int minionSpawnClock = 420;
         private int spawnAttackWait = 300;
         public static int Minions = 0;
-
-        
-
 
         #region Burp SFX
         static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")
@@ -126,19 +122,19 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             cooldownSlot = ImmunityCooldownID.Bosses;
             return true;
         }
+
         public override void OnSpawn(IEntitySource source)
         {
             Minions = 0;
-
             NPC.life = NPC.lifeMax;
             NPC.TargetClosest();
         }
 
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
         {
-            if(Main.expertMode)
+            if (Main.expertMode)
                 NPC.lifeMax = 5350;
-            if(Main.masterMode)
+            if (Main.masterMode)
                 NPC.lifeMax = 6833;
 
             NPC.lifeMax = (int)(NPC.lifeMax * balance);
@@ -146,8 +142,16 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
         public override void SendExtraAI(BinaryWriter writer)
         {
-            base.SendExtraAI(writer);
+            writer.Write(pauseMovement);
+            writer.Write(acidChargeDir);
         }
+
+        public override void ReceiveExtraAI(BinaryReader reader)
+        {
+            pauseMovement = reader.ReadBoolean();
+            acidChargeDir = reader.ReadBoolean();
+        }
+
         public override void AI()
         {
             // Variables
@@ -165,6 +169,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 Hooks[3] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
                 Hooks[4] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
                 Hooks[5] = NPC.NewNPC(NPC.GetSource_FromAI(), (int)vector.X, (int)vector.Y, ModContent.NPCType<StomachOfCthulhuHook>(), NPC.whoAmI, 0f, 0f, 0f, 0f, 255);
+                NPC.netUpdate = true;
             }
 
             Player target = Main.player[NPC.target];
@@ -193,7 +198,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
         public void Movement(Player target)
         {
-
             if (pauseMovement) return;
 
             float xTopSpeed = 5f;
@@ -245,6 +249,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 else
                 {
                     NPC.EncourageDespawn(150);
+                    NPC.netUpdate = true;
                     XenonGlobalNPC.corrosionBoss = -1;
                     return;
                 }
@@ -258,7 +263,6 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             
             if (targetY > NPC.position.Y && maxClimbSpeed) NPC.velocity.Y += velocityChange;
             if (targetY < NPC.position.Y && maxClimbSpeed) NPC.velocity.Y -= velocityChange;
-        
         }
 
         // Hook Max Check. Currently not used for now.
@@ -316,6 +320,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 {
                     AI_State = Main.rand.Next(3, 7);
                     AI_Timer = 0f;
+                    NPC.netUpdate = true;
                 }
 
                 hoverDistance = 280f;
@@ -365,6 +370,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
                 AI_State = 2f;
                 AI_Timer = 0f;
+                NPC.netUpdate = true;
 
                 return;
             }
@@ -373,14 +379,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             #region Spawn Goons >:3
             if (AI_State == 5f)
             {
-                
                 if (AI_Timer == 0)
                 {
                     if (minionSpawnClock >= 0 || Minions >= MaxMinions)
                     {
                         AI_State = 2f;
                         AI_Timer = timeBetweenAttacks;
-
+                        NPC.netUpdate = true;
                         return;
                     }
                 }
@@ -449,19 +454,17 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                         if (Main.netMode == NetmodeID.MultiplayerClient)
                             { NetMessage.SendData(MessageID.SyncNPC, number: colonthree); }
                         Minions++;
+                        NPC.netUpdate = true;
                     }
-                    
                 }
 
                 if (AI_Timer >= 120f)
                 {
                     AI_State = 2f;
                     AI_Timer = 0f;
-
+                    NPC.netUpdate = true;
                     minionSpawnClock = minionSpawnCooldown;
                 }
-
-                
             }
             #endregion
 
@@ -472,7 +475,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 {
                     AI_State = 2f;
                     AI_Timer = timeBetweenAttacks;
-
+                    NPC.netUpdate = true;
                     return;
                 }
 
@@ -518,7 +521,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                     pauseMovement = false;
                     AI_State = 2f;
                     AI_Timer = 0f;
-
+                    NPC.netUpdate = true;
                     bubbleCooldownClock = bubbleCooldown;
                 }
             }
@@ -536,6 +539,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
                 {
                     NPC.ai[0] = 2;
                     pauseMovement = false;
+                    NPC.netUpdate = true;
                 }
                 else { /*Cutscene Logic*/ }
             }
