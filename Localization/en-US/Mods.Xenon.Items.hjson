@@ -4420,3 +4420,8 @@ ExoticPwnhammer: {
 	DisplayName: Exotic Pwnhammer
 	Tooltip: ""
 }
+
+GutstoneWallItem: {
+	DisplayName: Gutstone Wall Item
+	Tooltip: ""
+}

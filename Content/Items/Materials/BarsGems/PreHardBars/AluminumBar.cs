@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.Natural.OresAndGems;
+using Xenon.Content.Tiles.Building.Decorational;
 
 namespace Xenon.Content.Items.Materials.BarsGems.PreHardBars;
 
@@ -13,6 +14,7 @@ public class AluminumBar : ModItem
     }
     public override void SetDefaults()
     {
+        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>(), 1);
         Item.width = 20;
         Item.height = 20;
         Item.rare = ItemRarityID.White;

@@ -2,12 +2,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
-using Xenon.Content.Walls.BuildingWalls.Stones;
 using Xenon.Content.Walls.NaturalWalls.Stone;
 
-namespace Xenon.Content.Items.Placeable.Wall.Natural.Stone;
+namespace Xenon.Content.Items.Placeable.Wall.Natural.Stone.CombinedGemWall;
 
-public class AmberWallItem : ModItem
+public class GarnetWallItem : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -21,7 +20,7 @@ public class AmberWallItem : ModItem
         Item.width = 16;
         Item.useTurn = true;
         Item.useTime = 5;
-        Item.createWall = ModContent.WallType<AmberWall>();
+        Item.createWall = ModContent.WallType<GarnetWall>();
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 9999;
         Item.useAnimation = 10;

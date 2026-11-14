@@ -14,6 +14,7 @@ public class BilewoodBroadsword : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 19;
         Item.useAnimation = 19;
+        Item.useTurn = true;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;

@@ -14,6 +14,7 @@ public class AluminumBroadsword : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 20;
         Item.useAnimation = 20;
+        Item.useTurn = true;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;

@@ -39,6 +39,7 @@ namespace Xenon.Content.Items.Weapons.Summon.MinionWands
             // These below are needed for a minion weapon
             Item.noMelee = true;
             Item.DamageType = DamageClass.Summon;
+            Item.shoot = ModContent.ProjectileType<BunnyMinionCopperProj>();
             Item.buffType = ModContent.BuffType<BunnyMinionBuff>();
             // No buffTime because otherwise the item tooltip would say something like "1 minute duration"
         }
@@ -58,37 +59,35 @@ namespace Xenon.Content.Items.Weapons.Summon.MinionWands
             if (Main.rand.NextBool(3))
             {
                 Item.shoot = ModContent.ProjectileType<BunnyMinionTinProj>();
-                return true;
             }
             else if (Main.rand.NextBool(2))
             {
                 Item.shoot = ModContent.ProjectileType<BunnyMinionAluminumProj>();
-                return true;
             }
             else
             {
                 Item.shoot = ModContent.ProjectileType<BunnyMinionCopperProj>();
-                return true; // The minion projectile will be spawned by the game since we return true.
             }
+            return true;
         }
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(RecipeGroupID.Wood, 10)
+                .AddIngredient(ItemID.Wood, 10)
                 .AddIngredient(ItemID.Mushroom, 4)
                 .AddIngredient(ItemID.CopperBar, 2)
                 .AddTile(TileID.WorkBenches)
                 .Register();
 
             CreateRecipe()
-                .AddIngredient(RecipeGroupID.Wood, 10)
+                .AddIngredient(ItemID.Wood, 10)
                 .AddIngredient(ItemID.Mushroom, 4)
                 .AddIngredient(ItemID.TinBar, 2)
                 .AddTile(TileID.WorkBenches)
                 .Register();
 
             CreateRecipe()
-                .AddIngredient(RecipeGroupID.Wood, 10)
+                .AddIngredient(ItemID.Wood, 10)
                 .AddIngredient(ItemID.Mushroom, 4)
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 2)
                 .AddTile(TileID.WorkBenches)

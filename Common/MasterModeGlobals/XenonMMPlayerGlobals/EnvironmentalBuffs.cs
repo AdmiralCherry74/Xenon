@@ -16,7 +16,7 @@ namespace Xenon.Common.MasterModeGlobals.XenonMMPlayerGlobals
         {
             if (ModContent.GetInstance<XenonConfig>().MasterModeChanges && Main.masterMode)
             {
-                if (Player.wet || (Main.raining && !Player.behindBackWall))
+                if (Player.wet || (Main.raining && Player.position.Y > Main.worldSurface && !Player.behindBackWall))
                 {
                     Player.AddBuff(BuffID.Wet, 900);
                 }

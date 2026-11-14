@@ -15,6 +15,7 @@ public class RosePhaseblade : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 18;
         Item.useAnimation = 18;
+        Item.useTurn = true;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;

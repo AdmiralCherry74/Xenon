@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Xenon.Content.Dusts;
 
 namespace Xenon.Content.Tiles.Building.Decorational;
 
@@ -38,9 +39,21 @@ public class PlacedBars : ModTile
 		switch (Main.tile[i, j].TileFrameX / 18)
 		{
 			case 0:
-				type = ModContent.DustType<Dusts.CorrosionDust>();
+				type = ModContent.DustType<CorrosionDust>(); //Ingestane
 				break;
-		}
+            case 1:
+                type = ModContent.DustType<AluminumDust>(); //Aluminum
+                break;
+            case 2:
+                type = ModContent.DustType<CinnabarDust>(); //Cinnabar
+                break;
+            case 3:
+                type = ModContent.DustType<IndiumDust>(); //Indium
+                break;
+            case 4:
+                type = ModContent.DustType<FluoriteDust>(); //Fluorite
+                break;
+        }
 		return base.CreateDust(i, j, ref type);
 	}
 }

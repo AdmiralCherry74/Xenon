@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
-using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace Xenon.Content.NPCs.Other
 {
@@ -52,21 +53,25 @@ namespace Xenon.Content.NPCs.Other
         {
             if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
             {
-                for (int l = 0; l < 20; l++)
+                for (int i = 0; i < 30; i++)
                 {
-                    int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, 0f, 0f, 50, default, 1.5f);
-                    Main.dust[dust].velocity *= 2f;
-                    Main.dust[dust].noGravity = true;
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("SulfurBunny_Gore1").Type, 1f);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("SulfurBunny_Gore2").Type, 1f);
+
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, default, Main.rand.NextFloat(1, 1.4f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
-                int gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y - 10f), NPC.velocity, 99, NPC.scale);
-                Main.gore[gore].velocity *= 0.3f;
-                gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height / 2 - 15f), NPC.velocity, 99, NPC.scale);
-                Main.gore[gore].velocity *= 0.3f;
-                gore = Gore.NewGore(NPC.GetSource_FromThis(), new Vector2(NPC.position.X, NPC.position.Y + NPC.height - 20f), NPC.velocity, 99, NPC.scale);
-                Main.gore[gore].velocity *= 0.3f;
+            }
+            else
+            {
+                for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
+                {
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, default, Main.rand.NextFloat(1, 1.2f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
+                }
             }
         }
-         public override void ModifyNPCLoot(NPCLoot npcLoot)
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(ItemID.BunnyHood, 113, 1, 1));
         }

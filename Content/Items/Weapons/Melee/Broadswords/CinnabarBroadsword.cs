@@ -13,6 +13,7 @@ public class CinnabarBroadsword : ModItem
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 20;
+        Item.useTurn = true;
         Item.useAnimation = 20;
         Item.autoReuse = false;
 

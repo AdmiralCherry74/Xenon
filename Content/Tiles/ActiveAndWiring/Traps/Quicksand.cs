@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps;
 public class Quicksand : ModTile
@@ -32,7 +33,18 @@ public class Quicksand : ModTile
 		TileID.Sets.GeneralPlacementTiles[Type] = false;
 		TileID.Sets.ChecksForMerge[Type] = true;
 	}
-	public override bool HasWalkDust() => Main.rand.NextBool(3);
+    public override void PostSetDefaults()
+    {
+        if (ModContent.GetInstance<XenonPlayer>().StandOnSand)
+        {
+            Main.tileSolidTop[Type] = true;
+        }
+        else
+        {
+            Main.tileSolidTop[Type] = false;
+        }
+    }
+    public override bool HasWalkDust() => Main.rand.NextBool(3);
 
 	public override void WalkDust(ref int dustType, ref bool makeDust, ref Color color)
 	{

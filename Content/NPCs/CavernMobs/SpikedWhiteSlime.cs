@@ -57,7 +57,7 @@ namespace Xenon.Content.NPCs.CavernMobs
                 for (int i = 0; i < 30; i++)
                 {
                     int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
-                    Main.dust[d].color = new Color(16, 94, 135);
+                    Main.dust[d].color = new Color(185, 185, 185);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.5f, 5) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -5));
                 }
             }
