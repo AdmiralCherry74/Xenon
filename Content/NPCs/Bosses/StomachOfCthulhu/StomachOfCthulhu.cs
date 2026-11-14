@@ -562,6 +562,46 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             XenonGlobalNPC.corrosionBoss = -1;
         }
 
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            if (NPC.life <= 0 && Main.netMode != NetmodeID.Server)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore1").Type, 1f);
+
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore2").Type, 1f);
+
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore3").Type, 1f);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore3").Type, 1f);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore3").Type, 1f);
+
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore4").Type, 1f);
+
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore5").Type, 1f);
+
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * 0.8f, Mod.Find<ModGore>("StomachGore6").Type, 1f);
+
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, default, Main.rand.NextFloat(1, 1.4f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
+
+                    int d1 = Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<StomachOfCthulhusWaterSplash>(), default, Main.rand.NextFloat(1, 1.4f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
+                {
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, default, Main.rand.NextFloat(1, 1.2f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
+
+                    int d1 = Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<StomachOfCthulhusWaterSplash>(), default, Main.rand.NextFloat(1, 1.2f));
+                    Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
+                }
+            }
+        }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             // Trophies are spawned with 1/10 chance

@@ -11,7 +11,7 @@ public class Corrosion : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SurfaceCorrosionPlaceholder");
+    public override int Music => MusicID.OtherworldlyCorruption;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
@@ -37,7 +37,7 @@ public class CorrosionDesert : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SurfaceCorrosionPlaceholder");
+    public override int Music => MusicID.OtherworldlyCorruption;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
@@ -60,7 +60,7 @@ public class CorrosionIce : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
+    public override int Music => MusicID.UndergroundCrimson;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
@@ -86,7 +86,7 @@ public class CorrosionUnderground : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
+    public override int Music => MusicID.UndergroundCrimson;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
@@ -127,7 +127,7 @@ public class CorrosionCaveDesert : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/UndergroundCorrosionIntroDemonDaysPlaceholder");
+    public override int Music => MusicID.UndergroundCrimson;
     public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeMedium;
     public override int BiomeTorchItemType => ModContent.ItemType<CorrosionTorch>();
