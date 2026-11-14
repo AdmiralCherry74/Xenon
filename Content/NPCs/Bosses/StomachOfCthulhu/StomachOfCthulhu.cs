@@ -57,6 +57,13 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
         private int spawnAttackWait = 300;
         public static int Minions = 0;
 
+        public static int StomachNormalLifeMax = 3000;
+        public static int StomachExpertLifeMax = 5350;
+        public static int StomachMasterLifeMax = 6833;
+
+        public static int BaseLifeMax => Main.masterMode ? StomachMasterLifeMax : Main.expertMode ? StomachExpertLifeMax : StomachNormalLifeMax;
+
+
         #region Burp SFX
         static SoundStyle Burp1 = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuBurp1")
         {
@@ -102,7 +109,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
             NPC.height = 164;
             NPC.damage = 0;
             NPC.defense = 14;
-            NPC.lifeMax = 3000;
+            NPC.lifeMax = BaseLifeMax;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = new SoundStyle($"Xenon/Assets/SFX/StomachOfCthulhuRoarBurp") { Pitch = -0.75f, Volume = 2f, PitchVariance = 0f, MaxInstances = 5 };
             NPC.knockBackResist = 0f;
@@ -132,11 +139,7 @@ namespace Xenon.Content.NPCs.Bosses.StomachOfCthulhu
 
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)
         {
-            if (Main.expertMode)
-                NPC.lifeMax = 5350;
-            if (Main.masterMode)
-                NPC.lifeMax = 6833;
-
+            NPC.lifeMax =  BaseLifeMax;
             NPC.lifeMax = (int)(NPC.lifeMax * balance);
         }
 
