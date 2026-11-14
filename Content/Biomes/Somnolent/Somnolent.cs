@@ -10,7 +10,8 @@ public class Somnolent : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     //public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SoundCheckGravitySomnolentPlaceholder");
+    public override int Music => MusicID.Night;
+    //public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/SoundCheckGravitySomnolentPlaceholder");
     //public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeLow; //not sure what the best priority for it would be so
     public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("Xenon/SomnolentWaterStyle");
@@ -38,7 +39,7 @@ public class UndergroundSomnolent : ModBiome
 {
     public override string BackgroundPath => base.BackgroundPath;
     //public override string MapBackground => BackgroundPath;
-    public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/StarshineUndergroundSomnolentPlaceholder");
+    public override int Music => MusicID.OtherworldlyNight;
     //public override string BestiaryIcon => base.BestiaryIcon;
     public override SceneEffectPriority Priority => SceneEffectPriority.BiomeLow; //not sure what the best priority for it would be so
 

@@ -15,7 +15,6 @@ public class Greatsword : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 35;
         Item.useAnimation = 35;
-        Item.useTurn = true;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;

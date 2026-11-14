@@ -14,7 +14,7 @@ public class IngestaneBar : ModItem
     }
     public override void SetDefaults()
     {
-        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<PlacedBars>(), 0);
         Item.width = 20;
         Item.height = 20;
         Item.rare = ItemRarityID.Blue;

@@ -36,7 +36,7 @@ namespace Xenon.Content.Projectiles.Magic.StaveProj
                 SoundEngine.PlaySound(SoundID.Item8, Projectile.position);
             }
 
-            Lighting.AddLight(new Vector2((int)((Projectile.position.X + (float)(Projectile.width / 2)) / 16f), (int)((Projectile.position.Y + (float)(Projectile.height / 2)) / 16f)), color.ToVector3());
+            Lighting.AddLight(Projectile.Center, 1.3f, 0.43f, 0.93f);
         }
 
         public override void OnKill(int timeLeft)

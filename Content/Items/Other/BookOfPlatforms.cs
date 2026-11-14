@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.GameContent.UI.Elements;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Content.Biomes.Corrosion;
@@ -18,7 +19,6 @@ public class BookOfPlatforms : ModItem
         Item.autoReuse = true;
         Item.width = 16;
         Item.useTurn = true;
-        Item.createTile = ModContent.TileType<FallbackBiomePlatform>();
         Item.useTime = 10;
         Item.useStyle = ItemUseStyleID.Swing;
         Item.maxStack = 1;
@@ -27,6 +27,7 @@ public class BookOfPlatforms : ModItem
     }
     public override bool? UseItem(Player player)
     {
+        #region Biome Platforms
         //Underworld and Space
         if (Main.screenPosition.Y / 16 > Main.UnderworldLayer - 33)
         {
@@ -198,7 +199,9 @@ public class BookOfPlatforms : ModItem
         {
             Item.createTile = ModContent.TileType<FallbackBiomePlatform>();
         }
+        #endregion
         return null;
+
     }
     public override void AddRecipes()
     {

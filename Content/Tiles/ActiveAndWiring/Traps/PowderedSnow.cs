@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Xenon.Common.Globals.XenonPlayerGlobals;
 using Xenon.Content.Items.Placeable.Blocks.ActiveAndWiring.Traps.Sinking;
 
 namespace Xenon.Content.Tiles.ActiveAndWiring.Traps;
@@ -31,7 +32,18 @@ public class PowderedSnow : ModTile
 
 		RegisterItemDrop(ModContent.ItemType<PowderedSnowBlock>());
 	}
-	public override bool HasWalkDust() => Main.rand.NextBool(3);
+    public override void PostSetDefaults()
+    {
+        if (ModContent.GetInstance<XenonPlayer>().StandOnSand)
+        {
+            Main.tileSolidTop[Type] = true;
+        }
+        else
+        {
+            Main.tileSolidTop[Type] = false;
+        }
+    }
+    public override bool HasWalkDust() => Main.rand.NextBool(3);
 
 	public override void WalkDust(ref int dustType, ref bool makeDust, ref Color color)
 	{

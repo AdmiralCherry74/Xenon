@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Xenon.Common.Globals.XenonPlayerGlobals;
+using Xenon.Content.Projectiles.Summoner.Minions;
 using static Xenon.Content.Buffs.Debuffs.Counterable.Gnashed;
 
 namespace Xenon.Content.Buffs.Debuffs.Counterable
@@ -22,6 +23,16 @@ namespace Xenon.Content.Buffs.Debuffs.Counterable
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetModPlayer<ColdUpdate>().ColdDebuff = true;
+
+            if (player.ZoneSnow || player.frostBurn)
+            {
+                player.buffTime[buffIndex] = 900;
+            }
+            else
+            {
+                player.DelBuff(buffIndex);
+                buffIndex--;
+            }
         }
     }
 }

@@ -47,6 +47,7 @@ using Xenon.Content.Items.Weapons.Ranged.Bows;
 using Xenon.Content.Items.Weapons.Ranged.Crossbows;
 using Xenon.Content.Items.Weapons.Ranged.Flamethrowers;
 using Xenon.Content.Items.Weapons.Summon.Caltrops;
+using Xenon.Content.Items.Placeable.Wall.Natural.Stone.CombinedGemWall;
 
 namespace Xenon.Common.Globals.XenonItemGlobals
 {
@@ -1430,7 +1431,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Pickaxe
             Recipe.Create(ModContent.ItemType<AluminumPickaxe>())
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 4)
+                .AddIngredient(ItemID.Wood, 4)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumBar>())
                 .Register();
@@ -1438,7 +1439,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Axe
             Recipe.Create(ModContent.ItemType<AluminumAxe>())
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 6)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumPickaxe>())
                 .Register();
@@ -1446,7 +1447,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hammer
             Recipe.Create(ModContent.ItemType<AluminumHammer>())
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumAxe>())
                 .Register();
@@ -1454,7 +1455,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hoe
             Recipe.Create(ModContent.ItemType<AluminumHoe>())
                 .AddIngredient(ModContent.ItemType<AluminumBar>(), 4)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<AluminumHammer>())
                 .Register();
@@ -1637,7 +1638,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Pickaxe
             Recipe.Create(ModContent.ItemType<CinnabarPickaxe>())
                 .AddIngredient(ModContent.ItemType<CinnabarBar>(), 10)
-                .AddRecipeGroup(RecipeGroupID.Wood, 4)
+                .AddIngredient(ItemID.Wood, 4)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarAnvilItem>())
                 .Register();
@@ -1645,7 +1646,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Axe
             Recipe.Create(ModContent.ItemType<CinnabarAxe>())
                 .AddIngredient(ModContent.ItemType<CinnabarBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarPickaxe>())
                 .Register();
@@ -1653,7 +1654,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hammer
             Recipe.Create(ModContent.ItemType<CinnabarHammer>())
                 .AddIngredient(ModContent.ItemType<CinnabarBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarAxe>())
                 .Register();
@@ -1661,7 +1662,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hoe
             Recipe.Create(ModContent.ItemType<CinnabarHoe>())
                 .AddIngredient(ModContent.ItemType<CinnabarBar>(), 5)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<CinnabarHammer>())
                 .Register();
@@ -1750,7 +1751,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Pickaxe
             Recipe.Create(ModContent.ItemType<IndiumPickaxe>())
             .AddIngredient(ModContent.ItemType<IndiumBar>(), 10)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddIngredient(ItemID.Wood, 4)
             .AddTile(TileID.Anvils)
             .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumBar>())
             .Register();
@@ -1758,7 +1759,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Axe
             Recipe.Create(ModContent.ItemType<IndiumAxe>())
                 .AddIngredient(ModContent.ItemType<IndiumBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumPickaxe>())
                 .Register();
@@ -1766,7 +1767,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hammer
             Recipe.Create(ModContent.ItemType<IndiumHammer>())
                 .AddIngredient(ModContent.ItemType<IndiumBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumAxe>())
                 .Register();
@@ -1774,7 +1775,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hoe
             Recipe.Create(ModContent.ItemType<IndiumHoe>())
                 .AddIngredient(ModContent.ItemType<IndiumBar>(), 5)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<IndiumHammer>())
                 .Register();
@@ -1951,7 +1952,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Pickaxe
             Recipe.Create(ModContent.ItemType<FluoritePickaxe>())
                 .AddIngredient(ModContent.ItemType<FluoriteBar>(), 10)
-                .AddRecipeGroup(RecipeGroupID.Wood, 4)
+                .AddIngredient(ItemID.Wood, 4)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteBar>())
                 .Register();
@@ -1959,7 +1960,7 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Axe
             Recipe.Create(ModContent.ItemType<FluoriteAxe>())
             .AddIngredient(ModContent.ItemType<FluoriteBar>(), 8)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
+            .AddIngredient(ItemID.Wood, 3)
             .AddTile(TileID.Anvils)
             .SortAfterFirstRecipesOf(ModContent.ItemType<FluoritePickaxe>())
             .Register();
@@ -1967,14 +1968,14 @@ namespace Xenon.Common.Globals.XenonItemGlobals
             //Hammer
             Recipe.Create(ModContent.ItemType<FluoriteHammer>())
                 .AddIngredient(ModContent.ItemType<FluoriteBar>(), 8)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteAxe>())
                 .Register();
             //Hoe
             Recipe.Create(ModContent.ItemType<FluoriteHoe>())
                 .AddIngredient(ModContent.ItemType<FluoriteBar>(), 5)
-                .AddRecipeGroup(RecipeGroupID.Wood, 3)
+                .AddIngredient(ItemID.Wood, 3)
                 .AddTile(TileID.Anvils)
                 .SortAfterFirstRecipesOf(ModContent.ItemType<FluoriteHammer>())
                 .Register();

@@ -206,6 +206,11 @@ TungstenApricotBuff: {
 }
 
 Cold: {
-	Description: Mods.Xenon.Buffs.Cold.Description
 	DisplayName: Cold
+	Description: The chilly air makes you move slower...
+}
+
+Injured: {
+	DisplayName: Injured
+	Description: Your wounds slow you down, escape!
 }

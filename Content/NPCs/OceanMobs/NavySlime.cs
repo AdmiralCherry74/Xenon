@@ -8,6 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Xenon.Common;
 using Xenon.Content.Items.Placeable.Banner;
+using Xenon.Content.NPCs.CavernMobs;
 
 namespace Xenon.Content.NPCs.OceanMobs
 {
@@ -57,18 +58,18 @@ namespace Xenon.Content.NPCs.OceanMobs
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
-                    Main.dust[d].color = new Color(16, 94, 135);
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Water, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.5f, 5) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -5));
                 }
             }
             else
+            {
                 for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
                 {
-                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
-                    Main.dust[d].color = new Color(16, 94, 135);
+                    int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Water, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
+            }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {

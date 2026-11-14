@@ -14,6 +14,7 @@ public class IndigoPhaseblade : ModItem
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 18;
+        Item.useTurn = true;
         Item.useAnimation = 18;
         Item.autoReuse = false;
 

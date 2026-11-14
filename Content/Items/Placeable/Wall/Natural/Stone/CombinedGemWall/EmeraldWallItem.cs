@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Xenon.Content.Items.Placeable.Blocks.BuildingTiles.Stone;
 using Xenon.Content.Walls.NaturalWalls.Stone;
 
-namespace Xenon.Content.Items.Placeable.Wall.Natural.Stone;
+namespace Xenon.Content.Items.Placeable.Wall.Natural.Stone.CombinedGemWall;
 
 public class EmeraldWallItem : ModItem
 {

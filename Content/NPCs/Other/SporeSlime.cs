@@ -66,12 +66,14 @@ namespace Xenon.Content.NPCs.Other
                 }
             }
             else
+            {
                 for (int i = 0; i < Math.Min(hit.Damage / 3, 30) + 1; i++)
                 {
                     int d = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.TintableDust, 0, 0, 175, default, Main.rand.NextFloat(1, 1.2f));
                     Main.dust[d].color = new Color(16, 94, 135);
                     Main.dust[d].velocity = new Vector2(Main.rand.NextFloat(-1.3f, 4) * MathHelper.Clamp(NPC.velocity.X, -1, 1), Main.rand.NextFloat(-1, -3));
                 }
+            }
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {

@@ -22,6 +22,7 @@ public class IodineGreatsword : ModItem
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = 30;
         Item.useAnimation = 30;
+        Item.useTurn = true;
         Item.autoReuse = true;
 
         Item.DamageType = DamageClass.Melee;

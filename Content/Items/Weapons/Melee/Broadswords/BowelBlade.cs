@@ -23,11 +23,12 @@ public class BowelBlade : ModItem
         Item.useTime = 22;
         Item.useAnimation = 22;
         Item.useTurn = true;
+        Item.ChangePlayerDirectionOnShoot = true;
         Item.autoReuse = false;
 
         Item.DamageType = DamageClass.Melee;
         Item.shoot = ModContent.ProjectileType<BileProjTest>();
-        Item.shootsEveryUse = true;
+        Item.shootsEveryUse = false;
         Item.shootSpeed = 10;
         Item.damage = 19;
         Item.knockBack = 5;
